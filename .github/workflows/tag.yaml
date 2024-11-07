@@ -17,7 +17,7 @@ jobs:
         mkdir -p artifacts
         zip -r artifacts/rm2k-lostsaga.zip rm2k-lostsaga
 
-    - name: Get the release ID for the existing release
+    - name: Get the release upload URL for the existing release
       id: get_release
       uses: actions/github-script@v6
       with:
@@ -32,12 +32,12 @@ jobs:
           if (!release) {
             throw new Error(`Release with tag ${tagName} not found.`);
           }
-          return release.id;
-      
+          return release.upload_url.replace('{?name,label}', '');
+
     - name: Upload asset to the existing release
       uses: actions/upload-release-asset@v1
       with:
-        release_id: ${{ steps.get_release.outputs.result }}
+        upload_url: ${{ steps.get_release.outputs.result }}
         asset_path: artifacts/rm2k-lostsaga.zip
         asset_name: rm2k-lostsaga.zip
         asset_content_type: application/zip
