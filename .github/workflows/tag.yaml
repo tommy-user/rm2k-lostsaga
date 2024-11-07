@@ -1,9 +1,9 @@
-name: Create Release with Compressed Directory
+name: Add Asset to Existing Release
 
 on:
   push:
     tags:
-      - 'v*'  # 태그를 푸시할 때 릴리즈 생성
+      - 'v*'  # 태그를 푸시할 때 릴리즈에 추가
 
 jobs:
   release:
@@ -11,24 +11,33 @@ jobs:
     steps:
     - name: Check out the repository
       uses: actions/checkout@v4
+
     - name: Compress the directory
       run: |
         mkdir -p artifacts
-        zip -r artifacts/rm2k-lostsaga.zip rm2k-lostsaga 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
+        zip -r artifacts/rm2k-lostsaga.zip rm2k-lostsaga
+
+    - name: Get the release ID for the existing release
+      id: get_release
+      uses: actions/github-script@v6
       with:
-        tag_name: ${{ github.ref_name }}
-        release_name: Release ${{ github.ref_name }}
-        draft: false
-        prerelease: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Upload compressed file to release
+        script: |
+          const tagName = '${{ github.ref_name }}';
+          const { data: releases } = await github.rest.repos.listReleases({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+          });
+          
+          const release = releases.find(release => release.tag_name === tagName);
+          if (!release) {
+            throw new Error(`Release with tag ${tagName} not found.`);
+          }
+          return release.id;
+      
+    - name: Upload asset to the existing release
       uses: actions/upload-release-asset@v1
       with:
-        release_id: ${{ steps.create_release.outputs.id }}
+        release_id: ${{ steps.get_release.outputs.result }}
         asset_path: artifacts/rm2k-lostsaga.zip
         asset_name: rm2k-lostsaga.zip
         asset_content_type: application/zip
