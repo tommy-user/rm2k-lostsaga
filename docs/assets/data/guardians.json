@@ -464,5 +464,163 @@
       }
     ]
   },
-  "hire": "크리엔드 본토행정건물의 GM에게 5000이드를 내고 가디언방 열쇠를 받아, 가디언방에서 한 명을 고른다. 한 번에 한 명만 데리고 다니고, 교체는 무료이며 예전 가디언의 레벨과 장비는 그대로 남는다."
+  "hire": "크리엔드 본토행정건물의 GM에게 5000이드를 내고 가디언방 열쇠를 받아, 가디언방에서 한 명을 고른다. 한 번에 한 명만 데리고 다니고, 교체는 무료이며 예전 가디언의 레벨과 장비는 그대로 남는다.",
+  "bertz": {
+    "how": "비밀상점에서 5000이드에 판다. 아이템을 쓰면 파티에 들어오고, Lv10이 되면 베르츠로 바뀐다.",
+    "rule": "처음 점수는 살 때 0~15 중에서 무작위로 정해지고, 전투에서 질 때마다 올라간다. Lv10이 됐을 때의 점수로 형태가 정해진다. 비밀상점의 버서커에게 물어보면 점쳐 준다.",
+    "helmet": {
+      "actorId": 100,
+      "name": "영혼의투구",
+      "job": "영혼",
+      "face": null,
+      "charset": {
+        "file": "objectk",
+        "index": 5,
+        "path": "CharSet/objectk.png"
+      },
+      "cond": null,
+      "desc": "영혼이 깃든 투구. Lv10이 되면 베르츠가 된다.",
+      "stats": {
+        "level": 10,
+        "hp": 90,
+        "mp": 90,
+        "atk": 1,
+        "def": 63,
+        "spi": 1,
+        "agi": 1
+      }
+    },
+    "forms": [
+      {
+        "actorId": 102,
+        "name": "베르츠",
+        "job": "버서커",
+        "face": {
+          "file": "특3",
+          "index": 9,
+          "path": "FaceSet/특3.png"
+        },
+        "charset": {
+          "file": "데빌2",
+          "index": 5,
+          "path": "CharSet/데빌2.png"
+        },
+        "cond": "2 이하",
+        "desc": "능력치가 고르다.",
+        "stats": {
+          "level": 50,
+          "hp": 800,
+          "mp": 400,
+          "atk": 350,
+          "def": 350,
+          "spi": 350,
+          "agi": 350
+        }
+      },
+      {
+        "actorId": 103,
+        "name": "베르츠",
+        "job": "로열나이트",
+        "face": {
+          "file": "인물10",
+          "index": 5,
+          "path": "FaceSet/인물10.png"
+        },
+        "charset": {
+          "file": "일반6",
+          "index": 5,
+          "path": "CharSet/일반6.png"
+        },
+        "cond": "3~5",
+        "desc": "체력과 마력이 가장 높다.",
+        "stats": {
+          "level": 50,
+          "hp": 900,
+          "mp": 600,
+          "atk": 300,
+          "def": 300,
+          "spi": 300,
+          "agi": 300
+        }
+      },
+      {
+        "actorId": 104,
+        "name": "베르츠",
+        "job": "쉐도우나이트",
+        "face": {
+          "file": "인물10",
+          "index": 2,
+          "path": "FaceSet/인물10.png"
+        },
+        "charset": {
+          "file": "chara04",
+          "index": 5,
+          "path": "CharSet/chara04.png"
+        },
+        "cond": "6~8",
+        "desc": "민첩이 가장 높다.",
+        "stats": {
+          "level": 50,
+          "hp": 700,
+          "mp": 300,
+          "atk": 200,
+          "def": 200,
+          "spi": 200,
+          "agi": 600
+        }
+      },
+      {
+        "actorId": 105,
+        "name": "베르츠",
+        "job": "세인트나이트",
+        "face": {
+          "file": "얼굴99",
+          "index": 7,
+          "path": "FaceSet/얼굴99.png"
+        },
+        "charset": {
+          "file": "chara01",
+          "index": 2,
+          "path": "CharSet/chara01.png"
+        },
+        "cond": "9~11",
+        "desc": "방어가 가장 높다.",
+        "stats": {
+          "level": 50,
+          "hp": 700,
+          "mp": 300,
+          "atk": 200,
+          "def": 500,
+          "spi": 200,
+          "agi": 200
+        }
+      },
+      {
+        "actorId": 106,
+        "name": "베르츠",
+        "job": "다크나이트",
+        "face": {
+          "file": "4",
+          "index": 11,
+          "path": "FaceSet/4.png"
+        },
+        "charset": {
+          "file": "chara04",
+          "index": 5,
+          "path": "CharSet/chara04.png"
+        },
+        "cond": "12 이상",
+        "desc": "공격이 가장 높다.",
+        "stats": {
+          "level": 50,
+          "hp": 700,
+          "mp": 300,
+          "atk": 500,
+          "def": 150,
+          "spi": 200,
+          "agi": 200
+        }
+      }
+    ]
+  }
 }
