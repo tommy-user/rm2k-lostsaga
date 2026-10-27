@@ -595,6 +595,312 @@
           "maxPlus": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 2601,
+          "name": "독침 지팡이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공30/정70/땅/전체공격(MP20)",
+          "stats": {
+            "atk": 30,
+            "def": 0,
+            "spi": 70,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2602,
+          "name": "전갈 꼬리 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공80/치명15/관통/중독20%",
+          "stats": {
+            "atk": 80,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2603,
+          "name": "뱀 독니 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공75/필중/관통/중독15%",
+          "stats": {
+            "atk": 75,
+            "def": 0,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2604,
+          "name": "골렘 모래 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공70/민10/타격",
+          "stats": {
+            "atk": 70,
+            "def": 0,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2605,
+          "name": "골렘 파편 몽둥이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공105/양손/타격",
+          "stats": {
+            "atk": 105,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2606,
+          "name": "황야 가죽갑옷",
+          "grade": "craft",
+          "type": 3,
+          "desc": "황야세트. 방65/중독방지/땅내성",
+          "stats": {
+            "atk": 0,
+            "def": 65,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2607,
+          "name": "골렘 파편 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "황야세트. 방50/정10/마비방지",
+          "stats": {
+            "atk": 0,
+            "def": 50,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2608,
+          "name": "황야의 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "황야세트. 민40/방12/회피상승/땅내성",
+          "stats": {
+            "atk": 0,
+            "def": 12,
+            "spi": 0,
+            "agi": 40
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2609,
+          "name": "뱀 독니 모자",
+          "grade": "craft",
+          "type": 4,
+          "desc": "황야세트. 방35/공25/맹목방지",
+          "stats": {
+            "atk": 25,
+            "def": 35,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2630,
+          "name": "심판의 홀",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공45/정100/신성/전체공격(MP22)",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 100,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2631,
+          "name": "심판의 곡검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공105/치명18/관통/둔화20%",
+          "stats": {
+            "atk": 105,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2632,
+          "name": "심판의 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공100/정15/필중/관통",
+          "stats": {
+            "atk": 100,
+            "def": 0,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2633,
+          "name": "심판의 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공95/민15/타격",
+          "stats": {
+            "atk": 95,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2634,
+          "name": "심판의 철퇴",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공135/양손/타격/마비15%",
+          "stats": {
+            "atk": 135,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2635,
+          "name": "신전 수호 판금",
+          "grade": "craft",
+          "type": 3,
+          "desc": "심판세트. 방90/맹목방지/어둠내성",
+          "stats": {
+            "atk": 0,
+            "def": 90,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2636,
+          "name": "신전 수호 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "심판세트. 방70/정15/마비방지",
+          "stats": {
+            "atk": 0,
+            "def": 70,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2637,
+          "name": "신전 수호 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "심판세트. 민50/방18/회피상승/어둠내성",
+          "stats": {
+            "atk": 0,
+            "def": 18,
+            "spi": 0,
+            "agi": 50
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2638,
+          "name": "신전 수호 관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "심판세트. 방45/공30/정20/맹목방지",
+          "stats": {
+            "atk": 30,
+            "def": 45,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -5367,6 +5673,210 @@
           "maxPlus": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 2601,
+          "name": "독침 지팡이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공30/정70/땅/전체공격(MP20)",
+          "stats": {
+            "atk": 30,
+            "def": 0,
+            "spi": 70,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2602,
+          "name": "전갈 꼬리 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공80/치명15/관통/중독20%",
+          "stats": {
+            "atk": 80,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2603,
+          "name": "뱀 독니 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공75/필중/관통/중독15%",
+          "stats": {
+            "atk": 75,
+            "def": 0,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2604,
+          "name": "골렘 모래 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공70/민10/타격",
+          "stats": {
+            "atk": 70,
+            "def": 0,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2605,
+          "name": "골렘 파편 몽둥이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "황야세트. 공105/양손/타격",
+          "stats": {
+            "atk": 105,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2620,
+          "name": "아누비스의 저울",
+          "grade": "unique",
+          "type": 1,
+          "desc": "공60/정130/신성/전체공격(MP25)",
+          "stats": {
+            "atk": 60,
+            "def": 0,
+            "spi": 130,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2621,
+          "name": "자칼왕의 곡도",
+          "grade": "unique",
+          "type": 1,
+          "desc": "공105/치명25/관통/중독20%",
+          "stats": {
+            "atk": 105,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2630,
+          "name": "심판의 홀",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공45/정100/신성/전체공격(MP22)",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 100,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2631,
+          "name": "심판의 곡검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공105/치명18/관통/둔화20%",
+          "stats": {
+            "atk": 105,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2632,
+          "name": "심판의 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공100/정15/필중/관통",
+          "stats": {
+            "atk": 100,
+            "def": 0,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2633,
+          "name": "심판의 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공95/민15/타격",
+          "stats": {
+            "atk": 95,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2634,
+          "name": "심판의 철퇴",
+          "grade": "craft",
+          "type": 1,
+          "desc": "심판세트. 공135/양손/타격/마비15%",
+          "stats": {
+            "atk": 135,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -6869,6 +7379,40 @@
           "maxPlus": null,
           "job": null,
           "note": "혼돈의 땅, 혼돈의 문지기 드롭"
+        },
+        {
+          "id": 2606,
+          "name": "황야 가죽갑옷",
+          "grade": "craft",
+          "type": 3,
+          "desc": "황야세트. 방65/중독방지/땅내성",
+          "stats": {
+            "atk": 0,
+            "def": 65,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2635,
+          "name": "신전 수호 판금",
+          "grade": "craft",
+          "type": 3,
+          "desc": "심판세트. 방90/맹목방지/어둠내성",
+          "stats": {
+            "atk": 0,
+            "def": 90,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -7453,6 +7997,57 @@
           "maxPlus": null,
           "job": null,
           "note": "봉인의 빙묘 최심부, 얼어붙은 대천사 드롭"
+        },
+        {
+          "id": 2607,
+          "name": "골렘 파편 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "황야세트. 방50/정10/마비방지",
+          "stats": {
+            "atk": 0,
+            "def": 50,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2624,
+          "name": "전장의 방패",
+          "grade": "unique",
+          "type": 2,
+          "desc": "방85/마비방지/타격내성",
+          "stats": {
+            "atk": 0,
+            "def": 85,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2636,
+          "name": "신전 수호 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "심판세트. 방70/정15/마비방지",
+          "stats": {
+            "atk": 0,
+            "def": 70,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -8256,6 +8851,57 @@
           },
           "price": 20000,
           "maxPlus": 4,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2609,
+          "name": "뱀 독니 모자",
+          "grade": "craft",
+          "type": 4,
+          "desc": "황야세트. 방35/공25/맹목방지",
+          "stats": {
+            "atk": 25,
+            "def": 35,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2623,
+          "name": "심판관의 투구",
+          "grade": "unique",
+          "type": 4,
+          "desc": "방55/공20/정30/맹목방지",
+          "stats": {
+            "atk": 20,
+            "def": 55,
+            "spi": 30,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2638,
+          "name": "신전 수호 관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "심판세트. 방45/공30/정20/맹목방지",
+          "stats": {
+            "atk": 30,
+            "def": 45,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
           "job": null,
           "note": null
         }
@@ -9148,6 +9794,74 @@
           "maxPlus": null,
           "job": null,
           "note": "에피소드3, 칠리마을 광장에 내려온 대천사 라그엘 드롭"
+        },
+        {
+          "id": 2608,
+          "name": "황야의 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "황야세트. 민40/방12/회피상승/땅내성",
+          "stats": {
+            "atk": 0,
+            "def": 12,
+            "spi": 0,
+            "agi": 40
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2622,
+          "name": "수호자의 붕대",
+          "grade": "unique",
+          "type": 5,
+          "desc": "민60/정40/방25/맹목·마비방지/어둠내성",
+          "stats": {
+            "atk": 0,
+            "def": 25,
+            "spi": 40,
+            "agi": 60
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2625,
+          "name": "모래시계의 반지",
+          "grade": "unique",
+          "type": 5,
+          "desc": "민45/회피상승",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 45
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2637,
+          "name": "신전 수호 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "심판세트. 민50/방18/회피상승/어둠내성",
+          "stats": {
+            "atk": 0,
+            "def": 18,
+            "spi": 0,
+            "agi": 50
+          },
+          "price": 0,
+          "maxPlus": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -16012,7 +16726,7 @@
           "name": "전갈꼬리",
           "grade": "normal",
           "type": 0,
-          "desc": "전갈꼬리",
+          "desc": "신대륙 사막 전갈의 꼬리. 독침이 아직 날카롭다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -16029,7 +16743,7 @@
           "name": "뱀의 독니",
           "grade": "normal",
           "type": 0,
-          "desc": "뱀의 독니",
+          "desc": "신대륙 사막뱀의 독니. 독이 마르지 않았다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -16046,7 +16760,7 @@
           "name": "골렘의 파편",
           "grade": "normal",
           "type": 0,
-          "desc": "골렘의 파편",
+          "desc": "신대륙 샌드골렘의 파편. 모래가 섞인 돌조각이다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -16063,7 +16777,7 @@
           "name": "미노타우로스의 해머",
           "grade": "normal",
           "type": 0,
-          "desc": "미노타우로스의 해머",
+          "desc": "신대륙 사막신전 미노타우르스의 해머. 묵직하다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -16080,7 +16794,7 @@
           "name": "코카트리스의 볏",
           "grade": "normal",
           "type": 0,
-          "desc": "코카트리스의 볏",
+          "desc": "신대륙 사막신전 코카트리스의 볏. 돌처럼 굳어 있다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -16097,7 +16811,7 @@
           "name": "가루다의 깃털",
           "grade": "normal",
           "type": 0,
-          "desc": "가루다의 깃털",
+          "desc": "신대륙 사막신전 가루다의 깃털. 가볍고 단단하다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -16771,6 +17485,74 @@
           "maxPlus": null,
           "job": null,
           "note": "혼돈의 땅 몬스터 드롭"
+        },
+        {
+          "id": 2610,
+          "name": "미라의 붕대",
+          "grade": "normal",
+          "type": 0,
+          "desc": "신대륙 사막신전 미라의 붕대. 오래된 향유 냄새가 난다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 300,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2611,
+          "name": "자칼의 송곳니",
+          "grade": "normal",
+          "type": 0,
+          "desc": "신대륙 사막신전 자칼 전사의 송곳니. 아직 날카롭다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 300,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2612,
+          "name": "스카라베의 날개껍질",
+          "grade": "normal",
+          "type": 0,
+          "desc": "신대륙 사막신전 스카라베의 날개껍질. 푸른 금속빛이 난다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 200,
+          "maxPlus": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2613,
+          "name": "아누비스의 인장",
+          "grade": "normal",
+          "type": 0,
+          "desc": "신전의 수호자가 지니던 인장. 장인에게 가져가면 쓸 데가 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "job": null,
+          "note": null
         }
       ]
     },

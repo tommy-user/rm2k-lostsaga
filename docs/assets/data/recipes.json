@@ -2738,5 +2738,472 @@
   "map_id": 483,
   "event_id": 1,
   "common_event_id": null
+ },
+ "2601": {
+  "name": "독침 지팡이",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 5
+   },
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 4
+   }
+  ],
+  "gold": 20000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2602": {
+  "name": "전갈 꼬리 레이피어",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 3
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 6
+   }
+  ],
+  "gold": 22000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2603": {
+  "name": "뱀 독니 활",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 6
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 3
+   }
+  ],
+  "gold": 22000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2604": {
+  "name": "골렘 모래 너클",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 6
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 3
+   }
+  ],
+  "gold": 22000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2605": {
+  "name": "골렘 파편 몽둥이",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 3
+   },
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 8
+   }
+  ],
+  "gold": 24000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2606": {
+  "name": "황야 가죽갑옷",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 6
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 4
+   }
+  ],
+  "gold": 18000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2607": {
+  "name": "골렘 파편 방패",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 3
+   },
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 5
+   }
+  ],
+  "gold": 15000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2608": {
+  "name": "황야의 망토",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 5
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 3
+   }
+  ],
+  "gold": 15000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2609": {
+  "name": "뱀 독니 모자",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 3
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 5
+   }
+  ],
+  "gold": 14000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2630": {
+  "name": "심판의 홀",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1281,
+    "name": "코카트리스의 볏",
+    "count": 4
+   },
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 5
+   }
+  ],
+  "gold": 40000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2631": {
+  "name": "심판의 곡검",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2611,
+    "name": "자칼의 송곳니",
+    "count": 6
+   },
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 3
+   }
+  ],
+  "gold": 42000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2632": {
+  "name": "심판의 활",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2611,
+    "name": "자칼의 송곳니",
+    "count": 4
+   },
+   {
+    "id": 1282,
+    "name": "가루다의 깃털",
+    "count": 5
+   }
+  ],
+  "gold": 42000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2633": {
+  "name": "심판의 너클",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 5
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 4
+   }
+  ],
+  "gold": 42000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2634": {
+  "name": "심판의 철퇴",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 6
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 5
+   }
+  ],
+  "gold": 46000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2635": {
+  "name": "신전 수호 판금",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 8
+   },
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 5
+   }
+  ],
+  "gold": 36000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2636": {
+  "name": "신전 수호 방패",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 4
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 5
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2637": {
+  "name": "신전 수호 망토",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 6
+   },
+   {
+    "id": 1282,
+    "name": "가루다의 깃털",
+    "count": 4
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2638": {
+  "name": "신전 수호 관",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1281,
+    "name": "코카트리스의 볏",
+    "count": 3
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 4
+   }
+  ],
+  "gold": 28000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2621": {
+  "name": "자칼왕의 곡도",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2611,
+    "name": "자칼의 송곳니",
+    "count": 10
+   },
+   {
+    "id": 2613,
+    "name": "아누비스의 인장",
+    "count": 1
+   }
+  ],
+  "gold": 60000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2622": {
+  "name": "수호자의 붕대",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 12
+   },
+   {
+    "id": 2613,
+    "name": "아누비스의 인장",
+    "count": 1
+   }
+  ],
+  "gold": 60000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
+ },
+ "2623": {
+  "name": "심판관의 투구",
+  "count": 1,
+  "by": "장인 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 6
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 6
+   },
+   {
+    "id": 2613,
+    "name": "아누비스의 인장",
+    "count": 1
+   }
+  ],
+  "gold": 50000,
+  "src": "maps/0557_오아시스/events/0012_장인.yaml",
+  "map_id": 557,
+  "event_id": 12,
+  "common_event_id": null
  }
 }

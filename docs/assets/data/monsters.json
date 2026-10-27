@@ -1607,6 +1607,405 @@
       ]
     },
     {
+      "key": "new-continent-desert",
+      "name": "신대륙 남쪽 사막",
+      "desc": "그라나마을 남쪽 숲 끝에서 이어지는 사막. 오래전 큰 싸움이 있었던 자리에 비석과 부서진 담이 남아 있다. 모래 속 오아시스에서 쉬고, 물건을 사고, 장비를 만들 수 있다.",
+      "dungeons": [
+        {
+          "name": "사막신전",
+          "floors": "입구·1층·2층·최심부",
+          "desc": "오아시스 남쪽의 신전. 미라와 자칼이 지키고, 가장 깊은 곳에 수호자 아누비스가 있다.",
+          "boss": "아누비스",
+          "maps": [
+            558,
+            559,
+            560,
+            561
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 598,
+          "name": "사막전갈",
+          "img": "Monster/대사소리.png",
+          "hp": 400,
+          "atk": 80,
+          "def": 120,
+          "spi": 40,
+          "agi": 75,
+          "boss": false,
+          "hue": 30,
+          "drop": {
+            "id": 215,
+            "name": "대지의 원소",
+            "prob": 17,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 601,
+          "name": "사막전갈리더",
+          "img": "Monster/대사소리.png",
+          "hp": 500,
+          "atk": 160,
+          "def": 180,
+          "spi": 80,
+          "agi": 150,
+          "boss": false,
+          "leader": true,
+          "hue": 60,
+          "drop": {
+            "id": 1277,
+            "name": "전갈꼬리",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 602,
+          "name": "사막뱀",
+          "img": "Monster/스테이크.png",
+          "hp": 600,
+          "atk": 160,
+          "def": 60,
+          "spi": 60,
+          "agi": 180,
+          "boss": false,
+          "hue": 30,
+          "drop": {
+            "id": 1278,
+            "name": "뱀의 독니",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 605,
+          "name": "사막뱀리더",
+          "img": "Monster/스테이크.png",
+          "hp": 750,
+          "atk": 240,
+          "def": 120,
+          "spi": 120,
+          "agi": 270,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1278,
+            "name": "뱀의 독니",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 606,
+          "name": "샌드골렘",
+          "img": "Monster/고렘.png",
+          "hp": 800,
+          "atk": 140,
+          "def": 200,
+          "spi": 20,
+          "agi": 80,
+          "boss": false,
+          "hue": 60,
+          "drop": {
+            "id": 1279,
+            "name": "골렘의 파편",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 609,
+          "name": "샌드골렘리더",
+          "img": "Monster/고렘.png",
+          "hp": 1000,
+          "atk": 210,
+          "def": 300,
+          "spi": 40,
+          "agi": 160,
+          "boss": false,
+          "leader": true,
+          "hue": 90,
+          "drop": {
+            "id": 167,
+            "name": "미스릴",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 615,
+          "name": "미노타우르스",
+          "img": "Monster/미노타우르스.png",
+          "hp": 1000,
+          "atk": 200,
+          "def": 400,
+          "spi": 200,
+          "agi": 100,
+          "boss": false,
+          "drop": {
+            "id": 2,
+            "name": "헤비힐링포션",
+            "prob": 44,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 618,
+          "name": "미노타우르스리더",
+          "img": "Monster/미노타우르스.png",
+          "hp": 1250,
+          "atk": 300,
+          "def": 600,
+          "spi": 300,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1280,
+            "name": "미노타우로스의 해머",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 619,
+          "name": "코카트리스",
+          "img": "Monster/코카트리스.png",
+          "hp": 1200,
+          "atk": 240,
+          "def": 180,
+          "spi": 180,
+          "agi": 360,
+          "boss": false,
+          "drop": {
+            "id": 293,
+            "name": "상급 다이아몬드",
+            "prob": 11,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 622,
+          "name": "코카트리스리더",
+          "img": "Monster/코카트리스.png",
+          "hp": 1500,
+          "atk": 360,
+          "def": 270,
+          "spi": 270,
+          "agi": 540,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 741,
+            "name": "미니엄쉴드 마법서",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 623,
+          "name": "가루다",
+          "img": "Monster/가루다.png",
+          "hp": 1400,
+          "atk": 280,
+          "def": 280,
+          "spi": 210,
+          "agi": 420,
+          "boss": false,
+          "drop": {
+            "id": 3,
+            "name": "풀힐링포션",
+            "prob": 44,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 626,
+          "name": "가루다리더",
+          "img": "Monster/가루다.png",
+          "hp": 1725,
+          "atk": 420,
+          "def": 420,
+          "spi": 315,
+          "agi": 630,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1282,
+            "name": "가루다의 깃털",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1201,
+          "name": "미라 전사",
+          "img": "Monster/K1_미라전사.png",
+          "hp": 900,
+          "atk": 210,
+          "def": 380,
+          "spi": 150,
+          "agi": 110,
+          "boss": false,
+          "drop": {
+            "id": 2610,
+            "name": "미라의 붕대",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1204,
+          "name": "미라 전사 리더",
+          "img": "Monster/K1_미라전사.png",
+          "hp": 1125,
+          "atk": 231,
+          "def": 380,
+          "spi": 150,
+          "agi": 110,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2610,
+            "name": "미라의 붕대",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1205,
+          "name": "미라 사제",
+          "img": "Monster/K1_미라사제.png",
+          "hp": 760,
+          "atk": 120,
+          "def": 200,
+          "spi": 260,
+          "agi": 150,
+          "boss": false,
+          "drop": {
+            "id": 2610,
+            "name": "미라의 붕대",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1208,
+          "name": "미라 사제 리더",
+          "img": "Monster/K1_미라사제.png",
+          "hp": 950,
+          "atk": 132,
+          "def": 200,
+          "spi": 260,
+          "agi": 150,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2610,
+            "name": "미라의 붕대",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1209,
+          "name": "자칼 전사",
+          "img": "Monster/K1_자칼전사.png",
+          "hp": 850,
+          "atk": 240,
+          "def": 220,
+          "spi": 120,
+          "agi": 380,
+          "boss": false,
+          "drop": {
+            "id": 2611,
+            "name": "자칼의 송곳니",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1212,
+          "name": "자칼 전사 리더",
+          "img": "Monster/K1_자칼전사.png",
+          "hp": 1062,
+          "atk": 264,
+          "def": 220,
+          "spi": 120,
+          "agi": 380,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2611,
+            "name": "자칼의 송곳니",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1213,
+          "name": "스카라베",
+          "img": "Monster/K1_스카라베.png",
+          "hp": 500,
+          "atk": 150,
+          "def": 300,
+          "spi": 80,
+          "agi": 100,
+          "boss": false,
+          "drop": {
+            "id": 2612,
+            "name": "스카라베의 날개껍질",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 1216,
+          "name": "스카라베 리더",
+          "img": "Monster/K1_스카라베.png",
+          "hp": 625,
+          "atk": 165,
+          "def": 300,
+          "spi": 80,
+          "agi": 100,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2612,
+            "name": "스카라베의 날개껍질",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
       "key": "uranos",
       "name": "우라노스섬",
       "desc": "카오스의 친우이자 또 다른 초즌 우라노스가 봉인된 섬. 칠리마을 비행소에서 마스터만 표를 살 수 있다.",
@@ -3379,6 +3778,28 @@
       },
       "secret": true,
       "region": "rift"
+    },
+    {
+      "enemyId": 1217,
+      "name": "아누비스",
+      "img": "Monster/K1_아누비스.png",
+      "hp": 10000,
+      "atk": 340,
+      "def": 340,
+      "spi": 320,
+      "agi": 380,
+      "boss": true,
+      "title": "사막신전의 수호자",
+      "where": "사막신전 최심부",
+      "region": "new-continent-desert",
+      "desc": "신전을 지키는 자칼 머리의 몬스터. 쓰러뜨리면 인장과 유니크 장비 하나를 얻는다.",
+      "drop": {
+        "id": 2613,
+        "name": "아누비스의 인장",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
     }
   ]
 }
