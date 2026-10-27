@@ -181,3 +181,4 @@
 .guard__noface { display: block; width: 96px; height: 96px; border: 2px solid var(--win-line); border-radius: 3px; background: rgba(5, 8, 24, .5); }
 .guard__sprite--solo { right: auto; bottom: auto; left: 30px; top: 24px; width: 36px; height: 48px; }
 .guards[hidden], #bertz[hidden], #hire-title[hidden], #hire[hidden] { display: none; }
+.guard .nw { white-space: nowrap; }
