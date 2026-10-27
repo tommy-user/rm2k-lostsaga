@@ -27,10 +27,15 @@
   <section class="section">
     <div class="wrap">
       <div style="margin-bottom:44px">
-        <h2>고용하는 법</h2>
+        <h2 id="hire-title">고용하는 법</h2>
         <p id="hire" class="lede"></p>
       </div>
+      <div class="item-tabs" id="guard-tabs" role="tablist" aria-label="동료 분류">
+        <button type="button" role="tab" aria-selected="true" data-k="guardians">가디언</button>
+        <button type="button" role="tab" aria-selected="false" data-k="bertz">영혼의 투구</button>
+      </div>
       <div class="guards" id="guardians"></div>
+      <div id="bertz" hidden></div>
     </div>
   </section>
 </main>

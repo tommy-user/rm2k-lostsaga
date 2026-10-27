@@ -3313,7 +3313,7 @@
     },
     {
       "enemyId": 901,
-      "img": "Monster/용.png",
+      "img": "Monster/L1_호수의주인.png",
       "hp": 7000,
       "atk": 330,
       "def": 380,

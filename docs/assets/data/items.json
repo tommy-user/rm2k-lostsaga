@@ -36,74 +36,6 @@
       "name": "제작",
       "items": [
         {
-          "id": 96,
-          "name": "가죽조끼",
-          "grade": "craft",
-          "type": 3,
-          "desc": "편안하고 질긴 가죽 조끼. 방10/타스탯5",
-          "stats": {
-            "atk": 5,
-            "def": 10,
-            "spi": 5,
-            "agi": 5
-          },
-          "price": 2500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 97,
-          "name": "가죽갑옷",
-          "grade": "craft",
-          "type": 3,
-          "desc": "가죽 조끼의 강화형. 방20/타스탯10",
-          "stats": {
-            "atk": 10,
-            "def": 20,
-            "spi": 10,
-            "agi": 10
-          },
-          "price": 5000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 98,
-          "name": "강화가죽조끼",
-          "grade": "craft",
-          "type": 3,
-          "desc": "마력으로 강화된 가죽 조끼. 방30/타스탯15",
-          "stats": {
-            "atk": 15,
-            "def": 30,
-            "spi": 15,
-            "agi": 15
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 99,
-          "name": "강화가죽갑옷",
-          "grade": "craft",
-          "type": 3,
-          "desc": "마력으로 강화된 가죽 갑옷. 방40/타스탯20",
-          "stats": {
-            "atk": 20,
-            "def": 40,
-            "spi": 20,
-            "agi": 20
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 158,
           "name": "오리하르콘 흉갑",
           "grade": "craft",
@@ -657,312 +589,6 @@
             "atk": 180,
             "def": 0,
             "spi": 50,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2601,
-          "name": "독침 지팡이",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공30/정70/땅/전체공격(MP20)",
-          "stats": {
-            "atk": 30,
-            "def": 0,
-            "spi": 70,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2602,
-          "name": "전갈 꼬리 레이피어",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공80/치명15/관통/중독20%",
-          "stats": {
-            "atk": 80,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2603,
-          "name": "뱀 독니 활",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공75/필중/관통/중독15%",
-          "stats": {
-            "atk": 75,
-            "def": 0,
-            "spi": 10,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2604,
-          "name": "골렘 모래 너클",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공70/민10/타격",
-          "stats": {
-            "atk": 70,
-            "def": 0,
-            "spi": 0,
-            "agi": 10
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2605,
-          "name": "골렘 파편 몽둥이",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공105/양손/타격",
-          "stats": {
-            "atk": 105,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2606,
-          "name": "황야 가죽갑옷",
-          "grade": "craft",
-          "type": 3,
-          "desc": "황야세트. 방65/중독방지/땅내성",
-          "stats": {
-            "atk": 0,
-            "def": 65,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2607,
-          "name": "골렘 파편 방패",
-          "grade": "craft",
-          "type": 2,
-          "desc": "황야세트. 방50/정10/마비방지",
-          "stats": {
-            "atk": 0,
-            "def": 50,
-            "spi": 10,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2608,
-          "name": "황야의 망토",
-          "grade": "craft",
-          "type": 5,
-          "desc": "황야세트. 민40/방12/회피상승/땅내성",
-          "stats": {
-            "atk": 0,
-            "def": 12,
-            "spi": 0,
-            "agi": 40
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2609,
-          "name": "뱀 독니 모자",
-          "grade": "craft",
-          "type": 4,
-          "desc": "황야세트. 방35/공25/맹목방지",
-          "stats": {
-            "atk": 25,
-            "def": 35,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2630,
-          "name": "심판의 홀",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공45/정100/신성/전체공격(MP22)",
-          "stats": {
-            "atk": 45,
-            "def": 0,
-            "spi": 100,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2631,
-          "name": "심판의 곡검",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공105/치명18/관통/둔화20%",
-          "stats": {
-            "atk": 105,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2632,
-          "name": "심판의 활",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공100/정15/필중/관통",
-          "stats": {
-            "atk": 100,
-            "def": 0,
-            "spi": 15,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2633,
-          "name": "심판의 너클",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공95/민15/타격",
-          "stats": {
-            "atk": 95,
-            "def": 0,
-            "spi": 0,
-            "agi": 15
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2634,
-          "name": "심판의 철퇴",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공135/양손/타격/마비15%",
-          "stats": {
-            "atk": 135,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2635,
-          "name": "신전 수호 판금",
-          "grade": "craft",
-          "type": 3,
-          "desc": "심판세트. 방90/맹목방지/어둠내성",
-          "stats": {
-            "atk": 0,
-            "def": 90,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2636,
-          "name": "신전 수호 방패",
-          "grade": "craft",
-          "type": 2,
-          "desc": "심판세트. 방70/정15/마비방지",
-          "stats": {
-            "atk": 0,
-            "def": 70,
-            "spi": 15,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2637,
-          "name": "신전 수호 망토",
-          "grade": "craft",
-          "type": 5,
-          "desc": "심판세트. 민50/방18/회피상승/어둠내성",
-          "stats": {
-            "atk": 0,
-            "def": 18,
-            "spi": 0,
-            "agi": 50
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2638,
-          "name": "신전 수호 관",
-          "grade": "craft",
-          "type": 4,
-          "desc": "심판세트. 방45/공30/정20/맹목방지",
-          "stats": {
-            "atk": 30,
-            "def": 45,
-            "spi": 20,
             "agi": 0
           },
           "price": 0,
@@ -2292,57 +1918,6 @@
           "note": null
         },
         {
-          "id": 140,
-          "name": "퓨전엘리멘탈넉클",
-          "grade": "unique",
-          "type": 1,
-          "desc": "불/물/땅/바람이 담긴 넉클. 공80/민20/치명20",
-          "stats": {
-            "atk": 80,
-            "def": 0,
-            "spi": 0,
-            "agi": 20
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 196,
-          "name": "블레이드 커터",
-          "grade": "unique",
-          "type": 1,
-          "desc": "치명적인 날을 가진 한손검 공70/치명50/선공",
-          "stats": {
-            "atk": 70,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 239,
-          "name": "야생의 검",
-          "grade": "normal",
-          "type": 1,
-          "desc": "자연에서 태어난 검. 공30/민5/땅",
-          "stats": {
-            "atk": 30,
-            "def": 0,
-            "spi": 0,
-            "agi": 5
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 240,
           "name": "대석 망치",
           "grade": "normal",
@@ -2370,40 +1945,6 @@
             "def": 0,
             "spi": 0,
             "agi": 7
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 242,
-          "name": "스톤 오브",
-          "grade": "normal",
-          "type": 1,
-          "desc": "땅 정령의 힘이 깃든 오브. 공20/정60/땅",
-          "stats": {
-            "atk": 20,
-            "def": 0,
-            "spi": 60,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 243,
-          "name": "야생 대거",
-          "grade": "normal",
-          "type": 1,
-          "desc": "자연에서 태어난 단검. 공30/민10/치명10/땅",
-          "stats": {
-            "atk": 30,
-            "def": 0,
-            "spi": 0,
-            "agi": 10
           },
           "price": 1000,
           "maxPlus": null,
@@ -2593,23 +2134,6 @@
             "agi": 1
           },
           "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 277,
-          "name": "벌목용 도끼",
-          "grade": "normal",
-          "type": 1,
-          "desc": "나무를 벨 때 쓰이는 도끼. 공20/치명15",
-          "stats": {
-            "atk": 20,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -3363,40 +2887,6 @@
           "note": null
         },
         {
-          "id": 405,
-          "name": "성검",
-          "grade": "normal",
-          "type": 1,
-          "desc": "빛의 힘이 담긴 한손검. 공80/방20/치명20/신성",
-          "stats": {
-            "atk": 80,
-            "def": 20,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 15000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 406,
-          "name": "마검",
-          "grade": "normal",
-          "type": 1,
-          "desc": "어둠의 힘이 담긴 한손검. 공80/방20/치명20/어둠",
-          "stats": {
-            "atk": 80,
-            "def": 20,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 15000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 408,
           "name": "고대 팔라딘의 망치",
           "grade": "normal",
@@ -3720,23 +3210,6 @@
           "note": null
         },
         {
-          "id": 584,
-          "name": "오리하루콘 화살",
-          "grade": "normal",
-          "type": 1,
-          "desc": "오리하루콘으로 제작. 공40/정25/민10/치명20/신성",
-          "stats": {
-            "atk": 40,
-            "def": 0,
-            "spi": 25,
-            "agi": 10
-          },
-          "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 585,
           "name": "보우건",
           "grade": "normal",
@@ -3866,23 +3339,6 @@
             "def": 0,
             "spi": 0,
             "agi": 16
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 612,
-          "name": "정령의 활",
-          "grade": "unique",
-          "type": 1,
-          "desc": "정령의 힘이 깃든 활. 공60/정30/치명10/다속성",
-          "stats": {
-            "atk": 60,
-            "def": 0,
-            "spi": 30,
-            "agi": 0
           },
           "price": 10000,
           "maxPlus": null,
@@ -4128,23 +3584,6 @@
           "note": null
         },
         {
-          "id": 731,
-          "name": "데몬의 발톱",
-          "grade": "normal",
-          "type": 1,
-          "desc": "데몬의 발톱을 제련해 만든 넉클. 공40/치명15",
-          "stats": {
-            "atk": 40,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 4000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 738,
           "name": "다이아도금 검",
           "grade": "normal",
@@ -4179,23 +3618,6 @@
           "note": null
         },
         {
-          "id": 886,
-          "name": "버서크소드",
-          "grade": "normal",
-          "type": 1,
-          "desc": "버서크 효과가 사라진 검. 명중85/필살15/절단",
-          "stats": {
-            "atk": 30,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 4700,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 937,
           "name": "액스",
           "grade": "normal",
@@ -4225,57 +3647,6 @@
             "agi": 0
           },
           "price": 2000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 939,
-          "name": "헤비 액스",
-          "grade": "normal",
-          "type": 1,
-          "desc": "강하게 적을 찍는 한손도끼. 명중85/필살15/타격",
-          "stats": {
-            "atk": 50,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 4000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 940,
-          "name": "디바이더",
-          "grade": "normal",
-          "type": 1,
-          "desc": "적을 두동강 내는 한손도끼. 명중85/필살15/절단",
-          "stats": {
-            "atk": 70,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 7000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 941,
-          "name": "그레이트 액스",
-          "grade": "normal",
-          "type": 1,
-          "desc": "숙련자만 다룰 수 있는 한손도끼. 명중85/필살15/타격",
-          "stats": {
-            "atk": 90,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 11000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -4514,40 +3885,6 @@
             "agi": -50
           },
           "price": 1,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1132,
-          "name": "그랜드 랜스",
-          "grade": "normal",
-          "type": 1,
-          "desc": "찌르기 전용의 강력한 랜스. 공55/타스탯5/2회공격",
-          "stats": {
-            "atk": 55,
-            "def": 5,
-            "spi": 5,
-            "agi": 5
-          },
-          "price": 5500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1133,
-          "name": "디펜더 글러브",
-          "grade": "normal",
-          "type": 1,
-          "desc": "공격이 가능하지만 방어를 위한 장갑. 공35/방70",
-          "stats": {
-            "atk": 35,
-            "def": 70,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 7000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -4876,57 +4213,6 @@
           "note": null
         },
         {
-          "id": 1357,
-          "name": "닌자의 검",
-          "grade": "normal",
-          "type": 1,
-          "desc": "분신용 검. 공25",
-          "stats": {
-            "atk": 25,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1362,
-          "name": "기사의 검",
-          "grade": "normal",
-          "type": 1,
-          "desc": "기사가 사용하는 검. 공60",
-          "stats": {
-            "atk": 60,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1363,
-          "name": "기사의 창",
-          "grade": "normal",
-          "type": 1,
-          "desc": "기사가 사용하는 창. 공90",
-          "stats": {
-            "atk": 90,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1370,
           "name": "오우거더블시미터",
           "grade": "unique",
@@ -5027,23 +4313,6 @@
           "maxPlus": 4,
           "job": null,
           "note": "지하던전의 머미리더 드롭 (33%)"
-        },
-        {
-          "id": 1442,
-          "name": "발리스틱피스트",
-          "grade": "unique",
-          "type": 1,
-          "desc": "타격시 격발하는 장갑. 공70/방-20/민35/치명20",
-          "stats": {
-            "atk": 70,
-            "def": -20,
-            "spi": 0,
-            "agi": 35
-          },
-          "price": 20000,
-          "maxPlus": 4,
-          "job": null,
-          "note": null
         },
         {
           "id": 1447,
@@ -6098,227 +5367,6 @@
           "maxPlus": null,
           "job": null,
           "note": null
-        },
-        {
-          "id": 2081,
-          "name": "녹슨 칼",
-          "grade": "normal",
-          "type": 1,
-          "desc": "녹이 슬어버린 칼이다 공1",
-          "stats": {
-            "atk": 1,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 50,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2601,
-          "name": "독침 지팡이",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공30/정70/땅/전체공격(MP20)",
-          "stats": {
-            "atk": 30,
-            "def": 0,
-            "spi": 70,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2602,
-          "name": "전갈 꼬리 레이피어",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공80/치명15/관통/중독20%",
-          "stats": {
-            "atk": 80,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2603,
-          "name": "뱀 독니 활",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공75/필중/관통/중독15%",
-          "stats": {
-            "atk": 75,
-            "def": 0,
-            "spi": 10,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2604,
-          "name": "골렘 모래 너클",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공70/민10/타격",
-          "stats": {
-            "atk": 70,
-            "def": 0,
-            "spi": 0,
-            "agi": 10
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2605,
-          "name": "골렘 파편 몽둥이",
-          "grade": "craft",
-          "type": 1,
-          "desc": "황야세트. 공105/양손/타격",
-          "stats": {
-            "atk": 105,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2620,
-          "name": "아누비스의 저울",
-          "grade": "unique",
-          "type": 1,
-          "desc": "공60/정130/신성/전체공격(MP25)",
-          "stats": {
-            "atk": 60,
-            "def": 0,
-            "spi": 130,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2621,
-          "name": "자칼왕의 곡도",
-          "grade": "unique",
-          "type": 1,
-          "desc": "공105/치명25/관통/중독20%",
-          "stats": {
-            "atk": 105,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2630,
-          "name": "심판의 홀",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공45/정100/신성/전체공격(MP22)",
-          "stats": {
-            "atk": 45,
-            "def": 0,
-            "spi": 100,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2631,
-          "name": "심판의 곡검",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공105/치명18/관통/둔화20%",
-          "stats": {
-            "atk": 105,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2632,
-          "name": "심판의 활",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공100/정15/필중/관통",
-          "stats": {
-            "atk": 100,
-            "def": 0,
-            "spi": 15,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2633,
-          "name": "심판의 너클",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공95/민15/타격",
-          "stats": {
-            "atk": 95,
-            "def": 0,
-            "spi": 0,
-            "agi": 15
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2634,
-          "name": "심판의 철퇴",
-          "grade": "craft",
-          "type": 1,
-          "desc": "심판세트. 공135/양손/타격/마비15%",
-          "stats": {
-            "atk": 135,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
         }
       ]
     },
@@ -6326,74 +5374,6 @@
       "key": "armor",
       "name": "갑옷",
       "items": [
-        {
-          "id": 96,
-          "name": "가죽조끼",
-          "grade": "craft",
-          "type": 3,
-          "desc": "편안하고 질긴 가죽 조끼. 방10/타스탯5",
-          "stats": {
-            "atk": 5,
-            "def": 10,
-            "spi": 5,
-            "agi": 5
-          },
-          "price": 2500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 97,
-          "name": "가죽갑옷",
-          "grade": "craft",
-          "type": 3,
-          "desc": "가죽 조끼의 강화형. 방20/타스탯10",
-          "stats": {
-            "atk": 10,
-            "def": 20,
-            "spi": 10,
-            "agi": 10
-          },
-          "price": 5000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 98,
-          "name": "강화가죽조끼",
-          "grade": "craft",
-          "type": 3,
-          "desc": "마력으로 강화된 가죽 조끼. 방30/타스탯15",
-          "stats": {
-            "atk": 15,
-            "def": 30,
-            "spi": 15,
-            "agi": 15
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 99,
-          "name": "강화가죽갑옷",
-          "grade": "craft",
-          "type": 3,
-          "desc": "마력으로 강화된 가죽 갑옷. 방40/타스탯20",
-          "stats": {
-            "atk": 20,
-            "def": 40,
-            "spi": 20,
-            "agi": 20
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
         {
           "id": 101,
           "name": "로그용 브레스트",
@@ -6854,23 +5834,6 @@
           "note": null
         },
         {
-          "id": 329,
-          "name": "경기병 갑옷",
-          "grade": "normal",
-          "type": 3,
-          "desc": "경기병들이 사용하는 푸른빛의 갑옷",
-          "stats": {
-            "atk": 0,
-            "def": 50,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 342,
           "name": "마법사의 로브",
           "grade": "normal",
@@ -7041,23 +6004,6 @@
           "note": null
         },
         {
-          "id": 591,
-          "name": "강화 미스릴 아머",
-          "grade": "normal",
-          "type": 3,
-          "desc": "자연의 축복을 받은 미스릴 갑옷. 방100/타스탯25",
-          "stats": {
-            "atk": 25,
-            "def": 100,
-            "spi": 25,
-            "agi": 25
-          },
-          "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 614,
           "name": "빛의 로브",
           "grade": "quest",
@@ -7092,23 +6038,6 @@
           "note": null
         },
         {
-          "id": 795,
-          "name": "미늘갑옷",
-          "grade": "normal",
-          "type": 3,
-          "desc": "미늘로 짜여진 갑옷으로 견고하다. 공15/방60",
-          "stats": {
-            "atk": 15,
-            "def": 60,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 3000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 857,
           "name": "요정족 망토",
           "grade": "quest",
@@ -7121,40 +6050,6 @@
             "agi": 20
           },
           "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 887,
-          "name": "버서크아머",
-          "grade": "normal",
-          "type": 3,
-          "desc": "버서크 효과가 사라진 갑옷",
-          "stats": {
-            "atk": 0,
-            "def": 30,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 4000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 915,
-          "name": "강화엘리멘탈 아머",
-          "grade": "normal",
-          "type": 3,
-          "desc": "여덟속성 내성을 지닌 상급 엘리멘탈아머",
-          "stats": {
-            "atk": 20,
-            "def": 45,
-            "spi": 20,
-            "agi": 0
-          },
-          "price": 2250,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -7364,40 +6259,6 @@
           "note": null
         },
         {
-          "id": 1358,
-          "name": "닌자의 갑옷",
-          "grade": "normal",
-          "type": 3,
-          "desc": "분신용 갑옷. 방50/치명방지",
-          "stats": {
-            "atk": 0,
-            "def": 50,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1365,
-          "name": "기사의 갑옷",
-          "grade": "normal",
-          "type": 3,
-          "desc": "기사가 사용하는 갑옷. 방60",
-          "stats": {
-            "atk": 0,
-            "def": 60,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1399,
           "name": "참회자의 로브",
           "grade": "unique",
@@ -7578,23 +6439,6 @@
             "def": 60,
             "spi": 5,
             "agi": 5
-          },
-          "price": 20000,
-          "maxPlus": 4,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1600,
-          "name": "루시리스여신의옷",
-          "grade": "unique",
-          "type": 3,
-          "desc": "여신이 직접 짠 옷. 방40/정80/신성,어둠내성",
-          "stats": {
-            "atk": 0,
-            "def": 40,
-            "spi": 80,
-            "agi": 0
           },
           "price": 20000,
           "maxPlus": 4,
@@ -8025,40 +6869,6 @@
           "maxPlus": null,
           "job": null,
           "note": "혼돈의 땅, 혼돈의 문지기 드롭"
-        },
-        {
-          "id": 2606,
-          "name": "황야 가죽갑옷",
-          "grade": "craft",
-          "type": 3,
-          "desc": "황야세트. 방65/중독방지/땅내성",
-          "stats": {
-            "atk": 0,
-            "def": 65,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2635,
-          "name": "신전 수호 판금",
-          "grade": "craft",
-          "type": 3,
-          "desc": "심판세트. 방90/맹목방지/어둠내성",
-          "stats": {
-            "atk": 0,
-            "def": 90,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
         }
       ]
     },
@@ -8237,40 +7047,6 @@
           "note": null
         },
         {
-          "id": 156,
-          "name": "퓨전엘리멘탈 실드",
-          "grade": "unique",
-          "type": 2,
-          "desc": "불/물/땅/바람을 막는 방패. 방30/정15/민-10",
-          "stats": {
-            "atk": 0,
-            "def": 30,
-            "spi": 15,
-            "agi": -10
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 232,
-          "name": "세뱃돈 주머니",
-          "grade": "normal",
-          "type": 2,
-          "desc": "세뱃돈을 타서 보관할수 있는 주머니. 방32",
-          "stats": {
-            "atk": 0,
-            "def": 32,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1200,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 320,
           "name": "템플러 쉴드",
           "grade": "quest",
@@ -8283,23 +7059,6 @@
             "agi": 0
           },
           "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 330,
-          "name": "경기병 방패",
-          "grade": "normal",
-          "type": 2,
-          "desc": "경기병들이 사용하는 푸른빛의 방패",
-          "stats": {
-            "atk": 0,
-            "def": 30,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -8441,23 +7200,6 @@
           "note": null
         },
         {
-          "id": 796,
-          "name": "미늘방패",
-          "grade": "normal",
-          "type": 2,
-          "desc": "미늘로 짜여진 방패로 방어율이 좋다. 방50/민15",
-          "stats": {
-            "atk": 0,
-            "def": 50,
-            "spi": 0,
-            "agi": 15
-          },
-          "price": 2500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 974,
           "name": "루시페 쉴드",
           "grade": "normal",
@@ -8572,23 +7314,6 @@
             "agi": 0
           },
           "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1364,
-          "name": "기사의 방패",
-          "grade": "normal",
-          "type": 2,
-          "desc": "기사가 사용하는 방패. 방40",
-          "stats": {
-            "atk": 0,
-            "def": 40,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -8728,57 +7453,6 @@
           "maxPlus": null,
           "job": null,
           "note": "봉인의 빙묘 최심부, 얼어붙은 대천사 드롭"
-        },
-        {
-          "id": 2607,
-          "name": "골렘 파편 방패",
-          "grade": "craft",
-          "type": 2,
-          "desc": "황야세트. 방50/정10/마비방지",
-          "stats": {
-            "atk": 0,
-            "def": 50,
-            "spi": 10,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2624,
-          "name": "전장의 방패",
-          "grade": "unique",
-          "type": 2,
-          "desc": "방85/마비방지/타격내성",
-          "stats": {
-            "atk": 0,
-            "def": 85,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2636,
-          "name": "신전 수호 방패",
-          "grade": "craft",
-          "type": 2,
-          "desc": "심판세트. 방70/정15/마비방지",
-          "stats": {
-            "atk": 0,
-            "def": 70,
-            "spi": 15,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
         }
       ]
     },
@@ -8969,23 +7643,6 @@
             "agi": 0
           },
           "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 331,
-          "name": "경기병 투구",
-          "grade": "normal",
-          "type": 4,
-          "desc": "경기병들이 사용하는 푸른빛의 투구",
-          "stats": {
-            "atk": 0,
-            "def": 20,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -9246,40 +7903,6 @@
           "note": null
         },
         {
-          "id": 797,
-          "name": "미늘투구",
-          "grade": "normal",
-          "type": 4,
-          "desc": "미늘로 짜여진 투구로 보호율이 높다. 방30/정15",
-          "stats": {
-            "atk": 0,
-            "def": 30,
-            "spi": 15,
-            "agi": 0
-          },
-          "price": 1500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 888,
-          "name": "버서크투구",
-          "grade": "normal",
-          "type": 4,
-          "desc": "버서크 효과가 사라진 투구",
-          "stats": {
-            "atk": 0,
-            "def": 20,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2700,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 999,
           "name": "아이리스",
           "grade": "normal",
@@ -9394,40 +8017,6 @@
             "agi": 20
           },
           "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1359,
-          "name": "닌자의 두건",
-          "grade": "normal",
-          "type": 4,
-          "desc": "분신용 두건. 민50/회피상승",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 50
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1366,
-          "name": "기사의 투구",
-          "grade": "normal",
-          "type": 4,
-          "desc": "기사가 사용하는 투구. 민60",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 60
-          },
-          "price": 10000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -9669,57 +8258,6 @@
           "maxPlus": 4,
           "job": null,
           "note": null
-        },
-        {
-          "id": 2609,
-          "name": "뱀 독니 모자",
-          "grade": "craft",
-          "type": 4,
-          "desc": "황야세트. 방35/공25/맹목방지",
-          "stats": {
-            "atk": 25,
-            "def": 35,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2623,
-          "name": "심판관의 투구",
-          "grade": "unique",
-          "type": 4,
-          "desc": "방55/공20/정30/맹목방지",
-          "stats": {
-            "atk": 20,
-            "def": 55,
-            "spi": 30,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2638,
-          "name": "신전 수호 관",
-          "grade": "craft",
-          "type": 4,
-          "desc": "심판세트. 방45/공30/정20/맹목방지",
-          "stats": {
-            "atk": 30,
-            "def": 45,
-            "spi": 20,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
         }
       ]
     },
@@ -9789,57 +8327,6 @@
             "def": 0,
             "spi": 0,
             "agi": 60
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 184,
-          "name": "크리펜드의 반지",
-          "grade": "normal",
-          "type": 5,
-          "desc": "전투중 능력치 감소를 줄여주는 반지. 디버프방어",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 185,
-          "name": "로우저의 반지",
-          "grade": "normal",
-          "type": 5,
-          "desc": "상태이상 내성을 40% 상승시켜주는 반지. 상태방지40",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 186,
-          "name": "수호의 반지",
-          "grade": "normal",
-          "type": 5,
-          "desc": "지형 데미지를 막는 반지. 올스탯5/지형 데미지 무시",
-          "stats": {
-            "atk": 5,
-            "def": 5,
-            "spi": 5,
-            "agi": 5
           },
           "price": 20000,
           "maxPlus": null,
@@ -10012,23 +8499,6 @@
             "agi": 12
           },
           "price": 30000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 410,
-          "name": "블레스 오브 더 문",
-          "grade": "normal",
-          "type": 5,
-          "desc": "달빛을 품은 목걸이. 정-60/타스탯-30/마력소모절반",
-          "stats": {
-            "atk": -30,
-            "def": -30,
-            "spi": -60,
-            "agi": -30
-          },
-          "price": 20000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -10493,40 +8963,6 @@
           "note": null
         },
         {
-          "id": 1360,
-          "name": "닌자의 복면",
-          "grade": "normal",
-          "type": 5,
-          "desc": "분신용 두건. 정50/지형 데미지 무효",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 50,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1367,
-          "name": "기사의 인장",
-          "grade": "normal",
-          "type": 5,
-          "desc": "기사라는 것을 증명해주는 인장. 정60",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 60,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1624,
           "name": "죽음의 반지",
           "grade": "unique",
@@ -10697,23 +9133,6 @@
           "note": "대현자의 탑 꼭대기, 대현자의 수호 골렘 드롭"
         },
         {
-          "id": 2082,
-          "name": "테이머의 애정",
-          "grade": "normal",
-          "type": 5,
-          "desc": "테이머의 애정이 담긴 장신구",
-          "stats": {
-            "atk": 0,
-            "def": 100,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 2211,
           "name": "라그엘의 깃털",
           "grade": "unique",
@@ -10729,74 +9148,6 @@
           "maxPlus": null,
           "job": null,
           "note": "에피소드3, 칠리마을 광장에 내려온 대천사 라그엘 드롭"
-        },
-        {
-          "id": 2608,
-          "name": "황야의 망토",
-          "grade": "craft",
-          "type": 5,
-          "desc": "황야세트. 민40/방12/회피상승/땅내성",
-          "stats": {
-            "atk": 0,
-            "def": 12,
-            "spi": 0,
-            "agi": 40
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2622,
-          "name": "수호자의 붕대",
-          "grade": "unique",
-          "type": 5,
-          "desc": "민60/정40/방25/맹목·마비방지/어둠내성",
-          "stats": {
-            "atk": 0,
-            "def": 25,
-            "spi": 40,
-            "agi": 60
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2625,
-          "name": "모래시계의 반지",
-          "grade": "unique",
-          "type": 5,
-          "desc": "민45/회피상승",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 45
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2637,
-          "name": "신전 수호 망토",
-          "grade": "craft",
-          "type": 5,
-          "desc": "심판세트. 민50/방18/회피상승/어둠내성",
-          "stats": {
-            "atk": 0,
-            "def": 18,
-            "spi": 0,
-            "agi": 50
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
         }
       ]
     },
@@ -11077,40 +9428,6 @@
           "note": null
         },
         {
-          "id": 200,
-          "name": "힐링포트",
-          "grade": "normal",
-          "type": 6,
-          "desc": "모두의 체력을 20%+100 회복시킨다.비매품",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 201,
-          "name": "마나포트",
-          "grade": "normal",
-          "type": 6,
-          "desc": "모두의 마나를 20%+100 회복시킨다.비매품",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 207,
           "name": "부활의 꽃가루",
           "grade": "normal",
@@ -11162,79 +9479,11 @@
           "note": null
         },
         {
-          "id": 223,
-          "name": "드래곤의 발톱",
-          "grade": "normal",
-          "type": 6,
-          "desc": "고약한 냄새가 나는 드래곤의 발톱. ＨＰ25%,ＭＰ25%",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 200,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 224,
-          "name": "드래곤 루비",
-          "grade": "normal",
-          "type": 6,
-          "desc": "드래곤의 체내에서 만들어진 붉은 보석. ＨＰ50%",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 50000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 225,
-          "name": "드래곤 사파이어",
-          "grade": "normal",
-          "type": 6,
-          "desc": "드래곤의 체내에서 만들어진 푸른 보석. ＭＰ50%",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 50000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 226,
           "name": "떡",
           "grade": "normal",
           "type": 6,
           "desc": "흰쌀 이외에 아무것도 넣지 않은 떡. 부활",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 400,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 227,
-          "name": "떡 뭉치",
-          "grade": "normal",
-          "type": 6,
-          "desc": "흰쌀 이외에 아무것도 넣지 않은 떡. 5회 사용. 부활",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -11264,45 +9513,11 @@
           "note": null
         },
         {
-          "id": 229,
-          "name": "떡국 5인분",
-          "grade": "normal",
-          "type": 6,
-          "desc": "떡국. 5회 사용. 피로,허약,망각,둔화 치료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 400,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 230,
           "name": "떡만두국",
           "grade": "normal",
           "type": 6,
           "desc": "떡국에 만두를 넣어 더 맛있어졌다. ＨＰ5%,ＭＰ5%",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 600,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 231,
-          "name": "떡만두국 5인분",
-          "grade": "normal",
-          "type": 6,
-          "desc": "떡만두국. 5회 사용. ＨＰ5%,ＭＰ5%",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -11332,23 +9547,6 @@
           "note": null
         },
         {
-          "id": 234,
-          "name": "동그랑땡 뭉치",
-          "grade": "normal",
-          "type": 6,
-          "desc": "동그랑땡 뭉치. 5회 사용. ＨＰ5%,중독,맹목 치료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 200,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 235,
           "name": "동태전",
           "grade": "normal",
@@ -11366,23 +9564,6 @@
           "note": null
         },
         {
-          "id": 236,
-          "name": "동태전 뭉치",
-          "grade": "normal",
-          "type": 6,
-          "desc": "동태전. 5회 사용. ＨＰ5%,봉인,침묵,폭주,혼란 치료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 400,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 237,
           "name": "호박전",
           "grade": "normal",
@@ -11395,23 +9576,6 @@
             "agi": 0
           },
           "price": 400,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 238,
-          "name": "호박전 뭉치",
-          "grade": "normal",
-          "type": 6,
-          "desc": "호박전. 5회 사용. ＨＰ5%,ＭＰ5%,수면,마비 치료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 800,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -12233,23 +10397,6 @@
           "note": null
         },
         {
-          "id": 817,
-          "name": "쌀",
-          "grade": "normal",
-          "type": 6,
-          "desc": "곡식의 종류로서 영양가가 제일 많다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 819,
           "name": "광어초밥",
           "grade": "normal",
@@ -12471,176 +10618,6 @@
           "note": null
         },
         {
-          "id": 868,
-          "name": "불사조의 눈물",
-          "grade": "normal",
-          "type": 6,
-          "desc": "불사조의 눈물이라 불러지는 신비의 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 50000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 869,
-          "name": "운디네의 사랑",
-          "grade": "normal",
-          "type": 6,
-          "desc": "운디네의 사랑이라 불러지는 신비의 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 50000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 870,
-          "name": "에메랄드스톤",
-          "grade": "normal",
-          "type": 6,
-          "desc": "일반 에메랄드와 달리 신비의 힘이 느껴지는 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 871,
-          "name": "사파이어스톤",
-          "grade": "normal",
-          "type": 6,
-          "desc": "일반 사파이어와 달리 신비의 힘이 느껴지는 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 872,
-          "name": "루비스톤",
-          "grade": "normal",
-          "type": 6,
-          "desc": "일반 루비와 달리 신비의 힘이 느껴지는 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 873,
-          "name": "토파즈스톤",
-          "grade": "normal",
-          "type": 6,
-          "desc": "일반 토파즈와 달리 신비의 힘이 느껴지는 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 874,
-          "name": "스컬스톤",
-          "grade": "normal",
-          "type": 6,
-          "desc": "일반 해골과 달리 신비의 힘이 느껴지는 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 875,
-          "name": "다이아스톤",
-          "grade": "normal",
-          "type": 6,
-          "desc": "일반 다이아몬드와 달리 신비의 힘이 느껴지는 보석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 50000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 876,
-          "name": "칠면조구이",
-          "grade": "normal",
-          "type": 6,
-          "desc": "칠면조를 기름에 발라 구운 구이",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 877,
-          "name": "초콜릿",
-          "grade": "normal",
-          "type": 6,
-          "desc": "고칼로리의 맛있고 단 음식",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1089,
           "name": "다크포션",
           "grade": "normal",
@@ -12697,40 +10674,6 @@
           "grade": "normal",
           "type": 6,
           "desc": "자신을 완벽하게 회복시키는 약",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1121,
-          "name": "성수",
-          "grade": "normal",
-          "type": 6,
-          "desc": "아군의 모든 상태이상, 체력과 마나를 50% 회복한다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1122,
-          "name": "젊음의 샘물",
-          "grade": "normal",
-          "type": 6,
-          "desc": "아군의 부활시키고, 체력과 마나를 50% 회복시킨다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -12970,23 +10913,6 @@
       "name": "기술서·능력치",
       "items": [
         {
-          "id": 27,
-          "name": "변종의 열매",
-          "grade": "normal",
-          "type": 8,
-          "desc": "능력치가 랜덤하게 소폭 증가하는 이상한 열매",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 295,
           "name": "힐 법서",
           "grade": "normal",
@@ -13084,23 +11010,6 @@
             "agi": 0
           },
           "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 633,
-          "name": "자이언트의 심장",
-          "grade": "normal",
-          "type": 8,
-          "desc": "먹으면 강해진다는 알수없는 심장",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 5000,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -13293,40 +11202,6 @@
           "note": null
         },
         {
-          "id": 752,
-          "name": "블라인드 마법서",
-          "grade": "normal",
-          "type": 7,
-          "desc": "마법을 배울수 있게 해주는 마법서",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 753,
-          "name": "사일런스 마법서",
-          "grade": "normal",
-          "type": 7,
-          "desc": "마법을 배울수 있게 해주는 마법서",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 754,
           "name": "컨퓨즈 마법서",
           "grade": "normal",
@@ -13344,42 +11219,8 @@
           "note": null
         },
         {
-          "id": 755,
-          "name": "패럴라이즈 마법서",
-          "grade": "normal",
-          "type": 7,
-          "desc": "마법을 배울수 있게 해주는 마법서",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 757,
           "name": "매직 배리어 마법서",
-          "grade": "normal",
-          "type": 7,
-          "desc": "마법을 배울수 있게 해주는 마법서",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 7000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 758,
-          "name": "매직 리듀스 마법서",
           "grade": "normal",
           "type": 7,
           "desc": "마법을 배울수 있게 해주는 마법서",
@@ -13458,23 +11299,6 @@
             "agi": 0
           },
           "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 808,
-          "name": "계란",
-          "grade": "normal",
-          "type": 8,
-          "desc": "닭의 알로써 고단백질식품이다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 200,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -13565,74 +11389,6 @@
           "note": null
         },
         {
-          "id": 878,
-          "name": "사랑의 앵두",
-          "grade": "normal",
-          "type": 8,
-          "desc": "관심을 가져주는 사랑을 상징하는 앵두",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 879,
-          "name": "희망의 앵두",
-          "grade": "normal",
-          "type": 8,
-          "desc": "미래의 꿈을 알려주는 희망을 상징하는 앵두",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 880,
-          "name": "정열의 앵두",
-          "grade": "normal",
-          "type": 8,
-          "desc": "용기를 심어주는 정열을 상징하는 앵두",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 881,
-          "name": "우정의 앵두",
-          "grade": "normal",
-          "type": 8,
-          "desc": "우정을 일깨워주는 우정을 상징하는 앵두",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 891,
           "name": "크리스마스 씰",
           "grade": "normal",
@@ -13645,40 +11401,6 @@
             "agi": 0
           },
           "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 900,
-          "name": "크리스마스의 기적",
-          "grade": "normal",
-          "type": 8,
-          "desc": "주변의 가족들을 살펴보세요.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 913,
-          "name": "언써몬 스킬책",
-          "grade": "normal",
-          "type": 7,
-          "desc": "언써몬을 배울수 있다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -13808,40 +11530,6 @@
           "grade": "normal",
           "type": 8,
           "desc": "바르곤의 머리",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1129,
-          "name": "바르곤의 눈",
-          "grade": "normal",
-          "type": 8,
-          "desc": "바르곤의 눈",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1130,
-          "name": "바르곤의 뼈",
-          "grade": "normal",
-          "type": 8,
-          "desc": "바르곤의 뼈",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -14568,40 +12256,6 @@
           "note": null
         },
         {
-          "id": 1334,
-          "name": "◇기술서:어스크래시",
-          "grade": "normal",
-          "type": 7,
-          "desc": "어스크래시를 배울 수 있는 책",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1864,
-          "name": "정화된 정수",
-          "grade": "quest",
-          "type": 8,
-          "desc": "어둠의 핵을 정화한 정수. 복용시 올스탯10",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 20000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1890,
           "name": "사제의 비약",
           "grade": "normal",
@@ -14824,159 +12478,6 @@
             "agi": 0
           },
           "price": 3000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 366,
-          "name": "모델1 액자",
-          "grade": "normal",
-          "type": 10,
-          "desc": "그림이 그려진 액자",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 350,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 367,
-          "name": "모델2 액자",
-          "grade": "normal",
-          "type": 10,
-          "desc": "그림이 그려진 액자",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 350,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 368,
-          "name": "모델3 액자",
-          "grade": "normal",
-          "type": 10,
-          "desc": "그림이 그려진 액자",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 350,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 369,
-          "name": "모델1 책꽂이",
-          "grade": "normal",
-          "type": 10,
-          "desc": "책을 꽂고 읽을수 있는 책꽃이",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 700,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 370,
-          "name": "모델2 책꽂이",
-          "grade": "normal",
-          "type": 10,
-          "desc": "책을 꽂고 읽을수 있는 책꽃이",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 700,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 371,
-          "name": "모델3 책꽂이",
-          "grade": "normal",
-          "type": 10,
-          "desc": "책을 꽂고 읽을수 있는 책꽃이",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 700,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 372,
-          "name": "난로",
-          "grade": "normal",
-          "type": 10,
-          "desc": "집안을 따뜻하게 해주는 대형 난로",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 373,
-          "name": "화장대",
-          "grade": "normal",
-          "type": 10,
-          "desc": "여자들에게는 꼭 필요한 화장대",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 700,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 374,
-          "name": "울타리세트",
-          "grade": "normal",
-          "type": 10,
-          "desc": "집안에 울타리를 칠 수 있다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 3500,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -15232,40 +12733,6 @@
             "agi": 0
           },
           "price": 800,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 687,
-          "name": "무지개보따리",
-          "grade": "normal",
-          "type": 10,
-          "desc": "무엇이 들어있을까?",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1600,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 890,
-          "name": "미로탈출용 실프",
-          "grade": "normal",
-          "type": 10,
-          "desc": "미로를 탈출한다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -15560,23 +13027,6 @@
           "note": null
         },
         {
-          "id": 1336,
-          "name": "◇지도:로그오브랜드",
-          "grade": "normal",
-          "type": 10,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1857,
           "name": "버그 해결용",
           "grade": "normal",
@@ -15718,23 +13168,6 @@
       "key": "etc",
       "name": "재료·기타",
       "items": [
-        {
-          "id": 39,
-          "name": "변종의 씨앗",
-          "grade": "normal",
-          "type": 0,
-          "desc": "변종씨앗 상점에 팔 가치가있어보인다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
         {
           "id": 160,
           "name": "몬스터 가죽",
@@ -16280,23 +13713,6 @@
           "note": null
         },
         {
-          "id": 287,
-          "name": "중급 에메랄드",
-          "grade": "normal",
-          "type": 0,
-          "desc": "초록 빛을 띈 활력의 보석. 제작 재료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 288,
           "name": "중급 다이아몬드",
           "grade": "normal",
@@ -16552,23 +13968,6 @@
           "note": null
         },
         {
-          "id": 350,
-          "name": "미스릴 원석",
-          "grade": "normal",
-          "type": 0,
-          "desc": "전혀 가공되지 않은 순수한 미스릴 원석",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 351,
           "name": "자연의 칼날",
           "grade": "normal",
@@ -16717,91 +14116,6 @@
             "agi": 0
           },
           "price": 5000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 417,
-          "name": "최하급 여의주",
-          "grade": "normal",
-          "type": 0,
-          "desc": "하급 드래곤들이 지녔던 여의주",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 5000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 418,
-          "name": "여의주",
-          "grade": "normal",
-          "type": 0,
-          "desc": "일반적인 드래곤들이 지녔던 여의주",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 7000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 419,
-          "name": "최상급 여의주",
-          "grade": "normal",
-          "type": 0,
-          "desc": "강력한 드래곤들이 지녔던 여의주",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 420,
-          "name": "신성한 나뭇가지",
-          "grade": "normal",
-          "type": 0,
-          "desc": "수천년을 살아온 엔트에게서 떨어져나온 나뭇가지",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 421,
-          "name": "타버린 나무조각",
-          "grade": "normal",
-          "type": 0,
-          "desc": "불길에 휩쓸려 죽어버린 엔트의 나뭇가지",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 200,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -17011,23 +14325,6 @@
           "note": null
         },
         {
-          "id": 559,
-          "name": "로저스 여왕의 서명",
-          "grade": "normal",
-          "type": 0,
-          "desc": "로저스 여왕의 친필 서명이 적힌 종이",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 565,
           "name": "문과 수료증",
           "grade": "normal",
@@ -17050,23 +14347,6 @@
           "grade": "normal",
           "type": 0,
           "desc": "로저스 대학 무과를 졸업했다는 증서",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 568,
-          "name": "???",
-          "grade": "normal",
-          "type": 0,
-          "desc": "???",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17453,23 +14733,6 @@
           "note": "카오스룸의 카오스가 반드시 떨어뜨린다. 엔딩 뒤 자유의 면류관 재료"
         },
         {
-          "id": 770,
-          "name": "열대피라미 어포",
-          "grade": "normal",
-          "type": 0,
-          "desc": "열대지방에서 사는 피라미를 어포로 만든것",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 771,
           "name": "편지",
           "grade": "normal",
@@ -17623,40 +14886,6 @@
           "note": null
         },
         {
-          "id": 800,
-          "name": "미늘광석",
-          "grade": "normal",
-          "type": 0,
-          "desc": "제작아이템의 재료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 801,
-          "name": "미늘판금",
-          "grade": "normal",
-          "type": 0,
-          "desc": "제작아이템의 재료",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 803,
           "name": "광어",
           "grade": "normal",
@@ -17781,57 +15010,6 @@
           "grade": "normal",
           "type": 0,
           "desc": "게의 일종",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 813,
-          "name": "계란말이",
-          "grade": "normal",
-          "type": 0,
-          "desc": "계란을 응용하여 만든 음식",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 1000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 814,
-          "name": "연어알",
-          "grade": "normal",
-          "type": 0,
-          "desc": "생선인 연어의 알로서 고단백식품이다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 815,
-          "name": "성게알",
-          "grade": "normal",
-          "type": 0,
-          "desc": "성게의 알로써 영양가가 매우 높다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17980,91 +15158,6 @@
           "note": null
         },
         {
-          "id": 863,
-          "name": "황금열쇠",
-          "grade": "normal",
-          "type": 0,
-          "desc": "황금으로 제작된 열쇠",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 300,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 867,
-          "name": "비밀의 알",
-          "grade": "normal",
-          "type": 0,
-          "desc": "어느 동물의 알인지 알수 없다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 882,
-          "name": "카이져드래곤 소환서",
-          "grade": "normal",
-          "type": 0,
-          "desc": "풍파에 못쓰게 된 마법서. 비싼 값에 팔 수 있다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 883,
-          "name": "데몬로드 소환서",
-          "grade": "normal",
-          "type": 0,
-          "desc": "풍파에 못쓰게 된 마법서. 비싼 값에 팔 수 있다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 10000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 884,
-          "name": "사과상자",
-          "grade": "normal",
-          "type": 0,
-          "desc": "무언가 수상쩍은것이 들어있는 사과 상자",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 893,
           "name": "도망자의 흔적1",
           "grade": "normal",
@@ -18162,23 +15255,6 @@
             "agi": 0
           },
           "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 902,
-          "name": "크리스마스양말",
-          "grade": "normal",
-          "type": 0,
-          "desc": "~!",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 500,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -18325,23 +15401,6 @@
           "grade": "normal",
           "type": 0,
           "desc": "구대륙지역행 티켓",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 2000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1082,
-          "name": "로랜드섬 티켓",
-          "grade": "normal",
-          "type": 0,
-          "desc": "로랜드섬행 티켓",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -18881,23 +15940,6 @@
           "note": null
         },
         {
-          "id": 1264,
-          "name": "팔목보호대",
-          "grade": "normal",
-          "type": 0,
-          "desc": "[착용불능]소유하고 있으면, 효과가 발휘하는 아이템",
-          "stats": {
-            "atk": 0,
-            "def": 20,
-            "spi": 0,
-            "agi": 10
-          },
-          "price": 2,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 1272,
           "name": "머미의 붕대",
           "grade": "normal",
@@ -18970,7 +16012,7 @@
           "name": "전갈꼬리",
           "grade": "normal",
           "type": 0,
-          "desc": "신대륙 사막 전갈의 꼬리. 독침이 아직 날카롭다.",
+          "desc": "전갈꼬리",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -18987,7 +16029,7 @@
           "name": "뱀의 독니",
           "grade": "normal",
           "type": 0,
-          "desc": "신대륙 사막뱀의 독니. 독이 마르지 않았다.",
+          "desc": "뱀의 독니",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -19004,7 +16046,7 @@
           "name": "골렘의 파편",
           "grade": "normal",
           "type": 0,
-          "desc": "신대륙 샌드골렘의 파편. 모래가 섞인 돌조각이다.",
+          "desc": "골렘의 파편",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -19021,7 +16063,7 @@
           "name": "미노타우로스의 해머",
           "grade": "normal",
           "type": 0,
-          "desc": "신대륙 사막신전 미노타우르스의 해머. 묵직하다.",
+          "desc": "미노타우로스의 해머",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -19038,7 +16080,7 @@
           "name": "코카트리스의 볏",
           "grade": "normal",
           "type": 0,
-          "desc": "신대륙 사막신전 코카트리스의 볏. 돌처럼 굳어 있다.",
+          "desc": "코카트리스의 볏",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -19055,7 +16097,7 @@
           "name": "가루다의 깃털",
           "grade": "normal",
           "type": 0,
-          "desc": "신대륙 사막신전 가루다의 깃털. 가볍고 단단하다.",
+          "desc": "가루다의 깃털",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -19063,431 +16105,6 @@
             "agi": 0
           },
           "price": 100,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1369,
-          "name": "[ 워 리 어 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1381,
-          "name": "[ 클 레 릭 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1393,
-          "name": "[ 프리스트 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1405,
-          "name": "[ 네 크 로 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1417,
-          "name": "[ 안티프리 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1429,
-          "name": "[ 테 이 머 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1441,
-          "name": "[ 격 투 가 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1458,
-          "name": "[  도 적  전 용  ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1475,
-          "name": "[  닌 자  전 용  ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1492,
-          "name": "[ 위 자 드 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1504,
-          "name": "[ 요 정 활 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1526,
-          "name": "[ 요 정 검 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1533,
-          "name": "[ 요 정 공통갑옷 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1540,
-          "name": "[  군 주  전 용  ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1557,
-          "name": "<워 클 테 닌 요검>",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1589,
-          "name": "<프 네크  안티 위>",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1606,
-          "name": "< 격투가   도 적 >",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1613,
-          "name": "< 전 직 업 공 통 >",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1751,
-          "name": "[  요 정  전 용  ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1775,
-          "name": "[ 몬 스 터 전 용 ]",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1795,
-          "name": "광기+힘반+광핵",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1798,
-          "name": "고대팔라3개+마뢰초",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1801,
-          "name": "콘쿼+빛전+혼전",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1807,
-          "name": "암전+혼전+지식",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 1822,
-          "name": "마법투구+모자+로브",
-          "grade": "normal",
-          "type": 0,
-          "desc": "",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
           "maxPlus": null,
           "job": null,
           "note": null
@@ -20105,57 +16722,6 @@
           "note": null
         },
         {
-          "id": 2027,
-          "name": "얼어붙은 영혼",
-          "grade": "normal",
-          "type": 0,
-          "desc": "추가 예정",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2032,
-          "name": "아이스 골렘",
-          "grade": "normal",
-          "type": 0,
-          "desc": "추가 예정",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2037,
-          "name": "예티",
-          "grade": "normal",
-          "type": 0,
-          "desc": "추가 예정",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 0,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
           "id": 2151,
           "name": "발록의 뿔",
           "grade": "normal",
@@ -20205,74 +16771,6 @@
           "maxPlus": null,
           "job": null,
           "note": "혼돈의 땅 몬스터 드롭"
-        },
-        {
-          "id": 2610,
-          "name": "미라의 붕대",
-          "grade": "normal",
-          "type": 0,
-          "desc": "신대륙 사막신전 미라의 붕대. 오래된 향유 냄새가 난다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 300,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2611,
-          "name": "자칼의 송곳니",
-          "grade": "normal",
-          "type": 0,
-          "desc": "신대륙 사막신전 자칼 전사의 송곳니. 아직 날카롭다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 300,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2612,
-          "name": "스카라베의 날개껍질",
-          "grade": "normal",
-          "type": 0,
-          "desc": "신대륙 사막신전 스카라베의 날개껍질. 푸른 금속빛이 난다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 200,
-          "maxPlus": null,
-          "job": null,
-          "note": null
-        },
-        {
-          "id": 2613,
-          "name": "아누비스의 인장",
-          "grade": "normal",
-          "type": 0,
-          "desc": "신전의 수호자가 지니던 인장. 장인에게 가져가면 쓸 데가 있다.",
-          "stats": {
-            "atk": 0,
-            "def": 0,
-            "spi": 0,
-            "agi": 0
-          },
-          "price": 5000,
-          "maxPlus": null,
-          "job": null,
-          "note": null
         }
       ]
     },
