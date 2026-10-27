@@ -40,6 +40,12 @@
     tabs.innerHTML = vs.length < 2 ? "" : vs.map(function (x) {
       return '<button type="button" aria-pressed="' + (x === v) + '" data-l="' + esc(x.label) + '">' + esc(x.label) + "</button>";
     }).join("");
+    // 승급 기술: 승급 이벤트가 주는 기술 전부 (검기·아머 블레스·메디테이션 같은 공통 기술 포함)
+    if (v.promo && v.promo.length) {
+      $("c-skills").innerHTML = v.promo.map(function (k) {
+        return '<li title="' + esc(k.desc) + '"><span class="pixel dim">' + k.step + "</span> " + esc(k.name) + "</li>";
+      }).join("");
+    }
     $("c-learn").innerHTML = v.rows.map(function (k) {
       return '<tr><td class="pixel">' + k.lv + "</td><th>" + esc(k.name) + '</th><td class="pixel">' + k.mp + '</td><td class="dim">' + esc(k.desc) + "</td></tr>";
     }).join("");
