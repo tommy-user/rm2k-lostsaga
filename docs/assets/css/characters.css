@@ -35,7 +35,8 @@
     radial-gradient(ellipse 60% 45% at 50% 58%, rgba(196, 71, 90, .32), transparent 70%),
     linear-gradient(180deg, #2a1640, #0d0820);
 }
-.card__art img { position: absolute; inset: 14px 0 0; width: 100%; height: calc(100% - 14px); object-fit: contain; object-position: center bottom; }
+/* 기술표가 길어 창이 길어져도 그림은 위에 붙어 화면을 따라온다 */
+.card__art img { position: sticky; top: 76px; display: block; width: 100%; height: min(calc(100vh - 96px), 860px); padding-top: 14px; object-fit: contain; object-position: center top; }
 .card__body { padding: 30px 30px 30px 0; min-width: 0; }
 .card__class { margin: 0 0 6px; display: flex; gap: 10px; align-items: center; }
 .card__body h2 { font-size: var(--step-4); margin: 0; }
@@ -67,7 +68,8 @@
 
 @media (max-width: 860px) {
   .card { grid-template-columns: 1fr; }
-  .card__art { min-height: 0; aspect-ratio: 2 / 2.4; border-right: 0; border-bottom: 2px solid var(--win-line); }
+  .card__art { min-height: 0; border-right: 0; border-bottom: 2px solid var(--win-line); }
+  .card__art img { position: static; height: auto; aspect-ratio: 2 / 3; max-height: 80vh; }
   .card__body { padding: 0 20px 24px; }
   .card__cols { grid-template-columns: 1fr; }
 }
