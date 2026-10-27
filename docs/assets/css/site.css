@@ -1,0 +1,189 @@
+/* 로스트사가 소개 사이트 — 공통 스타일
+   기본 생각: 게임의 RPG Maker 2000 창(남색 그라데이션 + 밝은 테두리)을 웹 크기로 키워 쓴다.
+   금색 = 빛(루시리스), 진홍 = 어둠(다크네스). 색은 진영 표시에만 쓴다. */
+
+@import url("https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css");
+
+:root {
+  --night: #0f1430;
+  --night-2: #161d42;
+  --win-top: #2b3f86;
+  --win-bot: #0f1846;
+  --win-line: #c9d3f2;
+  --win-shade: #070b22;
+  --ink: #ece6d6;
+  --ink-dim: #a3abc9;
+  --gold: #e2c06b;
+  --gold-deep: #a8853a;
+  --crimson: #c4475a;
+  --crimson-deep: #6e1f2e;
+  --focus: #ffe9a3;
+
+  --serif: "Nanum Myeongjo", "AppleMyungjo", "Batang", serif;
+  --pixel: "Galmuri11", "Galmuri9", "DungGeunMo", monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: 1.65rem;
+  --step-3: 2.2rem;
+  --step-4: 3.1rem;
+  --step-5: 4.4rem;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1180px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: var(--step-0);
+  line-height: 1.85;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+.px { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+a { color: var(--gold); text-underline-offset: 3px; }
+a:hover { color: var(--focus); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 800; line-height: 1.3; margin: 0 0 .5em; letter-spacing: -0.01em; }
+h1 { font-size: var(--step-5); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+h4 { font-size: var(--step-1); }
+p { margin: 0 0 1em; max-width: 38em; }
+
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 100; }
+.skip:focus { left: 8px; background: var(--night); padding: 6px 10px; }
+
+/* ── RM2K 창 ───────────────────────────────── */
+.win {
+  position: relative;
+  background: linear-gradient(180deg, var(--win-top), var(--win-bot));
+  border: 2px solid var(--win-line);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 2px var(--win-shade), 0 10px 30px rgba(3, 5, 20, .55);
+  padding: 22px 26px;
+}
+.win--plain { background: rgba(15, 24, 70, .72); }
+.win__title {
+  font-family: var(--pixel);
+  font-size: var(--step--1);
+  color: var(--gold);
+  margin: 0 0 10px;
+  letter-spacing: .02em;
+}
+.pixel { font-family: var(--pixel); }
+
+/* ── 머리 메뉴 ─────────────────────────────── */
+.gnb {
+  position: sticky; top: 0; z-index: 50;
+  background: linear-gradient(180deg, var(--win-top), var(--win-bot));
+  border-bottom: 2px solid var(--win-line);
+  box-shadow: 0 2px 0 var(--win-shade);
+}
+.gnb__in {
+  max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+  display: flex; align-items: center; gap: 28px; min-height: 60px;
+}
+.gnb__logo {
+  font-family: var(--serif); font-weight: 800; font-size: 1.35rem;
+  color: var(--ink); text-decoration: none; white-space: nowrap; line-height: 1;
+}
+.gnb__logo small { display: block; font-family: var(--pixel); font-size: .62rem; color: var(--gold); font-weight: 400; margin-top: 4px; letter-spacing: .08em; }
+.gnb__menu { display: flex; gap: 4px; list-style: none; margin: 0 0 0 auto; padding: 0; }
+.gnb__menu a {
+  display: block; position: relative;
+  font-family: var(--pixel); font-size: .9rem; color: var(--ink);
+  text-decoration: none; padding: 8px 12px 8px 22px;
+}
+/* 게임 메뉴 커서: 지금 페이지와 가리키는 항목에만 ▶ */
+.gnb__menu a::before {
+  content: "▶"; position: absolute; left: 6px; top: 50%; transform: translateY(-50%);
+  font-size: .6rem; color: var(--gold); opacity: 0;
+}
+.gnb__menu a:hover::before, .gnb__menu a:focus-visible::before, .gnb__menu a[aria-current="page"]::before { opacity: 1; }
+.gnb__menu a[aria-current="page"] { color: var(--gold); }
+.gnb__toggle { display: none; margin-left: auto; background: none; border: 2px solid var(--win-line); color: var(--ink); font-family: var(--pixel); padding: 6px 10px; border-radius: 4px; cursor: pointer; }
+
+@media (max-width: 920px) {
+  .gnb__toggle { display: block; }
+  .gnb__menu {
+    display: none; position: absolute; top: 100%; right: var(--gutter); left: var(--gutter);
+    flex-direction: column; gap: 0;
+    background: linear-gradient(180deg, var(--win-top), var(--win-bot));
+    border: 2px solid var(--win-line); border-radius: 6px; box-shadow: inset 0 0 0 2px var(--win-shade);
+    padding: 10px; margin-top: 6px;
+  }
+  .gnb__menu.is-open { display: flex; }
+  .gnb__menu a { font-size: 1rem; padding: 10px 12px 10px 26px; }
+}
+
+/* ── 공통 틀 ───────────────────────────────── */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: clamp(56px, 9vw, 110px) 0; }
+.section + .section { padding-top: 0; }
+
+.page-head {
+  position: relative; overflow: hidden;
+  padding: clamp(70px, 12vw, 150px) 0 clamp(40px, 6vw, 70px);
+  border-bottom: 2px solid var(--win-line);
+  box-shadow: 0 2px 0 var(--win-shade);
+}
+.page-head__bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(.85) brightness(.45);
+}
+.page-head::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,20,48,.2), var(--night)); }
+.page-head .wrap { position: relative; z-index: 1; }
+.page-head h1 { font-size: clamp(2.4rem, 7vw, var(--step-5)); margin: 0; }
+.page-head p { color: var(--ink-dim); font-size: var(--step-1); margin-top: .6em; }
+
+.lede { font-size: var(--step-1); line-height: 1.8; color: var(--ink); }
+.dim { color: var(--ink-dim); }
+
+.grid { display: grid; gap: 22px; }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+
+/* 진영 표시 */
+.faction { font-family: var(--pixel); font-size: .78rem; padding: 2px 8px; border-radius: 3px; display: inline-block; line-height: 1.6; }
+.faction--light { color: #2a1f05; background: var(--gold); }
+.faction--dark { color: #fff1f3; background: var(--crimson); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--pixel); font-size: 1rem; color: var(--ink); text-decoration: none;
+  background: linear-gradient(180deg, var(--win-top), var(--win-bot));
+  border: 2px solid var(--win-line); border-radius: 5px; box-shadow: inset 0 0 0 2px var(--win-shade);
+  padding: 12px 20px 12px 30px; position: relative; cursor: pointer;
+}
+.btn::before { content: "▶"; position: absolute; left: 12px; font-size: .62rem; color: var(--gold); opacity: 0; }
+.btn:hover, .btn:focus-visible { color: var(--focus); }
+.btn:hover::before, .btn:focus-visible::before { opacity: 1; }
+.btn--gold { background: linear-gradient(180deg, #6b5320, #2c2008); border-color: var(--gold); }
+
+/* 표 */
+.table { width: 100%; border-collapse: collapse; font-size: var(--step--1); line-height: 1.6; }
+.table th, .table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(201, 211, 242, .18); vertical-align: top; }
+.table th { font-family: var(--pixel); font-weight: 400; color: var(--gold); white-space: nowrap; }
+.table-scroll { overflow-x: auto; }
+
+/* 바닥 */
+.foot { border-top: 2px solid var(--win-line); box-shadow: 0 -2px 0 var(--win-shade); background: var(--night-2); margin-top: 40px; }
+.foot__in { max-width: var(--max); margin: 0 auto; padding: 34px var(--gutter); display: flex; flex-wrap: wrap; gap: 14px 40px; justify-content: space-between; font-size: var(--step--1); color: var(--ink-dim); }
+.foot__in p { margin: 0; }
+.foot a { color: var(--ink-dim); }

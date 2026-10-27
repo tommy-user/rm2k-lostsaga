@@ -1,0 +1,2179 @@
+{
+  "regions": [
+    {
+      "key": "rogue",
+      "name": "로그오브랜드",
+      "desc": "신에게 선택받은 자들이 대륙으로 나가기 전에 경험을 쌓는 시작의 섬. 이곳 몬스터는 \"퇴화한·쇠약한\" 하위 개체들이다.",
+      "dungeons": [
+        {
+          "name": "로그던전",
+          "floors": "1~3층",
+          "desc": "초보 던전. 쇠창살이 열린 3층에서 재단사 미르오의 속치마를 빼앗은 \"거대한 그림자\"를 쓰러뜨린다.",
+          "boss": "퇴화한 오우거로드",
+          "maps": [
+            275,
+            276,
+            277
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 406,
+          "name": "슬라임",
+          "img": "Monster/스라임.png",
+          "hp": 20,
+          "atk": 10,
+          "def": 4,
+          "spi": 8,
+          "agi": 8,
+          "boss": false,
+          "drop": {
+            "id": 160,
+            "name": "몬스터 가죽",
+            "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 402,
+          "name": "고블린",
+          "img": "Monster/귀신.PNG",
+          "hp": 40,
+          "atk": 12,
+          "def": 10,
+          "spi": 5,
+          "agi": 5,
+          "boss": false,
+          "drop": {
+            "id": 162,
+            "name": "몬스터의 뼈",
+            "prob": 55,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 412,
+          "name": "썩어가는 좀비",
+          "img": "Monster/좀비.png",
+          "hp": 100,
+          "atk": 15,
+          "def": 15,
+          "spi": 10,
+          "agi": 5,
+          "boss": false,
+          "drop": {
+            "id": 162,
+            "name": "몬스터의 뼈",
+            "prob": 50,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 409,
+          "name": "퇴화된 하피",
+          "img": "Monster/하피.png",
+          "hp": 60,
+          "atk": 12,
+          "def": 10,
+          "spi": 1,
+          "agi": 15,
+          "boss": false,
+          "drop": {
+            "id": 749,
+            "name": "윈드 마법서",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 415,
+          "name": "쇠약한 오우거",
+          "img": "Monster/트롤.png",
+          "hp": 220,
+          "atk": 40,
+          "def": 20,
+          "spi": 50,
+          "agi": 30,
+          "boss": false,
+          "drop": {
+            "id": 740,
+            "name": "라이트쉴드 마법서",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 418,
+          "name": "쇠약한 오우거 로드",
+          "img": "Monster/트롤.png",
+          "hp": 400,
+          "atk": 50,
+          "def": 10,
+          "spi": 100,
+          "agi": 35,
+          "boss": true,
+          "drop": {
+            "id": 833,
+            "name": "미르오의 속치마",
+            "prob": 100,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "kriend-east",
+      "name": "크리엔드 본토·동쪽",
+      "desc": "대륙 최초의 도시 크리엔드와 크리엔드가 맡은 동쪽 필드. 타락한 신의 성지와 반란군기지가 있다.",
+      "dungeons": [
+        {
+          "name": "본토던전",
+          "floors": "1~4층·보스방",
+          "desc": "1층에 연구자 최도수가 있다. 보스방의 보물은 화염의 성배다.",
+          "boss": "그레이션드래곤",
+          "maps": [
+            23,
+            33,
+            66,
+            68,
+            69
+          ]
+        },
+        {
+          "name": "신의 성지 성지던전",
+          "floors": "1~5층",
+          "desc": "옛 성직자들의 축제지였으나 카오스가 가장 먼저 타락시켰다. x/o 미로를 지나 5층에 이른다.",
+          "boss": "폭주한 워울프",
+          "maps": [
+            36,
+            37,
+            38,
+            39,
+            40,
+            48,
+            49
+          ]
+        },
+        {
+          "name": "반란군기지",
+          "floors": null,
+          "desc": "천막을 돌며 반란군과 싸우고, 우두머리천막에서 혁명장군과 맞선다.",
+          "boss": "카르티나하",
+          "maps": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 33,
+          "name": "울프",
+          "img": "Monster/워울프.png",
+          "hp": 90,
+          "atk": 45,
+          "def": 10,
+          "spi": 10,
+          "agi": 60,
+          "boss": false,
+          "drop": {
+            "id": 1,
+            "name": "힐링포션",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 95,
+          "name": "크랩",
+          "img": "Monster/크랩.png",
+          "hp": 200,
+          "atk": 80,
+          "def": 140,
+          "spi": 50,
+          "agi": 50,
+          "boss": false,
+          "drop": {
+            "id": 10,
+            "name": "헤비마나포션",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 17,
+          "name": "구울",
+          "img": "Monster/좀비.png",
+          "hp": 300,
+          "atk": 80,
+          "def": 30,
+          "spi": 60,
+          "agi": 10,
+          "boss": false,
+          "drop": {
+            "id": 748,
+            "name": "다운스톤 마법서",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 46,
+          "name": "켈베로스",
+          "img": "Monster/켈베로스1.PNG",
+          "hp": 700,
+          "atk": 100,
+          "def": 10,
+          "spi": 10,
+          "agi": 40,
+          "boss": false,
+          "drop": {
+            "id": 742,
+            "name": "홀리쉴드 마법서",
+            "prob": 23,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 69,
+          "name": "나이트메어",
+          "img": "Monster/말.png",
+          "hp": 400,
+          "atk": 150,
+          "def": 60,
+          "spi": 100,
+          "agi": 500,
+          "boss": false,
+          "drop": {
+            "id": 168,
+            "name": "유니콘의 뿔",
+            "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 111,
+          "name": "다크 이플립트",
+          "img": "Monster/이프리트.png",
+          "hp": 1200,
+          "atk": 80,
+          "def": 10,
+          "spi": 150,
+          "agi": 63,
+          "boss": false,
+          "drop": {
+            "id": 744,
+            "name": "파이어볼트 마법서",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 66,
+          "name": "유니콘",
+          "img": "Monster/유니콘.png",
+          "hp": 100,
+          "atk": 100,
+          "def": 1,
+          "spi": 100,
+          "agi": 300,
+          "boss": false,
+          "drop": {
+            "id": 30,
+            "name": "변종의 열매",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 61,
+          "name": "섀도 엘프",
+          "img": "Monster/다크요정.png",
+          "hp": 300,
+          "atk": 80,
+          "def": 50,
+          "spi": 100,
+          "agi": 60,
+          "boss": false,
+          "drop": {
+            "id": 167,
+            "name": "미스릴",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "kriend-west",
+      "name": "본토 서쪽",
+      "desc": "로저스국이 맡은 서쪽 필드. 칠리마을의 만년설을 만드는 얼음성, 엔트의 숲과 오우거 채석장이 있는 그랜드마운틴이 이어진다.",
+      "dungeons": [
+        {
+          "name": "얼음성",
+          "floors": "1층~최상층",
+          "desc": "2층에 게르온의 연구소, 3층에 \"죽음의 악마\" 봉인 비문, 4층에 발록 3마리가 있다. 보물은 신비한 서리 엘릭서다.",
+          "boss": "그레이트와이번",
+          "maps": [
+            71,
+            447,
+            86,
+            99,
+            100,
+            101
+          ]
+        },
+        {
+          "name": "그랜드마운틴·고대던전",
+          "floors": "입구~하늘층",
+          "desc": "\"신들에게 다가가기 위해서는 죽음을 택해야\" 하는 던전. 하늘층에서 원소 히드라와 싸우는 통과의례가 있다.",
+          "boss": "원소 히드라",
+          "maps": [
+            97,
+            96,
+            95,
+            102,
+            103,
+            104,
+            151
+          ]
+        },
+        {
+          "name": "봉인의 성소 (골렘던전)",
+          "floors": "초입·본관·보스룸",
+          "desc": "대현자와 마법사들이 마석을 지키던 옛 재단이자 마법 학교. 보물은 대지의 심장이다.",
+          "boss": "골렘 수호자",
+          "maps": [
+            475,
+            476,
+            479
+          ]
+        },
+        {
+          "name": "트롤 구역",
+          "floors": "트롤마을·트롤킹의 동굴",
+          "desc": "서리 늑대와 서리 트롤, 서리 트롤 부족장을 지나 트롤킹의 동굴에 이른다.",
+          "boss": "트롤킹 프리조락",
+          "maps": [
+            484,
+            485
+          ]
+        },
+        {
+          "name": "지하호수",
+          "floors": "지하호수·깊은 곳·둥지",
+          "desc": "그랜드마운틴 아래 25~30레벨 던전. 투구 유니크 다섯 종이 나온다.",
+          "boss": "호수의 주인",
+          "maps": [
+            504,
+            506,
+            508
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 176,
+          "name": "프로즌 코볼트",
+          "img": "Monster/코볼트.png",
+          "hp": 100,
+          "atk": 60,
+          "def": 30,
+          "spi": 20,
+          "agi": 40,
+          "boss": false,
+          "drop": {
+            "id": 311,
+            "name": "창",
+            "prob": 7,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 186,
+          "name": "저주받은 엔트",
+          "img": "Monster/토렌트.PNG",
+          "hp": 300,
+          "atk": 100,
+          "def": 10,
+          "spi": 100,
+          "agi": 20,
+          "boss": false,
+          "drop": {
+            "id": 345,
+            "name": "엔트의 잎사귀",
+            "prob": 50,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 196,
+          "name": "오우거",
+          "img": "Monster/트롤.png",
+          "hp": 2000,
+          "atk": 250,
+          "def": 30,
+          "spi": 50,
+          "agi": 200,
+          "boss": false,
+          "drop": {
+            "id": 761,
+            "name": "플레이스웨폰마법서",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 117,
+          "name": "아이스 리자드맨",
+          "img": "Monster/리자도맨.png",
+          "hp": 400,
+          "atk": 120,
+          "def": 80,
+          "spi": 80,
+          "agi": 80,
+          "boss": false,
+          "drop": {
+            "id": 745,
+            "name": "아이스볼트 마법서",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 224,
+          "name": "데스 팔라딘",
+          "img": "Monster/와이트.png",
+          "hp": 1500,
+          "atk": 250,
+          "def": 100,
+          "spi": 500,
+          "agi": 300,
+          "boss": false,
+          "drop": {
+            "id": 408,
+            "name": "고대 팔라딘의 망치",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 746,
+          "name": "골렘 투사",
+          "img": "Monster/golem_warrier.png",
+          "hp": 1000,
+          "atk": 80,
+          "def": 120,
+          "spi": 50,
+          "agi": 20,
+          "boss": false,
+          "drop": null,
+          "secret": false
+        },
+        {
+          "enemyId": 760,
+          "name": "서리 트롤",
+          "img": "Monster/오거.png",
+          "hp": 500,
+          "atk": 80,
+          "def": 20,
+          "spi": 10,
+          "agi": 10,
+          "boss": false,
+          "drop": {
+            "id": 1207,
+            "name": "트롤의 가죽",
+            "prob": 50,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 711,
+          "name": "머맨",
+          "img": "Monster/Merman.png",
+          "hp": 1000,
+          "atk": 270,
+          "def": 210,
+          "spi": 150,
+          "agi": 300,
+          "boss": false,
+          "drop": {
+            "id": 1853,
+            "name": "머맨의 비늘",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "rogers",
+      "name": "로저스국·요정족 영역",
+      "desc": "로저스 1세가 세운 대륙 최대의 도시와 그 북쪽 엘프의 영역. 요정족숲 너머 마왕의 침소에서 천상계를 지나 카오스룸까지 이어진다.",
+      "dungeons": [
+        {
+          "name": "탑",
+          "floors": "갈림길 미로~요정족하늘",
+          "desc": "갈림길 미로를 오르면 꼭대기에 오리하루콘 조각상과 도둑 스트로가 있다.",
+          "boss": null,
+          "maps": [
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215
+          ]
+        },
+        {
+          "name": "마왕의 침소",
+          "floors": "동서남북 2층·마왕의 방",
+          "desc": "동서남북 2층마다 불멸의 용 우로보로스가 지키고, 그 너머에 4대 마왕이 잠들어 있다.",
+          "boss": "4대 마왕",
+          "maps": [
+            236,
+            237,
+            238,
+            239,
+            240,
+            241,
+            242,
+            243,
+            244
+          ]
+        },
+        {
+          "name": "천상계",
+          "floors": "1~5층",
+          "desc": "옛 천상계지만 지금은 타락한 수호자들과 카오스의 수하들의 소굴이다. 층마다 주문서가 있어야 오른다.",
+          "boss": null,
+          "maps": [
+            246,
+            256,
+            257,
+            258,
+            259
+          ]
+        },
+        {
+          "name": "혼돈의 세계·카오스룸",
+          "floors": null,
+          "desc": "\"세상의 혼돈을 이곳에 묻혀 놓았으니… 그 누구든 혼돈의 잠을 깨우지 말지어다.\"",
+          "boss": "카오스",
+          "maps": [
+            260,
+            261
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 263,
+          "name": "엔트 가디언",
+          "img": "Monster/트렌트.png",
+          "hp": 7000,
+          "atk": 300,
+          "def": 1,
+          "spi": 1,
+          "agi": 100,
+          "boss": false,
+          "drop": null,
+          "secret": false
+        },
+        {
+          "enemyId": 313,
+          "name": "메두사",
+          "img": "Monster/료사.png",
+          "hp": 600,
+          "atk": 330,
+          "def": 50,
+          "spi": 200,
+          "agi": 100,
+          "boss": false,
+          "drop": {
+            "id": 751,
+            "name": "포이즌 마법서",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 323,
+          "name": "뱀파이어",
+          "img": "Monster/언파이어.png",
+          "hp": 1000,
+          "atk": 200,
+          "def": 10,
+          "spi": 300,
+          "agi": 200,
+          "boss": false,
+          "drop": {
+            "id": 759,
+            "name": "매직 가디언 마법서",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 280,
+          "name": "바실리스크",
+          "img": "Monster/바실리크스.png",
+          "hp": 1000,
+          "atk": 250,
+          "def": 300,
+          "spi": 100,
+          "agi": 100,
+          "boss": false,
+          "drop": {
+            "id": 217,
+            "name": "전력의 수호",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 286,
+          "name": "자이언트",
+          "img": "Monster/자이언트.png",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 100,
+          "agi": 100,
+          "boss": false,
+          "drop": {
+            "id": 632,
+            "name": "자이언트의 주머니",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 348,
+          "name": "배회하는 다크엘프",
+          "img": "Monster/다크요정.png",
+          "hp": 1800,
+          "atk": 410,
+          "def": 150,
+          "spi": 300,
+          "agi": 180,
+          "boss": false,
+          "drop": {
+            "id": 733,
+            "name": "천상계2층주문서",
+            "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 364,
+          "name": "데빌 팔라딘",
+          "img": "Monster/와이트.png",
+          "hp": 3000,
+          "atk": 400,
+          "def": 200,
+          "spi": 600,
+          "agi": 600,
+          "boss": false,
+          "drop": {
+            "id": 412,
+            "name": "고대팔라딘의아뮬렛",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 388,
+          "name": "키메라",
+          "img": "Monster/키마이라.png",
+          "hp": 3000,
+          "atk": 400,
+          "def": 1,
+          "spi": 150,
+          "agi": 200,
+          "boss": false,
+          "drop": {
+            "id": 736,
+            "name": "천상계5층주문서",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "devilland",
+      "name": "데빌랜드",
+      "desc": "몬스터의 고향인 마계. 카오스가 살아 있을 때는 결계로 숨겨져 있었지만 카오스가 죽은 뒤 결계가 깨져 드러났다. 마을 밖은 PK 지역이다.",
+      "dungeons": [
+        {
+          "name": "데빌랜드 바깥",
+          "floors": null,
+          "desc": "다른 몬스터 유저를 쓰러뜨려 경험치의 책을 모으면 몬스터길드에 가입할 수 있다.",
+          "boss": null,
+          "maps": [
+            315
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 465,
+          "name": "슬라임",
+          "img": "Monster/스라임.png",
+          "hp": 20,
+          "atk": 10,
+          "def": 4,
+          "spi": 8,
+          "agi": 10,
+          "boss": false,
+          "drop": null,
+          "secret": false
+        },
+        {
+          "enemyId": 468,
+          "name": "오크",
+          "img": "Monster/오크.png",
+          "hp": 50,
+          "atk": 10,
+          "def": 10,
+          "spi": 5,
+          "agi": 15,
+          "boss": false,
+          "drop": {
+            "id": 359,
+            "name": "오크족 도끼",
+            "prob": 100,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 471,
+          "name": "좀비",
+          "img": "Monster/좀비.png",
+          "hp": 100,
+          "atk": 20,
+          "def": 15,
+          "spi": 10,
+          "agi": 20,
+          "boss": false,
+          "drop": {
+            "id": 1089,
+            "name": "다크포션",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 474,
+          "name": "하피",
+          "img": "Monster/하피.png",
+          "hp": 170,
+          "atk": 30,
+          "def": 5,
+          "spi": 50,
+          "agi": 50,
+          "boss": false,
+          "drop": {
+            "id": 1089,
+            "name": "다크포션",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 477,
+          "name": "오크로드",
+          "img": "Monster/오크.png",
+          "hp": 400,
+          "atk": 40,
+          "def": 20,
+          "spi": 50,
+          "agi": 30,
+          "boss": false,
+          "drop": {
+            "id": 1093,
+            "name": "오크의 뼈",
+            "prob": 100,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "new-continent",
+      "name": "신대륙",
+      "desc": "인간과 온건파 몬스터가 공존하는 그라나마을이 있는 땅. 칠리마을에서 비행선으로 간다. 블러드 보석체와 광기 오염체가 돌아다닌다.",
+      "dungeons": [
+        {
+          "name": "지하던전",
+          "floors": "1~4",
+          "desc": "서쪽늪에서 들어간다. 가장 깊은 곳에 듀라한과 다크나이트가 있다.",
+          "boss": "듀라한·다크나이트",
+          "maps": [
+            449,
+            454,
+            455,
+            456,
+            457,
+            458
+          ]
+        },
+        {
+          "name": "아공간",
+          "floors": null,
+          "desc": "마을 밖 여신상 아래의 아공간. 블러드 몬스터가 나오고, 광기의 던전으로 이어진다.",
+          "boss": null,
+          "maps": [
+            459
+          ]
+        },
+        {
+          "name": "광기의 던전",
+          "floors": "1~4층·보스룸",
+          "desc": "녹음 장치에 이계의 힘을 얻으려던 연구자의 목소리가 남아 있다. 신대륙 몬스터가 사나워진 원인이 이 실험이다.",
+          "boss": "광기의 전도자",
+          "maps": [
+            468,
+            469,
+            470,
+            471,
+            472
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 581,
+          "name": "머미",
+          "img": "Monster/마미.png",
+          "hp": 400,
+          "atk": 200,
+          "def": 80,
+          "spi": 60,
+          "agi": 80,
+          "boss": false,
+          "drop": {
+            "id": 1272,
+            "name": "머미의 붕대",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 589,
+          "name": "다크라이더",
+          "img": "Monster/토르동가.png",
+          "hp": 800,
+          "atk": 240,
+          "def": 120,
+          "spi": 160,
+          "agi": 300,
+          "boss": false,
+          "drop": {
+            "id": 1293,
+            "name": "◇법서:플레이스무브",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 593,
+          "name": "가고일",
+          "img": "Monster/가고엘.png",
+          "hp": 1000,
+          "atk": 320,
+          "def": 160,
+          "spi": 160,
+          "agi": 120,
+          "boss": false,
+          "drop": {
+            "id": 403,
+            "name": "갑옷파괴주문서",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 613,
+          "name": "블러드 루비",
+          "img": "Monster/bloody_orb.png",
+          "hp": 400,
+          "atk": 120,
+          "def": 30,
+          "spi": 150,
+          "agi": 90,
+          "boss": false,
+          "drop": {
+            "id": 414,
+            "name": "사악한 집념",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 682,
+          "name": "광기의 토끼",
+          "img": "Monster/madness_rabbit.png",
+          "hp": 500,
+          "atk": 230,
+          "def": 190,
+          "spi": 100,
+          "agi": 260,
+          "boss": false,
+          "drop": {
+            "id": 1843,
+            "name": "광기의 토끼 가죽",
+            "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 694,
+          "name": "광기의 전사",
+          "img": "Monster/madness_warrior.png",
+          "hp": 1500,
+          "atk": 300,
+          "def": 80,
+          "spi": 80,
+          "agi": 180,
+          "boss": false,
+          "drop": {
+            "id": 1846,
+            "name": "광기의 정수 조각",
+            "prob": 70,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 571,
+          "name": "듀라한",
+          "img": "Monster/듀라한.png",
+          "hp": 3000,
+          "atk": 300,
+          "def": 300,
+          "spi": 300,
+          "agi": 300,
+          "boss": true,
+          "drop": {
+            "id": 323,
+            "name": "듀라한의 핵",
+            "prob": 100,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 572,
+          "name": "다크나이트",
+          "img": "Monster/듀라한.png",
+          "hp": 4000,
+          "atk": 400,
+          "def": 400,
+          "spi": 400,
+          "agi": 400,
+          "boss": true,
+          "drop": {
+            "id": 324,
+            "name": "다크나이트의 핵",
+            "prob": 100,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "uranos",
+      "name": "우라노스섬",
+      "desc": "카오스의 친우이자 또 다른 초즌 우라노스가 봉인된 섬. 칠리마을 비행소에서 마스터만 표를 살 수 있다.",
+      "dungeons": [
+        {
+          "name": "고대의 섬",
+          "floors": null,
+          "desc": "4대 괴수(타이탄, 가루다시저, 바하무트, 드래거나이트)를 모두 쓰러뜨리면 봉인소가 열린다.",
+          "boss": "4대 괴수",
+          "maps": [
+            314
+          ]
+        },
+        {
+          "name": "우라노스봉인소",
+          "floors": null,
+          "desc": "쉐도우가 우라노스를 긴 잠에서 깨운다.",
+          "boss": "우라노스",
+          "maps": [
+            486
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 440,
+          "name": "흉폭한 오우거",
+          "img": "Monster/트롤.png",
+          "hp": 3000,
+          "atk": 333,
+          "def": 60,
+          "spi": 100,
+          "agi": 266,
+          "boss": false,
+          "drop": {
+            "id": 1110,
+            "name": "필살기법서",
+            "prob": 5,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 445,
+          "name": "폭주한 데스팔라딘",
+          "img": "Monster/와이트.png",
+          "hp": 3000,
+          "atk": 333,
+          "def": 133,
+          "spi": 600,
+          "agi": 400,
+          "boss": false,
+          "drop": {
+            "id": 1107,
+            "name": "필살기법서",
+            "prob": 5,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 450,
+          "name": "사악한 사신",
+          "img": "Monster/사신.png",
+          "hp": 1500,
+          "atk": 250,
+          "def": 100,
+          "spi": 400,
+          "agi": 200,
+          "boss": false,
+          "drop": {
+            "id": 1108,
+            "name": "필살기법서",
+            "prob": 5,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 455,
+          "name": "광분한 하이드라",
+          "img": "Monster/페드라.PNG",
+          "hp": 3000,
+          "atk": 200,
+          "def": 200,
+          "spi": 300,
+          "agi": 400,
+          "boss": false,
+          "drop": {
+            "id": 1109,
+            "name": "필살기법서",
+            "prob": 5,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 460,
+          "name": "가루다시저",
+          "img": "Monster/가루다.png",
+          "hp": 8000,
+          "atk": 350,
+          "def": 350,
+          "spi": 350,
+          "agi": 550,
+          "boss": true,
+          "drop": {
+            "id": 1074,
+            "name": "저주받은주문서",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 461,
+          "name": "바하무트",
+          "img": "Monster/바하무트.png",
+          "hp": 8000,
+          "atk": 300,
+          "def": 550,
+          "spi": 350,
+          "agi": 250,
+          "boss": true,
+          "drop": {
+            "id": 1074,
+            "name": "저주받은주문서",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 462,
+          "name": "타이탄",
+          "img": "Monster/타이탄.png",
+          "hp": 8000,
+          "atk": 300,
+          "def": 400,
+          "spi": 350,
+          "agi": 550,
+          "boss": true,
+          "drop": {
+            "id": 1074,
+            "name": "저주받은주문서",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 463,
+          "name": "드래곤 나이트",
+          "img": "Monster/드래곤나이트.png",
+          "hp": 8000,
+          "atk": 500,
+          "def": 350,
+          "spi": 350,
+          "agi": 250,
+          "boss": true,
+          "drop": {
+            "id": 1074,
+            "name": "저주받은주문서",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "ancient-sky",
+      "name": "고대의 하늘",
+      "desc": "하늘에 남은 옛 신의 땅 조각. 섬 넷을 전이진이 잇고, 카오스교가 하늘의 닻 셋으로 섬의 힘을 빨아들인다. (에피소드2)",
+      "dungeons": [
+        {
+          "name": "고대의 하늘",
+          "floors": "섬 넷",
+          "desc": "고대던전 하늘층의 막힌 문이 우라노스의 마석에 공명해 열린다. 닻마다 카오스교 집행자, 폭주한 수호기 아타마, 하늘섬의 와이번이 지키고, 정원 섬의 하늘의 핵에 무언가가 기다린다.",
+          "boss": "???",
+          "maps": [
+            151,
+            480
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 805,
+          "name": "고대 경비기",
+          "img": "Monster/E2고대경비기.png",
+          "hp": 3400,
+          "atk": 340,
+          "def": 220,
+          "spi": 150,
+          "agi": 240,
+          "boss": false,
+          "drop": {
+            "id": 1931,
+            "name": "고대 기계 부품",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 807,
+          "name": "실험체 ZT-1",
+          "img": "Monster/E2실험체ZT1.png",
+          "hp": 3000,
+          "atk": 360,
+          "def": 160,
+          "spi": 200,
+          "agi": 320,
+          "boss": false,
+          "drop": {
+            "id": 1931,
+            "name": "고대 기계 부품",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 811,
+          "name": "변이 메뚜기",
+          "img": "Monster/E2변이메뚜기.png",
+          "hp": 2600,
+          "atk": 320,
+          "def": 120,
+          "spi": 120,
+          "agi": 440,
+          "boss": false,
+          "drop": {
+            "id": 1932,
+            "name": "변이 체액",
+            "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 813,
+          "name": "하늘 그리폰",
+          "img": "Monster/E2하늘그리폰.png",
+          "hp": 3300,
+          "atk": 360,
+          "def": 170,
+          "spi": 160,
+          "agi": 420,
+          "boss": false,
+          "drop": {
+            "id": 1933,
+            "name": "그리폰의 깃털",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 815,
+          "name": "폭풍 콘도르",
+          "img": "Monster/E2폭풍콘도르.png",
+          "hp": 3000,
+          "atk": 340,
+          "def": 150,
+          "spi": 240,
+          "agi": 460,
+          "boss": false,
+          "drop": {
+            "id": 1934,
+            "name": "폭풍의 깃털",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 817,
+          "name": "하늘 익룡",
+          "img": "Monster/E2하늘익룡.png",
+          "hp": 3600,
+          "atk": 380,
+          "def": 210,
+          "spi": 150,
+          "agi": 380,
+          "boss": false,
+          "drop": {
+            "id": 1935,
+            "name": "익룡의 비늘",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 819,
+          "name": "검은 독수리 아킬라",
+          "img": "Monster/E2검은독수리.png",
+          "hp": 3200,
+          "atk": 350,
+          "def": 160,
+          "spi": 280,
+          "agi": 440,
+          "boss": false,
+          "drop": {
+            "id": 1936,
+            "name": "검은 깃털",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 837,
+          "name": "카오스교 집행자",
+          "img": "Monster/E2카오스교집행자.png",
+          "hp": 10000,
+          "atk": 520,
+          "def": 220,
+          "spi": 300,
+          "agi": 400,
+          "boss": true,
+          "drop": {
+            "id": 2052,
+            "name": "집행자의 대검",
+            "prob": 100,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "mage-continent",
+      "name": "마법사의 대륙",
+      "desc": "카오스를 가두던 결계에 싸인 사막 섬. 크레이터 둘레만 남았고, 옛 칠리 왕국의 폐허와 대현자의 탑이 있다. (에피소드2)",
+      "dungeons": [
+        {
+          "name": "대현자의 탑",
+          "floors": "1층·2층·꼭대기",
+          "desc": "마법 학교와 봉인술 연구 기록, 꼭대기의 수호 골렘과 대현자의 기록이 있다.",
+          "boss": "대현자의 수호 골렘",
+          "maps": [
+            496,
+            497,
+            498
+          ]
+        },
+        {
+          "name": "사막 던전",
+          "floors": "B1~B2·핵의 방",
+          "desc": "크레이터 구덩이 아래 옛 저수 유적. 카르도어의 일지 네 편이 남아 있고, 가장 깊은 곳 핵의 방에 카오스의 의지가 남은 수정이 있다.",
+          "boss": "???",
+          "maps": [
+            499,
+            500,
+            501
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 821,
+          "name": "떠도는 망령",
+          "img": "Monster/E2떠도는망령.png",
+          "hp": 3600,
+          "atk": 380,
+          "def": 170,
+          "spi": 320,
+          "agi": 380,
+          "boss": false,
+          "drop": {
+            "id": 1938,
+            "name": "망령의 천",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 823,
+          "name": "데스 미스트",
+          "img": "Monster/E2데스미스트.png",
+          "hp": 3300,
+          "atk": 340,
+          "def": 150,
+          "spi": 400,
+          "agi": 420,
+          "boss": false,
+          "drop": {
+            "id": 1938,
+            "name": "망령의 천",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 825,
+          "name": "모래 전갈",
+          "img": "Monster/E2모래전갈.png",
+          "hp": 3900,
+          "atk": 400,
+          "def": 240,
+          "spi": 160,
+          "agi": 340,
+          "boss": false,
+          "drop": {
+            "id": 1939,
+            "name": "사막 전갈 껍질",
+            "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 827,
+          "name": "샌드웜",
+          "img": "Monster/E2샌드웜.png",
+          "hp": 4300,
+          "atk": 420,
+          "def": 220,
+          "spi": 180,
+          "agi": 280,
+          "boss": false,
+          "drop": {
+            "id": 1940,
+            "name": "모래벌레 이빨",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 829,
+          "name": "거대 전갈 스콜리온",
+          "img": "Monster/E2스콜리온.png",
+          "hp": 4500,
+          "atk": 440,
+          "def": 260,
+          "spi": 180,
+          "agi": 320,
+          "boss": false,
+          "drop": {
+            "id": 1939,
+            "name": "사막 전갈 껍질",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 831,
+          "name": "메두사",
+          "img": "Monster/E2메두사.png",
+          "hp": 4000,
+          "atk": 380,
+          "def": 200,
+          "spi": 420,
+          "agi": 400,
+          "boss": false,
+          "drop": {
+            "id": 1941,
+            "name": "메두사의 비늘",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 833,
+          "name": "사막 거인",
+          "img": "Monster/E2사막거인.png",
+          "hp": 5000,
+          "atk": 470,
+          "def": 250,
+          "spi": 150,
+          "agi": 240,
+          "boss": false,
+          "drop": {
+            "id": 1942,
+            "name": "거인의 뼈",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 835,
+          "name": "모래 악령",
+          "img": "Monster/E2모래악령.png",
+          "hp": 4000,
+          "atk": 400,
+          "def": 210,
+          "spi": 460,
+          "agi": 420,
+          "boss": false,
+          "drop": {
+            "id": 1943,
+            "name": "옛 칠리 금화",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "chaos-land",
+      "name": "봉인의 빙묘·혼돈의 땅",
+      "desc": "얼음성 비문 아래 죽음을 잠재운 무덤과, 요정족숲 옛 신전 문 너머 이공간 위에 떠 있는 옛 신의 땅. (에피소드3)",
+      "dungeons": [
+        {
+          "name": "봉인의 빙묘",
+          "floors": "빙묘·최심부",
+          "desc": "얼음 속에 천사들이 갇힌 무덤. 최심부의 얼음 문 너머에 타나토스가 잠들어 있다.",
+          "boss": "얼어붙은 대천사",
+          "maps": [
+            514,
+            515
+          ]
+        },
+        {
+          "name": "혼돈의 땅",
+          "floors": "하늘의 계단~혼돈의 왕좌",
+          "desc": "몬스터에 둘러싸인 라그엘을 구하고, 혼돈의 문지기를 쓰러뜨리면 왕좌로 가는 문이 열린다.",
+          "boss": "혼돈의 문지기 → ???",
+          "maps": [
+            516,
+            517,
+            518
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 961,
+          "name": "얼어붙은 천사",
+          "img": "Monster/F1얼어붙은천사.png",
+          "hp": 4800,
+          "atk": 460,
+          "def": 260,
+          "spi": 300,
+          "agi": 320,
+          "boss": false,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 8,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 963,
+          "name": "떠나지 못한 자",
+          "img": "Monster/F1떠나지못한자.png",
+          "hp": 4200,
+          "atk": 420,
+          "def": 200,
+          "spi": 420,
+          "agi": 420,
+          "boss": false,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 8,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 965,
+          "name": "서리 우마로",
+          "img": "Monster/우마로.PNG",
+          "hp": 5600,
+          "atk": 490,
+          "def": 280,
+          "spi": 160,
+          "agi": 280,
+          "boss": false,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 8,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 967,
+          "name": "망자의 용",
+          "img": "Monster/데스 드래곤.PNG",
+          "hp": 5400,
+          "atk": 500,
+          "def": 300,
+          "spi": 320,
+          "agi": 360,
+          "boss": false,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 969,
+          "name": "혼돈의 잔재",
+          "img": "Monster/인페르노.PNG",
+          "hp": 4400,
+          "atk": 480,
+          "def": 240,
+          "spi": 420,
+          "agi": 400,
+          "boss": false,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 8,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 971,
+          "name": "혼돈룡",
+          "img": "Monster/아포카리포스.PNG",
+          "hp": 5200,
+          "atk": 540,
+          "def": 320,
+          "spi": 340,
+          "agi": 380,
+          "boss": false,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 973,
+          "name": "공허의 거미",
+          "img": "Monster/가드 드라군.PNG",
+          "hp": 5000,
+          "atk": 540,
+          "def": 340,
+          "spi": 200,
+          "agi": 440,
+          "boss": false,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 8,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 975,
+          "name": "혼돈의 뱀",
+          "img": "Monster/안구이프럼.PNG",
+          "hp": 4600,
+          "atk": 440,
+          "def": 220,
+          "spi": 480,
+          "agi": 460,
+          "boss": false,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 8,
+            "god": false
+          },
+          "secret": false
+        }
+      ]
+    },
+    {
+      "key": "rift",
+      "name": "이계의 틈",
+      "desc": "엔딩 뒤 요정족숲 옛 신전 문에 남은 균열. 하루에 한 번 들어갈 수 있고, 다른 별의 신 셋 가운데 하나가 침략자로 나타난다.",
+      "dungeons": [
+        {
+          "name": "이계",
+          "floors": null,
+          "desc": "대천사 라그엘이 틈을 감시한다. 패배해도 페널티는 없고 그날의 입장 기회만 쓴다.",
+          "boss": "??? (날마다 바뀐다)",
+          "maps": [
+            165,
+            462
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 1141,
+          "name": "베히모스",
+          "img": "Monster/베히모스.png",
+          "hp": 26000,
+          "atk": 720,
+          "def": 400,
+          "spi": 500,
+          "agi": 400,
+          "boss": true,
+          "drop": {
+            "id": 2501,
+            "name": "베히모스의 대지 갑주",
+            "prob": 20,
+            "god": true
+          },
+          "secret": true
+        },
+        {
+          "enemyId": 1142,
+          "name": "레비아탄",
+          "img": "Monster/bof2_enemy2.png",
+          "hp": 23000,
+          "atk": 700,
+          "def": 340,
+          "spi": 700,
+          "agi": 500,
+          "boss": true,
+          "drop": {
+            "id": 2502,
+            "name": "레비아탄의 심해 방패",
+            "prob": 20,
+            "god": true
+          },
+          "secret": true
+        },
+        {
+          "enemyId": 1143,
+          "name": "지즈",
+          "img": "Monster/아킬라.png",
+          "hp": 19000,
+          "atk": 780,
+          "def": 300,
+          "spi": 550,
+          "agi": 700,
+          "boss": true,
+          "drop": {
+            "id": 2503,
+            "name": "지즈의 하늘 반지",
+            "prob": 20,
+            "god": true
+          },
+          "secret": true
+        }
+      ]
+    }
+  ],
+  "bosses": [
+    {
+      "enemyId": 109,
+      "name": "그레이션드래곤",
+      "title": "본토던전의 보스",
+      "img": "Monster/용.png",
+      "hp": 6000,
+      "atk": 200,
+      "def": 500,
+      "spi": 300,
+      "agi": 100,
+      "where": "본토던전 보스방",
+      "desc": "본토던전 가장 깊은 곳에서 \"나에게 시험을 치르러온거군\"이라며 맞선다. 쓰러뜨리면 화염의 성배를 얻는다.",
+      "enemyName": "그레이션 드래곤",
+      "drop": null,
+      "secret": false
+    },
+    {
+      "enemyId": 81,
+      "name": "폭주한 워울프",
+      "title": "성지던전 5층의 보스",
+      "img": "Monster/워울프.png",
+      "hp": 2000,
+      "atk": 80,
+      "def": 100,
+      "spi": 200,
+      "agi": 200,
+      "where": "신의 성지 성지던전 5층",
+      "desc": "카오스의 수하에게 넘어간 신의 성지를 지킨다. \"여기의 보스인 내가 죽어도 신의성지는 이미 타락하였다.\"",
+      "drop": {
+        "id": 202,
+        "name": "워울프의 발톱",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
+    },
+    {
+      "enemyId": 92,
+      "name": "카르티나하",
+      "title": "혁명장군",
+      "img": "Monster/카르티나하2.xyz",
+      "hp": 1000,
+      "atk": 160,
+      "def": 200,
+      "spi": 200,
+      "agi": 150,
+      "where": "반란군기지 우두머리천막",
+      "desc": "크리엔드 가문의 독재에 맞선 반란군 우두머리. 쓰러지며 \"너는 속고 있다는것을 잊지말아라\"라는 말을 남긴다.",
+      "drop": {
+        "id": 204,
+        "name": "카르티나하의 머리",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
+    },
+    {
+      "enemyId": 222,
+      "name": "그레이트와이번",
+      "title": "얼음성 최상층의 보스",
+      "img": "Monster/와이반.png",
+      "hp": 8000,
+      "atk": 350,
+      "def": 300,
+      "spi": 200,
+      "agi": 200,
+      "where": "얼음성 최상층",
+      "desc": "아스트리아가 시험으로 맡긴 토벌 대상. \"발록들을 이기고 여기까지 왔는가… 내 목적은 루시리스를 죽이는것뿐!!\"",
+      "enemyName": "프로스트 와이번",
+      "drop": null,
+      "secret": false
+    },
+    {
+      "enemyId": 297,
+      "name": "4대 마왕",
+      "title": "카오스의 수하",
+      "img": "Monster/리치.png",
+      "hp": 7000,
+      "atk": 300,
+      "def": 1,
+      "spi": 500,
+      "agi": 200,
+      "where": "마왕의 침소",
+      "desc": "로저스 북쪽 마왕의 침소에 잠들어 있던 다크스타, 샤브리엘, 엑시스, 피브리올. 여왕은 이들이 동시에 깨어나면 세상이 카오스보다 더 무서운 공포를 맞는다고 했다.",
+      "enemyName": "다크스타",
+      "members": [
+        {
+          "enemyId": 297,
+          "name": "다크스타",
+          "img": "Monster/리치.png",
+          "hp": 7000,
+          "atk": 300,
+          "def": 1,
+          "spi": 500,
+          "agi": 200,
+          "boss": true,
+          "direction": "동"
+        },
+        {
+          "enemyId": 298,
+          "name": "샤브리엘",
+          "img": "Monster/사타나엘.png",
+          "hp": 6000,
+          "atk": 300,
+          "def": 500,
+          "spi": 500,
+          "agi": 500,
+          "boss": true,
+          "direction": "서"
+        },
+        {
+          "enemyId": 299,
+          "name": "엑시스",
+          "img": "Monster/사이클롭스.png",
+          "hp": 8000,
+          "atk": 500,
+          "def": 100,
+          "spi": 100,
+          "agi": 200,
+          "boss": true,
+          "direction": "남"
+        },
+        {
+          "enemyId": 300,
+          "name": "피브리올",
+          "img": "Monster/오딘.png",
+          "hp": 6000,
+          "atk": 350,
+          "def": 300,
+          "spi": 500,
+          "agi": 500,
+          "boss": true,
+          "direction": "북"
+        }
+      ],
+      "drop": null,
+      "secret": false
+    },
+    {
+      "enemyId": 394,
+      "name": "카오스",
+      "title": "마왕",
+      "img": "Monster/악마.png",
+      "hp": 9000,
+      "atk": 350,
+      "def": 100,
+      "spi": 200,
+      "agi": 400,
+      "where": "카오스룸",
+      "desc": "루시리스와 휴전한 뒤 봉인된 4대 마왕의 우두머리. 쓰러지며 자신을 만든 혼돈의 신 다크네스의 이름을 밝히고, 카오스의 심장을 남긴다.",
+      "drop": {
+        "id": 766,
+        "name": "카오스의 심장",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
+    },
+    {
+      "enemyId": 426,
+      "name": "크리엔드Ⅳ세",
+      "title": "크리엔드 국왕, 자칭 황제",
+      "img": "Monster/왕.png",
+      "hp": 7000,
+      "atk": 400,
+      "def": 400,
+      "spi": 10,
+      "agi": 10,
+      "where": "크리엔드 궁성 왕좌",
+      "desc": "한때 정복왕이었으나 권력의 쾌락에 빠져 폭정을 폈다. 왕좌에서 마물을 불러내 데니온을 쓰러뜨리고 주인공과 싸운다.",
+      "enemyName": "크리엔드",
+      "drop": null,
+      "secret": false
+    },
+    {
+      "enemyId": 741,
+      "name": "골렘 수호자",
+      "title": "봉인의 성소 수호자",
+      "img": "Monster/output_image_140x140_png8.png",
+      "hp": 7000,
+      "atk": 300,
+      "def": 600,
+      "spi": 200,
+      "agi": 70,
+      "where": "봉인의 성소 보스룸",
+      "desc": "\"봉인을 지킨다 적을 배제한다.\" 대현자와 마법사들이 지키던 마석 앞을 막아선다. 쓰러뜨리면 봉인된 마석을 얻는다.",
+      "drop": null,
+      "secret": false
+    },
+    {
+      "enemyId": 759,
+      "name": "프리조락",
+      "title": "트롤킹, 초즌",
+      "img": "Monster/오거.png",
+      "hp": 9000,
+      "atk": 600,
+      "def": 300,
+      "spi": 100,
+      "agi": 140,
+      "where": "트롤킹의 동굴",
+      "desc": "\"나 또한 신께 선택받은 몸.\" 쉐도우가 마석을 바치려던 트롤의 왕으로, 전투 중 초재생으로 체력을 회복한다.",
+      "drop": {
+        "id": 1894,
+        "name": "트롤킹의 마석",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
+    },
+    {
+      "enemyId": 803,
+      "name": "우라노스",
+      "title": "카오스의 친우, 초즌",
+      "img": "Monster/우라노스.png",
+      "hp": 9000,
+      "atk": 700,
+      "def": 100,
+      "spi": 100,
+      "agi": 700,
+      "where": "우라노스봉인소",
+      "desc": "쉐도우가 깨운 또 하나의 초즌. 신들을 \"위선자\", 인간을 \"신들의 소모품\"이라 부르며 영원의 굴레를 끝내려 한다. 번개 계열 스킬을 쓴다.",
+      "drop": {
+        "id": 1889,
+        "name": "우라노스의 마석",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
+    },
+    {
+      "enemyId": 578,
+      "name": "광기의 전도자",
+      "title": "광기의 던전 보스",
+      "img": "Monster/apostle-of-madness.png",
+      "hp": 7000,
+      "atk": 300,
+      "def": 500,
+      "spi": 500,
+      "agi": 500,
+      "where": "광기의 던전 보스룸 (신대륙)",
+      "desc": "이계의 힘을 손에 넣으려던 연구자의 실험이 낳은 존재. 신대륙 몬스터가 사나워진 원인이다.",
+      "drop": {
+        "id": 1867,
+        "name": "광기의 마력핵",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false
+    },
+    {
+      "enemyId": 844,
+      "name": "쉐도우",
+      "title": "카오스의 수하",
+      "img": "Monster/E2쉐도우.png",
+      "hp": 11000,
+      "atk": 640,
+      "def": 260,
+      "spi": 480,
+      "agi": 520,
+      "where": "고대의 하늘 하늘의 핵 (에피소드2)",
+      "desc": "옛 신의 땅의 마석을 뽑아 스스로 카오스의 그릇이 되려 한다. 싸우는 동안 그림자를 불러낸다.",
+      "drop": {
+        "id": 2053,
+        "name": "그림자 망토",
+        "prob": 100,
+        "god": false
+      },
+      "secret": true
+    },
+    {
+      "enemyId": 842,
+      "name": "카르도어",
+      "title": "마법사의 대륙 출신 대마법사",
+      "img": "Monster/E2카르도어.png",
+      "hp": 8000,
+      "atk": 700,
+      "def": 280,
+      "spi": 400,
+      "agi": 600,
+      "where": "핵의 방 (에피소드2)",
+      "desc": "조각의 목소리에 홀려 전이진을 닫고 구덩이 아래로 내려간 대마법사. 혼돈의 결정을 부르고 카오스 노바를 쓴다.",
+      "drop": {
+        "id": 2054,
+        "name": "카르도어의 지팡이",
+        "prob": 100,
+        "god": false
+      },
+      "secret": true
+    },
+    {
+      "enemyId": 981,
+      "name": "카오스",
+      "title": "되살아난 마왕",
+      "img": "Monster/F1카오스.png",
+      "hp": 19000,
+      "atk": 680,
+      "def": 300,
+      "spi": 600,
+      "agi": 600,
+      "where": "혼돈의 왕좌 (에피소드3)",
+      "desc": "카오스교 부교주와 신도들의 의식으로 되살아난 마왕. \"마침내 돌아왔다!\"",
+      "drop": {
+        "id": 2214,
+        "name": "혼돈의 왕관",
+        "prob": 100,
+        "god": true
+      },
+      "secret": true
+    },
+    {
+      "enemyId": 1141,
+      "name": "베히모스",
+      "title": "대지의 신",
+      "img": "Monster/베히모스.png",
+      "hp": 26000,
+      "atk": 720,
+      "def": 400,
+      "spi": 500,
+      "agi": 400,
+      "where": "이계 (엔딩 뒤 일일 보스)",
+      "desc": "다른 별에서 넘어오려는 대지의 신. 어스퀘이크와 대지의 낙인을 쓴다. \"대지의 신, 베히모스다.\"",
+      "drop": {
+        "id": 2501,
+        "name": "베히모스의 대지 갑주",
+        "prob": 20,
+        "god": true
+      },
+      "secret": true
+    },
+    {
+      "enemyId": 1142,
+      "name": "레비아탄",
+      "title": "바다의 신",
+      "img": "Monster/bof2_enemy2.png",
+      "hp": 23000,
+      "atk": 700,
+      "def": 340,
+      "spi": 700,
+      "agi": 500,
+      "where": "이계 (엔딩 뒤 일일 보스)",
+      "desc": "다른 별에서 넘어오려는 바다의 신. 아이스 레인과 아이스 랜스를 쓴다.",
+      "drop": {
+        "id": 2502,
+        "name": "레비아탄의 심해 방패",
+        "prob": 20,
+        "god": true
+      },
+      "secret": true
+    },
+    {
+      "enemyId": 1143,
+      "name": "지즈",
+      "title": "하늘의 신",
+      "img": "Monster/아킬라.png",
+      "hp": 19000,
+      "atk": 780,
+      "def": 300,
+      "spi": 550,
+      "agi": 700,
+      "where": "이계 (엔딩 뒤 일일 보스)",
+      "desc": "다른 별에서 넘어오려는 하늘의 신. 별의 신 가운데 가장 빠르고 공격이 세다. 심판의 빛과 라이트닝 쇼크를 쓴다.",
+      "drop": {
+        "id": 2503,
+        "name": "지즈의 하늘 반지",
+        "prob": 20,
+        "god": true
+      },
+      "secret": true
+    }
+  ]
+}

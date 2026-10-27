@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문의 | 로스트사가</title>
+<meta name="description" content="버그 제보와 문의.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="gnb"></header>
+
+<main id="main">
+  <section class="page-head">
+    <img class="page-head__bg px" src="assets/img/pic/rogers.png" alt="">
+    <div class="wrap">
+      <h1>문의</h1>
+      <p>버그 제보와 게임 문의.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact">
+      <div>
+        <div class="win msg" style="margin-bottom:28px">
+          <p class="msg__who pixel">버그안내소</p>
+          <p>[김현신] 버그입니다.</p>
+          <p class="dim" style="font-size:var(--step-0)">로저스국 히어로소프트 건물 안쪽, 버그안내소에서도 외형 변환과 몇 가지 문제를 바로잡을 수 있다.</p>
+          <span class="msg__cursor" aria-hidden="true">▼</span>
+        </div>
+        <h2>제보할 때 적어 주면 좋은 것</h2>
+        <ul>
+          <li>직업과 승급 단계, 레벨</li>
+          <li>있던 곳 (마을이나 던전 이름, 몇 층)</li>
+          <li>바로 전에 한 일 (누구와 대화, 어떤 아이템 사용)</li>
+          <li>화면에 나온 메시지 그대로</li>
+        </ul>
+        <p>담당: tommy (<a href="mailto:tommy3482@daum.net">tommy3482@daum.net</a>)<br>커뮤니티: <a href="https://cafe.daum.net/nherosoft" rel="noopener">히어로소프트 Daum 카페</a></p>
+      </div>
+
+      <form class="win" id="contact-form" data-mail="tommy3482@daum.net">
+        <h2 class="win__title">문의 쓰기</h2>
+        <label>종류
+          <select name="kind">
+            <option>버그 제보</option>
+            <option>게임 문의</option>
+            <option>제안</option>
+            <option>기타</option>
+          </select>
+        </label>
+        <label>이름 또는 닉네임 <input name="who" autocomplete="nickname"></label>
+        <label>직업과 레벨 <input name="job" placeholder="예: 위저드 대마도사 Lv32"></label>
+        <label>내용 <textarea name="body" required></textarea></label>
+        <button class="btn btn--gold" type="submit" id="contact-send">문의 보내기</button>
+        <p class="dim" id="contact-note" style="font-size:var(--step--1);margin:0" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="assets/js/site.js"></script>
+<script>
+// 받는 주소(data-mail)가 있으면 메일 앱을 열고, 없으면 내용을 복사해 카페에 붙여 넣게 한다
+(function () {
+  var f = document.getElementById("contact-form");
+  var mail = f.dataset.mail;
+  var btn = document.getElementById("contact-send");
+  var note = document.getElementById("contact-note");
+  if (!mail) btn.textContent = "내용 복사하기";
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = new FormData(f);
+    var title = "[로스트사가 " + d.get("kind") + "] " + (d.get("who") || "");
+    var text = "종류: " + d.get("kind") + "\n이름: " + d.get("who") + "\n직업/레벨: " + d.get("job") + "\n\n" + d.get("body");
+    if (mail) {
+      location.href = "mailto:" + mail + "?subject=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(text);
+      note.textContent = "메일 앱을 열었습니다. 보내기를 눌러야 전달됩니다.";
+    } else {
+      navigator.clipboard.writeText(title + "\n" + text).then(function () {
+        note.textContent = "복사했습니다. 카페 게시판에 붙여 넣어 올려 주세요.";
+      }, function () {
+        note.textContent = "복사하지 못했습니다. 내용을 직접 선택해 복사해 주세요.";
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>
