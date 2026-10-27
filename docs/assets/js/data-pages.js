@@ -38,7 +38,10 @@
       if (!b) { tabs.hidden = true; return; }
       var learn = ((sk.g102 || [])[0] || { rows: [] }).rows;
       function stat(s) {
-        return s.level ? "Lv" + s.level + " HP " + s.hp + " MP " + s.mp + " 공 " + s.atk + " 방 " + s.def + " 정 " + s.spi + " 민 " + s.agi : "";
+        if (!s.level) return "";
+        return ["Lv" + s.level, "HP " + s.hp, "MP " + s.mp, "공 " + s.atk, "방 " + s.def, "정 " + s.spi, "민 " + s.agi].map(function (t) {
+          return '<span class="nw">' + t + "</span>";
+        }).join(" ");
       }
       function bcard(g, helmet) {
         var s = g.stats || {};
@@ -46,7 +49,7 @@
           '<div class="guard__face">' + (g.face ? '<img src="assets/img/guardian/' + g.actorId + '.png" alt="' + esc(g.job) + ' 초상화" loading="lazy">' : '<span class="guard__noface"></span>') +
           '<img class="guard__sprite px' + (g.face ? "" : " guard__sprite--solo") + '" src="assets/img/guardian/' + g.actorId + '_sprite.png" alt="" loading="lazy"></div>' +
           "<div><h3>" + esc(helmet ? "영혼의 투구" : g.job) + '</h3><p class="guard__job">' + esc(helmet ? "육성형 동료" : g.name) +
-          ' <span class="dim">' + esc(stat(s)) + "</span></p>" +
+          ' <span class="dim">' + stat(s) + "</span></p>" +
           (g.cond ? '<p class="guard__line">점수 ' + esc(g.cond) + "</p>" : "") +
           "<p>" + esc(g.desc) + "</p></div></article>";
       }
