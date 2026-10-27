@@ -38,6 +38,9 @@
 @media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 26px; } }
 
 /* ── 진영 ── */
+.factions__lede { max-width: 760px; }
+.factions__quote { color: var(--gold); margin: 14px 0 0; }
+.factions__quote .pixel { color: var(--ink-dim); font-size: .72rem; margin-left: 8px; }
 .factions__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 24px; }
 .faction-card {
   position: relative; display: grid; grid-template-columns: 42% 1fr; align-items: end; gap: 10px;
@@ -67,6 +70,9 @@
 .episodes h3 { font-size: var(--step-1); }
 .episodes p { font-size: var(--step--1); color: var(--ink-dim); margin: 0; }
 .episodes .episodes__no { color: var(--gold); margin-bottom: 6px; }
+.episodes--parts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.episodes__sub { list-style: none; margin: 12px 0 0; padding: 10px 0 0; border-top: 1px solid rgba(201, 211, 242, .2); display: grid; gap: 4px; font-size: var(--step--1); }
+.episodes__sub .pixel { color: var(--gold); font-size: .72rem; margin-right: 6px; }
 @media (max-width: 860px) { .episodes { grid-template-columns: 1fr; } }
 
 /* ── 시스템 ── */
@@ -124,8 +130,11 @@
 .mob__img { height: 120px; display: flex; align-items: flex-end; justify-content: center; }
 .mob__img img { max-height: 120px; width: auto; }
 .mob h3 { font-size: .92rem; margin: 8px 0 2px; }
+.mob--leader { border-color: rgba(226, 192, 107, .55); background: radial-gradient(ellipse at 50% 70%, rgba(226, 192, 107, .16), transparent 70%), rgba(5, 8, 24, .45); }
+.mob .mob__tag { display: inline-block; margin: 6px auto 0; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #2a1f05; font-size: .66rem; line-height: 1.6; }
+.mob--leader h3 { margin-top: 4px; }
 .mob p { font-family: var(--pixel); font-size: .7rem; color: var(--ink-dim); margin: 0 auto; }
-.bosses { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 18px; }
+.bosses { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 18px; margin-bottom: 18px; }
 .boss-card { display: grid; grid-template-columns: 150px 1fr; gap: 14px; align-items: center; border-color: #e3a9b3; }
 .boss-card__img { height: 150px; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse, rgba(196, 71, 90, .35), transparent 70%); }
 .boss-card__img img { max-height: 150px; max-width: 150px; }

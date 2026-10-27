@@ -37,6 +37,26 @@
           "secret": false
         },
         {
+          "enemyId": 566,
+          "name": "슬라임리더",
+          "img": "Monster/스라임.png",
+          "hp": 25,
+          "atk": 20,
+          "def": 10,
+          "spi": 20,
+          "agi": 20,
+          "boss": false,
+          "leader": true,
+          "hue": 280,
+          "drop": {
+            "id": 160,
+            "name": "몬스터 가죽",
+            "prob": 50,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 402,
           "name": "고블린",
           "img": "Monster/귀신.PNG",
@@ -50,6 +70,27 @@
             "id": 162,
             "name": "몬스터의 뼈",
             "prob": 55,
+            "god": false
+          },
+          "secret": false,
+          "hue": 20
+        },
+        {
+          "enemyId": 567,
+          "name": "고블린리더",
+          "img": "Monster/귀신.PNG",
+          "hp": 65,
+          "atk": 20,
+          "def": 20,
+          "spi": 20,
+          "agi": 20,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 434,
+            "name": "독버섯",
+            "prob": 50,
             "god": false
           },
           "secret": false
@@ -70,6 +111,27 @@
             "prob": 50,
             "god": false
           },
+          "secret": false,
+          "hue": 270
+        },
+        {
+          "enemyId": 414,
+          "name": "썩어가는 좀비 리더",
+          "img": "Monster/좀비.png",
+          "hp": 125,
+          "atk": 30,
+          "def": 20,
+          "spi": 15,
+          "agi": 10,
+          "boss": false,
+          "leader": true,
+          "hue": 180,
+          "drop": {
+            "id": 162,
+            "name": "몬스터의 뼈",
+            "prob": 100,
+            "god": false
+          },
           "secret": false
         },
         {
@@ -86,6 +148,27 @@
             "id": 749,
             "name": "윈드 마법서",
             "prob": 30,
+            "god": false
+          },
+          "secret": false,
+          "hue": 20
+        },
+        {
+          "enemyId": 411,
+          "name": "퇴화된 하피 리더",
+          "img": "Monster/하피.png",
+          "hp": 75,
+          "atk": 20,
+          "def": 15,
+          "spi": 5,
+          "agi": 20,
+          "boss": false,
+          "leader": true,
+          "hue": 180,
+          "drop": {
+            "id": 178,
+            "name": "니케의 수호",
+            "prob": 25,
             "god": false
           },
           "secret": false
@@ -106,22 +189,25 @@
             "prob": 20,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 100
         },
         {
-          "enemyId": 418,
-          "name": "쇠약한 오우거 로드",
+          "enemyId": 417,
+          "name": "쇠약한 오우거 리더",
           "img": "Monster/트롤.png",
-          "hp": 400,
-          "atk": 50,
+          "hp": 250,
+          "atk": 35,
           "def": 10,
-          "spi": 100,
-          "agi": 35,
-          "boss": true,
+          "spi": 55,
+          "agi": 30,
+          "boss": false,
+          "leader": true,
+          "hue": 180,
           "drop": {
-            "id": 833,
-            "name": "미르오의 속치마",
-            "prob": 100,
+            "id": 346,
+            "name": "오우거의 피부",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -198,6 +284,25 @@
           "secret": false
         },
         {
+          "enemyId": 568,
+          "name": "울프리더",
+          "img": "Monster/워울프.png",
+          "hp": 115,
+          "atk": 50,
+          "def": 20,
+          "spi": 20,
+          "agi": 70,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 160,
+            "name": "몬스터 가죽",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 95,
           "name": "크랩",
           "img": "Monster/크랩.png",
@@ -211,6 +316,27 @@
             "id": 10,
             "name": "헤비마나포션",
             "prob": 25,
+            "god": false
+          },
+          "secret": false,
+          "hue": 180
+        },
+        {
+          "enemyId": 98,
+          "name": "크랩리더",
+          "img": "Monster/크랩.png",
+          "hp": 250,
+          "atk": 120,
+          "def": 200,
+          "spi": 80,
+          "agi": 80,
+          "boss": false,
+          "leader": true,
+          "hue": 110,
+          "drop": {
+            "id": 190,
+            "name": "수력의 반지",
+            "prob": 66,
             "god": false
           },
           "secret": false
@@ -229,6 +355,27 @@
             "id": 748,
             "name": "다운스톤 마법서",
             "prob": 20,
+            "god": false
+          },
+          "secret": false,
+          "hue": 290
+        },
+        {
+          "enemyId": 20,
+          "name": "구울리더",
+          "img": "Monster/좀비.png",
+          "hp": 600,
+          "atk": 100,
+          "def": 60,
+          "spi": 80,
+          "agi": 20,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1573,
+            "name": "퓨전엘리멘탈실드",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -252,6 +399,26 @@
           "secret": false
         },
         {
+          "enemyId": 49,
+          "name": "켈베로스 리더",
+          "img": "Monster/켈베로스1.PNG",
+          "hp": 875,
+          "atk": 120,
+          "def": 20,
+          "spi": 20,
+          "agi": 60,
+          "boss": false,
+          "leader": true,
+          "hue": 300,
+          "drop": {
+            "id": 1469,
+            "name": "감시자의 갑옷",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 69,
           "name": "나이트메어",
           "img": "Monster/말.png",
@@ -265,6 +432,26 @@
             "id": 168,
             "name": "유니콘의 뿔",
             "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 70,
+          "name": "나이트메어리더",
+          "img": "Monster/말.png",
+          "hp": 500,
+          "atk": 200,
+          "def": 80,
+          "spi": 130,
+          "agi": 550,
+          "boss": false,
+          "leader": true,
+          "hue": 180,
+          "drop": {
+            "id": 1510,
+            "name": "샤릉가",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -288,6 +475,26 @@
           "secret": false
         },
         {
+          "enemyId": 114,
+          "name": "다크 이플립트 리더",
+          "img": "Monster/이프리트.png",
+          "hp": 1500,
+          "atk": 150,
+          "def": 20,
+          "spi": 200,
+          "agi": 80,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1394,
+            "name": "정화의 화염",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 66,
           "name": "유니콘",
           "img": "Monster/유니콘.png",
@@ -306,6 +513,26 @@
           "secret": false
         },
         {
+          "enemyId": 68,
+          "name": "유니콘리더",
+          "img": "Monster/유니콘.png",
+          "hp": 125,
+          "atk": 120,
+          "def": 10,
+          "spi": 120,
+          "agi": 350,
+          "boss": false,
+          "leader": true,
+          "hue": 130,
+          "drop": {
+            "id": 209,
+            "name": "유니콘의 뿔조각",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 61,
           "name": "섀도 엘프",
           "img": "Monster/다크요정.png",
@@ -319,6 +546,27 @@
             "id": 167,
             "name": "미스릴",
             "prob": 40,
+            "god": false
+          },
+          "secret": false,
+          "hue": 240
+        },
+        {
+          "enemyId": 64,
+          "name": "섀도 엘프 리더",
+          "img": "Monster/다크요정.png",
+          "hp": 375,
+          "atk": 120,
+          "def": 80,
+          "spi": 120,
+          "agi": 80,
+          "boss": false,
+          "leader": true,
+          "hue": 210,
+          "drop": {
+            "id": 1595,
+            "name": "자연의 지팡이",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -409,6 +657,27 @@
             "prob": 7,
             "god": false
           },
+          "secret": false,
+          "hue": 180
+        },
+        {
+          "enemyId": 179,
+          "name": "프로즌 코볼트 리더",
+          "img": "Monster/코볼트.png",
+          "hp": 125,
+          "atk": 80,
+          "def": 50,
+          "spi": 40,
+          "agi": 50,
+          "boss": false,
+          "leader": true,
+          "hue": 200,
+          "drop": {
+            "id": 285,
+            "name": "중급 사파이어",
+            "prob": 66,
+            "god": false
+          },
           "secret": false
         },
         {
@@ -425,6 +694,27 @@
             "id": 345,
             "name": "엔트의 잎사귀",
             "prob": 50,
+            "god": false
+          },
+          "secret": false,
+          "hue": 120
+        },
+        {
+          "enemyId": 189,
+          "name": "저주받은 엔트리더",
+          "img": "Monster/토렌트.PNG",
+          "hp": 375,
+          "atk": 130,
+          "def": 20,
+          "spi": 130,
+          "agi": 40,
+          "boss": false,
+          "leader": true,
+          "hue": 150,
+          "drop": {
+            "id": 121,
+            "name": "속성 방어 로브水",
+            "prob": 66,
             "god": false
           },
           "secret": false
@@ -445,6 +735,27 @@
             "prob": 20,
             "god": false
           },
+          "secret": false,
+          "hue": 290
+        },
+        {
+          "enemyId": 199,
+          "name": "오우거 리더",
+          "img": "Monster/트롤.png",
+          "hp": 2500,
+          "atk": 300,
+          "def": 100,
+          "spi": 100,
+          "agi": 250,
+          "boss": false,
+          "leader": true,
+          "hue": 270,
+          "drop": {
+            "id": 1,
+            "name": "힐링포션",
+            "prob": 99,
+            "god": false
+          },
           "secret": false
         },
         {
@@ -461,6 +772,27 @@
             "id": 745,
             "name": "아이스볼트 마법서",
             "prob": 30,
+            "god": false
+          },
+          "secret": false,
+          "hue": 90
+        },
+        {
+          "enemyId": 120,
+          "name": "아이스 리자드맨리더",
+          "img": "Monster/리자도맨.png",
+          "hp": 500,
+          "atk": 180,
+          "def": 120,
+          "spi": 120,
+          "agi": 120,
+          "boss": false,
+          "leader": true,
+          "hue": 120,
+          "drop": {
+            "id": 1590,
+            "name": "눈꽃송이 지팡이",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -481,6 +813,27 @@
             "prob": 15,
             "god": false
           },
+          "secret": false,
+          "hue": 180
+        },
+        {
+          "enemyId": 227,
+          "name": "데스 팔라딘 리더",
+          "img": "Monster/와이트.png",
+          "hp": 1875,
+          "atk": 350,
+          "def": 200,
+          "spi": 600,
+          "agi": 400,
+          "boss": false,
+          "leader": true,
+          "hue": 210,
+          "drop": {
+            "id": 1387,
+            "name": "크루세이더 실드",
+            "prob": 33,
+            "god": false
+          },
           "secret": false
         },
         {
@@ -493,6 +846,21 @@
           "spi": 50,
           "agi": 20,
           "boss": false,
+          "drop": null,
+          "secret": false
+        },
+        {
+          "enemyId": 747,
+          "name": "골렘 투사 리더",
+          "img": "Monster/golem_warrier.png",
+          "hp": 1500,
+          "atk": 100,
+          "def": 160,
+          "spi": 60,
+          "agi": 30,
+          "boss": false,
+          "leader": true,
+          "hue": 300,
           "drop": null,
           "secret": false
         },
@@ -512,6 +880,27 @@
             "prob": 50,
             "god": false
           },
+          "secret": false,
+          "hue": 180
+        },
+        {
+          "enemyId": 763,
+          "name": "서리 트롤 리더",
+          "img": "Monster/오거.png",
+          "hp": 1200,
+          "atk": 150,
+          "def": 30,
+          "spi": 10,
+          "agi": 50,
+          "boss": false,
+          "leader": true,
+          "hue": 190,
+          "drop": {
+            "id": 2002,
+            "name": "초재생의 갑옷",
+            "prob": 33,
+            "god": false
+          },
           "secret": false
         },
         {
@@ -528,6 +917,26 @@
             "id": 1853,
             "name": "머맨의 비늘",
             "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 714,
+          "name": "머맨 리더",
+          "img": "Monster/Merman.png",
+          "hp": 1250,
+          "atk": 270,
+          "def": 210,
+          "spi": 150,
+          "agi": 300,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 2117,
+            "name": "인어의 티아라",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -647,6 +1056,26 @@
           "secret": false
         },
         {
+          "enemyId": 316,
+          "name": "메두사리더",
+          "img": "Monster/료사.png",
+          "hp": 750,
+          "atk": 400,
+          "def": 100,
+          "spi": 300,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1515,
+            "name": "천운시",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 323,
           "name": "뱀파이어",
           "img": "Monster/언파이어.png",
@@ -660,6 +1089,26 @@
             "id": 759,
             "name": "매직 가디언 마법서",
             "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 326,
+          "name": "뱀파이어리더",
+          "img": "Monster/언파이어.png",
+          "hp": 1250,
+          "atk": 250,
+          "def": 50,
+          "spi": 400,
+          "agi": 300,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 1534,
+            "name": "엘븐드래곤스케일",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -683,6 +1132,25 @@
           "secret": false
         },
         {
+          "enemyId": 283,
+          "name": "바실리스크리더",
+          "img": "Monster/바실리크스.png",
+          "hp": 1250,
+          "atk": 350,
+          "def": 350,
+          "spi": 150,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1505,
+            "name": "윈드 포스",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 286,
           "name": "자이언트",
           "img": "Monster/자이언트.png",
@@ -696,6 +1164,26 @@
             "id": 632,
             "name": "자이언트의 주머니",
             "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 289,
+          "name": "자이언트리더",
+          "img": "Monster/자이언트.png",
+          "hp": 2500,
+          "atk": 300,
+          "def": 150,
+          "spi": 150,
+          "agi": 150,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1619,
+            "name": "위상변화의 투구",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -716,7 +1204,8 @@
             "prob": 35,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 240
         },
         {
           "enemyId": 364,
@@ -734,7 +1223,8 @@
             "prob": 40,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 240
         },
         {
           "enemyId": 388,
@@ -819,7 +1309,8 @@
             "prob": 10,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 270
         },
         {
           "enemyId": 474,
@@ -837,7 +1328,8 @@
             "prob": 20,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 20
         },
         {
           "enemyId": 477,
@@ -855,7 +1347,8 @@
             "prob": 100,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 120
         }
       ]
     },
@@ -921,6 +1414,26 @@
           "secret": false
         },
         {
+          "enemyId": 584,
+          "name": "머미리더",
+          "img": "Monster/마미.png",
+          "hp": 500,
+          "atk": 280,
+          "def": 140,
+          "spi": 100,
+          "agi": 120,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 1430,
+            "name": "활빈검",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 589,
           "name": "다크라이더",
           "img": "Monster/토르동가.png",
@@ -934,6 +1447,26 @@
             "id": 1293,
             "name": "◇법서:플레이스무브",
             "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 592,
+          "name": "다크라이더리더",
+          "img": "Monster/토르동가.png",
+          "hp": 1000,
+          "atk": 320,
+          "def": 200,
+          "spi": 240,
+          "agi": 400,
+          "boss": false,
+          "leader": true,
+          "hue": 330,
+          "drop": {
+            "id": 1583,
+            "name": "패왕의 갑옷",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -957,6 +1490,26 @@
           "secret": false
         },
         {
+          "enemyId": 596,
+          "name": "가고일리더",
+          "img": "Monster/가고엘.png",
+          "hp": 1250,
+          "atk": 400,
+          "def": 240,
+          "spi": 240,
+          "agi": 240,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 1411,
+            "name": "악마의 의복",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 613,
           "name": "블러드 루비",
           "img": "Monster/bloody_orb.png",
@@ -972,7 +1525,8 @@
             "prob": 30,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 330
         },
         {
           "enemyId": 682,
@@ -988,6 +1542,26 @@
             "id": 1843,
             "name": "광기의 토끼 가죽",
             "prob": 35,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 685,
+          "name": "광기의 토끼 리더",
+          "img": "Monster/madness_rabbit.png",
+          "hp": 625,
+          "atk": 300,
+          "def": 240,
+          "spi": 200,
+          "agi": 360,
+          "boss": false,
+          "leader": true,
+          "hue": 270,
+          "drop": {
+            "id": 1578,
+            "name": "커스그레잇 실드",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -1011,37 +1585,21 @@
           "secret": false
         },
         {
-          "enemyId": 571,
-          "name": "듀라한",
-          "img": "Monster/듀라한.png",
-          "hp": 3000,
-          "atk": 300,
-          "def": 300,
-          "spi": 300,
-          "agi": 300,
-          "boss": true,
-          "drop": {
-            "id": 323,
-            "name": "듀라한의 핵",
-            "prob": 100,
-            "god": false
-          },
-          "secret": false
-        },
-        {
-          "enemyId": 572,
-          "name": "다크나이트",
-          "img": "Monster/듀라한.png",
-          "hp": 4000,
+          "enemyId": 697,
+          "name": "광기의 전사 리더",
+          "img": "Monster/madness_warrior.png",
+          "hp": 1825,
           "atk": 400,
-          "def": 400,
-          "spi": 400,
-          "agi": 400,
-          "boss": true,
+          "def": 120,
+          "spi": 120,
+          "agi": 300,
+          "boss": false,
+          "leader": true,
+          "hue": 300,
           "drop": {
-            "id": 324,
-            "name": "다크나이트의 핵",
-            "prob": 100,
+            "id": 1476,
+            "name": "게헨나",
+            "prob": 33,
             "god": false
           },
           "secret": false
@@ -1089,7 +1647,8 @@
             "prob": 5,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 240
         },
         {
           "enemyId": 445,
@@ -1107,7 +1666,8 @@
             "prob": 5,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 120
         },
         {
           "enemyId": 450,
@@ -1125,7 +1685,8 @@
             "prob": 5,
             "god": false
           },
-          "secret": false
+          "secret": false,
+          "hue": 180
         },
         {
           "enemyId": 455,
@@ -1141,78 +1702,6 @@
             "id": 1109,
             "name": "필살기법서",
             "prob": 5,
-            "god": false
-          },
-          "secret": false
-        },
-        {
-          "enemyId": 460,
-          "name": "가루다시저",
-          "img": "Monster/가루다.png",
-          "hp": 8000,
-          "atk": 350,
-          "def": 350,
-          "spi": 350,
-          "agi": 550,
-          "boss": true,
-          "drop": {
-            "id": 1074,
-            "name": "저주받은주문서",
-            "prob": 10,
-            "god": false
-          },
-          "secret": false
-        },
-        {
-          "enemyId": 461,
-          "name": "바하무트",
-          "img": "Monster/바하무트.png",
-          "hp": 8000,
-          "atk": 300,
-          "def": 550,
-          "spi": 350,
-          "agi": 250,
-          "boss": true,
-          "drop": {
-            "id": 1074,
-            "name": "저주받은주문서",
-            "prob": 10,
-            "god": false
-          },
-          "secret": false
-        },
-        {
-          "enemyId": 462,
-          "name": "타이탄",
-          "img": "Monster/타이탄.png",
-          "hp": 8000,
-          "atk": 300,
-          "def": 400,
-          "spi": 350,
-          "agi": 550,
-          "boss": true,
-          "drop": {
-            "id": 1074,
-            "name": "저주받은주문서",
-            "prob": 10,
-            "god": false
-          },
-          "secret": false
-        },
-        {
-          "enemyId": 463,
-          "name": "드래곤 나이트",
-          "img": "Monster/드래곤나이트.png",
-          "hp": 8000,
-          "atk": 500,
-          "def": 350,
-          "spi": 350,
-          "agi": 250,
-          "boss": true,
-          "drop": {
-            "id": 1074,
-            "name": "저주받은주문서",
-            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1255,6 +1744,25 @@
           "secret": false
         },
         {
+          "enemyId": 806,
+          "name": "고대 경비기 리더",
+          "img": "Monster/E2고대경비기.png",
+          "hp": 5100,
+          "atk": 390,
+          "def": 252,
+          "spi": 150,
+          "agi": 240,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 807,
           "name": "실험체 ZT-1",
           "img": "Monster/E2실험체ZT1.png",
@@ -1268,6 +1776,25 @@
             "id": 1931,
             "name": "고대 기계 부품",
             "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 808,
+          "name": "실험체 ZT-1 리더",
+          "img": "Monster/E2실험체ZT1.png",
+          "hp": 4500,
+          "atk": 413,
+          "def": 184,
+          "spi": 200,
+          "agi": 320,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1291,6 +1818,25 @@
           "secret": false
         },
         {
+          "enemyId": 812,
+          "name": "변이 메뚜기 리더",
+          "img": "Monster/E2변이메뚜기.png",
+          "hp": 3900,
+          "atk": 368,
+          "def": 138,
+          "spi": 120,
+          "agi": 440,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 813,
           "name": "하늘 그리폰",
           "img": "Monster/E2하늘그리폰.png",
@@ -1304,6 +1850,25 @@
             "id": 1933,
             "name": "그리폰의 깃털",
             "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 814,
+          "name": "하늘 그리폰 리더",
+          "img": "Monster/E2하늘그리폰.png",
+          "hp": 4950,
+          "atk": 413,
+          "def": 195,
+          "spi": 160,
+          "agi": 420,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1327,6 +1892,25 @@
           "secret": false
         },
         {
+          "enemyId": 816,
+          "name": "폭풍 콘도르 리더",
+          "img": "Monster/E2폭풍콘도르.png",
+          "hp": 4500,
+          "atk": 390,
+          "def": 172,
+          "spi": 240,
+          "agi": 460,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 817,
           "name": "하늘 익룡",
           "img": "Monster/E2하늘익룡.png",
@@ -1345,6 +1929,25 @@
           "secret": false
         },
         {
+          "enemyId": 818,
+          "name": "하늘 익룡 리더",
+          "img": "Monster/E2하늘익룡.png",
+          "hp": 5400,
+          "atk": 436,
+          "def": 241,
+          "spi": 150,
+          "agi": 380,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 819,
           "name": "검은 독수리 아킬라",
           "img": "Monster/E2검은독수리.png",
@@ -1358,6 +1961,25 @@
             "id": 1936,
             "name": "검은 깃털",
             "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 820,
+          "name": "검은 독수리 아킬라 리더",
+          "img": "Monster/E2검은독수리.png",
+          "hp": 4800,
+          "atk": 402,
+          "def": 184,
+          "spi": 280,
+          "agi": 440,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1430,6 +2052,25 @@
           "secret": false
         },
         {
+          "enemyId": 822,
+          "name": "떠도는 망령 리더",
+          "img": "Monster/E2떠도는망령.png",
+          "hp": 5400,
+          "atk": 436,
+          "def": 195,
+          "spi": 320,
+          "agi": 380,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 823,
           "name": "데스 미스트",
           "img": "Monster/E2데스미스트.png",
@@ -1443,6 +2084,25 @@
             "id": 1938,
             "name": "망령의 천",
             "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 824,
+          "name": "데스 미스트 리더",
+          "img": "Monster/E2데스미스트.png",
+          "hp": 4950,
+          "atk": 390,
+          "def": 172,
+          "spi": 400,
+          "agi": 420,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1466,6 +2126,25 @@
           "secret": false
         },
         {
+          "enemyId": 826,
+          "name": "모래 전갈 리더",
+          "img": "Monster/E2모래전갈.png",
+          "hp": 5850,
+          "atk": 459,
+          "def": 276,
+          "spi": 160,
+          "agi": 340,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 827,
           "name": "샌드웜",
           "img": "Monster/E2샌드웜.png",
@@ -1479,6 +2158,25 @@
             "id": 1940,
             "name": "모래벌레 이빨",
             "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 828,
+          "name": "샌드웜 리더",
+          "img": "Monster/E2샌드웜.png",
+          "hp": 6450,
+          "atk": 482,
+          "def": 252,
+          "spi": 180,
+          "agi": 280,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1502,6 +2200,25 @@
           "secret": false
         },
         {
+          "enemyId": 830,
+          "name": "거대 전갈 스콜리온 리더",
+          "img": "Monster/E2스콜리온.png",
+          "hp": 6750,
+          "atk": 505,
+          "def": 299,
+          "spi": 180,
+          "agi": 320,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 831,
           "name": "메두사",
           "img": "Monster/E2메두사.png",
@@ -1515,6 +2232,25 @@
             "id": 1941,
             "name": "메두사의 비늘",
             "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 832,
+          "name": "메두사 리더",
+          "img": "Monster/E2메두사.png",
+          "hp": 6000,
+          "atk": 436,
+          "def": 229,
+          "spi": 420,
+          "agi": 400,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1538,6 +2274,25 @@
           "secret": false
         },
         {
+          "enemyId": 834,
+          "name": "사막 거인 리더",
+          "img": "Monster/E2사막거인.png",
+          "hp": 7500,
+          "atk": 540,
+          "def": 287,
+          "spi": 150,
+          "agi": 240,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 835,
           "name": "모래 악령",
           "img": "Monster/E2모래악령.png",
@@ -1551,6 +2306,25 @@
             "id": 1943,
             "name": "옛 칠리 금화",
             "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 836,
+          "name": "모래 악령 리더",
+          "img": "Monster/E2모래악령.png",
+          "hp": 6000,
+          "atk": 459,
+          "def": 241,
+          "spi": 460,
+          "agi": 420,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1944,
+            "name": "대현자의 잉크",
+            "prob": 10,
             "god": false
           },
           "secret": false
@@ -1604,6 +2378,25 @@
           "secret": false
         },
         {
+          "enemyId": 962,
+          "name": "얼어붙은 천사 리더",
+          "img": "Monster/F1얼어붙은천사.png",
+          "hp": 7200,
+          "atk": 529,
+          "def": 299,
+          "spi": 300,
+          "agi": 320,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 963,
           "name": "떠나지 못한 자",
           "img": "Monster/F1떠나지못한자.png",
@@ -1617,6 +2410,25 @@
             "id": 2201,
             "name": "영원한 얼음",
             "prob": 8,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 964,
+          "name": "떠나지 못한 자 리더",
+          "img": "Monster/F1떠나지못한자.png",
+          "hp": 6300,
+          "atk": 482,
+          "def": 229,
+          "spi": 420,
+          "agi": 420,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 15,
             "god": false
           },
           "secret": false
@@ -1640,6 +2452,25 @@
           "secret": false
         },
         {
+          "enemyId": 966,
+          "name": "서리 우마로 리더",
+          "img": "Monster/우마로.PNG",
+          "hp": 8400,
+          "atk": 563,
+          "def": 322,
+          "spi": 160,
+          "agi": 280,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 967,
           "name": "망자의 용",
           "img": "Monster/데스 드래곤.PNG",
@@ -1653,6 +2484,25 @@
             "id": 2201,
             "name": "영원한 얼음",
             "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 968,
+          "name": "망자의 용 리더",
+          "img": "Monster/데스 드래곤.PNG",
+          "hp": 8100,
+          "atk": 575,
+          "def": 345,
+          "spi": 320,
+          "agi": 360,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2201,
+            "name": "영원한 얼음",
+            "prob": 15,
             "god": false
           },
           "secret": false
@@ -1676,6 +2526,25 @@
           "secret": false
         },
         {
+          "enemyId": 970,
+          "name": "혼돈의 잔재 리더",
+          "img": "Monster/인페르노.PNG",
+          "hp": 6600,
+          "atk": 552,
+          "def": 276,
+          "spi": 420,
+          "agi": 400,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 971,
           "name": "혼돈룡",
           "img": "Monster/아포카리포스.PNG",
@@ -1689,6 +2558,25 @@
             "id": 2202,
             "name": "혼돈의 파편",
             "prob": 10,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 972,
+          "name": "혼돈룡 리더",
+          "img": "Monster/아포카리포스.PNG",
+          "hp": 7800,
+          "atk": 621,
+          "def": 368,
+          "spi": 340,
+          "agi": 380,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 15,
             "god": false
           },
           "secret": false
@@ -1712,6 +2600,25 @@
           "secret": false
         },
         {
+          "enemyId": 974,
+          "name": "공허의 거미 리더",
+          "img": "Monster/가드 드라군.PNG",
+          "hp": 7500,
+          "atk": 621,
+          "def": 390,
+          "spi": 200,
+          "agi": 440,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
+        },
+        {
           "enemyId": 975,
           "name": "혼돈의 뱀",
           "img": "Monster/안구이프럼.PNG",
@@ -1728,84 +2635,69 @@
             "god": false
           },
           "secret": false
+        },
+        {
+          "enemyId": 976,
+          "name": "혼돈의 뱀 리더",
+          "img": "Monster/안구이프럼.PNG",
+          "hp": 6900,
+          "atk": 505,
+          "def": 252,
+          "spi": 480,
+          "agi": 460,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 2202,
+            "name": "혼돈의 파편",
+            "prob": 15,
+            "god": false
+          },
+          "secret": false
         }
       ]
     },
     {
       "key": "rift",
       "name": "이계의 틈",
-      "desc": "엔딩 뒤 요정족숲 옛 신전 문에 남은 균열. 하루에 한 번 들어갈 수 있고, 다른 별의 신 셋 가운데 하나가 침략자로 나타난다.",
+      "desc": "???",
       "dungeons": [
         {
-          "name": "이계",
+          "name": "???",
           "floors": null,
-          "desc": "대천사 라그엘이 틈을 감시한다. 패배해도 페널티는 없고 그날의 입장 기회만 쓴다.",
-          "boss": "??? (날마다 바뀐다)",
+          "desc": "???",
+          "boss": "???",
           "maps": [
             165,
             462
           ]
         }
       ],
-      "monsters": [
-        {
-          "enemyId": 1141,
-          "name": "베히모스",
-          "img": "Monster/베히모스.png",
-          "hp": 26000,
-          "atk": 720,
-          "def": 400,
-          "spi": 500,
-          "agi": 400,
-          "boss": true,
-          "drop": {
-            "id": 2501,
-            "name": "베히모스의 대지 갑주",
-            "prob": 20,
-            "god": true
-          },
-          "secret": true
-        },
-        {
-          "enemyId": 1142,
-          "name": "레비아탄",
-          "img": "Monster/bof2_enemy2.png",
-          "hp": 23000,
-          "atk": 700,
-          "def": 340,
-          "spi": 700,
-          "agi": 500,
-          "boss": true,
-          "drop": {
-            "id": 2502,
-            "name": "레비아탄의 심해 방패",
-            "prob": 20,
-            "god": true
-          },
-          "secret": true
-        },
-        {
-          "enemyId": 1143,
-          "name": "지즈",
-          "img": "Monster/아킬라.png",
-          "hp": 19000,
-          "atk": 780,
-          "def": 300,
-          "spi": 550,
-          "agi": 700,
-          "boss": true,
-          "drop": {
-            "id": 2503,
-            "name": "지즈의 하늘 반지",
-            "prob": 20,
-            "god": true
-          },
-          "secret": true
-        }
-      ]
+      "monsters": []
     }
   ],
   "bosses": [
+    {
+      "enemyId": 418,
+      "img": "Monster/트롤.png",
+      "hp": 400,
+      "atk": 50,
+      "def": 10,
+      "spi": 100,
+      "agi": 35,
+      "name": "쇠약한 오우거 로드",
+      "title": "로그던전 3층의 거대한 그림자",
+      "where": "로그던전 3층",
+      "desc": "재단사 미르오를 덮쳐 속치마를 빼앗아 간 \"거대한 그림자\". 쇠창살이 열린 3층 안쪽에 있다.",
+      "drop": {
+        "id": 833,
+        "name": "미르오의 속치마",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "rogue"
+    },
     {
       "enemyId": 109,
       "name": "그레이션드래곤",
@@ -1820,7 +2712,8 @@
       "desc": "본토던전 가장 깊은 곳에서 \"나에게 시험을 치르러온거군\"이라며 맞선다. 쓰러뜨리면 화염의 성배를 얻는다.",
       "enemyName": "그레이션 드래곤",
       "drop": null,
-      "secret": false
+      "secret": false,
+      "region": "kriend-east"
     },
     {
       "enemyId": 81,
@@ -1840,7 +2733,8 @@
         "prob": 100,
         "god": false
       },
-      "secret": false
+      "secret": false,
+      "region": "kriend-east"
     },
     {
       "enemyId": 92,
@@ -1860,7 +2754,25 @@
         "prob": 100,
         "god": false
       },
-      "secret": false
+      "secret": false,
+      "region": "kriend-east"
+    },
+    {
+      "enemyId": 426,
+      "name": "크리엔드Ⅳ세",
+      "title": "크리엔드 국왕, 자칭 황제",
+      "img": "Monster/왕.png",
+      "hp": 7000,
+      "atk": 400,
+      "def": 400,
+      "spi": 10,
+      "agi": 10,
+      "where": "크리엔드 궁성 왕좌",
+      "desc": "한때 정복왕이었으나 권력의 쾌락에 빠져 폭정을 폈다. 왕좌에서 마물을 불러내 데니온을 쓰러뜨리고 주인공과 싸운다.",
+      "enemyName": "크리엔드",
+      "drop": null,
+      "secret": false,
+      "region": "kriend-east"
     },
     {
       "enemyId": 222,
@@ -1876,7 +2788,145 @@
       "desc": "아스트리아가 시험으로 맡긴 토벌 대상. \"발록들을 이기고 여기까지 왔는가… 내 목적은 루시리스를 죽이는것뿐!!\"",
       "enemyName": "프로스트 와이번",
       "drop": null,
-      "secret": false
+      "secret": false,
+      "region": "kriend-west"
+    },
+    {
+      "enemyId": 250,
+      "img": "Monster/페드라.PNG",
+      "hp": 2000,
+      "atk": 200,
+      "def": 100,
+      "spi": 200,
+      "agi": 150,
+      "name": "원소 히드라",
+      "title": "고대던전 하늘층의 통과의례",
+      "where": "고대던전 하늘층",
+      "desc": "불타는 히드라부터 대지의 히드라까지 여섯 마리. 고른 원소의 다음 원소를 가진 히드라와 싸운다.",
+      "members": [
+        {
+          "enemyId": 250,
+          "img": "Monster/페드라.PNG",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "name": "불타는 히드라",
+          "boss": true
+        },
+        {
+          "enemyId": 251,
+          "img": "Monster/페드라.PNG",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "name": "해일의 히드라",
+          "boss": true
+        },
+        {
+          "enemyId": 252,
+          "img": "Monster/페드라.PNG",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "name": "전격의 히드라",
+          "boss": true
+        },
+        {
+          "enemyId": 253,
+          "img": "Monster/페드라.PNG",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "name": "광속의 히드라",
+          "boss": true
+        },
+        {
+          "enemyId": 254,
+          "img": "Monster/페드라.PNG",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "name": "냉기의 히드라",
+          "boss": true
+        },
+        {
+          "enemyId": 255,
+          "img": "Monster/페드라.PNG",
+          "hp": 2000,
+          "atk": 200,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "name": "대지의 히드라",
+          "boss": true
+        }
+      ],
+      "drop": null,
+      "secret": false,
+      "region": "kriend-west"
+    },
+    {
+      "enemyId": 741,
+      "name": "골렘 수호자",
+      "title": "봉인의 성소 수호자",
+      "img": "Monster/output_image_140x140_png8.png",
+      "hp": 7000,
+      "atk": 300,
+      "def": 600,
+      "spi": 200,
+      "agi": 70,
+      "where": "봉인의 성소 보스룸",
+      "desc": "\"봉인을 지킨다 적을 배제한다.\" 대현자와 마법사들이 지키던 마석 앞을 막아선다. 쓰러뜨리면 봉인된 마석을 얻는다.",
+      "drop": null,
+      "secret": false,
+      "region": "kriend-west"
+    },
+    {
+      "enemyId": 759,
+      "name": "프리조락",
+      "title": "트롤킹, 초즌",
+      "img": "Monster/오거.png",
+      "hp": 9000,
+      "atk": 600,
+      "def": 300,
+      "spi": 100,
+      "agi": 140,
+      "where": "트롤킹의 동굴",
+      "desc": "\"나 또한 신께 선택받은 몸.\" 쉐도우가 마석을 바치려던 트롤의 왕으로, 전투 중 초재생으로 체력을 회복한다.",
+      "drop": {
+        "id": 1894,
+        "name": "트롤킹의 마석",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "kriend-west"
+    },
+    {
+      "enemyId": 901,
+      "img": "Monster/용.png",
+      "hp": 7000,
+      "atk": 330,
+      "def": 380,
+      "spi": 450,
+      "agi": 260,
+      "name": "호수의 주인",
+      "title": "지하호수 깊은 곳의 주인",
+      "where": "지하호수 호수의 주인 둥지",
+      "desc": "호수 크라켄 둘을 거느리고 그랜드마운틴 지하호수의 가장 깊은 둥지에 산다. 쓰러뜨리면 둥지의 보물상자를 열 수 있다.",
+      "drop": null,
+      "secret": false,
+      "region": "kriend-west"
     },
     {
       "enemyId": 297,
@@ -1942,7 +2992,8 @@
         }
       ],
       "drop": null,
-      "secret": false
+      "secret": false,
+      "region": "rogers"
     },
     {
       "enemyId": 394,
@@ -1962,78 +3013,53 @@
         "prob": 100,
         "god": false
       },
-      "secret": false
+      "secret": false,
+      "region": "rogers"
     },
     {
-      "enemyId": 426,
-      "name": "크리엔드Ⅳ세",
-      "title": "크리엔드 국왕, 자칭 황제",
-      "img": "Monster/왕.png",
-      "hp": 7000,
-      "atk": 400,
-      "def": 400,
-      "spi": 10,
-      "agi": 10,
-      "where": "크리엔드 궁성 왕좌",
-      "desc": "한때 정복왕이었으나 권력의 쾌락에 빠져 폭정을 폈다. 왕좌에서 마물을 불러내 데니온을 쓰러뜨리고 주인공과 싸운다.",
-      "enemyName": "크리엔드",
-      "drop": null,
-      "secret": false
-    },
-    {
-      "enemyId": 741,
-      "name": "골렘 수호자",
-      "title": "봉인의 성소 수호자",
-      "img": "Monster/output_image_140x140_png8.png",
-      "hp": 7000,
+      "enemyId": 571,
+      "img": "Monster/듀라한.png",
+      "hp": 3000,
       "atk": 300,
-      "def": 600,
-      "spi": 200,
-      "agi": 70,
-      "where": "봉인의 성소 보스룸",
-      "desc": "\"봉인을 지킨다 적을 배제한다.\" 대현자와 마법사들이 지키던 마석 앞을 막아선다. 쓰러뜨리면 봉인된 마석을 얻는다.",
-      "drop": null,
-      "secret": false
-    },
-    {
-      "enemyId": 759,
-      "name": "프리조락",
-      "title": "트롤킹, 초즌",
-      "img": "Monster/오거.png",
-      "hp": 9000,
-      "atk": 600,
       "def": 300,
-      "spi": 100,
-      "agi": 140,
-      "where": "트롤킹의 동굴",
-      "desc": "\"나 또한 신께 선택받은 몸.\" 쉐도우가 마석을 바치려던 트롤의 왕으로, 전투 중 초재생으로 체력을 회복한다.",
+      "spi": 300,
+      "agi": 300,
+      "name": "듀라한·다크나이트",
+      "title": "신대륙 지하던전의 기사들",
+      "where": "신대륙 지하던전 4층",
+      "desc": "서쪽늪에서 내려가는 지하던전 끝에 있다. 둘이 남기는 핵은 그라나마을의 쿤이 다크 아르카나로 만들어 준다.",
+      "members": [
+        {
+          "enemyId": 571,
+          "name": "듀라한",
+          "img": "Monster/듀라한.png",
+          "hp": 3000,
+          "atk": 300,
+          "def": 300,
+          "spi": 300,
+          "agi": 300,
+          "boss": true
+        },
+        {
+          "enemyId": 572,
+          "name": "다크나이트",
+          "img": "Monster/듀라한.png",
+          "hp": 4000,
+          "atk": 400,
+          "def": 400,
+          "spi": 400,
+          "agi": 400,
+          "boss": true
+        }
+      ],
       "drop": {
-        "id": 1894,
-        "name": "트롤킹의 마석",
+        "id": 323,
+        "name": "듀라한의 핵",
         "prob": 100,
         "god": false
       },
-      "secret": false
-    },
-    {
-      "enemyId": 803,
-      "name": "우라노스",
-      "title": "카오스의 친우, 초즌",
-      "img": "Monster/우라노스.png",
-      "hp": 9000,
-      "atk": 700,
-      "def": 100,
-      "spi": 100,
-      "agi": 700,
-      "where": "우라노스봉인소",
-      "desc": "쉐도우가 깨운 또 하나의 초즌. 신들을 \"위선자\", 인간을 \"신들의 소모품\"이라 부르며 영원의 굴레를 끝내려 한다. 번개 계열 스킬을 쓴다.",
-      "drop": {
-        "id": 1889,
-        "name": "우라노스의 마석",
-        "prob": 100,
-        "god": false
-      },
-      "secret": false
+      "secret": false,
+      "region": "new-continent"
     },
     {
       "enemyId": 578,
@@ -2053,7 +3079,117 @@
         "prob": 100,
         "god": false
       },
-      "secret": false
+      "secret": false,
+      "region": "new-continent"
+    },
+    {
+      "enemyId": 462,
+      "img": "Monster/타이탄.png",
+      "hp": 8000,
+      "atk": 300,
+      "def": 400,
+      "spi": 350,
+      "agi": 550,
+      "name": "4대 괴수",
+      "title": "우라노스의 봉인을 지키는 자들",
+      "where": "우라노스섬 고대의 섬",
+      "desc": "타이탄, 가루다시저, 바하무트, 드래곤 나이트. 넷을 모두 쓰러뜨려야 우라노스봉인소가 열린다.",
+      "members": [
+        {
+          "enemyId": 462,
+          "name": "타이탄",
+          "img": "Monster/타이탄.png",
+          "hp": 8000,
+          "atk": 300,
+          "def": 400,
+          "spi": 350,
+          "agi": 550,
+          "boss": true
+        },
+        {
+          "enemyId": 460,
+          "name": "가루다시저",
+          "img": "Monster/가루다.png",
+          "hp": 8000,
+          "atk": 350,
+          "def": 350,
+          "spi": 350,
+          "agi": 550,
+          "boss": true
+        },
+        {
+          "enemyId": 461,
+          "name": "바하무트",
+          "img": "Monster/바하무트.png",
+          "hp": 8000,
+          "atk": 300,
+          "def": 550,
+          "spi": 350,
+          "agi": 250,
+          "boss": true
+        },
+        {
+          "enemyId": 463,
+          "name": "드래곤 나이트",
+          "img": "Monster/드래곤나이트.png",
+          "hp": 8000,
+          "atk": 500,
+          "def": 350,
+          "spi": 350,
+          "agi": 250,
+          "boss": true
+        }
+      ],
+      "drop": {
+        "id": 1074,
+        "name": "저주받은주문서",
+        "prob": 10,
+        "god": false
+      },
+      "secret": false,
+      "region": "uranos"
+    },
+    {
+      "enemyId": 803,
+      "name": "우라노스",
+      "title": "카오스의 친우, 초즌",
+      "img": "Monster/우라노스.png",
+      "hp": 9000,
+      "atk": 700,
+      "def": 100,
+      "spi": 100,
+      "agi": 700,
+      "where": "우라노스봉인소",
+      "desc": "쉐도우가 깨운 또 하나의 초즌. 신들을 \"위선자\", 인간을 \"신들의 소모품\"이라 부르며 영원의 굴레를 끝내려 한다. 번개 계열 스킬을 쓴다.",
+      "drop": {
+        "id": 1889,
+        "name": "우라노스의 마석",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "uranos"
+    },
+    {
+      "enemyId": 839,
+      "img": "Monster/E2폭주수호기.png",
+      "hp": 12000,
+      "atk": 540,
+      "def": 280,
+      "spi": 260,
+      "agi": 280,
+      "name": "폭주한 수호기 아타마",
+      "title": "하늘의 닻을 지키는 수호기",
+      "where": "고대의 하늘 하늘의 닻",
+      "desc": "옛 신의 땅을 지키던 수호기가 폭주했다. 카오스교가 섬의 힘을 빨아들이는 닻 하나를 막아선다.",
+      "drop": {
+        "id": 2051,
+        "name": "아타마 장갑판",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "ancient-sky"
     },
     {
       "enemyId": 844,
@@ -2073,7 +3209,29 @@
         "prob": 100,
         "god": false
       },
-      "secret": true
+      "secret": true,
+      "region": "ancient-sky"
+    },
+    {
+      "enemyId": 841,
+      "img": "Monster/E2수호골렘.png",
+      "hp": 14000,
+      "atk": 600,
+      "def": 320,
+      "spi": 300,
+      "agi": 240,
+      "name": "대현자의 수호 골렘",
+      "title": "대현자의 탑 꼭대기",
+      "where": "대현자의 탑 꼭대기",
+      "desc": "대현자가 남긴 기록을 지키는 골렘. 쓰러뜨리면 탑 꼭대기에서 대현자의 기록을 읽을 수 있다.",
+      "drop": {
+        "id": 2055,
+        "name": "수호 골렘의 핵",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "mage-continent"
     },
     {
       "enemyId": 842,
@@ -2093,7 +3251,50 @@
         "prob": 100,
         "god": false
       },
-      "secret": true
+      "secret": true,
+      "region": "mage-continent"
+    },
+    {
+      "enemyId": 979,
+      "img": "Monster/F1얼어붙은대천사.png",
+      "hp": 18000,
+      "atk": 640,
+      "def": 320,
+      "spi": 460,
+      "agi": 360,
+      "name": "얼어붙은 대천사",
+      "title": "이름이 지워진 문 앞의 천사",
+      "where": "봉인의 빙묘 최심부",
+      "desc": "빙묘 최심부의 얼음 문을 지키다 그대로 얼어붙었다. 문 너머에는 누군가 잠들어 있다.",
+      "drop": {
+        "id": 2212,
+        "name": "얼어붙은 대천사의 방패",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "chaos-land"
+    },
+    {
+      "enemyId": 980,
+      "img": "Monster/마왕.png",
+      "hp": 14000,
+      "atk": 620,
+      "def": 300,
+      "spi": 400,
+      "agi": 380,
+      "name": "혼돈의 문지기",
+      "title": "왕좌로 가는 문의 문지기",
+      "where": "혼돈의 땅",
+      "desc": "혼돈의 땅 한가운데에서 왕좌로 가는 큰 문을 지킨다.",
+      "drop": {
+        "id": 2213,
+        "name": "문지기의 갑주",
+        "prob": 100,
+        "god": false
+      },
+      "secret": false,
+      "region": "chaos-land"
     },
     {
       "enemyId": 981,
@@ -2113,7 +3314,8 @@
         "prob": 100,
         "god": true
       },
-      "secret": true
+      "secret": true,
+      "region": "chaos-land"
     },
     {
       "enemyId": 1141,
@@ -2133,7 +3335,8 @@
         "prob": 20,
         "god": true
       },
-      "secret": true
+      "secret": true,
+      "region": "rift"
     },
     {
       "enemyId": 1142,
@@ -2153,7 +3356,8 @@
         "prob": 20,
         "god": true
       },
-      "secret": true
+      "secret": true,
+      "region": "rift"
     },
     {
       "enemyId": 1143,
@@ -2173,7 +3377,8 @@
         "prob": 20,
         "god": true
       },
-      "secret": true
+      "secret": true,
+      "region": "rift"
     }
   ]
 }
