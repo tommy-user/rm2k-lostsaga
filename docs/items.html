@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이템 | 로스트사가</title>
+<meta name="description" content="로스트사가의 아이템 등급과 대표 장비.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="gnb"></header>
+
+<main id="main">
+  <section class="page-head">
+    <img class="page-head__bg px" src="assets/img/pic/rogers.png" alt="">
+    <div class="wrap">
+      <h1>아이템</h1>
+      <p>무기와 방어구, 회복약과 재료까지. 만드는 법도 함께 적었다.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid--2" style="align-items:start;margin-bottom:50px">
+        <div>
+          <h2>등급</h2>
+          <p class="dim" id="upgrade"></p>
+        </div>
+        <div class="win"><div class="table-scroll"><table class="table"><tbody id="grades"></tbody></table></div></div>
+      </div>
+      <h2>아이템 도감</h2>
+      <div class="item-tools">
+        <input type="search" id="item-q" placeholder="이름이나 설명으로 찾기" aria-label="아이템 찾기">
+        <span class="dim pixel" id="item-count"></span>
+      </div>
+      <div class="item-tabs" id="item-tabs" role="tablist" aria-label="아이템 분류"></div>
+      <div class="item-list" id="items"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/data-pages.js"></script>
+</body>
+</html>

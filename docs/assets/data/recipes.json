@@ -1,0 +1,2742 @@
+{
+ "2": {
+  "name": "헤비힐링포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 1,
+    "name": "힐링포션",
+    "count": 2
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "3": {
+  "name": "풀힐링포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 2,
+    "name": "헤비힐링포션",
+    "count": 2
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "10": {
+  "name": "헤비마나포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 1,
+    "name": "힐링포션",
+    "count": 3
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "11": {
+  "name": "풀마나포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 2,
+    "name": "헤비힐링포션",
+    "count": 3
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "788": {
+  "name": "활력포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 1,
+    "name": "힐링포션",
+    "count": 3
+   },
+   {
+    "id": 9,
+    "name": "마나포션",
+    "count": 3
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "789": {
+  "name": "궁극의 힐링포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 3,
+    "name": "풀힐링포션",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "790": {
+  "name": "궁극의 마나포션",
+  "count": 1,
+  "by": "포션조합술 (미르오에게 받는 조합법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 11,
+    "name": "풀마나포션",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0185_포션조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 185
+ },
+ "791": {
+  "name": "만드라고라 추출액",
+  "count": 1,
+  "by": "약초조합술 (데르죠에게 받는 조제법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 13,
+    "name": "만드라고라의 뿌리",
+    "count": 1
+   },
+   {
+    "id": 1,
+    "name": "힐링포션",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0186_약초조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 186
+ },
+ "792": {
+  "name": "만병통치약",
+  "count": 1,
+  "by": "약초조합술 (데르죠에게 받는 조제법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 209,
+    "name": "유니콘의 뿔조각",
+    "count": 1
+   },
+   {
+    "id": 20,
+    "name": "해독초",
+    "count": 1
+   },
+   {
+    "id": 21,
+    "name": "활랭이 나물",
+    "count": 1
+   },
+   {
+    "id": 23,
+    "name": "정신갈피제",
+    "count": 1
+   },
+   {
+    "id": 24,
+    "name": "매운 고추",
+    "count": 1
+   },
+   {
+    "id": 25,
+    "name": "알코올 물약",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0186_약초조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 186
+ },
+ "793": {
+  "name": "인삼엑기스",
+  "count": 1,
+  "by": "약초조합술 (데르죠에게 받는 조제법, 아지트 작업대)",
+  "materials": [
+   {
+    "id": 432,
+    "name": "인삼",
+    "count": 5
+   },
+   {
+    "id": 433,
+    "name": "버섯",
+    "count": 5
+   },
+   {
+    "id": 791,
+    "name": "만드라고라 추출액",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0186_약초조합술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 186
+ },
+ "819": {
+  "name": "광어초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 803,
+    "name": "광어",
+    "count": 1
+   },
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "820": {
+  "name": "도미초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 804,
+    "name": "도미",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "821": {
+  "name": "오징어초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 805,
+    "name": "철오징어",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "822": {
+  "name": "새우초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 806,
+    "name": "철새우",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "823": {
+  "name": "참치초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 807,
+    "name": "참치",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "824": {
+  "name": "장어초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 809,
+    "name": "장어",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "825": {
+  "name": "연어알초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 810,
+    "name": "연어",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "826": {
+  "name": "성게알초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 811,
+    "name": "성게",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "827": {
+  "name": "은어초밥",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 816,
+    "name": "와사비",
+    "count": 1
+   },
+   {
+    "id": 831,
+    "name": "초밥",
+    "count": 1
+   },
+   {
+    "id": 829,
+    "name": "은어",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1905": {
+  "name": "몬스터고기볶음",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 436,
+    "name": "몬스터 고기",
+    "count": 1
+   },
+   {
+    "id": 24,
+    "name": "매운 고추",
+    "count": 1
+   },
+   {
+    "id": 543,
+    "name": "파",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1906": {
+  "name": "제육볶음",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 24,
+    "name": "매운 고추",
+    "count": 1
+   },
+   {
+    "id": 437,
+    "name": "돼지고기",
+    "count": 1
+   },
+   {
+    "id": 544,
+    "name": "대파",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1907": {
+  "name": "오리주물럭",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 438,
+    "name": "오리고기",
+    "count": 1
+   },
+   {
+    "id": 545,
+    "name": "마늘",
+    "count": 1
+   },
+   {
+    "id": 546,
+    "name": "상추",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1908": {
+  "name": "불고기",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 545,
+    "name": "마늘",
+    "count": 1
+   },
+   {
+    "id": 439,
+    "name": "소고기",
+    "count": 1
+   },
+   {
+    "id": 433,
+    "name": "버섯",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1909": {
+  "name": "말고기육회",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 545,
+    "name": "마늘",
+    "count": 1
+   },
+   {
+    "id": 440,
+    "name": "말고기",
+    "count": 1
+   },
+   {
+    "id": 547,
+    "name": "무",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1911": {
+  "name": "나물무침",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 543,
+    "name": "파",
+    "count": 1
+   },
+   {
+    "id": 545,
+    "name": "마늘",
+    "count": 1
+   },
+   {
+    "id": 21,
+    "name": "활랭이 나물",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1912": {
+  "name": "채소샐러드",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 543,
+    "name": "파",
+    "count": 1
+   },
+   {
+    "id": 546,
+    "name": "상추",
+    "count": 1
+   },
+   {
+    "id": 547,
+    "name": "무",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1913": {
+  "name": "버섯전골",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 544,
+    "name": "대파",
+    "count": 1
+   },
+   {
+    "id": 433,
+    "name": "버섯",
+    "count": 1
+   },
+   {
+    "id": 547,
+    "name": "무",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "1914": {
+  "name": "인삼버섯탕",
+  "count": 1,
+  "by": "요리술 (이두용에게 받는 요리책, 아지트 화덕)",
+  "materials": [
+   {
+    "id": 544,
+    "name": "대파",
+    "count": 1
+   },
+   {
+    "id": 433,
+    "name": "버섯",
+    "count": 1
+   },
+   {
+    "id": 432,
+    "name": "인삼",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0187_요리술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 187
+ },
+ "658": {
+  "name": "강철판금",
+  "count": 1,
+  "by": "제련술 (나노무토에게 받는 제련법, 아지트 고급 작업대)",
+  "materials": [
+   {
+    "id": 165,
+    "name": "강철",
+    "count": 4
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0188_제련술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 188
+ },
+ "166": {
+  "name": "오리하르콘",
+  "count": 1,
+  "by": "제련술 (나노무토에게 받는 제련법, 아지트 고급 작업대)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 2
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0188_제련술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 188
+ },
+ "177": {
+  "name": "장검신",
+  "count": 1,
+  "by": "제련술 (나노무토에게 받는 제련법, 아지트 고급 작업대)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 8
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0188_제련술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 188
+ },
+ "176": {
+  "name": "단검신",
+  "count": 1,
+  "by": "제련술 (나노무토에게 받는 제련법, 아지트 고급 작업대)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 4
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0188_제련술.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 188
+ },
+ "1075": {
+  "name": "고대의 주문서",
+  "count": 1,
+  "by": "축복받은 주문서 사용",
+  "materials": [
+   {
+    "id": 1077,
+    "name": "축복받은 주문서",
+    "count": 1
+   },
+   {
+    "id": 1074,
+    "name": "저주받은주문서",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0209_축복받은주문서.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 209
+ },
+ "1069": {
+  "name": "고대의 플레이트아머",
+  "count": 1,
+  "by": "고대의 주문서 사용",
+  "materials": [
+   {
+    "id": 1075,
+    "name": "고대의 주문서",
+    "count": 1
+   },
+   {
+    "id": 1064,
+    "name": "저주받은플레이트아머",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0210_고대의_주문서.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 210
+ },
+ "1070": {
+  "name": "고대의 가죽갑옷",
+  "count": 1,
+  "by": "고대의 주문서 사용",
+  "materials": [
+   {
+    "id": 1075,
+    "name": "고대의 주문서",
+    "count": 1
+   },
+   {
+    "id": 1065,
+    "name": "저주받은가죽갑옷",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0210_고대의_주문서.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 210
+ },
+ "1071": {
+  "name": "고대의 로브",
+  "count": 1,
+  "by": "고대의 주문서 사용",
+  "materials": [
+   {
+    "id": 1075,
+    "name": "고대의 주문서",
+    "count": 1
+   },
+   {
+    "id": 1066,
+    "name": "저주받은로브",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0210_고대의_주문서.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 210
+ },
+ "1072": {
+  "name": "고대의 망토",
+  "count": 1,
+  "by": "고대의 주문서 사용",
+  "materials": [
+   {
+    "id": 1075,
+    "name": "고대의 주문서",
+    "count": 1
+   },
+   {
+    "id": 1067,
+    "name": "저주받은망토",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/0210_고대의_주문서.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 210
+ },
+ "2215": {
+  "name": "자유의 면류관",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 766,
+    "name": "카오스의 심장",
+    "count": 1
+   },
+   {
+    "id": 2214,
+    "name": "혼돈의 왕관",
+    "count": 1
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 3
+   },
+   {
+    "id": 1937,
+    "name": "하늘의 결정",
+    "count": 3
+   }
+  ],
+  "gold": 100000,
+  "src": "db/commonevents/0877_자유의_면류관_조합.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 877
+ },
+ "2046": {
+  "name": "하늘 결정 지팡이",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1937,
+    "name": "하늘의 결정",
+    "count": 2
+   },
+   {
+    "id": 1932,
+    "name": "변이 체액",
+    "count": 10
+   }
+  ],
+  "gold": 40000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2063": {
+  "name": "폭풍 깃털 단검",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1934,
+    "name": "폭풍의 깃털",
+    "count": 10
+   },
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 6
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2064": {
+  "name": "검은 깃털 닌자도",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1936,
+    "name": "검은 깃털",
+    "count": 8
+   },
+   {
+    "id": 1935,
+    "name": "익룡의 비늘",
+    "count": 6
+   }
+  ],
+  "gold": 32000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2065": {
+  "name": "그리폰 깃털 활",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 12
+   },
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 6
+   }
+  ],
+  "gold": 35000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2066": {
+  "name": "고대 기계 성구",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1932,
+    "name": "변이 체액",
+    "count": 6
+   },
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 12
+   }
+  ],
+  "gold": 32000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2071": {
+  "name": "폭풍 수호기 망치",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1935,
+    "name": "익룡의 비늘",
+    "count": 6
+   },
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 12
+   }
+  ],
+  "gold": 35000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2042": {
+  "name": "그리폰 깃털 망토",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1934,
+    "name": "폭풍의 깃털",
+    "count": 4
+   },
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 12
+   }
+  ],
+  "gold": 25000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2043": {
+  "name": "고대 기계 갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 15
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 5
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2044": {
+  "name": "익룡 비늘 방패",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1935,
+    "name": "익룡의 비늘",
+    "count": 12
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 3
+   }
+  ],
+  "gold": 28000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2045": {
+  "name": "폭풍의 깃털 모자",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1934,
+    "name": "폭풍의 깃털",
+    "count": 12
+   },
+   {
+    "id": 1936,
+    "name": "검은 깃털",
+    "count": 4
+   }
+  ],
+  "gold": 25000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2056": {
+  "name": "거인 뼈 몽둥이",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1942,
+    "name": "거인의 뼈",
+    "count": 12
+   },
+   {
+    "id": 1940,
+    "name": "모래벌레 이빨",
+    "count": 6
+   }
+  ],
+  "gold": 40000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2067": {
+  "name": "거인 뼈 너클",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1942,
+    "name": "거인의 뼈",
+    "count": 10
+   },
+   {
+    "id": 1939,
+    "name": "사막 전갈 껍질",
+    "count": 6
+   }
+  ],
+  "gold": 32000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2068": {
+  "name": "메두사 비늘 레이피어",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1940,
+    "name": "모래벌레 이빨",
+    "count": 6
+   },
+   {
+    "id": 1941,
+    "name": "메두사의 비늘",
+    "count": 10
+   }
+  ],
+  "gold": 35000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2069": {
+  "name": "망령의 거울",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1941,
+    "name": "메두사의 비늘",
+    "count": 4
+   },
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 12
+   }
+  ],
+  "gold": 32000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2070": {
+  "name": "모래 악령의 오브",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 8
+   },
+   {
+    "id": 1943,
+    "name": "옛 칠리 금화",
+    "count": 3
+   }
+  ],
+  "gold": 35000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2047": {
+  "name": "망령의 로브",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 15
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   }
+  ],
+  "gold": 32000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2048": {
+  "name": "전갈 껍질 갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 5
+   },
+   {
+    "id": 1939,
+    "name": "사막 전갈 껍질",
+    "count": 15
+   }
+  ],
+  "gold": 32000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2049": {
+  "name": "메두사 비늘 방패",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 3
+   },
+   {
+    "id": 1941,
+    "name": "메두사의 비늘",
+    "count": 12
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2057": {
+  "name": "모래벌레 이빨 투구",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1940,
+    "name": "모래벌레 이빨",
+    "count": 12
+   }
+  ],
+  "gold": 25000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2058": {
+  "name": "봉인의 지팡이",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1937,
+    "name": "하늘의 결정",
+    "count": 3
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 3
+   },
+   {
+    "id": 2054,
+    "name": "카르도어의 지팡이",
+    "count": 1
+   }
+  ],
+  "gold": 50000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2059": {
+  "name": "옛 칠리 근위갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1069,
+    "name": "고대의 플레이트아머",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2060": {
+  "name": "옛 칠리 가죽갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1939,
+    "name": "사막 전갈 껍질",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1070,
+    "name": "고대의 가죽갑옷",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2061": {
+  "name": "옛 칠리 마도로브",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1071,
+    "name": "고대의 로브",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2062": {
+  "name": "옛 칠리 망토",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1072,
+    "name": "고대의 망토",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
+  "map_id": 482,
+  "event_id": 36,
+  "common_event_id": null
+ },
+ "2007": {
+  "name": "서리늑대가죽 모자",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1208,
+    "name": "서리 늑대의 가죽",
+    "count": 20
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
+  "map_id": 482,
+  "event_id": 29,
+  "common_event_id": null
+ },
+ "2008": {
+  "name": "서리늑대가죽 투구",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1208,
+    "name": "서리 늑대의 가죽",
+    "count": 15
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
+  "map_id": 482,
+  "event_id": 29,
+  "common_event_id": null
+ },
+ "2009": {
+  "name": "서리늑대가죽 로브",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1208,
+    "name": "서리 늑대의 가죽",
+    "count": 30
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
+  "map_id": 482,
+  "event_id": 29,
+  "common_event_id": null
+ },
+ "2010": {
+  "name": "트롤 가죽 방패",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   },
+   {
+    "id": 1207,
+    "name": "트롤의 가죽",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
+  "map_id": 482,
+  "event_id": 29,
+  "common_event_id": null
+ },
+ "2011": {
+  "name": "트롤 뼈 몽둥이",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1203,
+    "name": "트롤의 뼈",
+    "count": 30
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 5
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
+  "map_id": 482,
+  "event_id": 29,
+  "common_event_id": null
+ },
+ "158": {
+  "name": "오리하르콘 흉갑",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 30
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 20
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "220": {
+  "name": "미스릴 아머",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 5
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "221": {
+  "name": "퓨전엘리멘탈 아머",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 168,
+    "name": "유니콘의 뿔",
+    "count": 10
+   },
+   {
+    "id": 213,
+    "name": "물의 원소",
+    "count": 1
+   },
+   {
+    "id": 214,
+    "name": "불의 원소",
+    "count": 1
+   },
+   {
+    "id": 215,
+    "name": "대지의 원소",
+    "count": 1
+   },
+   {
+    "id": 216,
+    "name": "바람의 수호",
+    "count": 1
+   },
+   {
+    "id": 217,
+    "name": "전력의 수호",
+    "count": 1
+   },
+   {
+    "id": 218,
+    "name": "냉기의 수호",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "351": {
+  "name": "자연의 칼날",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 347,
+    "name": "자연의 검신",
+    "count": 1
+   },
+   {
+    "id": 349,
+    "name": "부러진 칼의 손잡이",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "481": {
+  "name": "강철 갑옷",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 658,
+    "name": "강철판금",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "480": {
+  "name": "강철 방패",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 658,
+    "name": "강철판금",
+    "count": 4
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "482": {
+  "name": "강철 투구",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 658,
+    "name": "강철판금",
+    "count": 2
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "2022": {
+  "name": "황금빛 망토",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 1205,
+    "name": "황금빛 꽃가루",
+    "count": 15
+   },
+   {
+    "id": 1204,
+    "name": "거미줄",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
+  "map_id": 12,
+  "event_id": 30,
+  "common_event_id": null
+ },
+ "629": {
+  "name": "스켈레톤스태프",
+  "count": 1,
+  "by": "나노무토 (크리엔드)",
+  "materials": [
+   {
+    "id": 170,
+    "name": "악어 가죽",
+    "count": 10
+   },
+   {
+    "id": 414,
+    "name": "사악한 집념",
+    "count": 2
+   },
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 2
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0078.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": null
+ },
+ "854": {
+  "name": "작은 제련망치",
+  "count": 1,
+  "by": "나노무토 (크리엔드)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 5
+   },
+   {
+    "id": 160,
+    "name": "몬스터 가죽",
+    "count": 10
+   },
+   {
+    "id": 600,
+    "name": "피느의 막대기",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0078.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": null
+ },
+ "347": {
+  "name": "자연의 검신",
+  "count": 1,
+  "by": "크로우저 (크리엔드)",
+  "materials": [
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 1
+   },
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 1
+   },
+   {
+    "id": 348,
+    "name": "전갈의 독",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0012_본토내부/events/0148_EV0148.yaml",
+  "map_id": 12,
+  "event_id": 148,
+  "common_event_id": null
+ },
+ "575": {
+  "name": "요정족 장검",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 572,
+    "name": "피느의 줄기",
+    "count": 20
+   },
+   {
+    "id": 563,
+    "name": "요정족 검",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "577": {
+  "name": "요정족 방패",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 598,
+    "name": "피느의 천",
+    "count": 1
+   },
+   {
+    "id": 600,
+    "name": "피느의 막대기",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "576": {
+  "name": "요정족 대궁",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 600,
+    "name": "피느의 막대기",
+    "count": 1
+   },
+   {
+    "id": 561,
+    "name": "요정족 활",
+    "count": 1
+   },
+   {
+    "id": 599,
+    "name": "피느의 응고제",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "578": {
+  "name": "요정족 피느화살",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 600,
+    "name": "피느의 막대기",
+    "count": 1
+   },
+   {
+    "id": 562,
+    "name": "요정족 화살",
+    "count": 1
+   },
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "580": {
+  "name": "요정족 레이피어",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 5
+   },
+   {
+    "id": 575,
+    "name": "요정족 장검",
+    "count": 1
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 5
+   },
+   {
+    "id": 177,
+    "name": "장검신",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "582": {
+  "name": "요정족 대검",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 5
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 5
+   },
+   {
+    "id": 177,
+    "name": "장검신",
+    "count": 1
+   },
+   {
+    "id": 580,
+    "name": "요정족 레이피어",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "581": {
+  "name": "요정족 크로스보우",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 600,
+    "name": "피느의 막대기",
+    "count": 7
+   },
+   {
+    "id": 599,
+    "name": "피느의 응고제",
+    "count": 1
+   },
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 2
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "585": {
+  "name": "보우건",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 600,
+    "name": "피느의 막대기",
+    "count": 5
+   },
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 3
+   },
+   {
+    "id": 581,
+    "name": "요정족 크로스보우",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "587": {
+  "name": "요정족 가죽갑옷",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 598,
+    "name": "피느의 천",
+    "count": 1
+   },
+   {
+    "id": 599,
+    "name": "피느의 응고제",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "588": {
+  "name": "요정족 갑옷",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 598,
+    "name": "피느의 천",
+    "count": 1
+   },
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 5
+   },
+   {
+    "id": 587,
+    "name": "요정족 가죽갑옷",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "589": {
+  "name": "요정족 미스릴아머",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 1
+   },
+   {
+    "id": 588,
+    "name": "요정족 갑옷",
+    "count": 1
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 5
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "590": {
+  "name": "오리하루콘 아머",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 599,
+    "name": "피느의 응고제",
+    "count": 5
+   },
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 10
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 10
+   },
+   {
+    "id": 589,
+    "name": "요정족 미스릴아머",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "2101": {
+  "name": "요정족 레지스트 아머",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 598,
+    "name": "피느의 천",
+    "count": 10
+   },
+   {
+    "id": 601,
+    "name": "피느의 금속",
+    "count": 5
+   },
+   {
+    "id": 589,
+    "name": "요정족 미스릴아머",
+    "count": 1
+   },
+   {
+    "id": 168,
+    "name": "유니콘의 뿔",
+    "count": 3
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "583": {
+  "name": "레지스트 실드",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 598,
+    "name": "피느의 천",
+    "count": 5
+   },
+   {
+    "id": 168,
+    "name": "유니콘의 뿔",
+    "count": 2
+   },
+   {
+    "id": 577,
+    "name": "요정족 방패",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "593": {
+  "name": "사파이어 반지",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 290,
+    "name": "상급 사파이어",
+    "count": 1
+   },
+   {
+    "id": 188,
+    "name": "냉기의 반지",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "594": {
+  "name": "루비 반지",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 291,
+    "name": "상급 루비",
+    "count": 1
+   },
+   {
+    "id": 187,
+    "name": "화염의 반지",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "595": {
+  "name": "에메랄드 반지",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 292,
+    "name": "상급 에메랄드",
+    "count": 1
+   },
+   {
+    "id": 192,
+    "name": "바람의 반지",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "596": {
+  "name": "다이아몬드 반지",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 293,
+    "name": "상급 다이아몬드",
+    "count": 1
+   },
+   {
+    "id": 180,
+    "name": "마력의 반지",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "598": {
+  "name": "피느의 천",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 570,
+    "name": "피느의 잎사귀",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "599": {
+  "name": "피느의 응고제",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 571,
+    "name": "피느의 꽃가루",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "600": {
+  "name": "피느의 막대기",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 572,
+    "name": "피느의 줄기",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "601": {
+  "name": "피느의 금속",
+  "count": 1,
+  "by": "렌디 (요정족숲)",
+  "materials": [
+   {
+    "id": 573,
+    "name": "피느의 꿀",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0165_요정족숲/events/0091_EV0091.yaml",
+  "map_id": 165,
+  "event_id": 91,
+  "common_event_id": null
+ },
+ "616": {
+  "name": "사천의 물",
+  "count": 1,
+  "by": "대성지원장 (신의성지)",
+  "materials": [
+   {
+    "id": 617,
+    "name": "피느의 수액",
+    "count": 1
+   },
+   {
+    "id": 618,
+    "name": "천국의 물",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0036_신의성지/events/0001_EV0001.yaml",
+  "map_id": 36,
+  "event_id": 1,
+  "common_event_id": null
+ },
+ "278": {
+  "name": "레이피어",
+  "count": 1,
+  "by": "하이제 (칠리마을)",
+  "materials": [
+   {
+    "id": 57,
+    "name": "영사검",
+    "count": 1
+   },
+   {
+    "id": 177,
+    "name": "장검신",
+    "count": 1
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0088_칠리마을/events/0015_EV0015.yaml",
+  "map_id": 88,
+  "event_id": 15,
+  "common_event_id": null
+ },
+ "378": {
+  "name": "비류검",
+  "count": 1,
+  "by": "잔크 (칠리마을)",
+  "materials": [
+   {
+    "id": 380,
+    "name": "동양식 손잡이",
+    "count": 1
+   },
+   {
+    "id": 177,
+    "name": "장검신",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0088_칠리마을/events/0034_EV0034.yaml",
+  "map_id": 88,
+  "event_id": 34,
+  "common_event_id": null
+ },
+ "379": {
+  "name": "일검비류검",
+  "count": 1,
+  "by": "데르온 (그랜드마운틴)",
+  "materials": [
+   {
+    "id": 378,
+    "name": "비류검",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0095_그랜드마운틴/events/0111_EV0111.yaml",
+  "map_id": 95,
+  "event_id": 111,
+  "common_event_id": null
+ },
+ "723": {
+  "name": "오우거의 체액",
+  "count": 1,
+  "by": "오우거 (그랜드마운틴)",
+  "materials": [
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0095_그랜드마운틴/events/0066_EV0066.yaml",
+  "map_id": 95,
+  "event_id": 66,
+  "common_event_id": null
+ },
+ "325": {
+  "name": "정화된 핵",
+  "count": 1,
+  "by": "프레야 (로저스국)",
+  "materials": [
+   {
+    "id": 323,
+    "name": "듀라한의 핵",
+    "count": 1
+   },
+   {
+    "id": 293,
+    "name": "상급 다이아몬드",
+    "count": 1
+   },
+   {
+    "id": 302,
+    "name": "기억의 돌",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0105_로저스국/events/0173_EV0173.yaml",
+  "map_id": 105,
+  "event_id": 173,
+  "common_event_id": null
+ },
+ "327": {
+  "name": "진 다크 아르카나",
+  "count": 1,
+  "by": "쿤 (로저스국)",
+  "materials": [
+   {
+    "id": 324,
+    "name": "다크나이트의 핵",
+    "count": 1
+   },
+   {
+    "id": 326,
+    "name": "다크 아르카나",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0105_로저스국/events/0173_EV0173.yaml",
+  "map_id": 105,
+  "event_id": 173,
+  "common_event_id": null
+ },
+ "326": {
+  "name": "다크 아르카나",
+  "count": 1,
+  "by": "쿤 (그라나마을)",
+  "materials": [
+   {
+    "id": 325,
+    "name": "정화된 핵",
+    "count": 1
+   },
+   {
+    "id": 399,
+    "name": "어둠의 전서",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0332_그라나마을/events/0075_EV0075.yaml",
+  "map_id": 332,
+  "event_id": 75,
+  "common_event_id": null
+ },
+ "1214": {
+  "name": "어둠의 투구",
+  "count": 1,
+  "by": "궤르도스 (로저스국)",
+  "materials": [
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 5
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   },
+   {
+    "id": 799,
+    "name": "미늘",
+    "count": 5
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0105_로저스국/events/0371_EV0371.yaml",
+  "map_id": 105,
+  "event_id": 371,
+  "common_event_id": null
+ },
+ "726": {
+  "name": "소환 마법에 대하여",
+  "count": 1,
+  "by": "잔조르 (로저스 중앙광장)",
+  "materials": [
+   {
+    "id": 160,
+    "name": "몬스터 가죽",
+    "count": 1
+   },
+   {
+    "id": 169,
+    "name": "날짐승의 날개",
+    "count": 1
+   },
+   {
+    "id": 170,
+    "name": "악어 가죽",
+    "count": 1
+   },
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 1
+   },
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 1
+   },
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 1
+   },
+   {
+    "id": 570,
+    "name": "피느의 잎사귀",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0106_로저스중앙광장/events/0140_EV0140.yaml",
+  "map_id": 106,
+  "event_id": 140,
+  "common_event_id": null
+ },
+ "856": {
+  "name": "요정의 결혼반지",
+  "count": 1,
+  "by": "드레이 (로저스국 민가)",
+  "materials": [
+   {
+    "id": 853,
+    "name": "링반지",
+    "count": 1
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 1
+   },
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 2
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0217_일반집2/events/0004_EV0004.yaml",
+  "map_id": 217,
+  "event_id": 4,
+  "common_event_id": null
+ },
+ "617": {
+  "name": "피느의 수액",
+  "count": 1,
+  "by": "숲의 요정 (로그오브랜드)",
+  "materials": [
+   {
+    "id": 570,
+    "name": "피느의 잎사귀",
+    "count": 1
+   },
+   {
+    "id": 571,
+    "name": "피느의 꽃가루",
+    "count": 1
+   },
+   {
+    "id": 572,
+    "name": "피느의 줄기",
+    "count": 1
+   },
+   {
+    "id": 573,
+    "name": "피느의 꿀",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0402_신로그오브랜드/events/0018_EV0018.yaml",
+  "map_id": 402,
+  "event_id": 18,
+  "common_event_id": null
+ },
+ "1094": {
+  "name": "오크의 육수",
+  "count": 1,
+  "by": "장사꾼오크 (데빌랜드 물약상점)",
+  "materials": [
+   {
+    "id": 1093,
+    "name": "오크의 뼈",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0325_물약상점/events/0001_EV0001.yaml",
+  "map_id": 325,
+  "event_id": 1,
+  "common_event_id": null
+ },
+ "1893": {
+  "name": "정제된 트롤킹의 마석",
+  "count": 1,
+  "by": "아스트리아 (칠리마을 마법사 길드장실)",
+  "materials": [
+   {
+    "id": 1895,
+    "name": "천마대중전 후편",
+    "count": 1
+   },
+   {
+    "id": 1894,
+    "name": "트롤킹의 마석",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0483_마법사길드장실/events/0001_아스트리아.yaml",
+  "map_id": 483,
+  "event_id": 1,
+  "common_event_id": null
+ },
+ "1922": {
+  "name": "정제된 고대 하늘의 마석",
+  "count": 1,
+  "by": "아스트리아 (칠리마을 마법사 길드장실)",
+  "materials": [
+   {
+    "id": 1921,
+    "name": "고대 하늘의 마석",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "maps/0483_마법사길드장실/events/0001_아스트리아.yaml",
+  "map_id": 483,
+  "event_id": 1,
+  "common_event_id": null
+ }
+}

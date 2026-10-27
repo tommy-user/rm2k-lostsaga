@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>몬스터 및 던전 | 로스트사가</title>
+<meta name="description" content="지역별 던전과 몬스터, 이야기 속 보스.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="gnb"></header>
+
+<main id="main">
+  <section class="page-head">
+    <img class="page-head__bg px" src="assets/img/pic/chaos.png" alt="">
+    <div class="wrap">
+      <h1>몬스터 및 던전</h1>
+      <p>로그던전의 퇴화한 오우거로드부터 이계의 신까지.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <ul class="sys-nav" id="region-nav"></ul>
+      <div id="regions"></div>
+      <section class="region" id="bosses">
+        <div class="region__head"><h2>이야기 속 보스</h2><p>메인 스토리와 에피소드에서 길을 막아서는 자들.</p></div>
+        <div class="bosses" id="bosses-list"></div>
+      </section>
+      <section class="region" id="secret">
+        <div class="region__head"><h2>???</h2><p>이야기의 끝에서 기다리는 자들.</p></div>
+        <div class="bosses" id="secret-list"></div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/data-pages.js"></script>
+</body>
+</html>

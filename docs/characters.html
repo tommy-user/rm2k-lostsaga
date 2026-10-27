@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>캐릭터 | 로스트사가</title>
+<meta name="description" content="로스트사가의 12개 직업, 24명의 주인공과 마스터 승급 모습.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/characters.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="gnb"></header>
+
+<main id="main">
+  <section class="page-head">
+    <img class="page-head__bg px" src="assets/img/pic/split.png" alt="">
+    <div class="wrap">
+      <h1>캐릭터</h1>
+      <p>13개 직업. 직업마다 남녀 주인공이 있고, 몬스터는 진화한다.</p>
+    </div>
+  </section>
+
+  <section class="section select">
+    <div class="wrap">
+      <div class="roster" id="roster" role="tablist" aria-label="캐릭터 선택"></div>
+
+      <article class="card win" id="card" aria-live="polite">
+        <div class="card__art">
+          <img id="c-illust" alt="">
+        </div>
+        <div class="card__body">
+          <p class="card__class"><span id="c-faction" class="faction"></span> <span id="c-class" class="pixel"></span></p>
+          <h2 id="c-name"></h2>
+          <p id="c-master" class="card__master"></p>
+          <p id="c-concept" class="lede"></p>
+
+          <h3 class="win__title" id="c-steps-title">승급</h3>
+          <ol class="steps" id="c-steps"></ol>
+
+          <div class="card__cols">
+            <div>
+              <h3 class="win__title" id="c-skills-title">승급 기술</h3>
+              <ul class="skills" id="c-skills"></ul>
+            </div>
+            <div>
+              <h3 class="win__title">초기 능력치</h3>
+              <dl class="stats" id="c-stats"></dl>
+            </div>
+          </div>
+
+          <div class="learn">
+            <h3 class="win__title">배우는 기술 <span class="dim">레벨업</span></h3>
+            <div class="learn__tabs" id="c-learn-tabs" hidden></div>
+            <div class="table-scroll"><table class="table learn__table">
+              <thead><tr><th>Lv</th><th>기술</th><th>MP</th><th>설명</th></tr></thead>
+              <tbody id="c-learn"></tbody>
+            </table></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="monster-info" hidden>
+    <div class="wrap grid grid--2">
+      <div>
+        <h2>몬스터로 태어나기</h2>
+        <p>어둠의 종족 몬스터는 승급 대신 <strong>진화</strong>한다. 슬라임으로 시작해 오크나 좀비를 거쳐, 마지막 진화를 마치면 쉐도우가 카오스의 옛 왕좌로 데려가 각성 의식을 치른다.</p>
+        <p class="dim">밤에는 안티프리스트, 도적, 닌자와 함께 능력치가 오른다.</p>
+      </div>
+      <div class="win evo">
+        <h3 class="win__title">진화 경로</h3>
+        <ol class="evo__list">
+          <li><b>슬라임</b> Lv5 에 오크나 좀비로</li>
+          <li><b>오크</b> Lv10 에 오크로드 → 오크나이트, 또는 하피 → 뱀파이어 → 뱀파이어로드</li>
+          <li><b>좀비</b> Lv10 에 스켈레톤 → 스켈톤워리어, 또는 고스트 (하피 길로)</li>
+          <li><b>오크나이트·스켈톤워리어</b> 오크마스터·스켈톤나이트를 거쳐 쉐도우로, 또는 뱀파이어로드로</li>
+          <li><b>쉐도우</b> Lv45 에 나이트마스터나 드래곤마스터로. 뱀파이어로드는 다크마스터로</li>
+          <li><b>왕좌의 각성</b> Lv50. 다크마스터는 엘더리치·카오스마스터, 나이트마스터는 데스나이트·다크나이트, 드래곤마스터는 슬레이어·하프드래곤</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/characters.js"></script>
+<script src="assets/js/characters-page.js"></script>
+</body>
+</html>
