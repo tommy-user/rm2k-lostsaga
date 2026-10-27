@@ -105,30 +105,33 @@
   var mEl = document.getElementById("regions");
   if (mEl) {
     load("monsters").then(function (d) {
+      function bossCard(b) {
+        if (b.secret) {
+          return '<article class="boss-card boss-card--secret win"><div class="boss-card__img">' + (b.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(b.img)) + '" alt="" loading="lazy">' : "") +
+            '</div><div><h3>???</h3><p class="t">???</p></div></article>';
+        }
+        return '<article class="boss-card win"><div class="boss-card__img">' + (b.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(b.img)) + '" alt="' + esc(b.name) + '" loading="lazy">' : "") + "</div>" +
+          "<div><h3>" + esc(b.name) + '</h3><p class="t">' + esc(b.title || "") + "</p><p>" + esc(b.desc) + "</p>" +
+          '<p class="pixel" style="font-size:.72rem">' + esc(b.where || "") + "</p>" +
+          '<p class="pixel" style="font-size:.72rem;color:var(--ink)">HP ' + b.hp + " 공 " + b.atk + "</p>" + dropLine(b.drop) + "</div></article>";
+      }
       document.getElementById("region-nav").innerHTML = d.regions.map(function (r) {
         return '<li><a href="#' + r.key + '">' + esc(r.name) + "</a></li>";
-      }).join("") + '<li><a href="#bosses">보스</a></li>';
+      }).join("");
       mEl.innerHTML = d.regions.map(function (r) {
+        var bosses = d.bosses.filter(function (b) { return b.region === r.key; });
         return '<section class="region" id="' + r.key + '"><div class="region__head"><h2>' + esc(r.name) + "</h2><p>" + esc(r.desc) + "</p></div>" +
           '<div class="dungeons">' + r.dungeons.map(function (g) {
             return '<article class="dungeon win win--plain"><h3>' + esc(g.name) + (g.floors ? ' <span class="dim pixel" style="font-size:.72rem">' + esc(g.floors) + "</span>" : "") + "</h3>" +
               "<p>" + esc(g.desc) + "</p>" + (g.boss ? '<p class="boss">보스 ' + esc(g.boss) + "</p>" : "") + "</article>";
           }).join("") + "</div>" +
-          '<div class="mobs">' + r.monsters.map(function (m) {
-            return '<article class="mob' + (m.secret ? " mob--secret" : "") + '"><div class="mob__img">' + (m.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(m.img)) + '" alt="" loading="lazy">' : "") + "</div>" +
+          (bosses.length ? '<div class="bosses">' + bosses.map(bossCard).join("") + "</div>" : "") +
+          (r.monsters.length ? '<div class="mobs">' + r.monsters.map(function (m) {
+            return '<article class="mob' + (m.secret ? " mob--secret" : "") + (m.leader ? " mob--leader" : "") + '"><div class="mob__img">' + (m.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(m.img)) + '"' + (m.hue && !m.secret ? ' style="filter:hue-rotate(' + m.hue + 'deg)"' : "") + ' alt="" loading="lazy">' : "") + "</div>" +
+              (m.leader ? '<p class="mob__tag pixel">리더</p>' : "") +
               "<h3>" + (m.secret ? "???" : esc(m.name)) + "</h3>" +
               (m.secret ? "<p>???</p>" : "<p>HP " + m.hp + " 공 " + m.atk + "</p>" + dropLine(m.drop)) + "</article>";
-          }).join("") + "</div></section>";
-      }).join("");
-      document.getElementById("secret-list").innerHTML = d.bosses.filter(function (b) { return b.secret; }).map(function (b) {
-        return '<article class="boss-card boss-card--secret win"><div class="boss-card__img">' + (b.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(b.img)) + '" alt="" loading="lazy">' : "") +
-          '</div><div><h3>???</h3><p class="t">???</p></div></article>';
-      }).join("");
-      document.getElementById("bosses-list").innerHTML = d.bosses.filter(function (b) { return !b.secret; }).map(function (b) {
-        return '<article class="boss-card win"><div class="boss-card__img">' + (b.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(b.img)) + '" alt="' + esc(b.name) + '" loading="lazy">' : "") + "</div>" +
-          "<div><h3>" + esc(b.name) + '</h3><p class="t">' + esc(b.title || "") + "</p><p>" + esc(b.desc) + "</p>" +
-          '<p class="pixel" style="font-size:.72rem">' + esc(b.where || "") + "</p>" +
-          '<p class="pixel" style="font-size:.72rem;color:var(--ink)">HP ' + b.hp + " 공 " + b.atk + "</p>" + dropLine(b.drop) + "</div></article>";
+          }).join("") + "</div>" : "") + "</section>";
       }).join("");
       if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
     });
