@@ -178,3 +178,5 @@
 .item-tools input:focus { border-color: var(--gold); outline: none; }
 .recipe { font-size: .8rem !important; color: var(--ink) !important; border-top: 1px dashed rgba(201, 211, 242, .25); padding-top: 6px; margin-top: 6px !important; }
 .recipe .pixel { color: var(--gold); font-size: .72rem; margin-right: 4px; }
+.guard__noface { display: block; width: 96px; height: 96px; border: 2px solid var(--win-line); border-radius: 3px; background: rgba(5, 8, 24, .5); }
+.guard__sprite--solo { right: auto; bottom: auto; left: 30px; top: 24px; width: 36px; height: 48px; }

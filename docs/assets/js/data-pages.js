@@ -13,8 +13,9 @@
   if (gEl) {
     Promise.all([load("guardians"), load("skills")]).then(function (res) {
       var d = res[0], sk = res[1];
-      document.getElementById("hire").textContent = d.hire;
-      gEl.innerHTML = d.guardians.map(function (g) {
+      var hireEl = document.getElementById("hire");
+      hireEl.textContent = d.hire;
+      function card(g, extra) {
         var s = g.stats || {};
         var rows = ((sk["g" + g.actorId] || [])[0] || { rows: [] }).rows;
         return '<article class="guard win">' +
@@ -28,7 +29,45 @@
           '<table class="table"><tbody>' + rows.map(function (k) {
             return '<tr><td class="pixel">Lv' + k.lv + "</td><th>" + esc(k.name) + '</th><td class="dim">' + esc(k.desc) + "</td></tr>";
           }).join("") + "</tbody></table></details></article>";
-      }).join("");
+      }
+      gEl.innerHTML = d.guardians.map(function (g) { return card(g); }).join("");
+
+      // ── 영혼의 투구 탭 ──
+      var b = d.bertz, bEl = document.getElementById("bertz");
+      var tabs = document.getElementById("guard-tabs");
+      if (!b) { tabs.hidden = true; return; }
+      var learn = ((sk.g102 || [])[0] || { rows: [] }).rows;
+      function stat(s) {
+        return s.level ? "Lv" + s.level + " HP " + s.hp + " MP " + s.mp + " 공 " + s.atk + " 방 " + s.def + " 정 " + s.spi + " 민 " + s.agi : "";
+      }
+      function bcard(g, helmet) {
+        var s = g.stats || {};
+        return '<article class="guard win">' +
+          '<div class="guard__face">' + (g.face ? '<img src="assets/img/guardian/' + g.actorId + '.png" alt="' + esc(g.job) + ' 초상화" loading="lazy">' : '<span class="guard__noface"></span>') +
+          '<img class="guard__sprite px' + (g.face ? "" : " guard__sprite--solo") + '" src="assets/img/guardian/' + g.actorId + '_sprite.png" alt="" loading="lazy"></div>' +
+          "<div><h3>" + esc(helmet ? "영혼의 투구" : g.job) + '</h3><p class="guard__job">' + esc(helmet ? "육성형 동료" : g.name) +
+          ' <span class="dim">' + esc(stat(s)) + "</span></p>" +
+          (g.cond ? '<p class="guard__line">점수 ' + esc(g.cond) + "</p>" : "") +
+          "<p>" + esc(g.desc) + "</p></div></article>";
+      }
+      bEl.innerHTML = '<p class="lede">' + esc(b.how) + "</p>" +
+        "<p>" + esc(b.rule) + "</p>" +
+        '<div class="guards">' + bcard(b.helmet, true) + "</div>" +
+        '<h2 style="margin:28px 0 14px">진화 형태</h2><div class="guards">' + b.forms.map(function (f) { return bcard(f); }).join("") + "</div>" +
+        '<details class="guard__learn" style="margin-top:18px"><summary class="pixel">베르츠가 배우는 기술 ' + learn.length + "</summary>" +
+        '<table class="table"><tbody>' + learn.map(function (k) {
+          return '<tr><td class="pixel">Lv' + k.lv + "</td><th>" + esc(k.name) + '</th><td class="dim">' + esc(k.desc) + "</td></tr>";
+        }).join("") + "</tbody></table></details>";
+      tabs.addEventListener("click", function (e) {
+        var btn = e.target.closest("button");
+        if (!btn) return;
+        var isB = btn.dataset.k === "bertz";
+        tabs.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-selected", x === btn ? "true" : "false"); });
+        gEl.hidden = isB;
+        bEl.hidden = !isB;
+        document.getElementById("hire-title").hidden = isB;
+        hireEl.hidden = isB;
+      });
     });
   }
 
