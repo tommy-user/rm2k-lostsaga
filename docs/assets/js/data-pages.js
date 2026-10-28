@@ -8,6 +8,70 @@
   function load(name) { return fetch("assets/data/" + name + ".json").then(function (r) { return r.json(); }); }
   function imgName(path) { return path.split("/").pop().replace(/\.[^.]+$/, "") + ".png"; }
 
+  // ── 리스트/카드 보기와 정렬 표 (아이템·몬스터 공용) ──
+  var VIEW_KEY = "lostsaga-view";
+  function getView() {
+    try { return localStorage.getItem(VIEW_KEY) === "card" ? "card" : "list"; } catch (e) { return "list"; }
+  }
+  function setView(v) {
+    try { localStorage.setItem(VIEW_KEY, v); } catch (e) {}
+  }
+  function viewToggle(onChange) {
+    var el = document.getElementById("view-toggle");
+    function paint() {
+      var v = getView();
+      el.innerHTML = [["list", "리스트"], ["card", "카드"]].map(function (o) {
+        return '<button type="button" data-v="' + o[0] + '" aria-pressed="' + (v === o[0]) + '">' + o[1] + "</button>";
+      }).join("");
+    }
+    el.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b || b.dataset.v === getView()) return;
+      setView(b.dataset.v);
+      paint();
+      onChange();
+    });
+    paint();
+  }
+  // cols: {key, label, num?, sort?(기본 true), get(row)=정렬값(null 이면 항상 맨 뒤), html(row)}
+  function sortRows(rows, cols, sort) {
+    var col = cols.filter(function (c) { return c.key === sort.key; })[0];
+    if (!col) return rows;
+    return rows.map(function (r, i) { return { r: r, i: i, v: col.get(r) }; }).sort(function (a, b) {
+      if (a.v == null || b.v == null) return a.v == null ? (b.v == null ? a.i - b.i : 1) : -1;
+      var c = col.num ? a.v - b.v : String(a.v).localeCompare(String(b.v), "ko");
+      return c ? c * sort.dir : a.i - b.i;
+    }).map(function (x) { return x.r; });
+  }
+  function dataTable(cols, rows, sort) {
+    var head = cols.map(function (c) {
+      if (c.sort === false) return "<th>" + c.label + "</th>";
+      var on = sort.key === c.key;
+      return '<th class="' + (c.right ? "num" : "") + '" aria-sort="' + (on ? (sort.dir > 0 ? "ascending" : "descending") : "none") + '">' +
+        '<button type="button" data-sort="' + c.key + '">' + c.label + '<span aria-hidden="true">' + (on ? (sort.dir > 0 ? " ▲" : " ▼") : "") + "</span></button></th>";
+    }).join("");
+    var body = rows.map(function (r) {
+      return "<tr>" + cols.map(function (c) { return '<td class="' + (c.right ? "num" : "") + '">' + c.html(r) + "</td>"; }).join("") + "</tr>";
+    }).join("");
+    return '<div class="win win--plain"><div class="table-scroll"><table class="table data-table"><thead><tr>' + head + "</tr></thead><tbody>" +
+      (body || '<tr><td colspan="' + cols.length + '" class="dim">찾는 항목이 없다.</td></tr>') + "</tbody></table></div></div>";
+  }
+  // 머리글 클릭 → 정렬 바꾸기. 숫자는 큰 값부터, 글자는 가나다 순부터
+  function bindSort(el, cols, sort, onChange) {
+    el.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-sort]");
+      if (!b) return;
+      var key = b.dataset.sort;
+      if (sort.key === key) sort.dir = -sort.dir;
+      else {
+        sort.key = key;
+        sort.dir = cols.filter(function (c) { return c.key === key; })[0].num ? -1 : 1;
+      }
+      onChange();
+    });
+  }
+  function dash(v) { return v == null || v === 0 ? '<span class="dim">–</span>' : String(v); }
+
   // ── 가디언 ──
   var gEl = document.getElementById("guardians");
   if (gEl) {
@@ -111,29 +175,69 @@
       document.getElementById("upgrade").textContent = d.upgrade.desc;
       var tabs = document.getElementById("item-tabs");
       var q = document.getElementById("item-q");
-      var cur = d.categories[0].key;
-      tabs.innerHTML = d.categories.map(function (c) {
+      var cur = "all";
+      var sort = { key: null, dir: 1 };
+      var rank = {};
+      d.grades.forEach(function (g, i) { rank[g.key] = i; });
+      rank.god = 99;
+      var total = d.categories.reduce(function (n, c) { return n + c.items.length; }, 0);
+      tabs.innerHTML = [{ key: "all", name: "전체", items: { length: total } }].concat(d.categories).map(function (c) {
         return '<button type="button" role="tab" aria-selected="false" data-k="' + c.key + '">' + esc(c.name) + " <span class=\"dim\">" + c.items.length + "</span></button>";
       }).join("");
+      function secret(r) { return r.it.grade === "god"; }
+      function stat(k) {
+        return { key: k, label: { atk: "공", def: "방", spi: "정", agi: "민" }[k], num: true, right: true,
+          get: function (r) { return secret(r) || !r.it.stats || !r.it.stats[k] ? null : r.it.stats[k]; },
+          html: function (r) { return secret(r) ? dash() : dash(r.it.stats && r.it.stats[k]); } };
+      }
+      var cols = [
+        { key: "name", label: "이름", get: function (r) { return secret(r) ? null : r.it.name; },
+          html: function (r) {
+            var it = r.it;
+            if (secret(r)) return "???";
+            return "<strong>" + esc(it.name) + "</strong>" + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
+              (it.job ? '<br><span class="pixel small gold">' + esc(it.job) + " 마스터</span>" : "");
+          } },
+        { key: "grade", label: "등급", num: true, get: function (r) { return rank[r.it.grade] == null ? 0 : rank[r.it.grade]; }, html: function (r) { return badge(r.it.grade); } },
+        { key: "cat", label: "분류", get: function (r) { return r.cat; }, html: function (r) { return esc(r.cat); } },
+        stat("atk"), stat("def"), stat("spi"), stat("agi"),
+        { key: "price", label: "가격", num: true, right: true, get: function (r) { return secret(r) || !r.it.price ? null : r.it.price; },
+          html: function (r) { return secret(r) || !r.it.price ? dash() : r.it.price.toLocaleString(); } },
+        { key: "desc", label: "설명", sort: false,
+          html: function (r) {
+            if (secret(r)) return "엔딩 뒤에야 모습을 드러내는 장비.";
+            return esc(r.it.desc) + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]);
+          } }
+      ];
+      bindSort(iEl, cols, sort, render);
       function render() {
-        var word = q.value.trim();
-        var list;
-        if (word) {
-          list = [];
-          d.categories.forEach(function (c) {
-            c.items.forEach(function (it) {
-              if (it.grade !== "god" && (it.name.indexOf(word) >= 0 || (it.desc || "").indexOf(word) >= 0)) list.push(it);
-            });
+        var word = q.value.trim().toLowerCase();
+        var rows = [];
+        var seen = {};
+        var pool = word || cur === "all";
+        // 제작 분류는 다른 분류 아이템과 겹치므로, 전체·검색에서는 뒤로 미뤄 한 번만 보이게 한다
+        d.categories.filter(function (c) { return c.key !== "craft"; }).concat(d.categories.filter(function (c) { return c.key === "craft"; })).forEach(function (c) {
+          if (!pool && c.key !== cur) return;
+          c.items.forEach(function (it) {
+            if (pool) { if (seen[it.id]) return; seen[it.id] = 1; }
+            if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "")).toLowerCase().indexOf(word) < 0)) return;
+            rows.push({ it: it, cat: c.name });
           });
-        } else {
-          list = d.categories.filter(function (x) { return x.key === cur; })[0].items;
-        }
+        });
         tabs.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-selected", !word && b.dataset.k === cur ? "true" : "false"); });
-        document.getElementById("item-count").textContent = word ? "\"" + word + "\" " + list.length + "개" : list.length + "개";
-        iEl.innerHTML = list.slice(0, 400).map(card).join("");
+        document.getElementById("item-count").textContent = word ? "\"" + q.value.trim() + "\" " + rows.length + "개" : rows.length + "개";
+        if (getView() === "list") {
+          iEl.className = "item-table";
+          iEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort);
+        } else {
+          iEl.className = "item-list";
+          iEl.innerHTML = rows.slice(0, 400).map(function (r) { return card(r.it); }).join("") +
+            (rows.length > 400 ? '<p class="dim">처음 400개만 보인다. 이름으로 찾거나 분류를 골라 보자.</p>' : "");
+        }
       }
       tabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { cur = b.dataset.k; q.value = ""; render(); } });
       q.addEventListener("input", render);
+      viewToggle(render);
       render();
     });
   }
@@ -157,24 +261,93 @@
           '<p class="pixel" style="font-size:.72rem">' + esc(b.where || "") + "</p>" +
           '<p class="pixel" style="font-size:.72rem;color:var(--ink)">HP ' + b.hp + " 공 " + b.atk + "</p>" + dropLine(b.drop) + "</div></article>";
       }
+      var regionBy = {};
+      d.regions.forEach(function (r) { regionBy[r.key] = r; });
+      var q = document.getElementById("mob-q");
+      var sel = document.getElementById("mob-region");
+      var sort = { key: null, dir: 1 };
+      sel.innerHTML = '<option value="">모든 지역</option>' + d.regions.filter(function (r) { return r.monsters.length || d.bosses.some(function (b) { return b.region === r.key; }); }).map(function (r) {
+        return '<option value="' + esc(r.key) + '">' + esc(r.name) + "</option>";
+      }).join("");
       document.getElementById("region-nav").innerHTML = d.regions.map(function (r) {
         return '<li><a href="#' + r.key + '">' + esc(r.name) + "</a></li>";
       }).join("");
-      mEl.innerHTML = d.regions.map(function (r) {
-        var bosses = d.bosses.filter(function (b) { return b.region === r.key; });
-        return '<section class="region" id="' + r.key + '"><div class="region__head"><h2>' + esc(r.name) + "</h2><p>" + esc(r.desc) + "</p></div>" +
-          '<div class="dungeons">' + r.dungeons.map(function (g) {
-            return '<article class="dungeon win win--plain"><h3>' + esc(g.name) + (g.floors ? ' <span class="dim pixel" style="font-size:.72rem">' + esc(g.floors) + "</span>" : "") + "</h3>" +
-              "<p>" + esc(g.desc) + "</p>" + (g.boss ? '<p class="boss">보스 ' + esc(g.boss) + "</p>" : "") + "</article>";
-          }).join("") + "</div>" +
-          (bosses.length ? '<div class="bosses">' + bosses.map(bossCard).join("") + "</div>" : "") +
-          (r.monsters.length ? '<div class="mobs">' + r.monsters.map(function (m) {
-            return '<article class="mob' + (m.secret ? " mob--secret" : "") + (m.leader ? " mob--leader" : "") + '"><div class="mob__img">' + (m.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(m.img)) + '"' + (m.hue && !m.secret ? ' style="filter:hue-rotate(' + m.hue + 'deg)"' : "") + ' alt="" loading="lazy">' : "") + "</div>" +
-              (m.leader ? '<p class="mob__tag pixel">리더</p>' : "") +
-              "<h3>" + (m.secret ? "???" : esc(m.name)) + "</h3>" +
-              (m.secret ? "<p>???</p>" : "<p>HP " + m.hp + " 공 " + m.atk + "</p>" + dropLine(m.drop)) + "</article>";
-          }).join("") + "</div>" : "") + "</section>";
-      }).join("");
+
+      var KIND = { normal: 0, leader: 1, boss: 2, secret: 3 };
+      var KIND_NAME = ["일반", "리더", "보스", "???"];
+      function kindOf(m, isBoss) { return m.secret ? 3 : isBoss || m.boss ? 2 : m.leader ? 1 : 0; }
+      var all = [];
+      d.regions.forEach(function (r) { r.monsters.forEach(function (m) { all.push({ m: m, region: r, kind: kindOf(m) }); }); });
+      d.bosses.forEach(function (b) { all.push({ m: b, region: regionBy[b.region] || { key: "", name: "" }, kind: kindOf(b, true) }); });
+      function hidden(r) { return r.m.secret; }
+      function matches(r, word) {
+        if (!word) return true;
+        if (hidden(r)) return false;
+        var dr = r.m.drop;
+        return ((r.m.name || "") + " " + (dr && !dr.god ? dr.name : "")).toLowerCase().indexOf(word) >= 0;
+      }
+      function num(k) {
+        return { key: k, label: { hp: "HP", atk: "공", def: "방", spi: "정", agi: "민" }[k], num: true, right: true,
+          get: function (r) { return hidden(r) || r.m[k] == null ? null : r.m[k]; },
+          html: function (r) { return hidden(r) ? dash() : dash(r.m[k]); } };
+      }
+      var cols = [
+        { key: "name", label: "이름", get: function (r) { return hidden(r) ? null : r.m.name; },
+          html: function (r) {
+            var m = r.m;
+            var img = m.img ? '<img class="px mon-thumb' + (m.secret ? " mon-thumb--secret" : "") + '" src="assets/img/monster/' + esc(imgName(m.img)) + '"' + (m.hue && !m.secret ? ' style="filter:hue-rotate(' + m.hue + 'deg)"' : "") + ' alt="" loading="lazy">' : "";
+            return '<span class="mon-name"><span class="mon-box">' + img + "</span><strong>" + (hidden(r) ? "???" : esc(m.name)) + "</strong></span>";
+          } },
+        { key: "region", label: "지역", get: function (r) { return r.region.name; }, html: function (r) { return esc(r.region.name); } },
+        { key: "kind", label: "구분", num: true, get: function (r) { return r.kind; }, html: function (r) { return '<span class="kind kind--' + r.kind + '">' + KIND_NAME[r.kind] + "</span>"; } },
+        num("hp"), num("atk"), num("def"), num("spi"), num("agi"),
+        { key: "drop", label: "드롭", get: function (r) { return hidden(r) || !r.m.drop ? null : (r.m.drop.god ? "???" : r.m.drop.name); },
+          html: function (r) {
+            var dr = r.m.drop;
+            if (hidden(r) || !dr) return dash();
+            return (dr.god ? "???" : esc(dr.name)) + ' <span class="dim pixel small">' + dr.prob + "%</span>";
+          } }
+      ];
+      var tEl = document.getElementById("mob-table");
+      bindSort(tEl, cols, sort, render);
+
+      function cards(word, regionKey) {
+        return d.regions.map(function (r) {
+          if (regionKey && r.key !== regionKey) return "";
+          var bosses = d.bosses.filter(function (b) { return b.region === r.key && matches({ m: b }, word); });
+          var mobs = r.monsters.filter(function (m) { return matches({ m: m }, word); });
+          if (word && !bosses.length && !mobs.length) return "";
+          return '<section class="region" id="' + r.key + '"><div class="region__head"><h2>' + esc(r.name) + "</h2><p>" + esc(r.desc) + "</p></div>" +
+            (word ? "" : '<div class="dungeons">' + r.dungeons.map(function (g) {
+              return '<article class="dungeon win win--plain"><h3>' + esc(g.name) + (g.floors ? ' <span class="dim pixel" style="font-size:.72rem">' + esc(g.floors) + "</span>" : "") + "</h3>" +
+                "<p>" + esc(g.desc) + "</p>" + (g.boss ? '<p class="boss">보스 ' + esc(g.boss) + "</p>" : "") + "</article>";
+            }).join("") + "</div>") +
+            (bosses.length ? '<div class="bosses">' + bosses.map(bossCard).join("") + "</div>" : "") +
+            (mobs.length ? '<div class="mobs">' + mobs.map(function (m) {
+              return '<article class="mob' + (m.secret ? " mob--secret" : "") + (m.leader ? " mob--leader" : "") + '"><div class="mob__img">' + (m.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(m.img)) + '"' + (m.hue && !m.secret ? ' style="filter:hue-rotate(' + m.hue + 'deg)"' : "") + ' alt="" loading="lazy">' : "") + "</div>" +
+                (m.leader ? '<p class="mob__tag pixel">리더</p>' : "") +
+                "<h3>" + (m.secret ? "???" : esc(m.name)) + "</h3>" +
+                (m.secret ? "<p>???</p>" : "<p>HP " + m.hp + " 공 " + m.atk + "</p>" + dropLine(m.drop)) + "</article>";
+            }).join("") + "</div>" : "") + "</section>";
+        }).join("");
+      }
+
+      function render() {
+        var word = q.value.trim().toLowerCase();
+        var regionKey = sel.value;
+        var list = getView() === "list";
+        var rows = all.filter(function (r) { return (!regionKey || r.region.key === regionKey) && matches(r, word); });
+        document.getElementById("mob-count").textContent = rows.length + "마리";
+        document.getElementById("region-nav").hidden = list || !!word || !!regionKey;
+        tEl.hidden = !list;
+        mEl.hidden = list;
+        if (list) tEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort);
+        else mEl.innerHTML = cards(word, regionKey) || '<p class="dim">찾는 몬스터가 없다.</p>';
+      }
+      q.addEventListener("input", render);
+      sel.addEventListener("change", render);
+      viewToggle(render);
+      render();
       if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
     });
   }

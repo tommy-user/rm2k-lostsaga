@@ -182,3 +182,34 @@
 .guard__sprite--solo { right: auto; bottom: auto; left: 30px; top: 24px; width: 36px; height: 48px; }
 .guards[hidden], #bertz[hidden], #hire-title[hidden], #hire[hidden] { display: none; }
 .guard .nw { white-space: nowrap; }
+
+/* ── 리스트/카드 보기, 정렬 표 ── */
+.view-toggle { display: inline-flex; margin-left: auto; }
+.view-toggle button { font-family: var(--pixel); font-size: .85rem; color: var(--ink); background: rgba(5, 8, 24, .5); border: 1px solid rgba(201, 211, 242, .4); padding: 7px 14px; cursor: pointer; }
+.view-toggle button:first-child { border-radius: 3px 0 0 3px; }
+.view-toggle button:last-child { border-radius: 0 3px 3px 0; border-left: 0; }
+.view-toggle button[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); background: rgba(226, 192, 107, .1); }
+.view-toggle button[aria-pressed="true"] + button { border-left-color: var(--gold); }
+.item-tools select { font: inherit; font-size: 1rem; color: var(--ink); background: #070b22; border: 2px solid #46538a; border-radius: 4px; padding: 8px 12px; max-width: 100%; }
+.item-tools select:focus { border-color: var(--gold); outline: none; }
+.sys-nav[hidden], #mob-table[hidden], #regions[hidden] { display: none; }
+.item-table { display: block; }
+.data-table th.num, .data-table td.num { text-align: right; white-space: nowrap; font-family: var(--pixel); }
+.data-table td { padding: 8px 12px; }
+.data-table th button { all: unset; cursor: pointer; font: inherit; color: inherit; white-space: nowrap; }
+.data-table th button:hover, .data-table th button:focus-visible { color: var(--focus, #fff); text-decoration: underline; }
+.data-table th[aria-sort="ascending"], .data-table th[aria-sort="descending"] { color: var(--ink); }
+.data-table td:last-child { min-width: 240px; font-size: .85rem; color: var(--ink-dim); }
+.data-table .recipe { font-size: .78rem !important; border-top: 0; padding-top: 0; margin: 4px 0 0 !important; }
+.data-table .small { font-size: .7rem; }
+.data-table .gold { color: var(--gold); }
+.mon-box { flex: none; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; }
+.mon-name { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.data-table .mon-thumb { width: auto; height: auto; max-width: 48px; max-height: 48px; image-rendering: auto; }
+.mon-thumb--secret { filter: brightness(0) drop-shadow(0 0 4px rgba(196, 71, 90, .7)); }
+.kind { font-family: var(--pixel); font-size: .72rem; }
+.kind--1 { color: var(--gold); }
+.kind--2 { color: #f0a3b0; }
+.kind--3 { color: #f0a3b0; }
+.data-table td:first-child { min-width: 9em; }
+.data-table td { vertical-align: middle; }
