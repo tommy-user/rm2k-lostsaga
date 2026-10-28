@@ -8,6 +8,7 @@
     ["guardians.html", "가디언"],
     ["items.html", "아이템"],
     ["monsters.html", "몬스터 및 던전"],
+    ["download.html", "다운로드"],
     ["contact.html", "문의"]
   ];
   var here = location.pathname.split("/").pop() || "index.html";
@@ -38,7 +39,7 @@
     foot.innerHTML =
       '<div class="foot__in">' +
       "<p>로스트사가 (LOST-SAGA Expansion Quest)<br>원작 히어로소프트. RPG Maker 2000.</p>" +
-      '<p><a href="contact.html">문의</a></p></div>';
+      '<p><a href="download.html">다운로드</a> · <a href="contact.html">문의</a></p></div>';
   }
 
   // 메시지창: data-type 속성이 있는 요소의 글자를 게임처럼 한 글자씩 찍는다
