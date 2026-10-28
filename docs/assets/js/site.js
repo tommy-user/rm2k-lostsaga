@@ -1,24 +1,31 @@
 // 공통: 머리 메뉴·바닥 넣기, 메시지창 글자 찍기
 (function () {
-  var PAGES = [
-    ["index.html", "홈"],
+  var CAFE = "https://cafe.daum.net/_c21_/bbs_list?grpid=10EOS&fldid=7Qnc"; // 히어로소프트 다음 카페 자유게시판
+  var INTRO = [
+    ["intro.html", "게임소개"],
     ["synopsis.html", "시놉시스"],
     ["system.html", "시스템"],
     ["characters.html", "캐릭터"],
     ["guardians.html", "가디언"],
     ["items.html", "아이템"],
-    ["monsters.html", "몬스터 및 던전"],
-    ["download.html", "다운로드"],
-    ["contact.html", "문의"]
+    ["monsters.html", "몬스터 및 던전"]
   ];
   var here = location.pathname.split("/").pop() || "index.html";
+  var inIntro = INTRO.some(function (p) { return p[0] === here; });
+
+  function link(p, cur) {
+    return '<a href="' + p[0] + '"' + (cur ? ' aria-current="page"' : "") + ">" + p[1] + "</a>";
+  }
 
   var gnb = document.getElementById("gnb");
   if (gnb) {
-    var items = PAGES.map(function (p) {
-      var cur = p[0] === here ? ' aria-current="page"' : "";
-      return '<li><a href="' + p[0] + '"' + cur + ">" + p[1] + "</a></li>";
-    }).join("");
+    var sub = INTRO.slice(1).map(function (p) { return "<li>" + link(p, p[0] === here) + "</li>"; }).join("");
+    var items =
+      "<li>" + link(["index.html", "홈"], here === "index.html") + "</li>" +
+      '<li class="has-sub">' + link(INTRO[0], inIntro) + '<ul class="gnb__sub">' + sub + "</ul></li>" +
+      '<li><a href="' + CAFE + '" target="_blank" rel="noopener">게시판<span class="gnb__ext" aria-hidden="true">↗</span><span class="sr">(새 창, 다음 카페 자유게시판)</span></a></li>' +
+      "<li>" + link(["download.html", "다운로드"], here === "download.html") + "</li>" +
+      "<li>" + link(["contact.html", "문의"], here === "contact.html") + "</li>";
     gnb.className = "gnb";
     gnb.innerHTML =
       '<div class="gnb__in">' +
@@ -31,6 +38,17 @@
       var open = menu.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
+
+    // 게임소개 아래 탭: 게임소개와 그 하위 여섯 쪽에서 보인다
+    if (inIntro) {
+      var tabs = document.createElement("nav");
+      tabs.className = "subtabs";
+      tabs.setAttribute("aria-label", "게임소개");
+      tabs.innerHTML =
+        '<ul class="subtabs__in">' +
+        INTRO.map(function (p) { return "<li>" + link(p, p[0] === here) + "</li>"; }).join("") + "</ul>";
+      gnb.insertAdjacentElement("afterend", tabs);
+    }
   }
 
   var foot = document.getElementById("foot");
@@ -39,7 +57,7 @@
     foot.innerHTML =
       '<div class="foot__in">' +
       "<p>로스트사가 (LOST-SAGA Expansion Quest)<br>원작 히어로소프트. RPG Maker 2000.</p>" +
-      '<p><a href="download.html">다운로드</a> · <a href="contact.html">문의</a></p></div>';
+      '<p><a href="download.html">다운로드</a> · <a href="' + CAFE + '" target="_blank" rel="noopener">게시판</a> · <a href="contact.html">문의</a></p></div>';
   }
 
   // 새 버전 알림: 다운로드 버튼을 누른 적 있는 방문자에게만, 그 뒤 정식 릴리즈가 나오면 머리 아래에 띄운다

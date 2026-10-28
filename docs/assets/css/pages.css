@@ -272,3 +272,10 @@
 .guide ol, .guide ul { margin: 0; padding-left: 1.3em; line-height: 1.85; }
 .guide code { font-family: var(--pixel); font-size: .9em; color: var(--gold); word-break: break-all; }
 .guide .note { margin: 12px 0 0; font-size: var(--step--1); color: var(--ink-dim); }
+
+/* ── 게임소개 ── */
+.intro-grid { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; max-width: 980px; }
+.intro-grid a { display: block; height: 100%; color: var(--ink); text-decoration: none; }
+.intro-grid h2 { margin: 0 0 8px; font-size: var(--step-1); }
+.intro-grid p { margin: 0; font-size: var(--step--1); color: var(--ink-dim); }
+.intro-grid a:hover h2, .intro-grid a:focus-visible h2 { color: var(--focus); }
