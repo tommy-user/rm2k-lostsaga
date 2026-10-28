@@ -187,3 +187,10 @@ p { margin: 0 0 1em; max-width: 38em; }
 .foot__in { max-width: var(--max); margin: 0 auto; padding: 34px var(--gutter); display: flex; flex-wrap: wrap; gap: 14px 40px; justify-content: space-between; font-size: var(--step--1); color: var(--ink-dim); }
 .foot__in p { margin: 0; }
 .foot a { color: var(--ink-dim); }
+
+/* ── 새 버전 알림 ── */
+.update { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 16px; padding: 10px var(--gutter); background: linear-gradient(180deg, #4a3a14, #2c2008); border-bottom: 2px solid var(--gold); font-size: var(--step--1); }
+.update b { color: var(--gold); font-weight: 700; }
+.update a { font-weight: 700; }
+.update button { background: none; border: 0; color: var(--ink-dim); font-size: 1.2rem; line-height: 1; cursor: pointer; padding: 2px 6px; }
+.update button:hover, .update button:focus-visible { color: var(--gold); }
