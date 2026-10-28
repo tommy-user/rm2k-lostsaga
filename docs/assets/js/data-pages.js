@@ -212,6 +212,14 @@
       var q = document.getElementById("item-q");
       var cur = "all";
       var sort = { key: null, dir: 1 };
+      var gradeSel = document.getElementById("item-grade");
+      var jobSel = document.getElementById("item-job");
+      gradeSel.innerHTML = '<option value="">모든 등급</option>' + d.grades.filter(function (g) { return g.key !== "rare"; }).map(function (g) {
+        return '<option value="' + esc(g.key) + '">' + esc(g.name) + "</option>";
+      }).join("");
+      jobSel.innerHTML = '<option value="">모든 직업</option>' + (d.jobs || []).map(function (j) {
+        return '<option value="' + esc(j.key) + '">' + esc(j.name) + " 착용</option>";
+      }).join("");
       var rank = {};
       d.grades.forEach(function (g, i) { rank[g.key] = i; });
       rank.god = 99;
@@ -257,6 +265,8 @@
           if (!pool && c.key !== cur) return;
           c.items.forEach(function (it) {
             if (pool) { if (seen[it.id]) return; seen[it.id] = 1; }
+            if (gradeSel.value && it.grade !== gradeSel.value) return;
+            if (jobSel.value && (!isEquip(it) || (it.jobs && it.jobs.indexOf(jobSel.value) < 0))) return;
             if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "")).toLowerCase().indexOf(word) < 0)) return;
             rows.push({ it: it, cat: c.name });
           });
@@ -274,6 +284,8 @@
       }
       tabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { cur = b.dataset.k; q.value = ""; render(); } });
       q.addEventListener("input", render);
+      gradeSel.addEventListener("change", render);
+      jobSel.addEventListener("change", render);
       viewToggle(render);
       render();
     });
@@ -310,9 +322,13 @@
         return '<li><a href="#' + r.key + '">' + esc(r.name) + "</a></li>";
       }).join("");
 
+      var kindSel = document.getElementById("mob-kind");
       var KIND = { normal: 0, leader: 1, boss: 2, secret: 3 };
       var KIND_NAME = ["일반", "리더", "보스", "???"];
       function kindOf(m, isBoss) { return m.secret ? 3 : isBoss || m.boss ? 2 : m.leader ? 1 : 0; }
+      kindSel.innerHTML = '<option value="">모든 구분</option>' + KIND_NAME.slice(0, 3).map(function (n, i) {
+        return '<option value="' + i + '">' + n + "</option>";
+      }).join("");
       var all = [];
       d.regions.forEach(function (r) { r.monsters.forEach(function (m) { all.push({ m: m, region: r, kind: kindOf(m) }); }); });
       d.bosses.forEach(function (b) { all.push({ m: b, region: regionBy[b.region] || { key: "", name: "" }, kind: kindOf(b, true) }); });
@@ -348,14 +364,15 @@
       var tEl = document.getElementById("mob-table");
       bindSort(tEl, cols, sort, render);
 
-      function cards(word, regionKey) {
+      function cards(word, regionKey, kind) {
+        var byKind = kind !== "";
         return d.regions.map(function (r) {
           if (regionKey && r.key !== regionKey) return "";
-          var bosses = d.bosses.filter(function (b) { return b.region === r.key && matches({ m: b }, word); });
-          var mobs = r.monsters.filter(function (m) { return matches({ m: m }, word); });
-          if (word && !bosses.length && !mobs.length) return "";
+          var bosses = d.bosses.filter(function (b) { return b.region === r.key && (!byKind || kindOf(b, true) === +kind) && matches({ m: b }, word); });
+          var mobs = r.monsters.filter(function (m) { return (!byKind || kindOf(m) === +kind) && matches({ m: m }, word); });
+          if ((word || byKind) && !bosses.length && !mobs.length) return "";
           return '<section class="region" id="' + r.key + '"><div class="region__head"><h2>' + esc(r.name) + "</h2><p>" + esc(r.desc) + "</p></div>" +
-            (word ? "" : '<div class="dungeons">' + r.dungeons.map(function (g) {
+            (word || byKind ? "" : '<div class="dungeons">' + r.dungeons.map(function (g) {
               return '<article class="dungeon win win--plain"><h3>' + esc(g.name) + (g.floors ? ' <span class="dim pixel" style="font-size:.72rem">' + esc(g.floors) + "</span>" : "") + "</h3>" +
                 "<p>" + esc(g.desc) + "</p>" + (g.boss ? '<p class="boss">보스 ' + esc(g.boss) + "</p>" : "") + "</article>";
             }).join("") + "</div>") +
@@ -373,16 +390,18 @@
         var word = q.value.trim().toLowerCase();
         var regionKey = sel.value;
         var list = getView() === "list";
-        var rows = all.filter(function (r) { return (!regionKey || r.region.key === regionKey) && matches(r, word); });
+        var kind = kindSel.value;
+        var rows = all.filter(function (r) { return (!regionKey || r.region.key === regionKey) && (kind === "" || r.kind === +kind) && matches(r, word); });
         document.getElementById("mob-count").textContent = rows.length + "마리";
-        document.getElementById("region-nav").hidden = list || !!word || !!regionKey;
+        document.getElementById("region-nav").hidden = list || !!word || !!regionKey || kind !== "";
         tEl.hidden = !list;
         mEl.hidden = list;
         if (list) tEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort, "data-table--mob");
-        else mEl.innerHTML = cards(word, regionKey) || '<p class="dim">찾는 몬스터가 없다.</p>';
+        else mEl.innerHTML = cards(word, regionKey, kind) || '<p class="dim">찾는 몬스터가 없다.</p>';
       }
       q.addEventListener("input", render);
       sel.addEventListener("change", render);
+      kindSel.addEventListener("change", render);
       viewToggle(render);
       render();
       if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
