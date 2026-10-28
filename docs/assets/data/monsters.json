@@ -940,6 +940,508 @@
             "god": false
           },
           "secret": false
+        },
+        {
+          "enemyId": 3,
+          "name": "블루슬라임",
+          "img": "Monster/스라임.png",
+          "hp": 80,
+          "atk": 36,
+          "def": 16,
+          "spi": 24,
+          "agi": 24,
+          "boss": false,
+          "hue": 110,
+          "drop": {
+            "id": 10,
+            "name": "헤비마나포션",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 6,
+          "name": "블루슬라임리더",
+          "img": "Monster/스라임.png",
+          "hp": 80,
+          "atk": 36,
+          "def": 16,
+          "spi": 24,
+          "agi": 24,
+          "boss": false,
+          "leader": true,
+          "hue": 150,
+          "drop": {
+            "id": 10,
+            "name": "헤비마나포션",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 133,
+          "name": "극지 오크",
+          "img": "Monster/오크.png",
+          "hp": 120,
+          "atk": 35,
+          "def": 20,
+          "spi": 20,
+          "agi": 20,
+          "boss": false,
+          "hue": 150,
+          "drop": {
+            "id": 50,
+            "name": "은검",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 132,
+          "name": "극지 오크 리더",
+          "img": "Monster/오크.png",
+          "hp": 142,
+          "atk": 50,
+          "def": 30,
+          "spi": 30,
+          "agi": 30,
+          "boss": false,
+          "leader": true,
+          "hue": 180,
+          "drop": {
+            "id": 50,
+            "name": "은검",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 123,
+          "name": "냉혈전갈",
+          "img": "Monster/대사소리.png",
+          "hp": 200,
+          "atk": 80,
+          "def": 80,
+          "spi": 40,
+          "agi": 40,
+          "boss": false,
+          "hue": 180,
+          "drop": {
+            "id": 218,
+            "name": "냉기의 수호",
+            "prob": 9,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 126,
+          "name": "냉혈전갈리더",
+          "img": "Monster/대사소리.png",
+          "hp": 250,
+          "atk": 120,
+          "def": 120,
+          "spi": 80,
+          "agi": 80,
+          "boss": false,
+          "leader": true,
+          "hue": 200,
+          "drop": {
+            "id": 1624,
+            "name": "죽음의 반지",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 128,
+          "name": "아이스크랩",
+          "img": "Monster/크랩.png",
+          "hp": 300,
+          "atk": 80,
+          "def": 160,
+          "spi": 60,
+          "agi": 60,
+          "boss": false,
+          "drop": {
+            "id": 280,
+            "name": "하급 사파이어",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 131,
+          "name": "아이스크랩리더",
+          "img": "Monster/크랩.png",
+          "hp": 450,
+          "atk": 120,
+          "def": 240,
+          "spi": 90,
+          "agi": 90,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 290,
+            "name": "상급 사파이어",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 181,
+          "name": "스톤 골렘",
+          "img": "Monster/고렘.png",
+          "hp": 200,
+          "atk": 70,
+          "def": 100,
+          "spi": 10,
+          "agi": 40,
+          "boss": false,
+          "drop": {
+            "id": 161,
+            "name": "철괴",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 184,
+          "name": "스톤 골렘 리더",
+          "img": "Monster/고렘.png",
+          "hp": 250,
+          "atk": 100,
+          "def": 150,
+          "spi": 20,
+          "agi": 60,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 288,
+            "name": "중급 다이아몬드",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 191,
+          "name": "거대 전갈",
+          "img": "Monster/대사소리.png",
+          "hp": 200,
+          "atk": 200,
+          "def": 200,
+          "spi": 20,
+          "agi": 100,
+          "boss": false,
+          "drop": {
+            "id": 762,
+            "name": "플레이스아머마법서",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 194,
+          "name": "거대 전갈 리더",
+          "img": "Monster/대사소리.png",
+          "hp": 250,
+          "atk": 300,
+          "def": 250,
+          "spi": 40,
+          "agi": 150,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 31,
+            "name": "변종의 열매",
+            "prob": 66,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 201,
+          "name": "오우거 워리어",
+          "img": "Monster/트롤.png",
+          "hp": 2500,
+          "atk": 300,
+          "def": 100,
+          "spi": 75,
+          "agi": 300,
+          "boss": false,
+          "hue": 180,
+          "drop": {
+            "id": 346,
+            "name": "오우거의 피부",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 204,
+          "name": "오우거 워리어 리더",
+          "img": "Monster/트롤.png",
+          "hp": 3125,
+          "atk": 400,
+          "def": 200,
+          "spi": 175,
+          "agi": 400,
+          "boss": false,
+          "leader": true,
+          "hue": 210,
+          "drop": {
+            "id": 1370,
+            "name": "오우거더블시미터",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 206,
+          "name": "쥬얼 골렘",
+          "img": "Monster/고렘.png",
+          "hp": 1000,
+          "atk": 160,
+          "def": 200,
+          "spi": 20,
+          "agi": 80,
+          "boss": false,
+          "hue": 150,
+          "drop": {
+            "id": 293,
+            "name": "상급 다이아몬드",
+            "prob": 16,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 209,
+          "name": "쥬얼 골렘 리더",
+          "img": "Monster/고렘.png",
+          "hp": 1250,
+          "atk": 220,
+          "def": 300,
+          "spi": 100,
+          "agi": 180,
+          "boss": false,
+          "leader": true,
+          "hue": 120,
+          "drop": {
+            "id": 1375,
+            "name": "켈스피어 실드",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 234,
+          "name": "랜드 드래곤",
+          "img": "Monster/드래곤.PNG",
+          "hp": 1500,
+          "atk": 200,
+          "def": 50,
+          "spi": 300,
+          "agi": 100,
+          "boss": false,
+          "hue": 30,
+          "drop": {
+            "id": 416,
+            "name": "부서진 여의주",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 237,
+          "name": "랜드 드래곤 리더",
+          "img": "Monster/드래곤.PNG",
+          "hp": 1875,
+          "atk": 300,
+          "def": 100,
+          "spi": 400,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "hue": 90,
+          "drop": {
+            "id": 1452,
+            "name": "드래곤스케일",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 239,
+          "name": "스틸 골렘",
+          "img": "Monster/고렘.png",
+          "hp": 700,
+          "atk": 220,
+          "def": 500,
+          "spi": 100,
+          "agi": 150,
+          "boss": false,
+          "hue": 180,
+          "drop": {
+            "id": 165,
+            "name": "강철",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 242,
+          "name": "스틸 골렘 리더",
+          "img": "Monster/고렘.png",
+          "hp": 875,
+          "atk": 300,
+          "def": 550,
+          "spi": 200,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "hue": 210,
+          "drop": {
+            "id": 1447,
+            "name": "라이트닝피스트",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 244,
+          "name": "강철 스켈레톤",
+          "img": "Monster/스켈톤1.PNG",
+          "hp": 800,
+          "atk": 160,
+          "def": 40,
+          "spi": 120,
+          "agi": 150,
+          "boss": false,
+          "hue": 260,
+          "drop": {
+            "id": 388,
+            "name": "엘리멘탈 소드水",
+            "prob": 20,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 247,
+          "name": "강철 스켈레톤 리더",
+          "img": "Monster/스켈톤1.PNG",
+          "hp": 1000,
+          "atk": 250,
+          "def": 100,
+          "spi": 150,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "hue": 240,
+          "drop": {
+            "id": 1558,
+            "name": "주와이외즈",
+            "prob": 33,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 742,
+          "name": "골렘 사냥개",
+          "img": "Monster/golem_hound.png",
+          "hp": 700,
+          "atk": 120,
+          "def": 80,
+          "spi": 10,
+          "agi": 120,
+          "boss": false,
+          "drop": {
+            "id": 161,
+            "name": "철괴",
+            "prob": 40,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 743,
+          "name": "골렘 사냥개 리더",
+          "img": "Monster/golem_hound.png",
+          "hp": 900,
+          "atk": 150,
+          "def": 80,
+          "spi": 10,
+          "agi": 140,
+          "boss": false,
+          "leader": true,
+          "hue": 300,
+          "drop": {
+            "id": 293,
+            "name": "상급 다이아몬드",
+            "prob": 50,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 744,
+          "name": "골렘 마법사",
+          "img": "Monster/golem_mage.png",
+          "hp": 1000,
+          "atk": 50,
+          "def": 80,
+          "spi": 150,
+          "agi": 50,
+          "boss": false,
+          "drop": {
+            "id": 288,
+            "name": "중급 다이아몬드",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 745,
+          "name": "골렘 마법사 리더",
+          "img": "Monster/golem_mage.png",
+          "hp": 1300,
+          "atk": 50,
+          "def": 100,
+          "spi": 180,
+          "agi": 60,
+          "boss": false,
+          "leader": true,
+          "hue": 30,
+          "drop": {
+            "id": 1493,
+            "name": "현자의 오브",
+            "prob": 25,
+            "god": false
+          },
+          "secret": false
         }
       ]
     },
@@ -2400,6 +2902,43 @@
             "god": false
           },
           "secret": false
+        },
+        {
+          "enemyId": 809,
+          "name": "실험체 ZT-2",
+          "img": "Monster/E2실험체ZT2.png",
+          "hp": 3200,
+          "atk": 340,
+          "def": 190,
+          "spi": 220,
+          "agi": 300,
+          "boss": false,
+          "drop": {
+            "id": 1932,
+            "name": "변이 체액",
+            "prob": 30,
+            "god": false
+          },
+          "secret": false
+        },
+        {
+          "enemyId": 810,
+          "name": "실험체 ZT-2 리더",
+          "img": "Monster/E2실험체ZT2.png",
+          "hp": 4800,
+          "atk": 390,
+          "def": 218,
+          "spi": 220,
+          "agi": 300,
+          "boss": false,
+          "leader": true,
+          "drop": {
+            "id": 1937,
+            "name": "하늘의 결정",
+            "prob": 10,
+            "god": false
+          },
+          "secret": false
         }
       ]
     },
@@ -2629,7 +3168,7 @@
           "boss": false,
           "drop": {
             "id": 1941,
-            "name": "메두사의 비늘",
+            "name": "고르곤의 비늘",
             "prob": 30,
             "god": false
           },
@@ -2637,7 +3176,7 @@
         },
         {
           "enemyId": 832,
-          "name": "메두사 리더",
+          "name": "고르곤 리더",
           "img": "Monster/E2메두사.png",
           "hp": 6000,
           "atk": 436,
@@ -3542,7 +4081,7 @@
       "drop": {
         "id": 1074,
         "name": "저주받은주문서",
-        "prob": 10,
+        "prob": 33,
         "god": false
       },
       "secret": false,
