@@ -213,3 +213,51 @@
 .kind--3 { color: #f0a3b0; }
 .data-table td:first-child { min-width: 9em; }
 .data-table td { vertical-align: middle; }
+
+/* ── 착용 직업 ── */
+.job { display: inline-block; font-family: var(--pixel); font-size: .68rem; line-height: 1.5; padding: 0 6px; margin: 1px 2px 1px 0; border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; color: var(--ink); white-space: nowrap; }
+.job--all { color: var(--gold); border-color: rgba(226, 192, 107, .6); }
+.item__jobs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 4px; }
+.item__jobs > .pixel { color: var(--gold); font-size: .72rem; margin-right: 4px; }
+.data-table td.region { margin: 0; scroll-margin-top: 0; }
+.data-table td.jobs { min-width: 11em; max-width: 18em; }
+.sort-mobile { display: none; }
+.data-table td.jobs:empty::after { content: "–"; color: var(--ink-dim); }
+
+/* ── 좁은 화면: 표를 카드처럼 쌓는다 ── */
+@media (max-width: 760px) {
+  .item-tools { gap: 8px 10px; }
+  .item-tools input { flex: 1 1 100%; width: 100%; }
+  .item-tools select { flex: 1 1 auto; min-width: 0; }
+  .view-toggle { margin-left: 0; }
+  .item-tabs { flex-wrap: nowrap; overflow-x: auto; margin-right: calc(var(--gutter, 16px) * -1); padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
+  .item-tabs button { flex: none; padding: 7px 12px; }
+
+  .sort-mobile { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-family: var(--pixel); font-size: .8rem; color: var(--gold); }
+  .sort-mobile label { display: flex; align-items: center; gap: 8px; flex: 1 1 auto; min-width: 0; }
+  .sort-mobile select { flex: 1 1 auto; min-width: 0; font: inherit; font-size: 1rem; color: var(--ink); background: #070b22; border: 2px solid #46538a; border-radius: 4px; padding: 7px 10px; }
+  .sort-mobile button { font: inherit; font-size: .8rem; color: var(--ink); background: rgba(5, 8, 24, .5); border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; padding: 8px 10px; cursor: pointer; white-space: nowrap; }
+  .sort-mobile button:disabled { opacity: .4; cursor: default; }
+
+  .data-table { display: block; }
+  .table-win { background: none; border: 0; box-shadow: none; padding: 0; }
+  .data-table thead { display: none; }
+  .data-table tbody { display: grid; gap: 10px; }
+  .data-table tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 12px 14px; background: rgba(15, 24, 70, .72); border: 2px solid var(--win-line); border-radius: 4px; }
+  .data-table td, .data-table td:first-child, .data-table td:last-child { display: block; padding: 0; border: 0; min-width: 0; max-width: none; font-size: .85rem; }
+  .data-table td.wide { flex: 1 1 100%; }
+  .data-table td.empty, .data-table td.jobs:empty { display: none; }
+  .data-table td.num { text-align: left; }
+  .data-table td.num::before { content: attr(data-label) " "; color: var(--ink-dim); font-size: .7rem; }
+  .data-table td.jobs::before { content: "착용 "; color: var(--gold); font-family: var(--pixel); font-size: .72rem; margin-right: 4px; }
+  .data-table td.desc::before { content: none; }
+  .data-table td.jobs { padding-top: 2px; }
+  .data-table td:empty { display: none; }
+  .data-table td.name { font-size: 1rem; }
+  .data-table td.cat, .data-table td.region { color: var(--ink-dim); font-size: .78rem; }
+  .data-table td.price::before { content: "가격 "; }
+  .data-table td.drop { padding-top: 2px; }
+  .data-table td.drop::before { content: "드롭 "; color: var(--ink-dim); font-size: .7rem; }
+  .data-table td.desc { color: var(--ink-dim); line-height: 1.55; }
+  .data-table .mon-name { white-space: normal; }
+}
