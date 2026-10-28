@@ -268,6 +268,11 @@
 .dl__main h2 { margin: 0 0 6px; font-size: var(--step-2); }
 .dl__main p { margin: 0; font-size: var(--step--1); color: var(--ink-dim); }
 .guide { display: grid; gap: 22px; max-width: 880px; margin-top: 22px; }
+.guide-tabs { display: flex; gap: 6px; margin: 0; }
+.guide-tabs button { flex: 1; max-width: 220px; font-family: var(--pixel); font-size: 1rem; color: var(--ink); background: rgba(5, 8, 24, .5); border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; padding: 11px 14px; cursor: pointer; }
+.guide-tabs button[aria-selected="true"] { color: var(--gold); border-color: var(--gold); background: rgba(226, 192, 107, .1); }
+.guide__panel { display: grid; gap: 22px; }
+.guide__panel[hidden] { display: none; }
 .guide h3 { font-size: var(--step-1); margin: 0 0 10px; }
 .guide ol, .guide ul { margin: 0; padding-left: 1.3em; line-height: 1.85; }
 .guide code { font-family: var(--pixel); font-size: .9em; color: var(--gold); word-break: break-all; }
