@@ -43,30 +43,46 @@
       return c ? c * sort.dir : a.i - b.i;
     }).map(function (x) { return x.r; });
   }
-  function dataTable(cols, rows, sort) {
+  function dataTable(cols, rows, sort, cls) {
     var head = cols.map(function (c) {
-      if (c.sort === false) return "<th>" + c.label + "</th>";
+      if (c.sort === false) return '<th class="' + (c.wide ? "wide" : "") + '">' + c.label + "</th>";
       var on = sort.key === c.key;
       return '<th class="' + (c.right ? "num" : "") + '" aria-sort="' + (on ? (sort.dir > 0 ? "ascending" : "descending") : "none") + '">' +
         '<button type="button" data-sort="' + c.key + '">' + c.label + '<span aria-hidden="true">' + (on ? (sort.dir > 0 ? " ▲" : " ▼") : "") + "</span></button></th>";
     }).join("");
     var body = rows.map(function (r) {
-      return "<tr>" + cols.map(function (c) { return '<td class="' + (c.right ? "num" : "") + '">' + c.html(r) + "</td>"; }).join("") + "</tr>";
+      return "<tr>" + cols.map(function (c) {
+        var empty = c.right && c.get && c.get(r) == null;
+        return '<td class="' + [c.right ? "num" : "", c.wide ? "wide" : "", c.key, empty ? "empty" : ""].join(" ") + '" data-label="' + esc(c.label) + '">' + c.html(r) + "</td>";
+      }).join("") + "</tr>";
     }).join("");
-    return '<div class="win win--plain"><div class="table-scroll"><table class="table data-table"><thead><tr>' + head + "</tr></thead><tbody>" +
+    // 좁은 화면에서는 머리글이 없어지므로 정렬을 고르는 상자를 따로 둔다
+    var sortable = cols.filter(function (c) { return c.sort !== false; });
+    var mobile = '<div class="sort-mobile"><label>정렬 <select data-sort-sel aria-label="정렬 기준"><option value="">기본 순서</option>' + sortable.map(function (c) {
+      return '<option value="' + c.key + '"' + (sort.key === c.key ? " selected" : "") + ">" + c.label + "</option>";
+    }).join("") + '</select></label><button type="button" data-sort-dir aria-label="정렬 방향 바꾸기"' + (sort.key ? "" : " disabled") + ">" + (sort.dir > 0 ? "▲ 오름차순" : "▼ 내림차순") + "</button></div>";
+    return mobile + '<div class="win win--plain table-win"><div class="table-scroll"><table class="table data-table ' + (cls || "") + '"><thead><tr>' + head + "</tr></thead><tbody>" +
       (body || '<tr><td colspan="' + cols.length + '" class="dim">찾는 항목이 없다.</td></tr>') + "</tbody></table></div></div>";
   }
   // 머리글 클릭 → 정렬 바꾸기. 숫자는 큰 값부터, 글자는 가나다 순부터
   function bindSort(el, cols, sort, onChange) {
-    el.addEventListener("click", function (e) {
-      var b = e.target.closest("button[data-sort]");
-      if (!b) return;
-      var key = b.dataset.sort;
+    function pick(key) {
       if (sort.key === key) sort.dir = -sort.dir;
       else {
         sort.key = key;
         sort.dir = cols.filter(function (c) { return c.key === key; })[0].num ? -1 : 1;
       }
+    }
+    el.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-sort]");
+      if (b) { pick(b.dataset.sort); onChange(); return; }
+      if (e.target.closest("button[data-sort-dir]")) { sort.dir = -sort.dir; onChange(); }
+    });
+    el.addEventListener("change", function (e) {
+      var sel = e.target.closest("select[data-sort-sel]");
+      if (!sel) return;
+      if (!sel.value) { sort.key = null; sort.dir = 1; }
+      else { sort.key = null; pick(sel.value); }
       onChange();
     });
   }
@@ -153,6 +169,25 @@
         var out = Object.keys(n).filter(function (k) { return s[k]; }).map(function (k) { return n[k] + " " + s[k]; });
         return out.length ? '<p class="item__stats">' + out.join("<span aria-hidden=\"true\">/</span>") + "</p>" : "";
       }
+      var jobName = {};
+      (d.jobs || []).forEach(function (j) { jobName[j.key] = j.name; });
+      var jobTotal = (d.jobs || []).length;
+      // 장비만 it.jobs 가 있다 (없으면 전 직업). 대부분 입는 장비는 못 입는 직업을 적는다
+      function isEquip(it) { return it.type >= 1 && it.type <= 5; }
+      function jobChips(it) {
+        if (!isEquip(it)) return null;
+        var js = it.jobs;
+        if (!js) return '<span class="job job--all">누구나</span>';
+        if (jobTotal && js.length >= jobTotal - 3) {
+          var no = (d.jobs || []).filter(function (j) { return js.indexOf(j.key) < 0; });
+          return '<span class="job job--all">대부분</span> <span class="dim small">' + no.map(function (j) { return esc(j.name); }).join("·") + " 제외</span>";
+        }
+        return js.map(function (k) { return '<span class="job">' + esc(jobName[k] || k) + "</span>"; }).join(" ");
+      }
+      function jobLine(it) {
+        var c = jobChips(it);
+        return c ? '<p class="item__jobs"><span class="pixel">착용</span> ' + c + "</p>" : "";
+      }
       function recipe(r) {
         if (!r || !r.materials || !r.materials.length) return "";
         var mats = r.materials.map(function (m) { return esc(m.name) + (m.count > 1 ? " ×" + m.count : ""); });
@@ -166,7 +201,7 @@
         return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) +
           (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h3>" +
           (it.job ? '<p class="pixel" style="font-size:.74rem;color:var(--gold)">' + esc(it.job) + " 마스터</p>" : "") +
-          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + recipe(recipes[it.id]) +
+          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + jobLine(it) + recipe(recipes[it.id]) +
           (it.note ? '<p class="dim">' + esc(it.note) + "</p>" : "") + "</article>";
       }
       document.getElementById("grades").innerHTML = d.grades.filter(function (g) { return g.key !== "rare"; }).map(function (g) {
@@ -191,7 +226,7 @@
           html: function (r) { return secret(r) ? dash() : dash(r.it.stats && r.it.stats[k]); } };
       }
       var cols = [
-        { key: "name", label: "이름", get: function (r) { return secret(r) ? null : r.it.name; },
+        { key: "name", label: "이름", wide: true, get: function (r) { return secret(r) ? null : r.it.name; },
           html: function (r) {
             var it = r.it;
             if (secret(r)) return "???";
@@ -203,7 +238,9 @@
         stat("atk"), stat("def"), stat("spi"), stat("agi"),
         { key: "price", label: "가격", num: true, right: true, get: function (r) { return secret(r) || !r.it.price ? null : r.it.price; },
           html: function (r) { return secret(r) || !r.it.price ? dash() : r.it.price.toLocaleString(); } },
-        { key: "desc", label: "설명", sort: false,
+        { key: "jobs", label: "착용", sort: false, wide: true,
+          html: function (r) { return secret(r) ? "" : jobChips(r.it) || ""; } },
+        { key: "desc", label: "설명", sort: false, wide: true,
           html: function (r) {
             if (secret(r)) return "엔딩 뒤에야 모습을 드러내는 장비.";
             return esc(r.it.desc) + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]);
@@ -228,7 +265,7 @@
         document.getElementById("item-count").textContent = word ? "\"" + q.value.trim() + "\" " + rows.length + "개" : rows.length + "개";
         if (getView() === "list") {
           iEl.className = "item-table";
-          iEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort);
+          iEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort, "data-table--item");
         } else {
           iEl.className = "item-list";
           iEl.innerHTML = rows.slice(0, 400).map(function (r) { return card(r.it); }).join("") +
@@ -292,7 +329,7 @@
           html: function (r) { return hidden(r) ? dash() : dash(r.m[k]); } };
       }
       var cols = [
-        { key: "name", label: "이름", get: function (r) { return hidden(r) ? null : r.m.name; },
+        { key: "name", label: "이름", wide: true, get: function (r) { return hidden(r) ? null : r.m.name; },
           html: function (r) {
             var m = r.m;
             var img = m.img ? '<img class="px mon-thumb' + (m.secret ? " mon-thumb--secret" : "") + '" src="assets/img/monster/' + esc(imgName(m.img)) + '"' + (m.hue && !m.secret ? ' style="filter:hue-rotate(' + m.hue + 'deg)"' : "") + ' alt="" loading="lazy">' : "";
@@ -301,7 +338,7 @@
         { key: "region", label: "지역", get: function (r) { return r.region.name; }, html: function (r) { return esc(r.region.name); } },
         { key: "kind", label: "구분", num: true, get: function (r) { return r.kind; }, html: function (r) { return '<span class="kind kind--' + r.kind + '">' + KIND_NAME[r.kind] + "</span>"; } },
         num("hp"), num("atk"), num("def"), num("spi"), num("agi"),
-        { key: "drop", label: "드롭", get: function (r) { return hidden(r) || !r.m.drop ? null : (r.m.drop.god ? "???" : r.m.drop.name); },
+        { key: "drop", label: "드롭", wide: true, get: function (r) { return hidden(r) || !r.m.drop ? null : (r.m.drop.god ? "???" : r.m.drop.name); },
           html: function (r) {
             var dr = r.m.drop;
             if (hidden(r) || !dr) return dash();
@@ -341,7 +378,7 @@
         document.getElementById("region-nav").hidden = list || !!word || !!regionKey;
         tEl.hidden = !list;
         mEl.hidden = list;
-        if (list) tEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort);
+        if (list) tEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort, "data-table--mob");
         else mEl.innerHTML = cards(word, regionKey) || '<p class="dim">찾는 몬스터가 없다.</p>';
       }
       q.addEventListener("input", render);
