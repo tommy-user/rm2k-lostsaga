@@ -42,6 +42,51 @@
       '<p><a href="download.html">다운로드</a> · <a href="contact.html">문의</a></p></div>';
   }
 
+  // 새 버전 알림: 다운로드 버튼을 누른 적 있는 방문자에게만, 그 뒤 정식 릴리즈가 나오면 머리 아래에 띄운다
+  var REPO = "tommy-user/rm2k-lostsaga";
+  function store(k, v) {
+    try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {}
+    return null;
+  }
+  function latestTag(cb) {
+    var c = store("ls.latest");
+    if (c) { try { c = JSON.parse(c); if (Date.now() - c.at < 36e5) return cb(c.tag); } catch (e) {} }
+    fetch("https://api.github.com/repos/" + REPO + "/releases?per_page=10")
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (list) {
+        var r = list.filter(function (x) { return !x.prerelease && !x.draft; })[0];
+        if (!r) return;
+        store("ls.latest", JSON.stringify({ tag: r.tag_name, at: Date.now() }));
+        cb(r.tag_name);
+      })
+      .catch(function () {});
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[data-dl]");
+    if (a) store("ls.got", a.getAttribute("data-dl"));
+  });
+  var got = store("ls.got");
+  if (got && gnb) {
+    latestTag(function (tag) {
+      if (tag === got || store("ls.dismissed") === tag) return;
+      var bar = document.createElement("div");
+      bar.className = "update";
+      bar.setAttribute("role", "status");
+      bar.innerHTML =
+        '<span>새 버전 <b></b> 이 나왔습니다. 받은 버전은 ' + "<b></b>" + ".</span>" +
+        '<a href="download.html">받으러 가기</a>' +
+        '<button type="button" aria-label="닫기">×</button>';
+      var bs = bar.querySelectorAll("b");
+      bs[0].textContent = tag;
+      bs[1].textContent = got;
+      bar.querySelector("button").addEventListener("click", function () {
+        store("ls.dismissed", tag);
+        bar.remove();
+      });
+      gnb.insertAdjacentElement("afterend", bar);
+    });
+  }
+
   // 메시지창: data-type 속성이 있는 요소의 글자를 게임처럼 한 글자씩 찍는다
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll("[data-type]").forEach(function (el) {
