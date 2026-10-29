@@ -123,3 +123,18 @@
     setTimeout(tick, 500);
   });
 })();
+
+// 방문 집계 (Cloudflare Web Analytics). 주소 끝에 ?notrack 으로 한 번 열면 그 브라우저는 집계에서 빠지고, ?track 으로 해제
+(function () {
+  var KEY = "rm2k-notrack";
+  try {
+    if (/[?&]notrack\b/.test(location.search)) localStorage.setItem(KEY, "1");
+    if (/[?&]track\b/.test(location.search)) localStorage.removeItem(KEY);
+    if (localStorage.getItem(KEY)) return;
+  } catch (e) {}
+  var s = document.createElement("script");
+  s.type = "module";
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.setAttribute("data-cf-beacon", '{"token": "af2e70d4cf5f4f8bbd53b5cf7cec49cd"}');
+  document.head.appendChild(s);
+})();
