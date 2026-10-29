@@ -184,6 +184,11 @@
         }
         return js.map(function (k) { return '<span class="job">' + esc(jobName[k] || k) + "</span>"; }).join(" ");
       }
+      // 무기만 한 손/양손을 나눈다 (양손 무기는 방패와 함께 못 낀다)
+      function handChip(it) {
+        if (it.type !== 1) return "";
+        return it.twoHanded ? '<span class="hand hand--two">양손</span>' : '<span class="hand hand--one">한손</span>';
+      }
       function jobLine(it) {
         var c = jobChips(it);
         return c ? '<p class="item__jobs"><span class="pixel">착용</span> ' + c + "</p>" : "";
@@ -198,7 +203,7 @@
         if (it.grade === "god") {
           return '<article class="item item--secret win win--plain"><h3>??? ' + badge("god") + "</h3><p>엔딩 뒤에야 모습을 드러내는 장비.</p></article>";
         }
-        return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) +
+        return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) + " " + handChip(it) +
           (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h3>" +
           (it.job ? '<p class="pixel" style="font-size:.74rem;color:var(--gold)">' + esc(it.job) + " 마스터</p>" : "") +
           "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + jobLine(it) + recipe(recipes[it.id]) +
@@ -214,18 +219,26 @@
       var sort = { key: null, dir: 1 };
       var gradeSel = document.getElementById("item-grade");
       var jobSel = document.getElementById("item-job");
+      var handSel = document.getElementById("item-hand");
+      var catSel = document.getElementById("item-cat");
+      handSel.innerHTML = '<option value="">한손·양손</option><option value="one">한손 무기</option><option value="two">양손 무기</option>';
       gradeSel.innerHTML = '<option value="">모든 등급</option>' + d.grades.filter(function (g) { return g.key !== "rare"; }).map(function (g) {
         return '<option value="' + esc(g.key) + '">' + esc(g.name) + "</option>";
-      }).join("");
+      }).join("") + '<option value="god">신급</option>';
       jobSel.innerHTML = '<option value="">모든 직업</option>' + (d.jobs || []).map(function (j) {
         return '<option value="' + esc(j.key) + '">' + esc(j.name) + " 착용</option>";
       }).join("");
       var rank = {};
       d.grades.forEach(function (g, i) { rank[g.key] = i; });
       rank.god = 99;
-      var total = d.categories.reduce(function (n, c) { return n + c.items.length; }, 0);
-      tabs.innerHTML = [{ key: "all", name: "전체", items: { length: total } }].concat(d.categories).map(function (c) {
+      var GRADE_CATS = { craft: 1, master: 1, god: 1 };
+      var parts = d.categories.filter(function (c) { return !GRADE_CATS[c.key]; });
+      var total = d.categories.filter(function (c) { return c.key !== "craft" && c.key !== "master"; }).reduce(function (n, c) { return n + c.items.length; }, 0);
+      tabs.innerHTML = [{ key: "all", name: "전체", items: { length: total } }].concat(parts).map(function (c) {
         return '<button type="button" role="tab" aria-selected="false" data-k="' + c.key + '">' + esc(c.name) + " <span class=\"dim\">" + c.items.length + "</span></button>";
+      }).join("");
+      catSel.innerHTML = [{ key: "all", name: "모든 부위" }].concat(parts).map(function (c) {
+        return '<option value="' + esc(c.key) + '">' + esc(c.name) + "</option>";
       }).join("");
       function secret(r) { return r.it.grade === "god"; }
       function stat(k) {
@@ -238,7 +251,7 @@
           html: function (r) {
             var it = r.it;
             if (secret(r)) return "???";
-            return "<strong>" + esc(it.name) + "</strong>" + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
+            return "<strong>" + esc(it.name) + "</strong> " + handChip(it) + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
               (it.job ? '<br><span class="pixel small gold">' + esc(it.job) + " 마스터</span>" : "");
           } },
         { key: "grade", label: "등급", num: true, get: function (r) { return rank[r.it.grade] == null ? 0 : rank[r.it.grade]; }, html: function (r) { return badge(r.it.grade); } },
@@ -259,19 +272,24 @@
         var word = q.value.trim().toLowerCase();
         var rows = [];
         var seen = {};
-        var pool = word || cur === "all";
-        // 제작 분류는 다른 분류 아이템과 겹치므로, 전체·검색에서는 뒤로 미뤄 한 번만 보이게 한다
-        d.categories.filter(function (c) { return c.key !== "craft"; }).concat(d.categories.filter(function (c) { return c.key === "craft"; })).forEach(function (c) {
+        var pool = cur === "all";
+        // 한손·양손은 부위가 무기일 때만 뜻이 있다
+        handSel.hidden = cur !== "weapon";
+        if (handSel.hidden) handSel.value = "";
+        catSel.value = cur;
+        // 신급(비밀) 장비는 부위가 없어 전체에서만 보인다
+        parts.concat(d.categories.filter(function (c) { return c.key === "god"; })).forEach(function (c) {
           if (!pool && c.key !== cur) return;
           c.items.forEach(function (it) {
             if (pool) { if (seen[it.id]) return; seen[it.id] = 1; }
             if (gradeSel.value && it.grade !== gradeSel.value) return;
             if (jobSel.value && (!isEquip(it) || (it.jobs && it.jobs.indexOf(jobSel.value) < 0))) return;
+            if (handSel.value && !!it.twoHanded !== (handSel.value === "two")) return;
             if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "")).toLowerCase().indexOf(word) < 0)) return;
             rows.push({ it: it, cat: c.name });
           });
         });
-        tabs.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-selected", !word && b.dataset.k === cur ? "true" : "false"); });
+        tabs.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.k === cur ? "true" : "false"); });
         document.getElementById("item-count").textContent = word ? "\"" + q.value.trim() + "\" " + rows.length + "개" : rows.length + "개";
         if (getView() === "list") {
           iEl.className = "item-table";
@@ -282,10 +300,12 @@
             (rows.length > 400 ? '<p class="dim">처음 400개만 보인다. 이름으로 찾거나 분류를 골라 보자.</p>' : "");
         }
       }
-      tabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { cur = b.dataset.k; q.value = ""; render(); } });
+      tabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { cur = b.dataset.k; render(); } });
+      catSel.addEventListener("change", function () { cur = catSel.value; render(); });
       q.addEventListener("input", render);
       gradeSel.addEventListener("change", render);
       jobSel.addEventListener("change", render);
+      handSel.addEventListener("change", render);
       viewToggle(render);
       render();
     });
