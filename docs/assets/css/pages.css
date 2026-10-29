@@ -284,3 +284,7 @@
 .intro-grid h2 { margin: 0 0 8px; font-size: var(--step-1); }
 .intro-grid p { margin: 0; font-size: var(--step--1); color: var(--ink-dim); }
 .intro-grid a:hover h2, .intro-grid a:focus-visible h2 { color: var(--focus); }
+
+/* 무기 한손/양손 표시 */
+.hand { display: inline-block; font-size: .7rem; line-height: 1; padding: 3px 6px; border: 1px solid #46538a; border-radius: 3px; color: var(--ink); vertical-align: middle; white-space: nowrap; }
+.hand--two { color: var(--gold); border-color: var(--gold); background: rgba(226, 192, 107, .1); }

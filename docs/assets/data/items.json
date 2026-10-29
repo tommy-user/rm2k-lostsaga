@@ -161,7 +161,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2007,
@@ -506,7 +507,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2057,
@@ -895,7 +897,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2606,
@@ -1085,7 +1088,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2635,
@@ -1278,7 +1282,8 @@
             "priest"
           ],
           "job": "프리스트",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「치유의 물결」(효과220/전체) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「치유의 물결」(효과220/전체) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1661,
@@ -1318,7 +1323,8 @@
             "necro"
           ],
           "job": "네크로맨서",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「영혼 수확」(위력240/어둠/흡수/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「영혼 수확」(위력240/어둠/흡수/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1673,
@@ -1358,7 +1364,8 @@
             "anti"
           ],
           "job": "안티프리스트",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「나락의 낙인」(위력220/어둠/침묵·맹목·혼란/전체) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「나락의 낙인」(위력220/어둠/침묵·맹목·혼란/전체) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1685,
@@ -1398,7 +1405,8 @@
             "tamer"
           ],
           "job": "테이머",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「대지의 창끝」(위력230/관통/둔화/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「대지의 창끝」(위력230/관통/둔화/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1697,
@@ -1558,7 +1566,8 @@
             "wizard"
           ],
           "job": "위저드",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「비전 파쇄」(위력280/방어무시/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「비전 파쇄」(위력280/방어무시/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1745,
@@ -1618,7 +1627,8 @@
             "elf"
           ],
           "job": "요정",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「정령 관통」(위력230/바람·땅/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「정령 관통」(위력230/바람·땅/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1762,
@@ -1676,7 +1686,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": "몬스터",
-          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 다크마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 다크마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)",
+          "twoHanded": true
         },
         {
           "id": 1781,
@@ -1694,7 +1705,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": "몬스터",
-          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 나이트마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 나이트마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)",
+          "twoHanded": true
         },
         {
           "id": 1786,
@@ -1712,7 +1724,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": "몬스터",
-          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)",
+          "twoHanded": true
         }
       ]
     },
@@ -2287,7 +2300,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 85,
@@ -2311,7 +2325,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 86,
@@ -2335,7 +2350,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 87,
@@ -2359,7 +2375,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 88,
@@ -2383,7 +2400,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 89,
@@ -2407,7 +2425,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 90,
@@ -2431,7 +2450,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 91,
@@ -2455,7 +2475,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 131,
@@ -2910,7 +2931,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 304,
@@ -2935,7 +2957,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 305,
@@ -2960,7 +2983,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 306,
@@ -2985,7 +3009,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 307,
@@ -3010,7 +3035,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 308,
@@ -3035,7 +3061,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 309,
@@ -3060,7 +3087,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 311,
@@ -3087,7 +3115,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 312,
@@ -3114,7 +3143,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 313,
@@ -3141,7 +3171,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 314,
@@ -3168,7 +3199,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 315,
@@ -3195,7 +3227,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 316,
@@ -3222,7 +3255,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 318,
@@ -3242,7 +3276,8 @@
             "wizard"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 319,
@@ -3286,7 +3321,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 334,
@@ -3310,7 +3346,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 335,
@@ -3334,7 +3371,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 336,
@@ -3358,7 +3396,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 337,
@@ -3382,7 +3421,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 338,
@@ -3406,7 +3446,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 339,
@@ -3430,7 +3471,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 353,
@@ -3628,7 +3670,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 386,
@@ -3834,7 +3877,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 395,
@@ -3858,7 +3902,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 396,
@@ -3882,7 +3927,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 398,
@@ -4232,7 +4278,8 @@
             "elf"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 581,
@@ -4272,7 +4319,8 @@
             "elf"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 585,
@@ -4472,7 +4520,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 631,
@@ -4497,7 +4546,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 639,
@@ -4636,7 +4686,8 @@
             "cleric"
           ],
           "job": null,
-          "note": "고대던전의 오우거 워리어 리더 드롭 (33%)"
+          "note": "고대던전의 오우거 워리어 리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 702,
@@ -4682,7 +4733,8 @@
             "anti"
           ],
           "job": null,
-          "note": "얼음성의 아이스 리자드맨리더 드롭 (33%)"
+          "note": "얼음성의 아이스 리자드맨리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 712,
@@ -4741,7 +4793,8 @@
           "maxPlus": null,
           "jobs": null,
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 865,
@@ -4825,7 +4878,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 949,
@@ -4845,7 +4899,8 @@
             "elf"
           ],
           "job": "요정",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다",
+          "twoHanded": true
         },
         {
           "id": 954,
@@ -4885,7 +4940,8 @@
             "wizard"
           ],
           "job": "위저드",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다",
+          "twoHanded": true
         },
         {
           "id": 969,
@@ -4945,7 +5001,8 @@
             "fighter"
           ],
           "job": "격투가",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다",
+          "twoHanded": true
         },
         {
           "id": 1009,
@@ -5005,7 +5062,8 @@
             "tamer"
           ],
           "job": "테이머",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다",
+          "twoHanded": true
         },
         {
           "id": 1044,
@@ -5070,7 +5128,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1116,
@@ -5088,7 +5147,8 @@
           "maxPlus": null,
           "jobs": null,
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1135,
@@ -5112,7 +5172,8 @@
             "anti"
           ],
           "job": null,
-          "note": "성지던전의 섀도 엘프 리더 드롭 (33%)"
+          "note": "성지던전의 섀도 엘프 리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 1145,
@@ -5266,7 +5327,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1243,
@@ -5311,7 +5373,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1296,
@@ -5335,7 +5398,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1297,
@@ -5359,7 +5423,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1298,
@@ -5383,7 +5448,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1299,
@@ -5407,7 +5473,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1301,
@@ -5539,7 +5606,8 @@
             "tamer"
           ],
           "job": null,
-          "note": "고대던전의 오우거 워리어 리더 드롭 (33%)"
+          "note": "고대던전의 오우거 워리어 리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 1382,
@@ -5579,7 +5647,8 @@
             "priest"
           ],
           "job": null,
-          "note": "본토던전의 다크 이플립트 리더 드롭 (33%)"
+          "note": "본토던전의 다크 이플립트 리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 1406,
@@ -5599,7 +5668,8 @@
             "necro"
           ],
           "job": null,
-          "note": "천상계의 쉐도우베얼 드롭 (33%)"
+          "note": "천상계의 쉐도우베얼 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 1418,
@@ -5619,7 +5689,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1430,
@@ -5759,7 +5830,8 @@
             "wizard"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1505,
@@ -5879,7 +5951,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1558,
@@ -5978,7 +6051,8 @@
             "anti"
           ],
           "job": null,
-          "note": "얼음성의 아이스 리자드맨리더 드롭 (33%)"
+          "note": "얼음성의 아이스 리자드맨리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 1595,
@@ -6002,7 +6076,8 @@
             "anti"
           ],
           "job": null,
-          "note": "성지던전의 섀도 엘프 리더 드롭 (33%)"
+          "note": "성지던전의 섀도 엘프 리더 드롭 (33%)",
+          "twoHanded": true
         },
         {
           "id": 1614,
@@ -6080,7 +6155,8 @@
             "priest"
           ],
           "job": "프리스트",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「치유의 물결」(효과220/전체) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「치유의 물결」(효과220/전체) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1668,
@@ -6100,7 +6176,8 @@
             "necro"
           ],
           "job": "네크로맨서",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「영혼 수확」(위력240/어둠/흡수/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「영혼 수확」(위력240/어둠/흡수/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1680,
@@ -6120,7 +6197,8 @@
             "anti"
           ],
           "job": "안티프리스트",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「나락의 낙인」(위력220/어둠/침묵·맹목·혼란/전체) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「나락의 낙인」(위력220/어둠/침묵·맹목·혼란/전체) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1692,
@@ -6140,7 +6218,8 @@
             "tamer"
           ],
           "job": "테이머",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「대지의 창끝」(위력230/관통/둔화/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「대지의 창끝」(위력230/관통/둔화/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1704,
@@ -6220,7 +6299,8 @@
             "wizard"
           ],
           "job": "위저드",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「비전 파쇄」(위력280/방어무시/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「비전 파쇄」(위력280/방어무시/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1752,
@@ -6260,7 +6340,8 @@
             "elf"
           ],
           "job": "요정",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「정령 관통」(위력230/바람·땅/개인) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「정령 관통」(위력230/바람·땅/개인) (장착한 동안)",
+          "twoHanded": true
         },
         {
           "id": 1776,
@@ -6278,7 +6359,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": "몬스터",
-          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 다크마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 다크마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)",
+          "twoHanded": true
         },
         {
           "id": 1781,
@@ -6296,7 +6378,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": "몬스터",
-          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 나이트마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 나이트마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)",
+          "twoHanded": true
         },
         {
           "id": 1786,
@@ -6314,7 +6397,8 @@
           "maxPlus": 4,
           "jobs": [],
           "job": "몬스터",
-          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+          "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)",
+          "twoHanded": true
         },
         {
           "id": 1794,
@@ -6394,7 +6478,8 @@
             "necro"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 1806,
@@ -6434,7 +6519,8 @@
             "tamer"
           ],
           "job": "테이머",
-          "note": "직업 유산 퀘스트 보상. 칠리마을 타리오의 의뢰, 광기에 물든 야수왕과 맹약을 맺는다"
+          "note": "직업 유산 퀘스트 보상. 칠리마을 타리오의 의뢰, 광기에 물든 야수왕과 맹약을 맺는다",
+          "twoHanded": true
         },
         {
           "id": 1812,
@@ -6598,7 +6684,8 @@
             "anti"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2011,
@@ -6664,7 +6751,8 @@
             "lord"
           ],
           "job": null,
-          "note": "고대의 하늘, 하늘의 닻을 지키는 카오스교 집행자 드롭"
+          "note": "고대의 하늘, 하늘의 닻을 지키는 카오스교 집행자 드롭",
+          "twoHanded": true
         },
         {
           "id": 2054,
@@ -6707,7 +6795,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2058,
@@ -7010,7 +7099,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         },
         {
           "id": 2620,
@@ -7153,7 +7243,8 @@
             "lord"
           ],
           "job": null,
-          "note": null
+          "note": null,
+          "twoHanded": true
         }
       ]
     },
