@@ -76,18 +76,52 @@ fs.writeFileSync(path.join(out, "play/maps.json"), JSON.stringify(mapNames(path.
 const index = { metadata: { version: 2, date: new Date().toISOString().slice(0, 10) }, cache: walk(game, 4, true) };
 fs.writeFileSync(path.join(game, "index.json"), JSON.stringify(index));
 
-// 런처가 처음 한 번 미리 받아 둘 파일 목록: [play/ 기준 경로, 크기, 내용 해시].
-// 다음 접속 때는 해시가 바뀐 파일만 다시 받는다.
+// 런처가 처음 한 번 미리 받아 둘 파일. 파일이 2천 개라 하나씩 받으면 요청이 너무 많아
+// GitHub Pages 가 막는다(429). 폴더별로 약 4MB 씩 묶음(packs/*.bin)으로 합쳐 둔다.
+// 묶음 이름에 내용 해시가 들어가 있어, 파일이 바뀌면 그 파일이 든 묶음만 다시 받는다.
 const play = path.join(out, "play");
-const files = [];
-for (const dir of ["games/lostsaga", "player", "bases"]) {
-  for (const rel of fs.readdirSync(path.join(play, dir), { recursive: true })) {
-    const full = path.join(play, dir, rel);
-    if (!fs.statSync(full).isFile() || /\.md$/.test(rel)) continue;
-    const b = fs.readFileSync(full);
-    files.push([`${dir}/${rel}`.normalize("NFC"), b.length, crypto.createHash("sha1").update(b).digest("hex").slice(0, 16)]);
+const PACK = 4e6;
+const groups = new Map();  // 묶음 이름 → [play/ 기준 경로]
+for (const dir of ["player", "bases", "games/lostsaga"]) {
+  for (const rel of fs.readdirSync(path.join(play, dir), { recursive: true }).sort()) {
+    const p = `${dir}/${rel}`;
+    if (!fs.statSync(path.join(play, p)).isFile() || /\.md$/.test(p)) continue;
+    const top = rel.includes(path.sep) ? rel.split(path.sep)[0] : "root";
+    const g = dir === "games/lostsaga" ? `game-${top}` : dir;
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(p);
   }
 }
-files.sort((a, b) => (a[0] < b[0] ? -1 : 1));
-fs.writeFileSync(path.join(play, "files.json"), JSON.stringify({ version: process.env.GAME_TAG ?? "dev", files }));
+const packs = [];
+fs.mkdirSync(path.join(play, "packs"));
+let gi = 0;
+for (const [g, paths] of groups) {
+  let chunk = [];
+  let size = 0;
+  const flush = () => {
+    if (!chunk.length) return;
+    const bufs = chunk.map((p) => fs.readFileSync(path.join(play, p)));
+    const all = Buffer.concat(bufs);
+    const hash = crypto.createHash("sha1").update(all).digest("hex").slice(0, 16);
+    const url = `packs/${gi++}-${hash}.bin`;  // 폴더 이름(한글)은 주소에 넣지 않는다
+    fs.writeFileSync(path.join(play, url), all);
+    let off = 0;
+    const files = chunk.map((p, i) => {
+      const f = [p.normalize("NFC"), bufs[i].length, crypto.createHash("sha1").update(bufs[i]).digest("hex").slice(0, 16), off];
+      off += bufs[i].length;
+      return f;
+    });
+    packs.push({ name: g, url, size: all.length, files });
+    chunk = [];
+    size = 0;
+  };
+  for (const p of paths) {
+    const n = fs.statSync(path.join(play, p)).size;
+    if (size && size + n > PACK) flush();
+    chunk.push(p);
+    size += n;
+  }
+  flush();
+}
+fs.writeFileSync(path.join(play, "files.json"), JSON.stringify({ version: process.env.GAME_TAG ?? "dev", packs }));
 console.log(`built ${out}`);

@@ -1,8 +1,23 @@
-// 게임 파일 미리 받기. 처음 한 번은 전부, 그다음부터는 files.json 의 해시가 바뀐 파일만 받는다.
+// 게임 파일 미리 받기. 처음 한 번은 전부, 그다음부터는 files.json 의 해시가 바뀐 파일이 든 묶음만 받는다.
+// 파일 2천 개를 하나씩 받으면 GitHub Pages 가 막으므로(429) 빌드 때 약 4MB 묶음(packs/)으로 합쳐 둔다.
 // 받은 파일은 Cache Storage 에 넣고, Service Worker(sw.js)가 플레이어에게 꺼내 준다.
 const FILES = "lostsaga-files";
 const HAVE = "lostsaga-files-have";  // localStorage: 경로 → 받아 둔 파일의 해시
-const PARALLEL = 24;  // 작은 파일이 많아 요청마다 기다리는 시간이 대부분이다 (HTTP/2 라 한 연결로 같이 받는다)
+const PARALLEL = 4;  // 묶음(약 4MB) 단위라 몇 개만 같이 받아도 회선을 다 쓴다
+
+const TYPES = { wasm: "application/wasm", js: "text/javascript", json: "application/json", png: "image/png", bmp: "image/bmp",
+  jpg: "image/jpeg", wav: "audio/wav", mp3: "audio/mpeg", ogg: "audio/ogg", mid: "audio/midi", midi: "audio/midi" };
+const typeOf = (p) => TYPES[p.slice(p.lastIndexOf(".") + 1).toLowerCase()] ?? "application/octet-stream";
+
+// 일시적인 오류(GitHub Pages 의 429, 5xx)는 잠깐 기다렸다 다시 받는다.
+async function fetchRetry(url, cache = "no-cache") {
+  for (let i = 0; ; i++) {
+    const res = await fetch(url, { cache });
+    if (res.ok) return res;
+    if (i >= 3 || !(res.status === 429 || res.status >= 500)) throw new Error(`${url} ${res.status}`);
+    await new Promise((r) => setTimeout(r, 2000 * (i + 1)));
+  }
+}
 
 const fileKey = (url) => {
   const u = new URL(url);
@@ -63,55 +78,56 @@ export async function prepareFiles({ onStart, onProgress }) {
   const keys = new Set((await cache.keys()).map((r) => fileKey(r.url)));
   for (const p of Object.keys(have)) if (!keys.has(fileKey(fileUrl(p)))) delete have[p];
 
-  let list;
+  let packs;
   try {
-    const res = await fetch("files.json", { cache: "no-cache" });
-    if (!res.ok) throw new Error(`files.json ${res.status}`);
-    list = (await res.json()).files;
+    const res = await fetchRetry("files.json");
+    packs = (await res.json()).packs;
   } catch (e) {
     console.warn("[files]", e);
     return Object.keys(have).length ? "offline" : "missing";
   }
+  const list = packs.flatMap((k) => k.files);
 
-  const todo = list.filter(([p, , h]) => have[p] !== h);
+  // 받아 둔 것과 해시가 다른 파일이 하나라도 든 묶음만 받는다.
+  const todo = packs.filter((k) => k.files.some(([p, , h]) => have[p] !== h));
   const first = Object.keys(have).length === 0;
-  const total = todo.reduce((a, f) => a + f[1], 0);
+  const total = todo.reduce((a, k) => a + k.size, 0);
   if (todo.length) {
-    onStart?.(total, todo.length, first);
+    onStart?.(total, todo.reduce((a, k) => a + k.files.filter(([p, , h]) => have[p] !== h).length, 0), first);
     let done = 0;
-    let lastSave = Date.now();
     const queue = [...todo];
+    const work = async () => {
+      for (let k; (k = queue.shift()); ) {
+        const res = await fetchRetry(k.url, "default");  // 묶음 주소에 해시가 있어 내용이 바뀌면 주소도 바뀐다
+        // 진행 막대가 묶음 하나(약 4MB) 안에서도 움직이도록 읽은 만큼 센다.
+        const reader = res.body.getReader();
+        const buf = new Uint8Array(k.size);
+        let at = 0;
+        for (;;) {
+          const { done: end, value } = await reader.read();
+          if (end) break;
+          buf.set(value, at);
+          at += value.length;
+          done += value.length;
+          onProgress?.(done, total);
+        }
+        if (at !== k.size) throw new Error(`${k.url} ${at}/${k.size}`);
+        for (const [p, size, h, off] of k.files) {
+          if (have[p] === h) continue;
+          await cache.put(fileKey(fileUrl(p)), new Response(buf.slice(off, off + size), {
+            headers: { "Content-Type": typeOf(p) },
+          }));
+          have[p] = h;
+        }
+        saveHave(have);
+      }
+    };
     const worker = async () => {
       try {
         await work();
       } catch (e) {
         queue.length = 0;  // 하나라도 실패하면 나머지도 멈춘다
         throw e;
-      }
-    };
-    const work = async () => {
-      for (let f; (f = queue.shift()); ) {
-        const [p, , h] = f;
-        const res = await fetch(fileUrl(p), { cache: "no-cache" });
-        if (!res.ok) throw new Error(`${p} ${res.status}`);
-        // 진행 막대가 큰 파일(플레이어 9MB)에서도 움직이도록 읽은 만큼 센다.
-        const reader = res.body.getReader();
-        const parts = [];
-        for (;;) {
-          const { done: end, value } = await reader.read();
-          if (end) break;
-          parts.push(value);
-          done += value.length;
-          onProgress?.(done, total);
-        }
-        await cache.put(fileKey(fileUrl(p)), new Response(new Blob(parts), {
-          headers: { "Content-Type": res.headers.get("Content-Type") ?? "application/octet-stream" },
-        }));
-        have[p] = h;
-        if (Date.now() - lastSave > 2000) {
-          saveHave(have);
-          lastSave = Date.now();
-        }
       }
     };
     try {
