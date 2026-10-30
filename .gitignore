@@ -1,2 +1,5 @@
 **/*.lsd
 **/easyrpg_log.txt
+
+_site/
+!docs/play/bases/*.lsd

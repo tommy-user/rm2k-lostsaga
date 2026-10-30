@@ -1,0 +1,57 @@
+name: Pages
+
+# 소개 사이트(docs/)와 웹판(docs/play/)을 GitHub Pages 에 올린다.
+# 웹판 게임은 main 이 아니라 최신 정식 릴리즈 태그(v*, rc 제외)의 게임 폴더를 쓴다.
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', 'tools/build-play.mjs', '.github/workflows/pages.yaml']
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Game folder from the latest release tag
+        run: |
+          TAG=$(git tag --list 'v*' --sort=-v:refname | grep -v -e '-' | head -1)
+          echo "game: $TAG"
+          mkdir -p "$RUNNER_TEMP/game"
+          git archive "$TAG" rm2k-lostsaga | tar -x -C "$RUNNER_TEMP/game"
+          echo "GAME_DIR=$RUNNER_TEMP/game/rm2k-lostsaga" >> "$GITHUB_ENV"
+          echo "GAME_TAG=$TAG" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: node tools/build-play.mjs _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

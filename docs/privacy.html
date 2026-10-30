@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 | 로스트사가</title>
+<meta name="description" content="로스트사가 웹판이 받는 정보와 쓰는 곳.">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<style>
+.policy { max-width: 760px; }
+.policy h2 { font-size: var(--step-2); margin: 2em 0 .6em; }
+.policy table { width: 100%; border-collapse: collapse; margin: .6em 0 1em; }
+.policy th, .policy td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.policy th { width: 34%; font-weight: 700; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="gnb"></header>
+
+<main id="main">
+  <section class="page-head">
+    <img class="page-head__bg px" src="assets/img/pic/rogers.png" alt="">
+    <div class="wrap">
+      <h1>개인정보처리방침</h1>
+      <p>웹판(브라우저 플레이)이 받는 정보와 쓰는 곳.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap policy">
+      <p>PC판(다운로드)은 정보를 보내지 않습니다. 이 문서는 <a href="play/">웹판</a>에만 해당합니다.</p>
+
+      <h2>받는 정보</h2>
+      <table>
+        <tr><th>계정</th><td>처음 접속하면 게스트 계정 번호를 자동으로 만듭니다. Google 계정을 연결하면 Google 이 주는 이메일, 이름, 프로필 사진 주소를 받습니다.</td></tr>
+        <tr><th>세이브</th><td>게임에서 저장한 세이브 파일과 그 요약(캐릭터 이름, 레벨, 맵, 플레이 시간, 소지금), 저장 시각.</td></tr>
+        <tr><th>접속 기록</th><td>마지막으로 웹판을 연 시각. 세이브가 실제 플레이로 만들어졌는지 확인하는 데만 씁니다.</td></tr>
+      </table>
+
+      <h2>쓰는 곳</h2>
+      <p>세이브 백업과 다른 기기에서 이어 하기에만 씁니다. 광고, 분석, 판매에 쓰지 않고 다른 곳에 넘기지 않습니다.</p>
+
+      <h2>보관</h2>
+      <ul>
+        <li>서버는 Supabase(서울 리전)를 씁니다.</li>
+        <li>슬롯마다 최근 세이브와 그 전 세이브를 보관합니다. 다른 플레이의 세이브에 덮인 세이브는 30일 뒤 지웁니다.</li>
+        <li>계정 정보와 세이브는 삭제를 요청할 때까지 보관합니다.</li>
+        <li>로그인 상태와 세이브는 브라우저 저장소(localStorage, IndexedDB)에도 들어갑니다. 브라우저 데이터를 지우면 이 기기에서는 사라집니다.</li>
+      </ul>
+
+      <h2>외부 서비스</h2>
+      <ul>
+        <li>Google: Google 계정으로 로그인할 때</li>
+        <li>Supabase: 계정과 세이브 저장</li>
+        <li>jsDelivr, Google Fonts: 화면에 쓰는 스크립트와 글꼴 받기</li>
+      </ul>
+
+      <h2>삭제 요청과 문의</h2>
+      <p>계정과 세이브를 지우려면 연결한 Google 계정 이메일을 적어 <a href="mailto:tommy3482@daum.net">tommy3482@daum.net</a> 으로 보내 주세요. 확인한 뒤 모두 지웁니다. 게스트 계정은 브라우저 데이터를 지우면 다시 찾을 수 없습니다.</p>
+
+      <p class="dim">시행일: 2026년 10월 31일</p>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
