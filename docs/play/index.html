@@ -126,6 +126,18 @@ a.who-chip:hover { color: var(--text); }
   #slot-list { grid-template-columns: 1fr; }
 }
 
+/* ---------- 게임 파일 받기 ---------- */
+#loading { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+  background: rgba(13, 15, 20, 0.88); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.load-box { width: min(440px, 100%); display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 16px;
+  background: var(--panel); border: 1px solid rgba(217, 168, 78, 0.35); }
+.load-box .brand { font-size: 20px; }
+.load-box strong { font-size: 18px; }
+.load-bar { height: 8px; border-radius: 4px; background: rgba(239, 230, 210, 0.12); overflow: hidden; }
+.load-bar i { display: block; width: 0; height: 100%; background: var(--gold); transition: width 0.2s; }
+#load-size { font-size: 14px; color: var(--soft); font-variant-numeric: tabular-nums; }
+#load-note { margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
+
 /* ---------- 플레이 ---------- */
 #play { position: fixed; inset: 0; display: flex; flex-direction: column; background: var(--ground); }
 .play-bg { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover;
@@ -280,6 +292,17 @@ a.who-chip:hover { color: var(--text); }
     <p class="note">웹판은 새 게임부터 시작합니다. PC 세이브는 가져올 수 없습니다. 웹 세이브는 내보내서 PC판에서 쓸 수 있습니다.</p>
   </section>
   <footer class="home-foot">엔진: EasyRPG Player 0.8.1.1 (GPLv3) · <a href="https://github.com/EasyRPG/Player/tree/0.8.1.1">소스</a> · <a href="../privacy.html">개인정보처리방침</a></footer>
+</div>
+
+<div id="loading" hidden role="dialog" aria-modal="true" aria-labelledby="load-title">
+  <div class="load-box">
+    <span class="brand">LOST SAGA</span>
+    <strong id="load-title">게임 파일 받는 중</strong>
+    <div class="load-bar" role="progressbar" aria-labelledby="load-title" aria-valuemin="0" aria-valuemax="100"><i id="load-bar"></i></div>
+    <span id="load-size"></span>
+    <p id="load-note"></p>
+    <button type="button" class="btn" id="load-retry" hidden>다시 시도</button>
+  </div>
 </div>
 
 <template id="slot-tpl">

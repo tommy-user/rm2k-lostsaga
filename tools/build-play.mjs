@@ -2,6 +2,7 @@
 // EasyRPG 웹 플레이어가 읽는 index.json(gencache 형식 v2)을 만든다.
 //   node tools/build-play.mjs [출력 폴더=_site]
 // 게임 폴더는 GAME_DIR 로 바꿀 수 있다 (배포 때는 최신 정식 릴리즈 태그의 게임을 넣는다).
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -9,7 +10,7 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..")
 const out = path.resolve(process.argv[2] ?? path.join(root, "_site"));
 const gameSrc = path.resolve(process.env.GAME_DIR ?? path.join(root, "rm2k-lostsaga"));
 const game = path.join(out, "play/games/lostsaga");
-const SKIP = /\.(exe|lsd)$|^easyrpg_log\.txt$|^\.DS_Store$/i;
+const SKIP = /\.(exe|lsd|dll)$|^easyrpg_log\.txt$|^\.DS_Store$/i;
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.cpSync(path.join(root, "docs"), out, { recursive: true });
@@ -74,4 +75,19 @@ fs.writeFileSync(path.join(out, "play/maps.json"), JSON.stringify(mapNames(path.
 
 const index = { metadata: { version: 2, date: new Date().toISOString().slice(0, 10) }, cache: walk(game, 4, true) };
 fs.writeFileSync(path.join(game, "index.json"), JSON.stringify(index));
+
+// 런처가 처음 한 번 미리 받아 둘 파일 목록: [play/ 기준 경로, 크기, 내용 해시].
+// 다음 접속 때는 해시가 바뀐 파일만 다시 받는다.
+const play = path.join(out, "play");
+const files = [];
+for (const dir of ["games/lostsaga", "player", "bases"]) {
+  for (const rel of fs.readdirSync(path.join(play, dir), { recursive: true })) {
+    const full = path.join(play, dir, rel);
+    if (!fs.statSync(full).isFile() || /\.md$/.test(rel)) continue;
+    const b = fs.readFileSync(full);
+    files.push([`${dir}/${rel}`.normalize("NFC"), b.length, crypto.createHash("sha1").update(b).digest("hex").slice(0, 16)]);
+  }
+}
+files.sort((a, b) => (a[0] < b[0] ? -1 : 1));
+fs.writeFileSync(path.join(play, "files.json"), JSON.stringify({ version: process.env.GAME_TAG ?? "dev", files }));
 console.log(`built ${out}`);
