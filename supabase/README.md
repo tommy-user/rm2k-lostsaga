@@ -59,7 +59,7 @@ supabase functions deploy upload-save
 - 세이브가 없는 게스트(새 기기)는 "Google로 로그인"(`signInWithOAuth`)으로 기존 계정에 들어간다.
 - 연결하려는 Google 계정이 이미 다른 계정에 붙어 있으면(`identity_already_exists`) 런처가 "그 계정으로 로그인"을 따로 묻는다. 그 경우 이 브라우저의 게스트 세이브는 따라가지 않는다.
 - 런처는 이 기기 세이브의 주인 계정을 기억해 두고, 로그인한 계정으로 들어가거나 계정에서 나올 때만 이 기기 세이브를 비운다. 게스트 세션을 잃어 새 게스트가 된 경우는 남겨 둔다.
-- Google OAuth 클라이언트: Google Cloud 프로젝트 `lostsaga-web`(htm2937@gmail.com), 리디렉트 `https://rsjseachgivzvkuspxua.supabase.co/auth/v1/callback`. 돌아올 주소는 `site_url`(Pages 의 `/play/`)과 `http://127.0.0.1:8765/**`.
+- Google OAuth 클라이언트: Google Cloud 프로젝트 `lostsaga-web`, 리디렉트 `https://rsjseachgivzvkuspxua.supabase.co/auth/v1/callback`. 돌아올 주소는 `site_url`(Pages 의 `/play/`)과 `http://127.0.0.1:8765/**`.
 
 ## 오프라인
 
