@@ -219,6 +219,9 @@ for (const b of document.querySelectorAll('[data-act="home"]')) {
   b.onclick = () => location.assign(location.pathname + search);
 }
 
+// 방향키를 꾹 누르면 휴대폰이 길게 누르기 메뉴를 띄우므로 플레이 화면에서는 막는다.
+$("#play").addEventListener("contextmenu", (e) => e.preventDefault());
+
 const canvas = $("#canvas");
 canvas.addEventListener("click", () => canvas.focus());
 
