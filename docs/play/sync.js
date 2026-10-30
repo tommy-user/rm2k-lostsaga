@@ -2,8 +2,7 @@
 // - 플레이어가 켜지기 전에 클라우드 세이브를 플레이어의 IndexedDB(IDBFS)에 넣는다.
 // - 게임이 세이브 파일을 닫으면 대기열에 넣고 upload-save 로 올린다.
 // - 출처는 저장 횟수로 찾는다: 같은 플레이에서 저장 횟수가 하나 적고 플레이 시간이 더 짧은, 이미 아는 세이브.
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/+esm";
-import { applyDelta } from "https://cdn.jsdelivr.net/npm/fossil-delta@2.0.0/+esm";
+import { createClient, applyDelta } from "./vendor/supabase-fossil.js";
 import { SUPABASE_URL, SUPABASE_ANON_KEY, BASE_SAVE } from "./config.js";
 import { parseLsd } from "./lsd.js";
 
@@ -72,7 +71,7 @@ async function resetLocal() {
   db.close();
   const meta = await metaDb();
   await tx(meta, "pending", "readwrite", (s) => s.clear());
-  await tx(meta, "kv", "readwrite", (s) => { s.delete("synced"); s.delete("rejected"); });
+  await tx(meta, "kv", "readwrite", (s) => { s.delete("synced"); s.delete("rejected"); s.delete("nextRun"); });
   meta.close();
 }
 
@@ -325,6 +324,23 @@ export class SaveSync {
     return best;
   }
 
+  async startRun() {
+    const { data, error } = await this.sb.rpc("start_run", { p_game_version: BASE_SAVE });
+    if (error) throw error;
+    return data;
+  }
+
+  // 런처에서 "새로 시작" 을 누를 때 부른다. 플레이 시작 시각을 서버에 남겨 둔다.
+  // 오프라인이면 첫 저장을 올릴 때 만든다.
+  async prepareNewGame() {
+    if (!this.online) return;
+    try {
+      await kvSet("nextRun", await this.startRun());
+    } catch (e) {
+      console.warn("[sync] start_run", e);
+    }
+  }
+
   async upload(slot, bytes) {
     const sum = parseLsd(bytes);
     const hash = await sha256(bytes);
@@ -334,9 +350,13 @@ export class SaveSync {
       ({ run } = seen);
       parent = seen.parent ?? null;
     } else if (sum.save_count === 1) {
-      const { data, error } = await this.sb.rpc("start_run", { p_game_version: BASE_SAVE });
-      if (error) throw error;
-      run = data;
+      // "새로 시작" 을 누를 때 만들어 둔 run 이 있으면 쓴다. 없으면 지금 만든다.
+      // 올리기가 실패해 다시 시도할 때도 같은 run 을 쓰도록 기억해 둔다.
+      run = await kvGet("nextRun");
+      if (!run) {
+        run = await this.startRun();
+        await kvSet("nextRun", run);
+      }
     } else {
       const p = this.parentOf(sum);
       if (!p) return "unknown_parent";
@@ -354,6 +374,7 @@ export class SaveSync {
     });
     if (res.status >= 500 || res.status === 401) throw new Error(`upload ${res.status}`);
     const { result, error } = await res.json();
+    if (sum.save_count === 1 && !seen) await kvSet("nextRun", null);
     if (result === "ok" || result === "unchanged") {
       this.known.set(hash, { run, parent, save_count: sum.save_count, frame_count: sum.frame_count });
       this.synced[slot] = hash;

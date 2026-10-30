@@ -1,6 +1,7 @@
 // 런처 화면: 홈(세이브 고르기) → 플레이(플레이어 + 화면 버튼).
 import { SaveSync, readLocalSaves } from "./sync.js";
 import { parseLsd } from "./lsd.js";
+import { registerWorker, prepareFiles } from "./files.js";
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -105,7 +106,7 @@ async function renderHome() {
     cont.onclick = () => launch(`&load-game-id=${latest.slot}`, `슬롯 ${latest.slot} · ${who(latest.sum)}`);
   } else {
     cont.lastElementChild.textContent = "새 게임 시작";
-    cont.onclick = () => launch("&new-game", "새 게임");
+    cont.onclick = () => newGame();
   }
   $("#btn-new").hidden = !latest;
   for (const b of [cont, $("#btn-new"), $("#btn-title")]) b.disabled = false;
@@ -184,7 +185,12 @@ function renderAccount(saveCount) {
 }
 let authErrorShown = false;
 
-$("#btn-new").onclick = () => launch("&new-game", "새 게임");
+async function newGame() {
+  if (started) return;
+  if (!offline) await sync.prepareNewGame();
+  launch("&new-game", "새 게임");
+}
+$("#btn-new").onclick = newGame;
 $("#btn-title").onclick = () => launch("", "타이틀 화면");
 
 // ---- 플레이 ----
@@ -284,10 +290,50 @@ for (const b of document.querySelectorAll(".pad button[data-key]")) {
   b.addEventListener("contextmenu", (e) => e.preventDefault());
 }
 
+// ---- 게임 파일 받기 ----
+
+const mb = (n) => (n / 1e6).toFixed(1);
+
+async function getFiles() {
+  await registerWorker();
+  const box = $("#loading");
+  const bar = $("#load-bar");
+  for (;;) {
+    try {
+      const r = await prepareFiles({
+        onStart(total, count, first) {
+          $("#load-title").textContent = first ? "게임 파일 받는 중" : "업데이트 받는 중";
+          $("#load-note").textContent = first
+            ? "처음 한 번만 받습니다. 다음부터는 바뀐 파일만 받고, 인터넷 없이도 열립니다."
+            : `바뀐 파일 ${count}개를 받습니다.`;
+          $("#load-retry").hidden = true;
+          box.dataset.total = total;
+          box.hidden = false;
+        },
+        onProgress(done, total) {
+          const pct = Math.min(100, (done / total) * 100);
+          bar.style.width = `${pct}%`;
+          bar.parentElement.setAttribute("aria-valuenow", Math.round(pct));
+          $("#load-size").textContent = `${mb(done)} / ${mb(total)}MB`;
+        },
+      });
+      if (r !== "missing") break;
+      throw new Error("인터넷에 연결해야 게임 파일을 받을 수 있습니다.");
+    } catch (e) {
+      console.warn("[launcher] files", e);
+      $("#load-title").textContent = "게임 파일을 받지 못했습니다";
+      $("#load-note").textContent = navigator.onLine ? "연결을 확인하고 다시 시도해 주세요. 받은 부분은 남아 있습니다." : "인터넷에 연결한 뒤 다시 시도해 주세요.";
+      $("#load-retry").hidden = false;
+      box.hidden = false;
+      await new Promise((r) => { $("#load-retry").onclick = r; });
+    }
+  }
+  box.hidden = true;
+}
+
 // ---- 시작 ----
 
-if (offline) setStatus("offline", "오프라인");
-else await sync.start();
+await Promise.all([getFiles(), offline ? setStatus("offline", "오프라인") : sync.start()]);
 // Google 로그인에서 돌아오면 주소 뒤에 토큰이 붙어 있다. 읽은 뒤 지운다.
 if (location.hash && !location.hash.startsWith("#account")) history.replaceState(null, "", location.pathname + location.search);
 await renderHome();
