@@ -114,13 +114,16 @@ a.who-chip:hover { color: var(--text); }
   .home-head nav { display: none; }
   .home-head .sync { max-width: 62vw; }
   #version { display: none; }
-  .home-main { flex-direction: column-reverse; justify-content: flex-end; padding-top: 0; gap: 0; }
-  .art { flex: none; min-height: 0; height: 330px; }
-  .art img { left: auto; right: -24px; transform: none; }
+  /* 휴대폰: 일러스트를 오른쪽 위에 작게 깔고 제목을 그 위에 겹쳐, 첫 화면에 이어하기 카드까지 들어오게 한다 */
+  .home-main { flex-direction: column; padding-top: 0; gap: 0; }
+  .art { position: absolute; top: 0; right: -16px; width: 62%; height: min(300px, 38dvh); min-height: 0; flex: none; z-index: 0; }
+  .art img { left: auto; right: 0; transform: none; }
   .art figcaption { display: none; }
-  .intro { flex: none; gap: 16px; }
-  .intro h1 { margin: 0; }
-  .eyebrow, .tagline { font-size: 15px; }
+  .intro { position: relative; z-index: 1; flex: none; max-width: none; gap: 14px; padding-top: max(96px, calc(min(300px, 38dvh) - 110px)); }
+  .intro h1 { margin: 2px 0 4px; font-size: 44px; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8); }
+  .intro h1 br { display: none; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; }
+  .tagline { font-size: 15px; }
   .card { padding: 14px; }
   .save-sum .who { font-size: 17px; }
   #slot-list { grid-template-columns: 1fr; }
@@ -139,8 +142,9 @@ a.who-chip:hover { color: var(--text); }
 #load-note { margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
 
 /* ---------- 플레이 ---------- */
+#play { -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
 #play { position: fixed; inset: 0; display: flex; flex-direction: column; background: var(--ground); }
-.play-bg { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover;
+.play-bg { position: absolute; inset: -40px; background: url("../assets/img/pic/title.png") center / cover;
   filter: blur(28px) brightness(0.3); }
 .play-head { position: relative; display: flex; align-items: center; gap: 12px; min-height: 56px;
   padding: 6px max(8px, env(safe-area-inset-left)) 6px 8px; background: rgba(13, 15, 20, 0.75);
@@ -180,17 +184,17 @@ a.who-chip:hover { color: var(--text); }
 .touch .keys { display: none; }
 .touch .pad { position: relative; display: flex; align-items: center; justify-content: center; gap: 16px;
   user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; touch-action: none; }
-.dpad { position: relative; width: 168px; height: 168px; touch-action: none; }
-.dpad i { position: absolute; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px;
+.dpad { --c: 56px; position: relative; flex: none; width: calc(var(--c) * 3); height: calc(var(--c) * 3); touch-action: none; }
+.dpad i { position: absolute; display: flex; align-items: center; justify-content: center; width: var(--c); height: var(--c);
   background: var(--chip); border: 1px solid rgba(239, 230, 210, 0.18); color: var(--text); }
 .dpad i.on { background: rgba(217, 168, 78, 0.45); }
-.dpad .up { left: 56px; top: 0; border-bottom: 0; border-radius: 12px 12px 0 0; }
-.dpad .down { left: 56px; bottom: 0; border-top: 0; border-radius: 0 0 12px 12px; }
-.dpad .left { left: 0; top: 56px; border-right: 0; border-radius: 12px 0 0 12px; }
-.dpad .right { right: 0; top: 56px; border-left: 0; border-radius: 0 12px 12px 0; }
-.dpad .mid { left: 56px; top: 56px; border: 0; }
-.ab { position: relative; width: 156px; height: 156px; }
-.ab button { position: absolute; width: 76px; height: 76px; border-radius: 50%; font-size: 16px; font-weight: 700; touch-action: none; }
+.dpad .up { left: var(--c); top: 0; border-bottom: 0; border-radius: 12px 12px 0 0; }
+.dpad .down { left: var(--c); bottom: 0; border-top: 0; border-radius: 0 0 12px 12px; }
+.dpad .left { left: 0; top: var(--c); border-right: 0; border-radius: 12px 0 0 12px; }
+.dpad .right { right: 0; top: var(--c); border-left: 0; border-radius: 0 12px 12px 0; }
+.dpad .mid { left: var(--c); top: var(--c); border: 0; }
+.ab { --b: 76px; position: relative; flex: none; width: calc(var(--b) * 2.05); height: calc(var(--b) * 2.05); }
+.ab button { position: absolute; width: var(--b); height: var(--b); border-radius: 50%; font-size: 16px; font-weight: 700; touch-action: none; }
 .ab .ok { right: 0; top: 0; border: 2px solid var(--gold-hi); background: var(--gold); color: var(--on-gold); }
 .ab .cancel { left: 0; bottom: 0; border: 2px solid rgba(239, 230, 210, 0.35); background: var(--chip); }
 .ab button.on { filter: brightness(1.3); }
@@ -215,8 +219,11 @@ a.who-chip:hover { color: var(--text); }
   .touch .pad { flex-direction: column; justify-content: space-between; padding: max(12px, env(safe-area-inset-top)) 8px 24px; }
   .touch .pad-left { padding-left: max(8px, env(safe-area-inset-left)); }
   .touch .pad-right { padding-right: max(8px, env(safe-area-inset-right)); }
-  .touch .dpad { transform: scale(0.85); }
-  .touch .ab { transform: scale(0.85); }
+  /* 옆 칸(.pad) 너비에 맞춰 줄인다. 양쪽에 14px 씩 띄운다 */
+  .touch .pad { container-type: inline-size; align-items: center; }
+  .touch .dpad { --c: min(50px, calc((100cqw - 28px) / 3)); }
+  .touch .ab { --b: min(68px, calc((100cqw - 28px) / 2.05)); }
+  .touch .pill { min-width: 0; padding: 0 14px; }
 }
 .pad-top { display: none; }
 @media (orientation: landscape) { .touch .pad-top { display: flex; gap: 8px; align-items: center; align-self: stretch; } }
@@ -244,7 +251,7 @@ a.who-chip:hover { color: var(--text); }
     <section class="intro">
       <div>
         <span class="eyebrow">RPG MAKER 2000 · 브라우저 플레이</span>
-        <h1>LOST<br>SAGA</h1>
+        <h1>LOST <br>SAGA</h1>
         <p class="tagline">설치 없이 브라우저에서 바로 시작합니다.</p>
       </div>
       <div class="card" id="start-card">
@@ -316,7 +323,7 @@ a.who-chip:hover { color: var(--text); }
 </template>
 
 <div id="play" hidden>
-  <img class="play-bg" src="../assets/img/pic/title.png" alt="">
+  <div class="play-bg" aria-hidden="true"></div>
   <header class="play-head">
     <button type="button" class="back" data-act="home">
       <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
