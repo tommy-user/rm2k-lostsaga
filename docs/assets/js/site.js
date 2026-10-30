@@ -24,6 +24,7 @@
       "<li>" + link(["index.html", "홈"], here === "index.html") + "</li>" +
       '<li class="has-sub">' + link(INTRO[0], inIntro) + '<ul class="gnb__sub">' + sub + "</ul></li>" +
       '<li><a href="' + CAFE + '" target="_blank" rel="noopener">게시판<span class="gnb__ext" aria-hidden="true">↗</span><span class="sr">(새 창, 다음 카페 자유게시판)</span></a></li>' +
+      "<li>" + link(["play/", "게임하기"], false) + "</li>" +
       "<li>" + link(["download.html", "다운로드"], here === "download.html") + "</li>" +
       "<li>" + link(["contact.html", "문의"], here === "contact.html") + "</li>";
     gnb.className = "gnb";
