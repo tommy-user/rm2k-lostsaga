@@ -1,6 +1,0 @@
-{
-  "imports": {
-    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.49.4",
-    "fossil-delta": "npm:fossil-delta@2.0.0"
-  }
-}
