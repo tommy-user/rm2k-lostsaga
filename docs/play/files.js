@@ -2,7 +2,7 @@
 // 받은 파일은 Cache Storage 에 넣고, Service Worker(sw.js)가 플레이어에게 꺼내 준다.
 const FILES = "lostsaga-files";
 const HAVE = "lostsaga-files-have";  // localStorage: 경로 → 받아 둔 파일의 해시
-const PARALLEL = 6;
+const PARALLEL = 24;  // 작은 파일이 많아 요청마다 기다리는 시간이 대부분이다 (HTTP/2 라 한 연결로 같이 받는다)
 
 const fileKey = (url) => {
   const u = new URL(url);
