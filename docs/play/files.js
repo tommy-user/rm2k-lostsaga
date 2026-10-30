@@ -148,3 +148,44 @@ export async function prepareFiles({ onStart, onProgress }) {
   saveHave(have);
   return "ready";
 }
+
+// ---- 그림 바로 넘겨주기 ----
+// 플레이어는 그림을 처음 쓸 때마다 XMLHttpRequest 로 비동기 요청을 하고, 응답이 올 때까지 그림이 빠져
+// 화면이 깜빡인다 (한 번 쓴 그림은 메모리에 남아 이후엔 괜찮다). 그래서 그림 폴더를 미리 메모리에 올려 두고,
+// 그 파일 요청은 send() 안에서 바로 응답한다. 플레이어 소스에도 즉시 완료하는 경로가 있다 (async_handler.cpp).
+const GRAPHICS = /\/games\/[^/]+\/(Picture|System|System2|Title|CharSet|ChipSet|FaceSet|Panorama|Backdrop|Battle|Battle2|BattleCharSet|BattleWeapon|Frame|Monster|GameOver)\//i;
+
+export async function preloadGraphics() {
+  const out = new Map();
+  if (!("caches" in window)) return out;
+  const cache = await caches.open(FILES);
+  const reqs = (await cache.keys()).filter((r) => GRAPHICS.test(fileKey(r.url)));
+  await Promise.all(reqs.map(async (r) => {
+    const res = await cache.match(r);
+    if (res) out.set(fileKey(r.url), await res.arrayBuffer());
+  }));
+  return out;
+}
+
+export function installPreload(files) {
+  if (!files.size) return;
+  const Real = window.XMLHttpRequest;
+  window.XMLHttpRequest = class extends Real {
+    open(method, url, ...rest) {
+      const key = method === "GET" ? fileKey(new URL(url, location.href).href) : null;
+      this._pre = key && files.get(key);
+      if (this._pre) {
+        files.delete(key);  // 플레이어 안 파일 시스템에 들어가므로 여기서는 놓는다
+        return;
+      }
+      super.open(method, url, ...rest);
+    }
+    send(body) {
+      if (!this._pre) return super.send(body);
+      Object.defineProperty(this, "status", { value: 200 });
+      Object.defineProperty(this, "readyState", { value: 4 });
+      Object.defineProperty(this, "response", { value: this._pre });
+      this.onload?.(new ProgressEvent("load"));
+    }
+  };
+}
