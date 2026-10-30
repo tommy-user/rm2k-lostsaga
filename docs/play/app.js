@@ -1,7 +1,7 @@
 // 런처 화면: 홈(세이브 고르기) → 플레이(플레이어 + 화면 버튼).
 import { SaveSync, readLocalSaves } from "./sync.js";
 import { parseLsd } from "./lsd.js";
-import { registerWorker, prepareFiles } from "./files.js";
+import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -205,6 +205,7 @@ async function launch(args, title) {
   $("#play").hidden = false;
   scrollTo(0, 0);  // 홈에서 내려 둔 스크롤이 남으면 모바일에서 터치 위치가 어긋난다
   // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다. 엔진은 exe 크기로 판별하지 못해 직접 정한다.
+  installPreload(await graphics);
   history.replaceState(null, "", `?game=lostsaga&engine=rpg2kv150${args}${dev}`);
   const player = await createEasyRpgPlayer({ game: "lostsaga" });
   history.replaceState(null, "", location.pathname + search);
@@ -337,6 +338,11 @@ async function getFiles() {
 // ---- 시작 ----
 
 await Promise.all([getFiles(), offline ? setStatus("offline", "오프라인") : sync.start()]);
+// 홈을 보는 동안 그림 파일을 메모리에 올려 둔다 (게임을 시작할 때 기다린다).
+const graphics = preloadGraphics().catch((e) => {
+  console.warn("[launcher] preload", e);
+  return new Map();
+});
 // Google 로그인에서 돌아오면 주소 뒤에 토큰이 붙어 있다. 읽은 뒤 지운다.
 if (location.hash && !location.hash.startsWith("#account")) history.replaceState(null, "", location.pathname + location.search);
 await renderHome();
