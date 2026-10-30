@@ -112,7 +112,12 @@ a.who-chip:hover { color: var(--text); }
 
 @media (max-width: 860px) {
   .home-head nav { display: none; }
-  .home-head .sync { max-width: 62vw; }
+  /* 휴대폰: 상태 알약은 글자가 다 보이게 두고, 남는 폭을 이메일 칩이 받아 줄여 보이게 한다 */
+  .home-head { gap: 8px; }
+  .home-head .brand { flex: none; font-size: 18px; }
+  .home-head .spacer { display: none; }
+  .home-head .sync { flex: none; max-width: none; padding: 6px 12px; font-size: 13px; margin-left: auto; }
+  .home-head .who-chip { flex: 0 1 auto; min-width: 0; max-width: none; padding: 0 10px; }
   #version { display: none; }
   /* 휴대폰: 일러스트를 오른쪽 위에 작게 깔고 제목을 그 위에 겹쳐, 첫 화면에 이어하기 카드까지 들어오게 한다 */
   .home-main { flex-direction: column; padding-top: 0; gap: 0; }
