@@ -21,6 +21,7 @@ self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
   const url = req.url.split(/[?#]/)[0];
+  if (url.startsWith(base + "packs/")) return;  // 묶음은 런처가 풀어서 저장하므로 따로 두지 않는다
   if (url.startsWith(base) && /^(games|player|bases)\//.test(url.slice(base.length))) {
     e.respondWith(caches.open(FILES).then(async (c) => (await c.match(fileKey(url))) ?? fetch(req)));
   } else if (url.startsWith(site) || SHELL_HOSTS.some((h) => url.startsWith(h))) {
