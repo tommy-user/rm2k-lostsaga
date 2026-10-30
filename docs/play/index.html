@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0D0F14">
+<title>로스트사가 플레이</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root {
+  --ground: #0D0F14; --panel: #161922; --panel-2: rgba(22, 25, 34, 0.94); --chip: rgba(42, 38, 32, 0.92);
+  --text: #EFE6D2; --soft: #D8CDB6; --muted: #B5AA94; --faint: #9C927E;
+  --gold: #D9A84E; --gold-hi: #E8BE68; --on-gold: #1A1408; --warn: #E08A5E;
+  --line: rgba(239, 230, 210, 0.14); --line-gold: rgba(217, 168, 78, 0.4);
+  --display: Cinzel, "Gowun Batang", serif; --serif: "Gowun Batang", serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ground); color: var(--text);
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+a { color: #E9C77A; }
+a:hover { color: #F5DDA4; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 2px; }
+[hidden] { display: none !important; }
+svg { flex: none; }
+
+/* ---------- 공통 ---------- */
+.brand { font-family: var(--display); font-weight: 700; letter-spacing: 0.08em; color: var(--gold); text-decoration: none; white-space: nowrap; }
+.sync { display: inline-flex; align-items: center; gap: 8px; min-width: 0; padding: 7px 14px; border-radius: 999px;
+  background: rgba(13, 15, 20, 0.7); border: 1px solid var(--line); font-size: 13px; color: var(--soft); }
+.sync span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sync::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
+.sync[data-state="ok"] { border-color: var(--line-gold); }
+.sync[data-state="ok"]::before { background: var(--gold); }
+.sync[data-state="busy"]::before { background: #7FA7D9; }
+.sync[data-state="error"]::before, .sync[data-state="offline"]::before { background: var(--warn); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 16px;
+  border-radius: 10px; border: 1px solid rgba(217, 168, 78, 0.45); background: transparent; font-size: 15px; }
+.btn:hover { background: rgba(217, 168, 78, 0.1); }
+.btn:disabled { opacity: 0.45; cursor: default; }
+.btn-primary { min-height: 56px; border: 0; background: var(--gold); color: var(--on-gold); font-size: 18px; font-weight: 700; }
+.btn-primary:hover { background: var(--gold-hi); }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px;
+  border: 1px solid var(--line); background: transparent; }
+.icon-btn:hover { background: rgba(239, 230, 210, 0.08); }
+
+/* ---------- 홈 ---------- */
+#home { position: relative; min-height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+.home-bg { position: absolute; inset: 0 0 auto 0; width: 100%; height: 100%; max-height: 980px; object-fit: cover;
+  object-position: center 35%; image-rendering: pixelated; }
+.home-shade { position: absolute; inset: 0; background:
+  linear-gradient(90deg, rgba(13,15,20,0.95) 0%, rgba(13,15,20,0.8) 38%, rgba(13,15,20,0.3) 68%, rgba(13,15,20,0.55) 100%),
+  linear-gradient(0deg, var(--ground) 0%, rgba(13,15,20,0) 45%); }
+.home-head { position: relative; display: flex; align-items: center; gap: 20px; padding: 16px max(16px, 4vw);
+  border-bottom: 1px solid rgba(217, 168, 78, 0.22); }
+.home-head .brand { font-size: 22px; }
+.home-head nav { display: flex; gap: 4px; }
+.home-head nav a { padding: 10px 12px; font-size: 15px; color: var(--muted); text-decoration: none; }
+.home-head nav a:hover { color: var(--text); }
+.home-head .spacer { flex: 1 1 auto; }
+.home-main { position: relative; flex: 1 1 auto; display: flex; gap: 32px; padding: 40px max(16px, 4vw) 24px; }
+.intro { flex: 1 1 460px; max-width: 560px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+.eyebrow { font-size: 14px; letter-spacing: 0.2em; color: var(--gold); }
+.intro h1 { margin: 8px 0; font-family: var(--display); font-weight: 700; font-size: clamp(48px, 7vw, 88px); line-height: 0.95;
+  letter-spacing: 0.04em; color: var(--gold-hi); }
+.tagline { margin: 0; font-family: var(--serif); font-size: 20px; }
+.card { display: flex; flex-direction: column; gap: 14px; padding: 18px; border-radius: 16px; background: rgba(13, 15, 20, 0.82);
+  border: 1px solid rgba(217, 168, 78, 0.35); }
+.save-sum { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.save-sum .when { font-size: 13px; color: var(--muted); }
+.save-sum .who { font-size: 20px; font-weight: 700; }
+.save-sum .where { font-size: 15px; color: var(--soft); }
+.card .row { display: flex; gap: 10px; }
+.card .row .btn { flex: 1 1 0; }
+.art { position: relative; flex: 1 1 480px; min-height: 560px; }
+.art img { position: absolute; left: 50%; bottom: 0; height: 100%; transform: translateX(-50%);
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.7)); }
+.art figcaption { position: absolute; right: 0; top: 8px; text-align: right; font-family: var(--serif); font-size: 22px; }
+.saves { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 8px max(16px, 4vw) 32px; }
+.saves-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.saves h2 { margin: 0; font-family: var(--serif); font-size: 26px; color: var(--gold-hi); }
+.saves-head span { font-size: 13px; color: var(--muted); }
+#slot-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.slot { display: flex; align-items: center; gap: 12px; padding: 12px 10px 12px 16px; border-radius: 14px; background: var(--panel);
+  border: 1px solid var(--line); }
+.slot.latest { border-color: rgba(217, 168, 78, 0.45); }
+.slot .save-sum { flex: 1 1 auto; }
+.slot .save-sum .when { font-size: 12px; }
+.slot .save-sum .who { font-size: 16px; }
+.slot .save-sum .where { font-size: 13px; color: var(--muted); }
+.slot .btn { min-height: 44px; padding: 0 12px; font-size: 14px; }
+.account { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 14px 16px; border-radius: 14px;
+  background: var(--panel); border: 1px solid var(--line); }
+.account.warn { border-color: rgba(224, 138, 94, 0.6); }
+.account > div { flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.account strong { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.account span { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.account .actions { flex: 0 0 auto; display: flex; gap: 8px; }
+.account .btn { min-height: 44px; font-size: 14px; }
+.btn-google { gap: 10px; border-color: rgba(239, 230, 210, 0.3); }
+.who-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: rgba(13, 15, 20, 0.7); font-size: 13px; color: var(--soft); text-decoration: none;
+  max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+a.who-chip:hover { color: var(--text); }
+.note { margin: 0; padding: 12px 14px; border-radius: 14px; border: 1px dashed rgba(239, 230, 210, 0.22);
+  font-size: 13px; line-height: 1.6; color: var(--muted); }
+.home-foot { position: relative; padding: 12px max(16px, 4vw) 20px; font-size: 12px; color: var(--faint); }
+.home-foot a { color: var(--muted); }
+
+@media (max-width: 860px) {
+  .home-head nav { display: none; }
+  .home-head .sync { max-width: 62vw; }
+  #version { display: none; }
+  .home-main { flex-direction: column-reverse; justify-content: flex-end; padding-top: 0; gap: 0; }
+  .art { flex: none; min-height: 0; height: 330px; }
+  .art img { left: auto; right: -24px; transform: none; }
+  .art figcaption { display: none; }
+  .intro { flex: none; gap: 16px; }
+  .intro h1 { margin: 0; }
+  .eyebrow, .tagline { font-size: 15px; }
+  .card { padding: 14px; }
+  .save-sum .who { font-size: 17px; }
+  #slot-list { grid-template-columns: 1fr; }
+}
+
+/* ---------- 플레이 ---------- */
+#play { position: fixed; inset: 0; display: flex; flex-direction: column; background: var(--ground); }
+.play-bg { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover;
+  filter: blur(28px) brightness(0.3); }
+.play-head { position: relative; display: flex; align-items: center; gap: 12px; min-height: 56px;
+  padding: 6px max(8px, env(safe-area-inset-left)) 6px 8px; background: rgba(13, 15, 20, 0.75);
+  border-bottom: 1px solid rgba(217, 168, 78, 0.22); }
+.play-head .back { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 10px; border: 0;
+  border-radius: 10px; background: transparent; font-size: 15px; }
+.play-head .back:hover { background: rgba(239, 230, 210, 0.08); }
+.play-head .brand { font-size: 17px; }
+#play-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; color: var(--muted); }
+.play-head .sync { margin-left: auto; }
+.stage { position: relative; flex: 1 1 auto; min-height: 0; display: grid; gap: 24px; padding: 24px 32px;
+  grid-template-columns: minmax(0, 1fr) 300px; }
+.screen { position: relative; min-width: 0; min-height: 0; display: flex; align-items: center; justify-content: center; }
+#canvas { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; outline: none; }
+#status { position: absolute; color: var(--muted); font-size: 15px; }
+.keys { display: flex; flex-direction: column; gap: 16px; align-self: start; }
+.keys section { display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 14px; background: rgba(13, 15, 20, 0.78);
+  border: 1px solid var(--line); }
+.keys h2 { margin: 0; font-family: var(--serif); font-size: 18px; color: var(--gold-hi); }
+.keys dl { display: grid; grid-template-columns: auto auto; justify-content: space-between; gap: 10px 12px; margin: 0; font-size: 14px; }
+.keys dt { color: #C8BDA6; }
+.keys dd { margin: 0; text-align: right; }
+.keys p { margin: 0; font-size: 12px; color: var(--faint); }
+.keys p a { color: var(--muted); }
+.pad { display: none; }
+
+@media (max-width: 1100px) {
+  .stage { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+  .keys { display: none; }
+}
+@media (max-width: 600px) {
+  .play-head .brand { display: none; }
+  .play-head .sync { max-width: 46vw; }
+}
+
+/* 터치 기기: 화면 버튼 */
+.touch .keys { display: none; }
+.touch .pad { position: relative; display: flex; align-items: center; justify-content: center; gap: 16px;
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; touch-action: none; }
+.dpad { position: relative; width: 168px; height: 168px; touch-action: none; }
+.dpad i { position: absolute; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px;
+  background: var(--chip); border: 1px solid rgba(239, 230, 210, 0.18); color: var(--text); }
+.dpad i.on { background: rgba(217, 168, 78, 0.45); }
+.dpad .up { left: 56px; top: 0; border-bottom: 0; border-radius: 12px 12px 0 0; }
+.dpad .down { left: 56px; bottom: 0; border-top: 0; border-radius: 0 0 12px 12px; }
+.dpad .left { left: 0; top: 56px; border-right: 0; border-radius: 12px 0 0 12px; }
+.dpad .right { right: 0; top: 56px; border-left: 0; border-radius: 0 12px 12px 0; }
+.dpad .mid { left: 56px; top: 56px; border: 0; }
+.ab { position: relative; width: 156px; height: 156px; }
+.ab button { position: absolute; width: 76px; height: 76px; border-radius: 50%; font-size: 16px; font-weight: 700; touch-action: none; }
+.ab .ok { right: 0; top: 0; border: 2px solid var(--gold-hi); background: var(--gold); color: var(--on-gold); }
+.ab .cancel { left: 0; bottom: 0; border: 2px solid rgba(239, 230, 210, 0.35); background: var(--chip); }
+.ab button.on { filter: brightness(1.3); }
+.pill { min-width: 88px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(239, 230, 210, 0.25);
+  background: rgba(13, 15, 20, 0.7); font-size: 14px; touch-action: none; }
+.pill.on { background: rgba(217, 168, 78, 0.35); }
+
+/* 세로: 화면 아래에 버튼 */
+@media (orientation: portrait) {
+  .touch .stage { grid-template: "screen screen" auto "left right" minmax(0, 1fr) / 1fr 1fr; gap: 0; padding: 0; }
+  .touch .screen { grid-area: screen; aspect-ratio: 4 / 3; border-block: 1px solid rgba(217, 168, 78, 0.35); }
+  .touch .pad-left { grid-area: left; }
+  .touch .pad-right { grid-area: right; }
+  .touch .pad-left { justify-content: flex-start; padding-left: 22px; }
+  .touch .pad-right { flex-direction: column; justify-content: center; padding-right: 22px; align-items: flex-end; }
+}
+/* 가로: 양옆에 버튼, 머리줄 숨김 */
+@media (orientation: landscape) {
+  .touch .play-head { display: none; }
+  .touch .stage { grid-template-columns: minmax(150px, 1fr) auto minmax(150px, 1fr); gap: 0; padding: 0; }
+  .touch .screen { height: 100dvh; aspect-ratio: 4 / 3; max-width: calc(100vw - 300px); }
+  .touch .pad { flex-direction: column; justify-content: space-between; padding: max(12px, env(safe-area-inset-top)) 8px 24px; }
+  .touch .pad-left { padding-left: max(8px, env(safe-area-inset-left)); }
+  .touch .pad-right { padding-right: max(8px, env(safe-area-inset-right)); }
+  .touch .dpad { transform: scale(0.85); }
+  .touch .ab { transform: scale(0.85); }
+}
+.pad-top { display: none; }
+@media (orientation: landscape) { .touch .pad-top { display: flex; gap: 8px; align-items: center; align-self: stretch; } }
+.pad-top .sync { padding: 6px 10px; font-size: 11px; }
+</style>
+</head>
+<body>
+<div id="home">
+  <img class="home-bg" src="../assets/img/pic/title.png" alt="">
+  <div class="home-shade" aria-hidden="true"></div>
+  <header class="home-head">
+    <a class="brand" href="../index.html">LOST SAGA</a>
+    <nav aria-label="사이트">
+      <a href="../intro.html">게임 소개</a>
+      <a href="../characters.html">직업</a>
+      <a href="../download.html">PC판 받기</a>
+    </nav>
+    <span class="spacer"></span>
+    <span class="who-chip" id="version" hidden></span>
+    <div class="sync" data-state="busy" role="status"><span>연결 중</span></div>
+    <a class="who-chip" id="who-chip" href="#account" hidden></a>
+  </header>
+
+  <main class="home-main">
+    <section class="intro">
+      <div>
+        <span class="eyebrow">RPG MAKER 2000 · 브라우저 플레이</span>
+        <h1>LOST<br>SAGA</h1>
+        <p class="tagline">설치 없이 브라우저에서 바로 시작합니다.</p>
+      </div>
+      <div class="card" id="start-card">
+        <div class="save-sum" id="latest" hidden>
+          <span class="when"></span>
+          <span class="who"></span>
+          <span class="where"></span>
+        </div>
+        <p class="save-sum" id="no-save" hidden><span class="who">세이브 없음</span><span class="where">새 게임으로 시작합니다.</span></p>
+        <button type="button" class="btn btn-primary" id="btn-continue" disabled>
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"></path></svg>
+          <span>불러오는 중</span>
+        </button>
+        <div class="row">
+          <button type="button" class="btn" id="btn-new" disabled>새로 시작</button>
+          <button type="button" class="btn" id="btn-title" disabled>타이틀 화면</button>
+        </div>
+      </div>
+    </section>
+    <figure class="art" aria-hidden="true">
+      <img id="art-img" src="../assets/img/illust/warrior_m.webp" alt="">
+      <figcaption id="art-name">워리어 카이져</figcaption>
+    </figure>
+  </main>
+
+  <section class="saves" aria-labelledby="saves-h">
+    <div class="saves-head">
+      <h2 id="saves-h">세이브</h2>
+      <span id="saves-meta"></span>
+    </div>
+    <ol id="slot-list"></ol>
+    <div class="account" id="account" hidden>
+      <div>
+        <strong id="acct-title"></strong>
+        <span id="acct-note"></span>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn" id="acct-cancel" hidden>취소</button>
+        <button type="button" class="btn btn-google" id="acct-btn">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <p class="note">웹판은 새 게임부터 시작합니다. PC 세이브는 가져올 수 없습니다. 웹 세이브는 내보내서 PC판에서 쓸 수 있습니다.</p>
+  </section>
+  <footer class="home-foot">엔진: EasyRPG Player 0.8.1.1 (GPLv3) · <a href="https://github.com/EasyRPG/Player/tree/0.8.1.1">소스</a> · <a href="../privacy.html">개인정보처리방침</a></footer>
+</div>
+
+<template id="slot-tpl">
+  <li class="slot">
+    <div class="save-sum"><span class="when"></span><span class="who"></span><span class="where"></span></div>
+    <button type="button" class="icon-btn" data-act="export">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+    </button>
+    <button type="button" class="btn" data-act="load">이어하기</button>
+  </li>
+</template>
+
+<div id="play" hidden>
+  <img class="play-bg" src="../assets/img/pic/title.png" alt="">
+  <header class="play-head">
+    <button type="button" class="back" data-act="home">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      홈
+    </button>
+    <span class="brand">LOST SAGA</span>
+    <span id="play-title"></span>
+    <div class="sync" data-state="busy" role="status"><span>연결 중</span></div>
+    <button type="button" class="icon-btn" id="btn-full" aria-label="전체 화면">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5"></path><path d="M20 9V4h-5"></path><path d="M4 15v5h5"></path><path d="M20 15v5h-5"></path></svg>
+    </button>
+  </header>
+  <div class="stage">
+    <div class="pad pad-left">
+      <div class="pad-top">
+        <button type="button" class="icon-btn" data-act="home" aria-label="홈으로">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+        </button>
+      </div>
+      <div class="dpad" id="dpad" role="group" aria-label="방향">
+        <i class="up" data-key="ArrowUp"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7l6 9H6z"></path></svg></i>
+        <i class="left" data-key="ArrowLeft"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 12l9-6v12z"></path></svg></i>
+        <i class="mid"></i>
+        <i class="right" data-key="ArrowRight"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12l-9 6V6z"></path></svg></i>
+        <i class="down" data-key="ArrowDown"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17l-6-9h12z"></path></svg></i>
+      </div>
+    </div>
+    <div class="screen">
+      <canvas id="canvas" tabindex="-1" aria-label="게임 화면"></canvas>
+      <div id="status"></div>
+    </div>
+    <div class="pad pad-right">
+      <div class="pad-top"><div class="sync" data-state="busy" role="status"><span>연결 중</span></div></div>
+      <div class="ab">
+        <button type="button" class="ok" data-key="Enter">결정</button>
+        <button type="button" class="cancel" data-key="Escape">취소</button>
+      </div>
+      <button type="button" class="pill" data-key="ShiftLeft">Shift</button>
+    </div>
+    <aside class="keys">
+      <section>
+        <h2>조작</h2>
+        <dl>
+          <dt>이동</dt><dd>방향키</dd>
+          <dt>결정</dt><dd>Z · Enter · Space</dd>
+          <dt>취소 · 메뉴</dt><dd>X · Esc</dd>
+          <dt>능력치 분배</dt><dd>Shift</dd>
+        </dl>
+      </section>
+      <section>
+        <h2>저장</h2>
+        <p id="save-note">게임에서 저장하면 자동으로 백업됩니다. 다른 기기에서 이어 하려면 계정 연결이 필요합니다 (준비 중).</p>
+      </section>
+      <p>엔진: EasyRPG Player 0.8.1.1 (GPLv3) · <a href="https://github.com/EasyRPG/Player/tree/0.8.1.1">소스</a></p>
+    </aside>
+  </div>
+</div>
+
+<script src="player/index.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

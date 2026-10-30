@@ -57,7 +57,7 @@
     foot.innerHTML =
       '<div class="foot__in">' +
       "<p>로스트사가 (LOST-SAGA Expansion Quest)<br>원작 히어로소프트. RPG Maker 2000.</p>" +
-      '<p><a href="download.html">다운로드</a> · <a href="' + CAFE + '" target="_blank" rel="noopener">게시판</a> · <a href="contact.html">문의</a></p></div>';
+      '<p><a href="download.html">다운로드</a> · <a href="' + CAFE + '" target="_blank" rel="noopener">게시판</a> · <a href="contact.html">문의</a> · <a href="privacy.html">개인정보처리방침</a></p></div>';
   }
 
   // 새 버전 알림: 다운로드 버튼을 누른 적 있는 방문자에게만, 그 뒤 정식 릴리즈가 나오면 머리 아래에 띄운다
