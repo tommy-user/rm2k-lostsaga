@@ -188,8 +188,21 @@ function renderAccount(saveCount) {
 let authErrorShown = false;
 
 // 정식(Google) 계정만 닉네임을 정한다. 랭킹 등 남에게 보이는 곳에는 닉네임과 고유 아이디(#XXXXXX)가 나간다.
+// 서버(set_nickname)와 같은 규칙. 저장하기 전에 무엇이 틀렸는지 바로 알려 주려고 여기서도 본다.
+const NICK_CHARS = /^[가-힣ㄱ-ㅎㅏ-ㅣA-Za-z0-9 _.~!?'^*♡♥☆★♪♬·-]+$/;
+const NICK_LETTER = /[가-힣ㄱ-ㅎㅏ-ㅣA-Za-z0-9]/;
+const NICK_SYMBOLS = "_ - . ~ ! ? ' ^ * ♡ ♥ ☆ ★ ♪ ♬ ·";
+const nickNormal = (s) => s.normalize("NFC").trim().replace(/\s+/g, " ");
+function nickProblem(s) {
+  const n = nickNormal(s);
+  if ([...n].length < 2 || [...n].length > 12) return "2~12자로 정해 주세요.";
+  const bad = [...new Set([...n].filter((c) => !NICK_CHARS.test(c)))];
+  if (bad.length) return `쓸 수 없는 글자: ${bad.join(" ")} (한글·영문·숫자·띄어쓰기와 ${NICK_SYMBOLS})`;
+  if (!NICK_LETTER.test(n)) return "글자나 숫자를 하나는 넣어 주세요.";
+  return null;
+}
 const NICK_ERRORS = {
-  invalid: "2~12자, 한글·영문·숫자·밑줄만 쓸 수 있습니다.",
+  invalid: `2~12자. 한글·영문·숫자·띄어쓰기와 기호 ${NICK_SYMBOLS} 를 쓸 수 있습니다.`,
   banned: "쓸 수 없는 닉네임입니다.",
   too_soon: "닉네임은 하루에 한 번 바꿀 수 있습니다.",
   anonymous: "Google 계정으로 로그인하면 닉네임을 정할 수 있습니다.",
@@ -214,9 +227,15 @@ async function renderNickname() {
   show(profile);
   form.onsubmit = async (ev) => {
     ev.preventDefault();
+    const problem = nickProblem(input.value);
+    if (problem) {
+      msg.className = "err";
+      msg.textContent = problem;
+      return;
+    }
     btn.disabled = true;
     try {
-      const r = await sync.setNickname(input.value);
+      const r = await sync.setNickname(nickNormal(input.value));
       if (r === "ok") {
         profile = await sync.myProfile();
         show(profile);
