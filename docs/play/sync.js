@@ -185,6 +185,20 @@ export class SaveSync {
     if (error) throw error;
   }
 
+  // 내 닉네임과 고유 아이디. 아직 정하지 않았으면 null.
+  async myProfile() {
+    const { data, error } = await this.sb.rpc("my_profile");
+    if (error) throw error;
+    return data?.[0] ?? null;
+  }
+
+  // 닉네임을 정하거나 바꾼다. 결과: ok | anonymous | invalid | banned | too_soon
+  async setNickname(nickname) {
+    const { data, error } = await this.sb.rpc("set_nickname", { p_nickname: nickname });
+    if (error) throw error;
+    return data;
+  }
+
   async signOut() {
     await this.sb.auth.signOut({ scope: "local" });
   }

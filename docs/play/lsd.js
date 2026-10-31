@@ -1,5 +1,5 @@
 // RPG Maker 2000 세이브(.lsd) 에서 요약에 필요한 값만 읽는다.
-// supabase/functions/upload-save/lsd.ts 와 같은 내용이다. 한쪽을 고치면 다른 쪽도 고친다.
+// 서버(Edge Function)의 lsd.ts 와 같은 내용이다. 한쪽을 고치면 다른 쪽도 고친다.
 
 function ber(b, i) {
   let v = 0;

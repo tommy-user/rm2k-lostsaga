@@ -139,6 +139,7 @@ function renderAccount(saveCount) {
   box.hidden = offline || !sync.user;
   $("#who-chip").hidden = box.hidden;
   if (box.hidden) return;
+  $("#nick-form").hidden = true;
   const btn = $("#acct-btn");
   const cancel = $("#acct-cancel");
   const set = (title, note, label, action, warn = false) => {
@@ -177,6 +178,7 @@ function renderAccount(saveCount) {
     }
   } else if (!sync.anonymous) {
     set(sync.accountName, "Google 계정입니다. 다른 기기에서도 이 계정으로 로그인하면 이어 할 수 있습니다.", "로그아웃", logout);
+    renderNickname();
   } else if (saveCount) {
     set("게스트", "이 브라우저에만 연결된 계정입니다. Google 계정을 연결하면 다른 기기에서 이어 할 수 있습니다.", "Google 계정 연결", link);
   } else {
@@ -184,6 +186,53 @@ function renderAccount(saveCount) {
   }
 }
 let authErrorShown = false;
+
+// 정식(Google) 계정만 닉네임을 정한다. 랭킹 등 남에게 보이는 곳에는 닉네임과 고유 아이디(#XXXXXX)가 나간다.
+const NICK_ERRORS = {
+  invalid: "2~12자, 한글·영문·숫자·밑줄만 쓸 수 있습니다.",
+  banned: "쓸 수 없는 닉네임입니다.",
+  too_soon: "닉네임은 하루에 한 번 바꿀 수 있습니다.",
+  anonymous: "Google 계정으로 로그인하면 닉네임을 정할 수 있습니다.",
+};
+async function renderNickname() {
+  if (!sync.online) return;
+  const form = $("#nick-form"), input = $("#nick-input"), btn = $("#nick-btn"), msg = $("#nick-msg");
+  const show = (profile) => {
+    input.value = profile?.nickname ?? "";
+    btn.textContent = profile ? "바꾸기" : "정하기";
+    msg.className = "";
+    msg.textContent = profile ? `고유 아이디 #${profile.public_id}` : "랭킹 등에 보이는 이름입니다. 한 번 정하면 하루에 한 번 바꿀 수 있습니다.";
+    form.hidden = false;
+  };
+  let profile = null;
+  try {
+    profile = await sync.myProfile();
+  } catch (e) {
+    console.warn("[launcher] profile", e);
+    return;
+  }
+  show(profile);
+  form.onsubmit = async (ev) => {
+    ev.preventDefault();
+    btn.disabled = true;
+    try {
+      const r = await sync.setNickname(input.value);
+      if (r === "ok") {
+        profile = await sync.myProfile();
+        show(profile);
+        msg.textContent = `저장했습니다. 고유 아이디 #${profile.public_id}`;
+      } else {
+        msg.className = "err";
+        msg.textContent = NICK_ERRORS[r] ?? "저장하지 못했습니다.";
+      }
+    } catch (e) {
+      console.warn("[launcher] nickname", e);
+      msg.className = "err";
+      msg.textContent = "저장하지 못했습니다. 잠시 뒤 다시 해 주세요.";
+    }
+    btn.disabled = false;
+  };
+}
 
 async function newGame() {
   if (started) return;
