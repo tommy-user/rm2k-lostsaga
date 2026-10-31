@@ -295,7 +295,7 @@ a.who-chip:hover { color: var(--text); }
         <span id="acct-note"></span>
         <form class="nick" id="nick-form" hidden>
           <label for="nick-input">닉네임</label>
-          <input id="nick-input" maxlength="12" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="2~12자">
+          <input id="nick-input" maxlength="20" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="2~12자" aria-describedby="nick-msg">
           <button type="submit" class="btn" id="nick-btn">정하기</button>
           <span id="nick-msg" role="status"></span>
         </form>
