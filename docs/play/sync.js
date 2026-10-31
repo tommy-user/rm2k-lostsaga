@@ -103,6 +103,14 @@ function base64(b) {
   return btoa(s);
 }
 
+// 이 런처가 받은 게임의 버전(릴리즈 태그). 세이브를 올릴 때 같이 보낸다. 못 읽으면 null.
+let clientVersion;
+function getClientVersion() {
+  clientVersion ??= fetch("version.json", { cache: "no-cache" })
+    .then((r) => r.json()).then((v) => (typeof v.game === "string" ? v.game : null)).catch(() => null);
+  return clientVersion;
+}
+
 // ---- 동기화 ----
 
 export class SaveSync {
@@ -420,7 +428,7 @@ export class SaveSync {
       method: "POST",
       headers: { Authorization: `Bearer ${session.access_token}`, apikey: SUPABASE_ANON_KEY, "Content-Type": "application/json" },
       body: JSON.stringify({
-        slot, run_id: run, parent_hash: parent, game_version: BASE_SAVE,
+        slot, run_id: run, parent_hash: parent, game_version: BASE_SAVE, client_version: await getClientVersion(),
         data: base64(await pipe(bytes, new CompressionStream("gzip"))),
       }),
     });
