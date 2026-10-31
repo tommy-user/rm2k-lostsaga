@@ -112,6 +112,7 @@ export class SaveSync {
     this.sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     this.known = new Map();  // 해시 → {run, parent, save_count, frame_count}
     this.synced = {};        // 슬롯 → 마지막으로 클라우드와 맞춘 해시
+    this.slotRuns = new Map();  // 슬롯 → 클라우드의 지금 세이브가 속한 플레이(run)
     this.busy = Promise.resolve();
     this.online = false;
   }
@@ -199,6 +200,42 @@ export class SaveSync {
     return data;
   }
 
+  // 내 대표 캐릭터 {run_id, chosen_at, next_change_at, look}. 없으면 null.
+  async myRepresentative() {
+    const { data, error } = await this.sb.rpc("my_representative");
+    if (error) throw error;
+    return data?.[0] ?? null;
+  }
+
+  // 슬롯의 세이브(그 플레이)를 대표 캐릭터로 정한다. 결과: ok | anonymous | no_save | too_soon
+  async setRepresentative(slot) {
+    const { data, error } = await this.sb.rpc("set_representative", { p_slot: slot });
+    if (error) throw error;
+    return data;
+  }
+
+  // 랭킹: kind = growth | adventure | wave. 위에서 limit 명과, 그 밖이면 내 줄(me)을 같이 받는다.
+  async ranking(kind, job = null, limit = 100) {
+    const { data, error } = await this.sb.rpc("ranking", { p_kind: kind, p_job: job, p_limit: limit });
+    if (error) throw error;
+    return data ?? [];
+  }
+
+  // 이름에 금칙어가 있는지 (서버의 금칙어 표로 본다).
+  async nameBanned(name) {
+    const { data, error } = await this.sb.rpc("name_banned", { p_name: name });
+    if (error) throw error;
+    return !!data;
+  }
+
+  // 런처에서 고친 세이브(이름 바꾸기)를 기기에 쓰고 클라우드에 올린다. 저장 횟수를 1 올린 세이브라 계보가 이어진다.
+  async replaceSave(slot, bytes) {
+    await writeLocalSave(slot, bytes, new Date());
+    await this.enqueue(slot, bytes, false);
+    this.flushSoon();
+    await this.busy;  // 대표 캐릭터·랭킹이 새 이름으로 바뀐 뒤에 화면을 다시 그리도록 올리기를 기다린다
+  }
+
   async signOut() {
     await this.sb.auth.signOut({ scope: "local" });
   }
@@ -228,6 +265,7 @@ export class SaveSync {
       });
     }
     const local = await readLocalSaves();
+    this.slotRuns = new Map(rows.filter((r) => r.kind === "current").map((r) => [r.slot, r.run_id]));
     for (const r of rows.filter((r) => r.kind === "current")) {
       const cloudHash = r.hash.slice(2);
       const localBytes = local.get(r.slot)?.bytes;

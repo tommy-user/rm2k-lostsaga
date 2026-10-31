@@ -69,9 +69,55 @@ function mapNames(file) {
   }
   return names;
 }
+// 랭킹·대표 캐릭터에 캐릭터를 그리려고 RPG_RT.ldb 에서 액터 id → [이름, 직함, 걷기 그림, 번호, 얼굴, 번호] 를 뽑는다.
+// 세이브에는 게임 중에 바뀐 값만 들어 있어서 나머지는 이 값을 쓴다.
+function actorLooks(file) {
+  const b = fs.readFileSync(file);
+  let i = 0;
+  const ber = () => {
+    let v = 0;
+    for (;;) {
+      const c = b[i++];
+      v = v * 128 + (c & 0x7f);
+      if (!(c & 0x80)) return v;
+    }
+  };
+  const head = ber();
+  i += head;  // "LcfDataBase"
+  const cp949 = new TextDecoder("euc-kr");
+  const looks = {};
+  while (i < b.length) {
+    const id = ber();
+    const size = ber();
+    if (id !== 0x0b) {  // 액터 목록만 본다
+      i += size;
+      continue;
+    }
+    for (let n = ber(); n > 0; n--) {
+      const actor = ber();
+      const a = ["", "", "", 0, "", 0];
+      for (let c = ber(); c !== 0; c = ber()) {
+        const sz = ber();
+        const at = i;
+        const s = () => cp949.decode(b.subarray(at, at + sz));
+        if (c === 0x01) a[0] = s();
+        else if (c === 0x02) a[1] = s();
+        else if (c === 0x03) a[2] = s();
+        else if (c === 0x04) a[3] = ber();
+        else if (c === 0x0f) a[4] = s();
+        else if (c === 0x10) a[5] = ber();
+        i = at + sz;
+      }
+      looks[actor] = a;
+    }
+    break;
+  }
+  return looks;
+}
 // 런처가 보여 줄 게임 버전 (배포 때 GAME_TAG 로 릴리즈 태그를 준다)
 fs.writeFileSync(path.join(out, "play/version.json"), JSON.stringify({ game: process.env.GAME_TAG ?? "dev", built: new Date().toISOString() }));
 fs.writeFileSync(path.join(out, "play/maps.json"), JSON.stringify(mapNames(path.join(gameSrc, "RPG_RT.lmt"))));
+fs.writeFileSync(path.join(out, "play/actors.json"), JSON.stringify(actorLooks(path.join(gameSrc, "RPG_RT.ldb"))));
 
 const index = { metadata: { version: 2, date: new Date().toISOString().slice(0, 10) }, cache: walk(game, 4, true) };
 fs.writeFileSync(path.join(game, "index.json"), JSON.stringify(index));
