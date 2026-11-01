@@ -441,6 +441,8 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
 #play.editing [data-pad].sel { outline: 2px solid var(--gold-hi); }
 #play.editing .pad-top > :not([data-pad]), #play.editing .quick > :not([data-pad]), #play.editing .speed-badge { visibility: hidden; }
 #pad-edit { position: fixed; z-index: 6; display: flex; flex-direction: column; overflow: auto; }
+/* 고른 버튼은 편집 칸 위에 그린다. 나머지는 편집 칸 아래 (설정을 가리지 않게). 편집 칸은 버튼을 덜 가리는 높이로 pad.js 가 옮긴다 */
+#play.editing [data-pad].sel { z-index: 8 !important; }
 .pe-head { display: flex; align-items: center; gap: 10px; flex: none; min-height: 56px; padding: 0 12px 0 16px; background: var(--panel);
   border-bottom: 1px solid var(--line-gold); }
 .pe-head strong { flex: 1 1 auto; font-size: 16px; color: var(--gold-hi); }
@@ -448,8 +450,9 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
 .pe-done { height: 40px; padding: 0 16px; border: 0; border-radius: 10px; background: var(--gold); color: var(--on-gold); font-size: 14px; font-weight: 700; }
 .pe-sheet { flex: none; margin-top: auto; display: flex; flex-direction: column; gap: 12px; padding: 16px 18px 18px; background: var(--panel);
   border-top: 1px solid var(--line); border-radius: 18px 18px 0 0; }
-.pe-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-.pe-top strong { font-size: 15px; }
+.pe-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pe-top select { min-width: 0; height: 36px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--line-gold);
+  background: rgba(13, 15, 20, 0.7); color: var(--text); font: inherit; font-size: 15px; font-weight: 700; }
 .pe-reset { height: 32px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: #E9C77A; font-size: 13px; }
 .pe-range { display: grid; grid-template-columns: 56px minmax(0, 1fr) 44px; align-items: center; gap: 10px; font-size: 13px; color: #C8BDA6; }
 .pe-range span { text-align: right; color: var(--text); }
@@ -458,7 +461,7 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
 .pe-show > span { font-size: 12px; color: var(--faint); }
 .pe-show > div { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; }
 .pe-show label { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; }
-#pe-tag { position: fixed; z-index: 7; padding: 2px 8px; border-radius: 6px; background: var(--gold-hi); color: var(--on-gold); font-size: 11px;
+#pe-tag { position: fixed; z-index: 9; padding: 2px 8px; border-radius: 6px; background: var(--gold-hi); color: var(--on-gold); font-size: 11px;
   font-weight: 700; white-space: nowrap; pointer-events: none; transform: translate(-100%, -100%); }
 
 /* 타이틀로 확인창 */
@@ -791,7 +794,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
     </header>
     <section class="pe-sheet" aria-label="선택한 버튼 설정">
       <div class="pe-top">
-        <strong id="pe-name"></strong>
+        <select id="pe-name" aria-label="옮길 버튼"></select>
         <button type="button" class="pe-reset" id="pe-reset">전체 기본값으로</button>
       </div>
       <label class="pe-range">크기<input type="range" id="pe-size" min="70" max="150" step="5" aria-label="버튼 크기"><span></span></label>
