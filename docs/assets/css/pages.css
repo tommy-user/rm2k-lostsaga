@@ -295,3 +295,40 @@
 /* 무기 한손/양손 표시 */
 .hand { display: inline-block; font-size: .7rem; line-height: 1; padding: 3px 6px; border: 1px solid #46538a; border-radius: 3px; color: var(--ink); vertical-align: middle; white-space: nowrap; }
 .hand--two { color: var(--gold); border-color: var(--gold); background: rgba(226, 192, 107, .1); }
+
+/* ── 드롭 몬스터 링크, 세계 지도 위치 ── */
+.item__drop { font-size: .8rem !important; color: var(--ink-dim) !important; margin: 6px 0 0 !important; line-height: 1.7; }
+.item__drop .pixel { color: var(--gold); font-size: .72rem; margin-right: 4px; }
+.item__drop a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(226, 192, 107, .6); text-underline-offset: 2px; }
+.item__drop a:hover, .item__drop a:focus-visible { color: var(--gold); }
+.loc { all: unset; cursor: pointer; color: inherit; border-bottom: 1px dotted rgba(226, 192, 107, .7); }
+.loc::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg) translateY(-1px); background: var(--gold); vertical-align: middle; }
+.loc:hover, .loc:focus-visible { color: var(--gold); }
+.mob .mob__loc { margin-top: 6px; }
+.map-dlg { position: fixed; inset: 0; margin: auto; height: fit-content; width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; padding: 14px 16px 16px; color: var(--ink); border: 2px solid var(--win-line); }
+.map-dlg:not([open]) { display: none; }
+.map-dlg::backdrop { background: rgba(4, 6, 18, .75); }
+.map-dlg__head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.map-dlg__head h2 { margin: 0; font-size: var(--step-1); flex: 1; }
+.map-dlg__head h2 .pixel { font-size: .75rem; font-weight: normal; }
+.map-dlg__close { font: inherit; font-size: 1.4rem; line-height: 1; color: var(--ink); background: none; border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; width: 34px; height: 34px; cursor: pointer; }
+.map-dlg__close:hover, .map-dlg__close:focus-visible { color: var(--gold); border-color: var(--gold); }
+.map-dlg__map { position: relative; line-height: 0; }
+.map-dlg__map img { width: 100%; height: auto; image-rendering: pixelated; }
+.pin { position: absolute; width: 0; height: 0; }
+.pin::before, .pin::after { content: ""; position: absolute; left: 50%; top: 50%; border-radius: 50%; transform: translate(-50%, -50%); }
+.pin::before { width: 14px; height: 14px; background: var(--crimson); border: 2px solid #fff3c4; box-shadow: 0 0 0 2px rgba(0, 0, 0, .5); }
+.pin::after { width: 14px; height: 14px; border: 2px solid #fff3c4; animation: pin-ring 1.6s ease-out infinite; }
+.pin__label { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); white-space: nowrap; line-height: 1.4; font-size: .72rem; color: #2a1f05; background: var(--gold); border-radius: 3px; padding: 0 6px; box-shadow: 0 1px 0 rgba(0, 0, 0, .5); }
+@keyframes pin-ring { from { width: 14px; height: 14px; opacity: .9; } to { width: 44px; height: 44px; opacity: 0; } }
+.pin--via::before { background: transparent; border-style: dashed; width: 16px; height: 16px; }
+.pin--via::after { border-style: dashed; }
+.map-dlg__where { margin: 10px 0 0; font-family: var(--pixel); font-size: .85rem; color: var(--gold); }
+.map-dlg__off { margin: 6px 0 0; font-size: .9rem; }
+.map-dlg__off strong { color: var(--gold); font-family: var(--pixel); font-weight: normal; margin-right: 6px; }
+.is-target { animation: target-glow 2.4s ease-out 1; }
+tr.is-target { animation: none; }
+tr.is-target td { animation: target-glow 2.4s ease-out 1; }
+@media (max-width: 760px) { tr.is-target { animation: target-glow 2.4s ease-out 1; } tr.is-target td { animation: none; } }
+@keyframes target-glow { 0%, 30% { box-shadow: inset 0 0 0 2px var(--gold), 0 0 18px rgba(226, 192, 107, .55); background-color: rgba(226, 192, 107, .14); } 100% { box-shadow: none; } }
+@media (prefers-reduced-motion: reduce) { .pin::after, .is-target, tr.is-target td { animation: none !important; } .is-target { outline: 2px solid var(--gold); } }
