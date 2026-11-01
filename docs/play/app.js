@@ -744,7 +744,6 @@ function setFast(on) {
   fast = on;
   holdFast();
   for (const b of document.querySelectorAll('[data-act="speed"]')) b.setAttribute("aria-pressed", String(on));
-  $("#speed-badge").hidden = !on;
 }
 for (const b of document.querySelectorAll('[data-act="speed"]')) {
   b.onclick = () => {
