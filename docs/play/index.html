@@ -397,6 +397,81 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
 .pad-top { display: none; }
 @media (orientation: landscape) { .touch .pad-top { display: flex; gap: 8px; align-items: center; align-self: stretch; } }
 .pad-top .sync { padding: 6px 10px; font-size: 11px; }
+
+/* 빠른 버튼: 2배속·타이틀로 (세로는 게임 화면 아래 한 줄, 가로는 양옆 칸 위, 데스크톱은 오른쪽 칸) */
+.qbtn { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid rgba(239, 230, 210, 0.25); background: rgba(13, 15, 20, 0.7); font-size: 14px; white-space: nowrap; touch-action: manipulation; }
+.qbtn small { font-size: 11px; color: var(--faint); }
+.qbtn[aria-pressed="true"] { border-color: var(--gold-hi); box-shadow: inset 0 0 0 1px var(--gold-hi); background: rgba(217, 168, 78, 0.35);
+  color: #F5DDA4; font-weight: 700; }
+.quick, .head-quick { display: none; }
+.quick .spacer { flex: 1 1 auto; }
+.quick-keys { display: flex; flex-wrap: wrap; gap: 8px; }
+/* 엔진도 오른쪽 위에 작게 ">x2" 를 그리므로 왼쪽 위에 둔다 */
+.speed-badge { position: absolute; left: 10px; top: 10px; padding: 3px 9px; border-radius: 6px; background: rgba(13, 15, 20, 0.75);
+  border: 1px solid rgba(232, 190, 104, 0.7); color: #F5DDA4; font-size: 13px; font-weight: 700; pointer-events: none; }
+@media (max-width: 1100px) {
+  body:not(.touch) .head-quick { display: flex; gap: 6px; }
+  .head-quick .qbtn { height: 36px; padding: 0 10px; font-size: 13px; }
+}
+@media (max-width: 600px) { .head-quick small { display: none; } }
+@media (orientation: portrait) {
+  .touch .stage { grid-template: "screen screen" auto "quick quick" auto "left right" minmax(0, 1fr) / 1fr 1fr; }
+  .touch .quick { grid-area: quick; display: flex; align-items: center; gap: 8px; height: 60px; padding: 0 12px;
+    border-bottom: 1px solid rgba(239, 230, 210, 0.08); }
+  .touch .quick .icon-btn { border-radius: 12px; border-color: rgba(239, 230, 210, 0.18); }
+}
+@media (orientation: landscape) {
+  .touch .pad-top { flex-wrap: wrap; gap: 6px; }
+  .touch .pad-right .pad-top { justify-content: flex-end; }
+  .touch .pad-top .qbtn { height: 44px; gap: 4px; padding: 0 10px; font-size: 13px; }
+  .touch .pad-top .qbtn svg { width: 16px; height: 16px; }
+  .touch .pad-left .pad-top .qbtn { flex: 1 1 auto; justify-content: center; }
+  .touch .pad-top .icon-btn { width: 40px; }
+  /* 백업 상태는 버튼 줄 아래에 띄워, 결정·취소 자리가 밀리지 않게 한다 */
+  .touch .pad-right .pad-top { position: relative; }
+  .touch .pad-top .sync { position: absolute; right: 0; top: calc(100% + 6px); max-width: 100%; }
+}
+
+/* 버튼 배치 바꾸기 */
+.pad-off { visibility: hidden; }
+#play.editing #canvas { opacity: 0.35; }
+#play.editing [data-pad] { outline: 1.5px dashed rgba(232, 190, 104, 0.6); outline-offset: 3px; }
+#play.editing [data-pad].sel { outline: 2px solid var(--gold-hi); }
+#play.editing .pad-top > :not([data-pad]), #play.editing .quick > :not([data-pad]), #play.editing .speed-badge { visibility: hidden; }
+#pad-edit { position: fixed; z-index: 6; display: flex; flex-direction: column; overflow: auto; }
+.pe-head { display: flex; align-items: center; gap: 10px; flex: none; min-height: 56px; padding: 0 12px 0 16px; background: var(--panel);
+  border-bottom: 1px solid var(--line-gold); }
+.pe-head strong { flex: 1 1 auto; font-size: 16px; color: var(--gold-hi); }
+.pe-head span { font-size: 12px; color: var(--muted); }
+.pe-done { height: 40px; padding: 0 16px; border: 0; border-radius: 10px; background: var(--gold); color: var(--on-gold); font-size: 14px; font-weight: 700; }
+.pe-sheet { flex: none; margin-top: auto; display: flex; flex-direction: column; gap: 12px; padding: 16px 18px 18px; background: var(--panel);
+  border-top: 1px solid var(--line); border-radius: 18px 18px 0 0; }
+.pe-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.pe-top strong { font-size: 15px; }
+.pe-reset { height: 32px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: #E9C77A; font-size: 13px; }
+.pe-range { display: grid; grid-template-columns: 56px minmax(0, 1fr) 44px; align-items: center; gap: 10px; font-size: 13px; color: #C8BDA6; }
+.pe-range span { text-align: right; color: var(--text); }
+.pe-sheet input { accent-color: var(--gold); }
+.pe-show { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; border-top: 1px solid rgba(239, 230, 210, 0.08); }
+.pe-show > span { font-size: 12px; color: var(--faint); }
+.pe-show > div { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; }
+.pe-show label { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; }
+#pe-tag { position: fixed; z-index: 7; padding: 2px 8px; border-radius: 6px; background: var(--gold-hi); color: var(--on-gold); font-size: 11px;
+  font-weight: 700; white-space: nowrap; pointer-events: none; transform: translate(-100%, -100%); }
+
+/* 타이틀로 확인창 */
+dialog.confirm { width: min(350px, calc(100vw - 40px)); margin: auto; padding: 24px 22px 20px; border-radius: 18px; background: var(--panel);
+  border: 1px solid var(--line-gold); color: var(--text); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6); }
+dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
+.confirm-in { display: flex; flex-direction: column; gap: 14px; }
+.confirm h2 { margin: 0; font-family: var(--serif); font-size: 21px; color: var(--gold-hi); }
+.confirm p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--soft); }
+.last-save { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px; background: var(--chip); font-size: 13px; color: var(--muted); }
+.confirm .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding-top: 4px; }
+.confirm .row .btn { min-height: 48px; border-radius: 12px; border-color: rgba(239, 230, 210, 0.25); }
+.confirm .row .btn-warn { border: 0; background: var(--warn); color: var(--on-gold); font-weight: 700; }
+.confirm .row .btn-warn:hover { filter: brightness(1.08); }
 </style>
 </head>
 <body>
@@ -627,6 +702,10 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
     <span class="brand">LOST SAGA</span>
     <span id="play-title"></span>
     <div class="sync" data-state="busy" role="status"><span>연결 중</span></div>
+    <div class="head-quick">
+      <button type="button" class="qbtn" data-act="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속</button>
+      <button type="button" class="qbtn" data-act="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
+    </div>
     <button type="button" class="icon-btn" id="btn-full" aria-label="전체 화면">
       <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5"></path><path d="M20 9V4h-5"></path><path d="M4 15v5h5"></path><path d="M20 15v5h-5"></path></svg>
     </button>
@@ -637,8 +716,9 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
         <button type="button" class="icon-btn" data-act="home" aria-label="홈으로">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
+        <button type="button" class="qbtn" data-act="speed" data-pad="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속</button>
       </div>
-      <div class="dpad" id="dpad" role="group" aria-label="방향">
+      <div class="dpad" id="dpad" data-pad="dpad" role="group" aria-label="방향">
         <i class="up" data-key="ArrowUp"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7l6 9H6z"></path></svg></i>
         <i class="left" data-key="ArrowLeft"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 12l9-6v12z"></path></svg></i>
         <i class="mid"></i>
@@ -649,16 +729,34 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
     <div class="screen">
       <canvas id="canvas" tabindex="-1" aria-label="게임 화면"></canvas>
       <div id="status"></div>
+      <span class="speed-badge" id="speed-badge" hidden>2×</span>
+    </div>
+    <div class="quick">
+      <button type="button" class="qbtn" data-act="speed" data-pad="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속</button>
+      <button type="button" class="qbtn" data-act="title" data-pad="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
+      <span class="spacer"></span>
+      <button type="button" class="icon-btn" data-act="layout" aria-label="버튼 배치 바꾸기"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10"></path><path d="M18 6h2"></path><circle cx="16" cy="6" r="2"></circle><path d="M4 12h4"></path><path d="M12 12h8"></path><circle cx="10" cy="12" r="2"></circle><path d="M4 18h12"></path><circle cx="18" cy="18" r="2"></circle></svg></button>
     </div>
     <div class="pad pad-right">
-      <div class="pad-top"><div class="sync" data-state="busy" role="status"><span>연결 중</span></div></div>
-      <div class="ab">
-        <button type="button" class="ok" data-key="Enter">결정</button>
-        <button type="button" class="cancel" data-key="Escape">취소</button>
+      <div class="pad-top">
+        <button type="button" class="qbtn" data-act="title" data-pad="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로</button>
+        <button type="button" class="icon-btn" data-act="layout" aria-label="버튼 배치 바꾸기"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10"></path><path d="M18 6h2"></path><circle cx="16" cy="6" r="2"></circle><path d="M4 12h4"></path><path d="M12 12h8"></path><circle cx="10" cy="12" r="2"></circle><path d="M4 18h12"></path><circle cx="18" cy="18" r="2"></circle></svg></button>
+        <div class="sync" data-state="busy" role="status"><span>연결 중</span></div>
       </div>
-      <button type="button" class="pill" data-key="ShiftLeft">Shift</button>
+      <div class="ab">
+        <button type="button" class="ok" data-key="Enter" data-pad="ok">결정</button>
+        <button type="button" class="cancel" data-key="Escape" data-pad="cancel">취소</button>
+      </div>
+      <button type="button" class="pill" data-key="ShiftLeft" data-pad="shift">Shift</button>
     </div>
     <aside class="keys">
+      <section>
+        <h2>빠른 버튼</h2>
+        <div class="quick-keys">
+          <button type="button" class="qbtn" data-act="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속</button>
+          <button type="button" class="qbtn" data-act="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
+        </div>
+      </section>
       <section>
         <h2>조작</h2>
         <dl>
@@ -675,7 +773,46 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
       <p>엔진: EasyRPG Player 0.8.1.1 (GPLv3) · <a href="https://github.com/EasyRPG/Player/tree/0.8.1.1">소스</a></p>
     </aside>
   </div>
+  <div id="pad-edit" hidden>
+    <header class="pe-head">
+      <strong>버튼 배치</strong>
+      <span>버튼마다 끌어서 옮기기</span>
+      <button type="button" class="pe-done" id="pe-done">완료</button>
+    </header>
+    <section class="pe-sheet" aria-label="선택한 버튼 설정">
+      <div class="pe-top">
+        <strong id="pe-name"></strong>
+        <button type="button" class="pe-reset" id="pe-reset">전체 기본값으로</button>
+      </div>
+      <label class="pe-range">크기<input type="range" id="pe-size" min="70" max="150" step="5" aria-label="버튼 크기"><span></span></label>
+      <label class="pe-range">불투명<input type="range" id="pe-alpha" min="30" max="100" step="5" aria-label="버튼 불투명도"><span></span></label>
+      <div class="pe-show">
+        <span>보일 버튼</span>
+        <div>
+          <label><input type="checkbox" data-show="speed">2배속</label>
+          <label><input type="checkbox" data-show="title">타이틀로</label>
+          <label><input type="checkbox" data-show="shift">Shift</label>
+        </div>
+      </div>
+    </section>
+  </div>
+  <span id="pe-tag" hidden></span>
 </div>
+
+<dialog class="confirm" id="title-dlg" aria-labelledby="title-dlg-h">
+  <div class="confirm-in">
+    <h2 id="title-dlg-h">타이틀 화면으로 갈까요?</h2>
+    <p>저장하지 않은 진행은 사라집니다. 타이틀에서 다른 세이브를 불러올 수 있어요.</p>
+    <div class="last-save" id="title-last">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+      <span></span>
+    </div>
+    <div class="row">
+      <button type="button" class="btn" id="title-cancel">계속하기</button>
+      <button type="button" class="btn btn-warn" id="title-ok">타이틀로</button>
+    </div>
+  </div>
+</dialog>
 
 <script src="player/index.js"></script>
 <script type="module" src="app.js"></script>

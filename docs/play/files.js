@@ -40,7 +40,7 @@ function saveHave(have) {
 
 // 런처 화면 파일. Service Worker 가 붙기 전에 받은 것이라 한 번 더 받아 저장소에 넣는다.
 const SHELL = [
-  "./", "app.js", "sync.js", "lsd.js", "look.js", "files.js", "config.js", "vendor/supabase-fossil.js",
+  "./", "app.js", "sync.js", "lsd.js", "look.js", "pad.js", "files.js", "config.js", "vendor/supabase-fossil.js",
   "maps.json", "actors.json", "version.json", "files.json", "../favicon.ico", "../assets/img/pic/title.png",
 ];
 
