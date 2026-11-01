@@ -311,7 +311,8 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
 #load-note { margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
 
 /* ---------- 플레이 ---------- */
-#play { -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+/* 누를 때 브라우저가 버튼 둘레에 칠하는 파란 사각형을 끈다 (눌림 표시는 .on 이 한다) */
+#play { -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
 #play { position: fixed; inset: 0; display: flex; flex-direction: column; background: var(--ground); }
 .play-bg { position: absolute; inset: -40px; background: url("../assets/img/pic/title.png") center / cover;
   filter: blur(28px) brightness(0.3); }
