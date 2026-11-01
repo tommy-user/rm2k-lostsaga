@@ -1,4 +1,5 @@
 // 화면 버튼 배치 바꾸기 (터치 기기). 버튼마다 끌어서 옮기고 크기·불투명도를 바꾼다.
+// 게임 화면 위에도 놓을 수 있다 (머리줄·홈·배치 바꾸기 버튼만 피한다). 편집 칸은 고른 버튼을 가리지 않는 높이로 옮긴다.
 // 기본 배치는 CSS 가 정한 자리 그대로이고, 바꾼 값은 그 자리에서 옮긴 거리·크기(transform)와 불투명도로만 얹는다.
 // 세로·가로 배치를 따로 이 기기(localStorage)에 저장한다. 읽기·쓰기가 안 되면 기본 배치로 쓴다.
 
@@ -63,8 +64,8 @@ export function createPad({ play, onEdit }) {
     return r;
   }
 
-  // 버튼이 들어가면 안 되는 곳: 게임 화면 (세로에서는 그 위 머리줄까지)
-  function blocked() {
+  // 편집 패널을 펼칠 곳: 게임 화면 (세로에서는 그 위 머리줄까지)
+  function area() {
     const rs = [play.querySelector(".screen"), play.querySelector(".play-head")]
       .map((e) => e.getBoundingClientRect()).filter((r) => r.width && r.height);
     if (!rs.length) return null;
@@ -74,18 +75,28 @@ export function createPad({ play, onEdit }) {
     };
   }
 
-  // 화면 밖으로 나가거나 게임 화면을 가리면 가장 가까운 빈 곳으로 밀어낸다.
+  // 버튼이 덮으면 안 되는 곳: 세로의 머리줄, 홈·배치 바꾸기 버튼 (가리면 배치를 되돌릴 수 없다).
+  // 게임 화면은 덮어도 된다 (불투명도를 낮춰 겹쳐 쓰는 사람이 있다).
+  function blocked() {
+    return [play.querySelector(".play-head"), ...play.querySelectorAll('[data-act="home"], [data-act="layout"]')]
+      .map((e) => e.getBoundingClientRect()).filter((r) => r.width && r.height)
+      .map((r) => ({ l: r.left, t: r.top, r: r.right, b: r.bottom }));
+  }
+
+  // 화면 밖으로 나가거나 막힌 곳을 덮으면 가장 가까운 빈 곳으로 밀어낸다.
   function fit(base, p) {
     const box = play.getBoundingClientRect(), no = blocked();
     const k = p.s / 100, w = base.width * k, h = base.height * k;
     const cx = base.left + base.width / 2, cy = base.top + base.height / 2;
     const lo = [box.left + MARGIN, box.top + MARGIN], hi = [box.right - MARGIN - w, box.bottom - MARGIN - h];
     const inside = (l, t) => l >= lo[0] - 0.5 && l <= hi[0] + 0.5 && t >= lo[1] - 0.5 && t <= hi[1] + 0.5;
+    const hit = (l, t) => no.filter((n) => l < n.r && l + w > n.l && t < n.b && t + h > n.t);
     let l = Math.max(lo[0], Math.min(hi[0], cx + p.x - w / 2));
     let t = Math.max(lo[1], Math.min(hi[1], cy + p.y - h / 2));
-    if (no && l < no.r && l + w > no.l && t < no.b && t + h > no.t) {
-      const out = [[no.l - w, t], [no.r, t], [l, no.t - h], [l, no.b]]
-        .filter(([a, b]) => inside(a, b))
+    const hits = hit(l, t);
+    if (hits.length) {
+      const out = hits.flatMap((n) => [[n.l - w, t], [n.r, t], [l, n.t - h], [l, n.b]])
+        .filter(([a, b]) => inside(a, b) && !hit(a, b).length)
         .sort((m, n) => Math.hypot(m[0] - l, m[1] - t) - Math.hypot(n[0] - l, n[1] - t));
       if (out.length) [l, t] = out[0];
     }
@@ -121,10 +132,23 @@ export function createPad({ play, onEdit }) {
 
   // ---- 편집 화면 ----
 
+  // 편집 칸(머리줄 + 설정)은 게임 화면 너비로 펼치고, 높이는 버튼을 가장 덜 가리는 자리로 정한다.
+  // 버튼이 게임 화면 위에도 올 수 있어서다. 고른 버튼은 절대 가리지 않고, 비기면 원래 자리(화면 맨 위)에 가까운 쪽.
   function place() {
-    const no = blocked();
-    if (!no) return;
-    Object.assign(panel.style, { left: `${no.l}px`, top: `${no.t}px`, width: `${no.r - no.l}px`, height: `${no.b - no.t}px` });
+    const a = area();
+    if (!a) return;
+    const box = play.getBoundingClientRect();
+    Object.assign(panel.style, { left: `${a.l}px`, width: `${a.r - a.l}px`, top: `${a.t}px`, height: "", maxHeight: `${box.height}px` });
+    const h = panel.offsetHeight;
+    const rects = Object.keys(NAMES).filter(shown).map((id) => [id, shownEl(id)]).filter(([, el]) => el)
+      .map(([id, el]) => [id, el.getBoundingClientRect()]);
+    const cover = (t, r) => Math.max(0, Math.min(a.r, r.right) - Math.max(a.l, r.left)) * Math.max(0, Math.min(t + h, r.bottom) - Math.max(t, r.top));
+    let best = a.t, score = Infinity;
+    for (let t = box.top; t <= box.bottom - h + 0.5; t += 4) {
+      const v = rects.reduce((sum, [id, r]) => sum + cover(t, r) * (id === sel ? 1e6 : 1), 0) + Math.abs(t - a.t) / 1e3;
+      if (v < score) [best, score] = [t, v];
+    }
+    panel.style.top = `${best}px`;
   }
 
   function showTag() {
@@ -141,7 +165,10 @@ export function createPad({ play, onEdit }) {
     sel = id;
     for (const el of play.querySelectorAll("[data-pad]")) el.classList.toggle("sel", el.dataset.pad === id);
     const p = id ? part(id) : null;
-    nameEl.textContent = id ? NAMES[id] : "옮길 버튼을 누르세요";
+    // 편집 칸에 덮인 버튼도 고를 수 있게 목록으로도 고른다
+    nameEl.replaceChildren(new Option("옮길 버튼 고르기", ""),
+      ...Object.keys(NAMES).filter((k) => shown(k) && shownEl(k)).map((k) => new Option(NAMES[k], k)));
+    nameEl.value = id ?? "";
     size.disabled = alpha.disabled = !id;
     size.value = p?.s ?? 100;
     alpha.value = p?.o ?? 100;
@@ -149,6 +176,7 @@ export function createPad({ play, onEdit }) {
     alpha.nextElementSibling.textContent = p ? `${p.o}%` : "";
     for (const c of checks) c.checked = shown(c.dataset.show);
     showTag();
+    if (editing) place();
   }
 
   function edit() {
@@ -172,6 +200,7 @@ export function createPad({ play, onEdit }) {
   }
 
   $("#pe-done").onclick = done;
+  nameEl.onchange = () => select(nameEl.value || null);
   $("#pe-reset").onclick = () => {
     all[orient()] = {};
     save();
@@ -192,9 +221,9 @@ export function createPad({ play, onEdit }) {
   for (const c of checks) {
     c.onchange = () => {
       layout().hidden[c.dataset.show] = !c.checked;
-      if (!c.checked && sel === c.dataset.show) select(null);
       save();
       apply();
+      select(!c.checked && sel === c.dataset.show ? null : sel);
     };
   }
 
@@ -221,6 +250,7 @@ export function createPad({ play, onEdit }) {
       e.stopPropagation();
       drag = null;
       save();
+      place();
     }, true);
   }
   play.addEventListener("click", (e) => {
