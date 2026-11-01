@@ -99,11 +99,13 @@ export function createPad({ play, onEdit }) {
         el.classList.toggle("pad-off", !shown(id));
         el.style.opacity = p.o < 100 ? String(p.o / 100) : "";
         if ((!p.x && !p.y && p.s === 100) || !visible(el)) {
-          el.style.transform = "";
+          el.style.transform = el.style.zIndex = "";
           continue;
         }
         const q = fit(home(el), p);
         el.style.transform = `translate(${q.x}px, ${q.y}px) scale(${q.s / 100})`;
+        // 옮긴 버튼은 원래 칸(.pad, .quick) 밖으로 나가 뒤에 그려지는 칸·버튼에 덮이면 눌리지 않으므로 맨 위로 올린다.
+        el.style.zIndex = "1";
       }
     }
     showTag();
