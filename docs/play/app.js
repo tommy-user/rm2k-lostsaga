@@ -3,6 +3,8 @@ import { SaveSync, readLocalSaves } from "./sync.js";
 import { parseLsd, renameLeader, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
 import { JOBS, resolveLook, drawSprite, drawFace, lookLine, growthText, playTime } from "./look.js";
+import { createPad } from "./pad.js";
+import { createSound } from "./sound.js";
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -53,6 +55,7 @@ function setStatus(state, text) {
 const sync = new SaveSync(setStatus, (slot, bytes) => {
   const s = parseLsd(bytes);
   $("#play-title").textContent = `슬롯 ${slot} · ${who(s)}`;
+  lastSave = { slot, time: Date.now() };
 });
 
 // ---- 세이브 표시 ----
@@ -113,7 +116,7 @@ async function renderHome() {
   if (latest) {
     fillSum($("#latest"), latest, names, `슬롯 ${latest.slot}`);
     cont.lastElementChild.textContent = "이어하기";
-    cont.onclick = () => launch(`&load-game-id=${latest.slot}`, `슬롯 ${latest.slot} · ${who(latest.sum)}`);
+    cont.onclick = () => launch(`&load-game-id=${latest.slot}`, `슬롯 ${latest.slot} · ${who(latest.sum)}`, latest);
   } else {
     cont.lastElementChild.textContent = "새 게임 시작";
     cont.onclick = () => newGame();
@@ -148,7 +151,7 @@ async function renderHome() {
     menu.onclick = (e) => { e.stopPropagation(); openSlotMenu(s, menu); };
     const load = li.querySelector('[data-act="load"]');
     load.setAttribute("aria-label", `슬롯 ${s.slot} 이어하기`);
-    load.onclick = () => launch(`&load-game-id=${s.slot}`, `슬롯 ${s.slot} · ${who(s.sum)}`);
+    load.onclick = () => launch(`&load-game-id=${s.slot}`, `슬롯 ${s.slot} · ${who(s.sum)}`, s);
     return li;
   }));
   renderProfile();
@@ -657,22 +660,37 @@ $("#btn-title").onclick = () => launch("", "타이틀 화면");
 // ---- 플레이 ----
 
 let started = false;
+let lastSave = null;  // 이번 플레이에서 마지막으로 저장(또는 불러온) 세이브 {slot, time}. 모르면 null
 
-async function launch(args, title) {
+// 엔진 설정은 이 폴더의 config.ini 에서만 읽게 한다. 빨리 감기 키의 배율을 2배로 정해 두고, 소리 크기는 소리 창에서 정한 값을 넣는다.
+const CONFIG_DIR = "/tmp/lostsaga-config";
+const PLAYER_CONFIG = "[Input]\nSpeedModifierA=2\nSpeedModifierB=2\n";
+
+async function launch(args, title, save = null) {
   if (started) return;
   started = true;
+  if (save) lastSave = { slot: save.slot, time: new Date(save.time).getTime() };
   $("#play-title").textContent = title;
   $("#home").hidden = true;
   $("#play").hidden = false;
   scrollTo(0, 0);  // 홈에서 내려 둔 스크롤이 남으면 모바일에서 터치 위치가 어긋난다
+  pad.apply();
   // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다. 엔진은 exe 크기로 판별하지 못해 직접 정한다.
   installPreload(await graphics);
-  history.replaceState(null, "", `?game=lostsaga&engine=rpg2kv150${args}${dev}`);
-  const player = await createEasyRpgPlayer({ game: "lostsaga" });
+  history.replaceState(null, "", `?game=lostsaga&engine=rpg2kv150&config-path=${CONFIG_DIR}${args}${dev}`);
+  const player = await createEasyRpgPlayer({
+    game: "lostsaga",
+    // 엔진의 main 이 돌기 직전에 불린다 (this = 플레이어 모듈).
+    onRuntimeInitialized() {
+      this.FS.mkdirTree(CONFIG_DIR);
+      this.FS.writeFile(`${CONFIG_DIR}/config.ini`, PLAYER_CONFIG + sound.config());
+    },
+  });
   history.replaceState(null, "", location.pathname + search);
   player.initApi();
   window.easyrpgPlayer = player;
   if (!offline) sync.watch(player.FS);
+  holdFast();
   canvas.focus();
 }
 
@@ -687,16 +705,87 @@ $("#play").addEventListener("contextmenu", (e) => e.preventDefault());
 const canvas = $("#canvas");
 canvas.addEventListener("click", () => canvas.focus());
 
-// 빨리 감기(EasyRPG 기본 F·G 키)는 웹판에서 쓰지 않는다. 플레이 시간 확인이 어긋난다.
+// 키보드에서 엔진으로 가지 않게 막는 키: 빨리 감기(F·G)는 2배속 버튼으로만, 엔진 설정 메뉴(F1)는 쓰지 않는다.
+// F12(타이틀로)는 확인창을 띄운다. 확인창·버튼 배치 편집 중에는 키 입력이 게임으로 가지 않는다.
+// 런처가 보내는 키(화면 버튼, 2배속)는 isTrusted 가 false 라 막지 않는다.
+const BLOCKED = new Set(["KeyF", "KeyG", "F1", "F12"]);
+const modal = () => titleDlg.open || pad.editing || sound.isOpen();
 for (const type of ["keydown", "keyup"]) {
   window.addEventListener(type, (e) => {
-    if (e.code === "KeyF" || e.code === "KeyG") { e.stopImmediatePropagation(); e.preventDefault(); }
+    if (!e.isTrusted) return;
+    if (BLOCKED.has(e.code)) {
+      e.stopImmediatePropagation();
+      if (!modal()) e.preventDefault();
+      if (type === "keydown" && e.code === "F12" && !e.repeat && started && !modal()) openTitle();
+    } else if (type === "keydown" && modal()) {
+      e.stopImmediatePropagation();  // 확인창 버튼(Enter·Esc·Tab)은 기본 동작으로 그대로 움직인다
+    }
   }, true);
 }
 
 const full = $("#btn-full");
 if (!document.fullscreenEnabled) full.hidden = true;
 full.onclick = () => (document.fullscreenElement ? document.exitFullscreen() : $("#play").requestFullscreen());
+
+// ---- 2배속 ----
+// 엔진의 빨리 감기 키(F)를 누른 채로 둔다. 배율은 위 PLAYER_CONFIG 에서 2배로 정했다. 새로 열면 꺼져 있다.
+
+let fast = false;
+function holdFast() {
+  if (fast && window.easyrpgPlayer) key("keydown", "KeyF");
+}
+function setFast(on) {
+  if (fast && !on) key("keyup", "KeyF");
+  fast = on;
+  holdFast();
+  for (const b of document.querySelectorAll('[data-act="speed"]')) b.setAttribute("aria-pressed", String(on));
+  $("#speed-badge").hidden = !on;
+}
+for (const b of document.querySelectorAll('[data-act="speed"]')) {
+  b.onclick = () => {
+    setFast(!fast);
+    canvas.focus();  // 버튼에 남은 포커스로 Space·Enter 가 버튼을 또 누르지 않게
+  };
+}
+// 창을 떠났다 오면 엔진이 눌린 키를 놓아 버리므로 다시 누른다.
+addEventListener("focus", holdFast);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) holdFast(); });
+
+// ---- 타이틀로 (F12) ----
+
+const titleDlg = $("#title-dlg");
+let toTitleTimer = 0;
+
+function ago(t) {
+  const m = Math.floor((Date.now() - t) / 60000);
+  if (m < 1) return "방금";
+  if (m < 60) return `${m}분 전`;
+  if (m < 24 * 60) return `${Math.floor(m / 60)}시간 전`;
+  return when(t);
+}
+
+function openTitle() {
+  if (modal()) return;
+  releasePad();
+  const last = $("#title-last");
+  last.hidden = !lastSave;
+  if (lastSave) last.lastElementChild.textContent = `마지막 저장 · 슬롯 ${lastSave.slot} · ${ago(lastSave.time)}`;
+  titleDlg.showModal();
+  $("#title-cancel").focus();
+}
+for (const b of document.querySelectorAll('[data-act="title"]')) b.onclick = openTitle;
+$("#title-cancel").onclick = () => titleDlg.close();
+titleDlg.addEventListener("click", (e) => { if (e.target === titleDlg) titleDlg.close(); });
+titleDlg.addEventListener("close", () => canvas.focus());
+$("#title-ok").onclick = () => {
+  titleDlg.close();
+  // 엔진은 F12 를 2초(게임 시간) 누르고 있으면 타이틀로 간다. 타이틀에서는 더 눌러도 아무 일이 없다.
+  key("keydown", "F12");
+  clearTimeout(toTitleTimer);
+  toTitleTimer = setTimeout(() => key("keyup", "F12"), 2500);
+  lastSave = null;
+  $("#play-title").textContent = "타이틀 화면";
+};
 
 // ---- 화면 버튼 ----
 
@@ -737,6 +826,15 @@ dpad.addEventListener("pointerdown", (e) => {
 dpad.addEventListener("pointermove", (e) => { if (dir) setDir(dirAt(e)); });
 for (const t of ["pointerup", "pointercancel"]) dpad.addEventListener(t, () => setDir(null));
 
+// 확인창을 띄우거나 배치를 바꾸기 전에 누르고 있던 화면 버튼을 놓는다.
+function releasePad() {
+  setDir(null);
+  for (const b of document.querySelectorAll(".pad button[data-key].on")) {
+    b.classList.remove("on");
+    key("keyup", b.dataset.key);
+  }
+}
+
 for (const b of document.querySelectorAll(".pad button[data-key]")) {
   const up = () => {
     if (!b.classList.contains("on")) return;
@@ -754,6 +852,13 @@ for (const b of document.querySelectorAll(".pad button[data-key]")) {
   b.addEventListener("pointercancel", up);
   b.addEventListener("contextmenu", (e) => e.preventDefault());
 }
+
+const pad = createPad({ play: $("#play"), onEdit: releasePad });
+for (const b of document.querySelectorAll('[data-act="layout"]')) b.onclick = () => pad.edit();
+
+// 엔진이 소리를 내기 전에 만들어야 전체 소리 조절이 걸린다.
+const sound = createSound({ onOpen: releasePad, onClose: () => canvas.focus() });
+for (const b of document.querySelectorAll('[data-act="sound"]')) b.onclick = () => { if (!modal()) sound.open(); };
 
 // ---- 게임 파일 받기 ----
 
