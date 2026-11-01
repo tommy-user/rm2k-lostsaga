@@ -4,6 +4,7 @@ import { parseLsd, renameLeader, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
 import { JOBS, resolveLook, drawSprite, drawFace, lookLine, growthText, playTime } from "./look.js";
 import { createPad } from "./pad.js";
+import { createSound } from "./sound.js";
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -661,7 +662,7 @@ $("#btn-title").onclick = () => launch("", "타이틀 화면");
 let started = false;
 let lastSave = null;  // 이번 플레이에서 마지막으로 저장(또는 불러온) 세이브 {slot, time}. 모르면 null
 
-// 엔진 설정은 이 폴더의 config.ini 에서만 읽게 한다. 빨리 감기 키의 배율을 2배로 정해 둔다.
+// 엔진 설정은 이 폴더의 config.ini 에서만 읽게 한다. 빨리 감기 키의 배율을 2배로 정해 두고, 소리 크기는 소리 창에서 정한 값을 넣는다.
 const CONFIG_DIR = "/tmp/lostsaga-config";
 const PLAYER_CONFIG = "[Input]\nSpeedModifierA=2\nSpeedModifierB=2\n";
 
@@ -682,7 +683,7 @@ async function launch(args, title, save = null) {
     // 엔진의 main 이 돌기 직전에 불린다 (this = 플레이어 모듈).
     onRuntimeInitialized() {
       this.FS.mkdirTree(CONFIG_DIR);
-      this.FS.writeFile(`${CONFIG_DIR}/config.ini`, PLAYER_CONFIG);
+      this.FS.writeFile(`${CONFIG_DIR}/config.ini`, PLAYER_CONFIG + sound.config());
     },
   });
   history.replaceState(null, "", location.pathname + search);
@@ -708,7 +709,7 @@ canvas.addEventListener("click", () => canvas.focus());
 // F12(타이틀로)는 확인창을 띄운다. 확인창·버튼 배치 편집 중에는 키 입력이 게임으로 가지 않는다.
 // 런처가 보내는 키(화면 버튼, 2배속)는 isTrusted 가 false 라 막지 않는다.
 const BLOCKED = new Set(["KeyF", "KeyG", "F1", "F12"]);
-const modal = () => titleDlg.open || pad.editing;
+const modal = () => titleDlg.open || pad.editing || sound.isOpen();
 for (const type of ["keydown", "keyup"]) {
   window.addEventListener(type, (e) => {
     if (!e.isTrusted) return;
@@ -854,6 +855,10 @@ for (const b of document.querySelectorAll(".pad button[data-key]")) {
 
 const pad = createPad({ play: $("#play"), onEdit: releasePad });
 for (const b of document.querySelectorAll('[data-act="layout"]')) b.onclick = () => pad.edit();
+
+// 엔진이 소리를 내기 전에 만들어야 전체 소리 조절이 걸린다.
+const sound = createSound({ onOpen: releasePad, onClose: () => canvas.focus() });
+for (const b of document.querySelectorAll('[data-act="sound"]')) b.onclick = () => { if (!modal()) sound.open(); };
 
 // ---- 게임 파일 받기 ----
 
