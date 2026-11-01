@@ -252,6 +252,8 @@ let authErrorShown = false;
 const NICK_CHARS = /^[가-힣ㄱ-ㅎㅏ-ㅣA-Za-z0-9 _.~!?'^*♡♥☆★♪♬·-]+$/;
 const NICK_LETTER = /[가-힣ㄱ-ㅎㅏ-ㅣA-Za-z0-9]/;
 const NICK_SYMBOLS = "_ - . ~ ! ? ' ^ * ♡ ♥ ☆ ★ ♪ ♬ ·";
+// 닉네임을 안 정한 정식 계정에는 서버가 "닉네임없음XXXXXX" 를 임시로 붙여 랭킹에 올린다 (ensure_profile).
+const autoNick = (p) => /^닉네임없음[2-9A-HJ-NP-Z]{6}$/.test(p?.nickname ?? "");
 const nickNormal = (s) => s.normalize("NFC").trim().replace(/\s+/g, " ");
 function nickProblem(s) {
   const n = nickNormal(s);
@@ -271,10 +273,13 @@ async function renderNickname() {
   if (!sync.online) return;
   const form = $("#nick-form"), input = $("#nick-input"), btn = $("#nick-btn"), msg = $("#nick-msg");
   const show = (profile) => {
-    input.value = profile?.nickname ?? "";
-    btn.textContent = profile ? "바꾸기" : "정하기";
+    const auto = !profile || autoNick(profile);
+    input.value = auto ? "" : profile.nickname;
+    btn.textContent = auto ? "정하기" : "바꾸기";
     msg.className = "";
-    msg.textContent = profile ? `고유 아이디 #${profile.public_id}` : "랭킹 등에 보이는 이름입니다. 한 번 정하면 하루에 한 번 바꿀 수 있습니다.";
+    msg.textContent = !profile ? "랭킹 등에 보이는 이름입니다. 한 번 정하면 하루에 한 번 바꿀 수 있습니다."
+      : auto ? `지금은 임시 닉네임(${profile.nickname})으로 랭킹에 보입니다. 정하면 바뀝니다.`
+      : `고유 아이디 #${profile.public_id}`;
     form.hidden = false;
   };
   let profile = null;
@@ -360,7 +365,7 @@ async function renderProfile() {
   $("#pf-ranks").hidden = !profile || !rep;
   if (!rep) {
     $("#pf-rep").textContent = "대표 캐릭터 없음";
-    $("#pf-note").textContent = profile ? "대표 캐릭터를 정하면 랭킹에 오릅니다." : "닉네임과 대표 캐릭터를 정하면 랭킹에 오릅니다.";
+    $("#pf-note").textContent = "대표 캐릭터를 정하면 랭킹에 오릅니다.";
     return;
   }
   const l = await resolveLook(rep.look);
@@ -370,7 +375,7 @@ async function renderProfile() {
   const slots = repSlots();
   const notes = [slots.length ? `대표는 슬롯 ${slots.join(", ")} 의 플레이 · 저장하면 갱신` : "대표 플레이가 슬롯에 없음"];
   if (repLocked()) notes.push(`다음 변경 ${soon(rep.next_change_at)}`);
-  if (!profile) notes.push("닉네임을 정하면 랭킹에 오릅니다");
+  if (autoNick(profile)) notes.push("임시 닉네임 · 계정 상자에서 정할 수 있습니다");
   $("#pf-note").textContent = notes.join(" · ");
   if (!profile) return;
   for (const kind of ["growth", "adventure", "wave"]) {
