@@ -365,7 +365,7 @@ async function renderProfile() {
   $("#pf-ranks").hidden = !profile || !rep;
   if (!rep) {
     $("#pf-rep").textContent = "대표 캐릭터 없음";
-    $("#pf-note").textContent = "대표 캐릭터를 정하면 랭킹에 오릅니다.";
+    $("#pf-note").textContent = "저장하면 대표 캐릭터가 정해지고 랭킹에 오릅니다.";
     return;
   }
   const l = await resolveLook(rep.look);
