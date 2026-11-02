@@ -18,6 +18,12 @@
   --display: Cinzel, "Gowun Batang", serif; --serif: "Gowun Batang", serif;
 }
 * { box-sizing: border-box; }
+/* 앱처럼: 누를 때 파란 강조 상자·글자 선택이 뜨지 않게 (입력칸은 그대로) */
+* { -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
+body { -webkit-user-select: none; user-select: none; }
+input, textarea { -webkit-user-select: text; user-select: text; }
+:focus:not(:focus-visible) { outline: none; }
+img, canvas { -webkit-user-drag: none; user-drag: none; }
 html, body { margin: 0; background: var(--ground); color: var(--text);
   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 a { color: #E9C77A; }
