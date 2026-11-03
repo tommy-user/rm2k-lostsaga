@@ -52,7 +52,7 @@ export function initInstall({ anonymous, saveCount }) {
     } else if (state !== "done" && state !== "closed") {
       if (prompt) {
         show = true;
-        text.textContent = "앱으로 설치하면 아이콘으로 바로 열 수 있습니다.";
+        text.textContent = "앱으로 설치하면 바로 열 수 있습니다.";
         act.hidden = false;
       } else if (ios) {
         show = true;
