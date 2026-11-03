@@ -99,7 +99,8 @@
 /* ── 아이템 ── */
 .grade { font-family: var(--pixel); font-size: .72rem; padding: 1px 7px; border-radius: 3px; border: 1px solid; white-space: nowrap; }
 .grade--normal { color: #d6dae8; border-color: #8f97b3; }
-.grade--rare { color: #8ec5ff; border-color: #4f88c9; }
+.grade--magic { color: #8ec5ff; border-color: #4f88c9; }
+.grade--rare { color: #c9a7ff; border-color: #8a63c9; }
 .grade--unique { color: #f1c56b; border-color: #b8893a; }
 .grade--quest { color: #9fe0a5; border-color: #4e9b57; }
 .grade--master { color: #f29bd0; border-color: #b4528f; }
