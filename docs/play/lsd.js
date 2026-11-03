@@ -264,3 +264,51 @@ export function renameLeader(b, name) {
 
   return concat([head, ...top.flatMap(([id, data]) => [berBytes(id), berBytes(data.length), data])]);
 }
+
+// EasyRPG 는 병렬 공통 이벤트의 명령 목록·실행 위치를 세이브(0x72)에 통째로 넣고, 불러올 때 게임 데이터 대신 그것을 돌린다.
+// 그러면 이벤트를 고쳐도 옛 세이브에는 옛 동작이 남는다. 원작(RPG_RT)처럼 비운 상태로 바꿔서 돌려준다 (이미 비었으면 같은 배열).
+// 플레이어에 넘기는 사본에만 쓴다. 기기 저장소·클라우드의 세이브 바이트는 건드리지 않는다.
+const EMPTY_CE_STATE = Uint8Array.of(1, 4, 1, 1, 0, 0, 0);
+// 낮(68)·밤(69)은 몇 분짜리 시간표라 비우면 불러올 때마다 그 단계가 처음부터 다시 시작한다. 고칠 일도 없어서 그대로 둔다.
+const KEEP_CE = new Set([68, 69]);
+
+export function clearParallelCE(b) {
+  let [n, i] = ber(b, 0);
+  i += n;
+  const top = [];
+  let changed = false;
+  while (i < b.length) {
+    let id, sz;
+    [id, i] = ber(b, i);
+    [sz, i] = ber(b, i);
+    let data = b.subarray(i, i + sz);
+    i += sz;
+    if (id === 0x72) {
+      const out = [];
+      let [count, j] = ber(data, 0);
+      for (let k = 0; k < count; k++) {
+        let idx;
+        [idx, j] = ber(data, j);
+        const st = j;
+        for (;;) {  // 원소는 id 0 이 나올 때까지 청크
+          let cid, csz;
+          [cid, j] = ber(data, j);
+          if (cid === 0) break;
+          [csz, j] = ber(data, j);
+          j += csz;
+        }
+        const cur = data.subarray(st, j);
+        if (KEEP_CE.has(idx)) {
+          out.push(berBytes(idx), cur);
+          continue;
+        }
+        if (cur.length !== EMPTY_CE_STATE.length || cur.some((v, x) => v !== EMPTY_CE_STATE[x])) changed = true;
+        out.push(berBytes(idx), EMPTY_CE_STATE);
+      }
+      if (changed) data = concat([berBytes(count), ...out]);
+    }
+    top.push([id, data]);
+  }
+  if (!changed) return b;
+  return concat([b.subarray(0, ber(b, 0)[1] + n), ...top.flatMap(([id, data]) => [berBytes(id), berBytes(data.length), data])]);
+}
