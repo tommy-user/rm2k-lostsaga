@@ -1,6 +1,6 @@
 // 런처 화면: 홈(세이브 고르기) → 플레이(플레이어 + 화면 버튼).
 import { SaveSync, readLocalSaves } from "./sync.js";
-import { parseLsd, renameLeader, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
+import { parseLsd, renameLeader, clearParallelCE, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
 import { JOBS, resolveLook, drawSprite, drawFace, lookLine, growthText, playTime } from "./look.js";
 import { createPad } from "./pad.js";
@@ -671,6 +671,32 @@ let lastSave = null;  // 이번 플레이에서 마지막으로 저장(또는 �
 const CONFIG_DIR = "/tmp/lostsaga-config";
 const PLAYER_CONFIG = "[Input]\nSpeedModifierA=2\nSpeedModifierB=2\n";
 
+// 세이브에 저장된 옛 병렬 공통 이벤트 목록 때문에 고친 이벤트가 옛 세이브에 안 먹는 문제 (docs/ops-bugs.md).
+// 플레이어(엔진)가 세이브를 읽는 순간 메모리의 사본만 비운다. 수정 시각을 건드리지 않아 기기 저장소·클라우드에는 쓰이지 않는다.
+// 엔진의 읽기는 O_LARGEFILE(0x8000)이 붙고, 런처 동기화(sync.watch 의 FS.readFile)와 저장소에서 채우는 쓰기는 붙지 않는다.
+// 그래서 저장 직후 런처가 읽어 올리는 바이트는 엔진이 쓴 그대로다.
+const O_LARGEFILE = 0x8000;
+function cleanParallelOnLoad(FS) {
+  const open = FS.open;
+  FS.open = function (path, flags, ...rest) {
+    const stream = open.call(this, path, flags, ...rest);
+    try {
+      if (typeof path === "string" && typeof flags === "number" && !(flags & 3) && (flags & O_LARGEFILE) && /(^|\/)Save\d+\.lsd$/i.test(path)) {
+        const node = stream.node, cur = node.contents.subarray(0, node.usedBytes);
+        const out = clearParallelCE(cur);
+        // 비운 결과가 이상하면(읽히지 않거나 요약이 달라지면) 원본 그대로 쓴다.
+        if (out !== cur && JSON.stringify(parseLsd(out)) === JSON.stringify(parseLsd(cur))) {
+          node.contents = out;
+          node.usedBytes = out.length;
+        }
+      }
+    } catch (e) {
+      console.warn("[save] 병렬 이벤트 비우기 실패", e);
+    }
+    return stream;
+  };
+}
+
 async function launch(args, title, save = null) {
   if (started) return;
   started = true;
@@ -689,6 +715,7 @@ async function launch(args, title, save = null) {
     onRuntimeInitialized() {
       this.FS.mkdirTree(CONFIG_DIR);
       this.FS.writeFile(`${CONFIG_DIR}/config.ini`, PLAYER_CONFIG + sound.config());
+      cleanParallelOnLoad(this.FS);
     },
   });
   history.replaceState(null, "", location.pathname + search);
