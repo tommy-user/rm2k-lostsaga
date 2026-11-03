@@ -5,6 +5,7 @@ import { registerWorker, prepareFiles, preloadGraphics, installPreload } from ".
 import { JOBS, resolveLook, drawSprite, drawFace, lookLine, growthText, playTime } from "./look.js";
 import { createPad } from "./pad.js";
 import { createSound } from "./sound.js";
+import { initInstall } from "./install.js";
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -916,4 +917,5 @@ const graphics = preloadGraphics().catch((e) => {
 // Google 로그인에서 돌아오면 주소 뒤에 토큰이 붙어 있다. 읽은 뒤 지운다.
 if (location.hash && !/^#(account|ranking)$/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search);
 await renderHome();
+initInstall({ anonymous: sync.anonymous, saveCount: (await readLocalSaves()).size });
 route();
