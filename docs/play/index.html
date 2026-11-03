@@ -18,7 +18,7 @@
 :root {
   --ground: #0D0F14; --panel: #161922; --panel-2: rgba(22, 25, 34, 0.94); --chip: rgba(42, 38, 32, 0.92);
   --text: #EFE6D2; --soft: #D8CDB6; --muted: #B5AA94; --faint: #9C927E;
-  --gold: #D9A84E; --gold-hi: #E8BE68; --on-gold: #1A1408; --warn: #E08A5E;
+  --gold: #D9A84E; --gold-hi: #E8BE68; --on-gold: #1A1408; --warn: #E08A5E; --ok: #5FBF7A;
   --line: rgba(239, 230, 210, 0.14); --line-gold: rgba(217, 168, 78, 0.4);
   --display: Cinzel, "Gowun Batang", serif; --serif: "Gowun Batang", serif;
 }
@@ -45,7 +45,7 @@ svg { flex: none; }
 .sync span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sync::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
 .sync[data-state="ok"] { border-color: var(--line-gold); }
-.sync[data-state="ok"]::before { background: var(--gold); }
+.sync[data-state="ok"]::before { background: var(--ok); }
 .sync[data-state="busy"]::before { background: #7FA7D9; }
 .sync[data-state="error"]::before, .sync[data-state="offline"]::before { background: var(--warn); }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 16px;
