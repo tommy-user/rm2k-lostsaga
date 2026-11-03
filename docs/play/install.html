@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0D0F14">
+<title>앱으로 설치하기 · 로스트사가</title>
+<link rel="icon" href="../favicon.ico">
+<style>
+:root { --ground: #0D0F14; --panel: #161922; --text: #EFE6D2; --soft: #CFC6B2; --muted: #9C9484; --gold: #D9A84E; --on-gold: #1A1408; --line: rgba(239, 230, 210, 0.14); }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--text); font: 16px/1.7 "Noto Sans KR", system-ui, sans-serif; padding: 0 max(16px, env(safe-area-inset-left)) 48px; }
+main { max-width: 640px; margin: 0 auto; padding-top: 32px; }
+h1 { margin: 0 0 8px; font-size: 26px; }
+h2 { margin: 0 0 10px; font-size: 18px; color: var(--gold); }
+p { margin: 0 0 12px; color: var(--soft); }
+section { margin: 20px 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+ol { margin: 0; padding-left: 22px; color: var(--soft); }
+li { margin: 4px 0; }
+strong { color: var(--text); }
+.warn { border-color: rgba(217, 168, 78, 0.4); }
+.back { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 12px; background: var(--gold); color: var(--on-gold); font-weight: 700; text-decoration: none; }
+a { color: var(--gold); }
+</style>
+</head>
+<body>
+<main>
+  <h1>앱으로 설치하기</h1>
+  <p>설치하면 홈 화면이나 바탕화면 아이콘으로 주소 입력 없이 바로 열 수 있습니다. 설치하지 않아도 게임은 똑같이 할 수 있습니다.</p>
+
+  <section class="warn" id="save">
+    <h2>설치 전에 확인하세요</h2>
+    <p><strong>iPhone·iPad</strong>의 홈 화면 앱은 Safari와 저장 공간이 따로입니다. 게스트로 하던 세이브는 앱에서 보이지 않습니다.</p>
+    <p>설치 전에 <a href="./#account">Google 계정을 연결</a>해 두면, 앱에서 같은 계정으로 로그인해 이어 할 수 있습니다.</p>
+    <p>안드로이드와 컴퓨터는 브라우저와 같은 저장 공간을 씁니다.</p>
+  </section>
+
+  <section id="iphone">
+    <h2>iPhone · iPad (Safari)</h2>
+    <ol>
+      <li>Safari로 이 게임 주소를 엽니다.</li>
+      <li>아래쪽(iPad는 위쪽)의 <strong>공유</strong> 버튼을 누릅니다.</li>
+      <li><strong>홈 화면에 추가</strong>를 고릅니다.</li>
+      <li>이름이 <strong>로스트사가</strong>인지 보고 <strong>추가</strong>를 누릅니다.</li>
+      <li>홈 화면의 아이콘으로 엽니다. Google 계정을 연결했다면 <strong>Google로 로그인</strong>합니다.</li>
+    </ol>
+  </section>
+
+  <section id="android">
+    <h2>안드로이드 (Chrome)</h2>
+    <ol>
+      <li>Chrome으로 게임 주소를 엽니다.</li>
+      <li>홈 화면에 나오는 <strong>설치</strong> 버튼을 누릅니다. 안 보이면 오른쪽 위 <strong>⋮</strong> 메뉴에서 <strong>앱 설치</strong>(또는 <strong>홈 화면에 추가</strong>)를 고릅니다.</li>
+      <li>확인창에서 <strong>설치</strong>를 누릅니다.</li>
+    </ol>
+  </section>
+
+  <section id="pc">
+    <h2>컴퓨터 (Chrome · Edge)</h2>
+    <ol>
+      <li>게임 주소를 엽니다.</li>
+      <li>주소창 오른쪽의 <strong>설치</strong> 아이콘을 누르거나, 홈 화면의 <strong>설치</strong> 버튼을 누릅니다.</li>
+      <li>확인창에서 <strong>설치</strong>를 누르면 별도 창으로 열립니다.</li>
+    </ol>
+  </section>
+
+  <p><a class="back" href="./">게임으로 돌아가기</a></p>
+</main>
+</body>
+</html>
