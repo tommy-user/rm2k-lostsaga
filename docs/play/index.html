@@ -262,6 +262,9 @@ dialog.sheet::backdrop { background: rgba(5, 6, 9, 0.72); }
 .nick-line { max-width: 100%; font-size: 16px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .nick-line small { font-size: 12px; font-weight: 400; color: var(--faint); }
 .who-line { max-width: 100%; font-size: 13px; color: var(--soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 랭킹은 긴 이름도 말줄임 없이 줄을 바꿔 다 보인다 */
+.rank-list .nick-line, #rank-me .nick-line, .podium .nick-line,
+.rank-list .who-line, #rank-me .who-line { overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; line-height: 1.3; }
 .podium .val { font-size: 16px; font-weight: 700; color: var(--gold-hi); }
 .time { font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
 .rank-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; border-radius: 14px; background: var(--panel);
@@ -335,7 +338,8 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
 .play-head .back:hover { background: rgba(239, 230, 210, 0.08); }
 .play-head .brand { font-size: 17px; }
 #play-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; color: var(--muted); }
-.play-head .sync { margin-left: auto; }
+.play-head .sync { margin-left: auto; flex: none; }
+.play-head .sync span { overflow: visible; text-overflow: clip; }  /* 백업 상태는 줄이지 않고, 모자라면 제목(#play-title)이 줄어든다 */
 .stage { position: relative; flex: 1 1 auto; min-height: 0; display: grid; gap: 24px; padding: 24px 32px;
   grid-template-columns: minmax(0, 1fr) 300px; }
 .screen { position: relative; min-width: 0; min-height: 0; display: flex; align-items: center; justify-content: center; }
