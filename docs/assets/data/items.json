@@ -11938,6 +11938,33 @@
           "note": null
         },
         {
+          "id": 3852,
+          "name": "해일 비늘 방패",
+          "grade": "unique",
+          "type": 2,
+          "desc": "해일의 히드라 비늘을 엮은 방패. 방44/정20/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 44,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "wizard",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 4007,
           "name": "소라 방패",
           "grade": "craft",
@@ -14378,6 +14405,25 @@
             "agi": 20
           },
           "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3853,
+          "name": "옛 칠리 항구의 인장",
+          "grade": "normal",
+          "type": 5,
+          "desc": "항구 관리인이 쓰던 인장. 정30/민25",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 30,
+            "agi": 25
+          },
+          "price": 16000,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -23712,6 +23758,82 @@
             "agi": 0
           },
           "price": 900,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3851,
+          "name": "물결 문장",
+          "grade": "normal",
+          "type": 0,
+          "desc": "물결 무늬가 새겨진 청동 문장. 물시계탑 문에 맞는다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3854,
+          "name": "해초 비늘",
+          "grade": "normal",
+          "type": 0,
+          "desc": "침몰 도시 해초 머맨의 비늘. 미끈거린다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 900,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3855,
+          "name": "촉수 빨판",
+          "grade": "normal",
+          "type": 0,
+          "desc": "침몰 도시 물밑 촉수에서 떨어진 빨판.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 950,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3856,
+          "name": "따개비 껍질",
+          "grade": "normal",
+          "type": 0,
+          "desc": "옛 칠리 경비병 갑옷에 붙어 있던 따개비.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 1000,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
