@@ -2,7 +2,7 @@
 import { SaveSync, readLocalSaves } from "./sync.js";
 import { parseLsd, renameLeader, clearParallelCE, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
-import { JOBS, resolveLook, drawSprite, drawFace, lookLine, growthText, playTime } from "./look.js";
+import { JOBS, resolveLook, drawSprite, drawFace, clearArt, lookLine, growthText, playTime } from "./look.js";
 import { createPad } from "./pad.js";
 import { createSound } from "./sound.js";
 import { initInstall } from "./install.js";
@@ -138,7 +138,7 @@ async function renderHome() {
     li.classList.toggle("latest", s === latest);
     fillSum(li, s, names, `슬롯 ${s.slot}${s === latest ? " · 최근" : ""}`);
     resolveLook(s.sum.leader).then((l) => {
-      drawSprite(li.querySelector("canvas"), l);
+      drawSprite(li.querySelector("img.px"), l);
       if (l.title) li.querySelector(".where").prepend(`${l.title} · `);
     });
     if (repOf.includes(s.slot)) {
@@ -337,18 +337,14 @@ async function loadRep() {
   }
 }
 
-function clearCanvas(c) {
-  c.getContext("2d").clearRect(0, 0, c.width, c.height);
-}
-
 // 내 프로필: 닉네임 #고유아이디, 대표 캐릭터, 세 랭킹의 내 순위.
 async function renderProfile() {
   const box = $("#profile");
   box.hidden = !canChooseRep();
   if (box.hidden) return;
   const face = box.querySelector(".face"), sprite = box.querySelector(".sprite");
-  clearCanvas(face);
-  clearCanvas(sprite);
+  clearArt(face);
+  clearArt(sprite);
   let profile = null;
   try {
     profile = await sync.myProfile();
@@ -427,7 +423,7 @@ async function openPicker(slot = null) {
     li.querySelector(".pick-name").textContent = backed ? `${looks[i].name || who(s.sum)} Lv${s.sum.level}` : `슬롯 ${s.slot} · 백업 전`;
     li.querySelector(".pick-sub").textContent = backed ? `${looks[i].title} · 슬롯 ${s.slot}` : "온라인에서 한 번 저장하면 고를 수 있습니다";
     li.querySelector(".tag").hidden = !repOf.includes(s.slot);
-    drawSprite(li.querySelector("canvas"), looks[i]);
+    drawSprite(li.querySelector("img.px"), looks[i]);
     if (backed) {
       li.tabIndex = 0;
       li.onclick = () => { chosen = s.slot; update(); };
