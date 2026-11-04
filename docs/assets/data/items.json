@@ -13146,6 +13146,25 @@
           "note": null
         },
         {
+          "id": 3803,
+          "name": "유령 선장의 삼각모",
+          "grade": "unique",
+          "type": 4,
+          "desc": "유령 선장이 쓰던 모자. 방36/정30/어둠반감/맹목방지",
+          "stats": {
+            "atk": 0,
+            "def": 36,
+            "spi": 30,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 4009,
           "name": "항해사 모자",
           "grade": "craft",
@@ -14340,6 +14359,25 @@
             "agi": 12
           },
           "price": 20000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3806,
+          "name": "노름꾼의 뼈 주사위",
+          "grade": "normal",
+          "type": 5,
+          "desc": "유령 선원이 아끼던 뼈 주사위. 민20/정15/즉사방지",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 15,
+            "agi": 20
+          },
+          "price": 12000,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -19189,6 +19227,25 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 3801,
+          "name": "유령 선장의 해도",
+          "grade": "normal",
+          "type": 10,
+          "desc": "젖지 않는 낡은 해도. 옛 칠리 항구로 가는 뱃길이 그려져 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -23598,6 +23655,63 @@
             "agi": 0
           },
           "price": 500,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3802,
+          "name": "선장실 열쇠",
+          "grade": "normal",
+          "type": 0,
+          "desc": "녹슨 열쇠. 손잡이에 닻이 새겨져 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3804,
+          "name": "바랜 뼈 조각",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 유령선 해골 선원의 뼈. 소금기가 배어 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 600,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3805,
+          "name": "젖은 은화",
+          "grade": "normal",
+          "type": 0,
+          "desc": "옛 칠리 왕국의 은화. 얼굴이 닳아 안 보인다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 900,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
