@@ -62,7 +62,7 @@
   }
 
   function init() {
-    var ex = ["골렘", "늑대", "몬스터 가죽", "해적", "미라"];
+    var ex = ["늑대", "죽음의 반지", "오우거"];
     $("sp-ex").innerHTML = "예: " + ex.map(function (w) { return '<button type="button">' + esc(w) + "</button>"; }).join("");
     $("sp-ex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { qEl.value = b.textContent; onSearch(true); } });
     qEl.addEventListener("input", function () { onSearch(false); });
@@ -98,7 +98,7 @@
     if (fromMap()) return;
     if (!fromHash()) {
       var miss = /^#m-/.test(location.hash);
-      qEl.value = "골렘"; onSearch(true);
+      qEl.value = "오우거"; onSearch(true);
       if (miss) $("sp-hint").textContent = "찾던 몬스터는 정해진 리젠 자리가 없어요 (이벤트·보물 전투 등).";
     }
   }
