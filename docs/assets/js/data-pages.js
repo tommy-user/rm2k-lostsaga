@@ -414,7 +414,8 @@
               (x.label ? '<span class="pin__label pixel">' + esc(x.label) + "</span>" : "") + "</span>";
           }).join("") + "</div>" : "") +
           (on.length ? '<p class="map-dlg__where">' + on.map(function (p) { return esc(p.name); }).join(", ") + "</p>" : "") +
-          off.map(function (p) { return '<p class="map-dlg__off"><strong>' + esc(p.name) + "</strong> <span class=\"dim\">" + esc(p.note || "지도에 없는 곳") + "</span></p>"; }).join("");
+          off.map(function (p) { return '<p class="map-dlg__off"><strong>' + esc(p.name) + "</strong> <span class=\"dim\">" + esc(p.note || "지도에 없는 곳") + "</span></p>"; }).join("") +
+          (/^m-/.test(r.id) && r.kind < 2 ? '<p class="map-dlg__where"><a href="spawns.html#' + r.id + '">맵에서 리젠 자리 보기 →</a></p>' : "");
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
       }
       dlg.addEventListener("click", function (e) {

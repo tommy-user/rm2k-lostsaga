@@ -8,7 +8,8 @@
     ["characters.html", "캐릭터"],
     ["guardians.html", "가디언"],
     ["items.html", "아이템"],
-    ["monsters.html", "몬스터 및 던전"]
+    ["monsters.html", "몬스터 및 던전"],
+    ["spawns.html", "몬스터 찾기"]
   ];
   var here = location.pathname.split("/").pop() || "index.html";
   var inIntro = INTRO.some(function (p) { return p[0] === here; });
