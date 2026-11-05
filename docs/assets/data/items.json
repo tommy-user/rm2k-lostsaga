@@ -2193,6 +2193,27 @@
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+        },
+        {
+          "id": 3906,
+          "name": "심해 군주의 갑각 써클렛",
+          "grade": "master",
+          "type": 4,
+          "desc": "크라켄 껍질을 덧댄 황제의 왕관. 올스탯20/상태방지20/물내성/치명방지",
+          "stats": {
+            "atk": 20,
+            "def": 20,
+            "spi": 20,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": 4,
+          "jobs": [
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -13192,6 +13213,46 @@
           "note": null
         },
         {
+          "id": 3901,
+          "name": "크라켄 갑각 투구",
+          "grade": "unique",
+          "type": 4,
+          "desc": "크라켄의 뼈 판으로 만든 투구. 방60/정35/민25/물내성/치명방지",
+          "stats": {
+            "atk": 0,
+            "def": 60,
+            "spi": 35,
+            "agi": 25
+          },
+          "price": 2,
+          "maxPlus": 4,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3906,
+          "name": "심해 군주의 갑각 써클렛",
+          "grade": "master",
+          "type": 4,
+          "desc": "크라켄 껍질을 덧댄 황제의 왕관. 올스탯20/상태방지20/물내성/치명방지",
+          "stats": {
+            "atk": 20,
+            "def": 20,
+            "spi": 20,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": 4,
+          "jobs": [
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 4009,
           "name": "항해사 모자",
           "grade": "craft",
@@ -19292,6 +19353,25 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 3913,
+          "name": "심해의 비약",
+          "grade": "normal",
+          "type": 10,
+          "desc": "전투 중 파티 전원 HP·SP·상태 회복 + 3턴 동안 매 턴 HP 20% 회복.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -23834,6 +23914,44 @@
             "agi": 0
           },
           "price": 1000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3911,
+          "name": "크라켄 갑각 조각",
+          "grade": "normal",
+          "type": 0,
+          "desc": "크라켄의 뼈 판 조각. 로저스의 마나무토라면 쓸 곳을 안다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3912,
+          "name": "크라켄 먹물샘",
+          "grade": "normal",
+          "type": 0,
+          "desc": "크라켄의 먹물이 고인 주머니. 포션조합술로 심해의 비약을 만든다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
