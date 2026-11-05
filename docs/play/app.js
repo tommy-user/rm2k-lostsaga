@@ -2,7 +2,7 @@
 import { SaveSync, readLocalSaves } from "./sync.js";
 import { parseLsd, renameLeader, clearParallelCE, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
-import { JOBS, resolveLook, drawSprite, drawFace, lookLine, growthText, playTime } from "./look.js";
+import { JOBS, resolveLook, drawSprite, drawFace, clearArt, lookLine, growthText, playTime } from "./look.js";
 import { createPad } from "./pad.js";
 import { createSound } from "./sound.js";
 import { initInstall } from "./install.js";
@@ -138,7 +138,7 @@ async function renderHome() {
     li.classList.toggle("latest", s === latest);
     fillSum(li, s, names, `슬롯 ${s.slot}${s === latest ? " · 최근" : ""}`);
     resolveLook(s.sum.leader).then((l) => {
-      drawSprite(li.querySelector("canvas"), l);
+      drawSprite(li.querySelector("img.px"), l);
       if (l.title) li.querySelector(".where").prepend(`${l.title} · `);
     });
     if (repOf.includes(s.slot)) {
@@ -337,18 +337,14 @@ async function loadRep() {
   }
 }
 
-function clearCanvas(c) {
-  c.getContext("2d").clearRect(0, 0, c.width, c.height);
-}
-
 // 내 프로필: 닉네임 #고유아이디, 대표 캐릭터, 세 랭킹의 내 순위.
 async function renderProfile() {
   const box = $("#profile");
   box.hidden = !canChooseRep();
   if (box.hidden) return;
   const face = box.querySelector(".face"), sprite = box.querySelector(".sprite");
-  clearCanvas(face);
-  clearCanvas(sprite);
+  clearArt(face);
+  clearArt(sprite);
   let profile = null;
   try {
     profile = await sync.myProfile();
@@ -379,13 +375,13 @@ async function renderProfile() {
   if (autoNick(profile)) notes.push("임시 닉네임 · 계정 상자에서 정할 수 있습니다");
   $("#pf-note").textContent = notes.join(" · ");
   if (!profile) return;
-  for (const kind of ["growth", "adventure", "wave"]) {
+  for (const kind of ["growth", "adventure", "wave", "kraken"]) {
     const dd = $(`#pf-rank-${kind}`);
     dd.textContent = "…";
     sync.ranking(kind, null, 1)
       .then((rows) => {
         const me = rows.find((r) => r.me);
-        dd.textContent = !me ? "—" : kind === "wave" ? `웨이브 ${me.value}` : `${me.rank}위`;
+        dd.textContent = !me ? "—" : kind === "wave" ? `웨이브 ${me.value}` : kind === "kraken" ? `${me.rank}위 · ${minSec(me.frames)}` : `${me.rank}위`;
       })
       .catch(() => { dd.textContent = "—"; });
   }
@@ -427,7 +423,7 @@ async function openPicker(slot = null) {
     li.querySelector(".pick-name").textContent = backed ? `${looks[i].name || who(s.sum)} Lv${s.sum.level}` : `슬롯 ${s.slot} · 백업 전`;
     li.querySelector(".pick-sub").textContent = backed ? `${looks[i].title} · 슬롯 ${s.slot}` : "온라인에서 한 번 저장하면 고를 수 있습니다";
     li.querySelector(".tag").hidden = !repOf.includes(s.slot);
-    drawSprite(li.querySelector("canvas"), looks[i]);
+    drawSprite(li.querySelector("img.px"), looks[i]);
     if (backed) {
       li.tabIndex = 0;
       li.onclick = () => { chosen = s.slot; update(); };
@@ -549,6 +545,7 @@ const RANKS = {
   growth: "대표 캐릭터의 승급, 돌파, 레벨이 높은 순입니다. 같으면 더 짧은 플레이 시간에 달성한 순입니다.",
   adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 플레이 시간이 짧은 순입니다.",
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
+  kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
 };
 const RANK_LIMIT = 100;
 let rankKind = "growth", rankJob = null, rankSeq = 0;
@@ -568,15 +565,19 @@ $("#rank-jobs").replaceChildren(...[[null, "전체"], ...Object.entries(JOBS)].m
 function rankValue(r, l) {
   if (rankKind === "growth") return growthText(l);
   if (rankKind === "adventure") return STAGE_NAMES[r.value] ?? `단계 ${r.value}`;
+  if (rankKind === "kraken") return `처치 ${r.value}번`;
   return `웨이브 ${r.value}`;
 }
 
-// 성장·모험은 그 기록에 닿았을 때의 플레이 시간(시:분), 무한대전은 그 기록에 걸린 시간(분:초)
+// 성장·모험은 그 기록에 닿았을 때의 플레이 시간(시:분), 무한대전·크라켄은 그 기록에 걸린 시간(분:초)
+function minSec(frames) {
+  const s = Math.round(frames / 60);
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
 function rankTime(r) {
   if (r.frames == null) return "";
-  if (rankKind !== "wave") return `플레이 ${playTime(r.frames)}`;
-  const s = Math.round(r.frames / 60);
-  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  if (rankKind !== "wave" && rankKind !== "kraken") return `플레이 ${playTime(r.frames)}`;
+  return minSec(r.frames);
 }
 
 function nickLine(el, r) {
@@ -626,7 +627,8 @@ async function showRanking() {
   }
   if (seq !== rankSeq) return;
   if (!rows.length) {
-    empty.textContent = rankKind === "wave" ? "아직 기록이 없습니다. 몬스터대기실의 무한 웨이브에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
+    empty.textContent = rankKind === "wave" ? "아직 기록이 없습니다. 몬스터대기실의 무한 웨이브에서 기록을 세울 수 있습니다."
+      : rankKind === "kraken" ? "아직 기록이 없습니다. 외항선을 타고 크라켄 해역에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
     return;
   }
   empty.hidden = true;
@@ -806,6 +808,33 @@ function openTitle() {
   $("#title-cancel").focus();
 }
 for (const b of document.querySelectorAll('[data-act="title"]')) b.onclick = openTitle;
+
+// ---- 몬스터 찾기 ----
+// 사이트의 몬스터 찾기(spawns.html)를 패널로 띄운다. 게임은 그대로 돌고, 패널 안 키 입력은 게임으로 가지 않는다(iframe).
+// 열 때 이 기기에서 가장 최근에 저장한 세이브의 맵으로 연다.
+const spp = $("#spawns-panel"), sppFrame = $("#spp-frame");
+function setSpawnsPressed(on) {
+  for (const b of document.querySelectorAll('[data-act="spawns"]')) b.setAttribute("aria-pressed", String(on));
+  $("#play").classList.toggle("spp-on", on);
+}
+function closeSpawns() { spp.hidden = true; setSpawnsPressed(false); canvas.focus(); }
+async function openSpawns() {
+  if (!spp.hidden) return closeSpawns();
+  let q = "embed=1";
+  try {
+    let best = null;
+    for (const [, v] of await readLocalSaves()) if (!best || v.time > best.time) best = v;
+    if (best) q += "&map=" + parseLsd(best.bytes).map_id;
+  } catch (e) {
+    console.warn("[spawns] 세이브 맵 읽기 실패", e);
+  }
+  if (sppFrame.dataset.q !== q) { sppFrame.dataset.q = q; sppFrame.src = "../spawns.html?" + q; }
+  spp.hidden = false;
+  setSpawnsPressed(true);
+}
+for (const b of document.querySelectorAll('[data-act="spawns"]')) b.onclick = openSpawns;
+spp.querySelector(".spp-close").onclick = closeSpawns;
+window.addEventListener("message", (e) => { if (e.origin === location.origin && e.data === "spawns-close") closeSpawns(); });
 $("#title-cancel").onclick = () => titleDlg.close();
 titleDlg.addEventListener("click", (e) => { if (e.target === titleDlg) titleDlg.close(); });
 titleDlg.addEventListener("close", () => canvas.focus());

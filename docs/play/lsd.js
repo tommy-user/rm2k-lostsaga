@@ -70,6 +70,8 @@ export const STAGES = [367, 672, 732, 748, 1811, 1543, 1815, 1930, 1938, 1943, 2
 const VAR_BREAKTHROUGH = 44;  // 무한의 스크롤 돌파 횟수
 const VAR_WAVE = 1056;        // 무한 웨이브 최고 기록
 const VAR_WAVE_TIME = 1057;   // 그 기록에 걸린 시간(초)
+const VAR_KRAKEN_BEST = 1555;  // 크라켄 레이드 최고 기록(초)
+const VAR_KRAKEN_KILLS = 1556; // 크라켄 처치 횟수
 
 export function parseLsd(b) {
   let [n, i] = ber(b, 0);
@@ -133,6 +135,8 @@ export function parseLsd(b) {
     stage,
     wave: Math.max(0, v(VAR_WAVE)),
     wave_time: Math.max(0, v(VAR_WAVE_TIME)),
+    kraken_best: Math.max(0, v(VAR_KRAKEN_BEST)),
+    kraken_kills: Math.max(0, v(VAR_KRAKEN_KILLS)),
   };
 }
 

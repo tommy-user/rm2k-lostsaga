@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>몬스터 찾기 | 로스트사가</title>
+<meta name="description" content="몬스터가 나오는 맵과 맵 안의 리젠 자리.">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<script>if (/[?&]embed\b/.test(location.search)) document.documentElement.classList.add("embed");</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="gnb"></header>
+
+<main id="main">
+  <section class="page-head">
+    <img class="page-head__bg px" src="assets/img/pic/worldmap.png" alt="">
+    <div class="wrap">
+      <h1>몬스터 찾기</h1>
+      <p>몬스터나 얻고 싶은 아이템 이름으로 찾으면, 나오는 맵과 리젠 자리를 보여 줘요.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="item-tools">
+        <input type="search" id="sp-q" placeholder="몬스터나 드롭 아이템 이름" aria-label="몬스터 찾기" autocomplete="off" enterkeyhint="search">
+        <span class="sp-ex pixel" id="sp-ex"></span>
+      </div>
+      <div class="sp-grid">
+        <section class="win win--plain sp-side" aria-label="몬스터">
+          <p class="sp-hint" id="sp-hint"></p>
+          <div class="sp-list" id="sp-list"></div>
+          <div id="sp-card"></div>
+        </section>
+        <section class="win win--plain sp-main" aria-label="맵">
+          <div id="sp-head"></div>
+          <div class="sp-tools">
+            <span class="sp-zoom" role="group" aria-label="크게 보기"><button type="button" data-z="1">맵 전체</button><button type="button" data-z="2">2배</button><button type="button" data-z="4">4배</button></span>
+            <label class="pixel"><input type="checkbox" id="sp-exits" checked> 출입구 이름</label>
+          </div>
+          <div class="sp-view" id="sp-view"><div class="sp-stage" id="sp-stage"></div></div>
+          <div class="sp-legend pixel"><span><i class="sp-lg-on"></i>리젠 자리</span><span><i class="sp-lg-off"></i>다른 몬스터</span><span><i class="sp-lg-ex"></i>출입구</span></div>
+          <div id="sp-others"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/spawns-page.js"></script>
+</body>
+</html>

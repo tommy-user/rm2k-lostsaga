@@ -1,4 +1,4 @@
-// 랭킹·대표 캐릭터 그림. 받아 둔 게임 파일(CharSet·FaceSet)에서 잘라 그린다.
+// 랭킹·대표 캐릭터 그림. 받아 둔 게임 파일(CharSet·FaceSet)에서 잘라 <img> 로 보인다.
 // 세이브에는 게임 중에 바뀐 이름·그림만 들어 있어서, 나머지는 빌드 때 RPG_RT.ldb 에서 뽑은 actors.json 으로 채운다.
 
 export const JOBS = {
@@ -69,6 +69,8 @@ function keyColor(b) {
   return null;
 }
 
+// 원본 그림은 픽셀 값(ImageData)으로 들고 있는다. 그림판(canvas)으로 들고 있으면, 휴대폰 브라우저가
+// 메모리가 모자라거나 오래 뒤에 둔 페이지의 그림판을 버렸을 때 다시 그려도 빈 그림만 나온다.
 const sheets = new Map();
 function sheet(dir, name) {
   const k = `${dir}/${name}`;
@@ -87,18 +89,19 @@ function sheet(dir, name) {
       c.height = img.height;
       const g = c.getContext("2d", { willReadFrequently: true });
       g.drawImage(img, 0, 0);
+      img.close();
+      const px = g.getImageData(0, 0, c.width, c.height);
+      c.width = c.height = 0;
       const key = keyColor(b);
       if (key) {
-        const px = g.getImageData(0, 0, c.width, c.height);
         const a = px.data;
         for (let i = 0; i < a.length; i += 4) {
           // tRNS 로 이미 투명한 칸(색이 0 으로 풀릴 수 있다)과 0번 색은 투명, 나머지는 게임처럼 불투명하게.
           if (a[i + 3] === 0 || (a[i] === key[0] && a[i + 1] === key[1] && a[i + 2] === key[2])) a[i + 3] = 0;
           else a[i + 3] = 255;
         }
-        g.putImageData(px, 0, 0);
       }
-      return c;
+      return px;
     })().catch((e) => {
       console.warn("[look]", k, e);
       return null;
@@ -107,28 +110,48 @@ function sheet(dir, name) {
   return sheets.get(k);
 }
 
-// 걷기 그림: 한 장에 캐릭터 4×2 (한 캐릭터 72×128 = 3칸 × 4방향). 아래를 보는 가운데 칸을 그린다.
-export async function drawSprite(canvas, look) {
-  canvas.width = 24;
-  canvas.height = 32;
-  const s = await sheet("CharSet", look.sprite);
-  if (!s) return false;
-  const per = Math.max(1, Math.floor(s.width / 72));
-  const i = look.spriteIndex;
-  canvas.getContext("2d").drawImage(s, (i % per) * 72 + 24, Math.floor(i / per) * 128 + 64, 24, 32, 0, 0, 24, 32);
-  return true;
+// 한 칸을 잘라 PNG 주소(data URL)로 만든다. 화면에는 <img> 로 보인다:
+// 그림판에 바로 그리면 브라우저가 그림판을 버렸을 때 깨진 그림(흰 바탕에 찡그린 얼굴)이 남는다.
+const cells = new Map();
+async function cell(dir, name, index, w, h, cellW, cellH, ox, oy) {
+  const k = `${dir}/${name}/${index}`;
+  if (!cells.has(k)) {
+    cells.set(k, sheet(dir, name).then((px) => {
+      if (!px) return null;
+      const per = Math.max(1, Math.floor(px.width / cellW));
+      const sx = (index % per) * cellW + ox, sy = Math.floor(index / per) * cellH + oy;
+      const c = document.createElement("canvas");
+      c.width = w;
+      c.height = h;
+      c.getContext("2d").putImageData(px, -sx, -sy, sx, sy, w, h);
+      const url = c.toDataURL("image/png");
+      c.width = c.height = 0;
+      return url;
+    }));
+  }
+  return cells.get(k);
+}
+
+// 그림이 없거나 아직 못 그렸을 때 넣는 투명 1×1. src 가 없는 <img> 는 깨진 그림 아이콘이 뜬다 (index.html 의 틀도 같은 값).
+const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
+function show(img, url) {
+  img.src = url || BLANK;
+  return Boolean(url);
+}
+
+// 걷기 그림: 한 장에 캐릭터 4×2 (한 캐릭터 72×128 = 3칸 × 4방향). 아래를 보는 가운데 칸.
+export async function drawSprite(img, look) {
+  return show(img, await cell("CharSet", look.sprite, look.spriteIndex, 24, 32, 72, 128, 24, 64));
 }
 
 // 얼굴: 한 장에 48×48 이 4×4.
-export async function drawFace(canvas, look) {
-  canvas.width = 48;
-  canvas.height = 48;
-  const s = await sheet("FaceSet", look.face);
-  if (!s) return false;
-  const per = Math.max(1, Math.floor(s.width / 48));
-  const i = look.faceIndex;
-  canvas.getContext("2d").drawImage(s, (i % per) * 48, Math.floor(i / per) * 48, 48, 48, 0, 0, 48, 48);
-  return true;
+export async function drawFace(img, look) {
+  return show(img, await cell("FaceSet", look.face, look.faceIndex, 48, 48, 48, 48, 0, 0));
+}
+
+export function clearArt(img) {
+  img.src = BLANK;
 }
 
 export function lookLine(l) {

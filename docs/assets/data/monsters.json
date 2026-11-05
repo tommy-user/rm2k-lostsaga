@@ -7861,6 +7861,846 @@
       ]
     },
     {
+      "key": "sea",
+      "name": "외항 바다",
+      "desc": "본토·칠리마을·로저스국 선착장에서 외항선을 타고 나가는 먼바다. 갑판의 해역 지도로 갈 곳을 고른다. 보물지도에 그려진 섬, 안개 속 유령선, 썰물에만 드러나는 옛 칠리 항구가 있다.",
+      "dungeons": [
+        {
+          "name": "야자섬",
+          "floors": null,
+          "desc": "보물지도가 가리키는 첫 섬. 모래사장에 소라게와 앵무새가 산다.",
+          "maps": [
+            677
+          ]
+        },
+        {
+          "name": "떨어진 하늘섬",
+          "floors": "섬·신전 터",
+          "desc": "하늘에서 떨어진 땅 조각. 부서진 신전 터를 무언가가 지킨다.",
+          "boss": "???",
+          "maps": [
+            679,
+            680
+          ]
+        },
+        {
+          "name": "해적 소굴",
+          "floors": "숨은 만·동굴·두목의 방",
+          "desc": "외항선을 노리는 해적들의 근거지. 동굴 안쪽 감옥에 선원이 갇혀 있다.",
+          "boss": "???",
+          "maps": [
+            681,
+            682,
+            683
+          ]
+        },
+        {
+          "name": "난파선 암초",
+          "floors": "암초·은빛 갈매기호",
+          "desc": "배가 부서진 채 걸려 있는 암초.",
+          "boss": "???",
+          "maps": [
+            707,
+            708
+          ]
+        },
+        {
+          "name": "꺼진 등대섬",
+          "floors": "섬·등대",
+          "desc": "불이 꺼진 등대가 선 절벽 섬. 바다 하피가 둥지를 틀었다.",
+          "boss": "???",
+          "maps": [
+            709,
+            710
+          ]
+        },
+        {
+          "name": "유령선",
+          "floors": "갑판·선실·선장실",
+          "desc": "안개 해역을 떠도는 배. 선원들은 아직 하던 일을 계속한다.",
+          "boss": "???",
+          "maps": [
+            686,
+            687,
+            688,
+            689
+          ]
+        },
+        {
+          "name": "썰물의 침몰 도시",
+          "floors": "해변·거리·물시계탑 3층",
+          "desc": "가라앉은 옛 칠리 항구. 썰물 동안만 거리와 물시계탑에 들어갈 수 있다.",
+          "boss": "???",
+          "maps": [
+            691,
+            692,
+            693,
+            694,
+            695
+          ]
+        },
+        {
+          "name": "크라켄 해역",
+          "floors": null,
+          "desc": "가장 먼 바다. 옛 뱃사람들은 바다의 주인이 산다고 했다.",
+          "boss": "???",
+          "maps": [
+            696
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 809,
+          "name": "실험체 ZT-2",
+          "img": "Monster/E2실험체ZT2.png",
+          "hp": 3200,
+          "atk": 340,
+          "def": 190,
+          "spi": 220,
+          "agi": 300,
+          "boss": false,
+          "drops": [
+            {
+              "id": 1932,
+              "name": "변이 체액",
+              "prob": 30,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 810,
+          "name": "실험체 ZT-2 리더",
+          "img": "Monster/E2실험체ZT2.png",
+          "hp": 4800,
+          "atk": 390,
+          "def": 218,
+          "spi": 220,
+          "agi": 300,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 1937,
+              "name": "하늘의 결정",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 811,
+          "name": "변이 메뚜기",
+          "img": "Monster/E2변이메뚜기.png",
+          "hp": 2600,
+          "atk": 320,
+          "def": 120,
+          "spi": 120,
+          "agi": 440,
+          "boss": false,
+          "drops": [
+            {
+              "id": 1932,
+              "name": "변이 체액",
+              "prob": 35,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 812,
+          "name": "변이 메뚜기 리더",
+          "img": "Monster/E2변이메뚜기.png",
+          "hp": 3900,
+          "atk": 368,
+          "def": 138,
+          "spi": 120,
+          "agi": 440,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 1937,
+              "name": "하늘의 결정",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1891,
+          "name": "항아리 소라게",
+          "img": "Monster/AH1_jar_crab.png",
+          "hp": 350,
+          "atk": 110,
+          "def": 170,
+          "spi": 60,
+          "agi": 60,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3763,
+              "name": "소라 껍데기",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1893,
+          "name": "보물 앵무새",
+          "img": "Monster/AH1_parrot.png",
+          "hp": 250,
+          "atk": 100,
+          "def": 60,
+          "spi": 80,
+          "agi": 160,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3764,
+              "name": "앵무새 깃털",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1895,
+          "name": "모래 장어",
+          "img": "Monster/AH1_sand_eel.png",
+          "hp": 300,
+          "atk": 130,
+          "def": 80,
+          "spi": 60,
+          "agi": 120,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3765,
+              "name": "장어 가죽",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1896,
+          "name": "모래 장어 리더",
+          "img": "Monster/AH1_sand_eel.png",
+          "hp": 375,
+          "atk": 143,
+          "def": 80,
+          "spi": 60,
+          "agi": 120,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1898,
+          "name": "따개비 덩어리",
+          "img": "Monster/AH1_barnacle.png",
+          "hp": 700,
+          "atk": 140,
+          "def": 220,
+          "spi": 40,
+          "agi": 50,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3766,
+              "name": "따개비 조각",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1899,
+          "name": "따개비 덩어리 리더",
+          "img": "Monster/AH1_barnacle.png",
+          "hp": 875,
+          "atk": 154,
+          "def": 220,
+          "spi": 40,
+          "agi": 50,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1900,
+          "name": "가시 복어",
+          "img": "Monster/AH1_puffer.png",
+          "hp": 550,
+          "atk": 150,
+          "def": 120,
+          "spi": 140,
+          "agi": 120,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3767,
+              "name": "복어 가시",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1902,
+          "name": "구멍 곰치",
+          "img": "Monster/AH1_moray.png",
+          "hp": 650,
+          "atk": 170,
+          "def": 110,
+          "spi": 70,
+          "agi": 170,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3768,
+              "name": "곰치 이빨",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1905,
+          "name": "바다 하피",
+          "img": "Monster/AH1_sea_harpy.png",
+          "hp": 1000,
+          "atk": 200,
+          "def": 110,
+          "spi": 120,
+          "agi": 230,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3769,
+              "name": "폭풍 깃털",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1906,
+          "name": "바다 하피 리더",
+          "img": "Monster/AH1_sea_harpy.png",
+          "hp": 1250,
+          "atk": 220,
+          "def": 110,
+          "spi": 120,
+          "agi": 230,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1907,
+          "name": "꺼진 등불",
+          "img": "Monster/AH1_lantern.png",
+          "hp": 900,
+          "atk": 160,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3770,
+              "name": "꺼진 심지",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1909,
+          "name": "절벽 바다뱀",
+          "img": "Monster/AH1_serpent.png",
+          "hp": 1100,
+          "atk": 220,
+          "def": 150,
+          "spi": 110,
+          "agi": 160,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3771,
+              "name": "바다뱀 비늘",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1912,
+          "name": "날개 꺾인 그리폰",
+          "img": "Monster/E2하늘그리폰.png",
+          "hp": 1500,
+          "atk": 250,
+          "def": 140,
+          "spi": 120,
+          "agi": 220,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3772,
+              "name": "꺾인 날개깃",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1913,
+          "name": "날개 꺾인 그리폰 리더",
+          "img": "Monster/E2하늘그리폰.png",
+          "hp": 1875,
+          "atk": 275,
+          "def": 140,
+          "spi": 120,
+          "agi": 220,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1914,
+          "name": "별조각 정령",
+          "img": "Monster/AH1_star_sprite.png",
+          "hp": 1200,
+          "atk": 200,
+          "def": 110,
+          "spi": 260,
+          "agi": 200,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3773,
+              "name": "별 가루",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1916,
+          "name": "고장 난 하늘 경비기",
+          "img": "Monster/E2고대경비기.png",
+          "hp": 1600,
+          "atk": 260,
+          "def": 200,
+          "spi": 140,
+          "agi": 140,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3774,
+              "name": "고대 톱니",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1919,
+          "name": "해적 졸개",
+          "img": "Monster/해적.png",
+          "hp": 2000,
+          "atk": 300,
+          "def": 160,
+          "spi": 80,
+          "agi": 180,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3775,
+              "name": "해적 금화",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1920,
+          "name": "해적 졸개 리더",
+          "img": "Monster/해적.png",
+          "hp": 2500,
+          "atk": 330,
+          "def": 160,
+          "spi": 80,
+          "agi": 180,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1921,
+          "name": "해골 선원",
+          "img": "Monster/AI1_해골선원.png",
+          "hp": 2100,
+          "atk": 330,
+          "def": 170,
+          "spi": 90,
+          "agi": 190,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3804,
+              "name": "바랜 뼈 조각",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1922,
+          "name": "해골 선원 리더",
+          "img": "Monster/AI1_해골선원.png",
+          "hp": 2625,
+          "atk": 363,
+          "def": 170,
+          "spi": 90,
+          "agi": 190,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3804,
+              "name": "바랜 뼈 조각",
+              "prob": 50,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1923,
+          "name": "등불 망령",
+          "img": "Monster/AI1_등불망령.png",
+          "hp": 1700,
+          "atk": 240,
+          "def": 110,
+          "spi": 330,
+          "agi": 210,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3804,
+              "name": "바랜 뼈 조각",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1924,
+          "name": "등불 망령 리더",
+          "img": "Monster/AI1_등불망령.png",
+          "hp": 2125,
+          "atk": 264,
+          "def": 110,
+          "spi": 330,
+          "agi": 210,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3804,
+              "name": "바랜 뼈 조각",
+              "prob": 50,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1951,
+          "name": "해초 머맨",
+          "img": "Monster/Merman.png",
+          "hp": 2500,
+          "atk": 360,
+          "def": 200,
+          "spi": 160,
+          "agi": 300,
+          "boss": false,
+          "hue": 100,
+          "drops": [
+            {
+              "id": 3854,
+              "name": "해초 비늘",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1953,
+          "name": "물밑 촉수",
+          "img": "Monster/크라켄2.png",
+          "hp": 2800,
+          "atk": 340,
+          "def": 220,
+          "spi": 340,
+          "agi": 220,
+          "boss": false,
+          "hue": 200,
+          "drops": [
+            {
+              "id": 3855,
+              "name": "촉수 빨판",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1955,
+          "name": "따개비 파수병",
+          "img": "Monster/AJ1_guard.png",
+          "hp": 3100,
+          "atk": 380,
+          "def": 300,
+          "spi": 120,
+          "agi": 180,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3856,
+              "name": "따개비 껍질",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1956,
+          "name": "따개비 파수병 리더",
+          "img": "Monster/AJ1_guard.png",
+          "hp": 3875,
+          "atk": 418,
+          "def": 300,
+          "spi": 120,
+          "agi": 180,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3856,
+              "name": "따개비 껍질",
+              "prob": 50,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 2041,
+          "name": "해적 포수",
+          "img": "Monster/AH1_gunner.png",
+          "hp": 1800,
+          "atk": 280,
+          "def": 120,
+          "spi": 160,
+          "agi": 160,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3776,
+              "name": "화약 가루",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 2043,
+          "name": "해적 점술사",
+          "img": "Monster/AH1_seer.png",
+          "hp": 1700,
+          "atk": 200,
+          "def": 120,
+          "spi": 300,
+          "agi": 170,
+          "boss": false,
+          "drops": [
+            {
+              "id": 3777,
+              "name": "저주 카드",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        }
+      ]
+    },
+    {
       "key": "chaos-land",
       "name": "봉인의 빙묘·혼돈의 땅",
       "desc": "얼음성 비문 아래 죽음을 잠재운 무덤과, 요정족숲 옛 신전 문 너머 이공간 위에 떠 있는 옛 신의 땅. (에피소드3)",
@@ -8506,7 +9346,14 @@
       ],
       "secret": false,
       "region": "kriend-west",
-      "drops": [],
+      "drops": [
+        {
+          "id": 3852,
+          "name": "해일 비늘 방패",
+          "prob": 100,
+          "god": false
+        }
+      ],
       "places": [
         "grand"
       ]
@@ -9150,6 +9997,185 @@
         "desert"
       ],
       "secret": false
+    },
+    {
+      "enemyId": 1918,
+      "name": "떨어진 수호 석상",
+      "img": "Monster/AH1_statue.png",
+      "hp": 6000,
+      "atk": 120,
+      "def": 280,
+      "spi": 260,
+      "agi": 150,
+      "boss": true,
+      "title": "떨어진 하늘섬의 수호자",
+      "where": "떨어진 하늘섬 신전 터",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 3786,
+          "name": "떨어진 별의 핵",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "sea"
+      ]
+    },
+    {
+      "enemyId": 2045,
+      "name": "붉은수염 두목",
+      "img": "Monster/AH1_redbeard.png",
+      "hp": 9000,
+      "atk": 350,
+      "def": 260,
+      "spi": 200,
+      "agi": 260,
+      "boss": true,
+      "title": "해적 소굴의 두목",
+      "where": "해적 소굴 붉은수염의 방",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 3787,
+          "name": "붉은수염의 커틀러스",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "sea"
+      ]
+    },
+    {
+      "enemyId": 1904,
+      "name": "심해 아귀",
+      "img": "Monster/AH1_angler.png",
+      "hp": 4500,
+      "atk": 220,
+      "def": 200,
+      "spi": 180,
+      "agi": 120,
+      "boss": true,
+      "title": "난파선 암초의 주인",
+      "where": "난파선 암초 은빛 갈매기호",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 3784,
+          "name": "아귀의 미끼등",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "sea"
+      ]
+    },
+    {
+      "enemyId": 1911,
+      "name": "폭풍 하피 여왕",
+      "img": "Monster/AH1_queen.png",
+      "hp": 6000,
+      "atk": 260,
+      "def": 200,
+      "spi": 240,
+      "agi": 260,
+      "boss": true,
+      "title": "꺼진 등대의 주인",
+      "where": "꺼진 등대 꼭대기",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 3785,
+          "name": "깨진 렌즈의 관",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "sea"
+      ]
+    },
+    {
+      "enemyId": 1925,
+      "name": "유령 선장",
+      "img": "Monster/AI1_유령선장.png",
+      "hp": 13000,
+      "atk": 380,
+      "def": 270,
+      "spi": 300,
+      "agi": 270,
+      "boss": true,
+      "title": "유령선의 선장",
+      "where": "유령선 선장실",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 3803,
+          "name": "유령 선장의 삼각모",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": []
+    },
+    {
+      "enemyId": 1957,
+      "name": "해일의 히드라",
+      "img": "Monster/페드라.PNG",
+      "hp": 10000,
+      "atk": 400,
+      "def": 290,
+      "spi": 280,
+      "agi": 300,
+      "boss": true,
+      "hue": 340,
+      "title": "물시계탑의 주인",
+      "where": "물시계탑 꼭대기",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 3852,
+          "name": "해일 비늘 방패",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "sea"
+      ]
+    },
+    {
+      "enemyId": 1981,
+      "name": "크라켄",
+      "img": "Monster/AK1_크라켄.png",
+      "hp": 24000,
+      "atk": 860,
+      "def": 460,
+      "spi": 650,
+      "agi": 600,
+      "boss": true,
+      "title": "가장 먼 바다의 주인",
+      "where": "크라켄 해역",
+      "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
     }
   ],
   "places": {
@@ -9244,6 +10270,11 @@
     "devil": {
       "name": "데빌랜드",
       "note": "몬스터 진영이 시작하는 땅. 지도에 없다"
+    },
+    "sea": {
+      "name": "외항 바다",
+      "via": "chili",
+      "note": "본토·칠리마을·로저스국 선착장에서 외항선을 타고 나간다"
     }
   }
 }

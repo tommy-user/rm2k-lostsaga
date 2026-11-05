@@ -11,6 +11,11 @@
       "desc": "능력치에 효과가 하나 더 붙은 장비. 장인 나노무토가 판다. 설명 앞에 [Ｅ] 가 붙는다."
     },
     {
+      "key": "rare",
+      "name": "레어",
+      "desc": "능력치에 효과가 둘·셋 붙은 장비. 외항의 섬 몬스터와 낡은 보물지도에서 드물게 나온다. 설명 앞에 [Ｒ] 가 붙는다."
+    },
+    {
       "key": "unique",
       "name": "유니크",
       "desc": "주로 보스급 몬스터에게서 얻는 좋은 장비. 가끔 방랑상인이 아주 낮은 확률로 비싸게 판다. 설명 앞에 [Ｕ] 가 붙는다."
@@ -1229,6 +1234,398 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 4001,
+          "name": "산호 지팡이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공10/정45/물",
+          "stats": {
+            "atk": 10,
+            "def": 0,
+            "spi": 45,
+            "agi": 0
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": [
+            "wizard"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4002,
+          "name": "닻 대검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공55/양손/물",
+          "stats": {
+            "atk": 55,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 8000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4003,
+          "name": "물살 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공45/치명10/물",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 7000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4004,
+          "name": "작살 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공40/민8/물",
+          "stats": {
+            "atk": 40,
+            "def": 0,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 7000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4005,
+          "name": "따개비 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공45/민10/물",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 7000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4006,
+          "name": "항해사 코트",
+          "grade": "craft",
+          "type": 3,
+          "desc": "항해사세트. 방35/민10/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 35,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4007,
+          "name": "소라 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "항해사세트. 방30/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 30,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4008,
+          "name": "바닷바람 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "항해사세트. 민20/정10/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 10,
+            "agi": 20
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4009,
+          "name": "항해사 모자",
+          "grade": "craft",
+          "type": 4,
+          "desc": "항해사세트. 방18/민8/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 18,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4010,
+          "name": "별바다 지팡이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공20/정70",
+          "stats": {
+            "atk": 20,
+            "def": 0,
+            "spi": 70,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "wizard"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4011,
+          "name": "선장의 대검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공78/양손",
+          "stats": {
+            "atk": 78,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 25000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4012,
+          "name": "파도 가르는 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공65/치명20",
+          "stats": {
+            "atk": 65,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4013,
+          "name": "돛대 장궁",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공60/민12",
+          "stats": {
+            "atk": 60,
+            "def": 0,
+            "spi": 0,
+            "agi": 12
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4014,
+          "name": "닻사슬 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공65/민15",
+          "stats": {
+            "atk": 65,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4015,
+          "name": "선장의 코트",
+          "grade": "craft",
+          "type": 3,
+          "desc": "선장세트. 방55/민15",
+          "stats": {
+            "atk": 0,
+            "def": 55,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4016,
+          "name": "선장의 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "선장세트. 방55/정10",
+          "stats": {
+            "atk": 0,
+            "def": 55,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4017,
+          "name": "선장의 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "선장세트. 민30/정20",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 30
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4018,
+          "name": "선장의 삼각모",
+          "grade": "craft",
+          "type": 4,
+          "desc": "선장세트. 방38/민15",
+          "stats": {
+            "atk": 0,
+            "def": 38,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 18000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -1796,6 +2193,27 @@
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
+        },
+        {
+          "id": 3906,
+          "name": "심해 군주의 갑각 써클렛",
+          "grade": "master",
+          "type": 4,
+          "desc": "크라켄 갑각을 덧댄 황제의 왕관. 올스탯20/상태방지20/물내성/치명방지",
+          "stats": {
+            "atk": 20,
+            "def": 20,
+            "spi": 20,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": 4,
+          "jobs": [
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -5181,7 +5599,7 @@
           ],
           "twoHanded": true,
           "job": "격투가",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「투기 폭발」(공격·방어·민첩 효과60/사용자) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「투기 방출」(위력220/타격/둔화/전체) (장착한 동안)"
         },
         {
           "id": 1009,
@@ -7719,6 +8137,586 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 3787,
+          "name": "붉은수염의 커틀러스",
+          "grade": "unique",
+          "type": 1,
+          "desc": "붉은수염 두목의 곡도. 공72/치명25/불",
+          "stats": {
+            "atk": 72,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "tamer",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4001,
+          "name": "산호 지팡이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공10/정45/물",
+          "stats": {
+            "atk": 10,
+            "def": 0,
+            "spi": 45,
+            "agi": 0
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": [
+            "wizard"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4002,
+          "name": "닻 대검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공55/양손/물",
+          "stats": {
+            "atk": 55,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 8000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4003,
+          "name": "물살 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공45/치명10/물",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 7000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4004,
+          "name": "작살 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공40/민8/물",
+          "stats": {
+            "atk": 40,
+            "def": 0,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 7000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4005,
+          "name": "따개비 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "항해사세트. 공45/민10/물",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 7000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4010,
+          "name": "별바다 지팡이",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공20/정70",
+          "stats": {
+            "atk": 20,
+            "def": 0,
+            "spi": 70,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "wizard"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4011,
+          "name": "선장의 대검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공78/양손",
+          "stats": {
+            "atk": 78,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 25000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4012,
+          "name": "파도 가르는 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공65/치명20",
+          "stats": {
+            "atk": 65,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4013,
+          "name": "돛대 장궁",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공60/민12",
+          "stats": {
+            "atk": 60,
+            "def": 0,
+            "spi": 0,
+            "agi": 12
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4014,
+          "name": "닻사슬 너클",
+          "grade": "craft",
+          "type": 1,
+          "desc": "선장세트. 공65/민15",
+          "stats": {
+            "atk": 65,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4019,
+          "name": "해군 커틀러스",
+          "grade": "normal",
+          "type": 1,
+          "desc": "공50/방12",
+          "stats": {
+            "atk": 50,
+            "def": 12,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 9000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "tamer",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4020,
+          "name": "고래뼈 망치",
+          "grade": "normal",
+          "type": 1,
+          "desc": "공60/타격",
+          "stats": {
+            "atk": 60,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 10000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4021,
+          "name": "진주 단검",
+          "grade": "normal",
+          "type": 1,
+          "desc": "공45/민15/치명20",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 8000,
+          "maxPlus": null,
+          "jobs": [
+            "thief"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4022,
+          "name": "작살",
+          "grade": "normal",
+          "type": 1,
+          "desc": "공100/타스탯-35/치명35",
+          "stats": {
+            "atk": 100,
+            "def": -35,
+            "spi": -35,
+            "agi": -35
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4023,
+          "name": "갑판 너클",
+          "grade": "normal",
+          "type": 1,
+          "desc": "공48/민12/치명15",
+          "stats": {
+            "atk": 48,
+            "def": 0,
+            "spi": 0,
+            "agi": 12
+          },
+          "price": 9000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4024,
+          "name": "산호 오브",
+          "grade": "normal",
+          "type": 1,
+          "desc": "공12/정50/물",
+          "stats": {
+            "atk": 12,
+            "def": 0,
+            "spi": 50,
+            "agi": 0
+          },
+          "price": 11000,
+          "maxPlus": null,
+          "jobs": [
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4029,
+          "name": "물보라 커틀러스",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공52/물/선제",
+          "stats": {
+            "atk": 52,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 14000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "tamer",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4030,
+          "name": "복어 독침",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공46/민15/중독30%",
+          "stats": {
+            "atk": 46,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 13000,
+          "maxPlus": null,
+          "jobs": [
+            "thief"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4031,
+          "name": "해파리 장갑",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공48/민12/마비15%",
+          "stats": {
+            "atk": 48,
+            "def": 0,
+            "spi": 0,
+            "agi": 12
+          },
+          "price": 13000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4032,
+          "name": "갈매기 깃 활",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공45/민8/필중",
+          "stats": {
+            "atk": 45,
+            "def": 0,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 13000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4033,
+          "name": "파도 소리 법서",
+          "grade": "magic",
+          "type": 1,
+          "desc": "정50/물/전체공격(MP10)",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 50,
+            "agi": 0
+          },
+          "price": 15000,
+          "maxPlus": null,
+          "jobs": [
+            "necro"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4041,
+          "name": "해류의 삼지창",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공140/타스탯-40/물/전체공격(MP15)",
+          "stats": {
+            "atk": 140,
+            "def": -40,
+            "spi": -40,
+            "agi": -40
+          },
+          "price": 30000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4042,
+          "name": "폭풍잡이 활",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공72/민15/바람/필중/치명30",
+          "stats": {
+            "atk": 72,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 30000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4043,
+          "name": "심해의 오브",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공20/정90/물/전체공격(MP12)",
+          "stats": {
+            "atk": 20,
+            "def": 0,
+            "spi": 90,
+            "agi": 0
+          },
+          "price": 30000,
+          "maxPlus": null,
+          "jobs": [
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4044,
+          "name": "상어 이빨 너클",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공75/민15/치명20/중독20%",
+          "stats": {
+            "atk": 75,
+            "def": 0,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 28000,
+          "maxPlus": null,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -8726,7 +9724,7 @@
           ],
           "twoHanded": null,
           "job": "안티프리스트",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「죽음의 장막」(공격·방어 효과50/전체) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「죽음의 장막」(위력70/어둠/흡수/공방감소) (장착한 동안)"
         },
         {
           "id": 1054,
@@ -9835,6 +10833,189 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 3780,
+          "name": "등대지기의 외투",
+          "grade": "normal",
+          "type": 3,
+          "desc": "등대지기가 입던 두꺼운 외투. 방25/정25/어둠반감",
+          "stats": {
+            "atk": 0,
+            "def": 25,
+            "spi": 25,
+            "agi": 0
+          },
+          "price": 10000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4006,
+          "name": "항해사 코트",
+          "grade": "craft",
+          "type": 3,
+          "desc": "항해사세트. 방35/민10/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 35,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4015,
+          "name": "선장의 코트",
+          "grade": "craft",
+          "type": 3,
+          "desc": "선장세트. 방55/민15",
+          "stats": {
+            "atk": 0,
+            "def": 55,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4025,
+          "name": "상어가죽 갑옷",
+          "grade": "normal",
+          "type": 3,
+          "desc": "방45",
+          "stats": {
+            "atk": 0,
+            "def": 45,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4026,
+          "name": "돛천 로브",
+          "grade": "normal",
+          "type": 3,
+          "desc": "방25/정25",
+          "stats": {
+            "atk": 0,
+            "def": 25,
+            "spi": 25,
+            "agi": 0
+          },
+          "price": 10000,
+          "maxPlus": null,
+          "jobs": [
+            "priest",
+            "wizard",
+            "necro",
+            "anti"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4034,
+          "name": "따개비 판금",
+          "grade": "magic",
+          "type": 3,
+          "desc": "방55/민-20/치명방지",
+          "stats": {
+            "atk": 0,
+            "def": 55,
+            "spi": 0,
+            "agi": -20
+          },
+          "price": 15000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4045,
+          "name": "붉은 산호 갑옷",
+          "grade": "rare",
+          "type": 3,
+          "desc": "방58/정20/불반감/최대HP+200",
+          "stats": {
+            "atk": 0,
+            "def": 58,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 30000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -10749,6 +11930,185 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 3783,
+          "name": "소라게의 보물 껍데기",
+          "grade": "unique",
+          "type": 2,
+          "desc": "보물상자 소라게의 껍데기. 방38/정10/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 38,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 8000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "wizard",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3852,
+          "name": "해일 비늘 방패",
+          "grade": "unique",
+          "type": 2,
+          "desc": "해일의 히드라 비늘을 엮은 방패. 방44/정20/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 44,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "wizard",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4007,
+          "name": "소라 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "항해사세트. 방30/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 30,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4016,
+          "name": "선장의 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "선장세트. 방55/정10",
+          "stats": {
+            "atk": 0,
+            "def": 55,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4027,
+          "name": "코르크 방패",
+          "grade": "normal",
+          "type": 2,
+          "desc": "방36/민-8",
+          "stats": {
+            "atk": 0,
+            "def": 36,
+            "spi": 0,
+            "agi": -8
+          },
+          "price": 8000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4035,
+          "name": "산호 방패",
+          "grade": "magic",
+          "type": 2,
+          "desc": "방40/물·얼음반감",
+          "stats": {
+            "atk": 0,
+            "def": 40,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 14000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4036,
+          "name": "바다거북 등딱지",
+          "grade": "magic",
+          "type": 2,
+          "desc": "방48/민-25/중독·마비방지",
+          "stats": {
+            "atk": 0,
+            "def": 48,
+            "spi": 0,
+            "agi": -25
+          },
+          "price": 14000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -11335,7 +12695,7 @@
           ],
           "twoHanded": null,
           "job": "군주",
-          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「구휼령」(효과200/아군 전체/상태이상 회복), 「총통제령」(공격·정신 효과50/아군) (장착한 동안)"
+          "note": "마스터 승급 수여식(크리엔드 침투 작전 뒤)에서 직업별 마스터 아이템 가운데 하나를 고른다. +4까지 강화하면 전용 스킬 「구휼령」(효과200/아군 전체/상태이상 회복), 「군기 게양」(민첩 효과50·원소 내성/아군) (장착한 동안)"
         },
         {
           "id": 1118,
@@ -11789,6 +13149,198 @@
             "agi": 0
           },
           "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3778,
+          "name": "해적 두건",
+          "grade": "normal",
+          "type": 4,
+          "desc": "야자섬에 묻혀 있던 두건. 방20/민10",
+          "stats": {
+            "atk": 0,
+            "def": 20,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 4000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3785,
+          "name": "깨진 렌즈의 관",
+          "grade": "unique",
+          "type": 4,
+          "desc": "폭풍 하피 여왕의 렌즈 조각 왕관. 방25/정20/민25/바람반감",
+          "stats": {
+            "atk": 0,
+            "def": 25,
+            "spi": 20,
+            "agi": 25
+          },
+          "price": 15000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3803,
+          "name": "유령 선장의 삼각모",
+          "grade": "unique",
+          "type": 4,
+          "desc": "유령 선장이 쓰던 모자. 방36/정30/어둠반감/맹목방지",
+          "stats": {
+            "atk": 0,
+            "def": 36,
+            "spi": 30,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3901,
+          "name": "크라켄 갑각 투구",
+          "grade": "unique",
+          "type": 4,
+          "desc": "크라켄 갑각으로 만든 투구. 방60/정35/민25/물내성/치명방지",
+          "stats": {
+            "atk": 0,
+            "def": 60,
+            "spi": 35,
+            "agi": 25
+          },
+          "price": 2,
+          "maxPlus": 4,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3906,
+          "name": "심해 군주의 갑각 써클렛",
+          "grade": "master",
+          "type": 4,
+          "desc": "크라켄 갑각을 덧댄 황제의 왕관. 올스탯20/상태방지20/물내성/치명방지",
+          "stats": {
+            "atk": 20,
+            "def": 20,
+            "spi": 20,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": 4,
+          "jobs": [
+            "lord"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4009,
+          "name": "항해사 모자",
+          "grade": "craft",
+          "type": 4,
+          "desc": "항해사세트. 방18/민8/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 18,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4018,
+          "name": "선장의 삼각모",
+          "grade": "craft",
+          "type": 4,
+          "desc": "선장세트. 방38/민15",
+          "stats": {
+            "atk": 0,
+            "def": 38,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 18000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4028,
+          "name": "선원 두건",
+          "grade": "normal",
+          "type": 4,
+          "desc": "방22/민5",
+          "stats": {
+            "atk": 0,
+            "def": 22,
+            "spi": 0,
+            "agi": 5
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4037,
+          "name": "갈매기 깃털 모자",
+          "grade": "magic",
+          "type": 4,
+          "desc": "방20/민15/회피상승",
+          "stats": {
+            "atk": 0,
+            "def": 20,
+            "spi": 0,
+            "agi": 15
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4047,
+          "name": "고래뼈 투구",
+          "grade": "rare",
+          "type": 4,
+          "desc": "방45/공20/치명방지/최대HP+100",
+          "stats": {
+            "atk": 20,
+            "def": 45,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 26000,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -12800,6 +14352,272 @@
             "agi": 47
           },
           "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3779,
+          "name": "은빛 갈매기호의 망원경",
+          "grade": "normal",
+          "type": 5,
+          "desc": "은빛 갈매기호 선장의 망원경. 민20/정10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 10,
+            "agi": 20
+          },
+          "price": 8000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3781,
+          "name": "하늘빛 망토",
+          "grade": "normal",
+          "type": 5,
+          "desc": "떨어진 하늘섬 제단의 망토. 정25/민25",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 25,
+            "agi": 25
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3782,
+          "name": "해적 두목의 나침반",
+          "grade": "normal",
+          "type": 5,
+          "desc": "붉은수염의 나침반. 언제나 바다를 가리킨다. 민30/회피상승",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 30
+          },
+          "price": 15000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3784,
+          "name": "아귀의 미끼등",
+          "grade": "unique",
+          "type": 5,
+          "desc": "심해 아귀의 미끼등. 정30/혼란·맹목 방지",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 30,
+            "agi": 0
+          },
+          "price": 15000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3786,
+          "name": "떨어진 별의 핵",
+          "grade": "unique",
+          "type": 5,
+          "desc": "수호 석상 가슴의 별. 올스탯12/신성반감",
+          "stats": {
+            "atk": 12,
+            "def": 12,
+            "spi": 12,
+            "agi": 12
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3806,
+          "name": "노름꾼의 뼈 주사위",
+          "grade": "normal",
+          "type": 5,
+          "desc": "유령 선원이 아끼던 뼈 주사위. 민20/정15/즉사방지",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 15,
+            "agi": 20
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3853,
+          "name": "옛 칠리 항구의 인장",
+          "grade": "normal",
+          "type": 5,
+          "desc": "항구 관리인이 쓰던 인장. 정30/민25",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 30,
+            "agi": 25
+          },
+          "price": 16000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4008,
+          "name": "바닷바람 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "항해사세트. 민20/정10/물반감",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 10,
+            "agi": 20
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4017,
+          "name": "선장의 망토",
+          "grade": "craft",
+          "type": 5,
+          "desc": "선장세트. 민30/정20",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 30
+          },
+          "price": 20000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4038,
+          "name": "소금 결정 반지",
+          "grade": "magic",
+          "type": 5,
+          "desc": "정10/방-20/MP소모절반",
+          "stats": {
+            "atk": 0,
+            "def": -20,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 14000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4039,
+          "name": "렌즈 목걸이",
+          "grade": "magic",
+          "type": 5,
+          "desc": "정20/맹목방지",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4040,
+          "name": "선원의 부적",
+          "grade": "magic",
+          "type": 5,
+          "desc": "올스탯5/최대HP+150",
+          "stats": {
+            "atk": 5,
+            "def": 5,
+            "spi": 5,
+            "agi": 5
+          },
+          "price": 14000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4046,
+          "name": "바다뱀 비늘 망토",
+          "grade": "rare",
+          "type": 5,
+          "desc": "민35/물·바람반감/회피상승",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 35
+          },
+          "price": 28000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4048,
+          "name": "인어의 눈물",
+          "grade": "rare",
+          "type": 5,
+          "desc": "정30/혼란·수면·침묵방지/최대MP+100",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 30,
+            "agi": 0
+          },
+          "price": 30000,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -14768,6 +16586,25 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 3762,
+          "name": "해적의 럼주",
+          "grade": "normal",
+          "type": 6,
+          "desc": "아군 한 명의 체력을 500 회복시킨다. 독하다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 600,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -16682,6 +18519,25 @@
           "note": null
         },
         {
+          "id": 447,
+          "name": "오아시스이동주문서",
+          "grade": "normal",
+          "type": 10,
+          "desc": "오아시스로 이동한다. 일부 지역에서는 사용 불가",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 1000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 622,
           "name": "장소 기억의 주문서",
           "grade": "normal",
@@ -17321,6 +19177,196 @@
             "agi": 0
           },
           "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3751,
+          "name": "항해 일지",
+          "grade": "normal",
+          "type": 10,
+          "desc": "외항선 선장이 준 일지. 다녀온 섬과 찾은 것을 적는다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3752,
+          "name": "찢어진 해도(북서)",
+          "grade": "normal",
+          "type": 10,
+          "desc": "찢어진 해도의 왼쪽 위 조각. 맞는 조각을 찾아야 한다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3753,
+          "name": "찢어진 해도(남서)",
+          "grade": "normal",
+          "type": 10,
+          "desc": "찢어진 해도의 왼쪽 아래 조각. 맞는 조각을 찾아야 한다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3754,
+          "name": "찢어진 해도(북동)",
+          "grade": "normal",
+          "type": 10,
+          "desc": "찢어진 해도의 오른쪽 위 조각. 맞는 조각을 찾아야 한다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3755,
+          "name": "찢어진 해도(남동)",
+          "grade": "normal",
+          "type": 10,
+          "desc": "오른쪽 아래 조각. 뒷면에 별 넷이 서·북·동·남 순으로 이어져 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3756,
+          "name": "삽",
+          "grade": "normal",
+          "type": 10,
+          "desc": "바로 앞 칸을 판다. 보물이 묻힌 자리를 알아야 쓸모가 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 500,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3757,
+          "name": "낡은 보물지도",
+          "grade": "normal",
+          "type": 10,
+          "desc": "X 표시가 있는 낡은 지도. 펼치면 어느 섬인지 알 수 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3758,
+          "name": "선원 일지 조각",
+          "grade": "normal",
+          "type": 10,
+          "desc": "은빛 갈매기호 선원의 일지 조각. 끝에 숫자가 적혀 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3801,
+          "name": "유령 선장의 해도",
+          "grade": "normal",
+          "type": 10,
+          "desc": "젖지 않는 낡은 해도. 옛 칠리 항구로 가는 뱃길이 그려져 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3913,
+          "name": "심해의 비약",
+          "grade": "normal",
+          "type": 10,
+          "desc": "전투 중 파티 전원 HP·SP·상태 회복 + 3턴 동안 매 턴 HP 20% 회복.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 2,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -21412,6 +23458,538 @@
             "agi": 0
           },
           "price": 5000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3759,
+          "name": "등대 렌즈 조각",
+          "grade": "normal",
+          "type": 0,
+          "desc": "꺼진 등대의 렌즈 조각. 꼭대기 렌즈 틀에 끼울 수 있을 것 같다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3760,
+          "name": "화약통",
+          "grade": "normal",
+          "type": 0,
+          "desc": "붉은수염 해적단의 화약통. 배에 실어 두면 대포가 세진다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3763,
+          "name": "소라 껍데기",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 야자섬 항아리 소라게가 버린 껍데기. 단단하다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 120,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3764,
+          "name": "앵무새 깃털",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 야자섬 보물 앵무새의 붉은 깃털.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 120,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3765,
+          "name": "장어 가죽",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 야자섬 모래 장어의 질긴 가죽.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 140,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3766,
+          "name": "따개비 조각",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 난파선 암초 따개비 덩어리에서 떼어 낸 조각.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 200,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3767,
+          "name": "복어 가시",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 난파선 암초 가시 복어의 독 없는 가시.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 220,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3768,
+          "name": "곰치 이빨",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 난파선 암초 구멍 곰치의 날카로운 이빨.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 240,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3769,
+          "name": "폭풍 깃털",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 꺼진 등대섬 바다 하피의 깃털. 바람 냄새가 난다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 300,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3770,
+          "name": "꺼진 심지",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 꺼진 등대섬 등불에서 나온 타다 만 심지.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 280,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3771,
+          "name": "바다뱀 비늘",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 꺼진 등대섬 절벽 바다뱀의 푸른 비늘.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 320,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3772,
+          "name": "꺾인 날개깃",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 떨어진 하늘섬 그리폰의 부러진 깃.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 400,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3773,
+          "name": "별 가루",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 떨어진 하늘섬 별조각 정령이 남긴 빛나는 가루.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 450,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3774,
+          "name": "고대 톱니",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 떨어진 하늘섬 경비기에서 떨어진 톱니바퀴.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 420,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3775,
+          "name": "해적 금화",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 붉은수염 해적단의 금화. 낯선 나라의 문장이 찍혀 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 800,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3776,
+          "name": "화약 가루",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 해적 포수가 흘린 화약 가루.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 500,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3777,
+          "name": "저주 카드",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 해적 점술사의 카드. 뒤집어 보기 싫다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 500,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3802,
+          "name": "선장실 열쇠",
+          "grade": "normal",
+          "type": 0,
+          "desc": "녹슨 열쇠. 손잡이에 닻이 새겨져 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3804,
+          "name": "바랜 뼈 조각",
+          "grade": "normal",
+          "type": 0,
+          "desc": "외항 유령선 해골 선원의 뼈. 소금기가 배어 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 600,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3805,
+          "name": "젖은 은화",
+          "grade": "normal",
+          "type": 0,
+          "desc": "옛 칠리 왕국의 은화. 얼굴이 닳아 안 보인다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 900,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3851,
+          "name": "물결 문장",
+          "grade": "normal",
+          "type": 0,
+          "desc": "물결 무늬 청동 문장. 탑 1층 쇠창살 문에 맞는다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3854,
+          "name": "해초 비늘",
+          "grade": "normal",
+          "type": 0,
+          "desc": "침몰 도시 해초 머맨의 비늘. 미끈거린다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 900,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3855,
+          "name": "촉수 빨판",
+          "grade": "normal",
+          "type": 0,
+          "desc": "침몰 도시 물밑 촉수에서 떨어진 빨판.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 950,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3856,
+          "name": "따개비 껍질",
+          "grade": "normal",
+          "type": 0,
+          "desc": "옛 칠리 경비병 갑옷에 붙어 있던 따개비.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 1000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3911,
+          "name": "크라켄 갑각 조각",
+          "grade": "normal",
+          "type": 0,
+          "desc": "크라켄의 뼈 판 조각. 로저스의 마나무토라면 쓸 곳을 안다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3912,
+          "name": "크라켄 먹물샘",
+          "grade": "normal",
+          "type": 0,
+          "desc": "크라켄의 먹물이 고인 주머니. 포션조합술로 심해의 비약을 만든다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3951,
+          "name": "히어로소프트 사원증",
+          "grade": "normal",
+          "type": 0,
+          "desc": "히어로소프트 직원이 쓰던 사원증. 사진 자리가 비어 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 3952,
+          "name": "멈춘 탁상 달력",
+          "grade": "normal",
+          "type": 0,
+          "desc": "넘기다 만 탁상 달력. 어느 날짜에서 멈춰 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
