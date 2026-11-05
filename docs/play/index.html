@@ -431,6 +431,8 @@ body:not(.touch) #play.spp-on .keys { visibility: hidden; }
     border-radius: 16px 16px 0 0; box-shadow: 0 -14px 36px rgba(0, 0, 0, 0.55); padding-top: 0; padding-bottom: env(safe-area-inset-bottom); }
 }
 
+@media (orientation: portrait) and (max-width: 420px) { .touch .quick .qbtn svg { display: none; } }
+
 /* 빠른 버튼: 2배속·타이틀로 (세로는 게임 화면 아래 한 줄, 가로는 양옆 칸 위, 데스크톱은 오른쪽 칸) */
 .qbtn { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-radius: 999px;
   border: 1px solid rgba(239, 230, 210, 0.25); background: rgba(13, 15, 20, 0.7); font-size: 14px; white-space: nowrap; touch-action: manipulation; }
@@ -450,6 +452,12 @@ body:not(.touch) #play.spp-on .keys { visibility: hidden; }
   .touch .quick { grid-area: quick; display: flex; align-items: center; gap: 8px; height: 60px; padding: 0 12px;
     border-bottom: 1px solid rgba(239, 230, 210, 0.08); }
   .touch .quick .icon-btn { border-radius: 12px; border-color: rgba(239, 230, 210, 0.18); }
+  /* 버튼이 늘어도 소리·버튼 배치가 밀려나지 않게: 줄을 줄이고, 그래도 넘치면 옆으로 밀어 볼 수 있게 */
+  .touch .quick { gap: 6px; padding: 0 10px; overflow-x: auto; scrollbar-width: none; }
+  .touch .quick::-webkit-scrollbar { display: none; }
+  .touch .quick .qbtn { flex: none; padding: 0 10px; gap: 4px; font-size: 13px; }
+  .touch .quick .qbtn small { display: none; }
+  .touch .quick .icon-btn { flex: none; width: 40px; height: 40px; }
 }
 @media (orientation: landscape) {
   .touch .pad-top { flex-wrap: wrap; gap: 6px; }
