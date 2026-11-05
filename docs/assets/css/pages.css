@@ -397,3 +397,27 @@ tr.is-target td { animation: target-glow 2.4s ease-out 1; }
 .sp-others button { display: inline-flex; align-items: center; gap: 4px; font: inherit; font-size: .84rem; color: inherit; padding: 2px 8px 2px 4px; background: rgba(5, 8, 24, .5); border: 1px solid rgba(201, 211, 242, .25); border-radius: 3px; cursor: pointer; }
 .sp-others button:hover { border-color: var(--gold); }
 .sp-others img { width: 22px; height: 18px; object-fit: contain; }
+
+/* 런처 안에서 띄울 때 (spawns.html?embed=1): 사이트 머리·제목·바닥글을 빼고 한 줄로 */
+.embed body { background: var(--night); }
+.embed #gnb, .embed .subtabs, .embed .page-head, .embed #foot, .embed .update, .embed .skip { display: none !important; }
+.embed .section { padding: 10px 0 18px; }
+.embed .wrap { padding: 0 12px; }
+.embed .item-tools { gap: 8px; margin-bottom: 8px; }
+.embed .item-tools input { width: 100%; }
+.embed .sp-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.embed .win { padding: 12px; }
+.embed .sp-list { max-height: 150px; }
+.embed .sp-card { grid-template-columns: 56px minmax(0, 1fr); gap: 10px; margin-top: 8px; padding-top: 8px; }
+.embed .sp-card__img { width: 56px; height: 56px; }
+.embed .sp-card__img img { max-width: 52px; max-height: 52px; }
+.embed .sp-card h2 { font-size: 1.05rem; }
+.embed .sp-head h2 { font-size: 1.15rem; }
+.embed .sp-view { max-height: 52vh; }
+.sp-saved { display: inline-block; font-size: .74rem; color: var(--night); background: var(--gold); padding: 1px 7px; border-radius: 3px; margin-bottom: 6px; }
+.embed .sp-ex, .embed .sp-card__img, .embed .sp-card h2, .embed .sp-card__meta { display: none; }
+.embed .sp-card { display: block; }
+.embed .sp-list { max-height: 112px; }
+.embed .sp-legend { display: none; }
+.embed .sp-grid { display: flex; flex-direction: column; align-items: stretch; }
+.embed .sp-main { order: -1; }
