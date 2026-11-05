@@ -7,6 +7,18 @@
   }
   function load(name) { return fetch("assets/data/" + name + ".json").then(function (r) { return r.json(); }); }
   function imgName(path) { return path.split("/").pop().replace(/\.[^.]+$/, "") + ".png"; }
+  // 검색창의 Enter(폰 키보드의 검색 키): 키보드를 내리고 결과가 보이게 검색 줄을 화면 위로 올린다 (검색은 글자를 칠 때마다 이미 된다)
+  function enterSearch(input) {
+    input.setAttribute("enterkeyhint", "search");
+    input.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" || e.isComposing) return;
+      e.preventDefault();
+      input.blur();
+      var bar = input.closest(".item-tools") || input, gnb = document.getElementById("gnb");
+      var top = bar.getBoundingClientRect().top + scrollY - (gnb && getComputedStyle(gnb).position !== "static" ? gnb.offsetHeight : 0) - 12;
+      scrollTo({ top: Math.max(0, top), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+  }
 
   // ── 리스트/카드 보기와 정렬 표 (아이템·몬스터 공용) ──
   var VIEW_KEY = "lostsaga-view";
@@ -334,6 +346,7 @@
       tabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { cur = b.dataset.k; render(); } });
       catSel.addEventListener("change", function () { cur = catSel.value; render(); });
       q.addEventListener("input", render);
+      enterSearch(q);
       gradeSel.addEventListener("change", render);
       jobSel.addEventListener("change", render);
       handSel.addEventListener("change", render);
@@ -494,6 +507,7 @@
         else mEl.innerHTML = cards(word, regionKey, kind) || '<p class="dim">찾는 몬스터가 없다.</p>';
       }
       q.addEventListener("input", render);
+      enterSearch(q);
       sel.addEventListener("change", render);
       kindSel.addEventListener("change", render);
       viewToggle(render);
