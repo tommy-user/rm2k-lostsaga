@@ -808,6 +808,33 @@ function openTitle() {
   $("#title-cancel").focus();
 }
 for (const b of document.querySelectorAll('[data-act="title"]')) b.onclick = openTitle;
+
+// ---- 몬스터 찾기 ----
+// 사이트의 몬스터 찾기(spawns.html)를 패널로 띄운다. 게임은 그대로 돌고, 패널 안 키 입력은 게임으로 가지 않는다(iframe).
+// 열 때 이 기기에서 가장 최근에 저장한 세이브의 맵으로 연다.
+const spp = $("#spawns-panel"), sppFrame = $("#spp-frame");
+function setSpawnsPressed(on) {
+  for (const b of document.querySelectorAll('[data-act="spawns"]')) b.setAttribute("aria-pressed", String(on));
+  $("#play").classList.toggle("spp-on", on);
+}
+function closeSpawns() { spp.hidden = true; setSpawnsPressed(false); canvas.focus(); }
+async function openSpawns() {
+  if (!spp.hidden) return closeSpawns();
+  let q = "embed=1";
+  try {
+    let best = null;
+    for (const [, v] of await readLocalSaves()) if (!best || v.time > best.time) best = v;
+    if (best) q += "&map=" + parseLsd(best.bytes).map_id;
+  } catch (e) {
+    console.warn("[spawns] 세이브 맵 읽기 실패", e);
+  }
+  if (sppFrame.dataset.q !== q) { sppFrame.dataset.q = q; sppFrame.src = "../spawns.html?" + q; }
+  spp.hidden = false;
+  setSpawnsPressed(true);
+}
+for (const b of document.querySelectorAll('[data-act="spawns"]')) b.onclick = openSpawns;
+spp.querySelector(".spp-close").onclick = closeSpawns;
+window.addEventListener("message", (e) => { if (e.origin === location.origin && e.data === "spawns-close") closeSpawns(); });
 $("#title-cancel").onclick = () => titleDlg.close();
 titleDlg.addEventListener("click", (e) => { if (e.target === titleDlg) titleDlg.close(); });
 titleDlg.addEventListener("close", () => canvas.focus());

@@ -81,11 +81,33 @@
     window.addEventListener("pointermove", function (e) { if (drag) { view.scrollLeft = drag.l - (e.clientX - drag.x); view.scrollTop = drag.t - (e.clientY - drag.y); } });
     window.addEventListener("pointerup", function () { drag = null; view.classList.remove("is-drag"); });
     window.addEventListener("hashchange", fromHash);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && window.parent !== window) window.parent.postMessage("spawns-close", location.origin);
+    });
+    if (fromMap()) return;
     if (!fromHash()) {
       var miss = /^#m-/.test(location.hash);
       qEl.value = "골렘"; onSearch(true);
       if (miss) $("sp-hint").textContent = "찾던 몬스터는 정해진 리젠 자리가 없어요 (이벤트·보물 전투 등).";
     }
+  }
+  // ?map=<맵 번호>: 그 맵에 리젠 자리가 가장 많은 몬스터로 연다 (런처: 최근 저장한 맵)
+  function fromMap() {
+    var id = new URLSearchParams(location.search).get("map");
+    var mp = id && MAPS[id];
+    if (!mp) return false;
+    var cnt = {};
+    mp.spawns.forEach(function (s) { s[2].forEach(function (k) { cnt[k] = (cnt[k] || 0) + 1; }); });
+    mp.any.forEach(function (k) { cnt[k] = cnt[k] || 0; });
+    var best = Object.keys(cnt).sort(function (a, b) { return cnt[b] - cnt[a]; })[0];
+    var i = MONS.findIndex(function (m) { return m.key === best; });
+    if (i < 0) return false;
+    qEl.value = MONS[i].name;
+    state.mon = i;
+    state.loc = Math.max(0, MONS[i].locs.findIndex(function (l) { return l.map === id; }));
+    state.saved = id;
+    render();
+    return true;
   }
   function fromHash() {
     var key = BY_ANCHOR[location.hash.slice(1)];
@@ -130,7 +152,7 @@
     [].forEach.call(document.querySelectorAll(".sp-zoom button"), function (b) { b.setAttribute("aria-pressed", +b.dataset.z === state.zoom); });
     if (!l) { $("sp-head").innerHTML = '<p class="dim">몬스터를 고르면 나오는 맵이 여기에 보여요.</p>'; stage.innerHTML = ""; $("sp-others").innerHTML = ""; state.mapId = null; return; }
     var mp = MAPS[l.map], key = m.key, mine = mp.spawns.filter(function (s) { return s[2].indexOf(key) >= 0; });
-    $("sp-head").innerHTML = '<div class="sp-head"><h2>' + esc(mp.name) + '</h2><span class="pixel sp-head__n">' + esc(m.name) + (mine.length ? " 리젠 " + mine.length + "곳" : " · 맵 어디서나") + "</span></div>" +
+    $("sp-head").innerHTML = (state.saved === l.map ? '<span class="pixel sp-saved">최근 저장한 맵</span>' : "") + '<div class="sp-head"><h2>' + esc(mp.name) + '</h2><span class="pixel sp-head__n">' + esc(m.name) + (mine.length ? " 리젠 " + mine.length + "곳" : " · 맵 어디서나") + "</span></div>" +
       '<p class="pixel dim sp-path">' + (mp.path.length > 1 ? mp.path.slice(0, -1).map(esc).join(" › ") + " › <b>" + esc(mp.name) + "</b>" : "") + "</p>";
     var changed = state.mapId !== l.map;
     state.mapId = l.map;
