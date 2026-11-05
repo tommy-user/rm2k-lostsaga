@@ -66,6 +66,17 @@
     $("sp-ex").innerHTML = "예: " + ex.map(function (w) { return '<button type="button">' + esc(w) + "</button>"; }).join("");
     $("sp-ex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { qEl.value = b.textContent; onSearch(true); } });
     qEl.addEventListener("input", function () { onSearch(false); });
+    // 키보드의 검색(Enter) 키: 첫 결과로 열고 키보드를 내린다. 런처 패널·좁은 화면에서는 맵이 보이게 올린다
+    qEl.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" || e.isComposing) return;
+      e.preventDefault();
+      onSearch(true);
+      qEl.blur();
+      if (document.documentElement.classList.contains("embed") || matchMedia("(max-width: 900px)").matches) {
+        var target = document.documentElement.classList.contains("embed") ? $("sp-head") : $("sp-list");
+        if (target) target.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      }
+    });
     $("sp-list").addEventListener("click", function (e) { var b = e.target.closest(".sp-row"); if (b) pick(+b.dataset.i, 0); });
     $("sp-card").addEventListener("click", function (e) { var b = e.target.closest(".sp-loc"); if (b) { state.loc = +b.dataset.l; render(); } });
     $("sp-others").addEventListener("click", function (e) {
