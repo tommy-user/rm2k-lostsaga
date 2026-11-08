@@ -768,6 +768,1106 @@
   "event_id": null,
   "common_event_id": 188
  },
+ "4251": {
+  "name": "은빛 사냥검",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1189,
+    "name": "구울의 이빨",
+    "count": 8
+   },
+   {
+    "id": 1193,
+    "name": "켈베로스의 머리",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4252": {
+  "name": "은빛 철퇴",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1189,
+    "name": "구울의 이빨",
+    "count": 8
+   },
+   {
+    "id": 1193,
+    "name": "켈베로스의 머리",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4253": {
+  "name": "사냥꾼 가죽갑옷",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1189,
+    "name": "구울의 이빨",
+    "count": 6
+   },
+   {
+    "id": 1193,
+    "name": "켈베로스의 머리",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4254": {
+  "name": "사냥꾼 두건",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1189,
+    "name": "구울의 이빨",
+    "count": 6
+   },
+   {
+    "id": 1193,
+    "name": "켈베로스의 머리",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4255": {
+  "name": "은 십자 목걸이",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1189,
+    "name": "구울의 이빨",
+    "count": 6
+   },
+   {
+    "id": 1193,
+    "name": "켈베로스의 머리",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4261": {
+  "name": "서리 지팡이",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1198,
+    "name": "물주머니",
+    "count": 8
+   },
+   {
+    "id": 280,
+    "name": "하급 사파이어",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4262": {
+  "name": "냉혈 전갈 창",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1198,
+    "name": "물주머니",
+    "count": 8
+   },
+   {
+    "id": 280,
+    "name": "하급 사파이어",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4263": {
+  "name": "서리 로브",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1198,
+    "name": "물주머니",
+    "count": 6
+   },
+   {
+    "id": 280,
+    "name": "하급 사파이어",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4264": {
+  "name": "서리 써클렛",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1198,
+    "name": "물주머니",
+    "count": 6
+   },
+   {
+    "id": 280,
+    "name": "하급 사파이어",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4265": {
+  "name": "얼음 결정 반지",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1198,
+    "name": "물주머니",
+    "count": 6
+   },
+   {
+    "id": 280,
+    "name": "하급 사파이어",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4271": {
+  "name": "성지 수호 활",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 169,
+    "name": "날짐승의 날개",
+    "count": 8
+   },
+   {
+    "id": 1195,
+    "name": "섀도 엘프의 귀",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4272": {
+  "name": "유니콘 뿔 단창",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 169,
+    "name": "날짐승의 날개",
+    "count": 8
+   },
+   {
+    "id": 1195,
+    "name": "섀도 엘프의 귀",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4273": {
+  "name": "요정 가죽 갑옷",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 169,
+    "name": "날짐승의 날개",
+    "count": 6
+   },
+   {
+    "id": 1195,
+    "name": "섀도 엘프의 귀",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4274": {
+  "name": "성지의 머리띠",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 169,
+    "name": "날짐승의 날개",
+    "count": 6
+   },
+   {
+    "id": 1195,
+    "name": "섀도 엘프의 귀",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4275": {
+  "name": "하피 깃털 망토",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 169,
+    "name": "날짐승의 날개",
+    "count": 6
+   },
+   {
+    "id": 1195,
+    "name": "섀도 엘프의 귀",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4281": {
+  "name": "전갈 꼬리 글레이브",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 8
+   },
+   {
+    "id": 1199,
+    "name": "산울프의 털",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4282": {
+  "name": "엔트 뿌리 건틀릿",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 8
+   },
+   {
+    "id": 1199,
+    "name": "산울프의 털",
+    "count": 4
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4283": {
+  "name": "엔트 껍질 갑옷",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 6
+   },
+   {
+    "id": 1199,
+    "name": "산울프의 털",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4284": {
+  "name": "엔트 나무 방패",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 6
+   },
+   {
+    "id": 1199,
+    "name": "산울프의 털",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4285": {
+  "name": "극지 오크 털모자",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 345,
+    "name": "엔트의 잎사귀",
+    "count": 6
+   },
+   {
+    "id": 1199,
+    "name": "산울프의 털",
+    "count": 3
+   }
+  ],
+  "gold": 2000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4291": {
+  "name": "전도자의 글레이브",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1844,
+    "name": "광기의 늑대 이빨",
+    "count": 8
+   },
+   {
+    "id": 1846,
+    "name": "광기의 정수 조각",
+    "count": 4
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4292": {
+  "name": "광견 너클",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1844,
+    "name": "광기의 늑대 이빨",
+    "count": 8
+   },
+   {
+    "id": 1846,
+    "name": "광기의 정수 조각",
+    "count": 4
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4293": {
+  "name": "전도자의 갑옷",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1844,
+    "name": "광기의 늑대 이빨",
+    "count": 6
+   },
+   {
+    "id": 1846,
+    "name": "광기의 정수 조각",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4294": {
+  "name": "전도자의 투구",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1844,
+    "name": "광기의 늑대 이빨",
+    "count": 6
+   },
+   {
+    "id": 1846,
+    "name": "광기의 정수 조각",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4295": {
+  "name": "광기의 정수 목걸이",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1844,
+    "name": "광기의 늑대 이빨",
+    "count": 6
+   },
+   {
+    "id": 1846,
+    "name": "광기의 정수 조각",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4351": {
+  "name": "골렘 마력 지팡이",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 8
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 4
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4352": {
+  "name": "골렘 파편 망치",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 8
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 4
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4353": {
+  "name": "바위결 로브",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 6
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4354": {
+  "name": "바위 써클렛",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 6
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4355": {
+  "name": "골렘 심장 반지",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 6
+   },
+   {
+    "id": 288,
+    "name": "중급 다이아몬드",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4361": {
+  "name": "다크라이더의 검",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1272,
+    "name": "머미의 붕대",
+    "count": 8
+   },
+   {
+    "id": 1275,
+    "name": "가고일의 날개",
+    "count": 4
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4362": {
+  "name": "망자의 서",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1272,
+    "name": "머미의 붕대",
+    "count": 8
+   },
+   {
+    "id": 1275,
+    "name": "가고일의 날개",
+    "count": 4
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4363": {
+  "name": "머미 붕대 로브",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1272,
+    "name": "머미의 붕대",
+    "count": 6
+   },
+   {
+    "id": 1275,
+    "name": "가고일의 날개",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4364": {
+  "name": "해골 투구",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1272,
+    "name": "머미의 붕대",
+    "count": 6
+   },
+   {
+    "id": 1275,
+    "name": "가고일의 날개",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4365": {
+  "name": "저승 기사의 망토",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1272,
+    "name": "머미의 붕대",
+    "count": 6
+   },
+   {
+    "id": 1275,
+    "name": "가고일의 날개",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4371": {
+  "name": "메두사의 비전서",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1216,
+    "name": "메두사의 눈",
+    "count": 8
+   },
+   {
+    "id": 1218,
+    "name": "영혼의 슬픔",
+    "count": 4
+   }
+  ],
+  "gold": 8000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4372": {
+  "name": "뱀파이어 송곳니 단검",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1216,
+    "name": "메두사의 눈",
+    "count": 8
+   },
+   {
+    "id": 1218,
+    "name": "영혼의 슬픔",
+    "count": 4
+   }
+  ],
+  "gold": 8000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4373": {
+  "name": "흐느끼는 비단 로브",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1216,
+    "name": "메두사의 눈",
+    "count": 6
+   },
+   {
+    "id": 1218,
+    "name": "영혼의 슬픔",
+    "count": 3
+   }
+  ],
+  "gold": 8000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4374": {
+  "name": "리치의 관",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1216,
+    "name": "메두사의 눈",
+    "count": 6
+   },
+   {
+    "id": 1218,
+    "name": "영혼의 슬픔",
+    "count": 3
+   }
+  ],
+  "gold": 8000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4375": {
+  "name": "흡혈귀 망토",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 1216,
+    "name": "메두사의 눈",
+    "count": 6
+   },
+   {
+    "id": 1218,
+    "name": "영혼의 슬픔",
+    "count": 3
+   }
+  ],
+  "gold": 8000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4381": {
+  "name": "고대 기사의 장검",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 165,
+    "name": "강철",
+    "count": 8
+   },
+   {
+    "id": 413,
+    "name": "고대 팔라딘의 반지",
+    "count": 4
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4382": {
+  "name": "고대 근위 언월도",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 165,
+    "name": "강철",
+    "count": 8
+   },
+   {
+    "id": 413,
+    "name": "고대 팔라딘의 반지",
+    "count": 4
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4383": {
+  "name": "고대 근위 판금",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 165,
+    "name": "강철",
+    "count": 6
+   },
+   {
+    "id": 413,
+    "name": "고대 팔라딘의 반지",
+    "count": 3
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4384": {
+  "name": "고대 근위 투구",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 165,
+    "name": "강철",
+    "count": 6
+   },
+   {
+    "id": 413,
+    "name": "고대 팔라딘의 반지",
+    "count": 3
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4385": {
+  "name": "고대 근위 방패",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 165,
+    "name": "강철",
+    "count": 6
+   },
+   {
+    "id": 413,
+    "name": "고대 팔라딘의 반지",
+    "count": 3
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4391": {
+  "name": "오우거 족장의 철퇴",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 8
+   },
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 4
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4392": {
+  "name": "보석 골렘 건틀릿",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 8
+   },
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 4
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4393": {
+  "name": "오우거 가죽 갑옷",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 6
+   },
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 3
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4394": {
+  "name": "오우거 두개골 투구",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 6
+   },
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 3
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
+ "4395": {
+  "name": "거인의 팔찌",
+  "count": 1,
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "materials": [
+   {
+    "id": 346,
+    "name": "오우거의 피부",
+    "count": 6
+   },
+   {
+    "id": 344,
+    "name": "골렘의 돌조각",
+    "count": 3
+   }
+  ],
+  "gold": 10000,
+  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1493
+ },
  "1075": {
   "name": "고대의 주문서",
   "count": 1,
@@ -2756,9 +3856,9 @@
    }
   ],
   "gold": 20000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2602": {
@@ -2778,9 +3878,9 @@
    }
   ],
   "gold": 22000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2603": {
@@ -2800,9 +3900,9 @@
    }
   ],
   "gold": 22000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2604": {
@@ -2822,9 +3922,9 @@
    }
   ],
   "gold": 22000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2605": {
@@ -2844,9 +3944,9 @@
    }
   ],
   "gold": 24000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2606": {
@@ -2866,9 +3966,9 @@
    }
   ],
   "gold": 18000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2607": {
@@ -2888,9 +3988,9 @@
    }
   ],
   "gold": 15000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2608": {
@@ -2910,9 +4010,9 @@
    }
   ],
   "gold": 15000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2609": {
@@ -2932,9 +4032,9 @@
    }
   ],
   "gold": 14000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2630": {
@@ -2954,9 +4054,9 @@
    }
   ],
   "gold": 40000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2631": {
@@ -2976,9 +4076,9 @@
    }
   ],
   "gold": 42000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2632": {
@@ -2998,9 +4098,9 @@
    }
   ],
   "gold": 42000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2633": {
@@ -3020,9 +4120,9 @@
    }
   ],
   "gold": 42000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2634": {
@@ -3042,9 +4142,9 @@
    }
   ],
   "gold": 46000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2635": {
@@ -3064,9 +4164,9 @@
    }
   ],
   "gold": 36000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2636": {
@@ -3086,9 +4186,9 @@
    }
   ],
   "gold": 30000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2637": {
@@ -3108,9 +4208,9 @@
    }
   ],
   "gold": 30000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2638": {
@@ -3130,9 +4230,9 @@
    }
   ],
   "gold": 28000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2621": {
@@ -3152,9 +4252,9 @@
    }
   ],
   "gold": 60000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2622": {
@@ -3174,9 +4274,9 @@
    }
   ],
   "gold": 60000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  },
  "2623": {
@@ -3201,9 +4301,9 @@
    }
   ],
   "gold": 50000,
-  "src": "maps/0557_오아시스/events/0012_장인.yaml",
-  "map_id": 557,
-  "event_id": 12,
+  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
+  "map_id": 724,
+  "event_id": 4,
   "common_event_id": null
  }
 }
