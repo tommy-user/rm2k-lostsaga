@@ -236,6 +236,21 @@
         var c = jobChips(it);
         return c ? '<p class="item__jobs"><span class="pixel">착용</span> ' + c + "</p>" : "";
       }
+      // 버전별 변경 표시 (items.json 의 ver: 신규 또는 기존→변경 값과 사유)
+      function verBadge(it) {
+        var v = it.ver;
+        if (!v) return "";
+        return '<span class="ver ver--' + (v.kind === "new" ? "new" : "chg") + '">' + esc(v.v) + (v.kind === "new" ? " 신규" : " 변경") + "</span>";
+      }
+      function verLine(it) {
+        var v = it.ver;
+        if (!v || v.kind !== "changed") return "";
+        return '<p class="item__ver"><span class="pixel">' + esc(v.v) + " 변경</span> " + v.changes.map(function (c) {
+          var was = {}; c.before.split("/").forEach(function (p) { was[p] = 1; });
+          var after = c.after.split("/").map(function (p) { return was[p] ? esc(p) : "<strong>" + esc(p) + "</strong>"; }).join("/");
+          return (c.plus != null ? "+" + c.plus + " " : "") + '<span class="dim">' + esc(c.before) + "</span> → " + after;
+        }).join("<br>") + '<br><span class="dim">' + esc(v.changes[0].reason) + "</span></p>";
+      }
       function recipe(r) {
         if (!r || !r.materials || !r.materials.length) return "";
         var mats = r.materials.map(function (m) { return esc(m.name) + (m.count > 1 ? " ×" + m.count : ""); });
@@ -246,10 +261,10 @@
         if (it.grade === "god") {
           return '<article class="item item--secret win win--plain"><h3>??? ' + badge("god") + "</h3><p>엔딩 뒤에야 모습을 드러내는 장비.</p></article>";
         }
-        return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) + " " + handChip(it) +
+        return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) + " " + handChip(it) + " " + verBadge(it) +
           (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h3>" +
           (it.job ? '<p class="pixel" style="font-size:.74rem;color:var(--gold)">' + esc(it.job) + " 마스터</p>" : "") +
-          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + jobLine(it) + recipe(recipes[it.id]) + dropFrom(it) +
+          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + verLine(it) + jobLine(it) + recipe(recipes[it.id]) + dropFrom(it) +
           (it.note ? '<p class="dim">' + esc(it.note) + "</p>" : "") + "</article>";
       }
       document.getElementById("grades").innerHTML = d.grades.filter(function (g) { return g.key !== "rare"; }).map(function (g) {
@@ -264,6 +279,12 @@
       var jobSel = document.getElementById("item-job");
       var handSel = document.getElementById("item-hand");
       var catSel = document.getElementById("item-cat");
+      var verSel = document.getElementById("item-ver");
+      var vers = {};
+      d.categories.forEach(function (c) { c.items.forEach(function (it) { if (it.ver) vers[it.ver.v] = 1; }); });
+      var latest = Object.keys(vers).sort().pop();
+      if (verSel) verSel.innerHTML = latest ? '<option value="">모든 아이템</option><option value="any">' + esc(latest) + ' 신규·변경</option><option value="new">' + esc(latest) + ' 신규</option><option value="changed">' + esc(latest) + " 변경</option>" : "";
+      if (verSel && !latest) verSel.hidden = true;
       handSel.innerHTML = '<option value="">한손·양손</option><option value="one">한손 무기</option><option value="two">양손 무기</option>';
       gradeSel.innerHTML = '<option value="">모든 등급</option>' + d.grades.filter(function (g) { return g.key !== "rare"; }).map(function (g) {
         return '<option value="' + esc(g.key) + '">' + esc(g.name) + "</option>";
@@ -294,7 +315,7 @@
           html: function (r) {
             var it = r.it;
             if (secret(r)) return "???";
-            return "<strong>" + esc(it.name) + "</strong> " + handChip(it) + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
+            return "<strong>" + esc(it.name) + "</strong> " + handChip(it) + " " + verBadge(it) + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
               (it.job ? '<br><span class="pixel small gold">' + esc(it.job) + " 마스터</span>" : "");
           } },
         { key: "grade", label: "등급", num: true, get: function (r) { return rank[r.it.grade] == null ? 0 : rank[r.it.grade]; }, html: function (r) { return badge(r.it.grade); } },
@@ -307,7 +328,7 @@
         { key: "desc", label: "설명", sort: false, wide: true,
           html: function (r) {
             if (secret(r)) return "엔딩 뒤에야 모습을 드러내는 장비.";
-            return esc(r.it.desc) + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]) + dropFrom(r.it);
+            return esc(r.it.desc) + verLine(r.it) + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]) + dropFrom(r.it);
           } }
       ];
       bindSort(iEl, cols, sort, render);
@@ -328,6 +349,7 @@
             if (gradeSel.value && it.grade !== gradeSel.value) return;
             if (jobSel.value && (!isEquip(it) || (it.jobs && it.jobs.indexOf(jobSel.value) < 0))) return;
             if (handSel.value && !!it.twoHanded !== (handSel.value === "two")) return;
+            if (verSel && verSel.value && (!it.ver || it.ver.v !== latest || (verSel.value !== "any" && it.ver.kind !== verSel.value))) return;
             if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "") + " " + dropSrc(it).map(function (s) { return s.name; }).join(" ")).toLowerCase().indexOf(word) < 0)) return;
             rows.push({ it: it, cat: c.name });
           });
@@ -350,6 +372,7 @@
       gradeSel.addEventListener("change", render);
       jobSel.addEventListener("change", render);
       handSel.addEventListener("change", render);
+      if (verSel) verSel.addEventListener("change", render);
       viewToggle(render);
       render();
     });
