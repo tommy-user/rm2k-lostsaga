@@ -40,12 +40,12 @@
         </div>
         <div class="win dl__main">
           <div>
-            <h2 class="win__title">로스트사가 v3.5 완결판</h2>
+            <h2 class="win__title">로스트사가 v3.6 완결판</h2>
             <p>rm2k-lostsaga.zip · 약 56MB</p>
           </div>
-          <a class="btn btn--gold" href="https://github.com/tommy-user/rm2k-lostsaga/releases/download/v3.5.12/rm2k-lostsaga.zip" data-dl="v3.5.12" download>게임 받기</a>
+          <a class="btn btn--gold" href="https://github.com/tommy-user/rm2k-lostsaga/releases/download/v3.6/rm2k-lostsaga.zip" data-dl="v3.6" download>게임 받기</a>
         </div>
-        <p class="dim" style="margin:0;font-size:var(--step--1)">바뀐 내용은 아래 <a href="#notes">릴리즈 노트</a>나 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases/tag/v3.5.12" rel="noopener">릴리즈 페이지</a>에서 볼 수 있습니다. 새 버전 소식은 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases.atom" rel="noopener">릴리즈 피드</a>로 받을 수 있습니다.</p>
+        <p class="dim" style="margin:0;font-size:var(--step--1)">바뀐 내용은 아래 <a href="#notes">릴리즈 노트</a>나 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases/tag/v3.6" rel="noopener">릴리즈 페이지</a>에서 볼 수 있습니다. 새 버전 소식은 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases.atom" rel="noopener">릴리즈 피드</a>로 받을 수 있습니다.</p>
       </div>
 
       <div class="guide">
@@ -75,8 +75,7 @@
             <li>그림이나 소리가 나오지 않으면 RPG Maker 2000 런타임 패키지(RTP)가 필요합니다. <a href="https://github.com/tommy-user/rm2k-lostsaga/raw/main/RPG_Maker_2000_RTP.exe" rel="noopener">RTP 설치 파일</a>을 받아 설치하세요.</li>
           </ol>
           <div class="warn" role="note">
-            <p><strong>주의</strong> 이 게임은 EasyRPG Player 기준으로 만들었습니다. <code>로스트사가 접속.exe</code> 로 실행하면 마스터 승급 캐릭터의 능력치나 레벨업 성장이 다르게 나오는 등 문제가 생길 수 있습니다. 문제가 보이면 위의 EasyRPG Player 로 실행해 주세요.</p>
-            <p>RPG Maker 2000 의 한계로 레벨은 Lv50, HP·MP·능력치는 999 까지입니다. 마스터 승급 캐릭터의 Lv51~55 성장은 EasyRPG Player 로 실행할 때만 됩니다. 실행이 되지 않거나 느릴 때도 EasyRPG Player 를 쓰세요.</p>
+            <p><strong>주의</strong> 이 게임은 EasyRPG Player 기준으로 만들었습니다. <code>로스트사가 접속.exe</code> 로도 마스터 승급 캐릭터가 Lv55 까지 오릅니다. 실행이 되지 않거나 느릴 때, 화면이 이상할 때는 위의 EasyRPG Player 로 실행해 주세요.</p>
           </div>
         </div>
 
@@ -117,6 +116,50 @@
         </div>
 
         <div id="panel-notes" role="tabpanel" aria-labelledby="tab-notes" class="guide__panel">
+        <div class="win notes">
+          <h3>v3.6 <span class="dim">2026-11-08</span></h3>
+          <h4>아이템 개편</h4>
+          <ul>
+            <li>사냥터 10곳에 테마 장비 100종이 생겼습니다 (본토던전·얼음성·신의 성지·그랜드마운틴·광기의 던전·골렘 던전·지하던전·마왕의 침소·고대던전·그랜드마운틴 던전)</li>
+            <li>사냥터에서 전투를 이기면 가끔 상자가 열리며 매직·레어 장비가 나옵니다</li>
+            <li>장인 나노무토·마나무토가 사냥터 재료로 세트 장비를 만들어 줍니다. 두 벌·세 벌을 함께 끼면 세트 효과가 붙습니다</li>
+            <li>새 유니크 청룡언월도(오우거 리더)·야른그레이프(골렘 투사 리더). 장인에게서 +4까지 강화할 수 있습니다</li>
+            <li>폴암·건틀릿·화살처럼 상위 장비가 모자라던 계열을 채웠습니다</li>
+            <li>상점 장비 성능을 값에 맞게 고쳤습니다 (원소 반지·오브·단검·검·로브 등). 상점 창은 치명·공격을 낮췄습니다</li>
+            <li>워리어 성장(Lv55 HP 800·방어 200)과 오리하루콘 소드 공격력, 외항 장비 성능을 올렸습니다</li>
+            <li>중독은 3턴 동안 최대 HP의 5%씩 닳습니다</li>
+            <li>크랩리더 드롭 66%→10%, 로저스 투구 방어 20→26, 이순신 투구는 조금 낮췄습니다</li>
+            <li>장비 설명을 "짧은 설명. 능력치"로 맞추고, 실제 능력치와 다르던 설명을 고쳤습니다</li>
+          </ul>
+          <h4>영지·신시가지</h4>
+          <ul>
+            <li>크리엔드 신시가지의 시장·경비대·신전·황제 동상, 영주 영지의 경비대 그림을 새로 그렸습니다</li>
+            <li>건물을 짓고 허물 때 연출이 나오고, 모자란 재료와 허무는 비용을 알려 줍니다</li>
+          </ul>
+          <h4>Windows</h4>
+          <ul>
+            <li><code>로스트사가 접속.exe</code> 로 해도 마스터 승급 캐릭터가 Lv55 까지 오릅니다</li>
+          </ul>
+          <h4>바뀐 것</h4>
+          <ul>
+            <li>마법할머니 워프: 그라나마을이 '다른지역' 목록 넷째 칸으로 들어갔습니다</li>
+            <li>플레이스 웨폰·아머·매직·무브 법서는 쓰면 사라집니다</li>
+            <li>건물공사를 시작할 때 델카가 일찍 마치는 법을 알려 줍니다</li>
+          </ul>
+          <h4>고친 것</h4>
+          <ul>
+            <li>에피소드2 전에는 장비 세트 효과가 붙지 않던 문제</li>
+            <li>마을 증축(50만 이드)이 되지 않던 문제</li>
+            <li>도둑맞은 돈, 금고·국고에서 받은 돈이 사라지던 문제</li>
+            <li>영지 순찰병이 막혀 서 있던 문제</li>
+            <li>칠리마을 의뢰소 관리원이 가입할 때 "크리엔드의뢰소"라고 하던 문제</li>
+            <li>크리엔드 동상 앞 처녀 대사 맞춤법, "실명증"을 주민증으로</li>
+            <li>보상·참가비·여관 값의 "골드"를 "이드"로</li>
+            <li>대석 넉클이 민첩을 올리던 문제 (설명대로 방어 7)</li>
+            <li>+1 활빈검·+3 묠니르·+4 골드 파이터 넉클의 능력치가 강화 단계 순서와 맞지 않던 문제</li>
+          </ul>
+        </div>
+
         <div class="win notes">
           <h3>v3.5.12 <span class="dim">2026-11-08</span></h3>
           <h4>고친 것</h4>
