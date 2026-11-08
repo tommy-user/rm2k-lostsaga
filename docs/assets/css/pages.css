@@ -296,12 +296,6 @@
 /* 무기 한손/양손 표시 */
 .hand { display: inline-block; font-size: .7rem; line-height: 1; padding: 3px 6px; border: 1px solid #46538a; border-radius: 3px; color: var(--ink); vertical-align: middle; white-space: nowrap; }
 .hand--two { color: var(--gold); border-color: var(--gold); background: rgba(226, 192, 107, .1); }
-.ver { display: inline-block; font-size: .7rem; line-height: 1; padding: 3px 6px; border-radius: 3px; vertical-align: middle; white-space: nowrap; border: 1px solid; }
-.ver--new { color: #8fe3a8; border-color: #5fb97a; background: rgba(95, 185, 122, .12); }
-.ver--chg { color: #9cc4ff; border-color: #5c86c9; background: rgba(92, 134, 201, .12); }
-.item__ver { font-size: .8rem !important; color: var(--ink) !important; margin: 6px 0 0 !important; line-height: 1.7; }
-.item__ver .pixel { color: #9cc4ff; font-size: .72rem; margin-right: 4px; }
-.data-table .item__ver { margin: 4px 0 0 !important; }
 
 /* ── 드롭 몬스터 링크, 세계 지도 위치 ── */
 .item__drop { font-size: .8rem !important; color: var(--ink-dim) !important; margin: 6px 0 0 !important; line-height: 1.7; }
