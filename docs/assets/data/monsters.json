@@ -486,7 +486,7 @@
             {
               "id": 190,
               "name": "수력의 반지",
-              "prob": 66,
+              "prob": 10,
               "god": false
             }
           ],
@@ -2254,9 +2254,9 @@
           "hue": 270,
           "drops": [
             {
-              "id": 1,
-              "name": "힐링포션",
-              "prob": 99,
+              "id": 4401,
+              "name": "청룡언월도",
+              "prob": 33,
               "god": false
             }
           ],
@@ -2415,7 +2415,14 @@
           "boss": false,
           "leader": true,
           "hue": 300,
-          "drops": [],
+          "drops": [
+            {
+              "id": 4406,
+              "name": "야른그레이프",
+              "prob": 33,
+              "god": false
+            }
+          ],
           "places": [
             "grand"
           ],
@@ -6929,9 +6936,9 @@
           "hue": 270,
           "drops": [
             {
-              "id": 1,
-              "name": "힐링포션",
-              "prob": 99,
+              "id": 4401,
+              "name": "청룡언월도",
+              "prob": 33,
               "god": false
             }
           ],
