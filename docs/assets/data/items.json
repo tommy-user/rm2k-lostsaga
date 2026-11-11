@@ -88,6 +88,10 @@
     {
       "key": "anti",
       "name": "안티프리스트"
+    },
+    {
+      "key": "monster",
+      "name": "몬스터"
     }
   ],
   "categories": [
@@ -198,7 +202,8 @@
             "elf",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -226,7 +231,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -250,7 +256,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -275,7 +282,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -299,7 +307,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -365,7 +374,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -390,7 +400,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -454,7 +465,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -482,7 +494,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -507,7 +520,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -531,7 +545,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -939,7 +954,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -967,7 +983,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -992,7 +1009,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1138,7 +1156,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -1166,7 +1185,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1191,7 +1211,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1362,7 +1383,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1387,7 +1409,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1558,7 +1581,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1583,7 +1607,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1646,7 +1671,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1668,7 +1694,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1697,7 +1724,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1760,7 +1788,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -1814,7 +1843,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1839,7 +1869,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1879,7 +1910,8 @@
           "price": 4000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -1936,7 +1968,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2025,7 +2058,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -2054,7 +2088,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2081,7 +2116,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2177,7 +2213,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2240,7 +2277,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -2262,7 +2300,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2288,7 +2327,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2313,7 +2353,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2357,7 +2398,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2382,7 +2424,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -2408,7 +2451,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2471,7 +2515,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -2520,7 +2565,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2545,7 +2591,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2589,7 +2636,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2644,7 +2692,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2690,7 +2739,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2712,7 +2762,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -2737,7 +2788,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -2766,7 +2818,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3334,7 +3387,9 @@
           },
           "price": 2,
           "maxPlus": 4,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 다크마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
@@ -3353,7 +3408,9 @@
           },
           "price": 2,
           "maxPlus": 4,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 나이트마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
@@ -3372,7 +3429,9 @@
           },
           "price": 2,
           "maxPlus": 4,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
@@ -3499,7 +3558,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3524,7 +3584,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3549,7 +3610,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3574,7 +3636,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3599,7 +3662,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3624,7 +3688,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3649,7 +3714,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3673,7 +3739,8 @@
             "warrior",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3695,7 +3762,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3717,7 +3785,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3739,7 +3808,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3761,7 +3831,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3783,7 +3854,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -3993,7 +4065,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4018,7 +4091,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4043,7 +4117,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4068,7 +4143,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4093,7 +4169,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4118,7 +4195,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4143,7 +4221,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4154,7 +4233,7 @@
           "name": "엘리멘탈오브電",
           "grade": "normal",
           "type": 1,
-          "desc": "전기의 기가 깃든 오브",
+          "desc": "전기의 기가 깃든 상급 오브. 공25/정80/전기",
           "stats": {
             "atk": 25,
             "def": 0,
@@ -4168,7 +4247,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -4969,7 +5049,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -5042,7 +5123,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5067,7 +5149,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5092,7 +5175,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5117,7 +5201,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5142,7 +5227,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5167,7 +5253,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5192,7 +5279,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5283,7 +5371,8 @@
           "maxPlus": null,
           "jobs": [
             "thief",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5372,7 +5461,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5399,7 +5489,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -5426,7 +5517,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5453,7 +5545,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5480,7 +5573,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5507,7 +5601,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5534,7 +5629,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5561,7 +5657,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5588,7 +5685,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5613,7 +5711,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -5638,7 +5737,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -5663,7 +5763,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -5686,7 +5787,8 @@
           "jobs": [
             "cleric",
             "priest",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5708,7 +5810,8 @@
           "maxPlus": null,
           "jobs": [
             "lord",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5732,7 +5835,8 @@
             "cleric",
             "priest",
             "lord",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5754,7 +5858,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5967,7 +6072,8 @@
           "price": 2,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -5988,7 +6094,8 @@
           "price": 2,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6030,7 +6137,8 @@
           "price": 2,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6051,7 +6159,8 @@
           "price": 2,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6093,7 +6202,8 @@
           "price": 2,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6114,7 +6224,8 @@
           "price": 200,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6135,7 +6246,8 @@
           "price": 500,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6156,7 +6268,8 @@
           "price": 2000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6177,7 +6290,8 @@
           "price": 3800,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6198,7 +6312,8 @@
           "price": 5000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6219,7 +6334,8 @@
           "price": 7000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6240,7 +6356,8 @@
           "price": 10000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6476,7 +6593,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6501,7 +6619,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6571,7 +6690,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6616,7 +6736,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -6641,7 +6762,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6688,7 +6810,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6713,7 +6836,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6738,7 +6862,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6763,7 +6888,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6788,7 +6914,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -6926,7 +7053,8 @@
           "jobs": [
             "warrior",
             "cleric",
-            "tamer"
+            "tamer",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -7309,7 +7437,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -7335,7 +7464,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -7361,7 +7491,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -7386,7 +7517,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -7411,7 +7543,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -7702,7 +7835,9 @@
           },
           "price": 2,
           "maxPlus": 4,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 다크마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
@@ -7721,7 +7856,9 @@
           },
           "price": 2,
           "maxPlus": 4,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 나이트마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
@@ -7740,7 +7877,9 @@
           },
           "price": 2,
           "maxPlus": 4,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": true,
           "job": "몬스터",
           "note": "몬스터 편 「빈 왕좌」에서 쉐도우가 주는 카오스의 유품. 드래곤마스터 계통 진화를 마친 몬스터가 받는다 (고르지 않음)"
@@ -8037,7 +8176,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8061,7 +8201,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -8106,7 +8247,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8151,7 +8293,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8469,7 +8612,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8619,7 +8763,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8644,7 +8789,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8669,7 +8815,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8694,7 +8841,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8719,7 +8867,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8744,7 +8893,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8769,7 +8919,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8794,7 +8945,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8819,7 +8971,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -8867,7 +9020,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9102,7 +9256,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9218,7 +9373,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9243,7 +9399,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9401,7 +9558,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9447,7 +9605,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9469,7 +9628,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9513,7 +9673,8 @@
           "price": 5000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9560,7 +9721,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9585,7 +9747,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9610,7 +9773,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9706,7 +9870,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9731,7 +9896,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9752,7 +9918,8 @@
           "price": 4000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9849,7 +10016,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9874,7 +10042,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9925,7 +10094,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9947,7 +10117,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -9972,7 +10143,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -9997,7 +10169,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10022,7 +10195,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10043,7 +10217,8 @@
           "price": 9000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10160,7 +10335,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10185,7 +10361,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10210,7 +10387,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10232,7 +10410,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10257,7 +10436,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10282,7 +10462,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10307,7 +10488,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10332,7 +10514,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10357,7 +10540,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10378,7 +10562,8 @@
           "price": 12000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10422,7 +10607,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10475,7 +10661,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10566,7 +10753,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10614,7 +10802,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10662,7 +10851,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10683,7 +10873,8 @@
           "price": 22000,
           "maxPlus": null,
           "jobs": [
-            "elf"
+            "elf",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10708,7 +10899,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10733,7 +10925,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10776,7 +10969,8 @@
           "maxPlus": null,
           "jobs": [
             "cleric",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -10801,7 +10995,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10826,7 +11021,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10902,7 +11098,8 @@
             "tamer",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -10953,7 +11150,8 @@
             "fighter",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": true,
           "job": null,
@@ -11025,7 +11223,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11054,7 +11253,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11082,7 +11282,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11111,7 +11312,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11140,7 +11342,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11168,7 +11371,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11197,7 +11401,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11226,7 +11431,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11257,7 +11463,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11283,7 +11490,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11309,7 +11517,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11335,7 +11544,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11359,7 +11569,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11383,7 +11594,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11407,7 +11619,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11431,7 +11644,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11455,7 +11669,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11479,7 +11694,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11503,7 +11719,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11527,7 +11744,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11553,7 +11771,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11579,7 +11798,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11661,7 +11881,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11704,7 +11925,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11728,7 +11950,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11771,7 +11994,8 @@
             "warrior",
             "cleric",
             "tamer",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -11856,7 +12080,8 @@
           "maxPlus": null,
           "jobs": [
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12039,7 +12264,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12084,7 +12310,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12319,7 +12546,8 @@
             "cleric",
             "tamer",
             "fighter",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12342,7 +12570,8 @@
           "jobs": [
             "fighter",
             "thief",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12601,7 +12830,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12625,7 +12855,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12654,7 +12885,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12682,7 +12914,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12706,7 +12939,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12734,7 +12968,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12762,7 +12997,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12903,7 +13139,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12931,7 +13168,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -12959,7 +13197,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13006,7 +13245,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13034,7 +13274,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13062,7 +13303,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13086,7 +13328,8 @@
             "priest",
             "wizard",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13114,7 +13357,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13142,7 +13386,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13171,7 +13416,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13197,7 +13443,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13226,7 +13473,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13252,7 +13500,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13281,7 +13530,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13310,7 +13560,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13336,7 +13587,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13365,7 +13617,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13391,7 +13644,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13417,7 +13671,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13446,7 +13701,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13475,7 +13731,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13501,7 +13758,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13534,7 +13792,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13561,7 +13820,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13588,7 +13848,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13615,7 +13876,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13642,7 +13904,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13669,7 +13932,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13696,7 +13960,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13723,7 +13988,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13750,7 +14016,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13777,7 +14044,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13828,7 +14096,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13855,7 +14124,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13882,7 +14152,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13909,7 +14180,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -13935,7 +14207,8 @@
             "tamer",
             "thief",
             "wizard",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14023,7 +14296,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14069,7 +14343,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14096,7 +14371,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14121,7 +14397,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14146,7 +14423,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14171,7 +14449,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14196,7 +14475,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14221,7 +14501,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14246,7 +14527,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14271,7 +14553,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14298,7 +14581,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14325,7 +14609,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14350,7 +14635,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14375,7 +14661,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14400,7 +14687,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14425,7 +14713,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14450,7 +14739,8 @@
             "cleric",
             "tamer",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14477,7 +14767,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14504,7 +14795,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14531,7 +14823,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14558,7 +14851,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14585,7 +14879,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14612,7 +14907,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14639,7 +14935,8 @@
             "thief",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14887,7 +15184,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14937,7 +15235,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -14983,7 +15282,8 @@
           "jobs": [
             "tamer",
             "thief",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15006,7 +15306,8 @@
           "jobs": [
             "tamer",
             "thief",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15113,7 +15414,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15138,7 +15440,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15163,7 +15466,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15363,7 +15667,9 @@
           },
           "price": 20000,
           "maxPlus": null,
-          "jobs": [],
+          "jobs": [
+            "monster"
+          ],
           "twoHanded": null,
           "job": "몬스터",
           "note": "유산 퀘스트 「발록신전」 보상. 지하동굴 겐타의 의뢰, 발록의 뿔 3개로 신전을 열고 발록 수장을 쓰러뜨린다"
@@ -15389,7 +15695,8 @@
             "elf",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15417,7 +15724,8 @@
             "thief",
             "ninja",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15497,7 +15805,8 @@
           "jobs": [
             "warrior",
             "fighter",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15878,7 +16187,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -15960,7 +16270,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -16004,7 +16315,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -16079,7 +16391,8 @@
             "wizard",
             "lord",
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -16346,7 +16659,20 @@
           },
           "price": 10000,
           "maxPlus": null,
-          "jobs": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "priest",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "necro",
+            "anti"
+          ],
           "twoHanded": null,
           "job": null,
           "note": null
@@ -16441,7 +16767,20 @@
           },
           "price": 18000,
           "maxPlus": null,
-          "jobs": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "priest",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "necro",
+            "anti"
+          ],
           "twoHanded": null,
           "job": null,
           "note": null
@@ -16500,7 +16839,20 @@
           },
           "price": 999999,
           "maxPlus": null,
-          "jobs": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "priest",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "necro",
+            "anti"
+          ],
           "twoHanded": null,
           "job": null,
           "note": null
@@ -16567,7 +16919,8 @@
             "ninja",
             "wizard",
             "elf",
-            "lord"
+            "lord",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -16589,7 +16942,8 @@
           "maxPlus": null,
           "jobs": [
             "necro",
-            "anti"
+            "anti",
+            "monster"
           ],
           "twoHanded": null,
           "job": null,
@@ -24649,7 +25003,7 @@
             "spi": 0,
             "agi": 0
           },
-          "price": 10,
+          "price": 0,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -26804,7 +27158,20 @@
           },
           "price": 150000,
           "maxPlus": null,
-          "jobs": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "priest",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "necro",
+            "anti"
+          ],
           "twoHanded": null,
           "job": null,
           "note": "이계에서 대지의 신 베히모스를 쓰러뜨리면 확정으로 얻는다"
@@ -26823,7 +27190,20 @@
           },
           "price": 150000,
           "maxPlus": null,
-          "jobs": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "priest",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "necro",
+            "anti"
+          ],
           "twoHanded": null,
           "job": null,
           "note": "이계에서 바다의 신 레비아탄을 쓰러뜨리면 확정으로 얻는다"
@@ -26842,7 +27222,20 @@
           },
           "price": 150000,
           "maxPlus": null,
-          "jobs": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "priest",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "necro",
+            "anti"
+          ],
           "twoHanded": null,
           "job": null,
           "note": "이계에서 하늘의 신 지즈를 쓰러뜨리면 확정으로 얻는다"
