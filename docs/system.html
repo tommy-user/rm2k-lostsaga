@@ -32,6 +32,7 @@
       <ul class="sys-nav">
         <li><a href="#promote">승급</a></li>
         <li><a href="#battle">전투</a></li>
+        <li><a href="#status">상태이상</a></li>
         <li><a href="#party">동료와 소환</a></li>
         <li><a href="#growth">성장</a></li>
         <li><a href="#work">아르바이트</a></li>
@@ -83,6 +84,39 @@
                 <tr><th>리더 무리</th><td>9%</td></tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </article>
+
+      <article class="sys section" id="status">
+        <h2>상태이상</h2>
+        <div class="grid grid--2" style="align-items:start">
+          <div>
+            <p>중독, 출혈, 화상, 침식은 턴마다 HP를 깎는다. 함께 걸리면 따로 깎이지만, 상태 피해만으로는 쓰러지지 않는다.</p>
+            <p>중독은 해독할 때까지 남는다. 전투가 끝나도 남아서 걸을 때마다 HP가 준다. 출혈은 HP를 회복하면 멎는다. 나머지 상태이상은 전투가 끝나면 풀린다.</p>
+            <p>버섯, 만능약, 성수처럼 상태이상을 두루 푸는 약은 모두 푼다. 장신구와 방어구 가운데 상태이상을 막는 것도 있다.</p>
+          </div>
+          <div class="win">
+            <div class="table-scroll">
+              <table class="table">
+                <thead><tr><th>상태</th><th>효과</th><th>푸는 것</th></tr></thead>
+                <tbody>
+                  <tr><td>중독</td><td>턴마다 HP 감소. 해독할 때까지</td><td>해독초</td></tr>
+                  <tr><td>출혈</td><td>턴마다 HP 크게 감소, 방어 반감</td><td>HP 회복약·회복 기술</td></tr>
+                  <tr><td>화상</td><td>턴마다 HP 감소, 공격 반감</td><td>상태이상 회복</td></tr>
+                  <tr><td>침식</td><td>턴마다 HP 감소, 정신 반감</td><td>상태이상 회복</td></tr>
+                  <tr><td>마비</td><td>행동 불가. 짧다</td><td>알코올 물약</td></tr>
+                  <tr><td>석화</td><td>행동 불가, 잘 맞는다. 오래간다</td><td>상태이상 회복</td></tr>
+                  <tr><td>수면</td><td>행동 불가. 맞으면 깬다</td><td>매운 고추</td></tr>
+                  <tr><td>맹목</td><td>명중 반감</td><td>안약</td></tr>
+                  <tr><td>봉인 · 침묵</td><td>물리 기술 · 마법 기술 봉인</td><td>해방제 · 활랭이 나물</td></tr>
+                  <tr><td>봉쇄</td><td>기술 전부 봉인</td><td>동태전</td></tr>
+                  <tr><td>폭주 · 혼란</td><td>적 · 아군을 마구 공격</td><td>안정제 · 정신갈피제</td></tr>
+                  <tr><td>공포</td><td>공격·방어 반감</td><td>떡국 · 인삼</td></tr>
+                  <tr><td>피로 · 허약 · 망각 · 둔화</td><td>공격 · 방어 · 정신 · 민첩 반감</td><td>떡국 · 인삼</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </article>
