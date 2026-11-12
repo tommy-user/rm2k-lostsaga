@@ -769,9 +769,9 @@
   "common_event_id": 188
  },
  "4251": {
-  "name": "은빛 사냥검",
+  "name": "은십자 검",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1189,
@@ -785,15 +785,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4252": {
-  "name": "은빛 철퇴",
+  "name": "은십자 철퇴",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1189,
@@ -807,15 +807,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4253": {
-  "name": "사냥꾼 가죽갑옷",
+  "name": "은십자 가죽갑옷",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1189,
@@ -829,15 +829,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4254": {
-  "name": "사냥꾼 두건",
+  "name": "은십자 두건",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1189,
@@ -851,15 +851,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4255": {
-  "name": "은 십자 목걸이",
+  "name": "은십자 목걸이",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1189,
@@ -873,15 +873,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4261": {
-  "name": "서리 지팡이",
+  "name": "백야 지팡이",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1198,
@@ -895,15 +895,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4262": {
-  "name": "냉혈 전갈 창",
+  "name": "백야 창",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1198,
@@ -917,15 +917,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4263": {
-  "name": "서리 로브",
+  "name": "백야 로브",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1198,
@@ -939,15 +939,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4264": {
-  "name": "서리 써클렛",
+  "name": "백야 써클렛",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1198,
@@ -961,15 +961,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4265": {
-  "name": "얼음 결정 반지",
+  "name": "백야 반지",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1198,
@@ -983,15 +983,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4271": {
-  "name": "성지 수호 활",
+  "name": "순례자의 활",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 169,
@@ -1005,15 +1005,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4272": {
-  "name": "유니콘 뿔 단창",
+  "name": "순례자의 단창",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 169,
@@ -1027,15 +1027,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4273": {
-  "name": "요정 가죽 갑옷",
+  "name": "순례자의 가죽옷",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 169,
@@ -1049,15 +1049,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4274": {
-  "name": "성지의 머리띠",
+  "name": "순례자의 머리띠",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 169,
@@ -1071,15 +1071,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4275": {
-  "name": "하피 깃털 망토",
+  "name": "순례자의 망토",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 169,
@@ -1093,15 +1093,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4281": {
-  "name": "전갈 꼬리 글레이브",
+  "name": "드라이어드 글레이브",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 345,
@@ -1115,15 +1115,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4282": {
-  "name": "엔트 뿌리 건틀릿",
+  "name": "드라이어드 건틀릿",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 345,
@@ -1137,15 +1137,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4283": {
-  "name": "엔트 껍질 갑옷",
+  "name": "드라이어드 갑옷",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 345,
@@ -1159,15 +1159,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4284": {
-  "name": "엔트 나무 방패",
+  "name": "드라이어드 방패",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 345,
@@ -1181,15 +1181,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4285": {
-  "name": "극지 오크 털모자",
+  "name": "드라이어드 털모자",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 345,
@@ -1203,15 +1203,15 @@
    }
   ],
   "gold": 2000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4291": {
-  "name": "전도자의 글레이브",
+  "name": "추종자의 글레이브",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1844,
@@ -1225,15 +1225,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4292": {
-  "name": "광견 너클",
+  "name": "추종자의 너클",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1844,
@@ -1247,15 +1247,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4293": {
-  "name": "전도자의 갑옷",
+  "name": "추종자의 갑옷",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1844,
@@ -1269,15 +1269,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4294": {
-  "name": "전도자의 투구",
+  "name": "추종자의 투구",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1844,
@@ -1291,15 +1291,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4295": {
-  "name": "광기의 정수 목걸이",
+  "name": "추종자의 목걸이",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1844,
@@ -1313,15 +1313,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4351": {
-  "name": "골렘 마력 지팡이",
+  "name": "거신 지팡이",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 161,
@@ -1335,15 +1335,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4352": {
-  "name": "골렘 파편 망치",
+  "name": "거신 망치",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 161,
@@ -1357,15 +1357,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4353": {
-  "name": "바위결 로브",
+  "name": "거신 로브",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 161,
@@ -1379,15 +1379,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4354": {
-  "name": "바위 써클렛",
+  "name": "거신 써클렛",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 161,
@@ -1401,15 +1401,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4355": {
-  "name": "골렘 심장 반지",
+  "name": "거신의 심장",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 161,
@@ -1423,15 +1423,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4361": {
-  "name": "다크라이더의 검",
+  "name": "묘지기의 검",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1272,
@@ -1445,15 +1445,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4362": {
-  "name": "망자의 서",
+  "name": "묘지기의 서",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1272,
@@ -1467,15 +1467,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4363": {
-  "name": "머미 붕대 로브",
+  "name": "묘지기 수의",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1272,
@@ -1489,15 +1489,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4364": {
-  "name": "해골 투구",
+  "name": "묘지기 투구",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1272,
@@ -1511,15 +1511,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4365": {
-  "name": "저승 기사의 망토",
+  "name": "묘지기 망토",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1272,
@@ -1533,15 +1533,15 @@
    }
   ],
   "gold": 5000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4371": {
-  "name": "메두사의 비전서",
+  "name": "월식 비전서",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1216,
@@ -1555,15 +1555,15 @@
    }
   ],
   "gold": 8000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4372": {
-  "name": "뱀파이어 송곳니 단검",
+  "name": "월식 단검",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1216,
@@ -1577,15 +1577,15 @@
    }
   ],
   "gold": 8000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4373": {
-  "name": "흐느끼는 비단 로브",
+  "name": "월식 비단 로브",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1216,
@@ -1599,15 +1599,15 @@
    }
   ],
   "gold": 8000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4374": {
-  "name": "리치의 관",
+  "name": "월식의 관",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1216,
@@ -1621,15 +1621,15 @@
    }
   ],
   "gold": 8000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4375": {
-  "name": "흡혈귀 망토",
+  "name": "월식 망토",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 1216,
@@ -1643,15 +1643,15 @@
    }
   ],
   "gold": 8000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4381": {
-  "name": "고대 기사의 장검",
+  "name": "망국의 기사검",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 165,
@@ -1665,15 +1665,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4382": {
-  "name": "고대 근위 언월도",
+  "name": "망국의 할버드",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 165,
@@ -1687,15 +1687,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4383": {
-  "name": "고대 근위 판금",
+  "name": "망국의 갑주",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 165,
@@ -1709,15 +1709,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4384": {
-  "name": "고대 근위 투구",
+  "name": "망국 투구",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 165,
@@ -1731,15 +1731,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4385": {
-  "name": "고대 근위 방패",
+  "name": "망국 방패",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 165,
@@ -1753,15 +1753,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4391": {
-  "name": "오우거 족장의 철퇴",
+  "name": "대족장의 철퇴",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 346,
@@ -1775,15 +1775,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4392": {
-  "name": "보석 골렘 건틀릿",
+  "name": "대족장 건틀릿",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 346,
@@ -1797,15 +1797,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4393": {
-  "name": "오우거 가죽 갑옷",
+  "name": "대족장 가죽갑옷",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 346,
@@ -1819,15 +1819,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4394": {
-  "name": "오우거 두개골 투구",
+  "name": "대족장 투구",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 346,
@@ -1841,15 +1841,15 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "4395": {
-  "name": "거인의 팔찌",
+  "name": "대족장 팔찌",
   "count": 1,
-  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 장비 제작)",
+  "by": "장인 나노무토·마나무토 (장인 메뉴 → 세트 제작 조합표)",
   "materials": [
    {
     "id": 346,
@@ -1863,10 +1863,10 @@
    }
   ],
   "gold": 10000,
-  "src": "db/commonevents/1493_장인-세트제작.yaml",
+  "src": "db/commonevents/1591_조합표-고른장비.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 1493
+  "common_event_id": 1591
  },
  "1075": {
   "name": "고대의 주문서",
