@@ -40,12 +40,12 @@
         </div>
         <div class="win dl__main">
           <div>
-            <h2 class="win__title">로스트사가 v3.6 완결판</h2>
+            <h2 class="win__title">로스트사가 v3.7 완결판</h2>
             <p>rm2k-lostsaga.zip · 약 56MB</p>
           </div>
-          <a class="btn btn--gold" href="https://github.com/tommy-user/rm2k-lostsaga/releases/download/v3.6.2/rm2k-lostsaga.zip" data-dl="v3.6.2" download>게임 받기</a>
+          <a class="btn btn--gold" href="https://github.com/tommy-user/rm2k-lostsaga/releases/download/v3.7/rm2k-lostsaga.zip" data-dl="v3.7" download>게임 받기</a>
         </div>
-        <p class="dim" style="margin:0;font-size:var(--step--1)">바뀐 내용은 아래 <a href="#notes">릴리즈 노트</a>나 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases/tag/v3.6.2" rel="noopener">릴리즈 페이지</a>에서 볼 수 있습니다. 새 버전 소식은 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases.atom" rel="noopener">릴리즈 피드</a>로 받을 수 있습니다.</p>
+        <p class="dim" style="margin:0;font-size:var(--step--1)">바뀐 내용은 아래 <a href="#notes">릴리즈 노트</a>나 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases/tag/v3.7" rel="noopener">릴리즈 페이지</a>에서 볼 수 있습니다. 새 버전 소식은 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases.atom" rel="noopener">릴리즈 피드</a>로 받을 수 있습니다.</p>
       </div>
 
       <div class="guide">
@@ -116,6 +116,49 @@
         </div>
 
         <div id="panel-notes" role="tabpanel" aria-labelledby="tab-notes" class="guide__panel">
+        <div class="win notes">
+          <h3>v3.7 <span class="dim">2026-11-12</span></h3>
+          <h4>직업 스킬 정리</h4>
+          <ul>
+            <li>위력이 비슷해 쓸모가 겹치던 직업 스킬을 정리했습니다 (게일 애로우·폭풍의 시위·정령검 계열·헤븐즈 도어·퇴마의 빛·망자의 행진·호접몽 등)</li>
+            <li>새 스킬: 카이져 굉음 내려치기(2차), 루이체 세라핌의 날개(마스터)</li>
+            <li>카이져 스톰 블레이드·하사드 스켈레톤 헤드가 마스터 전용으로 세졌습니다</li>
+            <li>이미 승급한 캐릭터는 개편의 스크롤로 받습니다</li>
+            <li>근위기사단·드레인 핸드·다크 플레임을 올렸습니다. 어둠·신성 마무리기는 어둠·신성에 강한 보스에게도 들어갑니다</li>
+            <li>EasyRPG Player·웹판: 데미지 999 상한이 없어지고, 스킬에도 치명타가 나옵니다</li>
+          </ul>
+          <h4>상태이상</h4>
+          <ul>
+            <li>새 상태이상: 화상(공격 반감)·출혈(방어 반감)·석화(행동불가), 침식·공포·봉쇄</li>
+            <li>중독은 턴마다 최대 HP 3%+20 이 닳고, 해독할 때까지 남습니다 (걸을 때도 HP 가 닳습니다)</li>
+            <li>출혈은 HP 회복약·회복 기술로 멎습니다. 상태이상 회복 약·기술은 새 상태이상도 풉니다</li>
+            <li>베기·이빨 기술과 무기는 출혈, 인페르노·다크 플레임은 화상, 스톤 커스·메두사의 눈빛은 석화를 겁니다</li>
+            <li>보스에게는 지속 피해가 덜 들어갑니다</li>
+          </ul>
+          <h4>장인</h4>
+          <ul>
+            <li>나노무토·마나무토의 강화·세트 제작이 표로 바뀌었습니다</li>
+            <li>강화 표: 가진 장비만 보이고, 장착한 채로 강화합니다</li>
+            <li>세트 조합표: 사냥터별로 재료와 가진 개수를 보고, 만들 수 있는 장비에 ● 가 붙습니다</li>
+            <li>장인에게 처음 말을 걸면 재료 수첩을 줍니다 (어디서나 조합표를 볼 수 있습니다)</li>
+            <li>강화하거나 만들 수 있으면 장인 머리 위에 망치가 뜹니다</li>
+            <li>세트 장비에 이름이 붙었습니다 (은십자·백야·순례자·드라이어드·추종자·거신·묘지기·월식·망국·대족장)</li>
+          </ul>
+          <h4>바뀐 것</h4>
+          <ul>
+            <li>아이템 이름 앞 아이콘을 종류별로 맞췄습니다 (회복·능력치·주문서·재료·중요 물건·쓰는 물건)</li>
+            <li>루시리스 여신상 퀘스트 표시를 새로 그렸습니다</li>
+            <li>받을 수 없는 직업에게는 지르리나·루시리스 여신상 퀘스트 표시가 뜨지 않습니다</li>
+          </ul>
+          <h4>고친 것</h4>
+          <ul>
+            <li>인어의 눈물·바다거북 등딱지 등 "~방지" 방어구 9개가 실제로는 막지 못하던 문제</li>
+            <li>군주 제왕의 위엄·폭군의 칙령 피해가 반만 들어가던 문제</li>
+            <li>로저스 초밥 장인 이두용, 북쪽 필드 메히 대사 맞춤법</li>
+            <li>칠리마을 승급소 마스터 창구 직원 자리</li>
+          </ul>
+        </div>
+
         <div class="win notes">
           <h3>v3.6.2 <span class="dim">2026-11-12</span></h3>
           <h4>고친 것</h4>
