@@ -1868,6 +1868,1780 @@
   "event_id": null,
   "common_event_id": 1591
  },
+ "2046": {
+  "name": "창공의 지팡이",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1937,
+    "name": "하늘의 결정",
+    "count": 2
+   },
+   {
+    "id": 1932,
+    "name": "변이 체액",
+    "count": 10
+   }
+  ],
+  "gold": 40000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2063": {
+  "name": "창공의 단검",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1934,
+    "name": "폭풍의 깃털",
+    "count": 10
+   },
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 6
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2064": {
+  "name": "창공의 닌자도",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1936,
+    "name": "검은 깃털",
+    "count": 8
+   },
+   {
+    "id": 1935,
+    "name": "익룡의 비늘",
+    "count": 6
+   }
+  ],
+  "gold": 32000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2065": {
+  "name": "창공의 활",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 12
+   },
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 6
+   }
+  ],
+  "gold": 35000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2066": {
+  "name": "창공의 성구",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1932,
+    "name": "변이 체액",
+    "count": 6
+   },
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 12
+   }
+  ],
+  "gold": 32000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2071": {
+  "name": "창공의 망치",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1935,
+    "name": "익룡의 비늘",
+    "count": 6
+   },
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 12
+   }
+  ],
+  "gold": 35000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2042": {
+  "name": "창공의 망토",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1934,
+    "name": "폭풍의 깃털",
+    "count": 4
+   },
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 12
+   }
+  ],
+  "gold": 25000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2043": {
+  "name": "창공의 갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 15
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 5
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2044": {
+  "name": "창공의 방패",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1935,
+    "name": "익룡의 비늘",
+    "count": 12
+   },
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 3
+   }
+  ],
+  "gold": 28000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2045": {
+  "name": "창공의 모자",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1934,
+    "name": "폭풍의 깃털",
+    "count": 12
+   },
+   {
+    "id": 1936,
+    "name": "검은 깃털",
+    "count": 4
+   }
+  ],
+  "gold": 25000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2056": {
+  "name": "사막의 몽둥이",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1942,
+    "name": "거인의 뼈",
+    "count": 12
+   },
+   {
+    "id": 1940,
+    "name": "모래벌레 이빨",
+    "count": 6
+   }
+  ],
+  "gold": 40000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2067": {
+  "name": "사막의 너클",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1942,
+    "name": "거인의 뼈",
+    "count": 10
+   },
+   {
+    "id": 1939,
+    "name": "사막 전갈 껍질",
+    "count": 6
+   }
+  ],
+  "gold": 32000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2068": {
+  "name": "사막의 레이피어",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1940,
+    "name": "모래벌레 이빨",
+    "count": 6
+   },
+   {
+    "id": 1941,
+    "name": "고르곤의 비늘",
+    "count": 10
+   }
+  ],
+  "gold": 35000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2069": {
+  "name": "사막의 거울",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1941,
+    "name": "고르곤의 비늘",
+    "count": 4
+   },
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 12
+   }
+  ],
+  "gold": 32000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2070": {
+  "name": "사막의 오브",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 8
+   },
+   {
+    "id": 1943,
+    "name": "옛 칠리 금화",
+    "count": 3
+   }
+  ],
+  "gold": 35000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2047": {
+  "name": "사막의 로브",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 15
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   }
+  ],
+  "gold": 32000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2048": {
+  "name": "사막의 갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 5
+   },
+   {
+    "id": 1939,
+    "name": "사막 전갈 껍질",
+    "count": 15
+   }
+  ],
+  "gold": 32000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2049": {
+  "name": "사막의 방패",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 3
+   },
+   {
+    "id": 1941,
+    "name": "고르곤의 비늘",
+    "count": 12
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2057": {
+  "name": "사막의 투구",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1940,
+    "name": "모래벌레 이빨",
+    "count": 12
+   }
+  ],
+  "gold": 25000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2058": {
+  "name": "봉인의 지팡이",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1937,
+    "name": "하늘의 결정",
+    "count": 3
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 3
+   },
+   {
+    "id": 2054,
+    "name": "카르도어의 지팡이",
+    "count": 1
+   }
+  ],
+  "gold": 50000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2059": {
+  "name": "옛 칠리 근위갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1931,
+    "name": "고대 기계 부품",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1069,
+    "name": "고대의 플레이트아머",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2060": {
+  "name": "옛 칠리 가죽갑옷",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1939,
+    "name": "사막 전갈 껍질",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1070,
+    "name": "고대의 가죽갑옷",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2061": {
+  "name": "옛 칠리 마도로브",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1938,
+    "name": "망령의 천",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1071,
+    "name": "고대의 로브",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2062": {
+  "name": "옛 칠리 망토",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1933,
+    "name": "그리폰의 깃털",
+    "count": 10
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 1
+   },
+   {
+    "id": 1072,
+    "name": "고대의 망토",
+    "count": 1
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2215": {
+  "name": "자유의 면류관",
+  "count": 1,
+  "by": "루카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1937,
+    "name": "하늘의 결정",
+    "count": 3
+   },
+   {
+    "id": 1944,
+    "name": "대현자의 잉크",
+    "count": 3
+   },
+   {
+    "id": 766,
+    "name": "카오스의 심장",
+    "count": 1
+   },
+   {
+    "id": 2214,
+    "name": "혼돈의 왕관",
+    "count": 1
+   }
+  ],
+  "gold": 100000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2601": {
+  "name": "황야의 지팡이",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 5
+   },
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 4
+   }
+  ],
+  "gold": 20000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2602": {
+  "name": "황야의 레이피어",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 3
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 6
+   }
+  ],
+  "gold": 22000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2603": {
+  "name": "황야의 활",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 6
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 3
+   }
+  ],
+  "gold": 22000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2604": {
+  "name": "황야의 너클",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 6
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 3
+   }
+  ],
+  "gold": 22000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2605": {
+  "name": "황야의 몽둥이",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 3
+   },
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 8
+   }
+  ],
+  "gold": 24000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2606": {
+  "name": "황야의 가죽갑옷",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 6
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 4
+   }
+  ],
+  "gold": 18000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2607": {
+  "name": "황야의 방패",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 3
+   },
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 5
+   }
+  ],
+  "gold": 15000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2608": {
+  "name": "황야의 망토",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1278,
+    "name": "뱀의 독니",
+    "count": 5
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 3
+   }
+  ],
+  "gold": 15000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2609": {
+  "name": "황야의 모자",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1279,
+    "name": "골렘의 파편",
+    "count": 3
+   },
+   {
+    "id": 1277,
+    "name": "전갈꼬리",
+    "count": 5
+   }
+  ],
+  "gold": 14000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2630": {
+  "name": "심판의 홀",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1281,
+    "name": "코카트리스의 볏",
+    "count": 4
+   },
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 5
+   }
+  ],
+  "gold": 40000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2631": {
+  "name": "심판의 곡검",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2611,
+    "name": "자칼의 송곳니",
+    "count": 6
+   },
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 3
+   }
+  ],
+  "gold": 42000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2632": {
+  "name": "심판의 활",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2611,
+    "name": "자칼의 송곳니",
+    "count": 4
+   },
+   {
+    "id": 1282,
+    "name": "가루다의 깃털",
+    "count": 5
+   }
+  ],
+  "gold": 42000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2633": {
+  "name": "심판의 너클",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 5
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 4
+   }
+  ],
+  "gold": 42000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2634": {
+  "name": "심판의 철퇴",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 6
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 5
+   }
+  ],
+  "gold": 46000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2635": {
+  "name": "심판의 판금",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 8
+   },
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 5
+   }
+  ],
+  "gold": 36000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2636": {
+  "name": "심판의 방패",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1280,
+    "name": "미노타우로스의 해머",
+    "count": 4
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 5
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2637": {
+  "name": "심판의 망토",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 6
+   },
+   {
+    "id": 1282,
+    "name": "가루다의 깃털",
+    "count": 4
+   }
+  ],
+  "gold": 30000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2638": {
+  "name": "심판의 써클렛",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 1281,
+    "name": "코카트리스의 볏",
+    "count": 3
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 4
+   }
+  ],
+  "gold": 28000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2621": {
+  "name": "자칼왕의 곡도",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2611,
+    "name": "자칼의 송곳니",
+    "count": 10
+   },
+   {
+    "id": 2613,
+    "name": "아누비스의 인장",
+    "count": 1
+   }
+  ],
+  "gold": 60000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2622": {
+  "name": "수호자의 붕대",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 12
+   },
+   {
+    "id": 2613,
+    "name": "아누비스의 인장",
+    "count": 1
+   }
+  ],
+  "gold": 60000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2623": {
+  "name": "심판관의 투구",
+  "count": 1,
+  "by": "장인 고르 (신대륙 오아시스)",
+  "materials": [
+   {
+    "id": 2610,
+    "name": "미라의 붕대",
+    "count": 6
+   },
+   {
+    "id": 2612,
+    "name": "스카라베의 날개껍질",
+    "count": 6
+   },
+   {
+    "id": 2613,
+    "name": "아누비스의 인장",
+    "count": 1
+   }
+  ],
+  "gold": 50000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4001": {
+  "name": "항해사의 지팡이",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3763,
+    "name": "소라 껍데기",
+    "count": 6
+   },
+   {
+    "id": 3770,
+    "name": "꺼진 심지",
+    "count": 4
+   }
+  ],
+  "gold": 6000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4002": {
+  "name": "항해사의 대검",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3766,
+    "name": "따개비 조각",
+    "count": 8
+   },
+   {
+    "id": 3768,
+    "name": "곰치 이빨",
+    "count": 4
+   }
+  ],
+  "gold": 8000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4003": {
+  "name": "항해사의 레이피어",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3768,
+    "name": "곰치 이빨",
+    "count": 6
+   },
+   {
+    "id": 3767,
+    "name": "복어 가시",
+    "count": 4
+   }
+  ],
+  "gold": 7000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4004": {
+  "name": "항해사의 활",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3764,
+    "name": "앵무새 깃털",
+    "count": 6
+   },
+   {
+    "id": 3769,
+    "name": "폭풍 깃털",
+    "count": 4
+   }
+  ],
+  "gold": 7000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4005": {
+  "name": "항해사의 너클",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3766,
+    "name": "따개비 조각",
+    "count": 6
+   },
+   {
+    "id": 3765,
+    "name": "장어 가죽",
+    "count": 4
+   }
+  ],
+  "gold": 7000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4006": {
+  "name": "항해사의 코트",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3765,
+    "name": "장어 가죽",
+    "count": 6
+   },
+   {
+    "id": 3771,
+    "name": "바다뱀 비늘",
+    "count": 4
+   }
+  ],
+  "gold": 6000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4007": {
+  "name": "항해사의 방패",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3763,
+    "name": "소라 껍데기",
+    "count": 8
+   },
+   {
+    "id": 3766,
+    "name": "따개비 조각",
+    "count": 4
+   }
+  ],
+  "gold": 6000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4008": {
+  "name": "항해사의 망토",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3764,
+    "name": "앵무새 깃털",
+    "count": 4
+   },
+   {
+    "id": 3769,
+    "name": "폭풍 깃털",
+    "count": 6
+   }
+  ],
+  "gold": 6000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4009": {
+  "name": "항해사의 모자",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3764,
+    "name": "앵무새 깃털",
+    "count": 4
+   },
+   {
+    "id": 3771,
+    "name": "바다뱀 비늘",
+    "count": 3
+   }
+  ],
+  "gold": 5000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4010": {
+  "name": "제독의 지팡이",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3763,
+    "name": "소라 껍데기",
+    "count": 4
+   },
+   {
+    "id": 3773,
+    "name": "별 가루",
+    "count": 8
+   },
+   {
+    "id": 3777,
+    "name": "저주 카드",
+    "count": 4
+   }
+  ],
+  "gold": 20000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4011": {
+  "name": "제독의 대검",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3766,
+    "name": "따개비 조각",
+    "count": 4
+   },
+   {
+    "id": 3774,
+    "name": "고대 톱니",
+    "count": 8
+   },
+   {
+    "id": 3775,
+    "name": "해적 금화",
+    "count": 6
+   }
+  ],
+  "gold": 25000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4012": {
+  "name": "제독의 레이피어",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3768,
+    "name": "곰치 이빨",
+    "count": 4
+   },
+   {
+    "id": 3772,
+    "name": "꺾인 날개깃",
+    "count": 6
+   },
+   {
+    "id": 3776,
+    "name": "화약 가루",
+    "count": 6
+   }
+  ],
+  "gold": 22000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4013": {
+  "name": "제독의 장궁",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3769,
+    "name": "폭풍 깃털",
+    "count": 4
+   },
+   {
+    "id": 3775,
+    "name": "해적 금화",
+    "count": 4
+   },
+   {
+    "id": 3772,
+    "name": "꺾인 날개깃",
+    "count": 8
+   }
+  ],
+  "gold": 22000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4014": {
+  "name": "제독의 너클",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3767,
+    "name": "복어 가시",
+    "count": 4
+   },
+   {
+    "id": 3774,
+    "name": "고대 톱니",
+    "count": 6
+   },
+   {
+    "id": 3776,
+    "name": "화약 가루",
+    "count": 6
+   }
+  ],
+  "gold": 22000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4015": {
+  "name": "제독의 코트",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3771,
+    "name": "바다뱀 비늘",
+    "count": 4
+   },
+   {
+    "id": 3773,
+    "name": "별 가루",
+    "count": 4
+   },
+   {
+    "id": 3775,
+    "name": "해적 금화",
+    "count": 8
+   }
+  ],
+  "gold": 20000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4016": {
+  "name": "제독의 방패",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3763,
+    "name": "소라 껍데기",
+    "count": 4
+   },
+   {
+    "id": 3774,
+    "name": "고대 톱니",
+    "count": 6
+   },
+   {
+    "id": 3775,
+    "name": "해적 금화",
+    "count": 6
+   }
+  ],
+  "gold": 20000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4017": {
+  "name": "제독의 망토",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3765,
+    "name": "장어 가죽",
+    "count": 4
+   },
+   {
+    "id": 3777,
+    "name": "저주 카드",
+    "count": 4
+   },
+   {
+    "id": 3772,
+    "name": "꺾인 날개깃",
+    "count": 6
+   }
+  ],
+  "gold": 20000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "4018": {
+  "name": "제독의 삼각모",
+  "count": 1,
+  "by": "배 목수 (본토선착장)",
+  "materials": [
+   {
+    "id": 3764,
+    "name": "앵무새 깃털",
+    "count": 4
+   },
+   {
+    "id": 3777,
+    "name": "저주 카드",
+    "count": 4
+   },
+   {
+    "id": 3775,
+    "name": "해적 금화",
+    "count": 6
+   }
+  ],
+  "gold": 18000,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2007": {
+  "name": "서리늑대가죽 모자",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1208,
+    "name": "서리 늑대의 가죽",
+    "count": 20
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2008": {
+  "name": "서리늑대가죽 투구",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   },
+   {
+    "id": 1208,
+    "name": "서리 늑대의 가죽",
+    "count": 15
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2009": {
+  "name": "서리늑대가죽 로브",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1208,
+    "name": "서리 늑대의 가죽",
+    "count": 30
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2010": {
+  "name": "트롤 가죽 방패",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   },
+   {
+    "id": 1207,
+    "name": "트롤의 가죽",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2011": {
+  "name": "트롤 뼈 몽둥이",
+  "count": 1,
+  "by": "비앙카 (칠리마을 마법사 길드 2층)",
+  "materials": [
+   {
+    "id": 1203,
+    "name": "트롤의 뼈",
+    "count": 30
+   },
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 5
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "158": {
+  "name": "오리하르콘 흉갑",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 166,
+    "name": "오리하르콘",
+    "count": 20
+   },
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 30
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "220": {
+  "name": "미스릴 아머",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 167,
+    "name": "미스릴",
+    "count": 10
+   },
+   {
+    "id": 161,
+    "name": "철괴",
+    "count": 5
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "221": {
+  "name": "퓨전엘리멘탈 아머",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 168,
+    "name": "유니콘의 뿔",
+    "count": 10
+   },
+   {
+    "id": 213,
+    "name": "물의 원소",
+    "count": 1
+   },
+   {
+    "id": 214,
+    "name": "불의 원소",
+    "count": 1
+   },
+   {
+    "id": 215,
+    "name": "대지의 원소",
+    "count": 1
+   },
+   {
+    "id": 216,
+    "name": "바람의 수호",
+    "count": 1
+   },
+   {
+    "id": 217,
+    "name": "전력의 수호",
+    "count": 1
+   },
+   {
+    "id": 218,
+    "name": "냉기의 수호",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "351": {
+  "name": "자연의 칼날",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 347,
+    "name": "자연의 검신",
+    "count": 1
+   },
+   {
+    "id": 349,
+    "name": "부러진 칼의 손잡이",
+    "count": 1
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "481": {
+  "name": "강철 갑옷",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 658,
+    "name": "강철판금",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "480": {
+  "name": "강철 방패",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 658,
+    "name": "강철판금",
+    "count": 4
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "482": {
+  "name": "강철 투구",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 658,
+    "name": "강철판금",
+    "count": 2
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
+ "2022": {
+  "name": "황금빛 망토",
+  "count": 1,
+  "by": "체른 (크리엔드)",
+  "materials": [
+   {
+    "id": 1205,
+    "name": "황금빛 꽃가루",
+    "count": 15
+   },
+   {
+    "id": 1204,
+    "name": "거미줄",
+    "count": 10
+   }
+  ],
+  "gold": 0,
+  "src": "db/commonevents/1599_조합표2-고른장비.yaml",
+  "map_id": null,
+  "event_id": null,
+  "common_event_id": 1599
+ },
  "1075": {
   "name": "고대의 주문서",
   "count": 1,
@@ -1977,872 +3751,6 @@
   "map_id": null,
   "event_id": null,
   "common_event_id": 210
- },
- "2215": {
-  "name": "자유의 면류관",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 766,
-    "name": "카오스의 심장",
-    "count": 1
-   },
-   {
-    "id": 2214,
-    "name": "혼돈의 왕관",
-    "count": 1
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 3
-   },
-   {
-    "id": 1937,
-    "name": "하늘의 결정",
-    "count": 3
-   }
-  ],
-  "gold": 100000,
-  "src": "db/commonevents/0877_자유의_면류관_조합.yaml",
-  "map_id": null,
-  "event_id": null,
-  "common_event_id": 877
- },
- "2046": {
-  "name": "하늘 결정 지팡이",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1937,
-    "name": "하늘의 결정",
-    "count": 2
-   },
-   {
-    "id": 1932,
-    "name": "변이 체액",
-    "count": 10
-   }
-  ],
-  "gold": 40000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2063": {
-  "name": "폭풍 깃털 단검",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1934,
-    "name": "폭풍의 깃털",
-    "count": 10
-   },
-   {
-    "id": 1933,
-    "name": "그리폰의 깃털",
-    "count": 6
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2064": {
-  "name": "검은 깃털 닌자도",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1936,
-    "name": "검은 깃털",
-    "count": 8
-   },
-   {
-    "id": 1935,
-    "name": "익룡의 비늘",
-    "count": 6
-   }
-  ],
-  "gold": 32000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2065": {
-  "name": "그리폰 깃털 활",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1933,
-    "name": "그리폰의 깃털",
-    "count": 12
-   },
-   {
-    "id": 1931,
-    "name": "고대 기계 부품",
-    "count": 6
-   }
-  ],
-  "gold": 35000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2066": {
-  "name": "고대 기계 성구",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1932,
-    "name": "변이 체액",
-    "count": 6
-   },
-   {
-    "id": 1931,
-    "name": "고대 기계 부품",
-    "count": 12
-   }
-  ],
-  "gold": 32000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2071": {
-  "name": "폭풍 수호기 망치",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1935,
-    "name": "익룡의 비늘",
-    "count": 6
-   },
-   {
-    "id": 1931,
-    "name": "고대 기계 부품",
-    "count": 12
-   }
-  ],
-  "gold": 35000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2042": {
-  "name": "그리폰 깃털 망토",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1934,
-    "name": "폭풍의 깃털",
-    "count": 4
-   },
-   {
-    "id": 1933,
-    "name": "그리폰의 깃털",
-    "count": 12
-   }
-  ],
-  "gold": 25000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2043": {
-  "name": "고대 기계 갑옷",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1931,
-    "name": "고대 기계 부품",
-    "count": 15
-   },
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 5
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2044": {
-  "name": "익룡 비늘 방패",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1935,
-    "name": "익룡의 비늘",
-    "count": 12
-   },
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 3
-   }
-  ],
-  "gold": 28000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2045": {
-  "name": "폭풍의 깃털 모자",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1934,
-    "name": "폭풍의 깃털",
-    "count": 12
-   },
-   {
-    "id": 1936,
-    "name": "검은 깃털",
-    "count": 4
-   }
-  ],
-  "gold": 25000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2056": {
-  "name": "거인 뼈 몽둥이",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1942,
-    "name": "거인의 뼈",
-    "count": 12
-   },
-   {
-    "id": 1940,
-    "name": "모래벌레 이빨",
-    "count": 6
-   }
-  ],
-  "gold": 40000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2067": {
-  "name": "거인 뼈 너클",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1942,
-    "name": "거인의 뼈",
-    "count": 10
-   },
-   {
-    "id": 1939,
-    "name": "사막 전갈 껍질",
-    "count": 6
-   }
-  ],
-  "gold": 32000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2068": {
-  "name": "고르곤 비늘 레이피어",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1940,
-    "name": "모래벌레 이빨",
-    "count": 6
-   },
-   {
-    "id": 1941,
-    "name": "고르곤의 비늘",
-    "count": 10
-   }
-  ],
-  "gold": 35000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2069": {
-  "name": "망령의 거울",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1941,
-    "name": "고르곤의 비늘",
-    "count": 4
-   },
-   {
-    "id": 1938,
-    "name": "망령의 천",
-    "count": 12
-   }
-  ],
-  "gold": 32000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2070": {
-  "name": "모래 악령의 오브",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1938,
-    "name": "망령의 천",
-    "count": 8
-   },
-   {
-    "id": 1943,
-    "name": "옛 칠리 금화",
-    "count": 3
-   }
-  ],
-  "gold": 35000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2047": {
-  "name": "망령의 로브",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1938,
-    "name": "망령의 천",
-    "count": 15
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 1
-   }
-  ],
-  "gold": 32000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2048": {
-  "name": "전갈 껍질 갑옷",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 5
-   },
-   {
-    "id": 1939,
-    "name": "사막 전갈 껍질",
-    "count": 15
-   }
-  ],
-  "gold": 32000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2049": {
-  "name": "고르곤 비늘 방패",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 3
-   },
-   {
-    "id": 1941,
-    "name": "고르곤의 비늘",
-    "count": 12
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2057": {
-  "name": "모래벌레 이빨 투구",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1940,
-    "name": "모래벌레 이빨",
-    "count": 12
-   }
-  ],
-  "gold": 25000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2058": {
-  "name": "봉인의 지팡이",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1937,
-    "name": "하늘의 결정",
-    "count": 3
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 3
-   },
-   {
-    "id": 2054,
-    "name": "카르도어의 지팡이",
-    "count": 1
-   }
-  ],
-  "gold": 50000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2059": {
-  "name": "옛 칠리 근위갑옷",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1931,
-    "name": "고대 기계 부품",
-    "count": 10
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 1
-   },
-   {
-    "id": 1069,
-    "name": "고대의 플레이트아머",
-    "count": 1
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2060": {
-  "name": "옛 칠리 가죽갑옷",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1939,
-    "name": "사막 전갈 껍질",
-    "count": 10
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 1
-   },
-   {
-    "id": 1070,
-    "name": "고대의 가죽갑옷",
-    "count": 1
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2061": {
-  "name": "옛 칠리 마도로브",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1938,
-    "name": "망령의 천",
-    "count": 10
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 1
-   },
-   {
-    "id": 1071,
-    "name": "고대의 로브",
-    "count": 1
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2062": {
-  "name": "옛 칠리 망토",
-  "count": 1,
-  "by": "루카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1933,
-    "name": "그리폰의 깃털",
-    "count": 10
-   },
-   {
-    "id": 1944,
-    "name": "대현자의 잉크",
-    "count": 1
-   },
-   {
-    "id": 1072,
-    "name": "고대의 망토",
-    "count": 1
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0482_마법사길드2층/events/0036_루카.yaml",
-  "map_id": 482,
-  "event_id": 36,
-  "common_event_id": null
- },
- "2007": {
-  "name": "서리늑대가죽 모자",
-  "count": 1,
-  "by": "비앙카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1208,
-    "name": "서리 늑대의 가죽",
-    "count": 20
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
-  "map_id": 482,
-  "event_id": 29,
-  "common_event_id": null
- },
- "2008": {
-  "name": "서리늑대가죽 투구",
-  "count": 1,
-  "by": "비앙카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1208,
-    "name": "서리 늑대의 가죽",
-    "count": 15
-   },
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 10
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
-  "map_id": 482,
-  "event_id": 29,
-  "common_event_id": null
- },
- "2009": {
-  "name": "서리늑대가죽 로브",
-  "count": 1,
-  "by": "비앙카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1208,
-    "name": "서리 늑대의 가죽",
-    "count": 30
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
-  "map_id": 482,
-  "event_id": 29,
-  "common_event_id": null
- },
- "2010": {
-  "name": "트롤 가죽 방패",
-  "count": 1,
-  "by": "비앙카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 10
-   },
-   {
-    "id": 1207,
-    "name": "트롤의 가죽",
-    "count": 10
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
-  "map_id": 482,
-  "event_id": 29,
-  "common_event_id": null
- },
- "2011": {
-  "name": "트롤 뼈 몽둥이",
-  "count": 1,
-  "by": "비앙카 (칠리마을 마법사 길드 2층)",
-  "materials": [
-   {
-    "id": 1203,
-    "name": "트롤의 뼈",
-    "count": 30
-   },
-   {
-    "id": 166,
-    "name": "오리하르콘",
-    "count": 5
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0482_마법사길드2층/events/0029_비앙카.yaml",
-  "map_id": 482,
-  "event_id": 29,
-  "common_event_id": null
- },
- "158": {
-  "name": "오리하르콘 흉갑",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 161,
-    "name": "철괴",
-    "count": 30
-   },
-   {
-    "id": 166,
-    "name": "오리하르콘",
-    "count": 20
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "220": {
-  "name": "미스릴 아머",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 161,
-    "name": "철괴",
-    "count": 5
-   },
-   {
-    "id": 167,
-    "name": "미스릴",
-    "count": 10
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "221": {
-  "name": "퓨전엘리멘탈 아머",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 168,
-    "name": "유니콘의 뿔",
-    "count": 10
-   },
-   {
-    "id": 213,
-    "name": "물의 원소",
-    "count": 1
-   },
-   {
-    "id": 214,
-    "name": "불의 원소",
-    "count": 1
-   },
-   {
-    "id": 215,
-    "name": "대지의 원소",
-    "count": 1
-   },
-   {
-    "id": 216,
-    "name": "바람의 수호",
-    "count": 1
-   },
-   {
-    "id": 217,
-    "name": "전력의 수호",
-    "count": 1
-   },
-   {
-    "id": 218,
-    "name": "냉기의 수호",
-    "count": 1
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "351": {
-  "name": "자연의 칼날",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 347,
-    "name": "자연의 검신",
-    "count": 1
-   },
-   {
-    "id": 349,
-    "name": "부러진 칼의 손잡이",
-    "count": 1
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "481": {
-  "name": "강철 갑옷",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 658,
-    "name": "강철판금",
-    "count": 10
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "480": {
-  "name": "강철 방패",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 658,
-    "name": "강철판금",
-    "count": 4
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "482": {
-  "name": "강철 투구",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 658,
-    "name": "강철판금",
-    "count": 2
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
- },
- "2022": {
-  "name": "황금빛 망토",
-  "count": 1,
-  "by": "체른 (크리엔드)",
-  "materials": [
-   {
-    "id": 1205,
-    "name": "황금빛 꽃가루",
-    "count": 15
-   },
-   {
-    "id": 1204,
-    "name": "거미줄",
-    "count": 10
-   }
-  ],
-  "gold": 0,
-  "src": "maps/0012_본토내부/events/0030_EV0030.yaml",
-  "map_id": 12,
-  "event_id": 30,
-  "common_event_id": null
  },
  "629": {
   "name": "스켈레톤스태프",
@@ -3837,473 +4745,6 @@
   "src": "maps/0483_마법사길드장실/events/0001_아스트리아.yaml",
   "map_id": 483,
   "event_id": 1,
-  "common_event_id": null
- },
- "2601": {
-  "name": "독침 지팡이",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1278,
-    "name": "뱀의 독니",
-    "count": 5
-   },
-   {
-    "id": 1279,
-    "name": "골렘의 파편",
-    "count": 4
-   }
-  ],
-  "gold": 20000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2602": {
-  "name": "전갈 꼬리 레이피어",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1278,
-    "name": "뱀의 독니",
-    "count": 3
-   },
-   {
-    "id": 1277,
-    "name": "전갈꼬리",
-    "count": 6
-   }
-  ],
-  "gold": 22000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2603": {
-  "name": "뱀 독니 활",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1278,
-    "name": "뱀의 독니",
-    "count": 6
-   },
-   {
-    "id": 1277,
-    "name": "전갈꼬리",
-    "count": 3
-   }
-  ],
-  "gold": 22000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2604": {
-  "name": "골렘 모래 너클",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1279,
-    "name": "골렘의 파편",
-    "count": 6
-   },
-   {
-    "id": 1277,
-    "name": "전갈꼬리",
-    "count": 3
-   }
-  ],
-  "gold": 22000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2605": {
-  "name": "골렘 파편 몽둥이",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1278,
-    "name": "뱀의 독니",
-    "count": 3
-   },
-   {
-    "id": 1279,
-    "name": "골렘의 파편",
-    "count": 8
-   }
-  ],
-  "gold": 24000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2606": {
-  "name": "황야 가죽갑옷",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1279,
-    "name": "골렘의 파편",
-    "count": 6
-   },
-   {
-    "id": 1277,
-    "name": "전갈꼬리",
-    "count": 4
-   }
-  ],
-  "gold": 18000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2607": {
-  "name": "골렘 파편 방패",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1278,
-    "name": "뱀의 독니",
-    "count": 3
-   },
-   {
-    "id": 1279,
-    "name": "골렘의 파편",
-    "count": 5
-   }
-  ],
-  "gold": 15000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2608": {
-  "name": "황야의 망토",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1278,
-    "name": "뱀의 독니",
-    "count": 5
-   },
-   {
-    "id": 1277,
-    "name": "전갈꼬리",
-    "count": 3
-   }
-  ],
-  "gold": 15000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2609": {
-  "name": "뱀 독니 모자",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1279,
-    "name": "골렘의 파편",
-    "count": 3
-   },
-   {
-    "id": 1277,
-    "name": "전갈꼬리",
-    "count": 5
-   }
-  ],
-  "gold": 14000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2630": {
-  "name": "심판의 홀",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1281,
-    "name": "코카트리스의 볏",
-    "count": 4
-   },
-   {
-    "id": 2610,
-    "name": "미라의 붕대",
-    "count": 5
-   }
-  ],
-  "gold": 40000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2631": {
-  "name": "심판의 곡검",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2611,
-    "name": "자칼의 송곳니",
-    "count": 6
-   },
-   {
-    "id": 1280,
-    "name": "미노타우로스의 해머",
-    "count": 3
-   }
-  ],
-  "gold": 42000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2632": {
-  "name": "심판의 활",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2611,
-    "name": "자칼의 송곳니",
-    "count": 4
-   },
-   {
-    "id": 1282,
-    "name": "가루다의 깃털",
-    "count": 5
-   }
-  ],
-  "gold": 42000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2633": {
-  "name": "심판의 너클",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1280,
-    "name": "미노타우로스의 해머",
-    "count": 5
-   },
-   {
-    "id": 2612,
-    "name": "스카라베의 날개껍질",
-    "count": 4
-   }
-  ],
-  "gold": 42000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2634": {
-  "name": "심판의 철퇴",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1280,
-    "name": "미노타우로스의 해머",
-    "count": 6
-   },
-   {
-    "id": 2612,
-    "name": "스카라베의 날개껍질",
-    "count": 5
-   }
-  ],
-  "gold": 46000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2635": {
-  "name": "신전 수호 판금",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2610,
-    "name": "미라의 붕대",
-    "count": 8
-   },
-   {
-    "id": 1280,
-    "name": "미노타우로스의 해머",
-    "count": 5
-   }
-  ],
-  "gold": 36000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2636": {
-  "name": "신전 수호 방패",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1280,
-    "name": "미노타우로스의 해머",
-    "count": 4
-   },
-   {
-    "id": 2612,
-    "name": "스카라베의 날개껍질",
-    "count": 5
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2637": {
-  "name": "신전 수호 망토",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2610,
-    "name": "미라의 붕대",
-    "count": 6
-   },
-   {
-    "id": 1282,
-    "name": "가루다의 깃털",
-    "count": 4
-   }
-  ],
-  "gold": 30000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2638": {
-  "name": "신전 수호 관",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 1281,
-    "name": "코카트리스의 볏",
-    "count": 3
-   },
-   {
-    "id": 2612,
-    "name": "스카라베의 날개껍질",
-    "count": 4
-   }
-  ],
-  "gold": 28000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2621": {
-  "name": "자칼왕의 곡도",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2611,
-    "name": "자칼의 송곳니",
-    "count": 10
-   },
-   {
-    "id": 2613,
-    "name": "아누비스의 인장",
-    "count": 1
-   }
-  ],
-  "gold": 60000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2622": {
-  "name": "수호자의 붕대",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2610,
-    "name": "미라의 붕대",
-    "count": 12
-   },
-   {
-    "id": 2613,
-    "name": "아누비스의 인장",
-    "count": 1
-   }
-  ],
-  "gold": 60000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
-  "common_event_id": null
- },
- "2623": {
-  "name": "심판관의 투구",
-  "count": 1,
-  "by": "장인 (신대륙 오아시스)",
-  "materials": [
-   {
-    "id": 2610,
-    "name": "미라의 붕대",
-    "count": 6
-   },
-   {
-    "id": 2612,
-    "name": "스카라베의 날개껍질",
-    "count": 6
-   },
-   {
-    "id": 2613,
-    "name": "아누비스의 인장",
-    "count": 1
-   }
-  ],
-  "gold": 50000,
-  "src": "maps/0724_장인작업장/events/0004_장인.yaml",
-  "map_id": 724,
-  "event_id": 4,
   "common_event_id": null
  }
 }
