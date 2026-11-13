@@ -664,16 +664,25 @@ async function showRanking() {
     return;
   }
   empty.hidden = true;
+  const mine = [];
   rows.forEach((r, i) => {
     const l = looks[i];
     // 위 세 명은 시상대 (1등이 가운데). 내 순위가 100위 밖이면 아래 고정 줄에만 보인다.
     if (i < 3 && r.rank <= 3) podium.append(rankRow("#podium-tpl", r, l));
     else if (r.rank <= RANK_LIMIT) list.append(rankRow("#rank-tpl", r, l));
-    if (r.me) {
-      bar.append(rankRow("#rank-tpl", r, l));
-      bar.hidden = false;
-    }
+    if (r.me) mine.push([r, l]);
   });
+  // 아래 고정 줄은 한 줄만. 대표가 여러 칸이면 가장 높은 순위 한 줄과 나머지 순위만 작게 보인다 (고정 줄이 화면을 가리지 않게).
+  if (mine.length) {
+    bar.append(rankRow("#rank-tpl", ...mine[0]));
+    if (mine.length > 1) {
+      const more = document.createElement("li");
+      more.className = "me-more";
+      more.textContent = `다른 대표 ${mine.slice(1).map(([r]) => `${r.rank}위`).join(" · ")}`;
+      bar.append(more);
+    }
+    bar.hidden = false;
+  }
 }
 
 // 주소가 #ranking 이면 랭킹 화면을 보인다.
