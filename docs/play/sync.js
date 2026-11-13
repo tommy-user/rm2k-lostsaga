@@ -208,16 +208,18 @@ export class SaveSync {
     return data;
   }
 
-  // 내 대표 캐릭터 {run_id, chosen_at, next_change_at, look}. 없으면 null.
-  async myRepresentative() {
+  // 내 대표 캐릭터들 [{rep_slot, run_id, chosen_at, next_change_at, look}] (대표 칸 1~3 순서). 없으면 [].
+  async myRepresentatives() {
     const { data, error } = await this.sb.rpc("my_representative");
     if (error) throw error;
-    return data?.[0] ?? null;
+    return data ?? [];
   }
 
-  // 슬롯의 세이브(그 플레이)를 대표 캐릭터로 정한다. 결과: ok | anonymous | no_save | too_soon
-  async setRepresentative(slot) {
-    const { data, error } = await this.sb.rpc("set_representative", { p_slot: slot });
+  // 슬롯의 세이브(그 플레이)를 대표 칸 repSlot(1~3)의 대표 캐릭터로 정한다. 결과: ok | anonymous | no_save | too_soon | duplicate | invalid
+  // 1번 칸은 p_rep 없이 부른다 (서버에 대표 칸이 생기기 전 함수와도 같은 호출).
+  async setRepresentative(slot, repSlot = 1) {
+    const args = repSlot === 1 ? { p_slot: slot } : { p_slot: slot, p_rep: repSlot };
+    const { data, error } = await this.sb.rpc("set_representative", args);
     if (error) throw error;
     return data;
   }

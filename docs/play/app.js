@@ -144,7 +144,7 @@ async function renderHome() {
     if (repOf.includes(s.slot)) {
       const b = document.createElement("span");
       b.className = "badge";
-      b.textContent = "대표";
+      b.textContent = reps.length > 1 ? `대표 ${repOfSlot(s.slot)}` : "대표";
       li.querySelector(".who").append(b);
     }
     const menu = li.querySelector('[data-act="menu"]');
@@ -322,16 +322,23 @@ async function renderNickname() {
 // ---- 대표 캐릭터·프로필 ----
 // 슬롯의 세이브가 속한 플레이를 대표로 정한다. 그 플레이를 저장할 때마다 서버가 대표 캐릭터를 갱신한다.
 
-let rep = null;
+// 대표는 최대 3칸 (rep_slot 1~3). 칸마다 다른 플레이이고, 바꾸기는 칸마다 하루 1번이다.
+let reps = [];
+const MAX_REPS = 3;
 const canChooseRep = () => !offline && sync.online && !sync.anonymous;
-const repSlots = () => (rep ? [...sync.slotRuns].filter(([, run]) => run === rep.run_id).map(([slot]) => slot) : []);
-const repLocked = () => rep && new Date(rep.next_change_at) > new Date();
+// 세이브 슬롯이 가리키는 플레이가 대표인 칸 (아니면 null)
+const repOfSlot = (slot) => reps.find((r) => r.run_id === sync.slotRuns.get(slot))?.rep_slot ?? null;
+const repSlots = () => [...sync.slotRuns.keys()].filter((slot) => repOfSlot(slot) !== null);
+const repLocked = (n) => {
+  const r = reps.find((x) => x.rep_slot === n);
+  return !!r && new Date(r.next_change_at) > new Date();
+};
 
 async function loadRep() {
-  rep = null;
+  reps = [];
   if (!canChooseRep()) return;
   try {
-    rep = await sync.myRepresentative();
+    reps = await sync.myRepresentatives();
   } catch (e) {
     console.warn("[launcher] representative", e);
   }
@@ -359,19 +366,24 @@ async function renderProfile() {
   } else {
     nick.textContent = "닉네임 없음";
   }
-  $("#pf-ranks").hidden = !profile || !rep;
-  if (!rep) {
+  $("#pf-ranks").hidden = !profile || !reps.length;
+  if (!reps.length) {
     $("#pf-rep").textContent = "대표 캐릭터 없음";
     $("#pf-note").textContent = "저장하면 대표 캐릭터가 정해지고 랭킹에 오릅니다.";
     return;
   }
-  const l = await resolveLook(rep.look);
-  drawFace(face, l);
-  drawSprite(sprite, l);
-  $("#pf-rep").textContent = `대표 캐릭터 · ${[l.name, l.title, growthText(l)].filter(Boolean).join(" · ")}`;
+  const looks = await Promise.all(reps.map((r) => resolveLook(r.look)));
+  drawFace(face, looks[0]);
+  drawSprite(sprite, looks[0]);
+  $("#pf-rep").replaceChildren(...reps.map((r, i) => {
+    const line = document.createElement("div");
+    const l = looks[i];
+    line.textContent = `${reps.length > 1 ? `대표 ${r.rep_slot}` : "대표 캐릭터"} · ${[l.name, l.title, growthText(l)].filter(Boolean).join(" · ")}`;
+    return line;
+  }));
   const slots = repSlots();
   const notes = [slots.length ? `대표는 슬롯 ${slots.join(", ")} 의 플레이 · 저장하면 갱신` : "대표 플레이가 슬롯에 없음"];
-  if (repLocked()) notes.push(`다음 변경 ${soon(rep.next_change_at)}`);
+  if (reps.length === 1 && repLocked(reps[0].rep_slot)) notes.push(`다음 변경 ${soon(reps[0].next_change_at)}`);
   if (autoNick(profile)) notes.push("임시 닉네임 · 계정 상자에서 정할 수 있습니다");
   $("#pf-note").textContent = notes.join(" · ");
   if (!profile) return;
@@ -392,6 +404,7 @@ const REP_ERRORS = {
   too_soon: "대표 캐릭터는 하루에 한 번 바꿀 수 있습니다.",
   no_save: "이 슬롯은 아직 백업되지 않았습니다.",
   anonymous: "Google 계정으로 로그인하면 대표 캐릭터를 정할 수 있습니다.",
+  duplicate: "이미 다른 대표 칸에 있는 캐릭터입니다.",
 };
 
 // "카이져로", "켈로", "아린으로": 마지막 글자 받침에 맞춰 조사를 붙인다 (ㄹ 받침은 "로").
@@ -401,28 +414,47 @@ function withRo(name) {
   return name + (jong === 0 || jong === 8 ? "로" : "으로");
 }
 
-// 대표 바꾸기: 세이브를 고르고 버튼으로 정한다.
+// 대표 바꾸기: 대표 칸(1~3)과 세이브를 고르고 버튼으로 정한다.
 async function openPicker(slot = null) {
-  const dlg = $("#pick-dlg"), list = $("#pick-list"), ok = $("#pick-ok"), msg = $("#pick-msg");
+  const dlg = $("#pick-dlg"), list = $("#pick-list"), ok = $("#pick-ok"), msg = $("#pick-msg"), chips = $("#pick-reps");
   const repOf = repSlots();
   let chosen = slot ?? saves.find((s) => sync.slotRuns.has(s.slot) && !repOf.includes(s.slot))?.slot ?? null;
+  // 칸: 고른 슬롯이 이미 대표면 그 칸, 아니면 빈 칸 중 앞, 다 찼으면 바꿀 수 있는 칸 중 앞
+  const nums = Array.from({ length: MAX_REPS }, (_, i) => i + 1);
+  let chosenRep = (slot !== null && repOfSlot(slot)) || nums.find((n) => !reps.some((r) => r.rep_slot === n)) || nums.find((n) => !repLocked(n)) || 1;
   const looks = await Promise.all(saves.map((s) => resolveLook(s.sum.leader)));
   const update = () => {
+    for (const b of chips.children) b.setAttribute("aria-pressed", String(Number(b.dataset.rep) === chosenRep));
     for (const li of list.children) li.setAttribute("aria-checked", String(Number(li.dataset.slot) === chosen));
     const s = saves.find((x) => x.slot === chosen);
-    const same = s && repOf.includes(s.slot);
-    ok.disabled = !s || same || repLocked();
-    ok.textContent = s && !same ? `${withRo(looks[saves.indexOf(s)].name || who(s.sum))} 정하기` : "대표로 정하기";
+    const at = s ? repOfSlot(s.slot) : null;            // 고른 세이브가 이미 대표인 칸
+    const same = at === chosenRep, dup = at !== null && !same;
+    const cur = reps.find((r) => r.rep_slot === chosenRep);
+    const locked = !!cur && !same && repLocked(chosenRep);
+    ok.disabled = !s || same || dup || locked;
+    ok.textContent = s && !same && !dup ? `${withRo(looks[saves.indexOf(s)].name || who(s.sum))} 정하기` : "대표로 정하기";
     msg.className = "";
-    msg.textContent = repLocked() ? `다음 변경 ${soon(rep.next_change_at)} 부터` : "정하면 하루 동안 다시 바꿀 수 없습니다";
+    msg.textContent = dup ? `이미 대표 ${at} 입니다`
+      : locked ? `대표 ${chosenRep} 은 ${soon(cur.next_change_at)} 부터 바꿀 수 있습니다`
+      : "정하면 이 칸은 하루 동안 다시 바꿀 수 없습니다";
   };
+  chips.replaceChildren(...nums.map((n) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.dataset.rep = n;
+    b.textContent = `대표 ${n}`;
+    b.onclick = () => { chosenRep = n; update(); };
+    return b;
+  }));
   list.replaceChildren(...saves.map((s, i) => {
     const li = $("#pick-tpl").content.firstElementChild.cloneNode(true);
     li.dataset.slot = s.slot;
     const backed = sync.slotRuns.has(s.slot);
     li.querySelector(".pick-name").textContent = backed ? `${looks[i].name || who(s.sum)} Lv${s.sum.level}` : `슬롯 ${s.slot} · 백업 전`;
     li.querySelector(".pick-sub").textContent = backed ? `${looks[i].title} · 슬롯 ${s.slot}` : "온라인에서 한 번 저장하면 고를 수 있습니다";
-    li.querySelector(".tag").hidden = !repOf.includes(s.slot);
+    const tag = li.querySelector(".tag");
+    tag.hidden = !repOf.includes(s.slot);
+    tag.textContent = `지금 대표 ${repOfSlot(s.slot) ?? ""}`.trim();
     drawSprite(li.querySelector("img.px"), looks[i]);
     if (backed) {
       li.tabIndex = 0;
@@ -437,7 +469,7 @@ async function openPicker(slot = null) {
   ok.onclick = async () => {
     ok.disabled = true;
     try {
-      const r = await sync.setRepresentative(chosen);
+      const r = await sync.setRepresentative(chosen, chosenRep);
       if (r === "ok") {
         dlg.close();
         toast("대표 캐릭터를 바꿨습니다");
@@ -542,7 +574,7 @@ const STAGE_NAMES = [
   "에피소드3 대천사 처치", "에피소드3 문지기 처치", "에피소드3 카오스 처치", "에피소드3 엔딩",
 ];
 const RANKS = {
-  growth: "대표 캐릭터의 승급, 돌파, 레벨이 높은 순입니다. 같으면 더 짧은 플레이 시간에 달성한 순입니다.",
+  growth: "대표 캐릭터(최대 3명, 한 칸마다 한 줄)의 승급, 돌파, 레벨이 높은 순입니다. 같으면 더 짧은 플레이 시간에 달성한 순입니다.",
   adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 플레이 시간이 짧은 순입니다.",
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
   kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
