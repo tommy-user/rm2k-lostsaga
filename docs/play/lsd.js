@@ -72,6 +72,9 @@ const VAR_WAVE = 1056;        // 무한 웨이브 최고 기록
 const VAR_WAVE_TIME = 1057;   // 그 기록에 걸린 시간(초)
 const VAR_KRAKEN_BEST = 1555;  // 크라켄 레이드 최고 기록(초)
 const VAR_KRAKEN_KILLS = 1556; // 크라켄 처치 횟수
+const VAR_MADNESS_BEST = 2208;  // 꿈의 심연 최고 기록(초, 0 = 아직 못 깸)
+const VAR_MADNESS_KILLS = 2209; // 꿈의 심연 처치 횟수
+const SW_MADNESS_PURE = 4415;   // 유혹을 하나도 받지 않고 깬 적이 있다
 
 export function parseLsd(b) {
   let [n, i] = ber(b, 0);
@@ -137,6 +140,9 @@ export function parseLsd(b) {
     wave_time: Math.max(0, v(VAR_WAVE_TIME)),
     kraken_best: Math.max(0, v(VAR_KRAKEN_BEST)),
     kraken_kills: Math.max(0, v(VAR_KRAKEN_KILLS)),
+    madness_best: Math.max(0, v(VAR_MADNESS_BEST)),
+    madness_kills: Math.max(0, v(VAR_MADNESS_KILLS)),
+    madness_pure: on(SW_MADNESS_PURE),
   };
 }
 

@@ -7,6 +7,10 @@ import { createPad } from "./pad.js";
 import { createSound } from "./sound.js";
 import { initInstall } from "./install.js";
 
+// 레이드는 탭 하나(「레이드」) 안에서 고른다. 서버 랭킹 종류 이름 → 프로필 칸의 짧은 이름
+const RAIDS = ["madness", "kraken"];
+const RAID_SHORT = { madness: "심연", kraken: "크라켄" };
+
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
 // ?offline 이면 클라우드 없이 이 기기에만 저장한다 (기준 세이브를 만들 때 쓴다).
@@ -422,15 +426,16 @@ async function renderProfile() {
   if (autoNick(profile)) notes.push("임시 닉네임 · 계정 상자에서 정할 수 있습니다");
   $("#pf-note").textContent = notes.join(" · ");
   if (!profile) return;
-  for (const kind of ["growth", "adventure", "wave", "kraken"]) {
+  for (const kind of ["growth", "adventure", "wave", ...RAIDS]) {
     const dd = $(`#pf-rank-${kind}`);
-    dd.textContent = "…";
+    const pre = RAID_SHORT[kind] ? `${RAID_SHORT[kind]} ` : "";
+    dd.textContent = `${pre}…`;
     sync.ranking(kind, null, 1)
       .then((rows) => {
         const me = rows.find((r) => r.me);
-        dd.textContent = !me ? "—" : kind === "wave" ? `웨이브 ${me.value}` : kind === "kraken" ? `${me.rank}위 · ${minSec(me.frames)}` : `${me.rank}위`;
+        dd.textContent = pre + (!me ? "—" : kind === "wave" ? `웨이브 ${me.value}` : RAID_SHORT[kind] ? `${me.rank}위 · ${minSec(me.frames)}` : `${me.rank}위`);
       })
-      .catch(() => { dd.textContent = "—"; });
+      .catch(() => { dd.textContent = `${pre}—`; });
   }
 }
 $("#pf-pick").onclick = () => openPicker();
@@ -613,12 +618,17 @@ const RANKS = {
   adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 플레이 시간이 짧은 순입니다.",
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
   kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
+  madness: "꿈의 심연을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다.",
 };
+let rankRaid = "madness";
 const RANK_LIMIT = 100;
 let rankKind = "growth", rankJob = null, rankSeq = 0;
 
 for (const b of document.querySelectorAll("#ranking [data-kind]")) {
-  b.onclick = () => { rankKind = b.dataset.kind; showRanking(); };
+  b.onclick = () => { rankKind = b.dataset.kind === "raid" ? rankRaid : b.dataset.kind; showRanking(); };
+}
+for (const b of document.querySelectorAll("#rank-raids [data-raid]")) {
+  b.onclick = () => { rankKind = rankRaid = b.dataset.raid; showRanking(); };
 }
 $("#rank-jobs").replaceChildren(...[[null, "전체"], ...Object.entries(JOBS)].map(([key, label]) => {
   const b = document.createElement("button");
@@ -632,7 +642,7 @@ $("#rank-jobs").replaceChildren(...[[null, "전체"], ...Object.entries(JOBS)].m
 function rankValue(r, l) {
   if (rankKind === "growth") return growthText(l);
   if (rankKind === "adventure") return STAGE_NAMES[r.value] ?? `단계 ${r.value}`;
-  if (rankKind === "kraken") return `처치 ${r.value}번`;
+  if (RAIDS.includes(rankKind)) return `처치 ${r.value}번`;
   return `웨이브 ${r.value}`;
 }
 
@@ -643,7 +653,7 @@ function minSec(frames) {
 }
 function rankTime(r) {
   if (r.frames == null) return "";
-  if (rankKind !== "wave" && rankKind !== "kraken") return `플레이 ${playTime(r.frames)}`;
+  if (rankKind !== "wave" && !RAIDS.includes(rankKind)) return `플레이 ${playTime(r.frames)}`;
   return minSec(r.frames);
 }
 
@@ -669,7 +679,10 @@ function rankRow(tpl, r, l) {
 
 async function showRanking() {
   const seq = ++rankSeq;
-  for (const b of document.querySelectorAll("#ranking [data-kind]")) b.setAttribute("aria-selected", String(b.dataset.kind === rankKind));
+  const tab = RAIDS.includes(rankKind) ? "raid" : rankKind;
+  for (const b of document.querySelectorAll("#ranking [data-kind]")) b.setAttribute("aria-selected", String(b.dataset.kind === tab));
+  $("#rank-raids").hidden = tab !== "raid";
+  for (const b of $("#rank-raids").children) b.setAttribute("aria-pressed", String(b.dataset.raid === rankKind));
   for (const b of $("#rank-jobs").children) b.setAttribute("aria-pressed", String(b.dataset.job === (rankJob ?? "")));
   $("#rank-note").textContent = RANKS[rankKind];
   const podium = $("#rank-podium"), list = $("#rank-list"), empty = $("#rank-empty"), bar = $("#rank-me");
@@ -695,7 +708,8 @@ async function showRanking() {
   if (seq !== rankSeq) return;
   if (!rows.length) {
     empty.textContent = rankKind === "wave" ? "아직 기록이 없습니다. 몬스터대기실의 무한 웨이브에서 기록을 세울 수 있습니다."
-      : rankKind === "kraken" ? "아직 기록이 없습니다. 외항선을 타고 크라켄 해역에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
+      : rankKind === "kraken" ? "아직 기록이 없습니다. 외항선을 타고 크라켄 해역에서 기록을 세울 수 있습니다."
+      : rankKind === "madness" ? "아직 기록이 없습니다. 마스터 승급 뒤 광기의 던전에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
     return;
   }
   empty.hidden = true;
