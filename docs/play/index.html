@@ -171,7 +171,7 @@ img.px { image-rendering: pixelated; }
 .pf-body { display: flex; flex-direction: column; gap: 4px; padding: 50px 20px 18px; }
 #pf-nick { font-size: 22px; font-weight: 700; }
 #pf-nick small { font-size: 13px; font-weight: 400; color: var(--faint); }
-#pf-rep { font-size: 14px; color: var(--soft); }
+#pf-rep { display: flex; flex-direction: column; gap: 2px; font-size: 14px; color: var(--soft); }
 .pf-ranks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 10px 0 4px; }
 .pf-ranks div { display: flex; flex-direction: column; gap: 2px; padding: 10px; border-radius: 12px; background: rgba(13, 15, 20, 0.6);
   border: 1px solid rgba(239, 230, 210, 0.1); }
@@ -689,7 +689,8 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
       <h2 id="pick-h">대표 캐릭터 바꾸기</h2>
       <button type="button" class="icon-btn" data-close aria-label="닫기"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
     </div>
-    <p>고른 캐릭터로 성장 랭킹에 오르고, 그 플레이를 저장할 때마다 갱신됩니다. 하루에 한 번 바꿀 수 있습니다.</p>
+    <p>대표는 3명까지 정할 수 있고, 각각 성장 랭킹에 오릅니다. 그 플레이를 저장할 때마다 갱신되며, 칸마다 하루에 한 번 바꿀 수 있습니다.</p>
+    <div class="chips" id="pick-reps" role="group" aria-label="대표 칸"></div>
     <ul id="pick-list" role="radiogroup" aria-label="세이브"></ul>
     <button type="button" class="btn btn-primary" id="pick-ok">대표로 정하기</button>
     <span class="sheet-msg" id="pick-msg" role="status"></span>
