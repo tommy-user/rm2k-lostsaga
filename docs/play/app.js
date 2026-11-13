@@ -170,10 +170,9 @@ function openSlotMenu(s, btn) {
   closeSlotMenu();
   slotMenu.opener = btn;
   btn.setAttribute("aria-expanded", "true");
-  const [rename, pick, exp] = slotMenu.querySelectorAll("button");
+  const rename = slotMenu.querySelector('[data-m="rename"]'), exp = slotMenu.querySelector('[data-m="export"]');
   rename.onclick = () => { closeSlotMenu(); openRename(s); };
-  pick.hidden = !canChooseRep();
-  pick.onclick = () => { closeSlotMenu(); openPicker(s.slot); };
+  fillRepMenu(s);
   exp.onclick = () => { closeSlotMenu(); download(s.slot, s.bytes); };
   const r = btn.getBoundingClientRect();
   slotMenu.hidden = false;
@@ -181,6 +180,41 @@ function openSlotMenu(s, btn) {
   slotMenu.style.left = `${Math.max(8, Math.min(innerWidth - w - 8, r.right - w)) + scrollX}px`;
   slotMenu.style.top = `${r.bottom + 6 + scrollY}px`;
   rename.focus();
+}
+// 메뉴에서 바로 대표 1·2·3 중 칸을 골라 이 세이브의 플레이를 넣는다. 칸마다 지금 대표 이름을 보인다.
+function fillRepMenu(s) {
+  const box = $("#slot-reps");
+  box.hidden = !canChooseRep();
+  if (box.hidden) return;
+  const mine = repOfSlot(s.slot);
+  box.replaceChildren(...Array.from({ length: MAX_REPS }, (_, i) => {
+    const n = i + 1;
+    const cur = reps.find((r) => r.rep_slot === n);
+    const same = mine === n, locked = !!cur && !same && repLocked(n);
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "menuitem");
+    b.setAttribute("aria-pressed", String(same));
+    if (locked) b.setAttribute("aria-disabled", "true");
+    b.append(`대표 ${n}`);
+    const sub = document.createElement("small");
+    sub.textContent = same ? "지금 이 캐릭터" : locked ? `${soon(cur.next_change_at)} 부터` : cur ? (cur._name || "다른 캐릭터") : "비어 있음";
+    b.append(sub);
+    b.onclick = async () => {
+      if (same) return closeSlotMenu();
+      if (locked) return toast(`대표 ${n} 은 ${soon(cur.next_change_at)} 부터 바꿀 수 있습니다`);
+      closeSlotMenu();
+      try {
+        const r = await sync.setRepresentative(s.slot, n);
+        if (r === "ok") { toast(`대표 ${n} 로 정했습니다`); return await renderHome(); }
+        toast(REP_ERRORS[r] ?? "정하지 못했습니다.");
+      } catch (e) {
+        console.warn("[launcher] representative", e);
+        toast("정하지 못했습니다. 잠시 뒤 다시 해 주세요.");
+      }
+    };
+    return b;
+  }));
 }
 document.addEventListener("click", (e) => { if (!slotMenu.contains(e.target)) closeSlotMenu(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !slotMenu.hidden) closeSlotMenu(); });
@@ -339,6 +373,7 @@ async function loadRep() {
   if (!canChooseRep()) return;
   try {
     reps = await sync.myRepresentatives();
+    await Promise.all(reps.map(async (r) => { r._name = (await resolveLook(r.look)).name; }));
   } catch (e) {
     console.warn("[launcher] representative", e);
   }
