@@ -2497,13 +2497,13 @@
             },
             {
               "id": 1292,
-              "name": "◇법서:플레이스매직",
+              "name": "법서:플레이스매직",
               "prob": 4,
               "god": false
             },
             {
               "id": 1293,
-              "name": "◇법서:플레이스무브",
+              "name": "법서:플레이스무브",
               "prob": 4,
               "god": false
             }
@@ -3563,13 +3563,13 @@
             },
             {
               "id": 1291,
-              "name": "◇법서:플레이스아머",
+              "name": "법서:플레이스아머",
               "prob": 4,
               "god": false
             },
             {
               "id": 1290,
-              "name": "◇법서:플레이스웨폰",
+              "name": "법서:플레이스웨폰",
               "prob": 4,
               "god": false
             }
@@ -4185,7 +4185,7 @@
             },
             {
               "id": 1291,
-              "name": "◇법서:플레이스아머",
+              "name": "법서:플레이스아머",
               "prob": 15,
               "god": false
             }
@@ -4780,7 +4780,7 @@
             },
             {
               "id": 1290,
-              "name": "◇법서:플레이스웨폰",
+              "name": "법서:플레이스웨폰",
               "prob": 15,
               "god": false
             }
@@ -4851,7 +4851,7 @@
             },
             {
               "id": 1293,
-              "name": "◇법서:플레이스무브",
+              "name": "법서:플레이스무브",
               "prob": 15,
               "god": false
             }
@@ -4887,7 +4887,7 @@
             },
             {
               "id": 1292,
-              "name": "◇법서:플레이스매직",
+              "name": "법서:플레이스매직",
               "prob": 15,
               "god": false
             }
@@ -5410,6 +5410,21 @@
             471,
             472
           ]
+        },
+        {
+          "name": "광기던전 심층",
+          "floors": "꿈 세 개",
+          "boss": "???",
+          "maps": [
+            824,
+            825,
+            826,
+            827,
+            828,
+            829,
+            830
+          ],
+          "desc": "광기의 전도자를 쓰러뜨리고 마스터 승급을 마친 뒤, 보스룸의 꿈 장치로 들어가는 남의 꿈. 30분 안에 꿈에 붙잡힌 사람을 깨운다."
         }
       ],
       "monsters": [
@@ -5433,7 +5448,7 @@
             },
             {
               "id": 1291,
-              "name": "◇법서:플레이스아머",
+              "name": "법서:플레이스아머",
               "prob": 15,
               "god": false
             }
@@ -5487,7 +5502,7 @@
             },
             {
               "id": 1293,
-              "name": "◇법서:플레이스무브",
+              "name": "법서:플레이스무브",
               "prob": 15,
               "god": false
             }
@@ -5547,7 +5562,7 @@
             },
             {
               "id": 1292,
-              "name": "◇법서:플레이스매직",
+              "name": "법서:플레이스매직",
               "prob": 15,
               "god": false
             }
@@ -5881,7 +5896,7 @@
             },
             {
               "id": 1290,
-              "name": "◇법서:플레이스웨폰",
+              "name": "법서:플레이스웨폰",
               "prob": 15,
               "god": false
             }
@@ -8696,7 +8711,7 @@
             {
               "id": 3777,
               "name": "저주 카드",
-              "prob": 25,
+              "prob": 35,
               "god": false
             }
           ],
@@ -10179,6 +10194,137 @@
       "title": "가장 먼 바다의 주인",
       "where": "크라켄 해역",
       "region": "sea",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2731,
+      "name": "광기의 전도자",
+      "img": "Monster/apostle-of-madness.png",
+      "hp": 12000,
+      "atk": 420,
+      "def": 360,
+      "spi": 420,
+      "agi": 380,
+      "boss": true,
+      "title": "연구원의 꿈",
+      "where": "광기던전 심층 · 발표장의 꿈",
+      "region": "new-continent",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2734,
+      "name": "그날의 늑대 우두머리",
+      "img": "Monster/madness_wolf.png",
+      "hp": 6000,
+      "atk": 430,
+      "def": 280,
+      "spi": 240,
+      "agi": 440,
+      "boss": true,
+      "hue": 330,
+      "title": "그라나 주민의 꿈",
+      "where": "광기던전 심층 · 그라나 집의 꿈",
+      "region": "new-continent",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2740,
+      "name": "대장을 벤 오크",
+      "img": "Monster/madness_orc.png",
+      "hp": 6500,
+      "atk": 440,
+      "def": 300,
+      "spi": 180,
+      "agi": 280,
+      "boss": true,
+      "hue": 300,
+      "title": "피의 꿈",
+      "where": "광기던전 심층 · 성문의 꿈",
+      "region": "new-continent",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2741,
+      "name": "무너진 벽돌",
+      "img": "Monster/golem_warrier.png",
+      "hp": 4200,
+      "atk": 390,
+      "def": 420,
+      "spi": 200,
+      "agi": 180,
+      "boss": true,
+      "hue": 200,
+      "title": "돌의 꿈",
+      "where": "광기던전 심층 · 칠리 벽의 꿈",
+      "region": "new-continent",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2742,
+      "name": "빈 책",
+      "img": "Monster/golem_mage.png",
+      "hp": 3000,
+      "atk": 300,
+      "def": 220,
+      "spi": 440,
+      "agi": 360,
+      "boss": true,
+      "hue": 260,
+      "title": "속삭임의 꿈",
+      "where": "광기던전 심층 · 끝없는 서고의 꿈",
+      "region": "new-continent",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2743,
+      "name": "얼굴 없는 신하",
+      "img": "Monster/madness_warrior.png",
+      "hp": 3600,
+      "atk": 400,
+      "def": 280,
+      "spi": 300,
+      "agi": 340,
+      "boss": true,
+      "hue": 200,
+      "title": "눈의 꿈",
+      "where": "광기던전 심층 · 왕좌실의 꿈",
+      "region": "new-continent",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": []
+    },
+    {
+      "enemyId": 2744,
+      "name": "카이져의 그림자",
+      "img": "Monster/BJ1_그림자_warrior_m.png",
+      "hp": 40000,
+      "atk": 440,
+      "def": 330,
+      "spi": 330,
+      "agi": 380,
+      "boss": true,
+      "title": "주인공의 꿈",
+      "where": "광기던전 심층 · 아이의 꿈",
+      "region": "new-continent",
       "secret": true,
       "desc": "",
       "drops": [],
