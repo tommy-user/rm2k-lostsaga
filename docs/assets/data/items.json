@@ -2862,6 +2862,234 @@
           "twoHanded": null,
           "job": null,
           "note": "대족장 세트. 장인 나노무토·마나무토가 그랜드마운틴 던전 재료로 만든다. 두 벌 공격+15, 세 벌 공격+15·HP+200"
+        },
+        {
+          "id": 4862,
+          "name": "볼락구이",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 민첩 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4863,
+          "name": "청새치초밥",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 공격 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4864,
+          "name": "송어회",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 정신 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4865,
+          "name": "잉어찜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 방어 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4866,
+          "name": "수정어탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 최대MP +6",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4867,
+          "name": "메기매운탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 최대HP +6",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4868,
+          "name": "특제 볼락구이",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 민첩 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4869,
+          "name": "특제 청새치초밥",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 공격 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4870,
+          "name": "특제 송어회",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 정신 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4871,
+          "name": "특제 잉어찜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 방어 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4872,
+          "name": "특제 수정어탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 최대MP +30",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4873,
+          "name": "특제 메기매운탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 최대HP +30",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -17746,6 +17974,25 @@
           "twoHanded": null,
           "job": null,
           "note": "대족장 세트. 장인 나노무토·마나무토가 그랜드마운틴 던전 재료로 만든다. 두 벌 공격+15, 세 벌 공격+15·HP+200"
+        },
+        {
+          "id": 5056,
+          "name": "축제 브로치",
+          "grade": "normal",
+          "type": 5,
+          "desc": "밤마다 피로도가 1 덜 오른다. 공·방·정·민+5",
+          "stats": {
+            "atk": 5,
+            "def": 5,
+            "spi": 5,
+            "agi": 5
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -19728,6 +19975,25 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 5052,
+          "name": "사과 사탕",
+          "grade": "normal",
+          "type": 6,
+          "desc": "축제 노점의 사과 사탕. ＭＰ50%",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 300,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -21349,6 +21615,234 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 4862,
+          "name": "볼락구이",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 민첩 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4863,
+          "name": "청새치초밥",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 공격 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4864,
+          "name": "송어회",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 정신 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4865,
+          "name": "잉어찜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 방어 +2",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4866,
+          "name": "수정어탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 최대MP +6",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4867,
+          "name": "메기매운탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 최대HP +6",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4868,
+          "name": "특제 볼락구이",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 민첩 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4869,
+          "name": "특제 청새치초밥",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 공격 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4870,
+          "name": "특제 송어회",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 정신 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4871,
+          "name": "특제 잉어찜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 방어 +10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4872,
+          "name": "특제 수정어탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 최대MP +30",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4873,
+          "name": "특제 메기매운탕",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 최대HP +30",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -22514,6 +23008,82 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 4874,
+          "name": "낚시 수첩",
+          "grade": "normal",
+          "type": 10,
+          "desc": "낚은 물고기와 가장 큰 크기를 적는 수첩",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 5053,
+          "name": "폭죽",
+          "grade": "normal",
+          "type": 10,
+          "desc": "밤하늘에 쏘아 올리는 축제 폭죽",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 300,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 5054,
+          "name": "큰 폭죽",
+          "grade": "normal",
+          "type": 10,
+          "desc": "불꽃이 세 번 연달아 터지는 축제 폭죽",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 5151,
+          "name": "각인 수첩",
+          "grade": "normal",
+          "type": 10,
+          "desc": "아르호텝이 새긴 각인을 적어 둔 수첩. 종류마다 하나씩 낀다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -23586,6 +24156,25 @@
           "note": null
         },
         {
+          "id": 419,
+          "name": "최상급 여의주",
+          "grade": "normal",
+          "type": 0,
+          "desc": "강력한 드래곤들이 지녔던 여의주",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 10000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 527,
           "name": "고대소설",
           "grade": "normal",
@@ -24414,7 +25003,7 @@
             "spi": 0,
             "agi": 0
           },
-          "price": 2,
+          "price": 100,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -24560,6 +25149,44 @@
           "grade": "normal",
           "type": 0,
           "desc": "게의 일종",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 500,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 814,
+          "name": "연어알",
+          "grade": "normal",
+          "type": 0,
+          "desc": "생선인 연어의 알로서 고단백식품이다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 500,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 815,
+          "name": "성게알",
+          "grade": "normal",
+          "type": 0,
+          "desc": "성게의 알로써 영양가가 매우 높다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -27106,6 +27733,272 @@
           "grade": "normal",
           "type": 0,
           "desc": "넘기다 만 탁상 달력. 어느 날짜에서 멈춰 있다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4851,
+          "name": "대나무 낚싯대",
+          "grade": "normal",
+          "type": 0,
+          "desc": "물결 앞에서 결정키로 던진다. 미끼가 있어야 한다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4852,
+          "name": "강철 낚싯대",
+          "grade": "normal",
+          "type": 0,
+          "desc": "초록 칸이 넓고 두 번까지 놓쳐도 줄이 버틴다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 6000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4853,
+          "name": "명인의 낚싯대",
+          "grade": "normal",
+          "type": 0,
+          "desc": "수정어 비늘을 감은 낚싯대. 칸이 더 넓고 귀한 고기가 잘 문다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4854,
+          "name": "지렁이",
+          "grade": "normal",
+          "type": 0,
+          "desc": "낚시 미끼. 입질이 오면 하나 쓴다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 30,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4855,
+          "name": "반짝이 미끼",
+          "grade": "normal",
+          "type": 0,
+          "desc": "귀한 고기가 잘 무는 미끼. 금빛 물결에서 먼저 쓴다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 200,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4856,
+          "name": "무지개 볼락",
+          "grade": "normal",
+          "type": 0,
+          "desc": "비늘이 무지갯빛으로 빛나는 볼락. 이두용이 탐낸다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4857,
+          "name": "청새치",
+          "grade": "normal",
+          "type": 0,
+          "desc": "창처럼 뾰족한 주둥이를 가진 큰 물고기",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4858,
+          "name": "서리 송어",
+          "grade": "normal",
+          "type": 0,
+          "desc": "지느러미에 서리가 맺힌 송어",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4859,
+          "name": "달빛 잉어",
+          "grade": "normal",
+          "type": 0,
+          "desc": "밤에만 떠오른다는 하얀 잉어",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4860,
+          "name": "수정어",
+          "grade": "normal",
+          "type": 0,
+          "desc": "속이 비치는 몸에 수정 같은 지느러미",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4861,
+          "name": "모래 메기",
+          "grade": "normal",
+          "type": 0,
+          "desc": "모래빛 수염이 긴 메기",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 5051,
+          "name": "축제 증표",
+          "grade": "normal",
+          "type": 0,
+          "desc": "로저스 광장 축제의 놀이 증표. 증표 교환소에서 쓴다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 5055,
+          "name": "축제 깃발",
+          "grade": "normal",
+          "type": 0,
+          "desc": "로저스 축제 깃발. 아지트 왼쪽 벽에 건다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 5152,
+          "name": "연구원의 노트",
+          "grade": "normal",
+          "type": 0,
+          "desc": "비밀연구소에서 쫓겨난 연구원이 두고 간 노트. 같은 꿈 이야기가 적혀 있다",
           "stats": {
             "atk": 0,
             "def": 0,
