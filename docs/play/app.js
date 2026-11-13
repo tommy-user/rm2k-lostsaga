@@ -618,7 +618,7 @@ const RANKS = {
   adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 플레이 시간이 짧은 순입니다.",
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
   kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
-  madness: "꿈의 심연을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다.",
+  madness: "꿈의 심연을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다. 칭호: 꿈에서 깬 자(첫 처치) · 꿈으로 돌아가는 자(10번) · 각인을 새긴 자(각인 16개) · 심연에 잠긴 자(모두 3단계) · 맨정신으로 깬 자(유혹 없이 처치)",
 };
 let rankRaid = "madness";
 const RANK_LIMIT = 100;
@@ -642,6 +642,7 @@ $("#rank-jobs").replaceChildren(...[[null, "전체"], ...Object.entries(JOBS)].m
 function rankValue(r, l) {
   if (rankKind === "growth") return growthText(l);
   if (rankKind === "adventure") return STAGE_NAMES[r.value] ?? `단계 ${r.value}`;
+  if (rankKind === "madness" && l.honor) return l.honor;   // 꿈의 심연 칭호 (서버 madness_honor)
   if (RAIDS.includes(rankKind)) return `처치 ${r.value}번`;
   return `웨이브 ${r.value}`;
 }
@@ -670,6 +671,12 @@ function rankRow(tpl, r, l) {
   nickLine(li.querySelector(".nick-line"), r);
   li.querySelector(".who-line").textContent = lookLine(l);
   li.querySelector(".val").textContent = rankValue(r, l);
+  if (rankKind === "madness" && l.honor_pure) {
+    const pure = document.createElement("small");
+    pure.className = "honor-pure";
+    pure.textContent = "맨정신으로 깬 자";
+    li.querySelector(".val").append(pure);
+  }
   li.querySelector(".time").textContent = rankTime(r);
   const face = li.querySelector(".face");
   if (face) drawFace(face, l);
