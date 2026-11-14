@@ -7832,53 +7832,6 @@
             "mage"
           ],
           "secret": false
-        },
-        {
-          "enemyId": 831,
-          "name": "고르곤",
-          "img": "Monster/E2메두사.png",
-          "hp": 4000,
-          "atk": 380,
-          "def": 200,
-          "spi": 420,
-          "agi": 400,
-          "boss": false,
-          "drops": [
-            {
-              "id": 1941,
-              "name": "고르곤의 비늘",
-              "prob": 30,
-              "god": false
-            }
-          ],
-          "places": [
-            "mage"
-          ],
-          "secret": false
-        },
-        {
-          "enemyId": 832,
-          "name": "고르곤 리더",
-          "img": "Monster/E2메두사.png",
-          "hp": 6000,
-          "atk": 436,
-          "def": 229,
-          "spi": 420,
-          "agi": 400,
-          "boss": false,
-          "leader": true,
-          "drops": [
-            {
-              "id": 1944,
-              "name": "대현자의 잉크",
-              "prob": 10,
-              "god": false
-            }
-          ],
-          "places": [
-            "mage"
-          ],
-          "secret": false
         }
       ]
     },
