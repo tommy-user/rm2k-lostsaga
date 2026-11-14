@@ -844,7 +844,7 @@ canvas.addEventListener("click", () => canvas.focus());
 // F12(타이틀로)는 확인창을 띄운다. 확인창·버튼 배치 편집 중에는 키 입력이 게임으로 가지 않는다.
 // 런처가 보내는 키(화면 버튼, 2배속)는 isTrusted 가 false 라 막지 않는다.
 const BLOCKED = new Set(["KeyF", "KeyG", "F1", "F12"]);
-const modal = () => titleDlg.open || pad.editing || sound.isOpen();
+const modal = () => titleDlg.open || crashDlg.open || pad.editing || sound.isOpen();
 for (const type of ["keydown", "keyup"]) {
   window.addEventListener(type, (e) => {
     if (!e.isTrusted) return;
@@ -884,6 +884,65 @@ for (const b of document.querySelectorAll('[data-act="speed"]')) {
 // 창을 떠났다 오면 엔진이 눌린 키를 놓아 버리므로 다시 누른다.
 addEventListener("focus", holdFast);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) holdFast(); });
+
+// ---- 엔진이 멈췄을 때 ----
+// 엔진이 프레임 도중 오류를 던지면 메인 루프가 그 자리에서 멈춘다. 플레이어 index.js 는 페이지의 아무 오류에나
+// 영어 문구 "Exception thrown, see JavaScript console…" 만 띄워서, 플레이어는 멈춘 화면만 보게 된다.
+// 엔진은 프레임마다 requestAnimationFrame 을 부르므로, 오류 뒤에 그 호출이 끊겼으면 멈춘 것으로 보고 안내창을 띄운다.
+// 오류 문장은 창 아래에 작게 적어 둔다 (제보 캡처로 원인을 보려고). 이 기기에도 최근 5건을 남긴다.
+const CRASH_LOG = "lostsaga-crash";
+const crashDlg = $("#crash-dlg");
+let lastFrame = 0, crashInfo = null, crashTimer = 0;
+const raf = window.requestAnimationFrame.bind(window);
+window.requestAnimationFrame = (cb) => { lastFrame = performance.now(); return raf(cb); };
+
+function errorText(e) {
+  const err = e.error ?? e.reason;
+  const msg = String(err?.message ?? err ?? e.message ?? "알 수 없는 오류");
+  // 첫 호출 위치 한 줄. 주소는 파일 이름만 남긴다 (index.wasm:0x1234 처럼)
+  const at = (String(err?.stack ?? "").split("\n").find((l) => /\bat\b/.test(l))?.trim() ?? "").replace(/[^\s(]*\/([^/\s)]+)/g, "$1");
+  return { msg: msg.slice(0, 200), at: at.slice(0, 100) };
+}
+
+function logCrash(info) {
+  try {
+    const log = JSON.parse(localStorage.getItem(CRASH_LOG) ?? "[]");
+    log.push({ ...info, time: new Date().toISOString(), title: $("#play-title").textContent, version: $("#version")?.textContent ?? "" });
+    localStorage.setItem(CRASH_LOG, JSON.stringify(log.slice(-5)));
+  } catch {}
+}
+
+function checkCrash() {
+  if (!started || crashDlg.open || !crashInfo) return;
+  if (document.hidden) return;  // 숨은 탭은 원래 프레임을 멈춘다. 돌아오면 visibilitychange 에서 다시 본다
+  if (performance.now() - lastFrame < 1500) {  // 아직 돈다 = 엔진과 상관없는 오류. 플레이어가 띄운 영어 문구만 지운다
+    console.warn("[launcher] 엔진 밖 오류", crashInfo);
+    $("#status").textContent = "";
+    crashInfo = null;
+    return;
+  }
+  logCrash(crashInfo);
+  if (titleDlg.open) titleDlg.close();
+  releasePad();
+  $("#status").hidden = true;
+  const last = $("#crash-last");
+  last.hidden = !lastSave;
+  if (lastSave) last.lastElementChild.textContent = `마지막 저장 · 슬롯 ${lastSave.slot} · ${ago(lastSave.time)}`;
+  $("#crash-code").textContent = [crashInfo.msg, crashInfo.at].filter(Boolean).join(" · ");
+  crashDlg.showModal();
+  $("#crash-ok").focus();
+}
+
+// 플레이어의 오류 처리보다 먼저 받도록 capture 로 건다.
+window.addEventListener("error", (e) => {
+  if (!started || !(e.error ?? e.message)) return;
+  crashInfo ??= errorText(e);
+  clearTimeout(crashTimer);
+  crashTimer = setTimeout(checkCrash, 2000);
+}, true);
+document.addEventListener("visibilitychange", () => { if (!document.hidden && crashInfo) setTimeout(checkCrash, 2000); });
+crashDlg.addEventListener("cancel", (e) => e.preventDefault());  // 멈춘 게임으로 돌아갈 수 없으니 닫지 않는다
+$("#crash-ok").onclick = () => location.assign(location.pathname + search);
 
 // ---- 타이틀로 (F12) ----
 
