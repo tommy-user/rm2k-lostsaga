@@ -140,10 +140,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0186_약초조합술.yaml",
+  "src": "db/commonevents/2048_약초조합술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 186
+  "common_event_id": 2048
  },
  "792": {
   "name": "만병통치약",
@@ -182,10 +182,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0186_약초조합술.yaml",
+  "src": "db/commonevents/2048_약초조합술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 186
+  "common_event_id": 2048
  },
  "793": {
   "name": "인삼엑기스",
@@ -209,10 +209,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0186_약초조합술.yaml",
+  "src": "db/commonevents/2048_약초조합술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 186
+  "common_event_id": 2048
  },
  "819": {
   "name": "광어초밥",
@@ -236,10 +236,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "820": {
   "name": "도미초밥",
@@ -263,10 +263,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "821": {
   "name": "오징어초밥",
@@ -290,10 +290,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "822": {
   "name": "새우초밥",
@@ -317,10 +317,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "823": {
   "name": "참치초밥",
@@ -344,10 +344,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "824": {
   "name": "장어초밥",
@@ -371,10 +371,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "825": {
   "name": "연어알초밥",
@@ -398,10 +398,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "826": {
   "name": "성게알초밥",
@@ -425,10 +425,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "827": {
   "name": "은어초밥",
@@ -452,10 +452,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1905": {
   "name": "몬스터고기볶음",
@@ -479,10 +479,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1906": {
   "name": "제육볶음",
@@ -506,10 +506,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1907": {
   "name": "오리주물럭",
@@ -533,10 +533,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1908": {
   "name": "불고기",
@@ -560,10 +560,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1909": {
   "name": "말고기육회",
@@ -587,10 +587,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1911": {
   "name": "나물무침",
@@ -614,10 +614,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1912": {
   "name": "채소샐러드",
@@ -641,10 +641,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1913": {
   "name": "버섯전골",
@@ -668,10 +668,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "1914": {
   "name": "인삼버섯탕",
@@ -695,10 +695,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0187_요리술.yaml",
+  "src": "db/commonevents/1985_요리술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 187
+  "common_event_id": 1985
  },
  "658": {
   "name": "강철판금",
@@ -712,10 +712,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0188_제련술.yaml",
+  "src": "db/commonevents/2049_제련술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 188
+  "common_event_id": 2049
  },
  "166": {
   "name": "오리하르콘",
@@ -729,10 +729,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0188_제련술.yaml",
+  "src": "db/commonevents/2049_제련술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 188
+  "common_event_id": 2049
  },
  "177": {
   "name": "장검신",
@@ -746,10 +746,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0188_제련술.yaml",
+  "src": "db/commonevents/2049_제련술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 188
+  "common_event_id": 2049
  },
  "176": {
   "name": "단검신",
@@ -763,10 +763,10 @@
    }
   ],
   "gold": 0,
-  "src": "db/commonevents/0188_제련술.yaml",
+  "src": "db/commonevents/2049_제련술.yaml",
   "map_id": null,
   "event_id": null,
-  "common_event_id": 188
+  "common_event_id": 2049
  },
  "4251": {
   "name": "은십자 검",
