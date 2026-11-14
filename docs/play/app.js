@@ -383,6 +383,9 @@ async function loadRep() {
   }
 }
 
+// 그 플레이의 업적 수 (게임 나의 정보 「업적」 탭과 같은 수, 서버가 세이브에서 센다). 업적이 생기기 전 세이브면 없음
+const achievementText = (look) => (look && look.achievements != null && look.achievements_total ? `업적 ${look.achievements}/${look.achievements_total}` : "");
+
 // 내 프로필: 닉네임 #고유아이디, 대표 캐릭터, 세 랭킹의 내 순위.
 async function renderProfile() {
   const box = $("#profile");
@@ -417,7 +420,7 @@ async function renderProfile() {
   $("#pf-rep").replaceChildren(...reps.map((r, i) => {
     const line = document.createElement("div");
     const l = looks[i];
-    line.textContent = `${reps.length > 1 ? `대표 ${r.rep_slot}` : "대표 캐릭터"} · ${[l.name, l.title, growthText(l)].filter(Boolean).join(" · ")}`;
+    line.textContent = `${reps.length > 1 ? `대표 ${r.rep_slot}` : "대표 캐릭터"} · ${[l.name, l.title, growthText(l), achievementText(r.look)].filter(Boolean).join(" · ")}`;
     return line;
   }));
   const slots = repSlots();
