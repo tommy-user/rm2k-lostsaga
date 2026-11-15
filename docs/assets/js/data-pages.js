@@ -242,6 +242,9 @@
         if (r.gold) mats.push(r.gold.toLocaleString() + "이드");
         return '<p class="recipe"><span class="pixel">만드는 법</span> ' + mats.join(", ") + (r.by ? ' <span class="dim">· ' + esc(r.by) + "</span>" : "") + "</p>";
       }
+      function maxLine(it) {
+        return it.maxDesc ? '<p style="font-size:.85rem"><span class="pixel" style="font-size:.74rem;color:var(--gold)">+' + it.maxPlus + " 강화</span> " + esc(it.maxDesc) + "</p>" : "";
+      }
       function card(it) {
         if (it.grade === "god") {
           return '<article class="item item--secret win win--plain"><h3>??? ' + badge("god") + "</h3><p>엔딩 뒤에야 모습을 드러내는 장비.</p></article>";
@@ -249,7 +252,7 @@
         return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) + " " + handChip(it) +
           (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h3>" +
           (it.job ? '<p class="pixel" style="font-size:.74rem;color:var(--gold)">' + esc(it.job) + " 마스터</p>" : "") +
-          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + jobLine(it) + recipe(recipes[it.id]) + dropFrom(it) +
+          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + maxLine(it) + jobLine(it) + recipe(recipes[it.id]) + dropFrom(it) +
           (it.note ? '<p class="dim">' + esc(it.note) + "</p>" : "") + "</article>";
       }
       document.getElementById("grades").innerHTML = d.grades.map(function (g) {
@@ -307,7 +310,7 @@
         { key: "desc", label: "설명", sort: false, wide: true,
           html: function (r) {
             if (secret(r)) return "엔딩 뒤에야 모습을 드러내는 장비.";
-            return esc(r.it.desc) + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]) + dropFrom(r.it);
+            return esc(r.it.desc) + (r.it.maxDesc ? '<br><span class="pixel small gold">+' + r.it.maxPlus + " 강화</span> " + esc(r.it.maxDesc) : "") + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]) + dropFrom(r.it);
           } }
       ];
       bindSort(iEl, cols, sort, render);
