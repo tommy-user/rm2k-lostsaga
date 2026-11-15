@@ -646,17 +646,24 @@ $("#rank-jobs").replaceChildren(...[[null, "전체"], ...Object.entries(JOBS)].m
 function rankValue(r, l) {
   if (rankKind === "growth") return growthText(l);
   if (rankKind === "adventure") return STAGE_NAMES[r.value] ?? `단계 ${r.value}`;
-  if (rankKind === "madness" && l.honor) return l.honor;   // 꿈의 심연 칭호 (서버 madness_honor)
-  if (RAIDS.includes(rankKind)) return `처치 ${r.value}번`;
+  if (RAIDS.includes(rankKind)) return r.frames == null ? "—" : raidTime(r.frames);   // 레이드는 빠른 순이라 기록 시간이 큰 값
   return `웨이브 ${r.value}`;
 }
 
-// 성장·모험은 그 기록에 닿았을 때의 플레이 시간(시:분), 무한대전·크라켄은 그 기록에 걸린 시간(분:초)
+// 레이드 기록 시간 "4분 07초" (frames = 초 × 60)
+function raidTime(frames) {
+  const s = Math.round(frames / 60);
+  return `${Math.floor(s / 60)}분 ${String(s % 60).padStart(2, "0")}초`;
+}
+
+// 성장·모험은 그 기록에 닿았을 때의 플레이 시간(시:분), 무한대전은 그 기록에 걸린 시간(분:초). 레이드는 시간이 큰 값이고 이 자리는 처치 수·칭호
 function minSec(frames) {
   const s = Math.round(frames / 60);
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
-function rankTime(r) {
+function rankTime(r, l) {
+  if (rankKind === "madness") return l.honor ?? `처치 ${r.value}번`;   // 꿈의 심연 칭호 (서버 madness_honor)
+  if (RAIDS.includes(rankKind)) return `처치 ${r.value}번`;
   if (r.frames == null) return "";
   if (rankKind !== "wave" && !RAIDS.includes(rankKind)) return `플레이 ${playTime(r.frames)}`;
   return minSec(r.frames);
@@ -675,13 +682,13 @@ function rankRow(tpl, r, l) {
   nickLine(li.querySelector(".nick-line"), r);
   li.querySelector(".who-line").textContent = lookLine(l);
   li.querySelector(".val").textContent = rankValue(r, l);
+  li.querySelector(".time").textContent = rankTime(r, l);
   if (rankKind === "madness" && l.honor_pure) {
     const pure = document.createElement("small");
     pure.className = "honor-pure";
     pure.textContent = "맨정신으로 깬 자";
-    li.querySelector(".val").append(pure);
+    li.querySelector(".time").append(pure);
   }
-  li.querySelector(".time").textContent = rankTime(r);
   const face = li.querySelector(".face");
   if (face) drawFace(face, l);
   drawSprite(li.querySelector(".sprite"), l);
@@ -693,6 +700,7 @@ async function showRanking() {
   const tab = RAIDS.includes(rankKind) ? "raid" : rankKind;
   for (const b of document.querySelectorAll("#ranking [data-kind]")) b.setAttribute("aria-selected", String(b.dataset.kind === tab));
   $("#rank-raids").hidden = tab !== "raid";
+  $("#ranking").classList.toggle("raid", tab === "raid");
   for (const b of $("#rank-raids").children) b.setAttribute("aria-pressed", String(b.dataset.raid === rankKind));
   for (const b of $("#rank-jobs").children) b.setAttribute("aria-pressed", String(b.dataset.job === (rankJob ?? "")));
   $("#rank-note").textContent = RANKS[rankKind];
