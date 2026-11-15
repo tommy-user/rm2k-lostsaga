@@ -269,7 +269,9 @@ dialog.sheet::backdrop { background: rgba(5, 6, 9, 0.72); }
 .chips button { flex: none; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--soft); font-size: 13px; }
 .chips button[aria-pressed="true"] { border-color: var(--gold); background: rgba(217, 168, 78, 0.18); color: var(--gold-hi); }
 #rank-raids { margin-bottom: 8px; }
-.val .honor-pure { display: block; font-size: 11px; font-weight: 400; color: var(--soft); }
+.time .honor-pure { display: block; font-size: 11px; font-weight: 400; color: var(--faint); }
+/* 레이드는 빠른 순이라 기록 시간이 큰 값, 처치 수·칭호가 작은 줄. 휴대폰 시상대에서도 둘째 줄을 보인다 */
+#ranking.raid .time { color: var(--soft); }
 .rank-note { margin: 0; font-size: 13px; color: var(--faint); }
 .podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: end; margin: 0; padding: 0; list-style: none; }
 .podium li { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 16px 12px; border-radius: 18px; background: var(--panel);
@@ -335,6 +337,7 @@ li .info { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; 
   .podium .nick-line { font-size: 13px; }
   .podium .nick-line small { display: none; }
   .podium .val { font-size: 13px; }
+  #ranking.raid .podium .time { display: block; font-size: 11px; line-height: 1.3; }
   .rank-list li, #rank-me li { gap: 10px; padding: 2px 10px; }
   #rank-me { bottom: 0; width: 100vw; border-radius: 0; border-width: 1px 0 0; padding-bottom: env(safe-area-inset-bottom); }
 }
