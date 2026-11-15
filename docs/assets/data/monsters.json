@@ -755,7 +755,7 @@
               "god": false
             },
             {
-              "id": 30,
+              "id": 27,
               "name": "변종의 열매",
               "prob": 25,
               "god": false
@@ -1561,19 +1561,13 @@
               "god": false
             },
             {
-              "id": 37,
+              "id": 33,
               "name": "변종의 열매",
               "prob": 30,
               "god": false
             },
             {
-              "id": 28,
-              "name": "변종의 열매",
-              "prob": 30,
-              "god": false
-            },
-            {
-              "id": 30,
+              "id": 27,
               "name": "변종의 열매",
               "prob": 30,
               "god": false
@@ -2844,7 +2838,7 @@
           "secret": false,
           "drops": [
             {
-              "id": 30,
+              "id": 27,
               "name": "변종의 열매",
               "prob": 50,
               "god": false
@@ -2880,7 +2874,7 @@
           "hue": 30,
           "drops": [
             {
-              "id": 31,
+              "id": 27,
               "name": "변종의 열매",
               "prob": 66,
               "god": false
