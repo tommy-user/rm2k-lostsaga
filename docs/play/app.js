@@ -841,6 +841,7 @@ const canvas = $("#canvas");
 canvas.addEventListener("click", () => canvas.focus());
 
 // 키보드에서 엔진으로 가지 않게 막는 키: 빨리 감기(F·G)는 2배속 버튼으로만, 엔진 설정 메뉴(F1)는 쓰지 않는다.
+// F 는 2배속 버튼과 같다 (누를 때마다 켜고 끈다, 운영 지시 #100). 엔진에는 런처가 2배속으로 정한 대로만 간다.
 // F12(타이틀로)는 확인창을 띄운다. 확인창·버튼 배치 편집 중에는 키 입력이 게임으로 가지 않는다.
 // 런처가 보내는 키(화면 버튼, 2배속)는 isTrusted 가 false 라 막지 않는다.
 const BLOCKED = new Set(["KeyF", "KeyG", "F1", "F12"]);
@@ -852,6 +853,7 @@ for (const type of ["keydown", "keyup"]) {
       e.stopImmediatePropagation();
       if (!modal()) e.preventDefault();
       if (type === "keydown" && e.code === "F12" && !e.repeat && started && !modal()) openTitle();
+      if (type === "keydown" && e.code === "KeyF" && !e.repeat && started && !modal()) setFast(!fast);
     } else if (type === "keydown" && modal()) {
       e.stopImmediatePropagation();  // 확인창 버튼(Enter·Esc·Tab)은 기본 동작으로 그대로 움직인다
     }
