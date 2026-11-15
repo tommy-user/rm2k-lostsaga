@@ -543,6 +543,15 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
 .vol span { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); }
 .confirm p.vol-help { font-size: 12px; line-height: 1.5; color: var(--muted); }
 #sound-dlg .row { grid-template-columns: minmax(0, 1fr); }
+#keys-dlg { width: min(380px, calc(100vw - 40px)); }
+.key-list { display: grid; grid-template-columns: auto minmax(0, 1fr) 96px; align-items: center; gap: 6px 10px; font-size: 14px; }
+.key-label { color: var(--soft); }
+.key-base { color: var(--faint); font-size: 12px; text-align: right; }
+.key-set { min-height: 36px; padding: 0 8px; border-radius: 9px; border: 1px solid rgba(239, 230, 210, 0.25); background: var(--chip);
+  color: var(--text); font: inherit; font-weight: 700; cursor: pointer; }
+.key-set.none { color: var(--faint); font-weight: 400; }
+.key-set.wait { border-color: var(--gold); color: var(--gold-hi); }
+.keys .keys-open { min-height: 36px; font-size: 14px; }
 #crash-dlg .row { grid-template-columns: minmax(0, 1fr); }
 .confirm p.crash-code { font-size: 11px; line-height: 1.4; color: var(--faint); word-break: break-all; }
 .confirm .row .btn-warn { border: 0; background: var(--warn); color: var(--on-gold); font-weight: 700; }
@@ -801,6 +810,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
       <button type="button" class="qbtn" data-act="spawns" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>몬스터 찾기</button>
       <button type="button" class="qbtn" data-act="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
       <button type="button" class="icon-btn" data-act="sound" aria-label="소리 크기"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M16.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 6a8.5 8.5 0 0 1 0 12"></path></svg></button>
+      <button type="button" class="icon-btn" data-act="keys" aria-label="키 설정"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"></path></svg></button>
     </div>
     <button type="button" class="icon-btn" id="btn-full" aria-label="전체 화면">
       <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5"></path><path d="M20 9V4h-5"></path><path d="M4 15v5h5"></path><path d="M20 15v5h-5"></path></svg>
@@ -861,11 +871,13 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
       <section>
         <h2>조작</h2>
         <dl>
-          <dt>이동</dt><dd>방향키</dd>
-          <dt>결정</dt><dd>Z · Enter · Space</dd>
-          <dt>취소 · 메뉴</dt><dd>X · Esc</dd>
-          <dt>능력치 분배</dt><dd>Shift</dd>
+          <dt>이동</dt><dd id="ctl-move">방향키</dd>
+          <dt>결정</dt><dd id="ctl-ok">Z · Enter · Space</dd>
+          <dt>취소 · 메뉴</dt><dd id="ctl-cancel">X · Esc</dd>
+          <dt>능력치 분배</dt><dd id="ctl-shift">Shift</dd>
+          <dt>2배속</dt><dd id="ctl-speed">F</dd>
         </dl>
+        <button type="button" class="btn keys-open" data-act="keys">키 바꾸기</button>
       </section>
       <section>
         <h2>저장</h2>
@@ -933,6 +945,18 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
     <p class="crash-code" id="crash-code"></p>
     <div class="row">
       <button type="button" class="btn btn-warn" id="crash-ok">홈으로</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="confirm" id="keys-dlg" aria-labelledby="keys-dlg-h">
+  <div class="confirm-in">
+    <h2 id="keys-dlg-h">키 설정</h2>
+    <div class="key-list"></div>
+    <p class="vol-help key-help"></p>
+    <div class="row">
+      <button type="button" class="btn" id="keys-reset">기본값</button>
+      <button type="button" class="btn btn-primary" id="keys-close">닫기</button>
     </div>
   </div>
 </dialog>
