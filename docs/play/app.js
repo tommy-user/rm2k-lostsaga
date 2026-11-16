@@ -618,8 +618,8 @@ const STAGE_NAMES = [
   "에피소드3 대천사 처치", "에피소드3 문지기 처치", "에피소드3 카오스 처치", "에피소드3 엔딩",
 ];
 const RANKS = {
-  growth: "대표 캐릭터(최대 3명, 한 칸마다 한 줄)의 승급, 돌파, 레벨이 높은 순입니다. 같으면 더 짧은 플레이 시간에 달성한 순입니다.",
-  adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 플레이 시간이 짧은 순입니다.",
+  growth: "대표 캐릭터(최대 3명, 한 칸마다 한 줄)의 승급, 돌파, 레벨이 높은 순입니다. 같으면 더 짧은 플레이 시간에 달성한 순입니다. 달성 시간은 달성한 뒤 처음 저장한 세이브의 플레이 시간입니다.",
+  adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 그 단계를 더 짧은 플레이 시간에 달성한 순입니다. 달성 시간은 달성한 뒤 처음 저장한 세이브의 플레이 시간입니다.",
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
   kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
   madness: "꿈의 심연을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다. 칭호: 꿈에서 깬 자(첫 처치) · 꿈으로 돌아가는 자(10번) · 각인을 새긴 자(각인 16개) · 심연에 잠긴 자(모두 3단계) · 맨정신으로 깬 자(유혹 없이 처치)",
@@ -665,7 +665,7 @@ function rankTime(r, l) {
   if (rankKind === "madness") return l.honor ?? `처치 ${r.value}번`;   // 꿈의 심연 칭호 (서버 madness_honor)
   if (RAIDS.includes(rankKind)) return `처치 ${r.value}번`;
   if (r.frames == null) return "";
-  if (rankKind !== "wave" && !RAIDS.includes(rankKind)) return `플레이 ${playTime(r.frames)}`;
+  if (rankKind !== "wave" && !RAIDS.includes(rankKind)) return `달성 ${playTime(r.frames)}`;   // 전체 플레이 시간이 아니라 그 기록에 닿았을 때의 시간
   return minSec(r.frames);
 }
 
