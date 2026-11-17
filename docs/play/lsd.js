@@ -327,3 +327,49 @@ export function clearParallelCE(b) {
   if (!changed) return b;
   return concat([b.subarray(0, ber(b, 0)[1] + n), ...top.flatMap(([id, data]) => [berBytes(id), berBytes(data.length), data])]);
 }
+
+// ---- 변수 쓰기 (런처 전용) ----
+// 시스템(0x65)의 변수 개수(0x21)·변수 배열(0x22, int32 LE)에서 n 번 변수를 value 로 바꾼다. 배열이 짧으면 0 으로 늘린다.
+// 다른 청크는 바이트 그대로 둔다. 바뀔 것이 없으면 같은 배열을 돌려준다.
+export const VAR_TODAY = 2668;  // 오늘 날짜 (한국 시간 YYYYMMDD, 0 = 모름)
+
+export function setVariable(b, n, value) {
+  let [len, i] = ber(b, 0);
+  const head = b.subarray(0, i + len);
+  i += len;
+  const top = [];
+  while (i < b.length) {
+    let id, sz;
+    [id, i] = ber(b, i);
+    [sz, i] = ber(b, i);
+    top.push([id, b.subarray(i, i + sz)]);
+    i += sz;
+  }
+  const sys = top.find(([id]) => id === 0x65);
+  if (!sys) throw new Error("no system");
+  const st = readStruct(sys[1]);
+  const vars = st.list.find(([id]) => id === 0x22)?.[1] ?? new Uint8Array();
+  const count = Math.floor(vars.length / 4);
+  if (n < 1) throw new Error(`variable ${n}`);
+  if (n > count && value === 0) return b;
+  if (n <= count && new DataView(vars.buffer, vars.byteOffset + (n - 1) * 4, 4).getInt32(0, true) === value) return b;
+  const out = new Uint8Array(Math.max(count, n) * 4);
+  out.set(vars.subarray(0, count * 4));
+  new DataView(out.buffer).setInt32((n - 1) * 4, value, true);
+  // 필드 순서는 그대로 두고, 없던 필드만 번호 순 자리에 넣는다.
+  for (const [id, data] of [[0x21, new Uint8Array(berBytes(out.length / 4))], [0x22, out]]) {
+    const f = st.list.find(([k]) => k === id);
+    if (f) f[1] = data;
+    else {
+      const at = st.list.findIndex(([k]) => k > id);
+      st.list.splice(at < 0 ? st.list.length : at, 0, [id, data]);
+    }
+  }
+  const parts = st.list.flatMap(([id, data]) => [berBytes(id), berBytes(data.length), data]);
+  if (st.end) parts.push([0]);
+  sys[1] = concat(parts);
+  return concat([head, ...top.flatMap(([id, data]) => [berBytes(id), berBytes(data.length), data])]);
+}
+
+// PC판용으로 내보낼 세이브: 오늘 날짜 변수를 0 으로 둔다.
+export const forPc = (b) => setVariable(b, VAR_TODAY, 0);
