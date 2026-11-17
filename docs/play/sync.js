@@ -141,11 +141,11 @@ export class SaveSync {
     await Promise.race([req, new Promise((r) => setTimeout(r, 3000))]);
   }
 
-  // 오늘 날짜 (한국 시간 YYYYMMDD). 서버 시계를 맞췄으면 그것, 아니면 기기 시계.
+  // 오늘 날짜 (한국 시간 YYMMDD, 게임 변수는 7자리까지). 서버 시계를 맞췄으면 그것, 아니면 기기 시계.
   today() {
     const ms = this.clock ? this.clock.ms + (performance.now() - this.clock.at) : Date.now();
     const d = new Date(ms + 9 * 3600 * 1000);
-    return d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
+    return (d.getUTCFullYear() % 100) * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
   }
 
   status(state, text) {

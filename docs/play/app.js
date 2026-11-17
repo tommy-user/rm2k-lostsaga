@@ -807,7 +807,7 @@ function cleanParallelOnLoad(FS) {
         } catch (e) {
           console.warn("[save] 병렬 이벤트 비우기 실패", e);
         }
-        // 오늘 날짜 (한국 시간 YYYYMMDD)
+        // 오늘 날짜 (한국 시간 YYMMDD)
         try {
           out = setVariable(out, VAR_TODAY, sync.today());
         } catch (e) {

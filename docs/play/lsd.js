@@ -331,7 +331,7 @@ export function clearParallelCE(b) {
 // ---- 변수 쓰기 (런처 전용) ----
 // 시스템(0x65)의 변수 개수(0x21)·변수 배열(0x22, int32 LE)에서 n 번 변수를 value 로 바꾼다. 배열이 짧으면 0 으로 늘린다.
 // 다른 청크는 바이트 그대로 둔다. 바뀔 것이 없으면 같은 배열을 돌려준다.
-export const VAR_TODAY = 2668;  // 오늘 날짜 (한국 시간 YYYYMMDD, 0 = 모름)
+export const VAR_TODAY = 2668;  // 오늘 날짜 (한국 시간 YYMMDD, 0 = 모름)
 
 export function setVariable(b, n, value) {
   let [len, i] = ber(b, 0);
