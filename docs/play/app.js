@@ -1,6 +1,6 @@
 // 런처 화면: 홈(세이브 고르기) → 플레이(플레이어 + 화면 버튼).
 import { SaveSync, readLocalSaves } from "./sync.js";
-import { parseLsd, renameLeader, clearParallelCE, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
+import { parseLsd, renameLeader, clearParallelCE, setVariable, forPc, VAR_TODAY, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
 import { JOBS, resolveLook, drawSprite, drawFace, clearArt, lookLine, growthText, playTime } from "./look.js";
 import { createPad } from "./pad.js";
@@ -93,10 +93,16 @@ function fillSum(el, save, names, label) {
   el.querySelector(".where").textContent = names[save.sum.map_id] ?? `맵 ${save.sum.map_id}`;
 }
 
-function download(slot, bytes) {
+// PC판용 세이브 받기. 오늘 날짜 변수는 0 으로 바꿔 내보낸다.
+function download(slot, bytes, name = `Save${String(slot).padStart(2, "0")}.lsd`) {
+  try {
+    bytes = forPc(bytes);
+  } catch (e) {
+    console.warn("[save] 날짜 지우기 실패", e);
+  }
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([bytes], { type: "application/octet-stream" }));
-  a.download = `Save${String(slot).padStart(2, "0")}.lsd`;
+  a.download = name;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
@@ -795,17 +801,44 @@ function cleanParallelOnLoad(FS) {
     try {
       if (typeof path === "string" && typeof flags === "number" && !(flags & 3) && (flags & O_LARGEFILE) && /(^|\/)Save\d+\.lsd$/i.test(path)) {
         const node = stream.node, cur = node.contents.subarray(0, node.usedBytes);
-        const out = clearParallelCE(cur);
-        // 비운 결과가 이상하면(읽히지 않거나 요약이 달라지면) 원본 그대로 쓴다.
+        let out = cur;
+        try {
+          out = clearParallelCE(out);
+        } catch (e) {
+          console.warn("[save] 병렬 이벤트 비우기 실패", e);
+        }
+        // 오늘 날짜 (한국 시간 YYMMDD)
+        try {
+          out = setVariable(out, VAR_TODAY, sync.today());
+        } catch (e) {
+          console.warn("[save] 날짜 넣기 실패", e);
+        }
+        // 바꾼 결과가 이상하면(읽히지 않거나 요약이 달라지면) 원본 그대로 쓴다.
         if (out !== cur && JSON.stringify(parseLsd(out)) === JSON.stringify(parseLsd(cur))) {
           node.contents = out;
           node.usedBytes = out.length;
         }
       }
     } catch (e) {
-      console.warn("[save] 병렬 이벤트 비우기 실패", e);
+      console.warn("[save] 불러오기 사본 고치기 실패", e);
     }
     return stream;
+  };
+}
+
+// 엔진의 세이브 받기도 PC판용과 같게 내보낸다.
+function pcDownloadFromEngine(player) {
+  const api = player.api_private, orig = api?.download_js;
+  if (!orig) return;
+  api.download_js = function (buffer, size, filename) {
+    try {
+      const heap = player.HEAPU8;
+      const name = new TextDecoder().decode(heap.subarray(filename, heap.indexOf(0, filename)));
+      if (/^Save\d+\.lsd$/i.test(name)) return download(0, heap.slice(buffer, buffer + size), name);
+    } catch (e) {
+      console.warn("[save] 받기", e);
+    }
+    return orig.call(this, buffer, size, filename);
   };
 }
 
@@ -820,6 +853,7 @@ async function launch(args, title, save = null) {
   pad.apply();
   // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다. 엔진은 exe 크기로 판별하지 못해 직접 정한다.
   installPreload(await graphics);
+  if (!offline) await sync.syncClock();
   history.replaceState(null, "", `?game=lostsaga&engine=rpg2kv150&config-path=${CONFIG_DIR}${args}${dev}`);
   const player = await createEasyRpgPlayer({
     game: "lostsaga",
@@ -832,6 +866,7 @@ async function launch(args, title, save = null) {
   });
   history.replaceState(null, "", location.pathname + search);
   player.initApi();
+  pcDownloadFromEngine(player);
   window.easyrpgPlayer = player;
   if (!offline) sync.watch(player.FS);
   holdFast();

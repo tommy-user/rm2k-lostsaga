@@ -117,12 +117,35 @@ export class SaveSync {
   constructor(onStatus, onSave) {
     this.onStatus = onStatus;
     this.onSave = onSave;    // 게임 안에서 새로 저장했을 때 (슬롯, 바이트)
-    this.sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    this.sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { global: { fetch: (...a) => this.timedFetch(...a) } });
+    this.clock = null;       // 서버 응답의 Date {ms, at: performance.now()}
     this.known = new Map();  // 해시 → {run, parent, save_count, frame_count}
     this.synced = {};        // 슬롯 → 마지막으로 클라우드와 맞춘 해시
     this.slotRuns = new Map();  // 슬롯 → 클라우드의 지금 세이브가 속한 플레이(run)
     this.busy = Promise.resolve();
     this.online = false;
+  }
+
+  // 서버 응답의 Date 헤더로 시계를 맞춘다 (읽을 수 있는 응답만).
+  async timedFetch(...a) {
+    const res = await fetch(...a);
+    const ms = Date.parse(res.headers.get("date") ?? "");
+    if (ms) this.clock = { ms, at: performance.now() };
+    return res;
+  }
+
+  // 플레이어를 켜기 직전에 서버 시계를 다시 맞춘다. 늦으면 기다리지 않는다.
+  async syncClock() {
+    if (!this.online) return;
+    const req = this.sb.from("save_slots").select("slot", { head: true }).then(() => {}, () => {});
+    await Promise.race([req, new Promise((r) => setTimeout(r, 3000))]);
+  }
+
+  // 오늘 날짜 (한국 시간 YYMMDD, 게임 변수는 7자리까지). 서버 시계를 맞췄으면 그것, 아니면 기기 시계.
+  today() {
+    const ms = this.clock ? this.clock.ms + (performance.now() - this.clock.at) : Date.now();
+    const d = new Date(ms + 9 * 3600 * 1000);
+    return (d.getUTCFullYear() % 100) * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
   }
 
   status(state, text) {
