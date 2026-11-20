@@ -2594,12 +2594,6 @@
           "secret": false,
           "drops": [
             {
-              "id": 360,
-              "name": "오크족 갑옷",
-              "prob": 100,
-              "god": false
-            },
-            {
               "id": 20,
               "name": "해독초",
               "prob": 30,
@@ -2614,7 +2608,6 @@
           ],
           "places": [
             "west-field",
-            "chili",
             "grand"
           ]
         },
@@ -3324,60 +3317,13 @@
             {
               "id": 2151,
               "name": "발록의 뿔",
-              "prob": 15,
+              "prob": 100,
               "god": false
             }
           ],
           "places": [
             "west-field",
             "grand"
-          ],
-          "secret": false
-        },
-        {
-          "enemyId": 218,
-          "name": "오크 근위병",
-          "img": "Monster/오크.png",
-          "hp": 500,
-          "atk": 80,
-          "def": 20,
-          "spi": 40,
-          "agi": 40,
-          "boss": false,
-          "hue": 310,
-          "drops": [
-            {
-              "id": 358,
-              "name": "오크족 투구",
-              "prob": 100,
-              "god": false
-            }
-          ],
-          "places": [
-            "chili"
-          ],
-          "secret": false
-        },
-        {
-          "enemyId": 219,
-          "name": "오크",
-          "img": "Monster/오크.png",
-          "hp": 120,
-          "atk": 35,
-          "def": 20,
-          "spi": 20,
-          "agi": 20,
-          "boss": false,
-          "drops": [
-            {
-              "id": 359,
-              "name": "오크족 도끼",
-              "prob": 100,
-              "god": false
-            }
-          ],
-          "places": [
-            "chili"
           ],
           "secret": false
         },
@@ -3401,7 +3347,7 @@
             }
           ],
           "places": [
-            "west-field"
+            "grana"
           ],
           "secret": false
         },
@@ -8037,6 +7983,30 @@
           "secret": false
         },
         {
+          "enemyId": 1892,
+          "name": "항아리 소라게 리더",
+          "img": "Monster/AH1_jar_crab.png",
+          "hp": 437,
+          "atk": 121,
+          "def": 170,
+          "spi": 60,
+          "agi": 60,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
           "enemyId": 1893,
           "name": "보물 앵무새",
           "img": "Monster/AH1_parrot.png",
@@ -8051,6 +8021,30 @@
               "id": 3764,
               "name": "앵무새 깃털",
               "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1894,
+          "name": "보물 앵무새 리더",
+          "img": "Monster/AH1_parrot.png",
+          "hp": 312,
+          "atk": 110,
+          "def": 60,
+          "spi": 80,
+          "agi": 160,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
               "god": false
             }
           ],
@@ -8177,6 +8171,30 @@
           "secret": false
         },
         {
+          "enemyId": 1901,
+          "name": "가시 복어 리더",
+          "img": "Monster/AH1_puffer.png",
+          "hp": 687,
+          "atk": 165,
+          "def": 120,
+          "spi": 140,
+          "agi": 120,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
           "enemyId": 1902,
           "name": "구멍 곰치",
           "img": "Monster/AH1_moray.png",
@@ -8191,6 +8209,30 @@
               "id": 3768,
               "name": "곰치 이빨",
               "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1903,
+          "name": "구멍 곰치 리더",
+          "img": "Monster/AH1_moray.png",
+          "hp": 812,
+          "atk": 187,
+          "def": 110,
+          "spi": 70,
+          "agi": 170,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
               "god": false
             }
           ],
@@ -8270,6 +8312,30 @@
           "secret": false
         },
         {
+          "enemyId": 1908,
+          "name": "꺼진 등불 리더",
+          "img": "Monster/AH1_lantern.png",
+          "hp": 1125,
+          "atk": 176,
+          "def": 100,
+          "spi": 200,
+          "agi": 150,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
           "enemyId": 1909,
           "name": "절벽 바다뱀",
           "img": "Monster/AH1_serpent.png",
@@ -8284,6 +8350,30 @@
               "id": 3771,
               "name": "바다뱀 비늘",
               "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1910,
+          "name": "절벽 바다뱀 리더",
+          "img": "Monster/AH1_serpent.png",
+          "hp": 1375,
+          "atk": 242,
+          "def": 150,
+          "spi": 110,
+          "agi": 160,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
               "god": false
             }
           ],
@@ -8363,6 +8453,30 @@
           "secret": false
         },
         {
+          "enemyId": 1915,
+          "name": "별조각 정령 리더",
+          "img": "Monster/AH1_star_sprite.png",
+          "hp": 1500,
+          "atk": 220,
+          "def": 110,
+          "spi": 260,
+          "agi": 200,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
           "enemyId": 1916,
           "name": "고장 난 하늘 경비기",
           "img": "Monster/E2고대경비기.png",
@@ -8377,6 +8491,30 @@
               "id": 3774,
               "name": "고대 톱니",
               "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1917,
+          "name": "고장 난 하늘 경비기 리더",
+          "img": "Monster/E2고대경비기.png",
+          "hp": 2000,
+          "atk": 286,
+          "def": 200,
+          "spi": 140,
+          "agi": 140,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
               "god": false
             }
           ],
@@ -8551,6 +8689,31 @@
           "secret": false
         },
         {
+          "enemyId": 1952,
+          "name": "해초 머맨 리더",
+          "img": "Monster/Merman.png",
+          "hp": 3125,
+          "atk": 396,
+          "def": 200,
+          "spi": 160,
+          "agi": 300,
+          "boss": false,
+          "leader": true,
+          "hue": 100,
+          "drops": [
+            {
+              "id": 3854,
+              "name": "해초 비늘",
+              "prob": 50,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
           "enemyId": 1953,
           "name": "물밑 촉수",
           "img": "Monster/크라켄2.png",
@@ -8566,6 +8729,31 @@
               "id": 3855,
               "name": "촉수 빨판",
               "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 1954,
+          "name": "물밑 촉수 리더",
+          "img": "Monster/크라켄2.png",
+          "hp": 3500,
+          "atk": 374,
+          "def": 220,
+          "spi": 340,
+          "agi": 220,
+          "boss": false,
+          "leader": true,
+          "hue": 200,
+          "drops": [
+            {
+              "id": 3855,
+              "name": "촉수 빨판",
+              "prob": 50,
               "god": false
             }
           ],
@@ -8645,6 +8833,30 @@
           "secret": false
         },
         {
+          "enemyId": 2042,
+          "name": "해적 포수 리더",
+          "img": "Monster/AH1_gunner.png",
+          "hp": 2250,
+          "atk": 308,
+          "def": 120,
+          "spi": 160,
+          "agi": 160,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
           "enemyId": 2043,
           "name": "해적 점술사",
           "img": "Monster/AH1_seer.png",
@@ -8659,6 +8871,30 @@
               "id": 3777,
               "name": "저주 카드",
               "prob": 35,
+              "god": false
+            }
+          ],
+          "places": [
+            "sea"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 2044,
+          "name": "해적 점술사 리더",
+          "img": "Monster/AH1_seer.png",
+          "hp": 2125,
+          "atk": 220,
+          "def": 120,
+          "spi": 300,
+          "agi": 170,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 3757,
+              "name": "낡은 보물지도",
+              "prob": 10,
               "god": false
             }
           ],
