@@ -57,12 +57,12 @@
         </div>
         <div class="win dl__main">
           <div>
-            <h2 class="win__title">로스트사가 v3.9 완결판</h2>
-            <p>rm2k-lostsaga.zip · 약 62MB</p>
+            <h2 class="win__title">로스트사가 v3.10 완결판</h2>
+            <p>rm2k-lostsaga.zip · 약 63MB</p>
           </div>
-          <a class="btn btn--gold" href="https://github.com/tommy-user/rm2k-lostsaga/releases/download/v3.9.10/rm2k-lostsaga.zip" data-dl="v3.9.10" download>게임 받기</a>
+          <a class="btn btn--gold" href="https://github.com/tommy-user/rm2k-lostsaga/releases/download/v3.10/rm2k-lostsaga.zip" data-dl="v3.10" download>게임 받기</a>
         </div>
-        <p class="dim" style="margin:0;font-size:var(--step--1)">바뀐 내용은 아래 <a href="#notes">릴리즈 노트</a>나 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases/tag/v3.9.10" rel="noopener">릴리즈 페이지</a>에서 볼 수 있습니다. 새 버전 소식은 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases.atom" rel="noopener">릴리즈 피드</a>로 받을 수 있습니다.</p>
+        <p class="dim" style="margin:0;font-size:var(--step--1)">바뀐 내용은 아래 <a href="#notes">릴리즈 노트</a>나 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases/tag/v3.10" rel="noopener">릴리즈 페이지</a>에서 볼 수 있습니다. 새 버전 소식은 <a href="https://github.com/tommy-user/rm2k-lostsaga/releases.atom" rel="noopener">릴리즈 피드</a>로 받을 수 있습니다.</p>
       </div>
 
       <div class="guide">
@@ -133,6 +133,35 @@
         </div>
 
         <div id="panel-notes" role="tabpanel" aria-labelledby="tab-notes" class="guide__panel">
+        <div class="win notes">
+          <h3>v3.10 <span class="dim">2026-11-21</span></h3>
+          <h4>새 콘텐츠</h4>
+          <ul>
+            <li>장비 특수 효과: 매직·레어 장비에 특수 효과, 유니크 장비에 이름 있는 전용 효과(일부는 전용 기술)가 붙었습니다. 효과는 장비 설명 끝 ◆ 에 나오고, 유니크 효과가 터지면 전투 화면에 이름이 뜹니다. 가디언에게도 적용됩니다</li>
+            <li>새 장비 30종: 비어 있던 도끼·폴암·둔기·로브 등의 매직·레어 장비와 창 유니크 궁니르가 사냥터에서 나옵니다</li>
+            <li>황야·지하호수·사막신전·고대의 하늘·마법사의 대륙 전투에서도 매직·레어 장비를 줍습니다. 순례자 조합표에 순례자의 화살이 더해졌습니다</li>
+            <li>요정족숲: 숲 한가운데 세계수, 렌디의 요정풍 조합표, 세계수 세트 7종(3벌·5벌 세트 효과), 요정족 잎관·미스릴 잎관·피느 귀걸이·피느 가시화살</li>
+            <li>피느 채집: 5초 안에 다음 꽃을 캐면 연속 채집이 이어져 더 많이 나옵니다. 숲에 들어올 때마다 반짝이는 피느 세 곳이 생기고, 캐면 세 배와 세계수의 이슬이 나옵니다</li>
+            <li>세계수의 이슬: 수호나무에서 하루 한 번, 피느 채집에서도 드물게 나옵니다. 피느 재료는 렌디에게서 [모두 만들기]로 한 번에 바꿉니다</li>
+            <li>웹판 12월 칠리마을 크리스마스: 산타와 썰매, 선물 달력, 크리스마스 미로, 루돌프 송어와 스튜, 아지트 크리스마스 트리, 업적 셋</li>
+          </ul>
+          <h4>바뀐 것</h4>
+          <ul>
+            <li>Shift 능력치 판: 여섯 능력치를 판 한 장에서 ←→ 로 나눠 보고, 확인하면 반영됩니다</li>
+            <li>마법할머니 순간이동: 세계지도에서 갈 곳을 고릅니다 (가격·소지금이 함께 보입니다)</li>
+            <li>승급관리인: 지금 직업과 승급 직업의 조건·능력치·기술·레벨 변화를 한 판에서 봅니다</li>
+            <li>아르바이트 게시판: 오늘의 쪽지가 그림으로 나오고, 왼쪽·오른쪽 게시판에 서로 다른 일이 붙습니다 (하루 한 장은 그대로)</li>
+            <li>가디언에게 말을 걸면 바로 서있기·사라지기·해산을 고릅니다</li>
+            <li>끝에 취소·아니오가 있는 선택지는 취소 키로도 그 칸을 고릅니다</li>
+            <li>초보 일기에 「상태이상」 장이 더해졌습니다</li>
+          </ul>
+          <h4>고친 것</h4>
+          <ul>
+            <li>아르바이트를 시작하면 소환수·정령·닌자 분신이 사라지던 문제 (돌아오면 남은 시간 그대로 함께합니다)</li>
+            <li>위축 상태 이름이 전투 화면에 "c위축" 으로 보이던 문제</li>
+          </ul>
+        </div>
+
         <div class="win notes">
           <h3>v3.9.10 <span class="dim">2026-11-19</span></h3>
           <h4>고친 것</h4>
