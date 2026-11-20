@@ -182,6 +182,286 @@
           "note": null
         },
         {
+          "id": 575,
+          "name": "요정족 장검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "가벼운 요정족 장검. 공24/방5/민10/치명15/필중",
+          "stats": {
+            "atk": 24,
+            "def": 5,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 576,
+          "name": "요정족 대궁",
+          "grade": "craft",
+          "type": 1,
+          "desc": "바람을 타는 대궁. 공12/정5/민3/필중/바람",
+          "stats": {
+            "atk": 12,
+            "def": 0,
+            "spi": 5,
+            "agi": 3
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 577,
+          "name": "요정족 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "가볍고 튼튼한 요정족 방패. 방18/수면방지",
+          "stats": {
+            "atk": 0,
+            "def": 18,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 578,
+          "name": "요정족 피느화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "피느 화살. 공10/정5/민3/치명10/필중/수면10%",
+          "stats": {
+            "atk": 10,
+            "def": 0,
+            "spi": 5,
+            "agi": 3
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 580,
+          "name": "요정족 레이피어",
+          "grade": "craft",
+          "type": 1,
+          "desc": "요정의 세검. 공70/정10/민20/치명20/양손/신성",
+          "stats": {
+            "atk": 70,
+            "def": 0,
+            "spi": 10,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf",
+            "monster"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 581,
+          "name": "요정족 크로스보우",
+          "grade": "craft",
+          "type": 1,
+          "desc": "요정 순찰자의 석궁. 공62/정10/민20/필중/선제",
+          "stats": {
+            "atk": 62,
+            "def": 0,
+            "spi": 10,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 582,
+          "name": "요정족 대검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "큰 대검. 공85/방20/정15/치명20/양손/출혈15%",
+          "stats": {
+            "atk": 85,
+            "def": 20,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 583,
+          "name": "레지스트 실드",
+          "grade": "craft",
+          "type": 2,
+          "desc": "모든 상태이상을 막는 방패. 방45/상태방지20",
+          "stats": {
+            "atk": 0,
+            "def": 45,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 585,
+          "name": "보우건",
+          "grade": "craft",
+          "type": 1,
+          "desc": "화살 두 개를 쏘는 석궁. 공50/정10/필중/2회공격",
+          "stats": {
+            "atk": 50,
+            "def": 0,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 587,
+          "name": "요정족 가죽갑옷",
+          "grade": "craft",
+          "type": 3,
+          "desc": "피느 천으로 만든 가죽갑옷. 방16/정5",
+          "stats": {
+            "atk": 0,
+            "def": 16,
+            "spi": 5,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 588,
+          "name": "요정족 갑옷",
+          "grade": "craft",
+          "type": 3,
+          "desc": "가죽갑옷을 보강한 갑옷. 방32/민5/중독방지",
+          "stats": {
+            "atk": 0,
+            "def": 32,
+            "spi": 0,
+            "agi": 5
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 589,
+          "name": "요정족 미스릴아머",
+          "grade": "craft",
+          "type": 3,
+          "desc": "미스릴로 보강한 갑옷. 방60/민10/침묵방지",
+          "stats": {
+            "atk": 0,
+            "def": 60,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 590,
+          "name": "오리하루콘 아머",
+          "grade": "craft",
+          "type": 3,
+          "desc": "축복받은 갑옷. 공30/방70/정30/민30/상태방지10",
+          "stats": {
+            "atk": 30,
+            "def": 70,
+            "spi": 30,
+            "agi": 30
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 2007,
           "name": "서리늑대가죽 모자",
           "grade": "craft",
@@ -847,6 +1127,27 @@
           "maxPlus": null,
           "jobs": [
             "cleric"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 2101,
+          "name": "요정족 레지스트 아머",
+          "grade": "craft",
+          "type": 3,
+          "desc": "상태이상을 막는 갑옷. 방70/민10/상태방지20",
+          "stats": {
+            "atk": 0,
+            "def": 70,
+            "spi": 0,
+            "agi": 10
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
           ],
           "twoHanded": null,
           "job": null,
@@ -2864,6 +3165,237 @@
           "note": "대족장 세트. 장인 나노무토·마나무토가 그랜드마운틴 던전 재료로 만든다. 두 벌 공격+15, 세 벌 공격+15·HP+200"
         },
         {
+          "id": 4601,
+          "name": "피느 가시화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "가시덩굴 화살. 공40/민8/치명10/필중/출혈10%",
+          "stats": {
+            "atk": 40,
+            "def": 0,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4602,
+          "name": "요정족 잎관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "피느 잎을 엮은 관. 방8/정4",
+          "stats": {
+            "atk": 0,
+            "def": 8,
+            "spi": 4,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4603,
+          "name": "요정족 미스릴 잎관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "미스릴 실로 엮은 잎관. 방24/정10/수면방지",
+          "stats": {
+            "atk": 0,
+            "def": 24,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4604,
+          "name": "피느 귀걸이",
+          "grade": "craft",
+          "type": 5,
+          "desc": "피느 꿀을 굳힌 귀걸이. 정8/민8/중독방지",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 8,
+            "agi": 8
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4605,
+          "name": "세계수 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "세계수 가지 활. 공90/민20/치명15/필중/바람",
+          "stats": {
+            "atk": 90,
+            "def": 0,
+            "spi": 0,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4606,
+          "name": "세계수 화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "세계수 가지 화살. 공55/정10/필중/신성",
+          "stats": {
+            "atk": 55,
+            "def": 0,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4607,
+          "name": "세계수 검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "세계수 검. 공80/방15/민20/치명15/필중/신성",
+          "stats": {
+            "atk": 80,
+            "def": 15,
+            "spi": 0,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4608,
+          "name": "세계수 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "세계수 껍질 방패. 방60/정15/수면방지",
+          "stats": {
+            "atk": 0,
+            "def": 60,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4609,
+          "name": "세계수 잎관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "세계수 잎으로 엮은 관. 방38/정20/민15",
+          "stats": {
+            "atk": 0,
+            "def": 38,
+            "spi": 20,
+            "agi": 15
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4610,
+          "name": "세계수 갑옷",
+          "grade": "craft",
+          "type": 3,
+          "desc": "껍질 갑옷. 공30/방80/정30/민30/상태방지10",
+          "stats": {
+            "atk": 30,
+            "def": 80,
+            "spi": 30,
+            "agi": 30
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4611,
+          "name": "세계수 귀걸이",
+          "grade": "craft",
+          "type": 5,
+          "desc": "이슬을 담은 귀걸이. 정20/민20/상태방지10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 4862,
           "name": "볼락구이",
           "grade": "craft",
@@ -3087,6 +3619,65 @@
           "price": 0,
           "maxPlus": null,
           "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6052,
+          "name": "루돌프 송어 스튜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 모든 능력치 +1",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6053,
+          "name": "특제 루돌프 송어 스튜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 모든 능력치 +3",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6215,
+          "name": "순례자의 화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "축복받은 화살. 공32/민7/치명15/신성",
+          "stats": {
+            "atk": 32,
+            "def": 0,
+            "spi": 0,
+            "agi": 7
+          },
+          "price": 4000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
           "twoHanded": null,
           "job": null,
           "note": null
@@ -4992,7 +5583,7 @@
           "name": "포챠드",
           "grade": "normal",
           "type": 1,
-          "desc": "가장 기본적인 폴암. 공20/타스탯-5/치명5",
+          "desc": "가장 기본적인 폴암. 공20/타스탯-5/치명10",
           "stats": {
             "atk": 20,
             "def": -5,
@@ -5018,7 +5609,7 @@
           "name": "바르쉐",
           "grade": "normal",
           "type": 1,
-          "desc": "불타는듯한 날을 가진 무기. 공40/타스탯-10/치명10",
+          "desc": "불타는듯한 날을 가진 무기. 공40/타스탯-10/치명15",
           "stats": {
             "atk": 40,
             "def": -10,
@@ -6316,11 +6907,11 @@
         {
           "id": 575,
           "name": "요정족 장검",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "놀랍도록 가벼운 요정족 장검. 공20/방5/민10/치명15",
+          "desc": "가벼운 요정족 장검. 공24/방5/민10/치명15/필중",
           "stats": {
-            "atk": 20,
+            "atk": 24,
             "def": 5,
             "spi": 0,
             "agi": 10
@@ -6338,11 +6929,11 @@
         {
           "id": 576,
           "name": "요정족 대궁",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "보기보다 쓰기 편한 요정족 대궁. 공10/정5/민3",
+          "desc": "바람을 타는 대궁. 공12/정5/민3/필중/바람",
           "stats": {
-            "atk": 10,
+            "atk": 12,
             "def": 0,
             "spi": 5,
             "agi": 3
@@ -6360,9 +6951,9 @@
         {
           "id": 578,
           "name": "요정족 피느화살",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "피느로 만든 요정족 화살. 공10/정5/민3/치명10",
+          "desc": "피느 화살. 공10/정5/민3/치명10/필중/수면10%",
           "stats": {
             "atk": 10,
             "def": 0,
@@ -6381,9 +6972,9 @@
         {
           "id": 580,
           "name": "요정족 레이피어",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "요정들이 즐겨쓰는 세검. 공70/정10/민20/치명20/신성",
+          "desc": "요정의 세검. 공70/정10/민20/치명20/양손/신성",
           "stats": {
             "atk": 70,
             "def": 0,
@@ -6403,11 +6994,11 @@
         {
           "id": 581,
           "name": "요정족 크로스보우",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "요정 순찰자들이 사용하는 석궁. 공35/정10/민20",
+          "desc": "요정 순찰자의 석궁. 공62/정10/민20/필중/선제",
           "stats": {
-            "atk": 35,
+            "atk": 62,
             "def": 0,
             "spi": 10,
             "agi": 20
@@ -6425,9 +7016,9 @@
         {
           "id": 582,
           "name": "요정족 대검",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "요정이 쓰기는 꽤 큰 대검. 공85/방20/정15/치명20",
+          "desc": "큰 대검. 공85/방20/정15/치명20/양손/출혈15%",
           "stats": {
             "atk": 85,
             "def": 20,
@@ -6446,14 +7037,14 @@
         {
           "id": 585,
           "name": "보우건",
-          "grade": "normal",
+          "grade": "craft",
           "type": 1,
-          "desc": "두개의 화살을 발사하는 석궁. 공50/정10/민-5",
+          "desc": "화살 두 개를 쏘는 석궁. 공50/정10/필중/2회공격",
           "stats": {
             "atk": 50,
             "def": 0,
             "spi": 10,
-            "agi": -5
+            "agi": 0
           },
           "price": 2,
           "maxPlus": null,
@@ -6816,7 +7407,7 @@
           "name": "수련검",
           "grade": "normal",
           "type": 1,
-          "desc": "검술 수련생들을 위한 검. 명중85/필살15/절단",
+          "desc": "검술 수련생들을 위한 검. 명중90/필살15/절단",
           "stats": {
             "atk": 3,
             "def": 0,
@@ -6835,7 +7426,7 @@
           "name": "액스",
           "grade": "normal",
           "type": 1,
-          "desc": "가장 기본적인 형태의 한손도끼. 명중85/필살15/절단",
+          "desc": "가장 기본적인 형태의 한손도끼. 명중80/필살15/절단",
           "stats": {
             "atk": 20,
             "def": 0,
@@ -6861,7 +7452,7 @@
           "name": "라지 액스",
           "grade": "normal",
           "type": 1,
-          "desc": "무겁고 양날을 가진 한손도끼. 명중85/필살15/절단",
+          "desc": "무겁고 양날을 가진 한손도끼. 명중80/필살15/절단",
           "stats": {
             "atk": 30,
             "def": 0,
@@ -7297,7 +7888,7 @@
           "name": "오우거더블시미터",
           "grade": "unique",
           "type": 1,
-          "desc": "오우거 마스터의 무기. 공100/치명20/2회공격",
+          "desc": "공100/치명20/2회공격 ◆광폭·위압",
           "stats": {
             "atk": 100,
             "def": 0,
@@ -7315,14 +7906,14 @@
           "twoHanded": true,
           "job": null,
           "note": "고대던전의 오우거 워리어 리더 드롭 (33%)",
-          "maxDesc": "공150/치명20/2회공격"
+          "maxDesc": "공150/치명20/2회공격 ◆광폭·위압"
         },
         {
           "id": 1382,
           "name": "룬해머",
           "grade": "unique",
           "type": 1,
-          "desc": "룬이 새겨진 망치. 공100/민-40/치명15/광역/무",
+          "desc": "공100/민-40/치명20/광역/무 ◆룬 각인·위압",
           "stats": {
             "atk": 100,
             "def": 0,
@@ -7337,14 +7928,14 @@
           "twoHanded": null,
           "job": null,
           "note": "천상계의 이블미노타사우르스 드롭 (33%)",
-          "maxDesc": "공120/민-30/치명15/광역/무"
+          "maxDesc": "공120/민-30/치명15/광역/무 ◆룬 각인·위압"
         },
         {
           "id": 1394,
           "name": "정화의 화염",
           "grade": "unique",
           "type": 1,
-          "desc": "신성한 불길. 공40/정60/치명10/광역/불,신성",
+          "desc": "◆정화의 불길·마나샘 공40/정60/치명10/광역/불,신성",
           "stats": {
             "atk": 40,
             "def": 0,
@@ -7359,14 +7950,14 @@
           "twoHanded": true,
           "job": null,
           "note": "본토던전의 다크 이플립트 리더 드롭 (33%)",
-          "maxDesc": "공60/정90/치명10/광역/불,신성"
+          "maxDesc": "◆정화의 불길·마나샘 공60/정90/치명10/광역/불,신성"
         },
         {
           "id": 1406,
           "name": "다크네스 마서",
           "grade": "unique",
           "type": 1,
-          "desc": "마신의 서. 공40/정75/치명10/광역/어둠",
+          "desc": "공40/정75/치명10/광역/어둠 ◆마신의 계약·흡혈",
           "stats": {
             "atk": 40,
             "def": 0,
@@ -7381,14 +7972,14 @@
           "twoHanded": true,
           "job": null,
           "note": "천상계의 쉐도우베얼 드롭 (33%)",
-          "maxDesc": "공45/정90/치명10/광역/어둠"
+          "maxDesc": "공45/정90/치명10/광역/어둠 ◆마신의 계약·흡혈"
         },
         {
           "id": 1418,
           "name": "타락한 얼음",
           "grade": "unique",
           "type": 1,
-          "desc": "안티테제. 공60/정40/치명10/광역/얼음,어둠",
+          "desc": "◆기술 안티테제·마력 집중 공60/정40/치명10/광역/얼음,어둠",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7403,14 +7994,14 @@
           "twoHanded": true,
           "job": null,
           "note": null,
-          "maxDesc": "공90/정60/치명10/광역/얼음,어둠"
+          "maxDesc": "◆기술 안티테제+·마력 집중 공90/정60/치명10/광역/얼음,어둠"
         },
         {
           "id": 1430,
           "name": "활빈검",
           "grade": "unique",
           "type": 1,
-          "desc": "홍길동이 사용했다는 검. 공60/정10/민30/치명20",
+          "desc": "공60/정10/민30/치명20 ◆기술 의적의 한 수·선봉",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7425,14 +8016,36 @@
           "twoHanded": null,
           "job": null,
           "note": "지하던전의 머미리더 드롭 (33%)",
-          "maxDesc": "공80/정20/민40/치명25"
+          "maxDesc": "공80/정20/민40/치명25 ◆기술 의적의 한 수+·선봉"
+        },
+        {
+          "id": 1442,
+          "name": "발리스틱피스트",
+          "grade": "unique",
+          "type": 1,
+          "desc": "공70/방-20/민35/치명20 ◆격발·분노",
+          "stats": {
+            "atk": 70,
+            "def": -20,
+            "spi": 0,
+            "agi": 35
+          },
+          "price": 20000,
+          "maxPlus": 4,
+          "jobs": [
+            "fighter"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null,
+          "maxDesc": "공90/방-10/민45/치명25 ◆격발·분노"
         },
         {
           "id": 1447,
           "name": "라이트닝피스트",
           "grade": "unique",
           "type": 1,
-          "desc": "전기충격을 주는 장갑. 공60/민30/치명20/전기",
+          "desc": "공60/민30/치명20/전기 ◆방전·선봉",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7447,14 +8060,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공70/민35/치명40/전기"
+          "maxDesc": "공70/민35/치명40/전기 ◆방전·선봉"
         },
         {
           "id": 1459,
           "name": "오컴의 면도날",
           "grade": "unique",
           "type": 1,
-          "desc": "치명적인 날을 가진 대거. 공50/민30/치명20",
+          "desc": "공50/민30/치명20 ◆면도날·선봉",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7469,14 +8082,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공70/민40/치명40"
+          "maxDesc": "공70/민40/치명40 ◆면도날·선봉"
         },
         {
           "id": 1464,
           "name": "퓨전엘리멘탈대거",
           "grade": "unique",
           "type": 1,
-          "desc": "불이 담긴 단검. 공60/정25/치명15",
+          "desc": "불이 담긴 단검. 공60/정25/치명15 ◆불씨·선봉",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7491,14 +8104,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공70/정50/치명15"
+          "maxDesc": "공70/정50/치명15 ◆불씨·선봉"
         },
         {
           "id": 1476,
           "name": "게헨나",
           "grade": "unique",
           "type": 1,
-          "desc": "불꽃검. 공45/방15/민30/치명20/불/화상15%",
+          "desc": "공45/방15/민30/치명20/불/화상15% ◆지옥불·분노",
           "stats": {
             "atk": 45,
             "def": 15,
@@ -7513,14 +8126,14 @@
           "twoHanded": null,
           "job": null,
           "note": "광기의 던전의 광기의 전사 리더 드롭 (33%)",
-          "maxDesc": "공60/방20/민30/치명40/불/화상15%"
+          "maxDesc": "공60/방20/민30/치명40/불/화상15% ◆지옥불·분노"
         },
         {
           "id": 1481,
           "name": "해방자",
           "grade": "unique",
           "type": 1,
-          "desc": "적을 죽음으로 모는 검. 공50/민25/치명15/즉사5",
+          "desc": "공50/민25/치명15/즉사5 ◆해방·흡혈",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7535,14 +8148,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공75/민25/치명15/즉사10"
+          "maxDesc": "공75/민25/치명15/즉사10 ◆해방·흡혈"
         },
         {
           "id": 1493,
           "name": "현자의 오브",
           "grade": "unique",
           "type": 1,
-          "desc": "무명의 현자가 남긴 유산. 공50/정50/치명10/무",
+          "desc": "공50/정50/치명10/무 ◆현자의 지혜·수련(사냥터)",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7557,14 +8170,14 @@
           "twoHanded": true,
           "job": null,
           "note": null,
-          "maxDesc": "공75/정75/치명10/무"
+          "maxDesc": "공75/정75/치명10/무 ◆현자의 지혜·수련(사냥터)"
         },
         {
           "id": 1505,
           "name": "윈드 포스",
           "grade": "unique",
           "type": 1,
-          "desc": "바람의 힘이 깃든 활. 공70/민35/치명20/바람",
+          "desc": "공70/민35/치명20/바람 ◆순풍·추격",
           "stats": {
             "atk": 70,
             "def": 0,
@@ -7579,14 +8192,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공90/민45/치명20/바람"
+          "maxDesc": "공90/민45/치명20/바람 ◆순풍·추격"
         },
         {
           "id": 1510,
           "name": "샤릉가",
           "grade": "unique",
           "type": 1,
-          "desc": "빛을 쏘는 활. 공60/정30/민20/치명20/신성",
+          "desc": "◆기술 샤릉가의 섬광·정화 공60/정30/민20/치명20/신성",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7601,14 +8214,14 @@
           "twoHanded": null,
           "job": null,
           "note": "본토던전의 나이트메어리더 드롭 (33%)",
-          "maxDesc": "공75/정50/민25/치명20/신성"
+          "maxDesc": "◆기술 샤릉가의 섬광+·정화 공75/정50/민25/치명20/신성"
         },
         {
           "id": 1515,
           "name": "천운시",
           "grade": "unique",
           "type": 1,
-          "desc": "정신을 공격하는 화살. 공50/정25/치명20/혼란20",
+          "desc": "공50/정25/치명20/혼란20 ◆천운·위압",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7623,14 +8236,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공60/정50/치명20/혼란40"
+          "maxDesc": "공60/정50/치명20/혼란40 ◆천운·위압"
         },
         {
           "id": 1520,
           "name": "애기살",
           "grade": "unique",
           "type": 1,
-          "desc": "작고 빠른, 강력한 화살. 공60/민30/치명20",
+          "desc": "공60/민30/치명20 ◆기술 연사·각성",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7645,14 +8258,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공70/민35/치명40"
+          "maxDesc": "공70/민35/치명40 ◆기술 연사+·각성"
         },
         {
           "id": 1527,
           "name": "데이스타",
           "grade": "unique",
           "type": 1,
-          "desc": "새벽의 별처럼 빛나는 검. 공75/방25/민25/치명20",
+          "desc": "공75/방25/민25/치명20 ◆새벽별·각성",
           "stats": {
             "atk": 75,
             "def": 25,
@@ -7667,14 +8280,14 @@
           "twoHanded": null,
           "job": null,
           "note": "천상계의 데빌오크 드롭 (33%)",
-          "maxDesc": "공90/방30/민30/치명25"
+          "maxDesc": "공90/방30/민30/치명25 ◆새벽별·각성"
         },
         {
           "id": 1541,
           "name": "트리플테이크",
           "grade": "unique",
           "type": 1,
-          "desc": "세 개의 날을 가진 마법 검. 공60/치명20/선제",
+          "desc": "공60/치명20/선제 ◆세 갈래 날·선봉",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7689,14 +8302,14 @@
           "twoHanded": true,
           "job": null,
           "note": null,
-          "maxDesc": "공120/치명40/선제"
+          "maxDesc": "공120/치명40/선제 ◆세 갈래 날·선봉"
         },
         {
           "id": 1558,
           "name": "주와이외즈",
           "grade": "unique",
           "type": 1,
-          "desc": "서른 번씩 색을 바꾸는 검. 공50/정50/치명20/무",
+          "desc": "공50/정50/치명20/무 ◆서른 빛깔·마력 집중",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7717,14 +8330,14 @@
           "twoHanded": null,
           "job": null,
           "note": "고대던전 하늘층의 강철 스켈레톤 리더 드롭 (33%)",
-          "maxDesc": "공75/정75/치명20/무"
+          "maxDesc": "공75/정75/치명20/무 ◆서른 빛깔·마력 집중"
         },
         {
           "id": 1563,
           "name": "제노블레이드",
           "grade": "unique",
           "type": 1,
-          "desc": "상태이상을 유발하는 검. 공60/치명15/상태이상5",
+          "desc": "공60/치명15/상태이상5 ◆기술 변이·위압",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -7745,14 +8358,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "공75/치명15/상태이상10"
+          "maxDesc": "공75/치명15/상태이상10 ◆기술 변이+·위압"
         },
         {
           "id": 1568,
           "name": "블레이드커터",
           "grade": "unique",
           "type": 1,
-          "desc": "치명적인 날을 가진 검 공70/치명20/선제공격",
+          "desc": "공70/치명20/선제공격 ◆일격·분노",
           "stats": {
             "atk": 70,
             "def": 0,
@@ -7773,14 +8386,14 @@
           "twoHanded": null,
           "job": null,
           "note": "지하던전의 스켈레톤버서커리더 드롭 (33%)",
-          "maxDesc": "치명적인 날을 가진 검 공90/치명40/선제공격"
+          "maxDesc": "공90/치명40/선제공격 ◆일격·분노"
         },
         {
           "id": 1590,
           "name": "눈꽃송이 지팡이",
           "grade": "unique",
           "type": 1,
-          "desc": "로랜드섬 마법사의 유품. 공25/정75/치명20/얼음",
+          "desc": "공25/정75/치명20/얼음 ◆기술 서리꽃·마력 집중",
           "stats": {
             "atk": 25,
             "def": 0,
@@ -7800,14 +8413,14 @@
           "twoHanded": true,
           "job": null,
           "note": "얼음성의 아이스 리자드맨리더 드롭 (33%)",
-          "maxDesc": "공45/정90/치명20/얼음"
+          "maxDesc": "공45/정90/치명20/얼음 ◆기술 서리꽃+·마력 집중"
         },
         {
           "id": 1595,
           "name": "자연의 지팡이",
           "grade": "unique",
           "type": 1,
-          "desc": "고목에서 나온 지팡이. 공50/정50/치명20/무",
+          "desc": "공50/정50/치명20/무 ◆고목의 숨·마나샘",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7827,14 +8440,14 @@
           "twoHanded": true,
           "job": null,
           "note": "성지던전의 섀도 엘프 리더 드롭 (33%)",
-          "maxDesc": "공75/정75/치명20/무"
+          "maxDesc": "공75/정75/치명20/무 ◆고목의 숨·마나샘"
         },
         {
           "id": 1614,
           "name": "매직웨폰",
           "grade": "unique",
           "type": 1,
-          "desc": "사용자에 따라 형태가 바뀌는 무기. 공50/정50",
+          "desc": "공50/정50 ◆형태 변환·각성",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -7847,7 +8460,7 @@
           "twoHanded": null,
           "job": null,
           "note": "반란군기지의 가짜 반란군지도자 드롭 (20%)",
-          "maxDesc": "공75/정75"
+          "maxDesc": "공75/정75 ◆형태 변환·각성"
         },
         {
           "id": 1632,
@@ -8529,7 +9142,7 @@
           "name": "집행자의 대검",
           "grade": "unique",
           "type": 1,
-          "desc": "카오스교 집행자의 대검. 공147/치명30/필중/어둠",
+          "desc": "공147/치명30/필중/어둠 ◆단죄·흡혈",
           "stats": {
             "atk": 147,
             "def": 0,
@@ -8554,7 +9167,7 @@
           "name": "카르도어의 지팡이",
           "grade": "unique",
           "type": 1,
-          "desc": "마왕의 홀. 공60/정116/어둠/광역(MP30)/혼란15%",
+          "desc": "◆기술 마왕의 그림자·마력 집중 공60/정116/어둠/광역(MP30)/혼란15%",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -8600,7 +9213,7 @@
           "name": "봉인의 지팡이",
           "grade": "unique",
           "type": 1,
-          "desc": "봉인의 홀. 공70/정137/신성/광역(MP30)/봉인20%",
+          "desc": "◆기술 결박·정화 공70/정137/신성/광역(MP30)/봉인20%",
           "stats": {
             "atk": 70,
             "def": 0,
@@ -8919,7 +9532,7 @@
           "name": "아누비스의 저울",
           "grade": "unique",
           "type": 1,
-          "desc": "심판의 저울. 공45/정116/신성/전체공격(MP25)",
+          "desc": "공45/정116/신성/전체공격(MP25) ◆심판·마력 집중",
           "stats": {
             "atk": 45,
             "def": 0,
@@ -8940,7 +9553,7 @@
           "name": "자칼왕의 곡도",
           "grade": "unique",
           "type": 1,
-          "desc": "자칼왕이 쥐던 곡도. 공131/치명28/관통/출혈20%",
+          "desc": "공131/치명28/관통/출혈20% ◆무리 사냥·분노",
           "stats": {
             "atk": 131,
             "def": 0,
@@ -9301,7 +9914,7 @@
           "name": "붉은수염의 커틀러스",
           "grade": "unique",
           "type": 1,
-          "desc": "붉은수염 두목의 곡도. 공72/치명25/불",
+          "desc": "공72/치명25/불 ◆약탈(사냥터)·흡혈",
           "stats": {
             "atk": 72,
             "def": 0,
@@ -9680,7 +10293,7 @@
           "name": "물보라 커틀러스",
           "grade": "magic",
           "type": 1,
-          "desc": "물보라를 튀기는 칼. 공61/물/선제",
+          "desc": "물보라를 튀기는 칼. 공61/물/선제 ◆낚시꾼",
           "stats": {
             "atk": 61,
             "def": 0,
@@ -9706,7 +10319,7 @@
           "name": "복어 독침",
           "grade": "magic",
           "type": 1,
-          "desc": "복어 가시를 단 독침. 공53/민15/중독30%",
+          "desc": "복어 가시를 단 독침. 공53/민15/중독30% ◆낚시꾼",
           "stats": {
             "atk": 53,
             "def": 0,
@@ -9727,7 +10340,7 @@
           "name": "해파리 장갑",
           "grade": "magic",
           "type": 1,
-          "desc": "해파리 촉수 장갑. 공56/민12/마비15%",
+          "desc": "해파리 촉수 장갑. 공56/민12/마비15% ◆선봉",
           "stats": {
             "atk": 56,
             "def": 0,
@@ -9748,7 +10361,7 @@
           "name": "갈매기 깃 활",
           "grade": "magic",
           "type": 1,
-          "desc": "갈매기 깃을 단 활. 공88/민8/필중",
+          "desc": "공88/민8/필중 ◆전리품(사냥터)",
           "stats": {
             "atk": 88,
             "def": 0,
@@ -9769,7 +10382,7 @@
           "name": "파도 소리 법서",
           "grade": "magic",
           "type": 1,
-          "desc": "파도 소리가 나는 책. 정50/물/전체공격(MP10)",
+          "desc": "정50/물/전체공격(MP10) ◆마나샘",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -9790,7 +10403,7 @@
           "name": "해류의 삼지창",
           "grade": "rare",
           "type": 1,
-          "desc": "바다신의 창. 공140/타스탯-40/물/전체공격(MP15)",
+          "desc": "공140/타스탯-40/물/전체공격(MP15) ◆추격",
           "stats": {
             "atk": 140,
             "def": -40,
@@ -9818,7 +10431,7 @@
           "name": "폭풍잡이 활",
           "grade": "rare",
           "type": 1,
-          "desc": "폭풍을 쏘는 활. 공100/민15/바람/필중/치명30",
+          "desc": "공100/민15/바람/필중/치명30 ◆추격",
           "stats": {
             "atk": 100,
             "def": 0,
@@ -9839,7 +10452,7 @@
           "name": "심해의 오브",
           "grade": "rare",
           "type": 1,
-          "desc": "심해의 빛 구슬. 공20/정90/물/전체공격(MP12)",
+          "desc": "공20/정90/물/전체공격(MP12) ◆마력 집중",
           "stats": {
             "atk": 20,
             "def": 0,
@@ -9865,7 +10478,7 @@
           "name": "상어 이빨 너클",
           "grade": "rare",
           "type": 1,
-          "desc": "이빨을 박은 너클. 공75/민15/치명20/물/출혈20%",
+          "desc": "공75/민15/치명20/물/출혈20% ◆추격",
           "stats": {
             "atk": 75,
             "def": 0,
@@ -9935,7 +10548,7 @@
           "name": "켈베로스 송곳니 단검",
           "grade": "magic",
           "type": 1,
-          "desc": "불타는 송곳니. 공40/민14/치명20/불/화상15%",
+          "desc": "공40/민14/치명20/불/화상15% ◆수련(사냥터)",
           "stats": {
             "atk": 40,
             "def": 0,
@@ -9958,7 +10571,7 @@
           "name": "나이트메어 갈기 활",
           "grade": "magic",
           "type": 1,
-          "desc": "갈기로 시위를 맨 활. 공51/민10/어둠",
+          "desc": "공51/민10/어둠 ◆가벼운 걸음",
           "stats": {
             "atk": 51,
             "def": 0,
@@ -9980,7 +10593,7 @@
           "name": "구울 손톱 너클",
           "grade": "magic",
           "type": 1,
-          "desc": "독 묻은 손톱 너클. 공44/민11/치명15/중독15%",
+          "desc": "공44/민11/치명15/중독15% ◆수련(사냥터)",
           "stats": {
             "atk": 44,
             "def": 0,
@@ -10002,7 +10615,7 @@
           "name": "라이칸스로프의 대검",
           "grade": "rare",
           "type": 1,
-          "desc": "늑대인간의 대검. 공68/방13/어둠/출혈20%/양손",
+          "desc": "공68/방13/어둠/출혈20%/양손 ◆흡혈",
           "stats": {
             "atk": 68,
             "def": 13,
@@ -10028,7 +10641,7 @@
           "name": "이플립트 불꽃 지팡이",
           "grade": "rare",
           "type": 1,
-          "desc": "불꽃이 깃든 지팡이. 공19/정57/불/화상15%",
+          "desc": "불꽃이 깃든 지팡이. 공19/정57/불/화상15% ◆각성",
           "stats": {
             "atk": 19,
             "def": 0,
@@ -10108,7 +10721,7 @@
           "name": "아이스크랩 집게 너클",
           "grade": "magic",
           "type": 1,
-          "desc": "게 집게로 만든 너클. 공44/민11/치명15/얼음",
+          "desc": "공44/민11/치명15/얼음 ◆낚시꾼",
           "stats": {
             "atk": 44,
             "def": 0,
@@ -10130,7 +10743,7 @@
           "name": "얼음송곳 화살",
           "grade": "magic",
           "type": 1,
-          "desc": "고드름 깎은 화살. 공33/민7/치명15/얼음/둔화15%",
+          "desc": "◆재료 감각(사냥터) 공33/민7/치명15/얼음/둔화15%",
           "stats": {
             "atk": 33,
             "def": 0,
@@ -10151,7 +10764,7 @@
           "name": "냉기의 서",
           "grade": "rare",
           "type": 1,
-          "desc": "냉기 마법이 적힌 책. 방19/정50/얼음/둔화15%",
+          "desc": "방19/정50/얼음/둔화15% ◆위압",
           "stats": {
             "atk": 0,
             "def": 19,
@@ -10177,7 +10790,7 @@
           "name": "빙결 건틀릿",
           "grade": "rare",
           "type": 1,
-          "desc": "얼어붙은 장갑. 공15/방5/정35/민5/얼음/마비10%",
+          "desc": "공15/방5/정35/민5/얼음/마비10% ◆위압",
           "stats": {
             "atk": 15,
             "def": 5,
@@ -10253,7 +10866,7 @@
           "name": "타락한 엘프 단검",
           "grade": "magic",
           "type": 1,
-          "desc": "검게 물든 엘프 단검. 공40/민14/치명20/어둠",
+          "desc": "공40/민14/치명20/어둠 ◆전리품(사냥터)",
           "stats": {
             "atk": 40,
             "def": 0,
@@ -10276,7 +10889,7 @@
           "name": "섀도 엘프 화살",
           "grade": "magic",
           "type": 1,
-          "desc": "그림자 엘프의 화살. 공33/민7/치명15/어둠",
+          "desc": "그림자 엘프의 화살. 공33/민7/치명15/어둠 ◆선봉",
           "stats": {
             "atk": 33,
             "def": 0,
@@ -10297,7 +10910,7 @@
           "name": "유니콘 뿔 지팡이",
           "grade": "magic",
           "type": 1,
-          "desc": "유니콘 뿔을 단 지팡이. 공17/정50/신성",
+          "desc": "유니콘 뿔을 단 지팡이. 공17/정50/신성 ◆정화",
           "stats": {
             "atk": 17,
             "def": 0,
@@ -10323,7 +10936,7 @@
           "name": "타락한 요정의 검",
           "grade": "rare",
           "type": 1,
-          "desc": "어둠에 물든 요정검. 공50/방13/어둠/맹목15%",
+          "desc": "공50/방13/어둠/맹목15% ◆추격",
           "stats": {
             "atk": 50,
             "def": 13,
@@ -10401,7 +11014,7 @@
           "name": "엔트 나무 몽둥이",
           "grade": "magic",
           "type": 1,
-          "desc": "엔트 가지 몽둥이. 공44/땅",
+          "desc": "엔트 가지 몽둥이. 공44/땅 ◆재생",
           "stats": {
             "atk": 44,
             "def": 0,
@@ -10424,7 +11037,7 @@
           "name": "엔트의 기록",
           "grade": "magic",
           "type": 1,
-          "desc": "숲의 기억이 적힌 책. 방17/정44/땅",
+          "desc": "숲의 기억이 적힌 책. 방17/정44/땅 ◆마나샘",
           "stats": {
             "atk": 0,
             "def": 17,
@@ -10450,7 +11063,7 @@
           "name": "극지 오크 도끼검",
           "grade": "magic",
           "type": 1,
-          "desc": "도끼처럼 두꺼운 검. 공44/방11/얼음",
+          "desc": "도끼처럼 두꺼운 검. 공44/방11/얼음 ◆강철 체력",
           "stats": {
             "atk": 44,
             "def": 11,
@@ -10476,7 +11089,7 @@
           "name": "엔트 심장 지팡이",
           "grade": "rare",
           "type": 1,
-          "desc": "엔트 심장을 박은 지팡이. 공19/정57/땅/마비10%",
+          "desc": "공19/정57/땅/마비10% ◆재생",
           "stats": {
             "atk": 19,
             "def": 0,
@@ -10502,7 +11115,7 @@
           "name": "얼음 산맥 활",
           "grade": "rare",
           "type": 1,
-          "desc": "산맥 얼음으로 만든 활. 공58/민12/얼음/필중",
+          "desc": "공58/민12/얼음/필중 ◆추격",
           "stats": {
             "atk": 58,
             "def": 0,
@@ -10572,7 +11185,7 @@
           "name": "늑대이빨 단검",
           "grade": "magic",
           "type": 1,
-          "desc": "늑대 이빨 단검. 공53/민18/치명25/출혈20%",
+          "desc": "공53/민18/치명25/출혈20% ◆수련(사냥터)",
           "stats": {
             "atk": 53,
             "def": 0,
@@ -10595,7 +11208,7 @@
           "name": "늑대 사냥꾼의 화살",
           "grade": "magic",
           "type": 1,
-          "desc": "늑대 사냥용 화살. 공56/민11/치명25/필중",
+          "desc": "공56/민11/치명25/필중 ◆전리품(사냥터)",
           "stats": {
             "atk": 56,
             "def": 0,
@@ -10616,7 +11229,7 @@
           "name": "폭주하는 대검",
           "grade": "rare",
           "type": 1,
-          "desc": "날뛰는 대검. 공93/방18/출혈20%/양손/선제",
+          "desc": "날뛰는 대검. 공93/방18/출혈20%/양손/선제 ◆분노",
           "stats": {
             "atk": 93,
             "def": 18,
@@ -10642,7 +11255,7 @@
           "name": "광포한 건틀릿",
           "grade": "rare",
           "type": 1,
-          "desc": "거친 건틀릿. 공25/방7/정43/민7/어둠/출혈15%",
+          "desc": "공25/방7/정43/민7/어둠/출혈15% ◆각성",
           "stats": {
             "atk": 25,
             "def": 7,
@@ -10717,7 +11330,7 @@
           "name": "골렘 투사의 건틀릿",
           "grade": "magic",
           "type": 1,
-          "desc": "돌주먹 건틀릿. 공20/방5/정45/민5/땅",
+          "desc": "공20/방5/정45/민5/땅 ◆재료 감각(사냥터)",
           "stats": {
             "atk": 20,
             "def": 5,
@@ -10743,7 +11356,7 @@
           "name": "골렘 마법사의 서",
           "grade": "magic",
           "type": 1,
-          "desc": "골렘을 부리는 책. 정66/땅",
+          "desc": "골렘을 부리는 책. 정66/땅 ◆마나샘",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -10769,7 +11382,7 @@
           "name": "핵 공명 오브",
           "grade": "rare",
           "type": 1,
-          "desc": "골렘 핵이 우는 구슬. 공32/정63/땅/광역(MP12)",
+          "desc": "공32/정63/땅/광역(MP12) ◆마력 집중",
           "stats": {
             "atk": 32,
             "def": 0,
@@ -10847,7 +11460,7 @@
           "name": "가고일 날개 활",
           "grade": "magic",
           "type": 1,
-          "desc": "가고일 날개로 만든 활. 공88/민18/바람",
+          "desc": "공88/민18/바람 ◆가벼운 걸음",
           "stats": {
             "atk": 88,
             "def": 0,
@@ -10869,7 +11482,7 @@
           "name": "해골 버서커 너클",
           "grade": "magic",
           "type": 1,
-          "desc": "뼈 마디 너클. 공56/민14/치명15/어둠",
+          "desc": "공56/민14/치명15/어둠 ◆수련(사냥터)",
           "stats": {
             "atk": 56,
             "def": 0,
@@ -10891,7 +11504,7 @@
           "name": "머미 사제의 철퇴",
           "grade": "magic",
           "type": 1,
-          "desc": "미라 사제의 철퇴. 공57/신성",
+          "desc": "미라 사제의 철퇴. 공57/신성 ◆정화",
           "stats": {
             "atk": 57,
             "def": 0,
@@ -10914,7 +11527,7 @@
           "name": "명계의 창",
           "grade": "rare",
           "type": 1,
-          "desc": "저승의 창. 공125/타스탯-40/치명20/어둠/맹목20%",
+          "desc": "공125/타스탯-40/치명20/어둠/맹목20% ◆흡혈",
           "stats": {
             "atk": 125,
             "def": -40,
@@ -10991,7 +11604,7 @@
           "name": "매드울프 송곳니 너클",
           "grade": "magic",
           "type": 1,
-          "desc": "미친 늑대 이빨 너클. 공58/민14/치명25/출혈15%",
+          "desc": "공58/민14/치명25/출혈15% ◆선봉",
           "stats": {
             "atk": 58,
             "def": 0,
@@ -11013,7 +11626,7 @@
           "name": "석화의 화살",
           "grade": "magic",
           "type": 1,
-          "desc": "맞으면 굳는 화살. 공58/민12/치명25/석화20%",
+          "desc": "공58/민12/치명25/석화20% ◆재료 감각(사냥터)",
           "stats": {
             "atk": 58,
             "def": 0,
@@ -11034,7 +11647,7 @@
           "name": "지옥불 건틀릿",
           "grade": "rare",
           "type": 1,
-          "desc": "불타는 장갑. 공13/방7/정75/민7/불/화상15%",
+          "desc": "공13/방7/정75/민7/불/화상15% ◆추격",
           "stats": {
             "atk": 13,
             "def": 7,
@@ -11060,7 +11673,7 @@
           "name": "광견의 송곳니",
           "grade": "rare",
           "type": 1,
-          "desc": "사냥개 송곳니. 공64/민22/치명25/출혈25%/선제",
+          "desc": "공64/민22/치명25/출혈25%/선제 ◆흡혈",
           "stats": {
             "atk": 64,
             "def": 0,
@@ -11135,7 +11748,7 @@
           "name": "근위 사제의 성구",
           "grade": "magic",
           "type": 1,
-          "desc": "성스러운 빛이 깃든 둔기. 공85/신성",
+          "desc": "성스러운 빛이 깃든 둔기. 공85/신성 ◆재생",
           "stats": {
             "atk": 85,
             "def": 0,
@@ -11158,7 +11771,7 @@
           "name": "용골 활",
           "grade": "magic",
           "type": 1,
-          "desc": "용의 뼈로 만든 활. 공97/민20/바람",
+          "desc": "용의 뼈로 만든 활. 공97/민20/바람 ◆선봉",
           "stats": {
             "atk": 97,
             "def": 0,
@@ -11180,7 +11793,7 @@
           "name": "돌격대장의 검",
           "grade": "magic",
           "type": 1,
-          "desc": "녹슬지 않는 기사검. 공73/방19/선제",
+          "desc": "녹슬지 않는 기사검. 공73/방19/선제 ◆선봉",
           "stats": {
             "atk": 73,
             "def": 19,
@@ -11206,7 +11819,7 @@
           "name": "용의 숨결 지팡이",
           "grade": "rare",
           "type": 1,
-          "desc": "용불을 담은 지팡이. 공32/정100/불/광역(MP12)",
+          "desc": "공32/정100/불/광역(MP12) ◆추격",
           "stats": {
             "atk": 32,
             "def": 0,
@@ -11232,7 +11845,7 @@
           "name": "용린 화살",
           "grade": "rare",
           "type": 1,
-          "desc": "용비늘 화살. 공69/민14/치명25/바람/광역(MP10)",
+          "desc": "공69/민14/치명25/바람/광역(MP10) ◆각성",
           "stats": {
             "atk": 69,
             "def": 0,
@@ -11302,7 +11915,7 @@
           "name": "쥬얼 오브",
           "grade": "magic",
           "type": 1,
-          "desc": "보석 골렘의 구슬. 공28/정88/땅",
+          "desc": "공28/정88/땅 ◆보물 감각(사냥터)",
           "stats": {
             "atk": 28,
             "def": 0,
@@ -11328,7 +11941,7 @@
           "name": "오우거 사냥꾼의 단검",
           "grade": "magic",
           "type": 1,
-          "desc": "오우거 사냥용 단검. 공62/민21/치명25/둔화15%",
+          "desc": "공62/민21/치명25/둔화15% ◆수련(사냥터)",
           "stats": {
             "atk": 62,
             "def": 0,
@@ -11351,7 +11964,7 @@
           "name": "거인의 창",
           "grade": "magic",
           "type": 1,
-          "desc": "거인이 쓰던 큰 창. 공160/타스탯-60/치명25/땅",
+          "desc": "공160/타스탯-60/치명25/땅 ◆선봉",
           "stats": {
             "atk": 160,
             "def": -60,
@@ -11379,7 +11992,7 @@
           "name": "거인 뼈 대검",
           "grade": "rare",
           "type": 1,
-          "desc": "거인 뼈 대검. 공112/방19/땅/둔화20%/양손",
+          "desc": "거인 뼈 대검. 공112/방19/땅/둔화20%/양손 ◆위압",
           "stats": {
             "atk": 112,
             "def": 19,
@@ -11405,7 +12018,7 @@
           "name": "청룡언월도",
           "grade": "unique",
           "type": 1,
-          "desc": "관우의 언월도. 공111/타스탯-25/치명25/선제",
+          "desc": "공111/타스탯-25/치명25/선제 ◆기술 청룡참·위압",
           "stats": {
             "atk": 111,
             "def": -25,
@@ -11425,14 +12038,14 @@
           "twoHanded": true,
           "job": null,
           "note": null,
-          "maxDesc": "공139/타스탯-25/치명29/선제"
+          "maxDesc": "공139/타스탯-25/치명29/선제 ◆기술 청룡참+·위압"
         },
         {
           "id": 4406,
           "name": "야른그레이프",
           "grade": "unique",
           "type": 1,
-          "desc": "토르가 끼던 쇠장갑. 공50/정55/전기/마비20%",
+          "desc": "공50/정55/전기/마비20% ◆천둥·분노",
           "stats": {
             "atk": 50,
             "def": 0,
@@ -11452,7 +12065,470 @@
           "twoHanded": true,
           "job": null,
           "note": null,
-          "maxDesc": "공62/정69/전기/마비20%"
+          "maxDesc": "공62/정69/전기/마비20% ◆천둥·분노"
+        },
+        {
+          "id": 4601,
+          "name": "피느 가시화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "가시덩굴 화살. 공40/민8/치명10/필중/출혈10%",
+          "stats": {
+            "atk": 40,
+            "def": 0,
+            "spi": 0,
+            "agi": 8
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4605,
+          "name": "세계수 활",
+          "grade": "craft",
+          "type": 1,
+          "desc": "세계수 가지 활. 공90/민20/치명15/필중/바람",
+          "stats": {
+            "atk": 90,
+            "def": 0,
+            "spi": 0,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4606,
+          "name": "세계수 화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "세계수 가지 화살. 공55/정10/필중/신성",
+          "stats": {
+            "atk": 55,
+            "def": 0,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4607,
+          "name": "세계수 검",
+          "grade": "craft",
+          "type": 1,
+          "desc": "세계수 검. 공80/방15/민20/치명15/필중/신성",
+          "stats": {
+            "atk": 80,
+            "def": 15,
+            "spi": 0,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6201,
+          "name": "메두사의 사슬낫",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공125/타스탯-25/치명25/어둠/석화15% ◆추격",
+          "stats": {
+            "atk": 125,
+            "def": -25,
+            "spi": -25,
+            "agi": -25
+          },
+          "price": 28000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6202,
+          "name": "광기의 손도끼",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공61/방16/출혈15% ◆선봉",
+          "stats": {
+            "atk": 61,
+            "def": 16,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6203,
+          "name": "성녀의 철퇴",
+          "grade": "rare",
+          "type": 1,
+          "desc": "성녀가 들던 철퇴. 공50/신성/맹목15% ◆정화",
+          "stats": {
+            "atk": 50,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 9000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6204,
+          "name": "흡혈 귀족의 건틀릿",
+          "grade": "magic",
+          "type": 1,
+          "desc": "핏빛 비단 장갑. 공11/방6/정66/민6/어둠 ◆마나샘",
+          "stats": {
+            "atk": 11,
+            "def": 6,
+            "spi": 66,
+            "agi": 6
+          },
+          "price": 18000,
+          "maxPlus": null,
+          "jobs": [
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6205,
+          "name": "사자의 서",
+          "grade": "rare",
+          "type": 1,
+          "desc": "정75/어둠/중독15% ◆마력 집중",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 75,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6215,
+          "name": "순례자의 화살",
+          "grade": "craft",
+          "type": 1,
+          "desc": "축복받은 화살. 공32/민7/치명15/신성",
+          "stats": {
+            "atk": 32,
+            "def": 0,
+            "spi": 0,
+            "agi": 7
+          },
+          "price": 4000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6217,
+          "name": "샌드골렘 핵 망치",
+          "grade": "rare",
+          "type": 1,
+          "desc": "모래 핵을 박은 망치. 공64/땅/둔화15% ◆위압",
+          "stats": {
+            "atk": 64,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6218,
+          "name": "리자드맨 파르티잔",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공88/타스탯-20/치명20/물/둔화15% ◆선봉",
+          "stats": {
+            "atk": 88,
+            "def": -20,
+            "spi": -20,
+            "agi": -20
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6219,
+          "name": "머맨 작살",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공125/타스탯-40/치명20/물/필중 ◆추격",
+          "stats": {
+            "atk": 125,
+            "def": -40,
+            "spi": -40,
+            "agi": -40
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6221,
+          "name": "가루다 깃털 화살",
+          "grade": "magic",
+          "type": 1,
+          "desc": "공61/민13/치명25/바람 ◆가벼운 걸음",
+          "stats": {
+            "atk": 61,
+            "def": 0,
+            "spi": 0,
+            "agi": 13
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6222,
+          "name": "미노타우르스 양날도끼",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공112/방19/출혈20%/양손 ◆분노",
+          "stats": {
+            "atk": 112,
+            "def": 19,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 32000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6224,
+          "name": "경비기 강철 팔",
+          "grade": "magic",
+          "type": 1,
+          "desc": "고대 기계의 팔. 공61/정58/전기 ◆수련(사냥터)",
+          "stats": {
+            "atk": 61,
+            "def": 0,
+            "spi": 58,
+            "agi": 0
+          },
+          "price": 26000,
+          "maxPlus": null,
+          "jobs": [
+            "priest",
+            "fighter",
+            "wizard",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6225,
+          "name": "익룡 날개 글레이브",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공188/타스탯-30/치명30/바람/선제 ◆추격",
+          "stats": {
+            "atk": 188,
+            "def": -30,
+            "spi": -30,
+            "agi": -30
+          },
+          "price": 40000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6228,
+          "name": "사막 거인의 도끼",
+          "grade": "rare",
+          "type": 1,
+          "desc": "공140/방24/땅/양손/필중 ◆각성",
+          "stats": {
+            "atk": 140,
+            "def": 24,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 40000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6230,
+          "name": "궁니르",
+          "grade": "unique",
+          "type": 1,
+          "desc": "◆기술 궁니르 투척·선봉 공112/타스탯-20/치명20/바람/필중",
+          "stats": {
+            "atk": 112,
+            "def": -20,
+            "spi": -20,
+            "agi": -20
+          },
+          "price": 20000,
+          "maxPlus": 4,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "elf",
+            "lord"
+          ],
+          "twoHanded": true,
+          "job": null,
+          "note": null,
+          "maxDesc": "◆기술 궁니르 투척+·선봉 공140/타스탯-20/치명24/바람/필중"
         }
       ]
     },
@@ -12301,13 +13377,13 @@
         {
           "id": 587,
           "name": "요정족 가죽갑옷",
-          "grade": "normal",
+          "grade": "craft",
           "type": 3,
-          "desc": "재료를 통해 만든 가죽갑옷. 방5",
+          "desc": "피느 천으로 만든 가죽갑옷. 방16/정5",
           "stats": {
             "atk": 0,
-            "def": 5,
-            "spi": 0,
+            "def": 16,
+            "spi": 5,
             "agi": 0
           },
           "price": 2,
@@ -12322,14 +13398,14 @@
         {
           "id": 588,
           "name": "요정족 갑옷",
-          "grade": "normal",
+          "grade": "craft",
           "type": 3,
-          "desc": "가죽갑옷의 보강형. 방30",
+          "desc": "가죽갑옷을 보강한 갑옷. 방32/민5/중독방지",
           "stats": {
             "atk": 0,
-            "def": 30,
+            "def": 32,
             "spi": 0,
-            "agi": 0
+            "agi": 5
           },
           "price": 2,
           "maxPlus": null,
@@ -12343,14 +13419,14 @@
         {
           "id": 589,
           "name": "요정족 미스릴아머",
-          "grade": "normal",
+          "grade": "craft",
           "type": 3,
-          "desc": "요정족 갑옷의 보강형. 방60",
+          "desc": "미스릴로 보강한 갑옷. 방60/민10/침묵방지",
           "stats": {
             "atk": 0,
             "def": 60,
             "spi": 0,
-            "agi": 0
+            "agi": 10
           },
           "price": 2,
           "maxPlus": null,
@@ -12364,9 +13440,9 @@
         {
           "id": 590,
           "name": "오리하루콘 아머",
-          "grade": "normal",
+          "grade": "craft",
           "type": 3,
-          "desc": "자연의 축복을 받은 오리하르콘 갑옷. 방70/타스탯30",
+          "desc": "축복받은 갑옷. 공30/방70/정30/민30/상태방지10",
           "stats": {
             "atk": 30,
             "def": 70,
@@ -12619,7 +13695,7 @@
           "name": "참회자의 로브",
           "grade": "unique",
           "type": 3,
-          "desc": "고해성사를 한 참회자의 옷. 방40/정80/치명방지",
+          "desc": "방40/정80/치명방지 ◆참회·마나샘",
           "stats": {
             "atk": 0,
             "def": 40,
@@ -12634,14 +13710,14 @@
           "twoHanded": null,
           "job": null,
           "note": "마왕의 침소의 언뱀파이어리더 드롭 (33%)",
-          "maxDesc": "방50/정100/치명방지"
+          "maxDesc": "방50/정100/치명방지 ◆참회·마나샘"
         },
         {
           "id": 1411,
           "name": "악마의 의복",
           "grade": "unique",
           "type": 3,
-          "desc": "악마 형상이 새겨진 옷. 방30/정30/마법내성",
+          "desc": "방30/정30/마법내성 ◆악마의 계약·가시",
           "stats": {
             "atk": 0,
             "def": 30,
@@ -12656,14 +13732,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방50/정50/마법내성"
+          "maxDesc": "방50/정50/마법내성 ◆악마의 계약·가시"
         },
         {
           "id": 1423,
           "name": "엘리야의 예복",
           "grade": "unique",
           "type": 3,
-          "desc": "엘리야라는 장인이 만든 옷. 방40/정60/물리내성",
+          "desc": "방40/정60/물리내성 ◆장인의 솜씨(사냥터)·마나샘",
           "stats": {
             "atk": 0,
             "def": 40,
@@ -12678,14 +13754,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방50/정75/물리내성"
+          "maxDesc": "방50/정75/물리내성 ◆장인의 솜씨(사냥터)·마나샘"
         },
         {
           "id": 1435,
           "name": "생령의 의복",
           "grade": "unique",
           "type": 3,
-          "desc": "착용자를 치유하는 옷. 방50/정50/10초당10회복",
+          "desc": "방50/정50/10초당10회복 ◆생령·재생",
           "stats": {
             "atk": 0,
             "def": 50,
@@ -12700,14 +13776,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방60/정60/10초당20회복"
+          "maxDesc": "방60/정60/10초당20회복 ◆생령·재생"
         },
         {
           "id": 1452,
           "name": "드래곤스케일",
           "grade": "unique",
           "type": 3,
-          "desc": "용의 비늘로 만든 갑옷. 방60/민30/치명방지",
+          "desc": "방60/민30/치명방지 ◆용린·위압",
           "stats": {
             "atk": 0,
             "def": 60,
@@ -12722,14 +13798,14 @@
           "twoHanded": null,
           "job": null,
           "note": "고대던전 하늘층의 랜드 드래곤 리더 드롭 (33%)",
-          "maxDesc": "방80/민40/치명방지"
+          "maxDesc": "방80/민40/치명방지 ◆용린·위압"
         },
         {
           "id": 1469,
           "name": "감시자의 갑옷",
           "grade": "unique",
           "type": 3,
-          "desc": "무명의 감시자의 갑옷. 방40/민40/신성,어둠내성",
+          "desc": "방40/민40/신성,어둠내성 ◆감시·반격",
           "stats": {
             "atk": 0,
             "def": 40,
@@ -12744,14 +13820,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방60/민60/신성,어둠내성"
+          "maxDesc": "방60/민60/신성,어둠내성 ◆감시·반격"
         },
         {
           "id": 1486,
           "name": "달빛 갑옷",
           "grade": "unique",
           "type": 3,
-          "desc": "달의 가호가 깃든 갑옷. 방40/민40/회피상승",
+          "desc": "방40/민40/회피상승 ◆달의 가호·정화",
           "stats": {
             "atk": 0,
             "def": 40,
@@ -12766,14 +13842,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방50/민50/회피상승"
+          "maxDesc": "방50/민50/회피상승 ◆달의 가호·정화"
         },
         {
           "id": 1498,
           "name": "대마법사의 로브",
           "grade": "unique",
           "type": 3,
-          "desc": "대마법사의 유산. 방20/정20/치명방지/물리내성",
+          "desc": "방20/정20/치명방지/물리내성 ◆대마법·마력 집중",
           "stats": {
             "atk": 0,
             "def": 20,
@@ -12788,14 +13864,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방35/정35/치명방지/물리내성"
+          "maxDesc": "방35/정35/치명방지/물리내성 ◆대마법·마력 집중"
         },
         {
           "id": 1534,
           "name": "엘븐드래곤스케일",
           "grade": "unique",
           "type": 3,
-          "desc": "엘프제 용 비늘 갑옷. 방70/민35/회피상승",
+          "desc": "방70/민35/회피상승 ◆용의 비늘·반격",
           "stats": {
             "atk": 0,
             "def": 70,
@@ -12810,14 +13886,14 @@
           "twoHanded": null,
           "job": null,
           "note": "마왕의 침소의 뱀파이어리더 드롭 (33%)",
-          "maxDesc": "방90/민45/회피상승"
+          "maxDesc": "방90/민45/회피상승 ◆용의 비늘·반격"
         },
         {
           "id": 1546,
           "name": "황금갑옷",
           "grade": "unique",
           "type": 3,
-          "desc": "황금빛이 나는 갑옷. 방80/치명방지/물리내성",
+          "desc": "방80/치명방지/물리내성 ◆황금·전리품(사냥터)",
           "stats": {
             "atk": 0,
             "def": 80,
@@ -12832,14 +13908,14 @@
           "twoHanded": null,
           "job": null,
           "note": "천상계의 키메라 드롭 (33%)",
-          "maxDesc": "방100/치명방지/물리내성"
+          "maxDesc": "방100/치명방지/물리내성 ◆황금·전리품(사냥터)"
         },
         {
           "id": 1583,
           "name": "패왕의 갑옷",
           "grade": "unique",
           "type": 3,
-          "desc": "순금으로 이루어진 희귀 갑옷. 방60/타스탯5",
+          "desc": "방60/타스탯5 ◆패왕의 위엄·전리품(사냥터)",
           "stats": {
             "atk": 5,
             "def": 60,
@@ -12852,21 +13928,45 @@
             "warrior",
             "cleric",
             "tamer",
-            "fighter",
+            "ninja",
+            "elf",
             "lord",
             "monster"
           ],
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방80/타스탯10"
+          "maxDesc": "방80/타스탯10 ◆패왕의 위엄·전리품(사냥터)"
+        },
+        {
+          "id": 1600,
+          "name": "루시리스여신의옷",
+          "grade": "unique",
+          "type": 3,
+          "desc": "방40/정80/신성,어둠내성 ◆여신의 가호·정화",
+          "stats": {
+            "atk": 0,
+            "def": 40,
+            "spi": 80,
+            "agi": 0
+          },
+          "price": 20000,
+          "maxPlus": 4,
+          "jobs": [
+            "cleric",
+            "priest"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null,
+          "maxDesc": "방50/정100/신성,어둠내성 ◆여신의 가호·정화"
         },
         {
           "id": 1607,
           "name": "레지스트 아머",
           "grade": "unique",
           "type": 3,
-          "desc": "저항력이 높은 갑옷. 방50/민25/물리내성",
+          "desc": "방50/민25/물리내성 ◆미라의 인내·정화",
           "stats": {
             "atk": 0,
             "def": 50,
@@ -12884,7 +13984,7 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방80/민40/물리내성"
+          "maxDesc": "방80/민40/물리내성 ◆미라의 인내·정화"
         },
         {
           "id": 1637,
@@ -13133,7 +14233,7 @@
           "name": "초재생의 갑옷",
           "grade": "unique",
           "type": 3,
-          "desc": "트롤의 힘을 부여하는 갑옷. 공60,필드+20HP/초",
+          "desc": "공60,필드+20HP/초 ◆트롤의 피·강철 체력",
           "stats": {
             "atk": 60,
             "def": 0,
@@ -13156,7 +14256,7 @@
           "twoHanded": null,
           "job": null,
           "note": "트롤 마을의 서리 트롤 리더 드롭 (33%)",
-          "maxDesc": "공100,필드+20HP/초"
+          "maxDesc": "공100,필드+20HP/초 ◆트롤의 피·강철 체력"
         },
         {
           "id": 2009,
@@ -13188,7 +14288,7 @@
           "name": "바위 가죽 갑옷",
           "grade": "unique",
           "type": 3,
-          "desc": "트롤가죽, 바위로 만든 갑옷. 땅,마비내성/방80",
+          "desc": "땅,마비내성/방80 ◆바위 피부·강철 체력",
           "stats": {
             "atk": 0,
             "def": 80,
@@ -13212,7 +14312,7 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "땅,마비내성/방100"
+          "maxDesc": "땅,마비내성/방100 ◆바위 피부·강철 체력"
         },
         {
           "id": 2043,
@@ -13302,7 +14402,7 @@
           "name": "아타마 장갑판",
           "grade": "unique",
           "type": 3,
-          "desc": "기계 장갑. 방121/공20/민-30/치명방지/전기내성",
+          "desc": "◆과부하·버팀 방121/공20/민-30/치명방지/전기내성",
           "stats": {
             "atk": 20,
             "def": 121,
@@ -13421,9 +14521,9 @@
         {
           "id": 2101,
           "name": "요정족 레지스트 아머",
-          "grade": "normal",
+          "grade": "craft",
           "type": 3,
-          "desc": "렌디가 피느의 천으로 덧댄 갑옷. 방70/민10/상태방지20",
+          "desc": "상태이상을 막는 갑옷. 방70/민10/상태방지20",
           "stats": {
             "atk": 0,
             "def": 70,
@@ -13444,7 +14544,7 @@
           "name": "문지기의 갑주",
           "grade": "unique",
           "type": 3,
-          "desc": "혼돈의 문지기가 두르던 갑주. 방200/공40/어둠내성",
+          "desc": "방200/공40/어둠내성 ◆문지기·가시",
           "stats": {
             "atk": 40,
             "def": 200,
@@ -13662,7 +14762,7 @@
           "name": "따개비 판금",
           "grade": "magic",
           "type": 3,
-          "desc": "따개비로 덮인 판금. 방55/민-20/치명방지",
+          "desc": "방55/민-20/치명방지 ◆강철 체력",
           "stats": {
             "atk": 0,
             "def": 55,
@@ -13691,7 +14791,7 @@
           "name": "붉은 산호 갑옷",
           "grade": "rare",
           "type": 3,
-          "desc": "붉은 산호 갑주. 방75/정20/불반감/최대HP+200",
+          "desc": "방75/정20/불반감/최대HP+200 ◆재생",
           "stats": {
             "atk": 0,
             "def": 75,
@@ -13807,7 +14907,7 @@
           "name": "불새 깃털 로브",
           "grade": "rare",
           "type": 3,
-          "desc": "불새 깃털 로브. 방25/정25/불반감/화상방지",
+          "desc": "방25/정25/불반감/화상방지 ◆버팀",
           "stats": {
             "atk": 0,
             "def": 25,
@@ -13921,7 +15021,7 @@
           "name": "석화 갑주",
           "grade": "rare",
           "type": 3,
-          "desc": "돌로 굳은 갑옷. 방50/석화방지/치명방지",
+          "desc": "돌로 굳은 갑옷. 방50/석화방지/치명방지 ◆가시",
           "stats": {
             "atk": 0,
             "def": 50,
@@ -14065,7 +15165,7 @@
           "name": "다이아 원석 로브",
           "grade": "rare",
           "type": 3,
-          "desc": "원석 박은 로브. 방50/정50/전기반감/최대MP+100",
+          "desc": "방50/정50/전기반감/최대MP+100 ◆마나샘",
           "stats": {
             "atk": 0,
             "def": 50,
@@ -14086,6 +15186,165 @@
           "twoHanded": null,
           "job": null,
           "note": "그랜드마운틴 던전에서 전투를 이기면 상자로 아주 드물게 나온다 (리더가 있는 무리에서 조금 더). 로저스 경매장에도 사흘마다 오른다"
+        },
+        {
+          "id": 4610,
+          "name": "세계수 갑옷",
+          "grade": "craft",
+          "type": 3,
+          "desc": "껍질 갑옷. 공30/방80/정30/민30/상태방지10",
+          "stats": {
+            "atk": 30,
+            "def": 80,
+            "spi": 30,
+            "agi": 30
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6206,
+          "name": "섀도 엘프 비단옷",
+          "grade": "magic",
+          "type": 3,
+          "desc": "방22/정22/어둠반감 ◆가벼운 걸음",
+          "stats": {
+            "atk": 0,
+            "def": 22,
+            "spi": 22,
+            "agi": 0
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric",
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6207,
+          "name": "근위 사제의 법의",
+          "grade": "magic",
+          "type": 3,
+          "desc": "옛 왕실 사제의 옷. 방44/정44/신성반감 ◆마나샘",
+          "stats": {
+            "atk": 0,
+            "def": 44,
+            "spi": 44,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric",
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6208,
+          "name": "해골 버서커 뼈갑옷",
+          "grade": "magic",
+          "type": 3,
+          "desc": "뼈를 엮은 갑옷. 방44/어둠반감 ◆강철 체력",
+          "stats": {
+            "atk": 0,
+            "def": 44,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "fighter",
+            "thief",
+            "ninja",
+            "wizard",
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6220,
+          "name": "미라 사제의 붕대옷",
+          "grade": "magic",
+          "type": 3,
+          "desc": "붕대를 덧댄 옷. 방44/정44/어둠반감 ◆정화",
+          "stats": {
+            "atk": 0,
+            "def": 44,
+            "spi": 44,
+            "agi": 0
+          },
+          "price": 22000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric",
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6227,
+          "name": "데스미스트 법의",
+          "grade": "magic",
+          "type": 3,
+          "desc": "방55/정75/즉사방지 ◆마나샘",
+          "stats": {
+            "atk": 0,
+            "def": 55,
+            "spi": 75,
+            "agi": 0
+          },
+          "price": 26000,
+          "maxPlus": null,
+          "jobs": [
+            "cleric",
+            "priest",
+            "wizard",
+            "lord",
+            "necro",
+            "anti",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -14539,12 +15798,12 @@
         {
           "id": 577,
           "name": "요정족 방패",
-          "grade": "normal",
+          "grade": "craft",
           "type": 2,
-          "desc": "가볍고 튼튼한 성능의 요정족 방패. 방15",
+          "desc": "가볍고 튼튼한 요정족 방패. 방18/수면방지",
           "stats": {
             "atk": 0,
-            "def": 15,
+            "def": 18,
             "spi": 0,
             "agi": 0
           },
@@ -14560,9 +15819,9 @@
         {
           "id": 583,
           "name": "레지스트 실드",
-          "grade": "normal",
+          "grade": "craft",
           "type": 2,
-          "desc": "모든 상태이상을 방지해주는 방패. 방45/상태방지20",
+          "desc": "모든 상태이상을 막는 방패. 방45/상태방지20",
           "stats": {
             "atk": 0,
             "def": 45,
@@ -14602,7 +15861,7 @@
           "name": "켈스피어 실드",
           "grade": "unique",
           "type": 2,
-          "desc": "가장 견고한 방패. 방70/민-25/치명방지/물리내성",
+          "desc": "방70/민-25/치명방지/물리내성 ◆철벽·가시",
           "stats": {
             "atk": 0,
             "def": 70,
@@ -14615,8 +15874,6 @@
             "warrior",
             "cleric",
             "tamer",
-            "thief",
-            "wizard",
             "elf",
             "lord",
             "monster"
@@ -14624,14 +15881,14 @@
           "twoHanded": null,
           "job": null,
           "note": "고대던전의 쥬얼 골렘 리더 드롭 (33%)",
-          "maxDesc": "방90/치명방지/물리내성"
+          "maxDesc": "방90/치명방지/물리내성 ◆철벽·가시"
         },
         {
           "id": 1387,
           "name": "크루세이더 실드",
           "grade": "unique",
           "type": 2,
-          "desc": "십자군 방패. 방60/정30/민-30/치명방지/약화내성",
+          "desc": "◆십자 방패·정화 방60/정30/민-30/치명방지/약화내성",
           "stats": {
             "atk": 0,
             "def": 60,
@@ -14646,14 +15903,14 @@
           "twoHanded": null,
           "job": null,
           "note": "고대던전 하늘층의 데스 팔라딘 리더 드롭 (33%)",
-          "maxDesc": "방70/정35/민-20/치명방지/약화내성"
+          "maxDesc": "◆십자 방패·정화 방70/정35/민-20/치명방지/약화내성"
         },
         {
           "id": 1573,
           "name": "퓨전엘리멘탈실드",
           "grade": "unique",
           "type": 2,
-          "desc": "불을 막는 방패. 방30/정30/민-15",
+          "desc": "방30/정30/민-15 ◆불꽃 방벽·재생",
           "stats": {
             "atk": 0,
             "def": 30,
@@ -14673,14 +15930,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방45/정45/지형데미지무효"
+          "maxDesc": "방45/정45/지형데미지무효 ◆불꽃 방벽·재생"
         },
         {
           "id": 1578,
           "name": "커스그레잇 실드",
           "grade": "unique",
           "type": 2,
-          "desc": "내성을 높이는 방패. 방40/민-20/상태방지20",
+          "desc": "방40/민-20/상태방지20 ◆저주 흡수·반격",
           "stats": {
             "atk": 0,
             "def": 40,
@@ -14693,8 +15950,6 @@
             "warrior",
             "cleric",
             "tamer",
-            "thief",
-            "wizard",
             "elf",
             "lord",
             "monster"
@@ -14702,7 +15957,7 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방50/상태방지25"
+          "maxDesc": "방50/상태방지25 ◆저주 흡수·반격"
         },
         {
           "id": 2010,
@@ -14787,7 +16042,7 @@
           "name": "얼어붙은 대천사의 방패",
           "grade": "unique",
           "type": 2,
-          "desc": "녹지 않는 얼음 방패. 방150/정60/얼음내성",
+          "desc": "방150/정60/얼음내성 ◆영구 동토·가시",
           "stats": {
             "atk": 0,
             "def": 150,
@@ -14839,7 +16094,7 @@
           "name": "전장의 방패",
           "grade": "unique",
           "type": 2,
-          "desc": "오랜 전쟁을 버틴 방패. 방84/마비방지/타격내성",
+          "desc": "방84/마비방지/타격내성 ◆노병·반격",
           "stats": {
             "atk": 0,
             "def": 84,
@@ -14891,7 +16146,7 @@
           "name": "소라게의 보물 껍데기",
           "grade": "unique",
           "type": 2,
-          "desc": "보물상자 소라게의 껍데기. 방38/정10/물반감",
+          "desc": "◆껍데기 숨기·보물 감각(사냥터) 방38/정10/물반감",
           "stats": {
             "atk": 0,
             "def": 38,
@@ -14919,7 +16174,7 @@
           "name": "해일 비늘 방패",
           "grade": "unique",
           "type": 2,
-          "desc": "해일의 히드라 비늘을 엮은 방패. 방44/정20/물반감",
+          "desc": "방44/정20/물반감 ◆역류·재생",
           "stats": {
             "atk": 0,
             "def": 44,
@@ -15025,7 +16280,7 @@
           "name": "산호 방패",
           "grade": "magic",
           "type": 2,
-          "desc": "산호로 엮은 방패. 방49/물·얼음반감",
+          "desc": "산호로 엮은 방패. 방49/물·얼음반감 ◆재생",
           "stats": {
             "atk": 0,
             "def": 49,
@@ -15051,7 +16306,7 @@
           "name": "바다거북 등딱지",
           "grade": "magic",
           "type": 2,
-          "desc": "큰 바다거북의 등딱지. 방49/민-25/중독·마비방지",
+          "desc": "방49/민-25/중독·마비방지 ◆재생",
           "stats": {
             "atk": 0,
             "def": 49,
@@ -15077,7 +16332,7 @@
           "name": "리자드맨 비늘 방패",
           "grade": "magic",
           "type": 2,
-          "desc": "얼음 비늘 방패. 방42/민-19/얼음반감",
+          "desc": "얼음 비늘 방패. 방42/민-19/얼음반감 ◆재생",
           "stats": {
             "atk": 0,
             "def": 42,
@@ -15133,7 +16388,7 @@
           "name": "광기의 오크 방패",
           "grade": "magic",
           "type": 2,
-          "desc": "오크가 들던 방패. 방49/민-22/출혈방지",
+          "desc": "방49/민-22/출혈방지 ◆강철 체력",
           "stats": {
             "atk": 0,
             "def": 49,
@@ -15161,7 +16416,7 @@
           "name": "바위 방패",
           "grade": "magic",
           "type": 2,
-          "desc": "통바위 방패. 방49/민-22/땅반감",
+          "desc": "통바위 방패. 방49/민-22/땅반감 ◆강철 체력",
           "stats": {
             "atk": 0,
             "def": 49,
@@ -15189,7 +16444,7 @@
           "name": "가고일 석익 방패",
           "grade": "rare",
           "type": 2,
-          "desc": "돌날개 방패. 방55/민-22/바람반감/마비·석화방지",
+          "desc": "방55/민-22/바람반감/마비·석화방지 ◆반격",
           "stats": {
             "atk": 0,
             "def": 55,
@@ -15217,7 +16472,7 @@
           "name": "바실리스크 비늘 방패",
           "grade": "magic",
           "type": 2,
-          "desc": "돌빛 비늘 방패. 방66/마비·석화방지",
+          "desc": "돌빛 비늘 방패. 방66/마비·석화방지 ◆정화",
           "stats": {
             "atk": 0,
             "def": 66,
@@ -15267,6 +16522,83 @@
           "twoHanded": null,
           "job": null,
           "note": "망국 세트. 장인 나노무토·마나무토가 고대던전 재료로 만든다. 두 벌 방어+15, 세 벌 방어+15·공격+15·HP+100"
+        },
+        {
+          "id": 4608,
+          "name": "세계수 방패",
+          "grade": "craft",
+          "type": 2,
+          "desc": "세계수 껍질 방패. 방60/정15/수면방지",
+          "stats": {
+            "atk": 0,
+            "def": 60,
+            "spi": 15,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6211,
+          "name": "빙벽 방패",
+          "grade": "rare",
+          "type": 2,
+          "desc": "방48/민-19/얼음반감/둔화방지 ◆반격",
+          "stats": {
+            "atk": 0,
+            "def": 48,
+            "spi": 0,
+            "agi": -19
+          },
+          "price": 9000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "wizard",
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6229,
+          "name": "고르곤 눈 방패",
+          "grade": "rare",
+          "type": 2,
+          "desc": "방104/어둠반감/석화방지 ◆위압",
+          "stats": {
+            "atk": 0,
+            "def": 104,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 40000,
+          "maxPlus": null,
+          "jobs": [
+            "warrior",
+            "cleric",
+            "tamer",
+            "thief",
+            "wizard",
+            "elf",
+            "lord",
+            "monster"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -15923,7 +17255,7 @@
           "name": "영주의 써클렛",
           "grade": "unique",
           "type": 4,
-          "desc": "영주의 관. 올스탯15/약화내성",
+          "desc": "◆영주의 세금(사냥터)·전리품(사냥터) 올스탯15/약화내성",
           "stats": {
             "atk": 15,
             "def": 15,
@@ -15938,14 +17270,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "올스탯25/약화내성"
+          "maxDesc": "◆영주의 세금(사냥터)·전리품(사냥터) 올스탯25/약화내성"
         },
         {
           "id": 1619,
           "name": "위상변화의 투구",
           "grade": "unique",
           "type": 4,
-          "desc": "에테르 세계의 투구. 방20/정20/민20/회피상승",
+          "desc": "방20/정20/민20/회피상승 ◆위상 이동·반격",
           "stats": {
             "atk": 0,
             "def": 20,
@@ -15958,7 +17290,7 @@
           "twoHanded": null,
           "job": null,
           "note": "마왕의 침소의 자이언트리더 드롭 (33%), 광기의 던전의 광기의 늑대 리더 드롭 (33%)",
-          "maxDesc": "방30/정30/민30/회피상승"
+          "maxDesc": "방30/정30/민30/회피상승 ◆위상 이동·반격"
         },
         {
           "id": 1769,
@@ -16065,7 +17397,7 @@
           "name": "거미의 시선",
           "grade": "unique",
           "type": 4,
-          "desc": "거미의 눈으로 장식된 투구. 방40/민20/회피상승",
+          "desc": "방40/민20/회피상승 ◆거미줄·선봉",
           "stats": {
             "atk": 0,
             "def": 40,
@@ -16078,7 +17410,7 @@
           "twoHanded": null,
           "job": null,
           "note": "본토 동쪽 필드의 거대 거미 리더 드롭 (33%)",
-          "maxDesc": "방60/민40/회피상승"
+          "maxDesc": "방60/민40/회피상승 ◆거미줄·선봉"
         },
         {
           "id": 2045,
@@ -16123,7 +17455,7 @@
           "name": "호수 비늘 투구",
           "grade": "unique",
           "type": 4,
-          "desc": "호수 괴물의 비늘로 만든 투구. 방30/공20/물내성",
+          "desc": "방30/공20/물내성 ◆호수의 숨·낚시꾼",
           "stats": {
             "atk": 20,
             "def": 30,
@@ -16141,14 +17473,14 @@
           "twoHanded": null,
           "job": null,
           "note": "지하호수의 호수 리자드맨 리더 드롭 (33%)",
-          "maxDesc": "방40/공30/물내성"
+          "maxDesc": "방40/공30/물내성 ◆호수의 숨·낚시꾼"
         },
         {
           "id": 2107,
           "name": "마력 결정 써클렛",
           "grade": "unique",
           "type": 4,
-          "desc": "호수의 마력이 굳은 결정을 박은 써클렛. 방15/정40/마력",
+          "desc": "방15/정40/마력 ◆마력 결정·마나샘",
           "stats": {
             "atk": 0,
             "def": 15,
@@ -16164,14 +17496,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방25/정50/마력"
+          "maxDesc": "방25/정50/마력 ◆마력 결정·마나샘"
         },
         {
           "id": 2112,
           "name": "물살 두건",
           "grade": "unique",
           "type": 4,
-          "desc": "물살처럼 가벼운 두건. 방20/민30/회피상승",
+          "desc": "방20/민30/회피상승 ◆물살 타기·가벼운 걸음",
           "stats": {
             "atk": 0,
             "def": 20,
@@ -16189,14 +17521,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방30/민40/회피상승"
+          "maxDesc": "방30/민40/회피상승 ◆물살 타기·가벼운 걸음"
         },
         {
           "id": 2117,
           "name": "인어의 티아라",
           "grade": "unique",
           "type": 4,
-          "desc": "인어가 쓰던 티아라. 방20/정25/상태방지20",
+          "desc": "방20/정25/상태방지20 ◆인어의 노래·마나샘",
           "stats": {
             "atk": 0,
             "def": 20,
@@ -16213,14 +17545,14 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방30/정35/상태방지20"
+          "maxDesc": "방30/정35/상태방지20 ◆인어의 노래·마나샘"
         },
         {
           "id": 2122,
           "name": "호수 군주의 관",
           "grade": "unique",
           "type": 4,
-          "desc": "호수의 주인이 지키던 관. 방20/공정민15/올스탯",
+          "desc": "방20/공정민15/올스탯 ◆호수의 주인·낚시꾼",
           "stats": {
             "atk": 15,
             "def": 20,
@@ -16233,7 +17565,7 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방30/공정민25/올스탯"
+          "maxDesc": "방30/공정민25/올스탯 ◆호수의 주인·낚시꾼"
         },
         {
           "id": 2609,
@@ -16259,7 +17591,7 @@
           "name": "심판관의 투구",
           "grade": "unique",
           "type": 4,
-          "desc": "신전 심판관의 투구. 방53/공30/정25/맹목방지",
+          "desc": "방53/공30/정25/맹목방지 ◆재판·위압",
           "stats": {
             "atk": 30,
             "def": 53,
@@ -16316,7 +17648,7 @@
           "name": "깨진 렌즈의 관",
           "grade": "unique",
           "type": 4,
-          "desc": "폭풍 하피 여왕의 렌즈 조각 왕관. 방25/정20/민25/바람반감",
+          "desc": "방25/정20/민25/바람반감 ◆굴절·가벼운 걸음",
           "stats": {
             "atk": 0,
             "def": 25,
@@ -16335,7 +17667,7 @@
           "name": "유령 선장의 삼각모",
           "grade": "unique",
           "type": 4,
-          "desc": "유령 선장이 쓰던 모자. 방36/정30/어둠반감/맹목방지",
+          "desc": "◆기술 유령 선원·전리품(사냥터) 방36/정30/어둠반감/맹목방지",
           "stats": {
             "atk": 0,
             "def": 36,
@@ -16354,7 +17686,7 @@
           "name": "크라켄 갑각 투구",
           "grade": "unique",
           "type": 4,
-          "desc": "크라켄 갑각으로 만든 투구. 방60/정35/민25/물내성/치명방지",
+          "desc": "방60/정35/민25/물내성/치명방지 ◆갑각·가시",
           "stats": {
             "atk": 0,
             "def": 60,
@@ -16367,7 +17699,7 @@
           "twoHanded": null,
           "job": null,
           "note": null,
-          "maxDesc": "방85/정55/민45/물내성/치명방지"
+          "maxDesc": "방85/정55/민45/물내성/치명방지 ◆갑각·가시"
         },
         {
           "id": 3906,
@@ -16453,7 +17785,7 @@
           "name": "갈매기 깃털 모자",
           "grade": "magic",
           "type": 4,
-          "desc": "갈매기 깃 모자. 방50/민15/회피상승",
+          "desc": "방50/민15/회피상승 ◆가벼운 걸음",
           "stats": {
             "atk": 0,
             "def": 50,
@@ -16472,7 +17804,7 @@
           "name": "고래뼈 투구",
           "grade": "rare",
           "type": 4,
-          "desc": "고래 두개골. 방57/공20/치명방지/최대HP+100",
+          "desc": "방57/공20/치명방지/최대HP+100 ◆버팀",
           "stats": {
             "atk": 20,
             "def": 57,
@@ -16696,6 +18028,126 @@
           "twoHanded": null,
           "job": null,
           "note": "대족장 세트. 장인 나노무토·마나무토가 그랜드마운틴 던전 재료로 만든다. 두 벌 공격+15, 세 벌 공격+15·HP+200"
+        },
+        {
+          "id": 4602,
+          "name": "요정족 잎관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "피느 잎을 엮은 관. 방8/정4",
+          "stats": {
+            "atk": 0,
+            "def": 8,
+            "spi": 4,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4603,
+          "name": "요정족 미스릴 잎관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "미스릴 실로 엮은 잎관. 방24/정10/수면방지",
+          "stats": {
+            "atk": 0,
+            "def": 24,
+            "spi": 10,
+            "agi": 0
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4609,
+          "name": "세계수 잎관",
+          "grade": "craft",
+          "type": 4,
+          "desc": "세계수 잎으로 엮은 관. 방38/정20/민15",
+          "stats": {
+            "atk": 0,
+            "def": 38,
+            "spi": 20,
+            "agi": 15
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6209,
+          "name": "엔트 껍질 투구",
+          "grade": "magic",
+          "type": 4,
+          "desc": "나무껍질 투구. 방33/땅반감 ◆재생",
+          "stats": {
+            "atk": 0,
+            "def": 33,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6210,
+          "name": "보석 박힌 투구",
+          "grade": "rare",
+          "type": 4,
+          "desc": "공14/방55/정14/전기반감/마비방지 ◆버팀",
+          "stats": {
+            "atk": 14,
+            "def": 55,
+            "spi": 14,
+            "agi": 0
+          },
+          "price": 32000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6226,
+          "name": "그리폰 깃 투구",
+          "grade": "rare",
+          "type": 4,
+          "desc": "공18/방69/정18/바람반감/맹목방지 ◆반격",
+          "stats": {
+            "atk": 18,
+            "def": 69,
+            "spi": 18,
+            "agi": 0
+          },
+          "price": 40000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -17386,7 +18838,7 @@
           "name": "죽음의 반지",
           "grade": "unique",
           "type": 5,
-          "desc": "죽음을 막아주는 반지. 올스탯5/죽음저항25",
+          "desc": "올스탯5/죽음저항25 ◆죽음 거부·버팀",
           "stats": {
             "atk": 5,
             "def": 5,
@@ -17399,7 +18851,7 @@
           "twoHanded": null,
           "job": null,
           "note": "얼음성의 냉혈전갈리더 드롭 (33%)",
-          "maxDesc": "올스탯10/죽음저항50"
+          "maxDesc": "올스탯10/죽음저항50 ◆죽음 거부·버팀"
         },
         {
           "id": 1916,
@@ -17520,7 +18972,7 @@
           "name": "와이번의 날개",
           "grade": "unique",
           "type": 5,
-          "desc": "와이번의 날개뼈. 민74/공20/회피상승/바람내성",
+          "desc": "민74/공20/회피상승/바람내성 ◆활강·가벼운 걸음",
           "stats": {
             "atk": 20,
             "def": 0,
@@ -17539,7 +18991,7 @@
           "name": "그림자 망토",
           "grade": "unique",
           "type": 5,
-          "desc": "그늘진 망토. 민53/정53/어둠내성/맹목·침묵방지",
+          "desc": "◆그림자 숨기·반격 민53/정53/어둠내성/맹목·침묵X",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17558,7 +19010,7 @@
           "name": "수호 골렘의 핵",
           "grade": "unique",
           "type": 5,
-          "desc": "골렘을 움직이던 핵. 방53/정40/최대HP+200",
+          "desc": "방53/정40/최대HP+200 ◆핵 수호·버팀",
           "stats": {
             "atk": 0,
             "def": 53,
@@ -17577,7 +19029,7 @@
           "name": "라그엘의 깃털",
           "grade": "unique",
           "type": 5,
-          "desc": "대천사 라그엘의 깃털. 민90/정90/신성내성",
+          "desc": "민90/정90/신성내성 ◆천사의 날개·정화",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17615,7 +19067,7 @@
           "name": "수호자의 붕대",
           "grade": "unique",
           "type": 5,
-          "desc": "미라 천. 민53/정35/방20/맹목·마비방지/어둠내성",
+          "desc": "◆영원한 잠·재생 민53/정35/방20/맹목·마비X/어둠내성",
           "stats": {
             "atk": 0,
             "def": 20,
@@ -17634,7 +19086,7 @@
           "name": "모래시계의 반지",
           "grade": "unique",
           "type": 5,
-          "desc": "모래가 흐르는 반지. 민42/회피상승",
+          "desc": "민42/회피상승 ◆되감기·가벼운 걸음",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17729,7 +19181,7 @@
           "name": "아귀의 미끼등",
           "grade": "unique",
           "type": 5,
-          "desc": "심해 아귀의 미끼등. 정30/혼란·맹목 방지",
+          "desc": "정30/혼란·맹목 방지 ◆미끼등·낚시꾼",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17748,7 +19200,7 @@
           "name": "떨어진 별의 핵",
           "grade": "unique",
           "type": 5,
-          "desc": "수호 석상 가슴의 별. 올스탯12/신성반감",
+          "desc": "올스탯12/신성반감 ◆별빛·정화",
           "stats": {
             "atk": 12,
             "def": 12,
@@ -17843,7 +19295,7 @@
           "name": "소금 결정 반지",
           "grade": "magic",
           "type": 5,
-          "desc": "짠 결정이 박힌 반지. 정10/방-20/MP소모절반",
+          "desc": "정10/방-20/MP소모절반 ◆마나샘",
           "stats": {
             "atk": 0,
             "def": -20,
@@ -17862,7 +19314,7 @@
           "name": "렌즈 목걸이",
           "grade": "magic",
           "type": 5,
-          "desc": "눈부심을 막는 렌즈. 정20/맹목방지",
+          "desc": "정20/맹목방지 ◆보물 감각(사냥터)",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17881,7 +19333,7 @@
           "name": "선원의 부적",
           "grade": "magic",
           "type": 5,
-          "desc": "뱃사람의 무사 부적. 올스탯5/최대HP+150",
+          "desc": "올스탯5/최대HP+150 ◆전리품(사냥터)",
           "stats": {
             "atk": 5,
             "def": 5,
@@ -17900,7 +19352,7 @@
           "name": "바다뱀 비늘 망토",
           "grade": "rare",
           "type": 5,
-          "desc": "미끄러운 비늘 망토. 민38/물·바람반감/회피상승",
+          "desc": "민38/물·바람반감/회피상승 ◆반격",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -17919,7 +19371,7 @@
           "name": "인어의 눈물",
           "grade": "rare",
           "type": 5,
-          "desc": "푸른 보석. 정38/혼란·수면·침묵방지/최대MP+100",
+          "desc": "정38/혼란·수면·침묵방지/최대MP+100 ◆정화",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -18086,6 +19538,48 @@
           "note": "대족장 세트. 장인 나노무토·마나무토가 그랜드마운틴 던전 재료로 만든다. 두 벌 공격+15, 세 벌 공격+15·HP+200"
         },
         {
+          "id": 4604,
+          "name": "피느 귀걸이",
+          "grade": "craft",
+          "type": 5,
+          "desc": "피느 꿀을 굳힌 귀걸이. 정8/민8/중독방지",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 8,
+            "agi": 8
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 4611,
+          "name": "세계수 귀걸이",
+          "grade": "craft",
+          "type": 5,
+          "desc": "이슬을 담은 귀걸이. 정20/민20/상태방지10",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 20
+          },
+          "price": 2,
+          "maxPlus": null,
+          "jobs": [
+            "elf"
+          ],
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 5056,
           "name": "축제 브로치",
           "grade": "normal",
@@ -18098,6 +19592,101 @@
             "agi": 5
           },
           "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6212,
+          "name": "켈베로스 목줄",
+          "grade": "magic",
+          "type": 5,
+          "desc": "불타는 목줄. 정17/불반감 ◆선봉",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 17,
+            "agi": 0
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6213,
+          "name": "자철석 반지",
+          "grade": "magic",
+          "type": 5,
+          "desc": "정20/마비방지 ◆재료 감각(사냥터)",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6214,
+          "name": "바실리스크 눈 목걸이",
+          "grade": "rare",
+          "type": 5,
+          "desc": "굳은 눈알 목걸이. 정30/석화·맹목방지 ◆위압",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 30,
+            "agi": 0
+          },
+          "price": 28000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6216,
+          "name": "사막뱀 비늘 팔찌",
+          "grade": "magic",
+          "type": 5,
+          "desc": "뱀 비늘 팔찌. 정20/중독방지 ◆재생",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 20,
+            "agi": 0
+          },
+          "price": 12000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6223,
+          "name": "스카라베 호부",
+          "grade": "rare",
+          "type": 5,
+          "desc": "쇠똥구리 부적. 정38/석화·망각방지 ◆버팀",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 38,
+            "agi": 0
+          },
+          "price": 32000,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -20226,6 +21815,25 @@
           "note": null
         },
         {
+          "id": 636,
+          "name": "자이언트의 심장",
+          "grade": "normal",
+          "type": 8,
+          "desc": "먹으면 강해진다는 알수없는 심장",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 5000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 723,
           "name": "오우거의 체액",
           "grade": "normal",
@@ -20656,6 +22264,25 @@
             "agi": 0
           },
           "price": 1000,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 900,
+          "name": "크리스마스의 기적",
+          "grade": "normal",
+          "type": 8,
+          "desc": "주변의 가족들을 살펴보세요.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -21953,6 +23580,44 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 6052,
+          "name": "루돌프 송어 스튜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용의 특선 요리. 먹으면 모든 능력치 +1",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6053,
+          "name": "특제 루돌프 송어 스튜",
+          "grade": "craft",
+          "type": 8,
+          "desc": "이두용이 처음 만들어 준 특선 요리. 먹으면 모든 능력치 +3",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -22410,6 +24075,44 @@
             "agi": 0
           },
           "price": 800,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 890,
+          "name": "미로탈출용 실프",
+          "grade": "normal",
+          "type": 10,
+          "desc": "미로를 탈출한다.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 902,
+          "name": "크리스마스양말",
+          "grade": "normal",
+          "type": 10,
+          "desc": "산타가 준 양말. 열면 선물이 하나 들어 있다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -28104,6 +29807,25 @@
           "note": null
         },
         {
+          "id": 4612,
+          "name": "세계수의 이슬",
+          "grade": "normal",
+          "type": 0,
+          "desc": "세계수에 맺힌 이슬",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 10,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
           "id": 4851,
           "name": "대나무 낚싯대",
           "grade": "normal",
@@ -28368,6 +30090,63 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 5404,
+          "name": "데니온의 편지",
+          "grade": "normal",
+          "type": 0,
+          "desc": "데니온이 형에게 쓴 편지.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6051,
+          "name": "루돌프 송어",
+          "grade": "normal",
+          "type": 0,
+          "desc": "코끝이 빨갛게 빛나는 송어. 12월에만 잡힌다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
+        },
+        {
+          "id": 6054,
+          "name": "크리스마스 트리",
+          "grade": "normal",
+          "type": 0,
+          "desc": "산타가 준 작은 트리. 아지트 화분 자리에 놓는다",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null
         }
       ]
     },
@@ -28380,7 +30159,7 @@
           "name": "혼돈의 왕관",
           "grade": "god",
           "type": 5,
-          "desc": "카오스가 남긴 검은 왕관. 공80/방80/정80/민80",
+          "desc": "◆기술 검은 왕관의 파동·위압 공80/방80/정80/민80",
           "stats": {
             "atk": 80,
             "def": 80,
@@ -28399,7 +30178,7 @@
           "name": "자유의 면류관",
           "grade": "god",
           "type": 5,
-          "desc": "혼돈의 심장을 새로 벼린 신격의 관. 전 능력+120/HP+100/MP+500/기술 SP 절반/장착 시 금빛 오라",
+          "desc": "◆해방의 빛·각성 전능력+120/HP+100/MP+500/SP절반/금빛오라",
           "stats": {
             "atk": 120,
             "def": 120,
@@ -28418,7 +30197,7 @@
           "name": "베히모스의 대지 갑주",
           "grade": "god",
           "type": 3,
-          "desc": "대지의 신 베히모스가 두른 갑주. 방230/공30/정50/민30",
+          "desc": "방230/공30/정50/민30 ◆대지의 방벽·버팀",
           "stats": {
             "atk": 30,
             "def": 230,
@@ -28450,7 +30229,7 @@
           "name": "레비아탄의 심해 방패",
           "grade": "god",
           "type": 2,
-          "desc": "바다의 신 레비아탄이 지닌 방패. 방170/정80/민40",
+          "desc": "방170/정80/민40 ◆해일·재생",
           "stats": {
             "atk": 0,
             "def": 170,
@@ -28482,7 +30261,7 @@
           "name": "지즈의 하늘 반지",
           "grade": "god",
           "type": 5,
-          "desc": "하늘의 신 지즈의 반지. 공60/방60/정110/민110",
+          "desc": "공60/방60/정110/민110 ◆하늘 폭풍·마나샘",
           "stats": {
             "atk": 60,
             "def": 60,
