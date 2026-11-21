@@ -172,8 +172,9 @@
   // ── 아이템 ──
   var iEl = document.getElementById("items");
   if (iEl) {
-    Promise.all([load("items"), load("recipes").catch(function () { return {}; }), load("monsters").catch(function () { return null; })]).then(function (res) {
-      var d = res[0], recipes = res[1], mons = res[2];
+    Promise.all([load("items"), load("recipes").catch(function () { return {}; }), load("monsters").catch(function () { return null; }),
+      load("spawns").catch(function () { return null; })]).then(function (res) {
+      var d = res[0], recipes = res[1], mons = res[2], spawnMons = (res[3] && res[3].mons) || {};
       // 아이템 id(없으면 이름) → 떨어뜨리는 몬스터. 가린 몬스터(???)와 신급 드롭은 넣지 않는다
       var dropById = {}, dropByName = {};
       if (mons) {
@@ -183,7 +184,10 @@
           if (m.secret) return;
           (m.drops || []).forEach(function (dr) {
             if (dr.god) return;
-            var src = { name: m.name, prob: dr.prob, region: regionName[regionKey || m.region] || "", href: "monsters.html#" + monAnchor(m, regionKey) };
+            // 몬스터 찾기(spawns.html)에 리젠 자리가 있으면 그 맵으로 바로 간다 (보스·이벤트 전투는 없다)
+            var sp = regionKey ? spawnMons[String(m.name).replace(/\s+/g, "")] : null;
+            var src = { name: m.name, prob: dr.prob, region: regionName[regionKey || m.region] || "", href: "monsters.html#" + monAnchor(m, regionKey),
+              map: sp && sp.length ? "spawns.html#m-" + sp[0] : null, boss: !regionKey };
             (dropById[dr.id] = dropById[dr.id] || []).push(src);
             (dropByName[dr.name] = dropByName[dr.name] || []).push(src);
           });
@@ -245,16 +249,111 @@
       function maxLine(it) {
         return it.maxDesc ? '<p style="font-size:.85rem"><span class="pixel" style="font-size:.74rem;color:var(--gold)">+' + it.maxPlus + " 강화</span> " + esc(it.maxDesc) + "</p>" : "";
       }
+      // ── 설명을 나눠 보이기 (운영 지시 #160): 한 줄 소개 · 특성 칩(누르면 풀이) · ◆효과 칩 · 얻는 곳 요약. 이름이나 칩을 누르면 자세히 창 ──
+      var byId = {};
+      d.categories.forEach(function (c) { c.items.forEach(function (it) { byId[it.id] = it; }); });
+      function introOf(it) { return it.intro != null ? it.intro : it.desc; }
+      function specChips(it) {
+        if (!it.specs || !it.specs.length) return "";
+        return '<span class="specs">' + it.specs.map(function (s) {
+          return '<span class="spec' + (s.tip ? "" : " spec--plain") + '"' + (s.tip ? ' title="' + esc(s.tip) + '"' : "") + ">" + esc(s.t) + "</span>";
+        }).join("") + "</span>";
+      }
+      var FX_CLS = { "전용": "fx--own", "기술": "fx--skill", "일반": "fx--gen" };
+      function fxChips(it) {
+        if (!it.effects || !it.effects.length) return "";
+        return '<span class="fxs">' + it.effects.map(function (f) {
+          return '<button type="button" class="fx ' + (FX_CLS[f.kind] || "") + '" data-item="' + it.id + '" data-sec="fx" title="' + esc(f.text) + '">◆' +
+            (f.kind === "기술" ? "기술 " : "") + esc(f.name) + "</button>";
+        }).join("") + "</span>";
+      }
+      function srcBrief(it) {
+        var out = [], dr = dropSrc(it);
+        if (dr.length) out.push("드롭 " + esc(dr[0].name) + " " + dr[0].prob + "%" + (dr.length > 1 ? " 외 " + (dr.length - 1) : ""));
+        (it.sources || []).forEach(function (s) { out.push(esc(s.kind) + " " + esc(s.places[0]) + (s.places.length > 1 ? " 외 " + (s.places.length - 1) : "")); });
+        if (recipes[it.id]) out.push("제작");
+        if (!out.length && it.note) out.push(esc(it.note.length > 40 ? it.note.slice(0, 40) + "…" : it.note));
+        return out.length ? '<span class="src-brief"><span class="pixel">얻는 곳</span> ' + out.join(" · ") + "</span>" : "";
+      }
+      function moreBtn(it, label) {
+        return '<button type="button" class="item-more" data-item="' + it.id + '">' + (label || "자세히") + "</button>";
+      }
       function card(it) {
         if (it.grade === "god") {
           return '<article class="item item--secret win win--plain"><h3>??? ' + badge("god") + "</h3><p>엔딩 뒤에야 모습을 드러내는 장비.</p></article>";
         }
-        return '<article class="item win win--plain"><h3>' + esc(it.name) + " " + badge(it.grade) + " " + handChip(it) +
+        return '<article class="item win win--plain"><h3><button type="button" class="item-name" data-item="' + it.id + '">' + esc(it.name) + "</button> " + badge(it.grade) + " " + handChip(it) +
           (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h3>" +
           (it.job ? '<p class="pixel" style="font-size:.74rem;color:var(--gold)">' + esc(it.job) + " 마스터</p>" : "") +
-          "<p>" + esc(it.desc) + "</p>" + stats(it.stats) + maxLine(it) + jobLine(it) + recipe(recipes[it.id]) + dropFrom(it) +
-          (it.note ? '<p class="dim">' + esc(it.note) + "</p>" : "") + "</article>";
+          "<p>" + esc(introOf(it)) + "</p>" + stats(it.stats) + specChips(it) + fxChips(it) + jobLine(it) +
+          '<p class="item__foot">' + srcBrief(it) + moreBtn(it) + "</p></article>";
       }
+
+      // ── 자세히 창 ──
+      var STAT_NAME = { atk: "공격", def: "방어", spi: "정신", agi: "민첩" };
+      var idlg = document.createElement("dialog");
+      idlg.className = "map-dlg item-dlg win";
+      idlg.setAttribute("aria-labelledby", "item-dlg-title");
+      document.body.appendChild(idlg);
+      function sec(title, body) { return body ? '<section class="idlg__sec"><h3 class="pixel">' + title + "</h3>" + body + "</section>" : ""; }
+      function detail(it) {
+        var st = it.stats || {};
+        var statRows = Object.keys(STAT_NAME).filter(function (k) { return st[k]; }).map(function (k) {
+          return '<span class="idlg__stat"><span class="dim">' + STAT_NAME[k] + '</span> <b class="pixel">' + (st[k] > 0 ? "+" : "") + st[k] + "</b></span>";
+        }).join("");
+        var stats = statRows ? '<div class="idlg__stats">' + statRows + "</div>" : "";
+        if (it.maxDesc) stats += '<p class="idlg__max"><span class="pixel gold">+' + it.maxPlus + " 강화</span> " + esc(it.maxDesc) + "</p>";
+        var specs = (it.specs || []).map(function (s) {
+          return "<li><span class=\"spec" + (s.tip ? "" : " spec--plain") + '">' + esc(s.t) + "</span> " + (s.tip ? esc(s.tip) : "") + "</li>";
+        }).join("");
+        var fx = (it.effects || []).map(function (f, i) {
+          var mx = it.effectsMax && it.effectsMax[i] && it.effectsMax[i].text !== f.text ? it.effectsMax[i] : null;
+          return '<li class="idlg__fx"><p><span class="fx ' + (FX_CLS[f.kind] || "") + '">◆' + esc(f.name) + '</span> <span class="fx-kind pixel">' +
+            esc({ "전용": "전용 효과", "기술": "전용 기술", "일반": "일반 효과" }[f.kind] || f.kind) + "</span></p><p>" + esc(f.text) + "</p>" +
+            (mx ? '<p class="idlg__max"><span class="pixel gold">+' + it.maxPlus + " 강화</span> " + esc(mx.text) + "</p>" : "") + "</li>";
+        }).join("");
+        var drops = dropSrc(it).map(function (s) {
+          return "<tr><td><a href=\"" + esc(s.href) + '">' + esc(s.name) + "</a>" + (s.boss ? ' <span class="pixel small dim">보스</span>' : "") + '</td><td class="num">' + s.prob + "%</td><td>" +
+            esc(s.region) + "</td><td>" + (s.map ? '<a class="pixel small" href="' + esc(s.map) + '">맵에서 보기</a>' : "") + "</td></tr>";
+        }).join("");
+        var where = (drops ? '<div class="table-scroll"><table class="table idlg__drops"><thead><tr><th>드롭 몬스터</th><th class="num">확률</th><th>사냥터</th><th></th></tr></thead><tbody>' + drops + "</tbody></table></div>" : "") +
+          (it.sources || []).map(function (s) {
+            return '<p class="idlg__src"><span class="pixel gold">' + esc(s.kind) + "</span> " + s.places.map(esc).join(", ") + "</p>";
+          }).join("") + recipe(recipes[it.id]) + (it.note ? '<p class="idlg__note"><span class="pixel gold">참고</span> ' + esc(it.note) + "</p>" : "");
+        var jobs = jobChips(it);
+        idlg.innerHTML = '<div class="map-dlg__head"><h2 id="item-dlg-title">' + esc(it.name) + " " + badge(it.grade) + " " + handChip(it) +
+          (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h2>" +
+          '<button type="button" class="map-dlg__close" aria-label="닫기">×</button></div>' +
+          (it.job ? '<p class="pixel gold small">' + esc(it.job) + " 마스터</p>" : "") +
+          '<p class="idlg__intro">' + esc(introOf(it)) + "</p>" + stats +
+          sec("특성", specs ? '<ul class="idlg__specs">' + specs + "</ul>" : "") +
+          sec("특수 효과", fx ? '<ul class="idlg__fxs">' + fx + "</ul>" + (it.maxPlus && it.effects.some(function (f) { return f.kind === "전용"; }) ? '<p class="dim small">전용 효과는 강화 한 단계마다 확률과 수치가 10%씩 커진다.</p>' : "") : "") +
+          sec("착용", jobs ? '<p class="item__jobs">' + jobs + "</p>" : "") +
+          sec("얻는 곳", where || '<p class="dim">아직 정리되지 않았다.</p>');
+      }
+      function openItem(id, focus) {
+        var it = byId[id];
+        if (!it || it.grade === "god") return;
+        detail(it);
+        if (idlg.showModal) { if (!idlg.open) idlg.showModal(); } else idlg.setAttribute("open", "");
+        idlg.scrollTop = 0;
+        if (focus === "fx") { var f = idlg.querySelector(".idlg__fxs"); if (f) f.scrollIntoView({ block: "nearest" }); }
+        if (history.replaceState) history.replaceState(null, "", "#item-" + id);
+      }
+      function closeItem() {
+        if (idlg.close) idlg.close(); else idlg.removeAttribute("open");
+      }
+      idlg.addEventListener("close", function () { if (/^#item-/.test(location.hash) && history.replaceState) history.replaceState(null, "", location.pathname + location.search); });
+      idlg.addEventListener("click", function (e) {
+        if (e.target === idlg || e.target.closest(".map-dlg__close")) closeItem();
+      });
+      iEl.addEventListener("click", function (e) {
+        if (e.target.closest("a") || e.target.closest("th")) return;
+        var b = e.target.closest("[data-item]");
+        if (b) { openItem(+b.dataset.item, b.dataset.sec); return; }
+        var tr = e.target.closest('tr[id^="row-"]');     // 리스트에서는 줄 아무 데나 눌러도 연다
+        if (tr && !window.getSelection().toString()) openItem(+tr.id.slice(4));
+      });
       document.getElementById("grades").innerHTML = d.grades.map(function (g) {
         return "<tr><th>" + badge(g.key) + "</th><td>" + esc(g.desc) + "</td></tr>";
       }).join("") + "<tr><th>" + badge("god") + "</th><td>???</td></tr>";
@@ -297,7 +396,7 @@
           html: function (r) {
             var it = r.it;
             if (secret(r)) return "???";
-            return "<strong>" + esc(it.name) + "</strong> " + handChip(it) + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
+            return '<button type="button" class="item-name" data-item="' + it.id + '"><strong>' + esc(it.name) + "</strong></button> " + handChip(it) + (it.maxPlus ? ' <span class="dim pixel small">+' + it.maxPlus + "까지</span>" : "") +
               (it.job ? '<br><span class="pixel small gold">' + esc(it.job) + " 마스터</span>" : "");
           } },
         { key: "grade", label: "등급", num: true, get: function (r) { return rank[r.it.grade] == null ? 0 : rank[r.it.grade]; }, html: function (r) { return badge(r.it.grade); } },
@@ -310,7 +409,7 @@
         { key: "desc", label: "설명", sort: false, wide: true,
           html: function (r) {
             if (secret(r)) return "엔딩 뒤에야 모습을 드러내는 장비.";
-            return esc(r.it.desc) + (r.it.maxDesc ? '<br><span class="pixel small gold">+' + r.it.maxPlus + " 강화</span> " + esc(r.it.maxDesc) : "") + (r.it.note ? '<br><span class="dim">' + esc(r.it.note) + "</span>" : "") + recipe(recipes[r.it.id]) + dropFrom(r.it);
+            return esc(introOf(r.it)) + specChips(r.it) + fxChips(r.it) + srcBrief(r.it);
           } }
       ];
       bindSort(iEl, cols, sort, render);
@@ -331,7 +430,8 @@
             if (gradeSel.value && it.grade !== gradeSel.value) return;
             if (jobSel.value && (!isEquip(it) || (it.jobs && it.jobs.indexOf(jobSel.value) < 0))) return;
             if (handSel.value && !!it.twoHanded !== (handSel.value === "two")) return;
-            if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "") + " " + dropSrc(it).map(function (s) { return s.name; }).join(" ")).toLowerCase().indexOf(word) < 0)) return;
+            if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "") + " " + dropSrc(it).map(function (s) { return s.name + " " + s.region; }).join(" ") + " " +
+                (it.effects || []).map(function (f) { return f.name + " " + f.text; }).join(" ") + " " + (it.sources || []).map(function (s) { return s.places.join(" "); }).join(" ") + " " + (it.note || "")).toLowerCase().indexOf(word) < 0)) return;
             rows.push({ it: it, cat: c.name });
           });
         });
@@ -339,7 +439,7 @@
         document.getElementById("item-count").textContent = word ? "\"" + q.value.trim() + "\" " + rows.length + "개" : rows.length + "개";
         if (getView() === "list") {
           iEl.className = "item-table";
-          iEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort, "data-table--item");
+          iEl.innerHTML = dataTable(cols, sortRows(rows, cols, sort), sort, "data-table--item", function (r) { return secret(r) ? null : "row-" + r.it.id; });
         } else {
           iEl.className = "item-list";
           iEl.innerHTML = rows.slice(0, 400).map(function (r) { return card(r.it); }).join("") +
@@ -355,6 +455,9 @@
       handSel.addEventListener("change", render);
       viewToggle(render);
       render();
+      // items.html#item-<번호> 로 오면 그 아이템 창을 연다 (공유용)
+      var hm = /^#item-(\d+)$/.exec(location.hash);
+      if (hm) openItem(+hm[1]);
     });
   }
 

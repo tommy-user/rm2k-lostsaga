@@ -421,3 +421,53 @@ tr.is-target td { animation: target-glow 2.4s ease-out 1; }
 .embed .sp-legend { display: none; }
 .embed .sp-grid { display: flex; flex-direction: column; align-items: stretch; }
 .embed .sp-main { order: -1; }
+
+/* ── 아이템 도감: 특성·효과 칩, 얻는 곳 요약, 자세히 창 (운영 지시 #160) ── */
+.specs, .fxs { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 0; }
+.spec { display: inline-block; font-family: var(--pixel); font-size: .7rem; line-height: 1.5; padding: 0 6px; border-radius: 3px; color: #cfe0ff; background: rgba(79, 136, 201, .18); border: 1px solid rgba(143, 180, 230, .45); cursor: help; white-space: nowrap; }
+.spec--plain { cursor: default; color: var(--ink); background: none; border-color: rgba(201, 211, 242, .35); }
+.fx { font-family: var(--pixel); font-size: .72rem; line-height: 1.5; padding: 1px 7px; border-radius: 3px; cursor: pointer; white-space: nowrap; color: #f6dc97; background: rgba(226, 192, 107, .12); border: 1px solid rgba(226, 192, 107, .6); }
+.fx--gen { color: #d9e4c5; background: rgba(150, 190, 120, .1); border-color: rgba(160, 200, 130, .5); }
+.fx--skill { color: #f0b8e0; background: rgba(180, 82, 143, .15); border-color: rgba(220, 130, 190, .55); }
+button.fx:hover, button.fx:focus-visible { filter: brightness(1.25); outline: 1px solid var(--focus); }
+.src-brief { display: block; margin-top: 6px; font-size: .8rem; color: var(--ink-dim); line-height: 1.6; }
+.src-brief .pixel { color: var(--gold); font-size: .7rem; margin-right: 4px; }
+.item__foot { display: flex; align-items: flex-end; gap: 10px; justify-content: space-between; margin: 8px 0 0 !important; }
+.item__foot .src-brief { margin: 0; }
+.item-more { flex: none; font-family: var(--pixel); font-size: .72rem; color: var(--gold); background: none; border: 1px solid rgba(226, 192, 107, .55); border-radius: 3px; padding: 3px 9px; cursor: pointer; }
+.item-more:hover, .item-more:focus-visible { background: rgba(226, 192, 107, .14); }
+.item-name { all: unset; cursor: pointer; color: inherit; font: inherit; }
+.item-name:hover, .item-name:focus-visible { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.data-table--item tbody tr[id] { cursor: pointer; }
+.data-table--item tbody tr[id]:hover td { background: rgba(226, 192, 107, .05); }
+.item-dlg { width: min(680px, calc(100vw - 32px)); padding: 16px 20px 20px; }
+.item-dlg h2 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.item-dlg .small { font-size: .75rem; }
+.item-dlg .gold { color: var(--gold); }
+.idlg__intro { margin: 0 0 10px; color: var(--ink-dim); }
+.idlg__stats { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 6px; }
+.idlg__stat b { font-weight: normal; color: var(--ink); font-size: .95rem; }
+.idlg__max { margin: 4px 0 0; font-size: .85rem; color: var(--ink-dim); }
+.idlg__sec { border-top: 1px dashed rgba(201, 211, 242, .25); margin-top: 14px; padding-top: 10px; }
+.idlg__sec > h3 { font-size: .78rem; color: var(--gold); margin: 0 0 8px; font-weight: normal; letter-spacing: .04em; }
+.idlg__specs, .idlg__fxs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.idlg__specs li { font-size: .9rem; display: flex; gap: 8px; align-items: baseline; }
+.idlg__specs .spec { flex: none; cursor: default; }
+.idlg__fx p { margin: 0; font-size: .92rem; line-height: 1.6; }
+.idlg__fx p + p { margin-top: 2px; }
+.idlg__fx .fx { cursor: default; font-size: .8rem; }
+.fx-kind { font-size: .68rem; color: var(--ink-dim); margin-left: 4px; }
+.idlg__drops { font-size: .88rem; margin: 0 0 8px; }
+.idlg__drops th { font-family: var(--pixel); font-size: .72rem; font-weight: normal; color: var(--gold); text-align: left; }
+.idlg__drops td, .idlg__drops th { padding: 5px 8px; }
+.idlg__drops .num { text-align: right; font-family: var(--pixel); }
+.idlg__drops a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(226, 192, 107, .6); text-underline-offset: 2px; }
+.idlg__drops a.pixel { color: var(--gold); white-space: nowrap; }
+.idlg__src { margin: 6px 0 0; font-size: .9rem; line-height: 1.6; }
+.idlg__src .pixel { font-size: .72rem; margin-right: 6px; }
+.idlg__note { margin: 8px 0 0; font-size: .88rem; color: var(--ink-dim); line-height: 1.6; }
+.item-dlg .recipe { margin-top: 8px !important; font-size: .88rem !important; }
+@media (max-width: 640px) {
+  .item-dlg { padding: 12px 14px 16px; }
+  .idlg__drops td:nth-child(4) { white-space: nowrap; }
+}
