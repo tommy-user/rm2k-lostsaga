@@ -156,16 +156,62 @@
         '<table class="table"><tbody>' + learn.map(function (k) {
           return '<tr><td class="pixel">Lv' + k.lv + "</td><th>" + esc(k.name) + '</th><td class="dim">' + esc(k.desc) + "</td></tr>";
         }).join("") + "</tbody></table></details>";
+
+      // ── 몬스터 맹약 탭 ──
+      var t = d.taming, tEl = document.getElementById("taming");
+      var tBtn = tabs.querySelector('[data-k="taming"]');
+      if (!t || !tEl) { if (tBtn) tBtn.hidden = true; }
+      else {
+        var kinds = ["전체", "모든 직업", "테이머", "네크로맨서"];
+        function tcard(m) {
+          var s = m.stats || {};
+          return '<article class="guard win tame" data-kind="' + esc(m.kind) + '" id="tame-' + m.actorId + '">' +
+            '<div class="guard__face"><img src="assets/img/taming/' + m.actorId + '.png" alt="' + esc(m.name) + ' 얼굴" loading="lazy">' +
+            '<img class="guard__sprite px" src="assets/img/taming/' + m.actorId + '_sprite.png" alt="" loading="lazy">' +
+            '<img class="tame__evo" src="assets/img/taming/' + m.actorId + '_evo.png" alt="' + esc(m.evo) + ' 얼굴" loading="lazy" title="진화: ' + esc(m.evo) + '"></div>' +
+            "<div><h3>" + esc(m.name) + ' <span class="tame__to">→ ' + esc(m.evo) + "</span></h3>" +
+            '<p class="guard__job"><span class="tag tame__kind">' + esc(m.kind) + "</span> " +
+            '<span class="dim">' + stat(s) + "</span></p>" +
+            "<p>나오는 곳 " + esc(m.where) + "<br>맹약 Lv" + m.startLv + " · 진화 Lv" + m.evoLv + "</p></div>" +
+            '<details class="guard__learn"><summary class="pixel">배우는 기술 ' + m.skills.length + "</summary>" +
+            '<table class="table"><tbody>' + m.skills.map(function (k) {
+              return '<tr><td class="pixel">' + (k.evo ? "진화" : "Lv" + k.lv) + "</td><th>" + esc(k.name) + '</th><td class="dim">' +
+                esc(k.desc) + (k.mp ? " (MP " + k.mp + ")" : "") + "</td></tr>";
+            }).join("") + "</tbody></table></details></article>";
+        }
+        tEl.innerHTML = '<p class="lede">' + esc(t.how) + "</p><p>" + esc(t.rule) + "</p><p>" + esc(t.who) + "</p>" +
+          '<p class="dim">' + esc(t.skillNote) + "</p>" +
+          '<div class="item-tabs tame__filter" role="tablist" aria-label="맹약할 수 있는 직업">' + kinds.map(function (k, i) {
+            return '<button type="button" role="tab" aria-selected="' + (i ? "false" : "true") + '" data-kind="' + esc(k) + '">' + esc(k) +
+              (i ? " " + t.species.filter(function (m) { return m.kind === k; }).length : "") + "</button>";
+          }).join("") + "</div>" +
+          '<div class="guards">' + t.species.map(tcard).join("") + "</div>";
+        var filt = tEl.querySelector(".tame__filter");
+        filt.addEventListener("click", function (e) {
+          var btn = e.target.closest("button");
+          if (!btn) return;
+          filt.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-selected", x === btn ? "true" : "false"); });
+          tEl.querySelectorAll(".tame").forEach(function (c) { c.hidden = btn.dataset.kind !== "전체" && c.dataset.kind !== btn.dataset.kind; });
+        });
+      }
+      function show(k) {
+        tabs.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-selected", x.dataset.k === k ? "true" : "false"); });
+        gEl.hidden = k !== "guardians";
+        bEl.hidden = k !== "bertz";
+        if (tEl) tEl.hidden = k !== "taming";
+        document.getElementById("hire-title").hidden = k !== "guardians";
+        hireEl.hidden = k !== "guardians";
+      }
       tabs.addEventListener("click", function (e) {
         var btn = e.target.closest("button");
-        if (!btn) return;
-        var isB = btn.dataset.k === "bertz";
-        tabs.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-selected", x === btn ? "true" : "false"); });
-        gEl.hidden = isB;
-        bEl.hidden = !isB;
-        document.getElementById("hire-title").hidden = isB;
-        hireEl.hidden = isB;
+        if (btn) show(btn.dataset.k);
       });
+      // guardians.html#taming 으로 바로 연다
+      if (location.hash === "#taming" || /^#tame-/.test(location.hash)) {
+        show("taming");
+        var go = document.getElementById(location.hash.slice(1));
+        if (go && go !== tEl) go.scrollIntoView();
+      }
     });
   }
 
