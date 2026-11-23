@@ -244,7 +244,7 @@
         Object.keys(dropById).forEach(function (k) { dropById[k].sort(byProb); });
         Object.keys(dropByName).forEach(function (k) { dropByName[k].sort(byProb); });
       }
-      function dropSrc(it) { return it.grade === "god" ? [] : dropById[it.id] || dropByName[it.name] || []; }
+      function dropSrc(it) { return dropById[it.id] || dropByName[it.name] || []; }
       function dropFrom(it) {
         var src = dropSrc(it);
         if (!src.length) return "";
@@ -325,9 +325,6 @@
         return '<button type="button" class="item-more" data-item="' + it.id + '">' + (label || "자세히") + "</button>";
       }
       function card(it) {
-        if (it.grade === "god") {
-          return '<article class="item item--secret win win--plain"><h3>??? ' + badge("god") + "</h3><p>엔딩 뒤에야 모습을 드러내는 장비.</p></article>";
-        }
         return '<article class="item win win--plain"><h3><button type="button" class="item-name" data-item="' + it.id + '">' + esc(it.name) + "</button> " + badge(it.grade) + " " + handChip(it) +
           (it.maxPlus ? ' <span class="dim pixel" style="font-size:.7rem">+' + it.maxPlus + "까지 강화</span>" : "") + "</h3>" +
           (it.job ? '<p class="pixel" style="font-size:.74rem;color:var(--gold)">' + esc(it.job) + " 마스터</p>" : "") +
@@ -379,7 +376,7 @@
       }
       function openItem(id, focus) {
         var it = byId[id];
-        if (!it || it.grade === "god") return;
+        if (!it) return;
         detail(it);
         if (idlg.showModal) { if (!idlg.open) idlg.showModal(); } else idlg.setAttribute("open", "");
         idlg.scrollTop = 0;
@@ -402,7 +399,7 @@
       });
       document.getElementById("grades").innerHTML = d.grades.map(function (g) {
         return "<tr><th>" + badge(g.key) + "</th><td>" + esc(g.desc) + "</td></tr>";
-      }).join("") + "<tr><th>" + badge("god") + "</th><td>???</td></tr>";
+      }).join("") + "<tr><th>" + badge("god") + "</th><td>엔딩 뒤에 얻는 장비.</td></tr>";
       document.getElementById("upgrade").textContent = d.upgrade.desc;
       var tabs = document.getElementById("item-tabs");
       var q = document.getElementById("item-q");
@@ -431,7 +428,7 @@
       catSel.innerHTML = [{ key: "all", name: "모든 부위" }].concat(parts).map(function (c) {
         return '<option value="' + esc(c.key) + '">' + esc(c.name) + "</option>";
       }).join("");
-      function secret(r) { return r.it.grade === "god"; }
+      function secret(r) { return false; }
       function stat(k) {
         return { key: k, label: { atk: "공", def: "방", spi: "정", agi: "민" }[k], num: true, right: true,
           get: function (r) { return secret(r) || !r.it.stats || !r.it.stats[k] ? null : r.it.stats[k]; },
@@ -476,7 +473,7 @@
             if (gradeSel.value && it.grade !== gradeSel.value) return;
             if (jobSel.value && (!isEquip(it) || (it.jobs && it.jobs.indexOf(jobSel.value) < 0))) return;
             if (handSel.value && !!it.twoHanded !== (handSel.value === "two")) return;
-            if (word && (it.grade === "god" || (it.name + " " + (it.desc || "") + " " + (it.job || "") + " " + dropSrc(it).map(function (s) { return s.name + " " + s.region; }).join(" ") + " " +
+            if (word && ((it.name + " " + (it.desc || "") + " " + (it.job || "") + " " + dropSrc(it).map(function (s) { return s.name + " " + s.region; }).join(" ") + " " +
                 (it.effects || []).map(function (f) { return f.name + " " + f.text; }).join(" ") + " " + (it.sources || []).map(function (s) { return s.places.join(" "); }).join(" ") + " " + (it.note || "")).toLowerCase().indexOf(word) < 0)) return;
             rows.push({ it: it, cat: c.name });
           });
