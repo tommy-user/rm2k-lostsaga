@@ -282,9 +282,25 @@
         if (it.type !== 1) return "";
         return it.twoHanded ? '<span class="hand hand--two">양손</span>' : '<span class="hand hand--one">한손</span>';
       }
+      // 가디언(용병) 착용 (운영 지시 #216). it.guardians 가 없으면 열두 명 다, [] 면 아무도 못 낀다
+      var guardName = {};
+      (d.guardians || []).forEach(function (g) { guardName[g.key] = g.name; });
+      var guardTotal = (d.guardians || []).length;
+      function guardChips(it) {
+        if (!isEquip(it) || !guardTotal) return null;
+        var gs = it.guardians;
+        if (!gs) return '<span class="job job--all">모든 가디언</span>';
+        if (!gs.length) return '<span class="dim small">없음</span>';
+        if (gs.length >= guardTotal - 3) {
+          var no = (d.guardians || []).filter(function (g) { return gs.indexOf(g.key) < 0; });
+          return '<span class="job job--all">대부분</span> <span class="dim small">' + no.map(function (g) { return esc(g.name); }).join("·") + " 제외</span>";
+        }
+        return gs.map(function (k) { return '<span class="job job--guard">' + esc(guardName[k] || k) + "</span>"; }).join(" ");
+      }
       function jobLine(it) {
-        var c = jobChips(it);
-        return c ? '<p class="item__jobs"><span class="pixel">착용</span> ' + c + "</p>" : "";
+        var c = jobChips(it), g = guardChips(it);
+        return (c ? '<p class="item__jobs"><span class="pixel">착용</span> ' + c + "</p>" : "") +
+          (g ? '<p class="item__jobs"><span class="pixel">가디언</span> ' + g + "</p>" : "");
       }
       function recipe(r) {
         if (!r || !r.materials || !r.materials.length) return "";
@@ -372,6 +388,7 @@
           sec("특성", specs ? '<ul class="idlg__specs">' + specs + "</ul>" : "") +
           sec("특수 효과", fx ? '<ul class="idlg__fxs">' + fx + "</ul>" + (it.maxPlus && it.effects.some(function (f) { return f.kind === "전용"; }) ? '<p class="dim small">전용 효과는 강화 한 단계마다 확률과 수치가 10%씩 커진다.</p>' : "") : "") +
           sec("착용", jobs ? '<p class="item__jobs">' + jobs + "</p>" : "") +
+          sec("착용 가디언", guardChips(it) ? '<p class="item__jobs">' + guardChips(it) + "</p>" : "") +
           sec("얻는 곳", where || '<p class="dim">아직 정리되지 않았다.</p>');
       }
       function openItem(id, focus) {
@@ -415,7 +432,9 @@
       }).join("") + '<option value="god">신급</option>';
       jobSel.innerHTML = '<option value="">모든 직업</option>' + (d.jobs || []).map(function (j) {
         return '<option value="' + esc(j.key) + '">' + esc(j.name) + " 착용</option>";
-      }).join("");
+      }).join("") + (d.guardians && d.guardians.length ? '<optgroup label="가디언">' + d.guardians.map(function (g) {
+        return '<option value="g' + esc(g.key) + '">' + esc(g.name) + " 착용</option>";
+      }).join("") + "</optgroup>" : "");
       var rank = {};
       d.grades.forEach(function (g, i) { rank[g.key] = i; });
       rank.god = 99;
@@ -448,7 +467,11 @@
         { key: "price", label: "가격", num: true, right: true, get: function (r) { return secret(r) || !r.it.price ? null : r.it.price; },
           html: function (r) { return secret(r) || !r.it.price ? dash() : r.it.price.toLocaleString(); } },
         { key: "jobs", label: "착용", sort: false, wide: true,
-          html: function (r) { return secret(r) ? "" : jobChips(r.it) || ""; } },
+          html: function (r) {
+            if (secret(r)) return "";
+            var g = guardChips(r.it);
+            return (jobChips(r.it) || "") + (g ? '<br><span class="pixel small dim">가디언</span> ' + g : "");
+          } },
         { key: "desc", label: "설명", sort: false, wide: true,
           html: function (r) {
             if (secret(r)) return "엔딩 뒤에야 모습을 드러내는 장비.";
@@ -471,7 +494,11 @@
           c.items.forEach(function (it) {
             if (pool) { if (seen[it.id]) return; seen[it.id] = 1; }
             if (gradeSel.value && it.grade !== gradeSel.value) return;
-            if (jobSel.value && (!isEquip(it) || (it.jobs && it.jobs.indexOf(jobSel.value) < 0))) return;
+            if (jobSel.value) {
+              var gk = jobSel.value.charAt(0) === "g" ? jobSel.value.slice(1) : null;
+              var ks = gk ? it.guardians : it.jobs;
+              if (!isEquip(it) || (ks && ks.indexOf(gk || jobSel.value) < 0)) return;
+            }
             if (handSel.value && !!it.twoHanded !== (handSel.value === "two")) return;
             if (word && ((it.name + " " + (it.desc || "") + " " + (it.job || "") + " " + dropSrc(it).map(function (s) { return s.name + " " + s.region; }).join(" ") + " " +
                 (it.effects || []).map(function (f) { return f.name + " " + f.text; }).join(" ") + " " + (it.sources || []).map(function (s) { return s.places.join(" "); }).join(" ") + " " + (it.note || "")).toLowerCase().indexOf(word) < 0)) return;

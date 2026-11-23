@@ -222,6 +222,7 @@
 /* ── 착용 직업 ── */
 .job { display: inline-block; font-family: var(--pixel); font-size: .68rem; line-height: 1.5; padding: 0 6px; margin: 1px 2px 1px 0; border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; color: var(--ink); white-space: nowrap; }
 .job--all { color: var(--gold); border-color: rgba(226, 192, 107, .6); }
+.job--guard { border-style: dashed; }
 .item__jobs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 4px; }
 .item__jobs > .pixel { color: var(--gold); font-size: .72rem; margin-right: 4px; }
 .data-table td.region { margin: 0; scroll-margin-top: 0; }
