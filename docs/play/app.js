@@ -1,5 +1,5 @@
 // 런처 화면: 홈(세이브 고르기) → 플레이(플레이어 + 화면 버튼).
-import { SaveSync, readLocalSaves } from "./sync.js";
+import { SaveSync, readLocalSaves, getVersionInfo } from "./sync.js";
 import { parseLsd, renameLeader, clearParallelCE, setVariable, forPc, VAR_TODAY, nameNormal, NAME_CHARS, NAME_MAX } from "./lsd.js";
 import { registerWorker, prepareFiles, preloadGraphics, installPreload } from "./files.js";
 import { JOBS, resolveLook, drawSprite, drawFace, clearArt, lookLine, growthText, playTime } from "./look.js";
@@ -41,7 +41,8 @@ const [artId, artName] = ARTS[Math.floor(Math.random() * ARTS.length)];
 $("#art-img").src = `../assets/img/illust/${artId}.webp`;
 $("#art-name").textContent = artName;
 
-fetch("version.json", { cache: "no-cache" }).then((r) => r.json()).then((v) => {
+getVersionInfo().then((v) => {
+  if (!v) return;
   $("#version").textContent = v.game;
   $("#version").title = `게임 ${v.game} · ${new Date(v.built).toLocaleDateString("ko-KR")} 배포`;
   $("#version").hidden = false;
@@ -107,6 +108,7 @@ function download(slot, bytes, name = `Save${String(slot).padStart(2, "0")}.lsd`
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
 
+let homeOpened = false;  // 홈 버튼이 처음 켜졌는지 (시작 기록)
 let saves = [];  // 이 기기의 세이브 [{slot, bytes, time, sum}]
 
 async function renderHome() {
@@ -135,6 +137,10 @@ async function renderHome() {
   }
   $("#btn-new").hidden = !latest;
   for (const b of [cont, $("#btn-new"), $("#btn-title")]) b.disabled = false;
+  if (!homeOpened) {
+    homeOpened = true;
+    sync.logEvent("open", { detail: filesState, ms: performance.now() });
+  }
 
   renderAccount(saves.length);
   await loadRep();
@@ -774,8 +780,9 @@ addEventListener("hashchange", route);
 
 async function newGame() {
   if (started) return;
+  const clicked = performance.now();
   if (!offline) await sync.prepareNewGame();
-  launch("&new-game", "새 게임");
+  launch("&new-game", "새 게임", null, clicked);
 }
 $("#btn-new").onclick = newGame;
 $("#btn-title").onclick = () => launch("", "타이틀 화면");
@@ -842,7 +849,7 @@ function pcDownloadFromEngine(player) {
   };
 }
 
-async function launch(args, title, save = null) {
+async function launch(args, title, save = null, clicked = performance.now()) {
   if (started) return;
   started = true;
   if (save) lastSave = { slot: save.slot, time: new Date(save.time).getTime() };
@@ -852,6 +859,7 @@ async function launch(args, title, save = null) {
   scrollTo(0, 0);  // 홈에서 내려 둔 스크롤이 남으면 모바일에서 터치 위치가 어긋난다
   pad.apply();
   // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다. 엔진은 exe 크기로 판별하지 못해 직접 정한다.
+  await worker;  // 처음 연 페이지는 Service Worker 가 붙어야 받아 둔 파일을 플레이어에 준다
   installPreload(await graphics);
   if (!offline) await sync.syncClock();
   history.replaceState(null, "", `?game=lostsaga&engine=rpg2kv150&config-path=${CONFIG_DIR}${args}${dev}`);
@@ -868,6 +876,7 @@ async function launch(args, title, save = null) {
   player.initApi();
   pcDownloadFromEngine(player);
   window.easyrpgPlayer = player;
+  sync.logEvent("play", { detail: args.includes("load-game-id") ? "continue" : args.includes("new-game") ? "new" : "title", ms: performance.now() - clicked });
   if (!offline) sync.watch(player.FS);
   holdFast();
   canvas.focus();
@@ -1173,33 +1182,63 @@ showKeys();
 
 const mb = (n) => (n / 1e6).toFixed(1);
 
+// 받아 둔 파일 상태: cached(그대로) | update(바뀐 것을 받음) | first(처음 받음). 시작 기록에 쓴다.
+let filesState = "cached";
+
+// 게임을 켤 수 있을 때까지(시작에 필요한 묶음) 기다린다. 그 앞에 받을 것이 있으면 받는 창을 띄운다.
+// 나머지 묶음은 뒤에서 이어 받고, 홈 시작 카드 아래 한 줄로 보인다.
 async function getFiles() {
-  await registerWorker();
   const box = $("#loading");
   const bar = $("#load-bar");
+  const rest = $("#rest-load");
+  const version = await getVersionInfo();
   for (;;) {
+    let blocking = false;
+    let t0 = 0;
+    const { first, all } = prepareFiles({
+      version,
+      onStart(total, count, isFirst, needFirst) {
+        filesState = isFirst ? "first" : "update";
+        t0 = performance.now();
+        sync.logEvent("files_start", { detail: filesState, bytes: total });
+        $("#load-title").textContent = isFirst ? "게임 파일 받는 중" : "업데이트 받는 중";
+        $("#load-note").textContent = isFirst
+          ? "처음 한 번만 받습니다. 다음부터는 바뀐 파일만 받고, 인터넷 없이도 열립니다."
+          : `바뀐 파일 ${count}개를 받습니다.`;
+        $("#load-retry").hidden = true;
+        box.dataset.total = total;
+        blocking = needFirst;
+        box.hidden = !needFirst;
+        rest.hidden = needFirst;
+      },
+      onProgress(done, total) {
+        const pct = Math.min(100, (done / total) * 100);
+        bar.style.width = `${pct}%`;
+        bar.parentElement.setAttribute("aria-valuenow", Math.round(pct));
+        $("#load-size").textContent = `${mb(done)} / ${mb(total)}MB`;
+        rest.lastElementChild.textContent = `${mb(done)} / ${mb(total)}MB`;
+      },
+    });
     try {
-      const r = await prepareFiles({
-        onStart(total, count, first) {
-          $("#load-title").textContent = first ? "게임 파일 받는 중" : "업데이트 받는 중";
-          $("#load-note").textContent = first
-            ? "처음 한 번만 받습니다. 다음부터는 바뀐 파일만 받고, 인터넷 없이도 열립니다."
-            : `바뀐 파일 ${count}개를 받습니다.`;
-          $("#load-retry").hidden = true;
-          box.dataset.total = total;
-          box.hidden = false;
-        },
-        onProgress(done, total) {
-          const pct = Math.min(100, (done / total) * 100);
-          bar.style.width = `${pct}%`;
-          bar.parentElement.setAttribute("aria-valuenow", Math.round(pct));
-          $("#load-size").textContent = `${mb(done)} / ${mb(total)}MB`;
-        },
+      const r = await first;
+      if (r === "missing") throw new Error("인터넷에 연결해야 게임 파일을 받을 수 있습니다.");
+      if (t0) sync.logEvent("files_first", { ms: performance.now() - t0 });
+      // 남은 묶음은 홈을 보는 동안·게임 중에 이어 받는다. 실패하면 다음에 열 때 다시 받는다.
+      if (blocking) rest.hidden = false;
+      all.then(() => {
+        rest.hidden = true;
+        if (t0) sync.logEvent("files_done", { ms: performance.now() - t0 });
+      }, (e) => {
+        console.warn("[launcher] files (rest)", e);
+        rest.hidden = true;
+        sync.logEvent("files_fail", { detail: "rest" });
       });
-      if (r !== "missing") break;
-      throw new Error("인터넷에 연결해야 게임 파일을 받을 수 있습니다.");
+      break;
     } catch (e) {
+      all.catch(() => {});
       console.warn("[launcher] files", e);
+      sync.logEvent("files_fail", { detail: "first" });
+      rest.hidden = true;
       $("#load-title").textContent = "게임 파일을 받지 못했습니다";
       $("#load-note").textContent = navigator.onLine ? "연결을 확인하고 다시 시도해 주세요. 받은 부분은 남아 있습니다." : "인터넷에 연결한 뒤 다시 시도해 주세요.";
       $("#load-retry").hidden = false;
@@ -1212,6 +1251,8 @@ async function getFiles() {
 
 // ---- 시작 ----
 
+// Service Worker 는 게임을 켤 때만 있으면 된다. 홈은 기다리지 않는다.
+const worker = registerWorker();
 await Promise.all([getFiles(), offline ? setStatus("offline", "오프라인") : sync.start()]);
 // 홈을 보는 동안 그림 파일을 메모리에 올려 둔다 (게임을 시작할 때 기다린다).
 const graphics = preloadGraphics().catch((e) => {

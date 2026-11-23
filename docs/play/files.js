@@ -1,4 +1,5 @@
 // 게임 파일 미리 받기. 처음 한 번은 전부, 그다음부터는 files.json 의 해시가 바뀐 파일이 든 묶음만 받는다.
+// 시작에 필요한 묶음을 먼저 받고, 나머지는 홈·게임을 연 뒤에도 이어 받는다.
 // 파일 2천 개를 하나씩 받으면 GitHub Pages 가 막으므로(429) 빌드 때 약 4MB 묶음(packs/)으로 합쳐 둔다.
 // 받은 파일은 Cache Storage 에 넣고, Service Worker(sw.js)가 플레이어에게 꺼내 준다.
 const FILES = "lostsaga-files";
@@ -66,17 +67,62 @@ export async function registerWorker() {
   }
 }
 
-// 받을 것이 있으면 onStart(받을 바이트, 파일 수, 처음인지)를 부르고 onProgress(받은 바이트)로 알린다.
-// 결과: "ready"(다 있음) | "offline"(목록을 못 받았지만 받아 둔 것이 있음) | "missing"(받아 둔 것이 모자람)
-export async function prepareFiles({ onStart, onProgress }) {
+// 다 받아 둔 배포(version.json 의 built). 다음에 열 때 이것과 같으면 목록(files.json)을 받지 않고 바로 쓴다.
+const READY = "lostsaga-files-ready";
+// 시작하기 전에 받아야 하는 묶음: 엔진, DB·맵, 기준 세이브, 첫 화면·걷기·얼굴·지형 그림.
+// 나머지(그림·소리·음악·전투 그림)는 게임을 켠 뒤에도 이어 받는다. 그 사이 필요한 파일은 Service Worker 가 하나씩 받아 온다.
+const FIRST = new Set(["player", "bases", "game-root", "game-System", "game-Title", "game-CharSet", "game-ChipSet", "game-FaceSet", "game-GameOver"]);
+// 저장소가 비워졌는지는 이 파일들만 본다. 전부 보는 cache.keys() 는 파일이 만 개가 넘어 휴대폰에서 몇 초 걸린다.
+const PROBE = ["player/index.wasm", "games/lostsaga/RPG_RT.ldb", "games/lostsaga/RPG_RT.lmt"];
+
+function readMark() {
+  try {
+    return localStorage.getItem(READY);
+  } catch {
+    return null;
+  }
+}
+function writeMark(v) {
+  try {
+    if (v) localStorage.setItem(READY, v);
+    else localStorage.removeItem(READY);
+  } catch {}
+}
+
+async function probe(cache, have) {
+  for (const p of PROBE) if (!have[p] || !(await cache.match(fileKey(fileUrl(p))))) return false;
+  return true;
+}
+
+// 게임 파일을 준비한다. 돌려주는 것: { first, all }
+//   first: 게임을 켤 수 있을 때 끝난다 (시작에 필요한 묶음까지 받음). all: 전부 받았을 때 끝난다.
+//   값은 "ready"(다 있음) | "offline"(목록을 못 받았지만 받아 둔 것이 있음) | "missing"(받아 둔 것이 모자람)
+// 받을 것이 있으면 onStart(받을 바이트, 파일 수, 처음인지, 시작 전에 받을 것이 있는지)를 부르고,
+// onProgress(받은 바이트, 전체)로 알린다. 시작에 필요한 묶음을 먼저 받는다.
+// version 은 version.json 내용 (없으면 매번 목록을 받아 비교한다).
+export function prepareFiles(opts) {
+  let firstDone;
+  const first = new Promise((r) => { firstDone = r; });
+  const all = run(opts, (v) => firstDone(v));
+  all.then(firstDone, (e) => firstDone(Promise.reject(e)));
+  return { first, all };
+}
+
+async function run({ onStart, onProgress, version }, firstReady) {
   if (!("caches" in window)) return "ready";
   navigator.storage?.persist?.().catch(() => {});
   const cache = await caches.open(FILES);
   let have = loadHave();
+  const built = typeof version?.built === "string" ? version.built : null;
 
-  // 브라우저가 저장소를 비웠으면 기록도 버린다.
-  const keys = new Set((await cache.keys()).map((r) => fileKey(r.url)));
-  for (const p of Object.keys(have)) if (!keys.has(fileKey(fileUrl(p)))) delete have[p];
+  const intact = Object.keys(have).length > 0 && await probe(cache, have);
+  if (intact && built && readMark() === built) return "ready";
+  if (!intact) {
+    // 브라우저가 저장소를 비웠으면 기록도 버린다.
+    writeMark(null);
+    const keys = new Set((await cache.keys()).map((r) => fileKey(r.url)));
+    for (const p of Object.keys(have)) if (!keys.has(fileKey(fileUrl(p)))) delete have[p];
+  }
 
   let packs;
   try {
@@ -88,14 +134,17 @@ export async function prepareFiles({ onStart, onProgress }) {
   }
   const list = packs.flatMap((k) => k.files);
 
-  // 받아 둔 것과 해시가 다른 파일이 하나라도 든 묶음만 받는다.
-  const todo = packs.filter((k) => k.files.some(([p, , h]) => have[p] !== h));
-  const first = Object.keys(have).length === 0;
+  // 받아 둔 것과 해시가 다른 파일이 하나라도 든 묶음만 받는다. 시작에 필요한 묶음이 앞.
+  const stale = (k) => k.files.some(([p, , h]) => have[p] !== h);
+  const head = packs.filter((k) => FIRST.has(k.name) && stale(k));
+  const tail = packs.filter((k) => !FIRST.has(k.name) && stale(k));
+  const todo = [...head, ...tail];
+  const isFirst = Object.keys(have).length === 0;
   const total = todo.reduce((a, k) => a + k.size, 0);
-  if (todo.length) {
-    onStart?.(total, todo.reduce((a, k) => a + k.files.filter(([p, , h]) => have[p] !== h).length, 0), first);
-    let done = 0;
-    const queue = [...todo];
+  let done = 0;
+
+  const fetchAll = async (group) => {
+    const queue = [...group];
     const work = async () => {
       for (let k; (k = queue.shift()); ) {
         const res = await fetchRetry(k.url, "default");  // 묶음 주소에 해시가 있어 내용이 바뀌면 주소도 바뀐다
@@ -135,7 +184,14 @@ export async function prepareFiles({ onStart, onProgress }) {
     } finally {
       saveHave(have);
     }
+  };
+
+  if (todo.length) {
+    onStart?.(total, todo.reduce((a, k) => a + k.files.filter(([p, , h]) => have[p] !== h).length, 0), isFirst, head.length > 0);
+    await fetchAll(head);
   }
+  firstReady("ready");
+  if (tail.length) await fetchAll(tail);
 
   // 목록에서 빠진 파일은 지운다.
   const keep = new Set(list.map(([p]) => p));
@@ -146,6 +202,7 @@ export async function prepareFiles({ onStart, onProgress }) {
     }
   }
   saveHave(have);
+  if (built) writeMark(built);
   return "ready";
 }
 
