@@ -103,13 +103,15 @@ function base64(b) {
   return btoa(s);
 }
 
-// 이 런처가 받은 게임의 버전(릴리즈 태그). 세이브를 올릴 때 같이 보낸다. 못 읽으면 null.
-let clientVersion;
-function getClientVersion() {
-  clientVersion ??= fetch("version.json", { cache: "no-cache" })
-    .then((r) => r.json()).then((v) => (typeof v.game === "string" ? v.game : null)).catch(() => null);
-  return clientVersion;
+// 배포된 웹판의 version.json ({game: 릴리즈 태그, built: 배포 시각}). 한 번만 받는다. 못 읽으면 null.
+let versionInfo;
+export function getVersionInfo() {
+  versionInfo ??= fetch("version.json", { cache: "no-cache" }).then((r) => r.json()).catch(() => null);
+  return versionInfo;
 }
+
+// 이 런처가 받은 게임의 버전(릴리즈 태그). 세이브를 올릴 때 같이 보낸다. 못 읽으면 null.
+const getClientVersion = () => getVersionInfo().then((v) => (typeof v?.game === "string" ? v.game : null));
 
 // ---- 동기화 ----
 
@@ -124,6 +126,18 @@ export class SaveSync {
     this.slotRuns = new Map();  // 슬롯 → 클라우드의 지금 세이브가 속한 플레이(run)
     this.busy = Promise.resolve();
     this.online = false;
+    this.events = [];  // 접속 전에 생긴 시작 기록. 접속하면 보낸다
+  }
+
+  // 런처 시작 단계를 서버에 한 줄 남긴다 (홈 열림, 게임 파일 받기, 게임 켬). 실패해도 넘어간다.
+  logEvent(kind, { detail = null, ms = null, bytes = null } = {}) {
+    const e = { p_kind: kind, p_detail: detail, p_ms: ms === null ? null : Math.round(ms), p_bytes: bytes };
+    if (!this.online) {
+      if (this.events.length < 20) this.events.push(e);
+      return;
+    }
+    getClientVersion().then((v) => this.sb.rpc("log_launcher_event", { ...e, p_version: v }))
+      .then(({ error } = {}) => { if (error) console.warn("[sync] event", error); }, (err) => console.warn("[sync] event", err));
   }
 
   // 서버 응답의 Date 헤더로 시계를 맞춘다 (읽을 수 있는 응답만).
@@ -185,6 +199,7 @@ export class SaveSync {
       const { error } = await this.sb.rpc("begin_session");
       if (error) throw error;
       this.online = true;
+      for (const e of this.events.splice(0)) this.logEvent(e.p_kind, { detail: e.p_detail, ms: e.p_ms, bytes: e.p_bytes });
       await this.pull();
       await this.flush();
       this.status("ok", "온라인");

@@ -104,6 +104,7 @@ svg { flex: none; }
 .save-sum .where { font-size: 15px; color: var(--soft); }
 .card .row { display: flex; gap: 10px; }
 .card .row .btn { flex: 1 1 0; }
+.rest-load { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-size: 13px; color: var(--muted); }
 .art { position: relative; flex: 1 1 480px; min-height: 560px; }
 .art img { position: absolute; left: 50%; bottom: 0; height: 100%; transform: translateX(-50%);
   filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.7)); }
@@ -607,6 +608,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
           <button type="button" class="btn" id="btn-new" disabled>새로 시작</button>
           <button type="button" class="btn" id="btn-title" disabled>타이틀 화면</button>
         </div>
+        <p class="rest-load" id="rest-load" hidden><span>그림·소리 받는 중</span><span></span></p>
       </div>
         <div class="install" id="install" hidden>
           <span class="text"></span>
