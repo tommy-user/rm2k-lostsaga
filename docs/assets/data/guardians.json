@@ -1619,7 +1619,7 @@
         },
         "charset": {
           "file": "AJ1_침몰몬스터",
-          "index": 1
+          "index": 0
         },
         "stats": {
           "level": 50,
@@ -1861,8 +1861,8 @@
           "index": 15
         },
         "charset": {
-          "file": "W1_몬스터2",
-          "index": 4
+          "file": "CJ1_몬스터",
+          "index": 2
         },
         "stats": {
           "level": 50,
@@ -2590,8 +2590,8 @@
           "index": 8
         },
         "charset": {
-          "file": "AH1_몬스터",
-          "index": 0
+          "file": "CJ1_몬스터",
+          "index": 3
         },
         "stats": {
           "level": 50,
@@ -3157,8 +3157,8 @@
           "index": 15
         },
         "charset": {
-          "file": "W1_몬스터4",
-          "index": 7
+          "file": "몬스터3",
+          "index": 3
         },
         "stats": {
           "level": 50,
