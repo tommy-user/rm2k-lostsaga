@@ -190,6 +190,19 @@ async function run({ onStart, onProgress, version }, firstReady) {
     onStart?.(total, todo.reduce((a, k) => a + k.files.filter(([p, , h]) => have[p] !== h).length, 0), isFirst, head.length > 0);
     await fetchAll(head);
   }
+  // 뒤에서 받을 묶음에 든 파일 중 바뀐 것은 옛 판을 먼저 지운다. 남겨 두면 다 받기 전까지
+  // 미리 올리기(preloadGraphics)·Service Worker 가 옛 그림을 내줘서, 새 DB 와 그림이 어긋난다
+  // (ESC 메뉴 판에 새 칸 글자가 없고, 가방 이름 그림이 다른 아이템 이름으로 나옴). 지운 파일은 받기 전까지 Pages 에서 하나씩 받는다.
+  let dropped = false;
+  for (const k of tail) {
+    for (const [p, , h] of k.files) {
+      if (have[p] === undefined || have[p] === h) continue;
+      await cache.delete(fileKey(fileUrl(p)));
+      delete have[p];
+      dropped = true;
+    }
+  }
+  if (dropped) saveHave(have);
   firstReady("ready");
   if (tail.length) await fetchAll(tail);
 
