@@ -9,8 +9,8 @@ import { createKeys, keyName } from "./keys.js";
 import { initInstall } from "./install.js";
 
 // 레이드는 탭 하나(「레이드」) 안에서 고른다. 서버 랭킹 종류 이름 → 프로필 칸의 짧은 이름
-const RAIDS = ["madness", "kraken"];
-const RAID_SHORT = { madness: "심연", kraken: "크라켄" };
+const RAIDS = ["dudael", "madness", "kraken"];
+const RAID_SHORT = { dudael: "두다엘", madness: "심연", kraken: "크라켄" };
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
@@ -634,9 +634,10 @@ const RANKS = {
   adventure: "메인 시나리오를 많이 진행한 순입니다. 같으면 그 단계를 더 짧은 플레이 시간에 달성한 순입니다. 달성 시간은 달성한 뒤 처음 저장한 세이브의 플레이 시간입니다.",
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
   kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
+  dudael: "두다엘을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다.",
   madness: "꿈의 심연을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다. 칭호: 꿈에서 깬 자(첫 처치) · 꿈으로 돌아가는 자(10번) · 각인을 새긴 자(각인 16개) · 심연에 잠긴 자(모두 3단계) · 맨정신으로 깬 자(유혹 없이 처치)",
 };
-let rankRaid = "madness";
+let rankRaid = "dudael";
 const RANK_LIMIT = 100;
 let rankKind = "growth", rankJob = null, rankSeq = 0;
 
@@ -740,7 +741,8 @@ async function showRanking() {
   if (!rows.length) {
     empty.textContent = rankKind === "wave" ? "아직 기록이 없습니다. 몬스터대기실의 무한 웨이브에서 기록을 세울 수 있습니다."
       : rankKind === "kraken" ? "아직 기록이 없습니다. 외항선을 타고 크라켄 해역에서 기록을 세울 수 있습니다."
-      : rankKind === "madness" ? "아직 기록이 없습니다. 마스터 승급 뒤 광기의 던전에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
+      : rankKind === "madness" ? "아직 기록이 없습니다. 마스터 승급 뒤 광기의 던전에서 기록을 세울 수 있습니다."
+      : rankKind === "dudael" ? "아직 기록이 없습니다. 테바가 쉼터에 내려앉는 날, 에녹에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
     return;
   }
   empty.hidden = true;

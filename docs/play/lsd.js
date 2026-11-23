@@ -76,6 +76,8 @@ const VAR_MADNESS_BEST = 2208;  // 꿈의 심연 최고 기록(초, 0 = 아직 �
 const VAR_MADNESS_KILLS = 2209; // 꿈의 심연 처치 횟수
 const SW_MADNESS_PURE = 4415;   // 유혹을 하나도 받지 않고 깬 적이 있다
 const VAR_MADNESS_ENG = 2226;   // 각인 16개의 단계 2226–2241 (0 없음, 1–3)
+const VAR_DUDAEL_BEST = 3087;   // 두다엘 최고 기록(초, 0 = 아직 못 잡음)
+const VAR_DUDAEL_KILLS = 3088;  // 두다엘 처치 횟수
 
 export function parseLsd(b) {
   let [n, i] = ber(b, 0);
@@ -147,6 +149,8 @@ export function parseLsd(b) {
     madness_pure: on(SW_MADNESS_PURE),
     madness_eng: eng.filter((x) => x >= 1).length,
     madness_eng3: eng.filter((x) => x >= 3).length,
+    dudael_best: Math.max(0, v(VAR_DUDAEL_BEST)),
+    dudael_kills: Math.max(0, v(VAR_DUDAEL_KILLS)),
   };
 }
 
