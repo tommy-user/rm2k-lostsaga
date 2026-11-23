@@ -23584,6 +23584,42 @@
               "tip": "공격이 빗나가지 않는다"
             }
           ]
+        },
+        {
+          "id": 7001,
+          "name": "모험가의 검",
+          "grade": "magic",
+          "type": 1,
+          "desc": "갓 떠난 모험가의 검. 공12/정12 ◆초보성장",
+          "stats": {
+            "atk": 12,
+            "def": 0,
+            "spi": 12,
+            "agi": 0
+          },
+          "price": 100,
+          "maxPlus": null,
+          "jobs": null,
+          "guardians": null,
+          "twoHanded": null,
+          "job": null,
+          "note": "태초의산을 내려오면 피리가 준다 (새 게임)",
+          "effects": [
+            {
+              "name": "초보성장",
+              "kind": "일반",
+              "text": "로그오브랜드·로그던전 전투를 이기면 그 전투의 경험치와 이드를 한 번 더 받는다 — Lv14 까지"
+            }
+          ],
+          "intro": "갓 떠난 모험가의 검.",
+          "sources": [
+            {
+              "kind": "퀘스트·이벤트",
+              "places": [
+                "태초의산"
+              ]
+            }
+          ]
         }
       ]
     },
