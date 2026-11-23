@@ -49,6 +49,13 @@
     $("c-learn").innerHTML = v.rows.map(function (k) {
       return '<tr><td class="pixel">' + k.lv + "</td><th>" + esc(k.name) + '</th><td class="pixel">' + k.mp + '</td><td class="dim">' + esc(k.desc) + "</td></tr>";
     }).join("");
+    // 퓨전의 방 융합·연마의 방 연마: 두 기술을 잊고 새 기술 하나
+    var fu = v.fuse || [];
+    $("c-fuse-box").hidden = !fu.length;
+    $("c-fuse").innerHTML = fu.map(function (k) {
+      return '<tr><td class="pixel">' + esc(k.kind) + "</td><th>" + esc(k.name) + '</th><td class="pixel">' + k.mp + '</td><td class="dim">' +
+        esc(k.from.join(" + ")) + "<br>" + esc(k.desc) + "</td></tr>";
+    }).join("");
   }
   document.getElementById("c-learn-tabs").addEventListener("click", function (e) {
     var b = e.target.closest("button");

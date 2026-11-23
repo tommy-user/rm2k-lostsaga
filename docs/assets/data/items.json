@@ -30664,7 +30664,7 @@
             "spi": 10,
             "agi": 10
           },
-          "price": 20000,
+          "price": 0,
           "maxPlus": null,
           "jobs": null,
           "twoHanded": null,
@@ -30685,7 +30685,8 @@
             {
               "kind": "퀘스트·이벤트",
               "places": [
-                "그라나마을"
+                "그라나마을",
+                "로저스국"
               ]
             }
           ]
@@ -47252,7 +47253,7 @@
           "name": "테바의 깃",
           "grade": "normal",
           "type": 0,
-          "desc": "테바가 떨군 흰 깃. 에녹 먹이지기가 날개를 엮을 때 쓴다.",
+          "desc": "테바가 떨군 흰 깃. 에녹 먹이지기가 오라를 엮을 때 쓴다.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -47271,7 +47272,7 @@
           "name": "회오리 깃",
           "grade": "normal",
           "type": 0,
-          "desc": "바람 무늬가 도는 푸른 깃. 여섯이면 회오리 날개.",
+          "desc": "바람 무늬가 도는 푸른 깃. 여섯이면 회오리 오라.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -47290,7 +47291,7 @@
           "name": "노을 깃",
           "grade": "normal",
           "type": 0,
-          "desc": "노을빛으로 물든 깃. 여섯이면 노을 날개.",
+          "desc": "노을빛으로 물든 깃. 여섯이면 노을 오라.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -47306,10 +47307,10 @@
         },
         {
           "id": 6904,
-          "name": "두 피의 깃",
+          "name": "천마룡의 깃",
           "grade": "normal",
           "type": 0,
-          "desc": "흰 깃에 검붉은 막이 붙었다. 여섯이면 두 피의 날개.",
+          "desc": "흰 깃에 검붉은 막이 붙었다. 여섯이면 천마룡 오라.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -47328,7 +47329,7 @@
           "name": "별밤 깃",
           "grade": "normal",
           "type": 0,
-          "desc": "별 같은 점이 박힌 보랏빛 깃. 여섯이면 별밤 날개.",
+          "desc": "별 같은 점이 박힌 보랏빛 깃. 여섯이면 별밤 오라.",
           "stats": {
             "atk": 0,
             "def": 0,
@@ -47341,6 +47342,33 @@
           "twoHanded": null,
           "job": null,
           "note": null
+        },
+        {
+          "id": 6951,
+          "name": "엘런의 일지",
+          "grade": "normal",
+          "type": 0,
+          "desc": "로그던전 3층 돌무더기 밑에서 나온 일지.",
+          "stats": {
+            "atk": 0,
+            "def": 0,
+            "spi": 0,
+            "agi": 0
+          },
+          "price": 0,
+          "maxPlus": null,
+          "jobs": null,
+          "twoHanded": null,
+          "job": null,
+          "note": null,
+          "sources": [
+            {
+              "kind": "퀘스트·이벤트",
+              "places": [
+                "로그던전3층"
+              ]
+            }
+          ]
         }
       ]
     },

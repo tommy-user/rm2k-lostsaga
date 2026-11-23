@@ -757,7 +757,7 @@
             {
               "id": 27,
               "name": "변종의 열매",
-              "prob": 25,
+              "prob": 10,
               "god": false
             }
           ],
@@ -2831,12 +2831,6 @@
           "secret": false,
           "drops": [
             {
-              "id": 27,
-              "name": "변종의 열매",
-              "prob": 50,
-              "god": false
-            },
-            {
               "id": 348,
               "name": "전갈의 독",
               "prob": 50,
@@ -2846,6 +2840,12 @@
               "id": 762,
               "name": "플레이스아머마법서",
               "prob": 20,
+              "god": false
+            },
+            {
+              "id": 27,
+              "name": "변종의 열매",
+              "prob": 10,
               "god": false
             }
           ],
@@ -2869,7 +2869,7 @@
             {
               "id": 27,
               "name": "변종의 열매",
-              "prob": 66,
+              "prob": 20,
               "god": false
             }
           ],
@@ -8906,6 +8906,206 @@
       ]
     },
     {
+      "key": "teba",
+      "name": "하늘고래 테바",
+      "desc": "고대의 하늘을 지난 뒤, 칠리 비행선출항소의 기관사를 따라 구름 위 마을 에녹으로 올라간다. 에녹 아래로 작은 섬들이 떠 있고, 폭풍층 너머에 하늘고래 테바가 산다.",
+      "dungeons": [
+        {
+          "name": "구름 아래 섬들",
+          "floors": "바람섬·결정섬·깃털숲",
+          "desc": "에녹 아래 떠 있는 작은 섬 셋. 섬 오두막의 사람들이 결정을 캐며 산다.",
+          "maps": [
+            969,
+            970,
+            971,
+            972,
+            973
+          ]
+        },
+        {
+          "name": "폭풍층",
+          "floors": "폭풍층 아래·위·구름 꼭대기",
+          "desc": "번개가 떨어지는 구름층. 먹이지기가 결정 자루를 메고 올라간 뒤 돌아오지 않았다.",
+          "boss": "???",
+          "maps": [
+            974,
+            975,
+            976
+          ]
+        },
+        {
+          "name": "고래 등",
+          "floors": "꼬리·등줄기 폐허·폭포·날개 뿌리·숨구멍",
+          "desc": "테바의 등. 고래가 숨을 쉴 때마다 길이 열리고 닫힌다.",
+          "boss": "???",
+          "maps": [
+            982,
+            983,
+            984,
+            985,
+            986,
+            988,
+            989,
+            990
+          ]
+        },
+        {
+          "name": "두다엘",
+          "floors": "세 번째 레이드",
+          "desc": "하늘고래 테바 이야기의 엔딩을 본 뒤, 에녹의 종지기 아이에게서 나흘마다 들어간다.",
+          "boss": "???",
+          "maps": [
+            998,
+            999
+          ]
+        }
+      ],
+      "monsters": [
+        {
+          "enemyId": 3601,
+          "name": "결정 경비기",
+          "img": "Monster/E2고대경비기.png",
+          "hp": 3900,
+          "atk": 370,
+          "def": 235,
+          "spi": 160,
+          "agi": 250,
+          "boss": false,
+          "hue": 40,
+          "drops": [
+            {
+              "id": 1931,
+              "name": "고대 기계 부품",
+              "prob": 30,
+              "god": false
+            }
+          ],
+          "places": [
+            "teba"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 3602,
+          "name": "결정 경비기 리더",
+          "img": "Monster/E2고대경비기.png",
+          "hp": 5800,
+          "atk": 420,
+          "def": 265,
+          "spi": 160,
+          "agi": 250,
+          "boss": false,
+          "leader": true,
+          "hue": 40,
+          "drops": [
+            {
+              "id": 1937,
+              "name": "하늘의 결정",
+              "prob": 15,
+              "god": false
+            }
+          ],
+          "places": [
+            "teba"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 3603,
+          "name": "엘리우드",
+          "img": "Monster/CM1_엘리우드.png",
+          "hp": 3400,
+          "atk": 360,
+          "def": 170,
+          "spi": 260,
+          "agi": 380,
+          "boss": false,
+          "drops": [
+            {
+              "id": 1937,
+              "name": "하늘의 결정",
+              "prob": 20,
+              "god": false
+            }
+          ],
+          "places": [
+            "teba"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 3604,
+          "name": "큰 엘리우드",
+          "img": "Monster/CM1_엘리우드.png",
+          "hp": 5200,
+          "atk": 410,
+          "def": 170,
+          "spi": 260,
+          "agi": 380,
+          "boss": false,
+          "drops": [
+            {
+              "id": 1937,
+              "name": "하늘의 결정",
+              "prob": 40,
+              "god": false
+            }
+          ],
+          "places": [
+            "teba"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 3605,
+          "name": "먹구름 덩이",
+          "img": "Monster/CM1_먹구름덩이.png",
+          "hp": 4300,
+          "atk": 390,
+          "def": 210,
+          "spi": 280,
+          "agi": 330,
+          "boss": false,
+          "drops": [
+            {
+              "id": 1934,
+              "name": "폭풍의 깃털",
+              "prob": 25,
+              "god": false
+            }
+          ],
+          "places": [
+            "teba"
+          ],
+          "secret": false
+        },
+        {
+          "enemyId": 3606,
+          "name": "먹구름 덩이 리더",
+          "img": "Monster/CM1_먹구름덩이.png",
+          "hp": 6400,
+          "atk": 440,
+          "def": 210,
+          "spi": 280,
+          "agi": 330,
+          "boss": false,
+          "leader": true,
+          "drops": [
+            {
+              "id": 1937,
+              "name": "하늘의 결정",
+              "prob": 15,
+              "god": false
+            }
+          ],
+          "places": [
+            "teba"
+          ],
+          "secret": false
+        }
+      ]
+    },
+    {
       "key": "chaos-land",
       "name": "봉인의 빙묘·혼돈의 땅",
       "desc": "얼음성 비문 아래 죽음을 잠재운 무덤과, 요정족숲 옛 신전 문 너머 이공간 위에 떠 있는 옛 신의 땅. (에피소드3)",
@@ -10512,6 +10712,80 @@
       "desc": "",
       "drops": [],
       "places": []
+    },
+    {
+      "enemyId": 3607,
+      "name": "폭풍의 엘리우드",
+      "img": "Monster/CM1_폭풍의엘리우드.png",
+      "hp": 17000,
+      "atk": 620,
+      "def": 300,
+      "spi": 360,
+      "agi": 420,
+      "boss": true,
+      "title": "폭풍층의 우두머리",
+      "where": "하늘고래 테바 · 폭풍층 위",
+      "region": "teba",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 1937,
+          "name": "하늘의 결정",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "teba"
+      ]
+    },
+    {
+      "enemyId": 3661,
+      "name": "검은 막 날개",
+      "img": "Monster/CO1_검은막날개.png",
+      "hp": 21000,
+      "atk": 660,
+      "def": 330,
+      "spi": 400,
+      "agi": 380,
+      "boss": true,
+      "title": "고래 날개를 붙잡은 것",
+      "where": "하늘고래 테바 · 오른 날개 뿌리",
+      "region": "teba",
+      "secret": true,
+      "desc": "",
+      "drops": [
+        {
+          "id": 1937,
+          "name": "하늘의 결정",
+          "prob": 100,
+          "god": false
+        }
+      ],
+      "places": [
+        "teba"
+      ]
+    },
+    {
+      "enemyId": 3751,
+      "name": "천마룡 네필",
+      "img": "Monster/CR1_천마룡.png",
+      "hp": 50000,
+      "atk": 820,
+      "def": 460,
+      "spi": 650,
+      "agi": 520,
+      "boss": true,
+      "title": "두다엘의 주인",
+      "where": "두다엘",
+      "region": "teba",
+      "secret": true,
+      "desc": "",
+      "drops": [],
+      "places": [
+        "teba"
+      ]
     }
   ],
   "places": {
@@ -10606,6 +10880,11 @@
     "devil": {
       "name": "데빌랜드",
       "note": "몬스터 진영이 시작하는 땅. 지도에 없다"
+    },
+    "teba": {
+      "name": "하늘고래 테바",
+      "via": "chili",
+      "note": "칠리마을 비행선출항소의 기관사를 따라 구름 위 마을 에녹으로 간다"
     },
     "sea": {
       "name": "외항 바다",
