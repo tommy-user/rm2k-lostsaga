@@ -96,3 +96,20 @@
 .learn__tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
 .learn__tabs button { font-family: var(--pixel); font-size: .78rem; color: var(--ink); background: rgba(5, 8, 24, .5); border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; padding: 4px 12px; cursor: pointer; }
 .learn__tabs button[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); }
+
+/* 기술 이름 → 자세히 창 (운영 지시 #225) */
+.sk-name { all: unset; cursor: pointer; border-bottom: 1px dotted rgba(226, 192, 107, .7); }
+.sk-name:hover, .sk-name:focus-visible { color: var(--gold); }
+.sk-dlg { position: fixed; inset: 0; margin: auto; height: fit-content; width: min(460px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; padding: 14px 16px 16px; color: var(--ink); border: 2px solid var(--win-line); }
+.sk-dlg:not([open]) { display: none; }
+.sk-dlg::backdrop { background: rgba(4, 6, 18, .75); }
+.sk-dlg__head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.sk-dlg__head h2 { margin: 0; font-size: var(--step-1); flex: 1; }
+.sk-dlg__head h2 .pixel { font-size: .72rem; font-weight: normal; margin-left: 4px; }
+.sk-dlg__close { font: inherit; font-size: 1.4rem; line-height: 1; color: var(--ink); background: none; border: 1px solid rgba(201, 211, 242, .4); border-radius: 3px; width: 34px; height: 34px; cursor: pointer; }
+.sk-dlg__close:hover, .sk-dlg__close:focus-visible { color: var(--gold); border-color: var(--gold); }
+.sk-dlg__desc { margin: 0 0 10px; color: var(--ink-dim); }
+.sk-dlg__rows { margin: 0; display: grid; gap: 0; border-top: 1px dashed rgba(201, 211, 242, .25); }
+.sk-dlg__rows div { display: grid; grid-template-columns: 84px 1fr; gap: 10px; padding: 6px 0; border-bottom: 1px solid rgba(201, 211, 242, .12); }
+.sk-dlg__rows dt { font-size: .74rem; color: var(--gold); align-self: center; }
+.sk-dlg__rows dd { margin: 0; font-size: .92rem; }
