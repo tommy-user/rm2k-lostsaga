@@ -148,7 +148,7 @@
       return "<div><dt class=\"pixel\">" + STAT_NAMES[i] + "</dt><dd><span class=\"bar\" style=\"--v:" +
         Math.min(1, v / max[i]).toFixed(3) + "\"></span><span class=\"pixel\">" + v + "</span></dd></div>";
     }).join("");
-    $("monster-info").hidden = p.id !== "monster";
+    $("evo").hidden = p.id !== "monster";
     renderLearn(p.id);
     if (push) history.replaceState(null, "", "#" + p.id);
   }
