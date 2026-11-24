@@ -464,7 +464,7 @@ body:not(.touch) #play.spp-on .keys { visibility: hidden; }
 
 @media (orientation: portrait) and (max-width: 420px) { .touch .quick .qbtn svg { display: none; } }
 
-/* 빠른 버튼: 2배속·타이틀로 (세로는 게임 화면 아래 한 줄, 가로는 양옆 칸 위, 데스크톱은 오른쪽 칸) */
+/* 빠른 버튼: 배속·타이틀로 (세로는 게임 화면 아래 한 줄, 가로는 양옆 칸 위, 데스크톱은 오른쪽 칸) */
 .qbtn { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-radius: 999px;
   border: 1px solid rgba(239, 230, 210, 0.25); background: rgba(13, 15, 20, 0.7); font-size: 14px; white-space: nowrap; touch-action: manipulation; }
 .qbtn small { font-size: 11px; color: var(--faint); }
@@ -812,7 +812,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
     <span id="play-title"></span>
     <div class="sync" data-state="busy" role="status"><span>연결 중</span></div>
     <div class="head-quick">
-      <button type="button" class="qbtn" data-act="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속<small>F</small></button>
+      <button type="button" class="qbtn" data-act="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg><span class="spd">1배속</span><small>F</small></button>
       <button type="button" class="qbtn" data-act="spawns" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>몬스터 찾기</button>
       <button type="button" class="qbtn" data-act="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
       <button type="button" class="icon-btn" data-act="sound" aria-label="소리 크기"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M16.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 6a8.5 8.5 0 0 1 0 12"></path></svg></button>
@@ -828,7 +828,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
         <button type="button" class="icon-btn" data-act="home" aria-label="홈으로">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
         </button>
-        <button type="button" class="qbtn" data-act="speed" data-pad="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속<small>F</small></button>
+        <button type="button" class="qbtn" data-act="speed" data-pad="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg><span class="spd">1배속</span><small>F</small></button>
         <button type="button" class="qbtn" data-act="spawns" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>몬스터 찾기</button>
       </div>
       <div class="dpad" id="dpad" data-pad="dpad" role="group" aria-label="방향">
@@ -844,7 +844,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
       <div id="status"></div>
     </div>
     <div class="quick">
-      <button type="button" class="qbtn" data-act="speed" data-pad="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속<small>F</small></button>
+      <button type="button" class="qbtn" data-act="speed" data-pad="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg><span class="spd">1배속</span><small>F</small></button>
       <button type="button" class="qbtn" data-act="spawns" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>몬스터 찾기</button>
       <button type="button" class="qbtn" data-act="title" data-pad="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
       <span class="spacer"></span>
@@ -868,7 +868,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
       <section>
         <h2>빠른 버튼</h2>
         <div class="quick-keys">
-          <button type="button" class="qbtn" data-act="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg>2배속<small>F</small></button>
+          <button type="button" class="qbtn" data-act="speed" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l7 6-7 6z"></path><path d="M13 6l7 6-7 6z"></path></svg><span class="spd">1배속</span><small>F</small></button>
           <button type="button" class="qbtn" data-act="spawns" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>몬스터 찾기</button>
           <button type="button" class="qbtn" data-act="title"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>타이틀로<small>F12</small></button>
           <button type="button" class="qbtn" data-act="sound"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M16.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 6a8.5 8.5 0 0 1 0 12"></path></svg>소리</button>
@@ -881,7 +881,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
           <dt>결정</dt><dd id="ctl-ok">Z · Enter · Space</dd>
           <dt>취소 · 메뉴</dt><dd id="ctl-cancel">X · Esc</dd>
           <dt>능력치 분배</dt><dd id="ctl-shift">Shift</dd>
-          <dt>2배속</dt><dd id="ctl-speed">F</dd>
+          <dt>배속 (1→2→5배)</dt><dd id="ctl-speed">F</dd>
         </dl>
         <button type="button" class="btn keys-open" data-act="keys">키 바꾸기</button>
       </section>
@@ -915,7 +915,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
       <div class="pe-show">
         <span>보일 버튼</span>
         <div>
-          <label><input type="checkbox" data-show="speed">2배속</label>
+          <label><input type="checkbox" data-show="speed">배속</label>
           <label><input type="checkbox" data-show="title">타이틀로</label>
           <label><input type="checkbox" data-show="shift">Shift</label>
         </div>
