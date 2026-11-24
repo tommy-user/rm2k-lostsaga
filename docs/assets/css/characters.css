@@ -78,9 +78,57 @@
   .steps li:nth-child(3)::before { display: none; }
 }
 
-.evo__list { margin: 0; padding-left: 1.3em; font-size: var(--step--1); line-height: 1.7; }
-.evo__list li { margin-bottom: 8px; }
-.evo__list b { color: #f0a3b0; font-weight: 700; }
+/* 몬스터 진화 트리 (운영 지시 #227): 몬스터를 고르면 명단 바로 아래에 보인다 */
+.evo { margin-bottom: 26px; border-color: var(--crimson); background: linear-gradient(180deg, #2a1640, #0d0820); }
+.evo[hidden] { display: none; }
+.evo__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 12px; }
+.evo__head .win__title { color: #f0a3b0; margin: 0; font-size: var(--step-0); }
+.evo__head p { margin: 0; font-size: var(--step--1); }
+.evo__body { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 16px; align-items: start; }
+.evo__scroll { overflow-x: auto; padding-bottom: 6px; }
+.evo__map { position: relative; margin: 0 auto; }
+.evo__col { position: absolute; top: 0; text-align: center; font-size: .7rem; color: var(--ink-dim); }
+.evo__col:last-of-type { color: #f0a3b0; }
+.evo__lines { position: absolute; left: 0; top: 0; pointer-events: none; }
+.evo__lines path { fill: none; stroke: rgba(201, 211, 242, .22); stroke-width: 2; }
+.evo__lines path.on { stroke: var(--gold); stroke-width: 2.5; }
+.evo__node {
+  position: absolute; width: 74px; padding: 4px 1px 5px; margin: 0; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  background: #0b0718; border: 2px solid #4b3a6e; border-radius: 4px;
+  color: var(--ink-dim); font-family: var(--pixel); font-size: .64rem; line-height: 1.15; letter-spacing: -.02em;
+}
+.evo__node img { width: 36px; height: 48px; filter: saturate(.75) brightness(.8); }
+.evo__node--awaken { border-color: #7a2b3c; }
+.evo__node.is-path { color: var(--ink); border-color: var(--gold-deep); }
+.evo__node.is-path img, .evo__node:hover img, .evo__node:focus-visible img { filter: none; }
+.evo__node.is-on { color: var(--gold); border-color: var(--gold); box-shadow: 0 0 12px rgba(226, 192, 107, .55); }
+.evo__node.is-on img { filter: none; }
+.evo__node:hover, .evo__node:focus-visible { color: var(--ink); }
+.evo__info { background: rgba(5, 8, 24, .55); border: 1px solid rgba(201, 211, 242, .25); border-radius: 4px; padding: 12px 14px; font-size: var(--step--1); min-height: 200px; }
+.evo__who { display: flex; gap: 12px; align-items: center; margin-bottom: 6px; }
+.evo__who > img { width: 48px; height: 64px; }
+.evo__who h3 { margin: 0; font-size: var(--step-1); }
+.evo__who p { margin: 2px 0 4px; font-size: .74rem; color: var(--gold); }
+.evo__tag { display: inline-block; font-size: .66rem; padding: 1px 6px; border-radius: 3px; color: #2a1f05; background: var(--gold); }
+.evo__tag--awaken { color: #fff1f3; background: var(--crimson); }
+.evo__info h4 { margin: 12px 0 4px; font-size: .72rem; font-weight: normal; color: #f0a3b0; }
+.evo__stats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.evo__stats b { color: var(--gold); font-weight: normal; }
+.evo__skills { list-style: none; margin: 0; padding: 0; }
+.evo__skills li { padding: 4px 0; border-bottom: 1px solid rgba(201, 211, 242, .12); }
+.evo__skills span { display: block; font-size: .8rem; }
+.evo__next { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.evo__next button { all: unset; cursor: pointer; display: flex; align-items: center; gap: 8px; width: 100%; padding: 2px 4px; border-radius: 3px; }
+.evo__next button:hover, .evo__next button:focus-visible { background: rgba(226, 192, 107, .14); color: var(--gold); }
+.evo__next img { width: 24px; height: 32px; }
+.evo__node:focus-visible, .evo__next button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+@media (max-width: 1100px) {
+  .evo__body { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .evo { padding: 16px 12px; }
+}
 @media (max-width: 600px) {
   .roster { gap: 6px; }
   .pick { width: 50px; }
