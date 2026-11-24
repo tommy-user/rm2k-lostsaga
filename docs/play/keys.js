@@ -1,7 +1,7 @@
 // 키 설정 (운영 지시 #100). 기본 키(방향키·Z·X 등)는 그대로 두고, 동작마다 키 하나를 더 정할 수 있다.
 // 정한 키는 엔진에 가지 않고, 런처가 그 동작의 기본 키로 바꿔 보낸다 (방향은 방향키, 결정은 Enter …).
-// 2배속은 엔진 키가 아니라 런처의 2배속 버튼을 켜고 끈다.
-// 값은 이 기기(localStorage)에 저장한다. 읽기·쓰기가 안 되면 기본값(2배속 F)으로 쓴다.
+// 배속은 엔진 키가 아니라 런처의 배속 버튼을 누른 것과 같다 (1→2→5배).
+// 값은 이 기기(localStorage)에 저장한다. 읽기·쓰기가 안 되면 기본값(배속 F)으로 쓴다.
 
 const STORE = "lostsaga-keys";
 
@@ -13,7 +13,7 @@ export const ACTIONS = [
   { id: "ok", label: "결정", send: "Enter", base: "Z · Enter · Space" },
   { id: "cancel", label: "취소 · 메뉴", send: "Escape", base: "X · Esc" },
   { id: "shift", label: "능력치 분배", send: "ShiftLeft", base: "Shift" },
-  { id: "speed", label: "2배속", send: null, base: "" },
+  { id: "speed", label: "배속", send: null, base: "" },
 ];
 const DEFAULT = { speed: "KeyF" };
 

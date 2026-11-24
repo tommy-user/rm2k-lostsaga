@@ -5,7 +5,7 @@
 
 const STORE = "lostsaga-pad-layout";
 const NAMES = {
-  speed: "2배속 버튼", title: "타이틀로 버튼", shift: "Shift 버튼", ok: "결정 버튼", cancel: "취소 버튼", dpad: "방향키 (한 덩어리)",
+  speed: "배속 버튼", title: "타이틀로 버튼", shift: "Shift 버튼", ok: "결정 버튼", cancel: "취소 버튼", dpad: "방향키 (한 덩어리)",
 };
 const OPTIONAL = ["speed", "title", "shift"];  // 숨길 수 있는 버튼
 const SIZE = [70, 150];
