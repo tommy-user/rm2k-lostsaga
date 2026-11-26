@@ -36,42 +36,6 @@ details summary { cursor: pointer; color: var(--muted); }
 details ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 13px; max-height: 240px; overflow: auto; }
 #list a { display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; margin-bottom: 6px; }
 #list a span { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
-#play { position: fixed; inset: 0; background: #000; display: flex; flex-direction: column; }
-#play[hidden] { display: none; }
-#play .bar { display: flex; gap: 8px; align-items: center; padding: 6px 10px; background: #0b0c10; color: var(--muted); font-size: 13px; }
-#play .bar b { color: var(--text); font-weight: 500; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#play .bar button { padding: 4px 10px; font-size: 13px; }
-#status { position: absolute; top: 50%; width: 100%; text-align: center; color: var(--muted); font-size: 14px; pointer-events: none; }
-#pad { display: none; flex: none; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-  background: #0b0c10; touch-action: none; user-select: none; -webkit-user-select: none; }
-.touch #pad { display: flex; }
-.dpad { --c: 54px; position: relative; flex: none; width: calc(var(--c) * 3); height: calc(var(--c) * 3); touch-action: none; }
-.dpad i { position: absolute; width: var(--c); height: var(--c); display: flex; align-items: center; justify-content: center;
-  background: rgba(255, 255, 255, 0.08); border: 1px solid #3a4152; color: var(--muted); font-style: normal; font-size: 18px; }
-.dpad i.on, .keys button.on { background: rgba(232, 190, 104, 0.45); }
-.dpad .up { left: var(--c); top: 0; border-radius: 12px 12px 0 0; }
-.dpad .down { left: var(--c); bottom: 0; border-radius: 0 0 12px 12px; }
-.dpad .left { left: 0; top: var(--c); border-radius: 12px 0 0 12px; }
-.dpad .right { right: 0; top: var(--c); border-radius: 0 12px 12px 0; }
-.dpad .mid { left: var(--c); top: var(--c); border: 0; background: none; }
-.keys { display: grid; grid-template-columns: repeat(2, auto); gap: 10px; align-items: center; justify-items: center; }
-.keys button { touch-action: none; }
-.keys .big { width: 68px; height: 68px; border-radius: 50%; font-weight: 700; }
-.keys .ok { background: rgba(232, 190, 104, 0.2); border-color: var(--gold); }
-.keys .small { font-size: 12px; padding: 6px 10px; }
-@media (orientation: portrait) {
-  .touch .screen { flex: none; width: 100%; aspect-ratio: 4 / 3; margin: auto 0; }
-}
-@media (orientation: landscape) {
-  .touch #play { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto minmax(0, 1fr); }
-  .touch #play .bar { grid-column: 1 / -1; }
-  .touch .screen { grid-column: 2; grid-row: 2; justify-self: center; height: 100%; max-width: 100%; aspect-ratio: 4 / 3; }
-  .touch #pad { display: contents; }
-  .touch .dpad { grid-column: 1; grid-row: 2; align-self: center; margin: 0 14px; }
-  .touch .keys { grid-column: 3; grid-row: 2; align-self: center; margin: 0 14px; }
-}
-.screen { position: relative; flex: 1; min-height: 0; min-width: 0; display: flex; align-items: center; justify-content: center; }
-#canvas { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; outline: none; }
 </style>
 </head>
 <body>
@@ -118,25 +82,6 @@ details ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size
     <details id="changes"><summary></summary><ul></ul></details>
   </div>
 </main>
-<div id="play" hidden>
-  <div class="bar"><b id="play-title"></b><button id="btn-home">처음으로</button></div>
-  <div class="screen">
-    <canvas id="canvas" tabindex="-1"></canvas>
-    <div id="status"></div>
-  </div>
-  <div id="pad">
-    <div class="dpad" id="dpad"><i class="up" data-key="ArrowUp">▲</i><i class="left" data-key="ArrowLeft">◀</i><i class="mid"></i><i class="right" data-key="ArrowRight">▶</i><i class="down" data-key="ArrowDown">▼</i></div>
-    <div class="keys">
-      <button type="button" class="big cancel" data-key="Escape">취소</button>
-      <button type="button" class="big ok" data-key="Enter">결정</button>
-      <button type="button" class="small" data-key="ShiftLeft">Shift</button>
-      <button type="button" class="small" data-key="KeyF" data-toggle>빨리</button>
-      <button type="button" class="small" data-key="F9" id="btn-f9">F9 디버그</button>
-      <button type="button" class="small" data-key="ControlLeft" data-toggle id="btn-ctrl">벽 통과</button>
-    </div>
-  </div>
-</div>
-<script src="../play/player/index.js"></script>
 <script type="module" src="test.js"></script>
 </body>
 </html>

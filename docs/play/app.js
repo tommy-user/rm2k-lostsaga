@@ -14,8 +14,23 @@ const RAID_SHORT = { dudael: "두다엘", madness: "심연", kraken: "크라켄"
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
+// 테스트 링크(test/)에서 넘어오면 ?test=<id>&args=<플레이어 인자>&title=<제목> (운영 지시 #254).
+// 홈 없이 바로 그 게임을 켠다. 화면·버튼은 웹판과 같고, 클라우드·기록은 쓰지 않는다.
+// 바뀐 파일은 test/<id>/ 의 묶음을 받아 메모리에서 넘기고, 나머지는 웹판 게임(받아 둔 저장소)을 쓴다.
+// 세이브는 게임 이름 t-<id> 라 /easyrpg/t-<id>/Save 에 따로 쌓인다.
+const testId = (params.get("test") ?? "").replace(/[^a-z0-9-]/g, "");
+const testArgs = /^(&[a-z-]+(=[\w%.-]*)?)*$/.test(params.get("args") ?? "") ? params.get("args") ?? "" : "";
+const testDebug = /&test-play(&|$)/.test(testArgs);
+const GAME = testId ? `t-${testId}` : "lostsaga";
+// 홈 버튼은 테스트 페이지로 돌아간다 (채워 둔 바로 가기 칸은 back 으로 받아 둔다, 바로 시작 go 는 뺀다).
+const testPage = testId ? (() => {
+  const back = new URLSearchParams(params.get("back") ?? "");
+  const q = new URLSearchParams(testId.startsWith("pr") ? { pr: testId.slice(2) } : { id: testId });
+  for (const k of ["map", "at", "party", "troop"]) if (back.get(k)) q.set(k, back.get(k).slice(0, 40));
+  return `../test/?${q}`;
+})() : "";
 // ?offline 이면 클라우드 없이 이 기기에만 저장한다 (기준 세이브를 만들 때 쓴다).
-const offline = params.has("offline");
+const offline = params.has("offline") || !!testId;
 // 내 컴퓨터(127.0.0.1)에서 띄울 때만 ?dev=test-play 처럼 플레이어 인자를 더 줄 수 있다. 배포 주소에서는 무시한다.
 const dev = location.hostname === "127.0.0.1" && params.get("dev") ? `&${params.get("dev")}` : "";
 // Google 로그인에서 돌아올 때 실패하면 주소에 error_code 가 붙어 온다. 읽고 지운다.
@@ -30,6 +45,8 @@ const returnTo = location.origin + location.pathname;
 
 const touch = matchMedia("(hover: none), (pointer: coarse)").matches;
 document.body.classList.toggle("touch", touch);
+document.body.classList.toggle("test", !!testId);
+document.body.classList.toggle("test-play", testDebug);
 
 // 홈 일러스트: 그림이 테두리에서 잘리지 않는 것들 중 하나.
 const ARTS = [
@@ -796,7 +813,9 @@ let lastSave = null;  // 이번 플레이에서 마지막으로 저장(또는 �
 
 // 엔진 설정은 이 폴더의 config.ini 에서만 읽게 한다. 빨리 감기 키의 배율을 F 2배·G 5배로 정해 두고 (운영 지시 #221), 소리 크기는 소리 창에서 정한 값을 넣는다.
 const CONFIG_DIR = "/tmp/lostsaga-config";
-const PLAYER_CONFIG = "[Input]\nSpeedModifierA=2\nSpeedModifierB=5\n";
+// 테스트 링크에서는 빠른 배속 버튼을 10배로 쓴다 (서버에 기록하지 않으므로 상한과 무관).
+const FAST = testId ? 10 : 5;
+const PLAYER_CONFIG = `[Input]\nSpeedModifierA=2\nSpeedModifierB=${FAST}\n`;
 
 // 세이브에 저장된 옛 병렬 공통 이벤트 목록 때문에 고친 이벤트가 옛 세이브에 안 먹는 문제 (docs/ops-bugs.md).
 // 플레이어(엔진)가 세이브를 읽는 순간 메모리의 사본만 비운다. 수정 시각을 건드리지 않아 기기 저장소·클라우드에는 쓰이지 않는다.
@@ -863,10 +882,11 @@ async function launch(args, title, save = null, clicked = performance.now()) {
   // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다. 엔진은 exe 크기로 판별하지 못해 직접 정한다.
   await worker;  // 처음 연 페이지는 Service Worker 가 붙어야 받아 둔 파일을 플레이어에 준다
   installPreload(await graphics);
+  if (testId) installTestRoute(await testFiles);
   if (!offline) await sync.syncClock();
-  history.replaceState(null, "", `?game=lostsaga&engine=rpg2kv150&config-path=${CONFIG_DIR}${args}${dev}`);
+  history.replaceState(null, "", `?game=${GAME}&engine=rpg2kv150&config-path=${CONFIG_DIR}${args}${dev}`);
   const player = await createEasyRpgPlayer({
-    game: "lostsaga",
+    game: GAME,
     // 엔진의 main 이 돌기 직전에 불린다 (this = 플레이어 모듈).
     onRuntimeInitialized() {
       this.FS.mkdirTree(CONFIG_DIR);
@@ -884,9 +904,10 @@ async function launch(args, title, save = null, clicked = performance.now()) {
   canvas.focus();
 }
 
-// 플레이어는 한 페이지에서 한 번만 켤 수 있어서, 홈으로 갈 때는 페이지를 새로 연다.
+// 플레이어는 한 페이지에서 한 번만 켤 수 있어서, 홈으로 갈 때는 페이지를 새로 연다. 테스트면 테스트 페이지로.
+const homeUrl = testPage || location.pathname + search;
 for (const b of document.querySelectorAll('[data-act="home"]')) {
-  b.onclick = () => location.assign(location.pathname + search);
+  b.onclick = () => location.assign(homeUrl);
 }
 
 // 방향키를 꾹 누르면 휴대폰이 길게 누르기 메뉴를 띄우므로 플레이 화면에서는 막는다.
@@ -1026,7 +1047,7 @@ window.addEventListener("error", (e) => {
 }, true);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && crashInfo) setTimeout(checkCrash, 2000); });
 crashDlg.addEventListener("cancel", (e) => e.preventDefault());  // 멈춘 게임으로 돌아갈 수 없으니 닫지 않는다
-$("#crash-ok").onclick = () => location.assign(location.pathname + search);
+$("#crash-ok").onclick = () => location.assign(homeUrl);
 
 // ---- 타이틀로 (F12) ----
 
@@ -1134,19 +1155,27 @@ for (const t of ["pointerup", "pointercancel"]) dpad.addEventListener(t, () => s
 function releasePad() {
   releaseMapped();
   setDir(null);
-  for (const b of document.querySelectorAll(".pad button[data-key].on")) {
+  for (const b of document.querySelectorAll(".pad button[data-key].on, .quick button[data-key].on")) {
     b.classList.remove("on");
     key("keyup", b.dataset.key);
   }
 }
 
-for (const b of document.querySelectorAll(".pad button[data-key]")) {
+for (const b of document.querySelectorAll(".pad button[data-key], .quick button[data-key]")) {
   const up = () => {
-    if (!b.classList.contains("on")) return;
+    if (b.hasAttribute("data-toggle") || !b.classList.contains("on")) return;
     b.classList.remove("on");
     key("keyup", b.dataset.key);
   };
   b.addEventListener("pointerdown", (e) => {
+    // 벽 통과(Ctrl)는 한 번 누르면 켜지고 다시 누르면 꺼진다 (방향키를 누르는 동안 손가락이 모자라서)
+    if (b.hasAttribute("data-toggle")) {
+      const on = !b.classList.contains("on");
+      b.classList.toggle("on", on);
+      key(on ? "keydown" : "keyup", b.dataset.key);
+      e.preventDefault();
+      return;
+    }
     b.classList.add("on");
     key("keydown", b.dataset.key);
     capture(b, e);
@@ -1260,11 +1289,112 @@ async function getFiles() {
   box.hidden = true;
 }
 
+// ---- 테스트 링크 (운영 지시 #254) ----
+
+// test/<id>/meta.json 의 묶음을 받아 { 소문자 NFC 경로 → 내용 } 으로 돌려준다. 묶음 주소에 ?v=<sha> 를 붙여 브라우저 캐시를 쓴다.
+async function getTestFiles() {
+  const box = $("#loading");
+  const bar = $("#load-bar");
+  const dir = new URL(`../test/${testId}/`, location.href).href;
+  for (;;) {
+    try {
+      const res = await fetch(`${dir}meta.json`, { cache: "no-cache" });
+      if (res.status === 404) throw Object.assign(new Error("없는 테스트"), { gone: true });
+      if (!res.ok) throw new Error(`meta.json ${res.status}`);
+      const meta = await res.json();
+      const v = encodeURIComponent(meta.sha || meta.built);
+      const packs = meta.packs ?? [];
+      const total = packs.reduce((a, k) => a + k.size, 0);
+      let done = 0;
+      $("#load-title").textContent = "테스트 파일 받는 중";
+      $("#load-note").textContent = `웹판 ${meta.base} 와 다른 파일 ${meta.changed.length}개`;
+      $("#load-retry").hidden = true;
+      box.hidden = !total;
+      const files = new Map();
+      await Promise.all(packs.map(async (k) => {
+        const r = await fetch(`${dir}${k.url}?v=${v}`);
+        if (!r.ok) throw new Error(`${k.url} ${r.status}`);
+        const reader = r.body.getReader();
+        const buf = new Uint8Array(k.size);
+        let at = 0;
+        for (;;) {
+          const { done: end, value } = await reader.read();
+          if (end) break;
+          buf.set(value, at);
+          at += value.length;
+          done += value.length;
+          const pct = Math.min(100, (done / total) * 100);
+          bar.style.width = `${pct}%`;
+          $("#load-size").textContent = `${mb(done)} / ${mb(total)}MB`;
+        }
+        if (at !== k.size) throw new Error(`${k.url} ${at}/${k.size}`);
+        for (const [p, size, off] of k.files) files.set(p.normalize("NFC").toLowerCase(), buf.slice(off, off + size).buffer);
+      }));
+      box.hidden = true;
+      return files;
+    } catch (e) {
+      console.warn("[test]", e);
+      $("#load-title").textContent = e.gone ? "이 테스트가 없습니다" : "테스트 파일을 받지 못했습니다";
+      $("#load-note").textContent = e.gone ? "닫힌 PR 이거나 아직 만드는 중입니다." : "연결을 확인하고 다시 시도해 주세요.";
+      $("#load-size").textContent = "";
+      $("#load-retry").textContent = e.gone ? "테스트 목록" : "다시 시도";
+      $("#load-retry").hidden = false;
+      box.hidden = false;
+      await new Promise((r) => { $("#load-retry").onclick = r; });
+      if (e.gone) location.assign("../test/");
+    }
+  }
+}
+
+// 플레이어는 games/t-<id>/ 의 파일을 XMLHttpRequest 로 찾는다. 바뀐 파일은 받아 둔 묶음에서 바로 넘기고,
+// 나머지는 웹판 게임 주소(games/lostsaga/)로 바꿔 보낸다 → 미리 올린 그림(installPreload)·Service Worker 저장소가 받는다.
+// installPreload 보다 뒤에 걸어야 바꾼 주소로 미리 올린 그림을 찾는다.
+function installTestRoute(files) {
+  const game = new URL(`games/${GAME}/`, location.href).href;
+  const play = new URL("games/lostsaga/", location.href).href;
+  const Real = window.XMLHttpRequest;
+  window.XMLHttpRequest = class extends Real {
+    open(method, url, ...rest) {
+      const abs = new URL(url, location.href);
+      const href = abs.origin + abs.pathname;
+      if (href.startsWith(game)) {
+        const rel = decodeURIComponent(href.slice(game.length)).normalize("NFC");
+        this._own = files.get(rel.toLowerCase());
+        if (this._own) return;
+        url = play + rel.split("/").map(encodeURIComponent).join("/");
+      }
+      return super.open(method, url, ...rest);
+    }
+    send(body) {
+      if (!this._own) return super.send(body);
+      Object.defineProperty(this, "status", { value: 200 });
+      Object.defineProperty(this, "readyState", { value: 4 });
+      Object.defineProperty(this, "response", { value: this._own });
+      this.onload?.(new ProgressEvent("load"));
+    }
+  };
+}
+
+function startTest() {
+  const title = (params.get("title") ?? "").slice(0, 80) || "테스트";
+  document.title = `${title} · 로스트사가 테스트`;
+  // 빠른 배속은 10배 (FAST)
+  for (const el of document.querySelectorAll('[data-speed="5"], [data-show="speed5"]')) {
+    const t = [...(el.tagName === "INPUT" ? el.parentElement : el).childNodes].find((n) => n.nodeType === 3 && n.textContent.includes("5배속"));
+    if (t) t.textContent = t.textContent.replace("5배속", `${FAST}배속`);
+  }
+  $("#ctl-speed5").previousElementSibling.textContent = `${FAST}배속 (켜기·끄기)`;
+  $("#save-note").textContent = "이 테스트 전용 칸에 저장됩니다. 웹판 세이브·클라우드는 그대로입니다. 세이브 관리는 테스트 페이지에서 합니다.";
+  launch(testArgs, title);
+}
+
 // ---- 시작 ----
 
 // Service Worker 는 게임을 켤 때만 있으면 된다. 홈은 기다리지 않는다.
 const worker = registerWorker();
-await Promise.all([getFiles(), offline ? setStatus("offline", "오프라인") : sync.start()]);
+// 테스트 묶음은 웹판 게임 파일과 같이 받는다 (받는 창 하나에 이어서 보인다).
+const testFiles = testId ? getFiles().then(getTestFiles) : null;
+await Promise.all([testFiles ?? getFiles(), offline ? setStatus("offline", testId ? "테스트" : "오프라인") : sync.start()]);
 // 홈을 보는 동안 그림 파일을 메모리에 올려 둔다 (게임을 시작할 때 기다린다).
 const graphics = preloadGraphics().catch((e) => {
   console.warn("[launcher] preload", e);
@@ -1272,6 +1402,10 @@ const graphics = preloadGraphics().catch((e) => {
 });
 // Google 로그인에서 돌아오면 주소 뒤에 토큰이 붙어 있다. 읽은 뒤 지운다.
 if (location.hash && !/^#(account|ranking)$/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search);
-await renderHome();
-initInstall({ anonymous: sync.anonymous, saveCount: (await readLocalSaves()).size });
-route();
+if (testId) {
+  startTest();
+} else {
+  await renderHome();
+  initInstall({ anonymous: sync.anonymous, saveCount: (await readLocalSaves()).size });
+  route();
+}
