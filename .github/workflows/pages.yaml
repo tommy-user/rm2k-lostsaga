@@ -2,16 +2,20 @@ name: Pages
 
 # 소개 사이트(docs/)와 웹판(docs/play/)을 GitHub Pages 에 올린다.
 # 웹판 게임은 main 이 아니라 최신 정식 릴리즈 태그(v*, rc 제외)의 게임 폴더를 쓴다.
+# 테스트 링크(test/): main 과 열린 PR 의 게임을 웹판 게임과 비교해 바뀐 파일만 test/<id>/ 에 넣는다.
+# PR 이 열리거나 바뀌거나 닫힐 때마다 다시 만든다. PR 의 코드는 돌리지 않고 게임 폴더만 꺼낸다.
 on:
   push:
     branches: [main]
-    paths: ['docs/**', 'tools/build-play.mjs', '.github/workflows/pages.yaml']
+  pull_request_target:
+    types: [opened, synchronize, reopened, closed]
   release:
     types: [published]
   workflow_dispatch:
 
 permissions:
   contents: read
+  pull-requests: read
   pages: write
   id-token: write
 
@@ -41,6 +45,33 @@ jobs:
           node-version: 22
 
       - run: node tools/build-play.mjs _site
+
+      - name: Test builds (main + open PRs)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RELEASE="$GAME_DIR"  # 웹판 게임 (위 단계의 릴리즈 태그)
+          build() {  # id ref branch title
+            d="$RUNNER_TEMP/pv"; rm -rf "$d"; mkdir -p "$d"
+            git archive "$2" rm2k-lostsaga | tar -x -C "$d"
+            GAME_DIR="$d/rm2k-lostsaga" BASE_DIR="$RELEASE" PREVIEW_BRANCH="$3" PREVIEW_SHA="$(git rev-parse "$2")" \
+              node tools/build-preview.mjs "_site/test/$1" "$1" "$4"
+            rm -rf "$d"
+          }
+          build main origin/main main ""
+          gh pr list -R "$GITHUB_REPOSITORY" --state open --limit 8 --json number,title,headRefName,isCrossRepository \
+            --jq '.[] | select(.isCrossRepository | not) | [.number, .headRefName, .title] | @tsv' |
+          while IFS=$'\t' read -r n ref title; do
+            git fetch -q origin "refs/pull/$n/head:refs/remotes/pr/$n" && build "pr$n" "refs/remotes/pr/$n" "$ref" "$title" || echo "skip #$n"
+          done
+          node -e '
+            const fs = require("fs");
+            const list = fs.readdirSync("_site/test", { withFileTypes: true }).filter((d) => d.isDirectory())
+              .map((d) => JSON.parse(fs.readFileSync(`_site/test/${d.name}/meta.json`)))
+              .map((m) => ({ id: m.id, title: m.title, branch: m.branch, built: m.built, changed: m.changed.length }))
+              .sort((a, b) => (a.id === "main" ? -1 : b.id === "main" ? 1 : Number(b.id.slice(2)) - Number(a.id.slice(2))));
+            fs.writeFileSync("_site/test/list.json", JSON.stringify(list));'
+          du -sh _site _site/test
 
       - uses: actions/upload-pages-artifact@v3
         with:
