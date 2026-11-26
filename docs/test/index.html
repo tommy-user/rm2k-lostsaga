@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>로스트사가 테스트</title>
+<link rel="icon" href="../favicon.ico">
+<style>
+:root { --ground: #101218; --panel: #181b23; --line: #2b303c; --text: #e6e2d8; --muted: #9a968c; --gold: #e8be68; --red: #e07a6a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; touch-action: manipulation; background: var(--ground); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif; font-size: 15px; }
+a { color: var(--gold); }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 22px; margin: 0 0 4px; }
+h2 { font-size: 15px; margin: 0 0 10px; color: var(--gold); }
+.sub { color: var(--muted); margin: 0 0 20px; line-height: 1.6; }
+section { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.row + .row { margin-top: 10px; }
+button, .btn { font: inherit; color: var(--text); background: #232836; border: 1px solid #3a4152; border-radius: 8px;
+  padding: 8px 14px; cursor: pointer; text-decoration: none; }
+button:hover, .btn:hover { border-color: var(--gold); }
+button.main { background: var(--gold); color: #1a1408; border-color: var(--gold); font-weight: 700; }
+input, select { font: inherit; color: var(--text); background: #0d0f14; border: 1px solid #3a4152; border-radius: 8px; padding: 7px 9px; }
+input.num { width: 80px; }
+select { max-width: 100%; }
+label { color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+.slots { display: grid; gap: 6px; }
+.slot { display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; }
+.slot span { color: var(--muted); font-size: 13px; }
+.muted { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.err { color: var(--red); }
+details summary { cursor: pointer; color: var(--muted); }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 13px; max-height: 240px; overflow: auto; }
+#list a { display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; margin-bottom: 6px; }
+#list a span { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+#play { position: fixed; inset: 0; background: #000; display: flex; flex-direction: column; }
+#play[hidden] { display: none; }
+#play .bar { display: flex; gap: 8px; align-items: center; padding: 6px 10px; background: #0b0c10; color: var(--muted); font-size: 13px; }
+#play .bar b { color: var(--text); font-weight: 500; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#play .bar button { padding: 4px 10px; font-size: 13px; }
+#status { position: absolute; top: 50%; width: 100%; text-align: center; color: var(--muted); font-size: 14px; pointer-events: none; }
+#pad { display: none; flex: none; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: #0b0c10; touch-action: none; user-select: none; -webkit-user-select: none; }
+.touch #pad { display: flex; }
+.dpad { --c: 54px; position: relative; flex: none; width: calc(var(--c) * 3); height: calc(var(--c) * 3); touch-action: none; }
+.dpad i { position: absolute; width: var(--c); height: var(--c); display: flex; align-items: center; justify-content: center;
+  background: rgba(255, 255, 255, 0.08); border: 1px solid #3a4152; color: var(--muted); font-style: normal; font-size: 18px; }
+.dpad i.on, .keys button.on { background: rgba(232, 190, 104, 0.45); }
+.dpad .up { left: var(--c); top: 0; border-radius: 12px 12px 0 0; }
+.dpad .down { left: var(--c); bottom: 0; border-radius: 0 0 12px 12px; }
+.dpad .left { left: 0; top: var(--c); border-radius: 12px 0 0 12px; }
+.dpad .right { right: 0; top: var(--c); border-radius: 0 12px 12px 0; }
+.dpad .mid { left: var(--c); top: var(--c); border: 0; background: none; }
+.keys { display: grid; grid-template-columns: repeat(2, auto); gap: 10px; align-items: center; justify-items: center; }
+.keys button { touch-action: none; }
+.keys .big { width: 68px; height: 68px; border-radius: 50%; font-weight: 700; }
+.keys .ok { background: rgba(232, 190, 104, 0.2); border-color: var(--gold); }
+.keys .small { font-size: 12px; padding: 6px 10px; }
+@media (orientation: portrait) {
+  .touch .screen { flex: none; width: 100%; aspect-ratio: 4 / 3; margin: auto 0; }
+}
+@media (orientation: landscape) {
+  .touch #play { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto minmax(0, 1fr); }
+  .touch #play .bar { grid-column: 1 / -1; }
+  .touch .screen { grid-column: 2; grid-row: 2; justify-self: center; height: 100%; max-width: 100%; aspect-ratio: 4 / 3; }
+  .touch #pad { display: contents; }
+  .touch .dpad { grid-column: 1; grid-row: 2; align-self: center; margin: 0 14px; }
+  .touch .keys { grid-column: 3; grid-row: 2; align-self: center; margin: 0 14px; }
+}
+.screen { position: relative; flex: 1; min-height: 0; min-width: 0; display: flex; align-items: center; justify-content: center; }
+#canvas { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; outline: none; }
+</style>
+</head>
+<body>
+<main id="home">
+  <h1 id="title">로스트사가 테스트</h1>
+  <p class="sub" id="sub">불러오는 중…</p>
+  <div id="list" hidden></div>
+  <div id="panel" hidden>
+    <section>
+      <h2>시작</h2>
+      <div class="row">
+        <button class="main" id="btn-new">새 게임</button>
+        <button id="btn-title">타이틀 화면</button>
+        <label><input type="checkbox" id="debug" checked> 테스트 플레이 (F9 디버그 · Ctrl 벽 통과)</label>
+      </div>
+    </section>
+    <section>
+      <h2>바로 가기</h2>
+      <div class="row">
+        <select id="map"></select>
+      </div>
+      <div class="row">
+        <label>x <input class="num" id="x" inputmode="numeric"></label>
+        <label>y <input class="num" id="y" inputmode="numeric"></label>
+        <label>파티 <input id="party" placeholder="예: 1 26" size="10"></label>
+        <button class="main" id="btn-warp">여기서 시작</button>
+      </div>
+      <div class="row">
+        <label>적그룹 <input class="num" id="troop" inputmode="numeric"></label>
+        <button id="btn-battle">전투만</button>
+      </div>
+      <p class="muted">새 게임에서 그 자리로 바로 갑니다. 오프닝이 켜는 스위치는 꺼진 채라 안 맞는 대사가 나올 수 있습니다.</p>
+    </section>
+    <section>
+      <h2>세이브</h2>
+      <div class="slots" id="slots"></div>
+      <div class="row">
+        <button id="btn-copy">웹판 세이브 가져오기</button>
+        <label class="btn">세이브 파일 올리기<input type="file" id="file" accept=".lsd" multiple hidden></label>
+        <button id="btn-clear">테스트 세이브 지우기</button>
+      </div>
+      <p class="muted">이 테스트 전용 칸입니다. 여기서 저장해도 웹판 세이브·클라우드는 그대로입니다.</p>
+    </section>
+    <details id="changes"><summary></summary><ul></ul></details>
+  </div>
+</main>
+<div id="play" hidden>
+  <div class="bar"><b id="play-title"></b><button id="btn-home">처음으로</button></div>
+  <div class="screen">
+    <canvas id="canvas" tabindex="-1"></canvas>
+    <div id="status"></div>
+  </div>
+  <div id="pad">
+    <div class="dpad" id="dpad"><i class="up" data-key="ArrowUp">▲</i><i class="left" data-key="ArrowLeft">◀</i><i class="mid"></i><i class="right" data-key="ArrowRight">▶</i><i class="down" data-key="ArrowDown">▼</i></div>
+    <div class="keys">
+      <button type="button" class="big cancel" data-key="Escape">취소</button>
+      <button type="button" class="big ok" data-key="Enter">결정</button>
+      <button type="button" class="small" data-key="ShiftLeft">Shift</button>
+      <button type="button" class="small" data-key="KeyF" data-toggle>빨리</button>
+      <button type="button" class="small" data-key="F9" id="btn-f9">F9 디버그</button>
+      <button type="button" class="small" data-key="ControlLeft" data-toggle id="btn-ctrl">벽 통과</button>
+    </div>
+  </div>
+</div>
+<script src="../play/player/index.js"></script>
+<script type="module" src="test.js"></script>
+</body>
+</html>
