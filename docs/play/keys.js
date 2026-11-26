@@ -1,7 +1,8 @@
 // 키 설정 (운영 지시 #100). 기본 키(방향키·Z·X 등)는 그대로 두고, 동작마다 키 하나를 더 정할 수 있다.
 // 정한 키는 엔진에 가지 않고, 런처가 그 동작의 기본 키로 바꿔 보낸다 (방향은 방향키, 결정은 Enter …).
-// 배속은 엔진 키가 아니라 런처의 배속 버튼을 누른 것과 같다 (1→2→5배).
-// 값은 이 기기(localStorage)에 저장한다. 읽기·쓰기가 안 되면 기본값(배속 F)으로 쓴다.
+// 2배속·5배속은 엔진 키가 아니라 런처의 그 버튼을 누른 것과 같다 (켜기·끄기, 운영 지시 #252).
+// 값은 이 기기(localStorage)에 저장한다. 읽기·쓰기가 안 되면 기본값(2배속 F, 5배속 G)으로 쓴다.
+// 예전(1→2→5배 한 키) 때 저장한 "speed" 키는 2배속 키가 된다.
 
 const STORE = "lostsaga-keys";
 
@@ -13,9 +14,10 @@ export const ACTIONS = [
   { id: "ok", label: "결정", send: "Enter", base: "Z · Enter · Space" },
   { id: "cancel", label: "취소 · 메뉴", send: "Escape", base: "X · Esc" },
   { id: "shift", label: "능력치 분배", send: "ShiftLeft", base: "Shift" },
-  { id: "speed", label: "배속", send: null, base: "" },
+  { id: "speed", label: "2배속", send: null, base: "", speed: 2 },
+  { id: "speed5", label: "5배속", send: null, base: "", speed: 5 },
 ];
-const DEFAULT = { speed: "KeyF" };
+const DEFAULT = { speed: "KeyF", speed5: "KeyG" };
 
 // 정할 수 없는 키: 기본 키(겹치면 원래 동작이 사라진다), 타이틀로(F12), 조합 키.
 const RESERVED = new Set([
@@ -47,6 +49,11 @@ function load() {
         const c = saved[a.id];
         if (c === null) delete v[a.id];
         else if (typeof c === "string" && !RESERVED.has(c)) v[a.id] = c;
+      }
+      // 저장할 때 없던 동작(5배속)의 기본 키를 다른 동작에 이미 정했으면 기본 키를 비운다.
+      for (const a of ACTIONS) {
+        if (a.id in saved) continue;
+        if (ACTIONS.some((b) => b.id !== a.id && v[b.id] === v[a.id])) delete v[a.id];
       }
     }
   } catch {}

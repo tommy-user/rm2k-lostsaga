@@ -896,7 +896,7 @@ const canvas = $("#canvas");
 canvas.addEventListener("click", () => canvas.focus());
 
 // 키보드에서 엔진으로 가지 않게 막는 키: 빨리 감기(F·G)는 배속 버튼으로만, 엔진 설정 메뉴(F1)는 쓰지 않는다.
-// 키 설정(keys.js)에서 정한 키는 엔진 대신 런처가 받아 그 동작의 기본 키로 바꿔 보낸다. 배속 키는 배속 버튼과 같다 (운영 지시 #100).
+// 키 설정(keys.js)에서 정한 키는 엔진 대신 런처가 받아 그 동작의 기본 키로 바꿔 보낸다. 2배속·5배속 키는 그 버튼과 같다 (운영 지시 #100·#252).
 // F12(타이틀로)는 확인창을 띄운다. 확인창·버튼 배치 편집 중에는 키 입력이 게임으로 가지 않는다.
 // 런처가 보내는 키(화면 버튼, 배속)는 isTrusted 가 false 라 막지 않는다.
 const BLOCKED = new Set(["KeyF", "KeyG", "F1", "F12"]);
@@ -918,7 +918,7 @@ for (const type of ["keydown", "keyup"]) {
         heldMapped.delete(e.code);
         if (send) key("keyup", send);
       } else if (!e.repeat && started) {
-        if (act.id === "speed") nextSpeed();
+        if (act.speed) toggleSpeed(act.speed);
         else { heldMapped.set(e.code, act.send); key("keydown", act.send); }
       }
       return;
@@ -938,10 +938,10 @@ if (!document.fullscreenEnabled) full.hidden = true;
 full.onclick = () => (document.fullscreenElement ? document.exitFullscreen() : $("#play").requestFullscreen());
 
 // ---- 배속 ----
-// 버튼을 누를 때마다 1배 → 2배 → 5배 → 1배. 엔진의 빨리 감기 키(2배 F, 5배 G)를 누른 채로 둔다.
+// 2배속·5배속 버튼(키)이 따로 있다 (운영 지시 #252). 누르면 그 배속을 켜고, 켜진 것을 다시 누르면 1배로 돌아온다.
+// 2배로 걷다가 5배를 누르면 바로 5배. 엔진의 빨리 감기 키(2배 F, 5배 G)를 누른 채로 둔다.
 // 배율은 위 PLAYER_CONFIG 에서 정했다. 서버는 5배에 10% 여유로 플레이 시간을 본다. 새로 열면 1배다.
 
-const SPEEDS = [1, 2, 5];
 const SPEED_KEY = { 2: "KeyF", 5: "KeyG" };
 let speed = 1;
 function holdFast() {
@@ -952,17 +952,15 @@ function setSpeed(next) {
   speed = next;
   holdFast();
   for (const b of document.querySelectorAll('[data-act="speed"]')) {
-    b.setAttribute("aria-pressed", String(speed > 1));
-    const t = b.querySelector(".spd");
-    if (t) t.textContent = `${speed}배속`;
+    b.setAttribute("aria-pressed", String(Number(b.dataset.speed) === speed));
   }
 }
-function nextSpeed() {
-  setSpeed(SPEEDS[(SPEEDS.indexOf(speed) + 1) % SPEEDS.length]);
+function toggleSpeed(n) {
+  setSpeed(speed === n ? 1 : n);
 }
 for (const b of document.querySelectorAll('[data-act="speed"]')) {
   b.onclick = () => {
-    nextSpeed();
+    toggleSpeed(Number(b.dataset.speed));
     canvas.focus();  // 버튼에 남은 포커스로 Space·Enter 가 버튼을 또 누르지 않게
   };
 }
@@ -1167,14 +1165,14 @@ for (const b of document.querySelectorAll('[data-act="layout"]')) b.onclick = ()
 const sound = createSound({ onOpen: releasePad, onClose: () => canvas.focus() });
 for (const b of document.querySelectorAll('[data-act="sound"]')) b.onclick = () => { if (!modal()) sound.open(); };
 
-// 키 설정. 바꾸면 배속 버튼의 키 표시와 옆 패널의 조작 안내를 고친다.
+// 키 설정. 바꾸면 2배속·5배속 버튼의 키 표시와 옆 패널의 조작 안내를 고친다.
 function showKeys() {
-  const sp = keyName(keys.keyOf("speed"));
   for (const b of document.querySelectorAll('[data-act="speed"]')) {
+    const k = keyName(keys.keyOf(b.dataset.speed === "5" ? "speed5" : "speed"));
     let s = b.querySelector("small");
     if (!s) b.append((s = document.createElement("small")));
-    s.textContent = sp;
-    s.hidden = !sp;
+    s.textContent = k;
+    s.hidden = !k;
   }
   const add = (base, ...ids) => {
     const own = ids.map((id) => keyName(keys.keyOf(id))).filter(Boolean);
@@ -1184,7 +1182,8 @@ function showKeys() {
   $("#ctl-ok").textContent = add("Z · Enter · Space", "ok");
   $("#ctl-cancel").textContent = add("X · Esc", "cancel");
   $("#ctl-shift").textContent = add("Shift", "shift");
-  $("#ctl-speed").textContent = sp || "없음";
+  $("#ctl-speed").textContent = keyName(keys.keyOf("speed")) || "없음";
+  $("#ctl-speed5").textContent = keyName(keys.keyOf("speed5")) || "없음";
 }
 const keys = createKeys({ onOpen: releasePad, onClose: () => canvas.focus(), onChange: showKeys });
 for (const b of document.querySelectorAll('[data-act="keys"]')) b.onclick = () => { if (!modal()) keys.open(); };
