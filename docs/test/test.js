@@ -2,10 +2,8 @@
 //   test/?pr=566            PR #566 의 게임
 //   test/?id=main           main (아직 릴리즈하지 않은 것)
 //   &map=445&at=7,8&party=1 바로 가기 칸을 채워 둔다 (&go=1 이면 바로 시작)
-//   휴대폰(터치)이면 화면 버튼이 나온다. PC 에서 보려면 &pad=1
-// 게임 파일은 빌드(tools/build-preview.mjs)가 웹판 게임과 달라진 것만 test/<id>/ 에 넣고,
-// 나머지는 웹판(play/games/lostsaga/)에서 받는다. 세이브는 /easyrpg/t-<id>/Save 에 따로 둔다.
-// 런처(play/)와 달리 클라우드 동기화·Service Worker 를 쓰지 않는다.
+// 이 페이지는 시작 방법·세이브만 고른다. 게임은 웹판 런처(play/?test=<id>)가 같은 화면·버튼으로 켠다 (운영 지시 #254).
+// 런처가 웹판 게임 파일(받아 둔 저장소)을 쓰고 바뀐 파일만 test/<id>/ 의 묶음으로 받는다. 세이브는 /easyrpg/t-<id>/Save.
 import { parseLsd } from "../play/lsd.js";
 
 const $ = (s) => document.querySelector(s);
@@ -14,8 +12,6 @@ const id = q.get("pr") ? `pr${q.get("pr").replace(/\D/g, "")}` : (q.get("id") ??
 const GAME = `t-${id}`;
 const SAVE_DIR = `/easyrpg/${GAME}/Save`;
 const REAL_SAVE_DIR = "/easyrpg/lostsaga/Save";  // 웹판 런처의 세이브 (읽기만 한다)
-const CONFIG_DIR = "/tmp/lostsaga-test-config";
-const PLAYER_CONFIG = "[Input]\nSpeedModifierA=3\nSpeedModifierB=10\n";
 
 // ---- 목록 (id 가 없을 때) ----
 
@@ -157,54 +153,16 @@ function alertLine(text) {
   setTimeout(() => p.remove(), 5000);
 }
 
-// ---- 게임 파일: 바뀐 것은 test/<id>/, 나머지는 웹판 ----
+// ---- 플레이: 런처로 넘긴다 ----
 
-function routeFiles(meta) {
-  const own = new URL(`${id}/`, location.href).href;
-  const play = new URL("../play/games/lostsaga/", location.href).href;
-  const game = new URL(`games/${GAME}/`, location.href).href;
-  const changed = new Set(meta.changed.map((p) => p.normalize("NFC").toLowerCase()));
-  const v = encodeURIComponent(meta.sha || meta.built);
-  const Real = window.XMLHttpRequest;
-  window.XMLHttpRequest = class extends Real {
-    open(method, url, ...rest) {
-      const abs = new URL(url, location.href);
-      const href = abs.origin + abs.pathname;
-      if (href.startsWith(game)) {
-        const rel = decodeURIComponent(href.slice(game.length)).normalize("NFC");
-        const enc = rel.split("/").map(encodeURIComponent).join("/");
-        url = rel === "index.json" || changed.has(rel.toLowerCase()) ? `${own}${enc}?v=${v}` : play + enc;
-      }
-      return super.open(method, url, ...rest);
-    }
-  };
-}
-
-// ---- 플레이 ----
-
-let started = false;
-async function launch(args, title) {
-  if (started) return;
-  started = true;
-  $("#play-title").textContent = `${$("#title").textContent} · ${title}`;
-  $("#home").hidden = true;
-  $("#play").hidden = false;
+function launch(args, title) {
   const debug = $("#debug").checked ? "&test-play" : "";
-  $("#btn-f9").hidden = $("#btn-ctrl").hidden = !debug;
-  const back = location.pathname + location.search;
-  // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다 (play/app.js 와 같다).
-  history.replaceState(null, "", `?game=${GAME}&engine=rpg2kv150&config-path=${CONFIG_DIR}${debug}${args}`);
-  const player = await createEasyRpgPlayer({
-    game: GAME,
-    onRuntimeInitialized() {
-      this.FS.mkdirTree(CONFIG_DIR);
-      this.FS.writeFile(`${CONFIG_DIR}/config.ini`, PLAYER_CONFIG);
-    },
-  });
-  history.replaceState(null, "", back);
-  player.initApi();
-  window.easyrpgPlayer = player;
-  $("#canvas").focus();
+  const name = id === "main" ? "main" : `#${id.slice(2)}`;
+  // 런처의 홈 버튼이 돌아올 주소 (바로 시작 &go=1 은 빼서 다시 켜지지 않게)
+  const back = new URLSearchParams(location.search);
+  back.delete("go");
+  const u = new URLSearchParams({ test: id, args: debug + args, title: `${name} · ${title}`, back: back.toString() });
+  location.assign(`../play/?${u}`);
 }
 
 const num = (s) => String(s ?? "").replace(/\D/g, "");
@@ -251,7 +209,6 @@ async function main() {
   $("#party").value = (q.get("party") ?? "").replace(/,/g, " ");
   if (q.get("troop")) $("#troop").value = num(q.get("troop"));
 
-  routeFiles(meta);
   $("#btn-new").onclick = () => launch("&new-game", "새 게임");
   $("#btn-title").onclick = () => launch("", "타이틀");
   $("#btn-warp").onclick = () => {
@@ -270,87 +227,8 @@ async function main() {
     await clearSaves();
     renderSaves();
   };
-  $("#btn-home").onclick = () => location.reload();
   await renderSaves();
   if (q.get("go") === "1" && warpArgs()) $("#btn-warp").click();
 }
 
-// ---- 화면 버튼 (터치 기기, play/app.js 와 같은 방식: code 만 담은 키 이벤트를 캔버스에 보낸다) ----
-
-const touch = matchMedia("(pointer: coarse)").matches || q.get("pad") === "1";
-document.documentElement.classList.toggle("touch", touch);
-
-// 짧게 톡 치면 누름·뗌이 한 프레임 안에 들어가 엔진이 못 읽는다. 누른 뒤 80ms 는 지나서 뗀다.
-const pressedAt = new Map();
-function key(type, code) {
-  const send = () => {
-    const e = new Event(type, { bubbles: true });
-    e.code = code;
-    $("#canvas").dispatchEvent(e);
-  };
-  if (type === "keydown") {
-    pressedAt.set(code, performance.now());
-    return send();
-  }
-  const at = pressedAt.get(code) ?? 0;
-  const wait = 80 - (performance.now() - at);
-  // 기다리는 사이 다시 눌렀으면 이 뗌은 버린다 (새 누름의 뗌이 따로 온다)
-  if (wait > 0) setTimeout(() => pressedAt.get(code) === at && send(), wait);
-  else send();
-}
-function capture(el, e) {
-  try { el.setPointerCapture(e.pointerId); } catch {}
-}
-
-const dpad = $("#dpad");
-let dir = null;
-function setDir(next) {
-  if (next === dir) return;
-  if (dir) key("keyup", dir);
-  dir = next;
-  if (dir) key("keydown", dir);
-  for (const i of dpad.querySelectorAll("[data-key]")) i.classList.toggle("on", i.dataset.key === dir);
-}
-function dirAt(e) {
-  const r = dpad.getBoundingClientRect();
-  const x = e.clientX - (r.left + r.width / 2), y = e.clientY - (r.top + r.height / 2);
-  if (Math.hypot(x, y) < r.width * 0.12) return dir;
-  return Math.abs(x) > Math.abs(y) ? (x < 0 ? "ArrowLeft" : "ArrowRight") : (y < 0 ? "ArrowUp" : "ArrowDown");
-}
-dpad.addEventListener("pointerdown", (e) => {
-  setDir(dirAt(e));
-  capture(dpad, e);
-  e.preventDefault();
-});
-dpad.addEventListener("pointermove", (e) => { if (dir) setDir(dirAt(e)); });
-for (const t of ["pointerup", "pointercancel"]) dpad.addEventListener(t, () => setDir(null));
-
-for (const b of document.querySelectorAll(".keys button[data-key]")) {
-  const up = () => {
-    if (b.hasAttribute("data-toggle") || !b.classList.contains("on")) return;
-    b.classList.remove("on");
-    key("keyup", b.dataset.key);
-  };
-  b.addEventListener("pointerdown", (e) => {
-    // 빨리·벽 통과는 한 번 누르면 켜지고 다시 누르면 꺼진다 (방향키를 누르는 동안 손가락이 모자라서)
-    if (b.hasAttribute("data-toggle")) {
-      const on = !b.classList.contains("on");
-      b.classList.toggle("on", on);
-      key(on ? "keydown" : "keyup", b.dataset.key);
-      e.preventDefault();
-      return;
-    }
-    b.classList.add("on");
-    key("keydown", b.dataset.key);
-    capture(b, e);
-    navigator.vibrate?.(8);
-    e.preventDefault();
-  });
-  b.addEventListener("pointerup", up);
-  b.addEventListener("pointercancel", up);
-  b.addEventListener("contextmenu", (e) => e.preventDefault());
-}
-$("#play").addEventListener("contextmenu", (e) => e.preventDefault());
-
-$("#canvas").addEventListener("click", () => $("#canvas").focus());
 main();

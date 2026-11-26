@@ -1,6 +1,7 @@
 // 테스트 링크(test/) 한 벌 만들기: PR(또는 main)의 게임 폴더를 웹판에 올라간 게임(최신 정식 릴리즈)과 비교해
-// 달라진 파일만 <출력>/ 에 넣고, 플레이어가 읽는 index.json 과 meta.json·maps.json 을 만든다.
-// 바뀌지 않은 파일은 테스트 화면(docs/test/test.js)이 웹판 쪽(play/games/lostsaga/)에서 받는다.
+// 달라진 파일과 플레이어가 읽는 index.json 을 묶음(pack-N.bin, 약 16MB씩)으로 합치고 meta.json·maps.json 을 만든다.
+// 런처(play/?test=<id>)가 묶음을 한 번에 받아 메모리에서 넘겨주고, 바뀌지 않은 파일은 웹판 게임(런처가 받아 둔 저장소)을 쓴다.
+// 파일 하나씩 받으면 맵을 옮길 때마다 기다리고 GitHub Pages 가 막는다(429) — 운영 지시 #254.
 //   GAME_DIR=<PR 게임 폴더> BASE_DIR=<릴리즈 게임 폴더> node tools/build-preview.mjs <출력 폴더> <id> [제목]
 // meta.json 의 branch·sha·base 는 PREVIEW_BRANCH·PREVIEW_SHA·GAME_TAG 로 준다.
 import crypto from "node:crypto";
@@ -52,6 +53,7 @@ for (const rel of fs.readdirSync(base, { recursive: true })) {
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 const changed = [];
+const blobs = [];  // [경로, 내용]
 let bytes = 0;
 for (const rel of fs.readdirSync(game, { recursive: true }).sort()) {
   const full = path.join(game, rel);
@@ -59,9 +61,9 @@ for (const rel of fs.readdirSync(game, { recursive: true }).sort()) {
   const nfc = rel.normalize("NFC");
   const b = baseFiles.get(nfc);
   if (b && fs.statSync(b).size === fs.statSync(full).size && sha(b) === sha(full)) continue;
-  fs.mkdirSync(path.dirname(path.join(out, nfc)), { recursive: true });
-  fs.copyFileSync(full, path.join(out, nfc));
-  changed.push(nfc.split(path.sep).join("/"));
+  const rp = nfc.split(path.sep).join("/");
+  changed.push(rp);
+  blobs.push([rp, fs.readFileSync(full)]);
   bytes += fs.statSync(full).size;
 }
 
@@ -92,10 +94,25 @@ function mapNames(file) {
   return names;
 }
 
-fs.writeFileSync(path.join(out, "index.json"), JSON.stringify({
+blobs.push(["index.json", Buffer.from(JSON.stringify({
   metadata: { version: 2, date: new Date().toISOString().slice(0, 10) },
   cache: walk(game, 4, true),
-}));
+}))]);
+
+// 묶음: 파일을 이어 붙인 것. meta.json 의 packs[].files = [경로, 크기, 시작 위치]
+const PACK = 16e6;
+const packs = [];
+for (const [rp, buf] of blobs) {
+  let k = packs.at(-1);
+  if (!k || (k.size && k.size + buf.length > PACK)) packs.push((k = { url: `pack-${packs.length}.bin`, size: 0, files: [], parts: [] }));
+  k.files.push([rp, buf.length, k.size]);
+  k.parts.push(buf);
+  k.size += buf.length;
+}
+for (const k of packs) {
+  fs.writeFileSync(path.join(out, k.url), Buffer.concat(k.parts));
+  delete k.parts;
+}
 fs.writeFileSync(path.join(out, "maps.json"), JSON.stringify(mapNames(path.join(game, "RPG_RT.lmt"))));
 fs.writeFileSync(path.join(out, "meta.json"), JSON.stringify({
   id,
@@ -105,5 +122,6 @@ fs.writeFileSync(path.join(out, "meta.json"), JSON.stringify({
   base: process.env.GAME_TAG ?? "",
   built: new Date().toISOString(),
   changed,
+  packs,
 }));
-console.log(`preview ${id}: 바뀐 파일 ${changed.length}개, ${(bytes / 1e6).toFixed(1)}MB → ${out}`);
+console.log(`preview ${id}: 바뀐 파일 ${changed.length}개, ${(bytes / 1e6).toFixed(1)}MB, 묶음 ${packs.length}개 → ${out}`);
