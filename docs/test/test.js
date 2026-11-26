@@ -2,6 +2,7 @@
 //   test/?pr=566            PR #566 의 게임
 //   test/?id=main           main (아직 릴리즈하지 않은 것)
 //   &map=445&at=7,8&party=1 바로 가기 칸을 채워 둔다 (&go=1 이면 바로 시작)
+//   휴대폰(터치)이면 화면 버튼이 나온다. PC 에서 보려면 &pad=1
 // 게임 파일은 빌드(tools/build-preview.mjs)가 웹판 게임과 달라진 것만 test/<id>/ 에 넣고,
 // 나머지는 웹판(play/games/lostsaga/)에서 받는다. 세이브는 /easyrpg/t-<id>/Save 에 따로 둔다.
 // 런처(play/)와 달리 클라우드 동기화·Service Worker 를 쓰지 않는다.
@@ -189,6 +190,7 @@ async function launch(args, title) {
   $("#home").hidden = true;
   $("#play").hidden = false;
   const debug = $("#debug").checked ? "&test-play" : "";
+  $("#btn-f9").hidden = $("#btn-ctrl").hidden = !debug;
   const back = location.pathname + location.search;
   // 플레이어는 주소의 쿼리를 명령줄 인자로 읽는다 (play/app.js 와 같다).
   history.replaceState(null, "", `?game=${GAME}&engine=rpg2kv150&config-path=${CONFIG_DIR}${debug}${args}`);
@@ -272,6 +274,83 @@ async function main() {
   await renderSaves();
   if (q.get("go") === "1" && warpArgs()) $("#btn-warp").click();
 }
+
+// ---- 화면 버튼 (터치 기기, play/app.js 와 같은 방식: code 만 담은 키 이벤트를 캔버스에 보낸다) ----
+
+const touch = matchMedia("(pointer: coarse)").matches || q.get("pad") === "1";
+document.documentElement.classList.toggle("touch", touch);
+
+// 짧게 톡 치면 누름·뗌이 한 프레임 안에 들어가 엔진이 못 읽는다. 누른 뒤 80ms 는 지나서 뗀다.
+const pressedAt = new Map();
+function key(type, code) {
+  const send = () => {
+    const e = new Event(type, { bubbles: true });
+    e.code = code;
+    $("#canvas").dispatchEvent(e);
+  };
+  if (type === "keydown") {
+    pressedAt.set(code, performance.now());
+    return send();
+  }
+  const at = pressedAt.get(code) ?? 0;
+  const wait = 80 - (performance.now() - at);
+  // 기다리는 사이 다시 눌렀으면 이 뗌은 버린다 (새 누름의 뗌이 따로 온다)
+  if (wait > 0) setTimeout(() => pressedAt.get(code) === at && send(), wait);
+  else send();
+}
+function capture(el, e) {
+  try { el.setPointerCapture(e.pointerId); } catch {}
+}
+
+const dpad = $("#dpad");
+let dir = null;
+function setDir(next) {
+  if (next === dir) return;
+  if (dir) key("keyup", dir);
+  dir = next;
+  if (dir) key("keydown", dir);
+  for (const i of dpad.querySelectorAll("[data-key]")) i.classList.toggle("on", i.dataset.key === dir);
+}
+function dirAt(e) {
+  const r = dpad.getBoundingClientRect();
+  const x = e.clientX - (r.left + r.width / 2), y = e.clientY - (r.top + r.height / 2);
+  if (Math.hypot(x, y) < r.width * 0.12) return dir;
+  return Math.abs(x) > Math.abs(y) ? (x < 0 ? "ArrowLeft" : "ArrowRight") : (y < 0 ? "ArrowUp" : "ArrowDown");
+}
+dpad.addEventListener("pointerdown", (e) => {
+  setDir(dirAt(e));
+  capture(dpad, e);
+  e.preventDefault();
+});
+dpad.addEventListener("pointermove", (e) => { if (dir) setDir(dirAt(e)); });
+for (const t of ["pointerup", "pointercancel"]) dpad.addEventListener(t, () => setDir(null));
+
+for (const b of document.querySelectorAll(".keys button[data-key]")) {
+  const up = () => {
+    if (b.hasAttribute("data-toggle") || !b.classList.contains("on")) return;
+    b.classList.remove("on");
+    key("keyup", b.dataset.key);
+  };
+  b.addEventListener("pointerdown", (e) => {
+    // 빨리·벽 통과는 한 번 누르면 켜지고 다시 누르면 꺼진다 (방향키를 누르는 동안 손가락이 모자라서)
+    if (b.hasAttribute("data-toggle")) {
+      const on = !b.classList.contains("on");
+      b.classList.toggle("on", on);
+      key(on ? "keydown" : "keyup", b.dataset.key);
+      e.preventDefault();
+      return;
+    }
+    b.classList.add("on");
+    key("keydown", b.dataset.key);
+    capture(b, e);
+    navigator.vibrate?.(8);
+    e.preventDefault();
+  });
+  b.addEventListener("pointerup", up);
+  b.addEventListener("pointercancel", up);
+  b.addEventListener("contextmenu", (e) => e.preventDefault());
+}
+$("#play").addEventListener("contextmenu", (e) => e.preventDefault());
 
 $("#canvas").addEventListener("click", () => $("#canvas").focus());
 main();
