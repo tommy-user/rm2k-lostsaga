@@ -28,6 +28,13 @@ const CLASS_LOOKS = {
   74: ["군주_카르온", 0], 75: ["군주_제시나", 0],
 };
 
+// 몬스터 주인공(액터 95)의 진화·각성 모습 (스튜디오 scripts/content/monster-look/gfx.py 의 FACES·WALKS 순서).
+// 게임은 옛 세이브를 다음 전투에서 맞추므로, 그 뒤 저장하기 전까지 세이브에는 원작 그림(보라 두건 얼굴 등)이 남아 있다.
+const MONSTER_ACTOR = 95;
+const MONSTER_FACES = ["뱀파이어", "쉐도우", "나이트마스터", "드래곤마스터",
+  "엘더리치", "카오스마스터", "데스나이트", "다크나이트", "슬레이어", "하프드래곤"];
+const MONSTER_WALKS = ["엘더리치", "카오스마스터", "데스나이트", "다크나이트", "슬레이어", "하프드래곤"];
+
 // 서버가 돌려준 캐릭터(look_of)를 그릴 수 있게 채운다.
 // 직업 캐릭터는 승급 외형, 그 밖(몬스터 등)은 세이브의 그림, 세이브에 없으면 DB 기본값.
 export async function resolveLook(l) {
@@ -46,6 +53,11 @@ export async function resolveLook(l) {
     const cell = c[1] + Math.min(3, Math.max(0, Number(l.promotion) || 0));
     look.sprite = look.face = `G1_${c[0]}`;
     look.spriteIndex = look.faceIndex = cell;
+  }
+  if (Number(l.actor) === MONSTER_ACTOR) {
+    const f = MONSTER_FACES.indexOf(look.title), w = MONSTER_WALKS.indexOf(look.title);
+    if (f >= 0) [look.face, look.faceIndex] = ["CY1_몬스터얼굴", f];
+    if (w >= 0) [look.sprite, look.spriteIndex] = ["CY1_각성", w];
   }
   return look;
 }
