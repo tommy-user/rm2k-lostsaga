@@ -540,6 +540,14 @@
     return '<p class="drop pixel">드롭 ' + ds.map(function (dr) { return dropName(dr) + " " + dr.prob + "%"; }).join("<br>") + "</p>";
   }
 
+  // 잘 안 걸리는 상태이상: st = [[확률, [이름…]], …] (30% 이하, 낮은 것부터). 0% = 안 걸림
+  function stText(g) { return esc(g[1].join("·")) + " " + g[0] + "%"; }
+  function stLine(m) {
+    var st = m.st || [];
+    if (!st.length) return "";
+    return '<p class="resist pixel">잘 안 걸림 ' + st.map(stText).join("<br>") + "</p>";
+  }
+
   // ── 몬스터 및 던전 ──
   var mEl = document.getElementById("regions");
   if (mEl) {
@@ -552,7 +560,7 @@
         return '<article class="boss-card win" id="' + esc(b._row.id) + '"><div class="boss-card__img">' + (b.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(b.img)) + '" alt="' + esc(b.name) + '" loading="lazy">' : "") + "</div>" +
           "<div><h3>" + esc(b.name) + '</h3><p class="t">' + esc(b.title || "") + "</p><p>" + esc(b.desc) + "</p>" +
           '<p class="pixel" style="font-size:.72rem">' + locBtn(b._row, b.where || "위치") + "</p>" +
-          '<p class="pixel" style="font-size:.72rem;color:var(--ink)">HP ' + b.hp + " 공 " + b.atk + "</p>" + dropLine(b) + "</div></article>";
+          '<p class="pixel" style="font-size:.72rem;color:var(--ink)">HP ' + b.hp + " 공 " + b.atk + "</p>" + dropLine(b) + stLine(b) + "</div></article>";
       }
       var regionBy = {};
       d.regions.forEach(function (r) { regionBy[r.key] = r; });
@@ -642,6 +650,12 @@
             var ds = dropsOf(r.m);
             if (hidden(r) || !ds.length) return dash();
             return ds.map(function (dr) { return dropName(dr) + ' <span class="dim pixel small">' + dr.prob + "%</span>"; }).join("<br>");
+          } },
+        { key: "st", label: "잘 안 걸림", wide: true, get: function (r) { var st = r.m.st || []; return hidden(r) || !st.length ? null : st[0][0]; },
+          html: function (r) {
+            var st = r.m.st || [];
+            if (hidden(r) || !st.length) return dash();
+            return st.map(stText).join("<br>");
           } }
       ];
       var tEl = document.getElementById("mob-table");
@@ -664,7 +678,7 @@
               return '<article class="mob' + (m.secret ? " mob--secret" : "") + (m.leader ? " mob--leader" : "") + '" id="' + esc(m._row.id) + '"><div class="mob__img">' + (m.img ? '<img class="px" src="assets/img/monster/' + esc(imgName(m.img)) + '"' + (m.hue && !m.secret ? ' style="filter:hue-rotate(' + m.hue + 'deg)"' : "") + ' alt="" loading="lazy">' : "") + "</div>" +
                 (m.leader ? '<p class="mob__tag pixel">리더</p>' : "") +
                 "<h3>" + (m.secret ? "???" : esc(m.name)) + "</h3>" +
-                (m.secret ? "<p>???</p>" : "<p>HP " + m.hp + " 공 " + m.atk + "</p>" + dropLine(m) + (hasPlaces(m._row) ? '<p class="mob__loc">' + locBtn(m._row, "위치") + "</p>" : "")) + "</article>";
+                (m.secret ? "<p>???</p>" : "<p>HP " + m.hp + " 공 " + m.atk + "</p>" + dropLine(m) + stLine(m) + (hasPlaces(m._row) ? '<p class="mob__loc">' + locBtn(m._row, "위치") + "</p>" : "")) + "</article>";
             }).join("") + "</div>" : "") + "</section>";
         }).join("");
       }
