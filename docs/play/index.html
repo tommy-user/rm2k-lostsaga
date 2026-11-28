@@ -202,6 +202,7 @@ img.px { image-rendering: pixelated; }
 .pf-ranks dt { font-size: 12px; color: var(--faint); }
 .pf-ranks dd { margin: 0; font-size: 17px; font-weight: 700; color: var(--gold-hi); white-space: nowrap; }
 .pf-ranks dd.raid { display: flex; flex-direction: column; font-size: 13px; }
+.pf-ranks dd.raid span { overflow: hidden; text-overflow: ellipsis; }
 #pf-note { font-size: 12px; color: var(--faint); }
 .pf-actions { display: flex; gap: 8px; margin-top: 10px; }
 .pf-actions > * { flex: 1 1 0; min-height: 44px; font-size: 14px; text-decoration: none; color: var(--text); }
@@ -270,6 +271,8 @@ dialog.sheet::backdrop { background: rgba(5, 6, 9, 0.72); }
 .chips button { flex: none; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--soft); font-size: 13px; }
 .chips button[aria-pressed="true"] { border-color: var(--gold); background: rgba(217, 168, 78, 0.18); color: var(--gold-hi); }
 #rank-raids { margin-bottom: 8px; }
+#rank-urd { margin: -8px 0 8px; }
+#rank-urd button { min-height: 30px; padding: 0 12px; font-size: 12px; }
 .time .honor-pure { display: block; font-size: 11px; font-weight: 400; color: var(--faint); }
 /* 레이드는 빠른 순이라 기록 시간이 큰 값, 처치 수·칭호가 작은 줄. 휴대폰 시상대에서도 둘째 줄을 보인다 */
 #ranking.raid .time { color: var(--soft); }
@@ -655,7 +658,7 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
               <div><dt>성장</dt><dd id="pf-rank-growth"></dd></div>
               <div><dt>모험</dt><dd id="pf-rank-adventure"></dd></div>
               <div><dt>무한대전</dt><dd id="pf-rank-wave"></dd></div>
-              <div><dt>레이드</dt><dd class="raid"><span id="pf-rank-dudael"></span><span id="pf-rank-madness"></span><span id="pf-rank-kraken"></span></dd></div>
+              <div><dt>레이드</dt><dd class="raid"><span id="pf-rank-urd"></span><span id="pf-rank-dudael"></span><span id="pf-rank-madness"></span><span id="pf-rank-kraken"></span></dd></div>
             </dl>
             <span id="pf-note"></span>
             <div class="pf-actions">
@@ -703,9 +706,15 @@ dialog.confirm::backdrop { background: rgba(5, 6, 9, 0.65); }
   </header>
   <main class="rank-main">
     <div class="chips" id="rank-raids" role="group" aria-label="레이드" hidden>
+      <button type="button" data-raid="urd">우르드의 샘</button>
       <button type="button" data-raid="dudael">두다엘</button>
       <button type="button" data-raid="madness">꿈의 심연</button>
       <button type="button" data-raid="kraken">크라켄</button>
+    </div>
+    <div class="chips" id="rank-urd" role="group" aria-label="우르드의 샘 난이도" hidden>
+      <button type="button" data-urd="urd_normal">노멀</button>
+      <button type="button" data-urd="urd_hard">하드</button>
+      <button type="button" data-urd="urd_veryhard">베리하드</button>
     </div>
     <div class="chips" id="rank-jobs" role="group" aria-label="직업"></div>
     <p class="rank-note" id="rank-note"></p>

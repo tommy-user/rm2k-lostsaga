@@ -78,6 +78,8 @@ const SW_MADNESS_PURE = 4415;   // 유혹을 하나도 받지 않고 깬 적이 
 const VAR_MADNESS_ENG = 2226;   // 각인 16개의 단계 2226–2241 (0 없음, 1–3)
 const VAR_DUDAEL_BEST = 3087;   // 두다엘 최고 기록(초, 0 = 아직 못 잡음)
 const VAR_DUDAEL_KILLS = 3088;  // 두다엘 처치 횟수
+const VAR_URD_BEST = [3347, 3349, 3351];   // 우르드의 샘 노멀·하드·베리하드 최고 기록(초, 0 = 아직 못 잡음)
+const VAR_URD_KILLS = [3348, 3350, 3352];  // 우르드의 샘 난이도별 처치 횟수
 
 export function parseLsd(b) {
   let [n, i] = ber(b, 0);
@@ -151,6 +153,8 @@ export function parseLsd(b) {
     madness_eng3: eng.filter((x) => x >= 3).length,
     dudael_best: Math.max(0, v(VAR_DUDAEL_BEST)),
     dudael_kills: Math.max(0, v(VAR_DUDAEL_KILLS)),
+    urd_best: VAR_URD_BEST.map((n) => Math.max(0, v(n))),
+    urd_kills: VAR_URD_KILLS.map((n) => Math.max(0, v(n))),
   };
 }
 
