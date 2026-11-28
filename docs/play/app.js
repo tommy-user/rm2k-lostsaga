@@ -9,7 +9,10 @@ import { createKeys, keyName } from "./keys.js";
 import { initInstall } from "./install.js";
 
 // 레이드는 탭 하나(「레이드」) 안에서 고른다. 서버 랭킹 종류 이름 → 프로필 칸의 짧은 이름
-const RAIDS = ["dudael", "madness", "kraken"];
+// 우르드의 샘은 난이도마다 따로 줄을 세운다 (칩 「우르드의 샘」 아래 난이도 칩)
+const URDS = ["urd_normal", "urd_hard", "urd_veryhard"];
+const URD_DIFF = { urd_normal: "노멀", urd_hard: "하드", urd_veryhard: "베리하드" };
+const RAIDS = [...URDS, "dudael", "madness", "kraken"];
 const RAID_SHORT = { dudael: "두다엘", madness: "심연", kraken: "크라켄" };
 
 const $ = (s) => document.querySelector(s);
@@ -459,7 +462,15 @@ async function renderProfile() {
   if (autoNick(profile)) notes.push("임시 닉네임 · 계정 상자에서 정할 수 있습니다");
   $("#pf-note").textContent = notes.join(" · ");
   if (!profile) return;
-  for (const kind of ["growth", "adventure", "wave", ...RAIDS]) {
+  const urd = $("#pf-rank-urd");
+  urd.textContent = "샘 …";
+  Promise.all([...URDS].reverse().map((k) => sync.ranking(k, null, 1).then((rows) => rows.find((r) => r.me)).catch(() => null)))
+    .then((mine) => {
+      const i = mine.findIndex(Boolean), me = mine[i];
+      urd.textContent = !me ? "샘 —" : `샘 ${URD_DIFF[[...URDS].reverse()[i]]} ${me.rank}위 · ${minSec(me.frames)}`;
+      urd.title = urd.textContent;   // 휴대폰 칸이 좁으면 말줄임
+    });
+  for (const kind of ["growth", "adventure", "wave", "dudael", "madness", "kraken"]) {
     const dd = $(`#pf-rank-${kind}`);
     const pre = RAID_SHORT[kind] ? `${RAID_SHORT[kind]} ` : "";
     dd.textContent = `${pre}…`;
@@ -652,9 +663,10 @@ const RANKS = {
   wave: "무한대전에서 막아 낸 웨이브가 많은 순입니다. 같으면 걸린 시간이 짧은 순입니다.",
   kraken: "크라켄을 가장 빨리 잡은 순입니다. 같으면 먼저 기록을 세운 순입니다.",
   dudael: "두다엘을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다.",
+  ...Object.fromEntries(URDS.map((k) => [k, `우르드의 샘 ${URD_DIFF[k]} 난이도를 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다.`])),
   madness: "꿈의 심연을 가장 빨리 깬 순입니다. 같으면 먼저 기록을 세운 순입니다. 칭호: 꿈에서 깬 자(첫 처치) · 꿈으로 돌아가는 자(10번) · 각인을 새긴 자(각인 16개) · 심연에 잠긴 자(모두 3단계) · 맨정신으로 깬 자(유혹 없이 처치)",
 };
-let rankRaid = "dudael";
+let rankRaid = "urd_normal", rankUrd = "urd_normal";
 const RANK_LIMIT = 100;
 let rankKind = "growth", rankJob = null, rankSeq = 0;
 
@@ -662,7 +674,10 @@ for (const b of document.querySelectorAll("#ranking [data-kind]")) {
   b.onclick = () => { rankKind = b.dataset.kind === "raid" ? rankRaid : b.dataset.kind; showRanking(); };
 }
 for (const b of document.querySelectorAll("#rank-raids [data-raid]")) {
-  b.onclick = () => { rankKind = rankRaid = b.dataset.raid; showRanking(); };
+  b.onclick = () => { rankKind = rankRaid = b.dataset.raid === "urd" ? rankUrd : b.dataset.raid; showRanking(); };
+}
+for (const b of document.querySelectorAll("#rank-urd [data-urd]")) {
+  b.onclick = () => { rankKind = rankRaid = rankUrd = b.dataset.urd; showRanking(); };
 }
 $("#rank-jobs").replaceChildren(...[[null, "전체"], ...Object.entries(JOBS)].map(([key, label]) => {
   const b = document.createElement("button");
@@ -731,7 +746,9 @@ async function showRanking() {
   for (const b of document.querySelectorAll("#ranking [data-kind]")) b.setAttribute("aria-selected", String(b.dataset.kind === tab));
   $("#rank-raids").hidden = tab !== "raid";
   $("#ranking").classList.toggle("raid", tab === "raid");
-  for (const b of $("#rank-raids").children) b.setAttribute("aria-pressed", String(b.dataset.raid === rankKind));
+  for (const b of $("#rank-raids").children) b.setAttribute("aria-pressed", String(b.dataset.raid === (URDS.includes(rankKind) ? "urd" : rankKind)));
+  $("#rank-urd").hidden = !URDS.includes(rankKind);
+  for (const b of $("#rank-urd").children) b.setAttribute("aria-pressed", String(b.dataset.urd === rankKind));
   for (const b of $("#rank-jobs").children) b.setAttribute("aria-pressed", String(b.dataset.job === (rankJob ?? "")));
   $("#rank-note").textContent = RANKS[rankKind];
   const podium = $("#rank-podium"), list = $("#rank-list"), empty = $("#rank-empty"), bar = $("#rank-me");
@@ -759,7 +776,8 @@ async function showRanking() {
     empty.textContent = rankKind === "wave" ? "아직 기록이 없습니다. 몬스터대기실의 무한 웨이브에서 기록을 세울 수 있습니다."
       : rankKind === "kraken" ? "아직 기록이 없습니다. 외항선을 타고 크라켄 해역에서 기록을 세울 수 있습니다."
       : rankKind === "madness" ? "아직 기록이 없습니다. 마스터 승급 뒤 광기의 던전에서 기록을 세울 수 있습니다."
-      : rankKind === "dudael" ? "아직 기록이 없습니다. 테바가 쉼터에 내려앉는 날, 에녹에서 기록을 세울 수 있습니다." : "아직 기록이 없습니다.";
+      : rankKind === "dudael" ? "아직 기록이 없습니다. 테바가 쉼터에 내려앉는 날, 에녹에서 기록을 세울 수 있습니다."
+      : URDS.includes(rankKind) ? `아직 기록이 없습니다. 되크 마을의 뿌리 문 너머 우르드의 샘(${URD_DIFF[rankKind]})에서 기록을 세울 수 있습니다.` : "아직 기록이 없습니다.";
     return;
   }
   empty.hidden = true;
