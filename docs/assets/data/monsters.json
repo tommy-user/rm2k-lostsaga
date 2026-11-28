@@ -45,7 +45,8 @@
           ],
           "places": [
             "rogue"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 566,
@@ -59,6 +60,7 @@
           "boss": false,
           "leader": true,
           "hue": 280,
+          "st": [],
           "drops": [
             {
               "id": 160,
@@ -112,7 +114,8 @@
           ],
           "places": [
             "rogue"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 567,
@@ -126,6 +129,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 434,
@@ -167,7 +171,8 @@
           ],
           "places": [
             "rogue"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 414,
@@ -181,6 +186,7 @@
           "boss": false,
           "leader": true,
           "hue": 180,
+          "st": [],
           "drops": [
             {
               "id": 162,
@@ -222,7 +228,8 @@
           ],
           "places": [
             "rogue"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 411,
@@ -236,6 +243,7 @@
           "boss": false,
           "leader": true,
           "hue": 180,
+          "st": [],
           "drops": [
             {
               "id": 178,
@@ -277,7 +285,8 @@
           ],
           "places": [
             "rogue"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 417,
@@ -291,6 +300,7 @@
           "boss": false,
           "leader": true,
           "hue": 180,
+          "st": [],
           "drops": [
             {
               "id": 346,
@@ -318,7 +328,8 @@
           "places": [
             "rogue"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         }
       ]
     },
@@ -407,7 +418,8 @@
           "places": [
             "east-field",
             "alligator"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 568,
@@ -420,6 +432,7 @@
           "agi": 70,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 160,
@@ -468,7 +481,8 @@
           ],
           "places": [
             "alligator"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 98,
@@ -482,6 +496,7 @@
           "boss": false,
           "leader": true,
           "hue": 110,
+          "st": [],
           "drops": [
             {
               "id": 190,
@@ -529,7 +544,8 @@
           ],
           "places": [
             "east-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 20,
@@ -543,6 +559,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1573,
@@ -589,6 +606,14 @@
           ],
           "places": [
             "east-field"
+          ],
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
           ]
         },
         {
@@ -603,6 +628,14 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1469,
@@ -643,7 +676,8 @@
           ],
           "places": [
             "east-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 70,
@@ -657,6 +691,7 @@
           "boss": false,
           "leader": true,
           "hue": 180,
+          "st": [],
           "drops": [
             {
               "id": 1510,
@@ -703,6 +738,14 @@
           ],
           "places": [
             "east-field"
+          ],
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
           ]
         },
         {
@@ -717,6 +760,14 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1394,
@@ -763,7 +814,8 @@
           ],
           "places": [
             "holy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 68,
@@ -777,6 +829,7 @@
           "boss": false,
           "leader": true,
           "hue": 130,
+          "st": [],
           "drops": [
             {
               "id": 209,
@@ -824,7 +877,8 @@
           ],
           "places": [
             "holy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 64,
@@ -838,6 +892,7 @@
           "boss": false,
           "leader": true,
           "hue": 210,
+          "st": [],
           "drops": [
             {
               "id": 1595,
@@ -872,7 +927,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 12,
@@ -895,7 +951,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 13,
@@ -918,7 +975,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 14,
@@ -941,7 +999,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 16,
@@ -965,7 +1024,8 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 22,
@@ -979,6 +1039,7 @@
           "boss": false,
           "leader": true,
           "hue": 240,
+          "st": [],
           "drops": [
             {
               "id": 162,
@@ -1013,7 +1074,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 24,
@@ -1048,7 +1110,8 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 27,
@@ -1062,6 +1125,7 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [],
           "drops": [
             {
               "id": 173,
@@ -1103,7 +1167,8 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 32,
@@ -1117,6 +1182,7 @@
           "boss": false,
           "leader": true,
           "hue": 150,
+          "st": [],
           "drops": [
             {
               "id": 1563,
@@ -1164,7 +1230,8 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 42,
@@ -1178,6 +1245,7 @@
           "boss": false,
           "leader": true,
           "hue": 60,
+          "st": [],
           "drops": [
             {
               "id": 1459,
@@ -1225,7 +1293,8 @@
           "places": [
             "holy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 60,
@@ -1239,6 +1308,7 @@
           "boss": false,
           "leader": true,
           "hue": 210,
+          "st": [],
           "drops": [
             {
               "id": 1194,
@@ -1285,7 +1355,8 @@
           "places": [
             "holy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 75,
@@ -1299,6 +1370,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 292,
@@ -1346,7 +1418,15 @@
           "places": [
             "holy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 79,
@@ -1360,6 +1440,14 @@
           "boss": false,
           "leader": true,
           "hue": 270,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1464,
@@ -1394,7 +1482,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 84,
@@ -1417,7 +1506,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 85,
@@ -1440,7 +1530,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 86,
@@ -1464,7 +1555,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 88,
@@ -1488,7 +1580,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 89,
@@ -1512,7 +1605,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 90,
@@ -1535,7 +1629,8 @@
           "places": [
             "rebel"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 100,
@@ -1582,7 +1677,8 @@
           "places": [
             "alligator"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 267,
@@ -1606,7 +1702,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 402,
@@ -1649,7 +1746,8 @@
             "east-field",
             "alligator"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 567,
@@ -1663,6 +1761,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 434,
@@ -1710,7 +1809,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 423,
@@ -1746,7 +1846,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 431,
@@ -1762,7 +1863,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 433,
@@ -1785,7 +1887,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 434,
@@ -1808,7 +1911,8 @@
           "places": [
             "holy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 769,
@@ -1843,7 +1947,28 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 772,
@@ -1857,6 +1982,27 @@
           "boss": false,
           "leader": true,
           "hue": 20,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2017,
@@ -1903,7 +2049,8 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 776,
@@ -1917,6 +2064,7 @@
           "boss": false,
           "leader": true,
           "hue": 10,
+          "st": [],
           "drops": [
             {
               "id": 1205,
@@ -1963,7 +2111,28 @@
           "places": [
             "east-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 780,
@@ -1977,6 +2146,27 @@
           "boss": false,
           "leader": true,
           "hue": 350,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2012,
@@ -2004,7 +2194,8 @@
           "places": [
             "kriend"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         }
       ]
     },
@@ -2110,7 +2301,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 179,
@@ -2124,6 +2316,7 @@
           "boss": false,
           "leader": true,
           "hue": 200,
+          "st": [],
           "drops": [
             {
               "id": 285,
@@ -2171,7 +2364,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 189,
@@ -2185,6 +2379,7 @@
           "boss": false,
           "leader": true,
           "hue": 150,
+          "st": [],
           "drops": [
             {
               "id": 121,
@@ -2232,7 +2427,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 199,
@@ -2246,6 +2442,7 @@
           "boss": false,
           "leader": true,
           "hue": 270,
+          "st": [],
           "drops": [
             {
               "id": 4401,
@@ -2293,7 +2490,8 @@
           ],
           "places": [
             "west-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 120,
@@ -2307,6 +2505,7 @@
           "boss": false,
           "leader": true,
           "hue": 120,
+          "st": [],
           "drops": [
             {
               "id": 1590,
@@ -2354,7 +2553,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 227,
@@ -2368,6 +2568,7 @@
           "boss": false,
           "leader": true,
           "hue": 210,
+          "st": [],
           "drops": [
             {
               "id": 1387,
@@ -2395,7 +2596,8 @@
           "drops": [],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 747,
@@ -2409,6 +2611,7 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [],
           "drops": [
             {
               "id": 4406,
@@ -2444,6 +2647,27 @@
           ],
           "places": [
             "grand"
+          ],
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -2458,6 +2682,27 @@
           "boss": false,
           "leader": true,
           "hue": 190,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2002,
@@ -2504,6 +2749,14 @@
           ],
           "places": [
             "grand"
+          ],
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
           ]
         },
         {
@@ -2518,6 +2771,14 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2117,
@@ -2553,7 +2814,8 @@
           ],
           "places": [
             "west-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 6,
@@ -2567,6 +2829,7 @@
           "boss": false,
           "leader": true,
           "hue": 150,
+          "st": [],
           "drops": [
             {
               "id": 10,
@@ -2609,7 +2872,8 @@
           "places": [
             "west-field",
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 132,
@@ -2623,6 +2887,7 @@
           "boss": false,
           "leader": true,
           "hue": 180,
+          "st": [],
           "drops": [
             {
               "id": 50,
@@ -2671,7 +2936,8 @@
           ],
           "places": [
             "west-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 126,
@@ -2685,6 +2951,7 @@
           "boss": false,
           "leader": true,
           "hue": 200,
+          "st": [],
           "drops": [
             {
               "id": 1624,
@@ -2731,7 +2998,8 @@
           ],
           "places": [
             "west-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 131,
@@ -2745,6 +3013,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 290,
@@ -2791,7 +3060,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 184,
@@ -2805,6 +3075,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 288,
@@ -2851,7 +3122,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 194,
@@ -2865,6 +3137,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 27,
@@ -2912,7 +3185,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 204,
@@ -2926,6 +3200,7 @@
           "boss": false,
           "leader": true,
           "hue": 210,
+          "st": [],
           "drops": [
             {
               "id": 1370,
@@ -2973,7 +3248,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 209,
@@ -2987,6 +3263,7 @@
           "boss": false,
           "leader": true,
           "hue": 120,
+          "st": [],
           "drops": [
             {
               "id": 1375,
@@ -3034,7 +3311,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 237,
@@ -3048,6 +3326,7 @@
           "boss": false,
           "leader": true,
           "hue": 90,
+          "st": [],
           "drops": [
             {
               "id": 1452,
@@ -3095,7 +3374,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 242,
@@ -3109,6 +3389,7 @@
           "boss": false,
           "leader": true,
           "hue": 210,
+          "st": [],
           "drops": [
             {
               "id": 1447,
@@ -3156,7 +3437,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 247,
@@ -3170,6 +3452,7 @@
           "boss": false,
           "leader": true,
           "hue": 240,
+          "st": [],
           "drops": [
             {
               "id": 1558,
@@ -3204,7 +3487,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 743,
@@ -3218,6 +3502,7 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [],
           "drops": [
             {
               "id": 293,
@@ -3252,7 +3537,8 @@
           ],
           "places": [
             "grand"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 745,
@@ -3266,6 +3552,14 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1493,
@@ -3301,7 +3595,28 @@
           "places": [
             "west-field"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 216,
@@ -3325,7 +3640,15 @@
             "west-field",
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 268,
@@ -3349,7 +3672,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 438,
@@ -3372,7 +3696,8 @@
           "places": [
             "chili"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 699,
@@ -3401,7 +3726,15 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 702,
@@ -3415,6 +3748,14 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2112,
@@ -3456,7 +3797,15 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 706,
@@ -3470,6 +3819,14 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2107,
@@ -3517,7 +3874,15 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 710,
@@ -3531,6 +3896,14 @@
           "boss": false,
           "leader": true,
           "hue": 60,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2102,
@@ -3558,7 +3931,28 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 758,
@@ -3582,7 +3976,49 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독",
+                "봉쇄"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "침묵",
+                "폭주",
+                "수면",
+                "마비"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 764,
@@ -3606,7 +4042,8 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 767,
@@ -3620,6 +4057,7 @@
           "boss": false,
           "leader": true,
           "hue": 150,
+          "st": [],
           "drops": [
             {
               "id": 1208,
@@ -3654,7 +4092,46 @@
           "places": [
             "chili"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "폭주",
+                "마비"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 978,
@@ -3670,7 +4147,8 @@
           "places": [
             "chili"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1111,
@@ -3687,7 +4165,46 @@
           "places": [
             "grand"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "폭주",
+                "마비"
+              ]
+            ]
+          ]
         }
       ]
     },
@@ -3786,6 +4303,27 @@
           "drops": [],
           "places": [
             "fairy"
+          ],
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -3821,7 +4359,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 316,
@@ -3835,6 +4374,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1515,
@@ -3881,7 +4421,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 326,
@@ -3895,6 +4436,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 1534,
@@ -3941,7 +4483,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 283,
@@ -3954,6 +4497,7 @@
           "agi": 200,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1505,
@@ -4000,7 +4544,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 289,
@@ -4014,6 +4559,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1619,
@@ -4061,7 +4607,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 364,
@@ -4097,7 +4644,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 388,
@@ -4132,7 +4680,8 @@
           ],
           "places": [
             "fairy"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 4,
@@ -4156,7 +4705,28 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 257,
@@ -4172,7 +4742,54 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄",
+                "폭주",
+                "혼란",
+                "수면",
+                "마비",
+                "공포"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 261,
@@ -4188,7 +4805,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 262,
@@ -4204,7 +4822,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 264,
@@ -4220,7 +4839,40 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 302,
@@ -4237,7 +4889,15 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 307,
@@ -4253,7 +4913,52 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독",
+                "봉쇄"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "봉인",
+                "침묵",
+                "폭주",
+                "혼란",
+                "수면",
+                "마비",
+                "공포"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 309,
@@ -4276,7 +4981,15 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 311,
@@ -4292,7 +5005,40 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 318,
@@ -4328,7 +5074,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 321,
@@ -4342,6 +5089,7 @@
           "boss": false,
           "leader": true,
           "hue": 60,
+          "st": [],
           "drops": [
             {
               "id": 178,
@@ -4389,7 +5137,15 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 330,
@@ -4403,6 +5159,14 @@
           "boss": false,
           "leader": true,
           "hue": 210,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1399,
@@ -4443,7 +5207,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 334,
@@ -4457,6 +5222,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1435,
@@ -4498,7 +5264,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 338,
@@ -4512,6 +5279,7 @@
           "boss": false,
           "leader": true,
           "hue": 270,
+          "st": [],
           "drops": [
             {
               "id": 1520,
@@ -4559,7 +5327,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 342,
@@ -4573,6 +5342,7 @@
           "boss": false,
           "leader": true,
           "hue": 110,
+          "st": [],
           "drops": [
             {
               "id": 1442,
@@ -4620,7 +5390,15 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 352,
@@ -4656,7 +5434,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 356,
@@ -4692,7 +5471,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 360,
@@ -4728,7 +5508,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 368,
@@ -4764,7 +5545,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 372,
@@ -4799,7 +5581,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 376,
@@ -4835,7 +5618,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 380,
@@ -4871,7 +5655,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 384,
@@ -4907,7 +5692,8 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 392,
@@ -4923,7 +5709,28 @@
           "places": [
             "fairy"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 396,
@@ -4946,7 +5753,8 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 399,
@@ -4962,7 +5770,50 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독",
+                "봉쇄"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "봉인",
+                "침묵",
+                "폭주",
+                "혼란",
+                "수면",
+                "마비",
+                "공포"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 436,
@@ -4985,7 +5836,8 @@
           "places": [
             "rogers"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         }
       ]
     },
@@ -5019,7 +5871,8 @@
           "drops": [],
           "places": [
             "devil"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 468,
@@ -5048,7 +5901,8 @@
           ],
           "places": [
             "devil"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 471,
@@ -5072,7 +5926,8 @@
           ],
           "places": [
             "devil"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 474,
@@ -5096,7 +5951,8 @@
           ],
           "places": [
             "devil"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 477,
@@ -5120,7 +5976,8 @@
           ],
           "places": [
             "devil"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 466,
@@ -5135,7 +5992,7 @@
           "drops": [
             {
               "id": 1085,
-              "name": "경험의책",
+              "name": "경험의책(소)",
               "prob": 100,
               "god": false
             }
@@ -5143,7 +6000,8 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 469,
@@ -5158,7 +6016,7 @@
           "drops": [
             {
               "id": 1086,
-              "name": "경험의책",
+              "name": "경험의책(중)",
               "prob": 100,
               "god": false
             }
@@ -5166,7 +6024,8 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 472,
@@ -5182,7 +6041,7 @@
           "drops": [
             {
               "id": 1086,
-              "name": "경험의책",
+              "name": "경험의책(중)",
               "prob": 100,
               "god": false
             }
@@ -5190,7 +6049,8 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 475,
@@ -5206,7 +6066,7 @@
           "drops": [
             {
               "id": 1087,
-              "name": "경험의책",
+              "name": "경험의책(대)",
               "prob": 100,
               "god": false
             }
@@ -5214,7 +6074,8 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1021,
@@ -5231,7 +6092,40 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1022,
@@ -5248,7 +6142,40 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1023,
@@ -5265,7 +6192,40 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1024,
@@ -5282,7 +6242,40 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1025,
@@ -5306,7 +6299,40 @@
           "places": [
             "devil"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         }
       ]
     },
@@ -5395,7 +6421,8 @@
           ],
           "places": [
             "grana"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 584,
@@ -5409,6 +6436,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 1430,
@@ -5449,7 +6477,8 @@
           ],
           "places": [
             "grana"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 592,
@@ -5463,6 +6492,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1583,
@@ -5509,7 +6539,8 @@
           ],
           "places": [
             "grana"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 596,
@@ -5523,6 +6554,7 @@
           "boss": false,
           "leader": true,
           "hue": 30,
+          "st": [],
           "drops": [
             {
               "id": 1411,
@@ -5558,7 +6590,8 @@
           ],
           "places": [
             "grana"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 682,
@@ -5587,6 +6620,14 @@
           ],
           "places": [
             "grana"
+          ],
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
           ]
         },
         {
@@ -5601,6 +6642,14 @@
           "boss": false,
           "leader": true,
           "hue": 270,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1578,
@@ -5647,6 +6696,14 @@
           ],
           "places": [
             "grana"
+          ],
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
           ]
         },
         {
@@ -5661,6 +6718,39 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1476,
@@ -5696,7 +6786,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 268,
@@ -5720,7 +6811,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 269,
@@ -5743,7 +6835,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 575,
@@ -5767,7 +6860,15 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 576,
@@ -5791,7 +6892,15 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 577,
@@ -5814,7 +6923,15 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 585,
@@ -5844,7 +6961,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 588,
@@ -5858,6 +6976,7 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [],
           "drops": [
             {
               "id": 1568,
@@ -5893,7 +7012,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 612,
@@ -5917,7 +7037,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 686,
@@ -5946,7 +7067,15 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 689,
@@ -5960,6 +7089,14 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1619,
@@ -6000,7 +7137,8 @@
           "places": [
             "grana"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 693,
@@ -6014,6 +7152,39 @@
           "boss": false,
           "leader": true,
           "hue": 300,
+          "st": [
+            [
+              5,
+              [
+                "석화"
+              ]
+            ],
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "봉쇄"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1481,
@@ -6082,7 +7253,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 601,
@@ -6096,6 +7268,7 @@
           "boss": false,
           "leader": true,
           "hue": 60,
+          "st": [],
           "drops": [
             {
               "id": 1277,
@@ -6143,7 +7316,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 605,
@@ -6156,6 +7330,7 @@
           "agi": 270,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1278,
@@ -6203,7 +7378,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 609,
@@ -6217,6 +7393,7 @@
           "boss": false,
           "leader": true,
           "hue": 90,
+          "st": [],
           "drops": [
             {
               "id": 167,
@@ -6257,7 +7434,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 618,
@@ -6271,6 +7449,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1280,
@@ -6317,7 +7496,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 622,
@@ -6331,6 +7511,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 741,
@@ -6377,7 +7558,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 626,
@@ -6391,6 +7573,7 @@
           "boss": false,
           "leader": true,
           "hue": 330,
+          "st": [],
           "drops": [
             {
               "id": 1282,
@@ -6425,7 +7608,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1204,
@@ -6438,6 +7622,7 @@
           "agi": 110,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 2610,
@@ -6472,7 +7657,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1208,
@@ -6485,6 +7671,7 @@
           "agi": 150,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 2610,
@@ -6519,7 +7706,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1212,
@@ -6532,6 +7720,7 @@
           "agi": 380,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 2611,
@@ -6566,7 +7755,8 @@
           "places": [
             "desert"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1216,
@@ -6579,6 +7769,7 @@
           "agi": 100,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 2612,
@@ -6659,7 +7850,8 @@
           ],
           "places": [
             "uranos"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 445,
@@ -6701,7 +7893,8 @@
           ],
           "places": [
             "uranos"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 450,
@@ -6743,7 +7936,8 @@
           ],
           "places": [
             "uranos"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 455,
@@ -6784,7 +7978,8 @@
           ],
           "places": [
             "uranos"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 29,
@@ -6814,7 +8009,8 @@
           "places": [
             "uranos"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 32,
@@ -6828,6 +8024,7 @@
           "boss": false,
           "leader": true,
           "hue": 150,
+          "st": [],
           "drops": [
             {
               "id": 1563,
@@ -6875,7 +8072,8 @@
           "places": [
             "uranos"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 199,
@@ -6889,6 +8087,7 @@
           "boss": false,
           "leader": true,
           "hue": 270,
+          "st": [],
           "drops": [
             {
               "id": 4401,
@@ -6942,7 +8141,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 806,
@@ -6955,6 +8155,27 @@
           "agi": 240,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1937,
@@ -6989,7 +8210,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 808,
@@ -7002,6 +8224,7 @@
           "agi": 320,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7036,7 +8259,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 812,
@@ -7049,6 +8273,7 @@
           "agi": 440,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7083,7 +8308,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 814,
@@ -7096,6 +8322,7 @@
           "agi": 420,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7130,7 +8357,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 816,
@@ -7143,6 +8371,7 @@
           "agi": 460,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7177,7 +8406,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 818,
@@ -7190,6 +8420,27 @@
           "agi": 380,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1937,
@@ -7224,7 +8475,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 820,
@@ -7237,6 +8489,7 @@
           "agi": 440,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7271,6 +8524,45 @@
           ],
           "places": [
             "sky"
+          ],
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "폭주",
+                "마비"
+              ]
+            ]
           ]
         },
         {
@@ -7294,7 +8586,8 @@
           ],
           "places": [
             "sky"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 810,
@@ -7307,6 +8600,7 @@
           "agi": 300,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7341,7 +8635,8 @@
           "places": [
             "sky"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 840,
@@ -7364,7 +8659,46 @@
           "places": [
             "sky"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상",
+                "석화"
+              ]
+            ],
+            [
+              1,
+              [
+                "피로",
+                "허약",
+                "망각",
+                "둔화"
+              ]
+            ],
+            [
+              5,
+              [
+                "중독"
+              ]
+            ],
+            [
+              10,
+              [
+                "출혈",
+                "침식"
+              ]
+            ],
+            [
+              20,
+              [
+                "맹목",
+                "폭주",
+                "마비"
+              ]
+            ]
+          ]
         }
       ]
     },
@@ -7418,7 +8752,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 822,
@@ -7431,6 +8766,27 @@
           "agi": 380,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7465,7 +8821,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 824,
@@ -7478,6 +8835,7 @@
           "agi": 420,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1944,
@@ -7512,7 +8870,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 826,
@@ -7525,6 +8884,27 @@
           "agi": 340,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7559,7 +8939,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 828,
@@ -7572,6 +8953,27 @@
           "agi": 280,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7606,7 +9008,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 830,
@@ -7619,6 +9022,27 @@
           "agi": 320,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7653,7 +9077,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 832,
@@ -7666,6 +9091,27 @@
           "agi": 400,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7700,6 +9146,27 @@
           ],
           "places": [
             "mage"
+          ],
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -7713,6 +9180,27 @@
           "agi": 240,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7747,7 +9235,8 @@
           ],
           "places": [
             "mage"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 836,
@@ -7760,6 +9249,27 @@
           "agi": 420,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1944,
@@ -7884,9 +9394,10 @@
             }
           ],
           "places": [
-            "sea"
+            "sky"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 810,
@@ -7899,6 +9410,7 @@
           "agi": 300,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7908,7 +9420,7 @@
             }
           ],
           "places": [
-            "sea"
+            "sky"
           ],
           "secret": false
         },
@@ -7931,9 +9443,10 @@
             }
           ],
           "places": [
-            "sea"
+            "sky"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 812,
@@ -7946,6 +9459,7 @@
           "agi": 440,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 1937,
@@ -7955,7 +9469,7 @@
             }
           ],
           "places": [
-            "sea"
+            "sky"
           ],
           "secret": false
         },
@@ -7980,7 +9494,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1892,
@@ -7993,6 +9508,7 @@
           "agi": 60,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8027,7 +9543,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1894,
@@ -8040,6 +9557,7 @@
           "agi": 160,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8074,7 +9592,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1896,
@@ -8087,6 +9606,7 @@
           "agi": 120,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8121,7 +9641,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1899,
@@ -8134,6 +9655,7 @@
           "agi": 50,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8168,7 +9690,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1901,
@@ -8181,6 +9704,7 @@
           "agi": 120,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8215,7 +9739,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1903,
@@ -8228,6 +9753,7 @@
           "agi": 170,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8262,7 +9788,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1906,
@@ -8275,6 +9802,7 @@
           "agi": 230,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8309,7 +9837,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1908,
@@ -8322,6 +9851,7 @@
           "agi": 150,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8356,7 +9886,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1910,
@@ -8369,6 +9900,7 @@
           "agi": 160,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8403,7 +9935,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1913,
@@ -8416,6 +9949,7 @@
           "agi": 220,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8450,7 +9984,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1915,
@@ -8463,6 +9998,7 @@
           "agi": 200,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8497,7 +10033,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1917,
@@ -8510,6 +10047,7 @@
           "agi": 140,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8544,7 +10082,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1920,
@@ -8557,6 +10096,7 @@
           "agi": 180,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8591,7 +10131,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1922,
@@ -8604,6 +10145,7 @@
           "agi": 190,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3804,
@@ -8638,7 +10180,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 1924,
@@ -8651,6 +10194,7 @@
           "agi": 210,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3804,
@@ -8686,7 +10230,15 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1952,
@@ -8700,6 +10252,14 @@
           "boss": false,
           "leader": true,
           "hue": 100,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 3854,
@@ -8735,7 +10295,21 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1954,
@@ -8749,6 +10323,20 @@
           "boss": false,
           "leader": true,
           "hue": 200,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 3855,
@@ -8783,7 +10371,15 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 1956,
@@ -8796,6 +10392,14 @@
           "agi": 180,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              20,
+              [
+                "석화"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 3856,
@@ -8830,7 +10434,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 2042,
@@ -8843,6 +10448,7 @@
           "agi": 160,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8877,7 +10483,8 @@
           "places": [
             "sea"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 2044,
@@ -8890,6 +10497,7 @@
           "agi": 170,
           "boss": false,
           "leader": true,
+          "st": [],
           "drops": [
             {
               "id": 3757,
@@ -8983,7 +10591,8 @@
           "places": [
             "teba"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 3602,
@@ -8997,6 +10606,27 @@
           "boss": false,
           "leader": true,
           "hue": 40,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1937,
@@ -9031,7 +10661,8 @@
           "places": [
             "teba"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 3604,
@@ -9054,7 +10685,28 @@
           "places": [
             "teba"
           ],
-          "secret": false
+          "secret": false,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ]
         },
         {
           "enemyId": 3605,
@@ -9077,7 +10729,8 @@
           "places": [
             "teba"
           ],
-          "secret": false
+          "secret": false,
+          "st": []
         },
         {
           "enemyId": 3606,
@@ -9090,6 +10743,27 @@
           "agi": 330,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 1937,
@@ -9154,7 +10828,8 @@
           ],
           "places": [
             "west-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 962,
@@ -9167,6 +10842,27 @@
           "agi": 320,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2201,
@@ -9201,7 +10897,8 @@
           ],
           "places": [
             "west-field"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 964,
@@ -9214,6 +10911,27 @@
           "agi": 420,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2201,
@@ -9248,6 +10966,27 @@
           ],
           "places": [
             "west-field"
+          ],
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -9261,6 +11000,27 @@
           "agi": 280,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2201,
@@ -9295,6 +11055,27 @@
           ],
           "places": [
             "west-field"
+          ],
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -9308,6 +11089,27 @@
           "agi": 360,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2201,
@@ -9342,6 +11144,14 @@
           ],
           "places": [
             "chaos"
+          ],
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ]
           ]
         },
         {
@@ -9355,6 +11165,27 @@
           "agi": 400,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              0,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2202,
@@ -9389,6 +11220,27 @@
           ],
           "places": [
             "chaos"
+          ],
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -9402,6 +11254,27 @@
           "agi": 380,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2202,
@@ -9436,6 +11309,27 @@
           ],
           "places": [
             "chaos"
+          ],
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
           ]
         },
         {
@@ -9449,6 +11343,27 @@
           "agi": 440,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2202,
@@ -9483,7 +11398,8 @@
           ],
           "places": [
             "chaos"
-          ]
+          ],
+          "st": []
         },
         {
           "enemyId": 976,
@@ -9496,6 +11412,27 @@
           "agi": 460,
           "boss": false,
           "leader": true,
+          "st": [
+            [
+              15,
+              [
+                "화상"
+              ]
+            ],
+            [
+              25,
+              [
+                "중독"
+              ]
+            ],
+            [
+              30,
+              [
+                "출혈",
+                "침식"
+              ]
+            ]
+          ],
           "drops": [
             {
               "id": 2202,
@@ -9555,7 +11492,8 @@
       ],
       "places": [
         "rogue"
-      ]
+      ],
+      "st": []
     },
     {
       "enemyId": 109,
@@ -9575,6 +11513,33 @@
       "drops": [],
       "places": [
         "east-field"
+      ],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "석화"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -9601,7 +11566,8 @@
       ],
       "places": [
         "holy"
-      ]
+      ],
+      "st": []
     },
     {
       "enemyId": 92,
@@ -9627,7 +11593,8 @@
       ],
       "places": [
         "rebel"
-      ]
+      ],
+      "st": []
     },
     {
       "enemyId": 426,
@@ -9647,6 +11614,39 @@
       "drops": [],
       "places": [
         "kriend"
+      ],
+      "st": [
+        [
+          5,
+          [
+            "석화"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -9667,6 +11667,33 @@
       "drops": [],
       "places": [
         "west-field"
+      ],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "석화"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -9761,7 +11788,8 @@
       ],
       "places": [
         "grand"
-      ]
+      ],
+      "st": []
     },
     {
       "enemyId": 741,
@@ -9780,6 +11808,48 @@
       "drops": [],
       "places": [
         "grand"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독",
+            "봉쇄"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "폭주",
+            "수면",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -9806,6 +11876,49 @@
       ],
       "places": [
         "grand"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독",
+            "봉쇄"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "침묵",
+            "폭주",
+            "수면",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -9832,6 +11945,27 @@
       ],
       "places": [
         "grand"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -9902,6 +12036,39 @@
       "drops": [],
       "places": [
         "fairy"
+      ],
+      "st": [
+        [
+          5,
+          [
+            "석화"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -9928,6 +12095,51 @@
       ],
       "places": [
         "fairy"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독",
+            "봉쇄"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "침묵",
+            "폭주",
+            "혼란",
+            "수면",
+            "마비",
+            "공포"
+          ]
+        ]
       ]
     },
     {
@@ -9984,6 +12196,14 @@
       ],
       "places": [
         "grana"
+      ],
+      "st": [
+        [
+          20,
+          [
+            "석화"
+          ]
+        ]
       ]
     },
     {
@@ -10010,6 +12230,53 @@
       ],
       "places": [
         "grana"
+      ],
+      "st": [
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "폭주",
+            "혼란",
+            "수면",
+            "공포"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10082,6 +12349,39 @@
       ],
       "places": [
         "uranos"
+      ],
+      "st": [
+        [
+          5,
+          [
+            "석화"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10108,6 +12408,45 @@
       ],
       "places": [
         "uranos"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10134,6 +12473,45 @@
       ],
       "places": [
         "sky"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10166,6 +12544,45 @@
       ],
       "places": [
         "sky"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10192,6 +12609,45 @@
       ],
       "places": [
         "mage"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10224,6 +12680,45 @@
       ],
       "places": [
         "mage"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10250,6 +12745,45 @@
       ],
       "places": [
         "west-field"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10276,6 +12810,45 @@
       ],
       "places": [
         "chaos"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10302,6 +12875,45 @@
       ],
       "places": [
         "chaos"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10326,7 +12938,46 @@
           "god": true
         }
       ],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 1142,
@@ -10350,7 +13001,46 @@
           "god": true
         }
       ],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 1143,
@@ -10374,7 +13064,46 @@
           "god": true
         }
       ],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 1217,
@@ -10401,7 +13130,34 @@
       "places": [
         "desert"
       ],
-      "secret": false
+      "secret": false,
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 1918,
@@ -10428,6 +13184,45 @@
       ],
       "places": [
         "sea"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "폭주",
+            "마비"
+          ]
+        ]
       ]
     },
     {
@@ -10455,6 +13250,27 @@
       ],
       "places": [
         "sea"
+      ],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10482,7 +13298,8 @@
       ],
       "places": [
         "sea"
-      ]
+      ],
+      "st": []
     },
     {
       "enemyId": 1911,
@@ -10509,6 +13326,27 @@
       ],
       "places": [
         "sea"
+      ],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10534,7 +13372,28 @@
           "god": false
         }
       ],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 1957,
@@ -10562,6 +13421,27 @@
       ],
       "places": [
         "sea"
+      ],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10580,7 +13460,52 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독",
+            "봉쇄"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "침묵",
+            "폭주",
+            "혼란",
+            "수면",
+            "마비",
+            "공포"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2731,
@@ -10598,7 +13523,52 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "폭주",
+            "공포"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2734,
@@ -10617,7 +13587,28 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2740,
@@ -10636,7 +13627,28 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2741,
@@ -10655,7 +13667,28 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2742,
@@ -10674,7 +13707,28 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2743,
@@ -10693,7 +13747,28 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 2744,
@@ -10711,7 +13786,52 @@
       "secret": true,
       "desc": "",
       "drops": [],
-      "places": []
+      "places": [],
+      "st": [
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "맹목",
+            "봉인",
+            "폭주",
+            "공포"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
+      ]
     },
     {
       "enemyId": 3607,
@@ -10738,6 +13858,48 @@
       ],
       "places": [
         "teba"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "석화"
+          ]
+        ],
+        [
+          5,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "폭주",
+            "혼란",
+            "수면",
+            "마비"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10765,6 +13927,48 @@
       ],
       "places": [
         "teba"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "석화"
+          ]
+        ],
+        [
+          5,
+          [
+            "봉쇄"
+          ]
+        ],
+        [
+          15,
+          [
+            "화상"
+          ]
+        ],
+        [
+          20,
+          [
+            "폭주",
+            "혼란",
+            "수면",
+            "마비"
+          ]
+        ],
+        [
+          25,
+          [
+            "중독"
+          ]
+        ],
+        [
+          30,
+          [
+            "출혈",
+            "침식"
+          ]
+        ]
       ]
     },
     {
@@ -10785,6 +13989,48 @@
       "drops": [],
       "places": [
         "teba"
+      ],
+      "st": [
+        [
+          0,
+          [
+            "화상",
+            "석화"
+          ]
+        ],
+        [
+          1,
+          [
+            "피로",
+            "허약",
+            "망각",
+            "둔화"
+          ]
+        ],
+        [
+          5,
+          [
+            "중독",
+            "봉쇄"
+          ]
+        ],
+        [
+          10,
+          [
+            "출혈",
+            "침식"
+          ]
+        ],
+        [
+          20,
+          [
+            "폭주",
+            "혼란",
+            "수면",
+            "마비",
+            "공포"
+          ]
+        ]
       ]
     }
   ],

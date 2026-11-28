@@ -165,6 +165,7 @@
 @media (max-width: 860px) { .story { grid-template-columns: 1fr; } }
 
 .drop { font-size: .7rem; color: var(--gold); margin: 4px 0 0 !important; }
+.resist { font-size: .7rem; color: var(--ink-dim); margin: 4px 0 0 !important; }
 .mob--secret img, .boss-card--secret img { filter: brightness(0) drop-shadow(0 0 6px rgba(196, 71, 90, .7)); }
 .mob--secret h3, .boss-card--secret h3 { color: #f0a3b0; }
 .item--secret h3 { color: #fff3c4; }
@@ -264,6 +265,8 @@
   .data-table td.price::before { content: "가격 "; }
   .data-table td.drop { padding-top: 2px; }
   .data-table td.drop::before { content: "드롭 "; color: var(--ink-dim); font-size: .7rem; }
+  .data-table td.st { padding-top: 2px; font-size: .78rem; color: var(--ink-dim); }
+  .data-table td.st::before { content: "잘 안 걸림 "; font-size: .7rem; }
   .data-table td.desc { color: var(--ink-dim); line-height: 1.55; }
   .data-table .mon-name { white-space: normal; }
 }
